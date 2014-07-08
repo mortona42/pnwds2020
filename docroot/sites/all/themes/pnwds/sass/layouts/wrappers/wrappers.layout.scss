@@ -1,0 +1,132 @@
+@import "variables/**/*";
+@import "abstractions/mixins";
+
+/*******************************************************************************
+ * cpd-main.layout.scss
+ *
+ * Styling of the "Carpe Diem - Main Layout" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+@import "susy";
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 20px;
+$horz-spacing-unit: 1em;
+
+$container-style: magic;
+$container-width: 86em;
+$total-columns  : 16;
+$column-width   : 5.3em;
+$gutter-width   : 1.2em;
+$grid-padding   : $gutter-width;
+
+
+// Breakpoints
+$xSmall: 480px;
+$small: 600px;
+$medium: 900px;
+$large: 1024px;
+$xLarge: 1280px;
+$xxLarge: 1600px;
+
+* {
+  @include box-sizing(border-box);
+}
+
+.page {}
+
+.l-menu,
+.l-region--header {
+  @include span-columns($total-columns);
+}
+
+.l-navigation {}
+.l-branding {}
+.l-menu {}
+.l-header {}
+.l-highlighted {}
+.l-main {}
+.l-sidebar-first {}
+.l-sidebar-second {}
+.l-footer {}
+
+.l-navigation,
+.l-header,
+.l-highlighted,
+.l-main,
+.l-footer {
+  @include container; // Define these elements as the grid containers.
+  padding-bottom: $vert-spacing-unit;
+  position: relative;
+  // Debugging Grid info for testing widths across devices
+  // @include susy-grid-background;
+}
+
+.l-preface,
+.l-content,
+.l-sidebar-first,
+.l-sidebar-second,
+.l-postscript {
+  @include span-columns($total-columns);
+  margin-right: 0;
+}
+
+@include respond-to($medium) {
+  .l-navigation {}
+  
+  .l-branding {
+    @include span-columns(5);
+  }
+  
+  .l-menu {
+    @include span-columns(11);
+    @include omega;
+  }
+  
+  .l-region--branding {}
+  /* Content Area */
+  .l-content {
+    @include span-columns($total-columns);
+  }
+  /* Sidebars */
+  .has-one-sidebar {
+    .l-content {
+      @include span-columns(($total-columns / 4) * 3);
+    }
+    .l-sidebar-first {
+      @include span-columns($total-columns / 4);
+    }
+    .l-sidebar-second {
+      @include span-columns($total-columns / 4);
+      @include omega;
+    }
+    
+    &.has-sidebar-first {
+      .l-content {
+        @include omega;
+      }
+    }
+    
+    &.has-sidebar-second {
+      .l-content {}
+    }
+  }
+  .has-two-sidebars {
+    .l-sidebar-first {
+      @include span-columns($total-columns / 4);
+    }
+    .l-content {
+      @include span-columns(($total-columns / 4) * 2)
+    }
+    .l-sidebar-second {
+      @include span-columns($total-columns / 4);
+      @include omega;
+    }
+  }
+}
+
+.l-region--help,
+.l-sidebar-first,
+.l-sidebar-second {
+  margin-bottom: $vert-spacing-unit;
+}

@@ -1,0 +1,19 @@
+html {
+  background-color: $true-white;
+  background-image: image-url('backgrounds/bg--diag__semi-trans.png');
+  background-position: left top;
+  background-repeat: repeat;
+  min-height: 100%;
+}
+
+.w-navigation,
+.w-header {
+  background-color: rgba($green, .95);
+  background-image: image-url('backgrounds/bg-overlay--diag__semi-trans.png');
+  background-position: left top;
+  background-repeat: repeat;
+}
+
+.w-header {
+  background-color: rgba($dark-blue, .9);
+}

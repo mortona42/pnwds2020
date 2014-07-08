@@ -1,0 +1,29 @@
+// Branding
+$b-blue: rgb(19, 90, 156);
+$b-green: rgb(8, 119, 66);
+$b-dark-green: rgb(2, 88, 54);
+$b-pale-blue: tint($b-blue, 15%);
+$b-pale-green: tint($b-green, 15%);
+
+// Grey-scale
+$white: #fff;
+$lightest-grey: #ededed;
+$light-grey: #c6c6c6;
+$medium-grey: #a4a4a4;
+$grey: #828282;
+$dark-grey: #5a5a5a;
+$darkest-grey: #3a3a3a;
+$black: #1a1a1a;
+
+$true-white: rgb(255, 255, 255);
+$true-black: rgb(0, 0, 0);
+
+// Theme Colors
+$link-dark-blue: #005198;
+$link-light-blue: #449ad5;
+
+$green: #007740;
+$dark-green: #00633a;
+
+$blue: $link-light-blue;
+$dark-blue: $link-dark-blue;
