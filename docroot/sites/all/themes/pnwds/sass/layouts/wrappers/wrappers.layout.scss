@@ -75,11 +75,11 @@ $xxLarge: 1600px;
   .l-navigation {}
   
   .l-branding {
-    @include span-columns(5);
+    @include span-columns(6);
   }
   
   .l-menu {
-    @include span-columns(11);
+    @include span-columns(10);
     @include omega;
   }
   

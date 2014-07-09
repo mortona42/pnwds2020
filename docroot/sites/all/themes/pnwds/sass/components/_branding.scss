@@ -28,8 +28,10 @@
 }
 
 h1.site--branding__name {
-  font-family: $branding;
-  font-size: 1.875rem;
+  font-family: $branding-heavy;
+  font-size: 1.75rem;
+  font-stretch: normal;
+  font-style: normal;
   line-height: 1em;
   text-align: center;
   
@@ -37,8 +39,8 @@ h1.site--branding__name {
     &:link,
     &:visited {
       color: $white;
-      font-family: $branding;
-      font-weight: 700;
+      font-family: $branding-heavy;
+      font-weight: bold;
       text-transform: uppercase;
     }
     
@@ -48,7 +50,8 @@ h1.site--branding__name {
     
     .word1,
     .word2 {
-      font-size: 1.65rem;
+      font-family: $branding-light;
+      font-size: 1.5rem;
       font-weight: 300;
     }
     
@@ -60,19 +63,21 @@ h1.site--branding__name {
   
   @include respond-to($medium) {
     display: inline-block;
+    font-size: 1.5rem;
+/*
     font-size: 1rem;
     line-height: 1em;
+*/
     text-align: left;
     vertical-align: bottom;
-    margin-bottom: 1.25em;
+    /* margin-bottom: 1.25em; */
     max-width: 66%;
   }
   
   @include respond-to($large) {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     line-height: 1em;
-    margin-left: 0.5em;
-    margin-bottom: 0.875em;
+    /* margin-bottom: 0.875em; */
   }
 }
 .site--branding__slogan {}

@@ -535,6 +535,19 @@ a {
   a:hover, a:focus {
     text-decoration: underline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_typography\.scss}line{font-family:\0000377}}
+.l-region--navigation a:link, .l-region--navigation a:visited,
+.l-region--menu a:link,
+.l-region--menu a:visited {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_typography\.scss}line{font-family:\0000384}}
+.l-region--navigation a:hover, .l-region--navigation a:focus,
+.l-region--menu a:hover,
+.l-region--menu a:focus {
+  color: #69aedd; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_backgrounds\.scss}line{font-family:\000031}}
 html {
   background-color: white;
@@ -584,25 +597,28 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000330}}
 h1.site--branding__name {
-  font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
-  font-size: 1.875rem;
+  font-family: "Futura", Futura, "Futura Bold", Futura-Bold, "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+  font-size: 1.75rem;
+  font-stretch: normal;
+  font-style: normal;
   line-height: 1em;
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000340}}
   h1.site--branding__name a:link, h1.site--branding__name a:visited {
     color: white;
-    font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
-    font-weight: 700;
+    font-family: "Futura", Futura, "Futura Bold", Futura-Bold, "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+    font-weight: bold;
     text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000347}}
   h1.site--branding__name a span {
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000352}}
   h1.site--branding__name a .word1,
   h1.site--branding__name a .word2 {
-    font-size: 1.65rem;
+    font-family: "Futura", Futura, "Futura Light", Futura-Light, "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+    font-size: 1.5rem;
     font-weight: 300; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000358}}
   h1.site--branding__name a .word2:after {
     content: "\A";
     white-space: pre; }
@@ -610,16 +626,18 @@ h1.site--branding__name {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000330}}
     h1.site--branding__name {
       display: inline-block;
-      font-size: 1rem;
-      line-height: 1em;
+      font-size: 1.5rem;
+      /*
+          font-size: 1rem;
+          line-height: 1em;
+      */
       text-align: left;
       vertical-align: bottom;
-      margin-bottom: 1.25em;
+      /* margin-bottom: 1.25em; */
       max-width: 66%; } }
   @media screen and (min-width: 64.0625em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000330}}
     h1.site--branding__name {
-      font-size: 1.25rem;
+      /* font-size: 1.25rem; */
       line-height: 1em;
-      margin-left: 0.5em;
-      margin-bottom: 0.875em; } }
+      /* margin-bottom: 0.875em; */ } }

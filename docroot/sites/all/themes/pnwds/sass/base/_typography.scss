@@ -69,3 +69,20 @@ a {
   
   &:active {}
 }
+
+.l-region--navigation,
+.l-region--menu {
+  a {
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    
+    &:hover,
+    &:focus {
+      color: tint($blue, 20%);
+    }
+  }
+}
