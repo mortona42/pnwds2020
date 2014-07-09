@@ -28,17 +28,33 @@
 }
 
 h1.site--branding__name {
+  font-family: $branding;
+  font-size: 1.875rem;
+  line-height: 1em;
+  text-align: center;
+  
   a {
     &:link,
     &:visited {
       color: $white;
+      font-family: $branding;
       font-weight: 700;
       text-transform: uppercase;
     }
     
+    span {
+      display: inline;
+    }
+    
     .word1,
     .word2 {
+      font-size: 1.65rem;
       font-weight: 300;
+    }
+    
+    .word2:after {
+      content: "\A";
+      white-space: pre;
     }
   }
   
@@ -46,6 +62,7 @@ h1.site--branding__name {
     display: inline-block;
     font-size: 1rem;
     line-height: 1em;
+    text-align: left;
     vertical-align: bottom;
     margin-bottom: 1.25em;
     max-width: 66%;
