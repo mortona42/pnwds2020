@@ -181,6 +181,7 @@ input[type="week"] {
   font-size: 13px;
   height: 1.8em;
   vertical-align: top;
+  max-width: 100%;
 
   // Leaving out Helvetica Neue, to not throw off size="..."
   // on inputs. Arial is more reliable, on Windows and OS X.
