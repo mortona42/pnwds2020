@@ -1,0 +1,10 @@
+ul {
+/*
+  &.links--inline {
+    @extend %links--inline;
+  }
+*/
+  &.links--inline__separated {
+    @extend %links--inline__separated;
+  }
+}

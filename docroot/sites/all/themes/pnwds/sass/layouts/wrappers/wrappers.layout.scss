@@ -62,6 +62,15 @@ $xxLarge: 1600px;
   // @include susy-grid-background;
 }
 
+.l-navigation {
+  padding-bottom: 0;
+  
+  @include respond-to($medium, max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .l-preface,
 .l-content,
 .l-sidebar-first,
