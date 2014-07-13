@@ -8,12 +8,24 @@
  * Implements base_settings_form().
  */
 function pnwds_sponsorship_pane_settings_form($checkout_pane) {
+  $results = db_select('commerce_product', 'cp')
+    ->fields('cp', array('product_id', 'sku', 'title'))
+    ->execute();
+  $products = array();
+  foreach ($results as $result) {
+    $products[$result->product_id] = t('@title (@sku)', array(
+      '@title' => $result->title,
+      '@sku' => $result->sku,
+    ));
+  }
+
   $form['pnwds_sponsorship_product'] = array(
     // @TODO: Make this an entity reference.
-    '#type' => 'textfield',
+    '#type' => 'select',
     '#title' => t('Sposorship product'),
     '#description' => t('The product that will be added to the users cart if they choose to be a sponsor.'),
     '#default_value' => variable_get('pnwds_sponsorship_product', ''),
+    '#options' => $products,
   );
   $message = variable_get('pnwds_sponsorship_message', array('value' => '', 'format' => ''));
   $form['pnwds_sponsorship_message'] = array(
