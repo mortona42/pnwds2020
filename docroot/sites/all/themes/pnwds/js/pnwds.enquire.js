@@ -15,24 +15,13 @@
         menuRegion = d.getElementsByClassName('l-region--menu'),
         navRegion = d.getElementsByClassName('l-region--navigation');
     
-    console.log(mainNav);
-    console.log(userNav);
-    console.log(menuRegion);
-    console.log(navRegion);
-    
     enquire.register("screen and (max-width:56.25em)", {
       match : function() {
         navRegion[0].appendChild(mainNav);
       },
-      unmatch : function() {},
-      setup : function() {},
-      deferSetup : true,
-      destroy : function() {}
-    }).register("screen and (min-width:56.25em)", {
-      match : function() {
+      unmatch : function() {
         menuRegion[0].appendChild(mainNav);
       },
-      unmatch : function() {},
       setup : function() {},
       deferSetup : true,
       destroy : function() {}
