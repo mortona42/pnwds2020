@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * PNWDS Sponsorship module.
+ */
+
+/**
+ * Implements hook_commerce_checkout_pane_info().
+ */
+function pnwds_sponsorship_commerce_checkout_pane_info() {
+  $panes['pnwds_sponsorship'] = array(
+    'title' => t('PNWDS Sponsorship'),
+    'page' => 'checkout',
+    'weight' => 10,
+    'file' => 'includes/pnwds_sponsorship.checkout_pane.inc',
+    'base' => 'pnwds_sponsorship_pane',
+  );
+  return $panes;
+}

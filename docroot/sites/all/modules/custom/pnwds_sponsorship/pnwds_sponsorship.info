@@ -1,0 +1,7 @@
+name = PNWDS Sponsorship
+description = Implements a checkout pane to add individual sponsorship.
+package = PNWDS
+dependencies[] = commerce
+dependencies[] = commerce_ui
+dependencies[] = commerce_order
+core = 7.x
