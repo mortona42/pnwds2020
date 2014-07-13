@@ -46,13 +46,34 @@
   
   &:hover,
   &:focus {
-    > a {}
+    > a {
+      @include respond-to($medium) {
+        @include box-shadow(0px 5px 7px -5px rgba($black, 0.6) inset);
+        background-color: transparent;
+        border-top-color: $blue;
+        text-shadow: 0 2px 2px rgba($black, 0.6);
+      }
+    }
+  }
+  
+  &:first-child {
+    a {
+      margin-left: 0;
+    }
+  }
+  
+  &:last-child {
+    a {
+      margin-right: 0;
+    }
   }
 }
 
 // Top level links
 %main-menu__top-links {
+  background-color: $white;
   display: block;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
@@ -65,18 +86,40 @@
     color: $black;
     text-decoration: none;
   }
+  
+  &:hover,
+  &:focus,
   &:active {
     background-color: rgba($blue, 0.8);
   }
+  
   @include respond-to($medium) {
     @include transition(all 300ms ease);
+    @include box-shadow(0px 5px 7px -5px rgba(0, 0, 0, 0) inset);
     background-color: transparent;
+    border-top: 2px solid transparent;
     display: inline-block;
-    font-size: 0.75em;
+    font-size: 0.875rem;
+    text-shadow: 0 0 0 transparent;
     width: auto;
-    padding-top: 0;
-    padding-bottom: 0;
-    vertical-align: top;
+    margin: auto 0.75em;
+    padding: 0 .5em;
+    vertical-align: bottom;
+    
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      @include box-shadow(0px 5px 7px -5px rgba($black, 0.6) inset);
+      background-color: transparent;
+      border-top-color: $blue;
+      text-shadow: 0 2px 2px rgba($black, 0.6);
+    }
   }
 }
 
@@ -88,20 +131,68 @@
   
   @include respond-to($medium) {
     @include box-sizing(border-box);
+    text-align: left;
     position: absolute;
     width: 100%;
     left: 0;
     z-index: 9;
     min-width: 220px;
+  }
+}
+
+// Lower level li
+%main-menu__lower {
+  background-color: $true-white;
+  
+  @include respond-to($medium) {
+    background-color: rgba($white, 0.6);
+    border-bottom: 2px solid $blue;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0.5em;
     
-    li:last-child & {}
+    input {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  
+  &:last-child {
+    border-bottom: medium none;
   }
 }
 
 // Dropdown links
 %main-menu__submenu-links {
-  &:hover,
-  &:focus {}
+  @extend %main-menu__top-links;
+  @include respond-to($medium) {
+    @include box-shadow(0px 5px 7px -5px rgba($black, 0) inset);
+    background-color: transparent;
+    border-top: medium none;
+    color: $black;
+    display: block;
+    text-shadow: 0 2px 2px rgba($black, 0);
+    margin: 0;
+    
+    &:link,
+    &:visited {
+      color: $black;
+      text-align: left;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      @include box-shadow(0px 5px 7px -5px rgba($black, 0) inset);
+      background-color: transparent;
+      border-top: medium none;
+      color: $dark-blue;
+      text-shadow: 0 2px 2px rgba($black, 0);
+    }
+  }
 }
 
 
@@ -129,13 +220,13 @@
   ul {
     @extend %main-menu__submenu;
     
-/*
     > .level-2 {
+      @extend %main-menu__lower;
+      
       > a {
         @extend %main-menu__submenu-links;
       }
     }
-*/
   }
 }
 
@@ -173,6 +264,12 @@
     .block--system-user-menu {
       min-height: 46px;
     }
+  }
+}
+
+.l-region--menu {
+  @include respond-to($medium) {
+    padding-top: 72px;
   }
 }
 
@@ -223,7 +320,7 @@ input#main-menu-toggle[type=checkbox] {
         @include transition-property(transform max-height);
         @include transition-duration(600ms);
         @include transition-delay(0ms);
-        max-height: 9999px;
+        max-height: 420px;
       }
     }
   }
@@ -292,10 +389,6 @@ label[for="user-menu-toggle"] {
 
 #main-menu,
 #user-menu {
-/*
-  position: relative;
-  z-index: 5;
-*/
   outline: none !important;
   
   * {
@@ -314,18 +407,14 @@ label[for="user-menu-toggle"] {
     list-style-image: none;
   }
   
-  @include respond-to($medium, max-width) {
-/*
-    min-height: 46px;
-    
-    > ul.menu--main-menu {}
-    label[for="main-menu-toggle"] {}
-    input#main-menu-toggle[type=checkbox]:checked ~ ul.menu--main-menu {}
-*/
-  }
-  
   @include respond-to($medium) {
     padding: 0;
+  }
+}
+
+.menu--user-menu {
+  @include respond-to($medium) {
+    text-align: right;
   }
 }
 
@@ -407,7 +496,6 @@ nav[role="navigation"] > ul .dropdown {
         @include transition-duration(600ms, 300ms);
         @include transition-delay(0s, 0s);
         max-height: 9999px;
-        /* height: auto; */
       }
         
       &:checked + a[data-toggle="dropdown"] {
@@ -454,7 +542,7 @@ nav[role="navigation"] > ul .dropdown {
         @include transition-property(max-height, transform);
         @include transition-duration(600ms, 300ms);
         @include transition-delay(0s, 0s);
-        max-height: 9999px;
+        max-height: 420px;
       }
       
       .theme-icon-arrow-down {}

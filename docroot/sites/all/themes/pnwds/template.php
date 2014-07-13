@@ -176,6 +176,72 @@ function pnwds_menu_tree__user_menu($vars) {
   return '<nav id="user-menu" role="navigation" tabindex="-1"><input type="checkbox" id="user-menu-toggle"><label for="user-menu-toggle" onclick></label><ul class="menu--user-menu menu links">' . $vars['tree'] . '</ul></nav>';
 }
 
+/** @func:
+ * - Main LI
+ */
+function pnwds_menu_link__user_menu($vars) {
+  $element = $vars['element'];
+  $sub_menu = '';
+  $path = current_path();
+
+  if ($element['#below']) {
+    foreach ($element['#below'] as $key => $val) {
+      if (is_numeric($key)) {
+        $element['#below'][$key]['#theme'] = 'menu_link__user_menu_inner'; // Second level LI
+        if ($val['#href'] == $path) {
+          $element['#localized_options']['attributes']['class'][] = 'menu__item--active-trail active-trail';
+          $element['#attributes']['class'][] = 'menu__item--active-trail active-trail';
+        }
+      }
+    }
+    $element['#below']['#theme_wrappers'][0] = 'menu_tree__user_menu_inner'; // Second level UL
+    $sub_menu = drupal_render($element['#below']);
+    $element['#attributes']['class'][] = 'dropdown';
+  }
+  $element['#attributes']['class'][] = 'menu__item';
+  $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
+  $element['#attributes']['class'][] = 'menu__item--' . strtolower(str_replace(' ','-', $element['#original_link']['link_title']));
+
+  if ($element['#below']) {
+    $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+    $element['#localized_options']['attributes']['aria-haspopup'] ='true';
+    $output = '<input type="checkbox" />' . l($element['#title'], $element['#href'], array('attributes' => $element['#localized_options']['attributes'], 'html' => TRUE));
+  } else {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  }
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '</li>';
+}
+
+/** @func:
+ * - Inner UL
+ */
+function pnwds_menu_tree__user_menu_inner($vars) {
+    return '<ul class="menu--user-menu_sub dropdown-menu menu">' . $vars['tree'] . '</ul>';
+}
+
+/** @func:
+ * - Inner LI
+ */
+function pnwds_menu_link__user_menu_inner($vars) {
+  $element = $vars['element'];
+  $sub_menu = '';
+  
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+    $element['#attributes']['class'][] = 'dropdown';
+    $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+    $element['#localized_options']['attributes']['aria-haspopup'] ='true';
+    $output = '<input type="checkbox" />' . l($element['#title'], $element['#href'], array('attributes' => $element['#localized_options']['attributes'], 'html' => TRUE));
+  } else {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  }
+  
+  $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
+  
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '</li>';
+}
+
 /**
  * Implements theme_menu_tree__menu_id()
  *
