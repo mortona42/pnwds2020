@@ -56,6 +56,8 @@ button,
 a.button,
 select,
 textarea {
+  max-width: 100%;
+  
   // Suppress red glow that Firefox
   // adds to form fields by default.
   &:invalid {

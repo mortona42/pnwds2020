@@ -1,0 +1,34 @@
+.view-commerce-cart-summary {
+  .views-field-quantity {
+    text-align: center;
+  }
+}
+
+.commerce-order-handler-area-order-total {
+  .commerce-price-formatted-components {
+    tr {
+      background-color: $true-white;
+      border-top: 1px solid $true-black;
+    }
+    
+    @include respond-to($medium, max-width) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.checkout-buttons {
+  border: medium none;
+  margin-bottom: 0;
+  
+  input,
+  span {
+    vertical-align: bottom;
+  }
+  
+  .button-operator {
+    font-size: 0.875em;
+    margin: 0 0.325em;
+  }
+}

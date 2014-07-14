@@ -1,0 +1,21 @@
+fieldset {
+  display: table-cell;
+  margin: 0 0 $vert-spacing-unit;
+  min-width: 0;
+  max-width: 100%;
+  
+  legend {
+    color: $dark-blue;
+    padding: 0 0.875em;
+  }
+}
+
+.form-item,
+.form-actions {
+  max-width: 100%;
+  
+  .description {
+    font-size: 0.675em;
+    line-height: 1.5;
+  }
+}
