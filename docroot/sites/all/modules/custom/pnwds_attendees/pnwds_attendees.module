@@ -11,11 +11,16 @@
  */
 function pnwds_attendees_entity_update($entity, $type) {
 
-  // Ticket Status is complete. Set user as an attendee
-  if ($type == 'ticket_registration' &&  !empty($entity->ticket_state['und'][0]['target_id']) && $entity->ticket_state['und'][0]['target_id'] == '31') {
-    $user = user_load($entity->user_uid);
-    $wrapper = entity_metadata_wrapper('user', $user);
-    $wrapper->roles[]= '31';
-    $wrapper->save();
+  // If ticket status is complete. Set user as an attendee role
+  if ($type == 'ticket_registration' && !empty($entity->ticket_state)) {
+    $ts = ticket_state_load($entity->ticket_state[LANGUAGE_NONE][0]['target_id']);
+    if($ts->name == 'completed') {
+      $user = user_load($entity->user_uid);
+      $user_wrapper = entity_metadata_wrapper('user', $user);
+
+      // 31 is the role id for attendees
+      $user_wrapper->roles[]= '31';
+      $user_wrapper->save();
+    }
   }
 }
