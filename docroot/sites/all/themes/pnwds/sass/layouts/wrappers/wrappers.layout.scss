@@ -54,7 +54,6 @@ $xxLarge: 1600px;
 
 .l-navigation,
 .l-header,
-.l-highlighted,
 .l-main,
 .l-footer {
   @include container; // Define these elements as the grid containers.
@@ -72,6 +71,8 @@ $xxLarge: 1600px;
     padding-right: 0;
   }
 }
+
+.l-highlighted {}
 
 .l-preface,
 .l-content,

@@ -39,10 +39,9 @@
 .l-header {
   padding-top: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000358}}
 .l-navigation,
 .l-header,
-.l-highlighted,
 .l-main,
 .l-footer {
   *zoom: 1;
@@ -57,23 +56,22 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/\.rbenv\/versions\/1\.9\.3-p194\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
   .l-navigation:after,
   .l-header:after,
-  .l-highlighted:after,
   .l-main:after,
   .l-footer:after {
     content: "";
     display: table;
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000366}}
 .l-navigation {
   padding-bottom: 0; }
   @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000366}}
     .l-navigation {
       padding-left: 0;
       padding-right: 0; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000381}}
 .l-preface,
 .l-content,
 .l-sidebar-first,
@@ -86,14 +84,14 @@
   margin-right: 0; }
 
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000391}}
   .l-branding {
     width: 36.77043%;
     float: left;
     margin-right: 1.16732%;
     display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000395}}
   .l-menu {
     width: 62.06226%;
     float: left;
@@ -105,7 +103,7 @@
     display: inline; }
 
   /* Content Area */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003102}}
   .l-content {
     width: 100%;
     float: left;
@@ -113,19 +111,19 @@
     display: inline; }
 
   /* Sidebars */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003107}}
   .has-one-sidebar .l-content {
     width: 74.70817%;
     float: left;
     margin-right: 1.16732%;
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003110}}
   .has-one-sidebar .l-sidebar-first {
     width: 24.12451%;
     float: left;
     margin-right: 1.16732%;
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003113}}
   .has-one-sidebar .l-sidebar-second {
     width: 24.12451%;
     float: left;
@@ -135,26 +133,26 @@
     margin-right: 0;
     *margin-left: -1.2em;
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003119}}
   .has-one-sidebar.has-sidebar-first .l-content {
     float: right;
     margin-right: 0;
     *margin-left: -1.2em;
     display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003129}}
   .has-two-sidebars .l-sidebar-first {
     width: 24.12451%;
     float: left;
     margin-right: 1.16732%;
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003132}}
   .has-two-sidebars .l-content {
     width: 49.41634%;
     float: left;
     margin-right: 1.16732%;
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003135}}
   .has-two-sidebars .l-sidebar-second {
     width: 24.12451%;
     float: left;
@@ -164,7 +162,7 @@
     margin-right: 0;
     *margin-left: -1.2em;
     display: inline; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003144}}
 .l-region--help,
 .l-sidebar-first,
 .l-sidebar-second {

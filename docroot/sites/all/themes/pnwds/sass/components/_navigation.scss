@@ -458,7 +458,7 @@ nav[role="navigation"] > ul .dropdown {
       @include transform(scaleY(0));
       @include transform-origin(50%, 0%);
       @include transition-property(max-height, transform);
-      @include transition-duration(600ms, 300ms);
+      @include transition-duration(300ms, 300ms);
       @include transition-delay(0s, 0s);
       max-height: 0;
       overflow: hidden;
@@ -493,7 +493,7 @@ nav[role="navigation"] > ul .dropdown {
       &:checked ~ .dropdown-menu {
         @include transform(scaleY(1));
         @include transition-property(max-height, transform);
-        @include transition-duration(600ms, 300ms);
+        @include transition-duration(300ms, 300ms);
         @include transition-delay(0s, 0s);
         max-height: 9999px;
       }
@@ -526,7 +526,7 @@ nav[role="navigation"] > ul .dropdown {
       @include transform(scaleY(0));
       @include transform-origin(50%, 0%);
       @include transition-property(max-height, transform);
-      @include transition-duration(600ms, 300ms);
+      @include transition-duration(300ms, 300ms);
       @include transition-delay(0s, 0s);
       display: block;
       max-height: 0;
@@ -540,7 +540,7 @@ nav[role="navigation"] > ul .dropdown {
       > .dropdown-menu {
         @include transform(scaleY(1));
         @include transition-property(max-height, transform);
-        @include transition-duration(600ms, 300ms);
+        @include transition-duration(300ms, 300ms);
         @include transition-delay(0s, 0s);
         max-height: 420px;
       }
