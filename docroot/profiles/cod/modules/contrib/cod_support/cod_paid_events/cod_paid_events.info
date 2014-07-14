@@ -33,10 +33,3 @@ features[field_instance][] = ticket_type-ticket_type-field_complete_state
 features[field_instance][] = ticket_type-ticket_type-field_ticket_related_product
 features[views_view][] = order_registrations
 install_option = cod
-
-; Information added by Drupal.org packaging script on 2014-06-28
-version = "7.x-1.0-beta1+15-dev"
-core = "7.x"
-project = "cod_support"
-datestamp = "1403917434"
-

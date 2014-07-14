@@ -129,6 +129,7 @@ features[variable][] = node_preview_session
 features[variable][] = node_submitted_page
 features[variable][] = node_submitted_schedule_item
 features[variable][] = node_submitted_session
+features[variable][] = pathauto_node_schedule_item_pattern
 features[variable][] = pathauto_node_session_pattern
 features[views_view][] = cod_session_sessions
 features[views_view][] = cod_session_sessions_admin
@@ -137,10 +138,3 @@ features[views_view][] = cod_session_sessions_speaker_confirmation
 features[views_view][] = cod_session_speakers
 features[views_view][] = cod_session_tracks
 features[views_view][] = cod_session_user_presentations
-
-; Information added by Drupal.org packaging script on 2014-06-28
-version = "7.x-1.0-beta1+15-dev"
-core = "7.x"
-project = "cod_support"
-datestamp = "1403917434"
-

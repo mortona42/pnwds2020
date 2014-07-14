@@ -8,9 +8,9 @@ dependencies[] = advanced_help
 core = 7.x
 
 
-; Information added by drush on 2014-06-27
-version = "7.x-1.4+2-dev"
+; Information added by drush on 2014-07-14
+version = "7.x-1.4+8-dev"
 core = "7.x"
 project = "ctools"
-datestamp = "1403854757"
+datestamp = "1405294988"
 

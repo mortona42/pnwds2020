@@ -188,6 +188,13 @@ function _create_user($email, $form, $form_state, $field_name) {
 
   user_save($account);
 
+  // Append the first/last name instead of email address to the username
+  if (module_exists('realname')) {
+    realname_update($account);
+    $account->name = $account->realname;
+    user_save($account);
+  }
+
   return $account;
 }
 
