@@ -1,0 +1,6 @@
+name = PNWDS Attendee
+description = Set attendees role based on a ticket sale
+package = PNWDS
+dependencies[] = commerce
+dependencies[] = commerce_order
+core = 7.x

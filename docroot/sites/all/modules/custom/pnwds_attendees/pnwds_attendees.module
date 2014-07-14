@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * PNWDS Attendee module.
+ */
+
+/**
+ * Implements hook_entity_update().
+ *
+ * If the ticket state is target id is 31, it is complete. So, set the user to an attendee role.
+ */
+function pnwds_attendees_entity_update($entity, $type) {
+
+  // Ticket Status is complete. Set user as an attendee
+  if ($type == 'ticket_registration' &&  !empty($entity->ticket_state['und'][0]['target_id']) && $entity->ticket_state['und'][0]['target_id'] == '31') {
+    $user = user_load($entity->user_uid);
+    $wrapper = entity_metadata_wrapper('user', $user);
+    $wrapper->roles[]= '31';
+    $wrapper->save();
+  }
+}
