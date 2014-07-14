@@ -35,13 +35,6 @@ function cod_paid_events_commerce_checkout_complete($order) {
     foreach ($_SESSION['cod_paid_events_ticket_registrations'] as $trid) {
       $ticket_registration = ticket_registration_load($trid);
       $ticket_registration->field_ticket_order[LANGUAGE_NONE][0]['target_id'] = $order->order_id;
-
-      // Set the completed registration state.
-      if (!empty($ticket_registration->ticket_type()->field_complete_state)) {
-        // TODO: We need to modify this so that it actually checks if the order is complete.
-        $ticket_registration->ticket_state = $ticket_registration->ticket_type()->field_complete_state;
-      }
-
       ticket_registration_save($ticket_registration);
     }
     // Clear out the stored registrations.
@@ -61,10 +54,11 @@ function cod_paid_events_entity_insert($entity, $type) {
  */
 function cod_paid_events_entity_update($entity, $type) {
   cod_paid_events_add_order_instance($entity, $type);
+  cod_paid_events_order_complete($entity, $type);
 }
 
 /**
- * Implements hook_entity_presave().
+ * Update the ticket registrations to have an order field.
  */
 function cod_paid_events_add_order_instance($entity, $type) {
   if ($type == 'ticket_type' && !empty($entity->field_ticket_related_product[LANGUAGE_NONE][0]['product_id'])) {
@@ -108,6 +102,29 @@ function cod_paid_events_add_order_instance($entity, $type) {
 
       field_create_instance($instance);
       cache_clear_all('cod_paid_events_order_registrations_instance', 'cache');
+    }
+  }
+}
+
+/**
+ * Update the ticket to the correct state on order completion.
+ */
+function cod_paid_events_order_complete($entity, $type) {
+  // Commerce order moved from checkout complete to completed.
+  if ($type == 'commerce_order' && $entity->status == 'completed' && $entity->original->status != 'completed') {
+    // Get tickets related to the order.
+    $query = new EntityFieldQuery();
+    $results = $query->entityCondition('entity_type', 'ticket_registration')
+      ->fieldCondition('field_ticket_order', 'target_id', $entity->order_id)
+      ->execute();
+    if (count($results['ticket_registration'])) {
+      foreach (array_keys($results['ticket_registration']) as $trid) {
+        $ticket_registration = ticket_registration_load($trid);
+        if (!empty($ticket_registration->ticket_type()->field_complete_state)) {
+          $ticket_registration->ticket_state = $ticket_registration->ticket_type()->field_complete_state;
+          ticket_registration_save($ticket_registration);
+        }
+      }
     }
   }
 }
