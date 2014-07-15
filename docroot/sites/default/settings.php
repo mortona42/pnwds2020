@@ -210,20 +210,15 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'pnw',
-      'username' => 'root',
-      'password' => 'Timfd@w!',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
+
+$databases['default']['default'] = array(
+  'driver' => 'mysql',
+  'database' => 'pnwds',
+  'username' => 'root',
+  'password' => '',
+  'host' => 'localhost',
+  'prefix' => '',
+  'collation' => 'utf8_general_ci',
 );
 
 /**
@@ -256,7 +251,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = 'nzedNdszaVUCkC6lIscnGZPNAlX_7qZY-6XppvuVTB4';
+$drupal_hash_salt = '';
 
 /**
  * Base URL (optional).
@@ -278,7 +273,7 @@ $drupal_hash_salt = 'nzedNdszaVUCkC6lIscnGZPNAlX_7qZY-6XppvuVTB4';
  * It is not allowed to have a trailing slash; Drupal will add it
  * for you.
  */
-$base_url = 'http://local.pnw.com';  // NO trailing slash!
+# $base_url = 'http://www.example.com';  // NO trailing slash!
 
 /**
  * PHP settings:
@@ -565,3 +560,7 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/pnwds/pnwds-settings.inc';
+}
