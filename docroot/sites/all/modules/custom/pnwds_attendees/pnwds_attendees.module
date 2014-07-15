@@ -6,20 +6,22 @@
 
 /**
  * Implements hook_entity_update().
- *
- * If the ticket state is target id is 31, it is complete. So, set the user to an attendee role.
  */
 function pnwds_attendees_entity_update($entity, $type) {
 
-  // If ticket status is complete. Set user as an attendee role
-  if ($type == 'ticket_registration' && !empty($entity->ticket_state)) {
-    $ts = ticket_state_load($entity->ticket_state[LANGUAGE_NONE][0]['target_id']);
-    if($ts->name == 'completed') {
+  // Ticket Status is complete. Set user as an attendee.
+  if ($type == 'ticket_registration') {
+    $ticket_state = entity_metadata_wrapper('ticket_registration', $entity)->ticket_state->raw();
+    $completed_state = entity_metadata_wrapper('ticket_type', $entity->ticket_type())->field_complete_state->raw();
+
+    // Status has changed and the new status is complete.
+    if ($entity->original->ticket_state != $entity->ticket_state && $ticket_state == $completed_state) {
       $user = user_load($entity->user_uid);
       $user_wrapper = entity_metadata_wrapper('user', $user);
 
-      // 31 is the role id for attendees
-      $user_wrapper->roles[]= '31';
+      // Using variable get here, even though we con't have a variable because
+      // eventually we'll want an admin interface to set it.
+      $user_wrapper->roles[] = variable_get('pnwds_attendees_role', '31');
       $user_wrapper->save();
     }
   }
