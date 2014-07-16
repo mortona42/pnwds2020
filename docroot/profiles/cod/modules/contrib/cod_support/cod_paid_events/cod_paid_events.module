@@ -30,6 +30,7 @@ function cod_paid_events_ticket_registered_redirect_alter(&$redirect, &$registra
  * Implements hook_commerce_checkout_complete().
  */
 function cod_paid_events_commerce_checkout_complete($order) {
+  watchdog('cod_paid_events', 'Order id: @oid; session tickets: @reg', array('@oid' => $order->order_id, '@reg' => print_r($_SESSION['cod_paid_events_ticket_registrations'], TRUE)), WATCHDOG_DEBUG);
   if (!empty($_SESSION['cod_paid_events_ticket_registrations'])) {
     // Mark each of the registrations with the order number.
     foreach ($_SESSION['cod_paid_events_ticket_registrations'] as $trid) {
