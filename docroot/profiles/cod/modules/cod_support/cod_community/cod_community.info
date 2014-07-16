@@ -13,11 +13,3 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[user_permission][] = administer contact forms
 features[views_view][] = cod_community_attendees
-
-
-; Information added by drush on 2014-07-14
-version = "7.x-1.0-beta2+1-dev"
-core = "7.x"
-project = "cod_support"
-datestamp = "1405295005"
-

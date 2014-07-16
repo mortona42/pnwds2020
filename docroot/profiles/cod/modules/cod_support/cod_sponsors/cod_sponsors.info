@@ -67,11 +67,3 @@ features[variable][] = pathauto_node_sponsor_pattern
 features[views_view][] = cod_sponsors
 features[views_view][] = cod_sponsors_admin
 features[views_view][] = cod_sponsors_levels
-
-
-; Information added by drush on 2014-07-14
-version = "7.x-1.0-beta2+1-dev"
-core = "7.x"
-project = "cod_support"
-datestamp = "1405295005"
-
