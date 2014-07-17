@@ -17,7 +17,7 @@
         menuRegion = d.getElementsByClassName('l-region--menu'),
         navRegion = d.getElementsByClassName('l-region--navigation'),
         footerWrapper = d.getElementsByClassName('w-footer'),
-        footerOrigClass = footerWrapper.className;
+        footerOrigClass = footerWrapper[0].className;
     
     enquire.register("screen and (max-width:56.25em)", {
       match : function() {
