@@ -425,33 +425,50 @@ fieldset {
     font-size: 0.675em;
     line-height: 1.5; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\000031}}
+@media screen and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\000035}}
+  html,
+  body,
+  .l-page,
+  .container {
+    min-height: 100%;
+    /* height: 100%; */
+    position: relative; } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000314}}
+.w-footer.positioned {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000322}}
 blockquote {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 20px;
   margin-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000329}}
   blockquote p,
   blockquote footer {
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000333}}
   blockquote p {
     font-size: 1.125em;
     font-style: italic; }
     @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000333}}
       blockquote p {
         font-size: 1.5em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000342}}
   blockquote footer {
     font-size: 0.625em; }
     @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000342}}
       blockquote footer {
         font-size: 1em; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000351}}
 #modal-container {
   display: none;
   visibility: hidden; }
