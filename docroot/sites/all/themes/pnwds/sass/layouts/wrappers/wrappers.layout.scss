@@ -83,6 +83,10 @@ $xxLarge: 1600px;
   margin-right: 0;
 }
 
+.l-footer {
+  padding-top: $vert-spacing-unit;
+}
+
 @include respond-to($medium) {
   .l-navigation {}
   

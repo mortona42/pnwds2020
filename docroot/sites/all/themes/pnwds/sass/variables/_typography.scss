@@ -1,7 +1,11 @@
 //Font Stacks
-$branding-light: "Futura Light", Futura-Light, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
-$branding-heavy: "Futura Bold", Futura-Bold, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
-$sans-serif: "Nunito", Verdana, sans-serif;
+$branding-light: "texgyreadventor", texgyreadventor, "Futura Light", Futura-Light, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+$branding-heavy: "texgyreadventor", texgyreadventor, "Futura Bold", Futura-Bold, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+
+$headings: "League Gothic", "Impact", Impact, sans-serif;
+$navigation: "Nunito", Verdana, sans-serif;
+
+$sans-serif: "texgyreadventor", "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", "Nunito", Verdana, sans-serif;
 $serif: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
 
 //Typography
@@ -14,7 +18,7 @@ $copy-line-height: 1.625em;
 $base-font-size: 16px;
 $base-line-height: 24px;
 
-$header-font-family: $sans-serif;
+$header-font-family: $headings;
 $header-font-weight: 400;
 $header-font-style: normal;
 $header-font-color: $copy-color;

@@ -1,3 +1,31 @@
+// Basehold.it placeholder baseline calculation helper
+/*
+body {
+  position: relative;
+  
+  &:after {
+    background: url('http://basehold.it/image.php?height=26') repeat top left;
+    content: '';
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &:active {
+    &:after {
+      display: none;
+    }
+  }
+}
+*/
+
 html,
 body {
   color: $copy-color;
@@ -5,6 +33,20 @@ body {
   font-size: $copy-font-size;
   font-weight: $copy-font-weight;
   line-height: $copy-line-height;
+}
+
+%dark_bg {
+  color: $white;
+  
+  &:link,
+  &:visited {
+    color: $white;
+  }
+  
+  &:hover,
+  &:focus {
+    color: $light-grey;
+  }
 }
 
 $header-font-sizes: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, $h5-font-size, $h6-font-size;
@@ -83,6 +125,23 @@ a {
     &:hover,
     &:focus {
       color: tint($blue, 20%);
+    }
+  }
+}
+
+
+p {
+  margin-bottom: $vert-spacing-unit;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @include respond-to($medium) {
+    .node__content &,
+    .node--content &,
+    .node-content & {
+      font-size: 1.125em;
     }
   }
 }

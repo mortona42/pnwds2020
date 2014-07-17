@@ -11,8 +11,9 @@
   
   @include respond-to($medium) {
     display: inline-block;
-    text-align: left;
+    text-align: center;
     max-width: 33%;
+    min-width: 100px;
   }
 }
 
@@ -29,7 +30,7 @@
 
 h1.site--branding__name {
   font-family: $branding-heavy;
-  font-size: 1.75rem;
+  font-size: 2.1rem;
   font-stretch: normal;
   font-style: normal;
   line-height: 1em;
@@ -64,24 +65,19 @@ h1.site--branding__name {
   
   @include respond-to($medium) {
     display: inline-block;
-    font-size: 1.45rem;
+    font-size: 1.75rem;
+    line-height: 1;
     text-align: left;
     vertical-align: bottom;
-    /* margin-bottom: 1.25em; */
+    margin-bottom: 0.375em;
     max-width: 66%;
     
     a {
       .word1,
       .word2 {
-        font-size: 1.3rem;
+        font-size: 1.325rem;
       }
     }
-  }
-  
-  @include respond-to($large) {
-    /* font-size: 1.25rem; */
-    line-height: 1em;
-    /* margin-bottom: 0.875em; */
   }
 }
 
@@ -103,12 +99,12 @@ h1.site--branding__name {
     }
     
     h1.site--branding__name {
-      font-size: 1.45rem;
+      font-size: 1.85rem;
       
       a {
         .word1,
         .word2 {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
         }
       }
     }

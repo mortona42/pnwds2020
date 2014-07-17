@@ -1,10 +1,17 @@
 ul {
-/*
-  &.links--inline {
-    @extend %links--inline;
-  }
-*/
   &.links--inline__separated {
     @extend %links--inline__separated;
+  }
+  
+  .node__content &,
+  .node--content &,
+  .node-content & {
+    list-style: disc outside image-url('icons/icon__list--drop.png');
+    margin-bottom: $vert-spacing-unit;
+    padding-left: 2em;
+    
+    li {
+      vertical-align: top;
+    }
   }
 }
