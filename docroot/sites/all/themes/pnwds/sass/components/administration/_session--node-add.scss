@@ -25,6 +25,27 @@
       @include omega;
     }
     
+    .field-name-field-speakers {
+      position: relative;
+      z-index: 1;
+      
+      .tabledrag-toggle-weight-wrapper {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+      }
+      
+      .field-label {
+        padding-left: 0.5em;
+      }
+    }
+    
     div[class*="field-name-"],
     div[class*="vertical-tabs"] {
       &:not(div.field-name-body),
