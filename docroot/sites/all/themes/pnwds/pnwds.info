@@ -1,6 +1,6 @@
 name = Pacific NW Drupal Summit 2014
 description = Please provide a description for your theme.
-base theme = omega
+base theme = pisces
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x

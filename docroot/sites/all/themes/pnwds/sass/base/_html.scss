@@ -52,3 +52,7 @@ blockquote {
   display: none;
   visibility: hidden;
 }
+
+.element-invisible {
+  @include element-invisible;
+}

@@ -86,20 +86,16 @@ h1.site--branding__name {
 // NOT FRONT
 @include respond-to($medium, max-width) {
   .not-front {
-    .site--branding {
-      margin-top: -64px;
-      position: relative;
-      z-index: 50;
-    }
+    .site--branding {}
     .site--branding__logo {}
     
     .site--branding__logo-svg {
-      width: auto;
-      height: 120px;
+      display: none;
     }
     
     h1.site--branding__name {
       font-size: 1.85rem;
+      margin: 0 auto;
       
       a {
         .word1,
@@ -107,6 +103,14 @@ h1.site--branding__name {
           font-size: 1.4rem;
         }
       }
+    }
+  }
+}
+
+@include respond-to($medium) {
+  .not-front {
+    .site--branding__logo-svg {
+      display: inline-block;
     }
   }
 }

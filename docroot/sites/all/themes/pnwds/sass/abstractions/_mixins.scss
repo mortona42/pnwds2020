@@ -116,6 +116,9 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
   }
@@ -129,6 +132,9 @@
   height: auto;
   width: auto;
   overflow: auto;
+  margin: inherit;
+  padding: inherit;
+  font-size: inherit;
 }
 
 // Makes an element visually hidden by default, but visible when focused.

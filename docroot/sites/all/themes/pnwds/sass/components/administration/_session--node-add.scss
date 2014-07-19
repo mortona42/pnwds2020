@@ -1,0 +1,38 @@
+.node-session-form {
+  @include respond-to($medium) {
+    @include span-columns($total-columns);
+    
+    .form-item-title,
+    .field-name-body,
+    .form-actions {
+      @include span-columns($total-columns);
+    }
+    
+    .field-name-field-news-image,
+    .field-name-field-speakers,
+    .field-name-field-slides,
+    .group-audience {
+      @include span-columns($total-columns / 2 !important);
+    }
+    
+    .field-name-field-news-image,
+    .field-name-field-slides {
+      @include suffix(1);
+    }
+    
+    .field-name-field-speakers,
+    .group-audience {
+      @include omega;
+    }
+    
+    div[class*="field-name-"],
+    div[class*="vertical-tabs"] {
+      &:not(div.field-name-body),
+      &:not(div.field-name-field-news-image),
+      &:not(div.field-name-field-speakers),
+      &:not(div.field-name-field-slides) {
+        @include span-columns($total-columns);
+      }
+    }
+  }
+}
