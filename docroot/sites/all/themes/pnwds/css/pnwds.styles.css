@@ -999,13 +999,14 @@ body {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000032}}
 .l-region--navigation .menu > li {
-  display: list-item; }
+  display: inline-block; }
   @media screen and (max-width: 56.249em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000032}}
     .l-region--navigation .menu > li {
+      display: list-item;
       position: relative;
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\0000310}}
       .l-region--navigation .menu > li.expanded .menu {
         display: block; } }
 

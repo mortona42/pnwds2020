@@ -1,8 +1,9 @@
 .l-region--navigation .menu {
   > li {
-    display: list-item;
+    display: inline-block;
     
     @include respond-to($medium, max-width) {
+      display: list-item;
       position: relative;
       width: 100%;
       
