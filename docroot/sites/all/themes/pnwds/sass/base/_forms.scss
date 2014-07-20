@@ -23,7 +23,7 @@ fieldset {
 
 input.form-submit,
 a.button,
-div.exposed-filters input#edit-submit {
+div.exposed-filters input[id^="edit-submit"] {
   @include transition(all 300ms ease);
   @include border-radius(4px);
   @include box-shadow(0 0 0 0 rgba($black, 0));
@@ -40,6 +40,7 @@ div.exposed-filters input#edit-submit {
   margin-right: 1em;
   padding: 0.375em 0.625em;
   text-align: center;
+  text-decoration: none;
   text-shadow: none;
   
   &:hover,
@@ -47,16 +48,17 @@ div.exposed-filters input#edit-submit {
     @include box-shadow(2px 2px 3px 0 rgba($black, 0.6));
     background-color: $grey;
     color: $white;
+    text-decoration: none;
   }
 }
 
-input#edit-submit,
-input#edit-actions-submit,
+input[id^="edit-submit"],
+input[id^="edit-actions-submit"],
 input[id^="save-continue"],
 input[id^="edit-save"],
 input[type="submit"][id^="edit-field"],
-input#edit-save,
-input#edit-actions-save {
+input[id^="edit-save"],
+input[id^="edit-actions-save"] {
   @extend input.form-submit;
   background-color: $green;
   color: $white;
@@ -67,10 +69,11 @@ input#edit-actions-save {
   }
 }
 
-input#edit-preview,
-input#edit-next,
-input#preview-submit,
-input[id^="edit-return"] {
+input[id^="edit-preview"],
+input[id^="edit-next"],
+input[id^="preview-submit"],
+input[id^="edit-return"],
+input[id^="edit-cancel"] {
   @extend input.form-submit;
   background-color: $dark-blue;
   color: $white;

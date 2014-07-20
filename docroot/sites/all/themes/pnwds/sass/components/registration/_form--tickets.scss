@@ -31,7 +31,7 @@
     }
     
     a {
-      @extend input#edit-submit;
+      @extend input[id^="edit-submit"];
       font-size: 0.75em;
     }
   }
