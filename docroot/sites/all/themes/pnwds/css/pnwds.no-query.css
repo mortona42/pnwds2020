@@ -1873,3 +1873,42 @@ nav[role="navigation"] > ul .dropdown {
       width: 100%;
       float: left;
       margin-right: 1.16732%; } }
+@media screen and (max-width: 56.249em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000362}}
+  .node-session-form .field-name-field-speakers .field-label {
+    padding-left: 0.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000366}}
+  .node-session-form .field-name-field-speakers table {
+    display: block;
+    max-width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000370}}
+    .node-session-form .field-name-field-speakers table thead {
+      display: table;
+      width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000373}}
+      .node-session-form .field-name-field-speakers table thead tr {
+        display: table-row; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000375}}
+        .node-session-form .field-name-field-speakers table thead tr th {
+          display: table-cell; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000381}}
+    .node-session-form .field-name-field-speakers table tbody {
+      display: inline-block;
+      max-width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000384}}
+      .node-session-form .field-name-field-speakers table tbody tr {
+        display: block;
+        max-width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000387}}
+        .node-session-form .field-name-field-speakers table tbody tr td {
+          display: inline-block;
+          max-width: 70%;
+          width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000395}}
+    .node-session-form .field-name-field-speakers table .form-item {
+      display: inline-block;
+      width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000399}}
+      .node-session-form .field-name-field-speakers table .form-item input {
+        max-width: 100%;
+        width: auto; } }

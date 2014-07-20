@@ -56,4 +56,52 @@
       }
     }
   }
+  
+  @include respond-to($medium, max-width) {
+    .field-name-field-speakers {
+      .field-label {
+        padding-left: 0.5em;
+      }
+      
+      table {
+        display: block;
+        max-width: 100%;
+        
+        thead {
+          display: table;
+          width: 100%;
+          tr {
+            display: table-row;
+            th {
+              display: table-cell;
+            }
+          }
+        }
+        
+        tbody {
+          display: inline-block;
+          max-width: 100%;
+          tr {
+            display: block;
+            max-width: 100%;
+            td {
+              display: inline-block;
+              max-width: 70%;
+              width: auto;
+            }
+          }
+        }
+        
+        .form-item {
+          display: inline-block;
+          width: auto;
+          
+          input {
+            max-width: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }
