@@ -175,6 +175,10 @@
 // Dropdown links
 %main-menu__submenu-links {
   @extend %main-menu__top-links;
+  @include respond-to($medium, max-width) {
+    background-color: $lightest-grey;
+  }
+  
   @include respond-to($medium) {
     @include box-shadow(0px 5px 7px -5px rgba($black, 0) inset);
     border-top: medium none;
@@ -343,6 +347,7 @@ input#main-menu-toggle[type=checkbox] {
         @include transition-duration(600ms);
         @include transition-delay(0ms);
         max-height: 420px;
+        overflow-y: scroll;
       }
     }
   }
@@ -375,7 +380,7 @@ input#user-menu-toggle[type=checkbox] {
       
       ~ ul {
         margin-bottom: 46px;
-        max-height: 280px;
+        max-height: 320px;
       }
     }
   }
@@ -457,7 +462,7 @@ nav[role="navigation"] > ul .dropdown {
         font-size: 0.7em;
         top: 1em;
         right: 1.5em;
-        z-index: 1;
+        z-index: 3;
       }
       
       &:after {
@@ -467,10 +472,10 @@ nav[role="navigation"] > ul .dropdown {
         position: absolute;
         top: 0;
         right: 0;
-        width: 44px;
-        min-width: 44px;
+        width: 46px;
+        min-width: 46px;
         height: 100%;
-        max-height: 44px;
+        max-height: 46px;
         cursor: pointer;
         z-index: 2;
       }
@@ -496,6 +501,12 @@ nav[role="navigation"] > ul .dropdown {
           display: block;
           padding: 10px 10px;
         }
+        
+        &:last-child {
+          a {
+            @include box-shadow(0px -10px 16px -16px rgba(0, 0, 0, 0.6) inset);
+          }
+        }
       }
     }
     
@@ -505,12 +516,12 @@ nav[role="navigation"] > ul .dropdown {
       position: absolute;
       top: 0;
       right: 0;
-      width: 44px;
-      min-width: 44px;
+      width: 46px;
+      min-width: 46px;
       height: 100%;
-      max-height: 44px;
+      max-height: 46px;
       cursor: pointer;
-      z-index: 3;
+      z-index: 4;
       
       &:checked ~ .dropdown-menu {
         @include transform(scaleY(1));

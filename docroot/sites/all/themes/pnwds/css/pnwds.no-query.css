@@ -997,6 +997,18 @@ body {
   .l-region--footer .block img {
     width: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000032}}
+.l-region--navigation .menu > li {
+  display: list-item; }
+  @media screen and (max-width: 56.249em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000032}}
+    .l-region--navigation .menu > li {
+      position: relative;
+      width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/pisces\/_nav--overrides\.scss}line{font-family:\000039}}
+      .l-region--navigation .menu > li.expanded .menu {
+        display: block; } }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_backgrounds\.scss}line{font-family:\000031}}
 html {
   background-color: white;
@@ -1361,6 +1373,11 @@ h1.site--branding__name {
   .menu--user-menu ul > .level-2:last-child {
     border-bottom: medium none; }
 
+@media screen and (max-width: 56.249em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003176}}
+  .menu--main-menu ul > .level-2 > a,
+  .menu--user-menu ul > .level-2 > a {
+    background-color: #ededed; } }
 @media screen and (min-width: 56.25em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003176}}
   .menu--main-menu ul > .level-2 > a,
@@ -1372,7 +1389,7 @@ h1.site--branding__name {
     color: #1a1a1a;
     display: block;
     margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003190}}
     .menu--main-menu ul > .level-2 > a:link,
     .menu--user-menu ul > .level-2 > a:link, .menu--main-menu ul > .level-2 > a:visited,
     .menu--user-menu ul > .level-2 > a:visited {
@@ -1381,7 +1398,7 @@ h1.site--branding__name {
       text-decoration: none;
       text-shadow: 1px 1px 1px rgba(26, 26, 26, 0);
       text-transform: capitalize; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003200}}
     .menu--main-menu ul > .level-2 > a:hover,
     .menu--user-menu ul > .level-2 > a:hover, .menu--main-menu ul > .level-2 > a:focus,
     .menu--user-menu ul > .level-2 > a:focus, .menu--main-menu ul > .level-2 > a:active,
@@ -1394,16 +1411,16 @@ h1.site--branding__name {
       color: #005198;
       text-shadow: 1px 1px 1px rgba(26, 26, 26, 0.4); } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003226}}
 .menu--main-menu > .level-1.clicked ul, .menu--main-menu > .level-1.tapped ul,
 .menu--user-menu > .level-1.clicked ul,
 .menu--user-menu > .level-1.tapped ul {
   display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003247}}
 .menu--user-menu > .level-1 > a {
   border-top: medium none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003247}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003251}}
   .menu--user-menu > .level-1 > a:hover, .menu--user-menu > .level-1 > a:focus {
     -webkit-box-shadow: 0 0 0 0 transparent inset;
     -moz-box-shadow: 0 0 0 0 transparent inset;
@@ -1416,39 +1433,39 @@ h1.site--branding__name {
  * specifically for mobile then to unset them for larger breakpoints
  */
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003264}}
   .w-navigation {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 50; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003268}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003272}}
     .w-navigation ~ .w-header {
       padding-top: 46px; } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003278}}
   .l-region--navigation {
     min-height: 46px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003282}}
     .l-region--navigation .block {
       position: relative;
       width: 100%;
       top: 0;
       left: 0;
       right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003290}}
     .l-region--navigation .block--system-user-menu {
       min-height: 46px; } }
 
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003296}}
   .l-region--menu {
     padding-top: 72px; } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003299}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003303}}
   input#main-menu-toggle[type=checkbox],
   input#user-menu-toggle[type=checkbox] {
     position: absolute;
@@ -1456,12 +1473,12 @@ h1.site--branding__name {
     left: 0;
     visibility: hidden;
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003314}}
     input#main-menu-toggle[type=checkbox]:checked ~ label,
     input#user-menu-toggle[type=checkbox]:checked ~ label {
       color: white; } }
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003299}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003303}}
   input#main-menu-toggle[type=checkbox],
   input#user-menu-toggle[type=checkbox] {
     position: absolute !important;
@@ -1475,7 +1492,7 @@ h1.site--branding__name {
     clip: rect(1px, 1px, 1px, 1px); } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003329}}
   input#main-menu-toggle[type=checkbox] ~ ul {
     -webkit-transform: scaleY(0);
     -moz-transform: scaleY(0);
@@ -1504,7 +1521,7 @@ h1.site--branding__name {
     position: absolute;
     top: 100%;
     z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003343}}
   input#main-menu-toggle[type=checkbox]:checked ~ ul {
     -webkit-transform: scaleY(1);
     -moz-transform: scaleY(1);
@@ -1528,10 +1545,11 @@ h1.site--branding__name {
     -moz-transition-delay: 0ms;
     -o-transition-delay: 0ms;
     transition-delay: 0ms;
-    max-height: 420px; } }
+    max-height: 420px;
+    overflow-y: scroll; } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003358}}
   input#user-menu-toggle[type=checkbox] ~ ul {
     -webkit-transition-property: margin-bottom, max-height;
     -moz-transition-property: margin-bottom, max-height;
@@ -1547,7 +1565,7 @@ h1.site--branding__name {
     overflow: hidden;
     top: 0;
     z-index: 4; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003369}}
   input#user-menu-toggle[type=checkbox] ~ label {
     -webkit-transition-property: bottom;
     -moz-transition-property: bottom;
@@ -1558,17 +1576,17 @@ h1.site--branding__name {
     -o-transition-duration: 600ms;
     transition-duration: 600ms;
     bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003376}}
   input#user-menu-toggle[type=checkbox]:checked ~ label {
     bottom: -46px;
     z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003381}}
   input#user-menu-toggle[type=checkbox]:checked ~ ul {
     margin-bottom: 46px;
-    max-height: 280px; } }
+    max-height: 320px; } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003390}}
   label[for="main-menu-toggle"],
   label[for="user-menu-toggle"] {
     width: 44px;
@@ -1579,7 +1597,7 @@ h1.site--branding__name {
     background-position: center;
     position: absolute; } }
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003390}}
   label[for="main-menu-toggle"],
   label[for="user-menu-toggle"] {
     position: absolute !important;
@@ -1592,30 +1610,30 @@ h1.site--branding__name {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px); } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003401}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003406}}
 label[for="main-menu-toggle"] {
   background-image: url('../images/icons/icon--menu.png?1405134284');
   left: auto;
   right: 0;
   bottom: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003408}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003413}}
 label[for="user-menu-toggle"] {
   background-image: url('../images/icons/icon--user.png?1405134272'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003413}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003418}}
 #main-menu,
 #user-menu {
   outline: none !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003417}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003422}}
   #main-menu *:focus,
   #user-menu *:focus {
     outline: none !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003422}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003427}}
   #main-menu .block,
   #user-menu .block {
     margin-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003427}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003432}}
   #main-menu ul,
   #main-menu li,
   #user-menu ul,
@@ -1623,25 +1641,25 @@ label[for="user-menu-toggle"] {
     list-style-type: none;
     list-style-image: none; }
   @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003413}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003418}}
     #main-menu,
     #user-menu {
       padding: 0; } }
 
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003437}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003442}}
   .menu--user-menu {
     text-align: right; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003443}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003448}}
 nav[role="navigation"] > ul .dropdown {
   position: relative; }
   @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003447}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003452}}
     nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"] {
       display: block;
       padding: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003451}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003456}}
       nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"]:before {
         -webkit-transition: -webkit-transform 300ms;
         -moz-transition: -moz-transform 300ms;
@@ -1658,8 +1676,8 @@ nav[role="navigation"] > ul .dropdown {
         font-size: 0.7em;
         top: 1em;
         right: 1.5em;
-        z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003463}}
+        z-index: 3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003468}}
       nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"]:after {
         background-color: rgba(198, 198, 198, 0.3);
         content: "";
@@ -1667,13 +1685,13 @@ nav[role="navigation"] > ul .dropdown {
         position: absolute;
         top: 0;
         right: 0;
-        width: 44px;
-        min-width: 44px;
+        width: 46px;
+        min-width: 46px;
         height: 100%;
-        max-height: 44px;
+        max-height: 46px;
         cursor: pointer;
         z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003479}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003484}}
     nav[role="navigation"] > ul .dropdown > .dropdown-menu {
       -webkit-transform: scaleY(0);
       -moz-transform: scaleY(0);
@@ -1703,27 +1721,32 @@ nav[role="navigation"] > ul .dropdown {
       display: block;
       margin: 0;
       padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003492}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003497}}
       nav[role="navigation"] > ul .dropdown > .dropdown-menu li {
         padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003495}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003500}}
         nav[role="navigation"] > ul .dropdown > .dropdown-menu li a {
           display: block;
           padding: 10px 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003502}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003506}}
+        nav[role="navigation"] > ul .dropdown > .dropdown-menu li:last-child a {
+          -webkit-box-shadow: 0px -10px 16px -16px rgba(0, 0, 0, 0.6) inset;
+          -moz-box-shadow: 0px -10px 16px -16px rgba(0, 0, 0, 0.6) inset;
+          box-shadow: 0px -10px 16px -16px rgba(0, 0, 0, 0.6) inset; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003513}}
     nav[role="navigation"] > ul .dropdown > input[type="checkbox"] {
       opacity: 0;
       display: block;
       position: absolute;
       top: 0;
       right: 0;
-      width: 44px;
-      min-width: 44px;
+      width: 46px;
+      min-width: 46px;
       height: 100%;
-      max-height: 44px;
+      max-height: 46px;
       cursor: pointer;
-      z-index: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003515}}
+      z-index: 4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003526}}
       nav[role="navigation"] > ul .dropdown > input[type="checkbox"]:checked ~ .dropdown-menu {
         -webkit-transform: scaleY(1);
         -moz-transform: scaleY(1);
@@ -1743,7 +1766,7 @@ nav[role="navigation"] > ul .dropdown {
         -o-transition-delay: 0s, 0s;
         transition-delay: 0s, 0s;
         max-height: 9999px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003524}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003535}}
       nav[role="navigation"] > ul .dropdown > input[type="checkbox"]:checked + a[data-toggle="dropdown"]:before {
         -webkit-transform: rotate(-180deg);
         -moz-transform: rotate(-180deg);
@@ -1751,18 +1774,18 @@ nav[role="navigation"] > ul .dropdown {
         -o-transform: rotate(-180deg);
         transform: rotate(-180deg); } }
   @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003532}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003543}}
     nav[role="navigation"] > ul .dropdown > input[type="checkbox"] {
       display: none;
       visibility: hidden;
       opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003538}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003549}}
     nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"] {
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003542}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003553}}
       nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"]:before, nav[role="navigation"] > ul .dropdown [data-toggle="dropdown"]:after {
         display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003547}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003558}}
     nav[role="navigation"] > ul .dropdown .dropdown-menu {
       -webkit-transform: scaleY(0);
       -moz-transform: scaleY(0);
@@ -1791,10 +1814,10 @@ nav[role="navigation"] > ul .dropdown {
       max-height: 0;
       top: 100%;
       padding-top: 1.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003561}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003572}}
     nav[role="navigation"] > ul .dropdown:hover, nav[role="navigation"] > ul .dropdown:focus {
       overflow: visible; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003564}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_navigation\.scss}line{font-family:\00003575}}
       nav[role="navigation"] > ul .dropdown:hover > .dropdown-menu, nav[role="navigation"] > ul .dropdown:focus > .dropdown-menu {
         -webkit-transform: scaleY(1);
         -moz-transform: scaleY(1);

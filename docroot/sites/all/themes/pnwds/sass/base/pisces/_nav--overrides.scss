@@ -1,0 +1,14 @@
+.l-region--navigation .menu {
+  > li {
+    display: list-item;
+    
+    @include respond-to($medium, max-width) {
+      position: relative;
+      width: 100%;
+      
+      &.expanded .menu {
+        display: block;
+      }
+    }
+  }
+}
