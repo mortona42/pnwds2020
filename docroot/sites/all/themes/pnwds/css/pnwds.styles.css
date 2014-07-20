@@ -511,10 +511,11 @@ div.exposed-filters #edit-ticket-registrant .fieldset-description a,
     -moz-box-shadow: 2px 2px 3px 0 rgba(26, 26, 26, 0.6);
     box-shadow: 2px 2px 3px 0 rgba(26, 26, 26, 0.6);
     background-color: #828282;
+    background-image: none;
     color: white;
     text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000362}}
 input[id^="edit-submit"], .checkout-buttons input.checkout-continue, #edit-ticket-registrant .fieldset-description a,
 input[id^="edit-actions-submit"],
 input[id^="save-continue"],
@@ -524,7 +525,7 @@ input[id^="edit-save"],
 input[id^="edit-actions-save"] {
   background-color: #007740;
   color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000368}}
   input[id^="edit-submit"]:hover, .checkout-buttons input.checkout-continue:hover, #edit-ticket-registrant .fieldset-description a:hover, input[id^="edit-submit"]:focus, .checkout-buttons input.checkout-continue:focus, #edit-ticket-registrant .fieldset-description a:focus,
   input[id^="edit-actions-submit"]:hover,
   input[id^="edit-actions-submit"]:focus,
@@ -540,7 +541,7 @@ input[id^="edit-actions-save"] {
   input[id^="edit-actions-save"]:focus {
     background-color: #005f33; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000377}}
 input[id^="edit-preview"],
 input[id^="edit-next"],
 input[id^="preview-submit"],
@@ -550,7 +551,7 @@ input[id^="edit-cancel"],
 .checkout-buttons input.checkout-back {
   background-color: #005198;
   color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000383}}
   input[id^="edit-preview"]:hover, input[id^="edit-preview"]:focus,
   input[id^="edit-next"]:hover,
   input[id^="edit-next"]:focus,

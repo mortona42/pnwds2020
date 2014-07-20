@@ -47,6 +47,7 @@ div.exposed-filters input[id^="edit-submit"] {
   &:focus {
     @include box-shadow(2px 2px 3px 0 rgba($black, 0.6));
     background-color: $grey;
+    background-image: none;
     color: $white;
     text-decoration: none;
   }
