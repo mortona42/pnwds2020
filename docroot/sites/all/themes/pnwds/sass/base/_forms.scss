@@ -25,6 +25,7 @@ input.form-submit,
 a.button,
 div.exposed-filters input#edit-submit {
   @include transition(all 300ms ease);
+  @include border-radius(4px);
   @include box-shadow(0 0 0 0 rgba($black, 0));
   background-color: $lightest-grey;
   background-image: none;
@@ -37,7 +38,7 @@ div.exposed-filters input#edit-submit {
   margin-top: 1em;
   margin-bottom: 1em;
   margin-right: 1em;
-  padding: 6px 10px;
+  padding: 0.375em 0.625em;
   text-align: center;
   text-shadow: none;
   

@@ -252,6 +252,10 @@
         @include box-shadow(0 0 0 0 transparent inset);
         color: tint($blue, 60%);
       }
+      
+      @include respond-to($medium) {
+        font-size: 0.675em;
+      }
     }
   }
 }

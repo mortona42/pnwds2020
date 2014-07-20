@@ -1,0 +1,52 @@
+.ticket-register-form {
+  fieldset {
+    @include box-shadow($drop-shadow__glow-shallow-dark);
+    background-color: $lightest-grey;
+    border: medium none;
+    
+    legend {
+      top: 1em;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 0.625em;
+      
+      @include respond-to($medium) {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  
+  @include respond-to($medium) {
+    > div {
+      > input {}
+    }
+  }
+}
+
+#edit-ticket-registrant {
+  .fieldset-description {
+    .placeholder {
+      font-weight: bold;
+    }
+    
+    a {
+      @extend input#edit-submit;
+      font-size: 0.75em;
+    }
+  }
+}
+
+fieldset[id^="edit-ticket-registrationnew"] {
+  @include respond-to($medium) {
+    @include span-columns($total-columns / 2);
+    
+    &:nth-child(2n - 1) {
+      @include omega;
+    }
+    
+    &:last-of-type {
+      @include clearfix;
+    }
+  }
+}
