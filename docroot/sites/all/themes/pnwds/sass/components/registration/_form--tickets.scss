@@ -45,8 +45,14 @@ fieldset[id^="edit-ticket-registrationnew"] {
       @include omega;
     }
     
-    &:last-of-type {
-      @include clearfix;
+/*
+    &:nth-child(2n) {
+      &:last-of-type {
+        @include span-columns($total-columns);
+        @include prefix($total-columns / 4);
+        @include suffix($total-columns / 4);
+      }
     }
+*/
   }
 }
