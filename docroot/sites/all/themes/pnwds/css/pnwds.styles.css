@@ -2087,7 +2087,10 @@ nav[role="navigation"] > ul .dropdown {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000363}}
     .ticket-field-formatter-view-form .field--name-commerce-price .char1 {
       font-size: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000367}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char4 {
+      margin-left: 0.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000373}}
   .ticket-field-formatter-view-form .form-item-ticket-quantity-1 {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -2102,14 +2105,14 @@ nav[role="navigation"] > ul .dropdown {
     margin: 0 auto;
     padding: 1em 0.5em;
     background-color: #ededed; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000382}}
     .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label {
       display: inline;
       /* padding-right: 0.5em; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000386}}
       .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label:after {
         content: ": "; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000392}}
   .ticket-field-formatter-view-form .form-submit {
     margin-right: 0; }
   @media screen and (min-width: 56.25em) {
