@@ -313,3 +313,34 @@ function pnwds_menu_link__main_menu_inner($vars) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '</li>';
 }
+
+/**
+ * Provide a form-specific alteration instead of the global hook_form_alter().
+ *
+ * Modules can implement hook_form_FORM_ID_alter() to modify a specific form,
+ * rather than implementing hook_form_alter() and checking the form ID, or
+ * using long switch statements to alter multiple forms.
+ *
+ * Form alter hooks are called in the following order: hook_form_alter(),
+ * hook_form_BASE_FORM_ID_alter(), hook_form_FORM_ID_alter(). See
+ * hook_form_alter() for more details.
+ *
+ * @param $form
+ * - Nested array of form elements that comprise the form.
+ * @param $form_state
+ * - A keyed array containing the current state of the form. The arguments
+ *   that drupal_get_form() was originally called with are available in the
+ *   array $form_state['build_info']['args'].
+ * @param $form_id
+ * - String representing the name of the form itself. Typically this is the
+ *   name of the function that generated the form.
+ *
+ */
+function pnwds_form_ticket_field_formatter_view_form_alter(&$form, &$form_state, $form_id) {
+  // Modification for the form with the given form ID goes here. For example, if
+  // FORM_ID is "user_register_form" this code would run only on the user
+  // registration form.
+  // Change the width of the ticket quantity input
+  $form['ticket_quantity_1']['#size'] = 2;
+  /* dsm($form); */
+} 

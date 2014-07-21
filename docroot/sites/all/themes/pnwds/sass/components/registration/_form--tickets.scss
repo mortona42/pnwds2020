@@ -1,7 +1,7 @@
 .ticket-register-form {
   fieldset {
     @include box-shadow($drop-shadow__glow-shallow-dark);
-    background-color: $lightest-grey;
+    background-color: rgba($white, 0.7);
     border: medium none;
     
     legend {
