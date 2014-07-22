@@ -1,0 +1,16 @@
+.view-cod-news {
+  &.view-display-id-multi_news_block {
+    .item-list {
+      li {
+        @include clearfix;
+        border-bottom: 1px solid $light-grey;
+        margin-bottom: 1em;
+        
+        &:last-child {
+          border-bottom: medium none;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

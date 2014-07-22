@@ -1995,6 +1995,93 @@ nav[role="navigation"] > ul .dropdown {
         max-width: 100%;
         width: auto; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/block\/_block--general\.scss}line{font-family:\000032}}
+.l-region--sidebar-second .block {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/block\/_block--general\.scss}line{font-family:\000038}}
+  .l-region--sidebar-second .block:last-child, .l-region--sidebar-second .block:last-of-type {
+    margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/block\/_block--general\.scss}line{font-family:\0000312}}
+  .l-region--sidebar-second .block > h2.block__title {
+    margin-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\000032}}
+.node__news--listing,
+.node--news--listing {
+  width: 100%;
+  float: left;
+  margin-right: 1.16732%;
+  margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000311}}
+  .node__news--listing .submitted__timestamp,
+  .node__news--listing .submitted__author,
+  .node--news--listing .submitted__timestamp,
+  .node--news--listing .submitted__author {
+    display: inline-block;
+    width: auto;
+    vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000317}}
+  .node__news--listing .submitted__timestamp,
+  .node--news--listing .submitted__timestamp {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000327}}
+    .node__news--listing .submitted__timestamp .month,
+    .node__news--listing .submitted__timestamp .day,
+    .node--news--listing .submitted__timestamp .month,
+    .node--news--listing .submitted__timestamp .day {
+      display: inline-block;
+      width: auto;
+      vertical-align: top;
+      padding: 0.325em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000334}}
+    .node__news--listing .submitted__timestamp .month,
+    .node--news--listing .submitted__timestamp .month {
+      background-color: #135a9c;
+      font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000339}}
+    .node__news--listing .submitted__timestamp .day,
+    .node--news--listing .submitted__timestamp .day {
+      background-color: #087742;
+      letter-spacing: 0.05em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000348}}
+  .node__news--listing .user-picture,
+  .node__news--listing .username,
+  .node--news--listing .user-picture,
+  .node--news--listing .username {
+    display: inline-block;
+    vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000353}}
+  .node__news--listing .user-picture,
+  .node--news--listing .user-picture {
+    width: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000356}}
+    .node__news--listing .user-picture a,
+    .node__news--listing .user-picture img,
+    .node--news--listing .user-picture a,
+    .node--news--listing .user-picture img {
+      display: inline-block;
+      vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000361}}
+    .node__news--listing .user-picture img,
+    .node--news--listing .user-picture img {
+      display: inline-block;
+      min-width: 100%;
+      width: 100%;
+      max-width: auto;
+      height: auto; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000032}}
 .node__event--full .node__content {
   width: 100%;
@@ -2121,11 +2208,14 @@ nav[role="navigation"] > ul .dropdown {
       width: 36.77043%;
       float: left;
       margin-right: 1.16732%;
-      padding-left: 6.32296%;
       float: right;
       margin-right: 0;
       *margin-left: -1.2em;
       margin-top: 0; } }
+  @media screen and (min-width: 64.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000316}}
+    .ticket-field-formatter-view-form {
+      padding-left: 6.32296%; } }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--tickets\.scss}line{font-family:\000032}}
 .ticket-register-form fieldset {
@@ -2171,3 +2261,14 @@ nav[role="navigation"] > ul .dropdown {
       float: right;
       margin-right: 0;
       *margin-left: -1.2em; } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_news--multi-news-block\.scss}line{font-family:\000034}}
+.view-cod-news.view-display-id-multi_news_block .item-list li {
+  overflow: hidden;
+  *zoom: 1;
+  border-bottom: 1px solid #c6c6c6;
+  margin-bottom: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_news--multi-news-block\.scss}line{font-family:\000039}}
+  .view-cod-news.view-display-id-multi_news_block .item-list li:last-child {
+    border-bottom: medium none;
+    margin-bottom: 0; }

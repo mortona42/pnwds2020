@@ -1,0 +1,66 @@
+.node__news--listing,
+.node--news--listing {
+  @include span-columns($total-columns);
+  margin-right: 0;
+  
+  .node__submitted {}
+  
+  .node__header {}
+  
+  .submitted__timestamp,
+  .submitted__author {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+  }
+  
+  .submitted__timestamp {
+    @include border-radius(4px);
+    color: $white;
+    font-size: 0.875rem;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    
+    .month,
+    .day {
+      display: inline-block;
+      width: auto;
+      vertical-align: top;
+      padding: 0.325em;
+    }
+    
+    .month {
+      background-color: $b-blue;
+      font-weight: normal;
+    }
+    
+    .day {
+      background-color: $b-green;
+      letter-spacing: 0.05em;
+    }
+  }
+  
+  .submitted__author{}
+  
+  .user-picture,
+  .username {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .user-picture {
+    width: 24px;
+    a,
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    img {
+      @include rwdImage;
+    }
+  }
+  .username {}
+}

@@ -95,9 +95,11 @@
   
   @include respond-to($medium) {
     @include span-columns(($total-columns / 4) + 2);
-    @include prefix(1);
     @include omega;
-    
     margin-top: 0;
+  }
+  
+  @include respond-to($large) {
+    @include prefix(1);
   }
 }

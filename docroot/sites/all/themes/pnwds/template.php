@@ -136,12 +136,13 @@ function pnwds_preprocess_node(&$vars) {
     case 'slide':
     break;
   }
+*/
     
   switch($type) {
-    case 'experience':
+    case 'news':
+      $vars['timestamp'] = '<span class="month">' . format_date($node->created, 'custom', 'M') . '</span><span class="day">' . format_date($node->created, 'custom', 'j') . '</span>';
     break;
   }
-*/
 }
 
 /**
