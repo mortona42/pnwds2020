@@ -101,3 +101,27 @@ ul {
     }
   }
 }
+
+ol {
+  margin: $vert-spacing-unit 0;
+  margin-left: 1.5em;
+  padding-left: 0px;
+  
+  ol {
+    margin-top: 0;
+  }
+  
+  li {
+    list-style: decimal;
+    background-image: none;
+    padding-left: 0em;
+    
+    li {
+    list-style: lower-alpha;
+    
+      li {
+        list-style: lower-roman;
+      }
+    }
+  }
+}

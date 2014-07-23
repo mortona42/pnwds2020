@@ -1,3 +1,10 @@
+// Hide Event Title [#page--title] on front page when mobile
+@include respond-to($small, max-width) {
+  .front #page--title {
+    @include element-invisible;
+  }
+}
+
 .l-branding {}
 
 .site--branding {
