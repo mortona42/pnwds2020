@@ -1,0 +1,21 @@
+.node-event,
+.node--event,
+.node__event {
+  .event__dates {
+  @extend .ticket-field-formatter-view-form;
+    
+    /*
+    @include span-columns($total-columns);
+    
+    @include respond-to($medium) {
+      @include span-columns(($total-columns / 4) + 2);
+      @include omega;
+      margin-top: 0;
+    }
+    
+    @include respond-to($large) {
+      @include prefix(1);
+    }
+    */
+  }
+}

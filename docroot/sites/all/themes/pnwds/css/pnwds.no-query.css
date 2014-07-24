@@ -2114,49 +2114,131 @@ nav[role="navigation"] > ul .dropdown {
       max-width: auto;
       height: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\000031}}
+.event__dates {
+  font-size: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\000034}}
+  .event__dates .event__date {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.625rem;
+    padding: 0;
+    overflow: hidden;
+    max-width: calc(50% - (0.625rem * 2)); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000317}}
+  .event__dates .date__item {
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1em;
+    width: auto;
+    vertical-align: top;
+    padding: 0.325em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000332}}
+  .event__dates .date__item--day {
+    background-color: white;
+    color: #135a9c;
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000338}}
+  .event__dates .date__item--month {
+    background-color: #135a9c;
+    font-weight: normal;
+    width: 33%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000344}}
+  .event__dates .date__item--date {
+    width: 25%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000349}}
+  .event__dates .date__item--date,
+  .event__dates .date__item--year {
+    background-color: #087742;
+    letter-spacing: 0.05em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000354}}
+  .event__dates .date__item--year {
+    background-color: #2d8b5e;
+    width: 42%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000359}}
+  .event__dates .date__item--time {
+    color: #087742; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\0000362}}
+    .event__dates .date__item--time.date__end--time {
+      color: #f92f2f; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event\.scss}line{font-family:\000034}}
+.node-event .event__dates,
+.node--event .event__dates,
+.node__event .event__dates {
+  /*
+  @include span-columns($total-columns);
+  
+  @include respond-to($medium) {
+    @include span-columns(($total-columns / 4) + 2);
+    @include omega;
+    margin-top: 0;
+  }
+  
+  @include respond-to($large) {
+    @include prefix(1);
+  }
+  */ }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000032}}
 .node__event--full .node__content {
   width: 100%;
   float: left;
   margin-right: 1.16732%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000037}}
-.node__event--full .field--name-field-dates,
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000036}}
 .node__event--full .field--name-body {
   width: 100%;
   float: left;
   margin-right: 1.16732%; }
   @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000037}}
-    .node__event--full .field--name-field-dates,
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\000036}}
     .node__event--full .field--name-body {
       width: 62.06226%;
       float: left;
       margin-right: 1.16732%; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000316}}
-.ticket-field-formatter-view-form {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000315}}
+.ticket-field-formatter-view-form, .node-event .event__dates,
+.node--event .event__dates,
+.node__event .event__dates {
   width: 100%;
   float: left;
   margin-right: 1.16732%;
   margin-top: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000320}}
-  .ticket-field-formatter-view-form > div {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000319}}
+  .ticket-field-formatter-view-form > div, .node-event .event__dates > div,
+  .node--event .event__dates > div,
+  .node__event .event__dates > div {
     background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
     padding: 0.625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000326}}
-  .ticket-field-formatter-view-form .entity-ticket-type {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000325}}
+  .ticket-field-formatter-view-form .entity-ticket-type, .node-event .event__dates .entity-ticket-type,
+  .node--event .event__dates .entity-ticket-type,
+  .node__event .event__dates .entity-ticket-type {
     margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000333}}
-  .ticket-field-formatter-view-form .field--name-commerce-price {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000332}}
+  .ticket-field-formatter-view-form .field--name-commerce-price, .node-event .event__dates .field--name-commerce-price,
+  .node--event .event__dates .field--name-commerce-price,
+  .node__event .event__dates .field--name-commerce-price {
     color: #828282;
     font-size: 2em;
     font-family: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
     font-style: italic;
     font-weight: 300;
     line-height: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000342}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000341}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char1, .node-event .event__dates .field--name-commerce-price .char1,
+    .node--event .event__dates .field--name-commerce-price .char1,
+    .node__event .event__dates .field--name-commerce-price .char1 {
       color: #3f8a6b;
       display: inline-block;
       font-size: 2.5em;
@@ -2164,8 +2246,10 @@ nav[role="navigation"] > ul .dropdown {
       line-height: 1em;
       text-shadow: 1px 1px 0 #006536, 2px 2px 0 #006536, 3px 3px 0 #006536, 4px 4px 6px rgba(26, 26, 26, 0.6);
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000342}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char2 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000341}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char2, .node-event .event__dates .field--name-commerce-price .char2,
+    .node--event .event__dates .field--name-commerce-price .char2,
+    .node__event .event__dates .field--name-commerce-price .char2 {
       color: #3f8a6b;
       display: inline-block;
       font-size: 2.5em;
@@ -2173,8 +2257,10 @@ nav[role="navigation"] > ul .dropdown {
       line-height: 1em;
       text-shadow: 1px 1px 0 #006536, 2px 2px 0 #006536, 3px 3px 0 #006536, 4px 4px 6px rgba(26, 26, 26, 0.6);
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000342}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000341}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char3, .node-event .event__dates .field--name-commerce-price .char3,
+    .node--event .event__dates .field--name-commerce-price .char3,
+    .node__event .event__dates .field--name-commerce-price .char3 {
       color: #3f8a6b;
       display: inline-block;
       font-size: 2.5em;
@@ -2182,35 +2268,47 @@ nav[role="navigation"] > ul .dropdown {
       line-height: 1em;
       text-shadow: 1px 1px 0 #006536, 2px 2px 0 #006536, 3px 3px 0 #006536, 4px 4px 6px rgba(26, 26, 26, 0.6);
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000354}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000353}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char4, .node-event .event__dates .field--name-commerce-price .char4,
+    .node--event .event__dates .field--name-commerce-price .char4,
+    .node__event .event__dates .field--name-commerce-price .char4 {
       border-bottom: 2px solid #828282;
       display: inline-block;
       text-shadow: 1px 1px 2px rgba(164, 164, 164, 0.4);
       position: relative;
       top: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000354}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char5 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000353}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char5, .node-event .event__dates .field--name-commerce-price .char5,
+    .node--event .event__dates .field--name-commerce-price .char5,
+    .node__event .event__dates .field--name-commerce-price .char5 {
       border-bottom: 2px solid #828282;
       display: inline-block;
       text-shadow: 1px 1px 2px rgba(164, 164, 164, 0.4);
       position: relative;
       top: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000354}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000353}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char6, .node-event .event__dates .field--name-commerce-price .char6,
+    .node--event .event__dates .field--name-commerce-price .char6,
+    .node__event .event__dates .field--name-commerce-price .char6 {
       border-bottom: 2px solid #828282;
       display: inline-block;
       text-shadow: 1px 1px 2px rgba(164, 164, 164, 0.4);
       position: relative;
       top: -1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000363}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000362}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char1, .node-event .event__dates .field--name-commerce-price .char1,
+    .node--event .event__dates .field--name-commerce-price .char1,
+    .node__event .event__dates .field--name-commerce-price .char1 {
       font-size: 3em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000367}}
-    .ticket-field-formatter-view-form .field--name-commerce-price .char4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000366}}
+    .ticket-field-formatter-view-form .field--name-commerce-price .char4, .node-event .event__dates .field--name-commerce-price .char4,
+    .node--event .event__dates .field--name-commerce-price .char4,
+    .node__event .event__dates .field--name-commerce-price .char4 {
       margin-left: 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000373}}
-  .ticket-field-formatter-view-form .form-item-ticket-quantity-1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000372}}
+  .ticket-field-formatter-view-form .form-item-ticket-quantity-1, .node-event .event__dates .form-item-ticket-quantity-1,
+  .node--event .event__dates .form-item-ticket-quantity-1,
+  .node__event .event__dates .form-item-ticket-quantity-1 {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
@@ -2224,19 +2322,27 @@ nav[role="navigation"] > ul .dropdown {
     margin: 0 auto;
     padding: 1em 0.5em;
     background-color: #ededed; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000382}}
-    .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000381}}
+    .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label, .node-event .event__dates .form-item-ticket-quantity-1 label,
+    .node--event .event__dates .form-item-ticket-quantity-1 label,
+    .node__event .event__dates .form-item-ticket-quantity-1 label {
       display: inline;
       /* padding-right: 0.5em; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000386}}
-      .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label:after {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000385}}
+      .ticket-field-formatter-view-form .form-item-ticket-quantity-1 label:after, .node-event .event__dates .form-item-ticket-quantity-1 label:after,
+      .node--event .event__dates .form-item-ticket-quantity-1 label:after,
+      .node__event .event__dates .form-item-ticket-quantity-1 label:after {
         content: ": "; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000392}}
-  .ticket-field-formatter-view-form .form-submit {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000391}}
+  .ticket-field-formatter-view-form .form-submit, .node-event .event__dates .form-submit,
+  .node--event .event__dates .form-submit,
+  .node__event .event__dates .form-submit {
     margin-right: 0; }
   @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000316}}
-    .ticket-field-formatter-view-form {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000315}}
+    .ticket-field-formatter-view-form, .node-event .event__dates,
+    .node--event .event__dates,
+    .node__event .event__dates {
       width: 36.77043%;
       float: left;
       margin-right: 1.16732%;
@@ -2245,8 +2351,10 @@ nav[role="navigation"] > ul .dropdown {
       *margin-left: -1.2em;
       margin-top: 0; } }
   @media screen and (min-width: 64.0625em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000316}}
-    .ticket-field-formatter-view-form {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000315}}
+    .ticket-field-formatter-view-form, .node-event .event__dates,
+    .node--event .event__dates,
+    .node__event .event__dates {
       padding-left: 6.32296%; } }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--tickets\.scss}line{font-family:\000032}}

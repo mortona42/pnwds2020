@@ -142,6 +142,18 @@ function pnwds_preprocess_node(&$vars) {
     case 'news':
       $vars['timestamp'] = '<span class="month">' . format_date($node->created, 'custom', 'M') . '</span><span class="day">' . format_date($node->created, 'custom', 'j') . '</span>';
     break;
+    case 'event':
+      $vars['content']['dates']['start']['day'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'l');
+      $vars['content']['dates']['start']['month'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'M');
+      $vars['content']['dates']['start']['date'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'j');
+      $vars['content']['dates']['start']['year'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'Y');
+      $vars['content']['dates']['start']['time'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'g:ia');
+      $vars['content']['dates']['end']['day'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'l');
+      $vars['content']['dates']['end']['month'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'M');
+      $vars['content']['dates']['end']['date'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'j');
+      $vars['content']['dates']['end']['year'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'Y');
+      $vars['content']['dates']['end']['time'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'g:ia');
+    break;
   }
 }
 

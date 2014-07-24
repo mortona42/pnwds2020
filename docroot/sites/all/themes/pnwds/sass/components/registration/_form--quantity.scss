@@ -3,7 +3,6 @@
     @include span-columns($total-columns);
   }
   
-  .field--name-field-dates,
   .field--name-body {
     @include span-columns($total-columns);
     
