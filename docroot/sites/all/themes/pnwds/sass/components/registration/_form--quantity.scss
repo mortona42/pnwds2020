@@ -95,6 +95,7 @@
   @include respond-to($medium) {
     @include span-columns(($total-columns / 4) + 2);
     @include omega;
+    @include clearfix;
     margin-top: 0;
   }
   

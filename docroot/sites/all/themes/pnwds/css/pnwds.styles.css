@@ -1929,6 +1929,61 @@ nav[role="navigation"] > ul .dropdown {
         transition-delay: 0s, 0s;
         max-height: 420px; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\000033}}
+.node__submitted .submitted__timestamp,
+.node__submitted .submitted__author {
+  display: inline-block;
+  width: auto;
+  vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\000039}}
+.node__submitted .submitted__timestamp {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000319}}
+  .node__submitted .submitted__timestamp .month,
+  .node__submitted .submitted__timestamp .day {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+    padding: 0.325em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000326}}
+  .node__submitted .submitted__timestamp .month {
+    background-color: #135a9c;
+    font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000331}}
+  .node__submitted .submitted__timestamp .day {
+    background-color: #087742;
+    letter-spacing: 0.05em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000340}}
+.node__submitted .user-picture,
+.node__submitted .username {
+  display: inline-block;
+  vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000345}}
+.node__submitted .user-picture {
+  width: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000348}}
+  .node__submitted .user-picture a,
+  .node__submitted .user-picture img {
+    display: inline-block;
+    vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_node-submitted\.scss}line{font-family:\0000353}}
+  .node__submitted .user-picture img {
+    display: inline-block;
+    min-width: 100%;
+    width: 100%;
+    max-width: auto;
+    height: auto; }
+
 @media screen and (min-width: 56.25em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\000031}}
   .node-session-form {
@@ -2046,73 +2101,18 @@ nav[role="navigation"] > ul .dropdown {
   float: left;
   margin-right: 1.16732%;
   margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000311}}
-  .node__news--listing .submitted__timestamp,
-  .node__news--listing .submitted__author,
-  .node--news--listing .submitted__timestamp,
-  .node--news--listing .submitted__author {
-    display: inline-block;
-    width: auto;
-    vertical-align: top; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000317}}
-  .node__news--listing .submitted__timestamp,
-  .node--news--listing .submitted__timestamp {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
-    color: white;
-    font-size: 0.875rem;
-    line-height: 1em;
-    text-align: center;
-    text-transform: uppercase;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000327}}
-    .node__news--listing .submitted__timestamp .month,
-    .node__news--listing .submitted__timestamp .day,
-    .node--news--listing .submitted__timestamp .month,
-    .node--news--listing .submitted__timestamp .day {
-      display: inline-block;
-      width: auto;
-      vertical-align: top;
-      padding: 0.325em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000334}}
-    .node__news--listing .submitted__timestamp .month,
-    .node--news--listing .submitted__timestamp .month {
-      background-color: #135a9c;
-      font-weight: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000339}}
-    .node__news--listing .submitted__timestamp .day,
-    .node--news--listing .submitted__timestamp .day {
-      background-color: #087742;
-      letter-spacing: 0.05em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000348}}
-  .node__news--listing .user-picture,
-  .node__news--listing .username,
-  .node--news--listing .user-picture,
-  .node--news--listing .username {
-    display: inline-block;
-    vertical-align: top; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000353}}
-  .node__news--listing .user-picture,
-  .node--news--listing .user-picture {
-    width: 24px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000356}}
-    .node__news--listing .user-picture a,
-    .node__news--listing .user-picture img,
-    .node--news--listing .user-picture a,
-    .node--news--listing .user-picture img {
-      display: inline-block;
-      vertical-align: top; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--listing\.scss}line{font-family:\0000361}}
-    .node__news--listing .user-picture img,
-    .node--news--listing .user-picture img {
-      display: inline-block;
-      min-width: 100%;
-      width: 100%;
-      max-width: auto;
-      height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\000032}}
+.node__news--teaser,
+.node--news--teaser {
+  margin-bottom: 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\000035}}
+  .node__news--teaser .node__submitted,
+  .node--news--teaser .node__submitted {
+    margin: 0.325em 0;
+    padding: 0.625em 0;
+    border-top: 1px dotted #828282;
+    border-bottom: 1px dotted #828282; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\000031}}
 .event__dates {
@@ -2349,6 +2349,8 @@ nav[role="navigation"] > ul .dropdown {
       float: right;
       margin-right: 0;
       *margin-left: -1.2em;
+      overflow: hidden;
+      *zoom: 1;
       margin-top: 0; } }
   @media screen and (min-width: 64.0625em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/registration\/_form--quantity\.scss}line{font-family:\0000315}}
