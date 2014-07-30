@@ -141,6 +141,11 @@ $xxLarge: 1600px;
       @include omega;
     }
   }
+  
+  .l-sidebar-first,
+  .l-sidebar-second {
+    margin-top: 3em;
+  }
 }
 
 .l-region--help,
