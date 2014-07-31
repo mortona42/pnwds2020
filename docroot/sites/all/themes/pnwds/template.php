@@ -141,6 +141,7 @@ function pnwds_preprocess_node(&$vars) {
   switch($type) {
     case 'news':
       $vars['timestamp'] = '<span class="month">' . format_date($node->created, 'custom', 'M') . '</span><span class="day">' . format_date($node->created, 'custom', 'j') . '</span>';
+      $vars['timestamp_time'] = '<span class="time"><i>&nbsp;at&nbsp;</i>' . format_date($node->created, 'custom', 'g:ia') . '</span>';
     break;
     case 'event':
       $vars['content']['dates']['start']['day'] = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'l');
