@@ -159,6 +159,92 @@ function pnwds_preprocess_node(&$vars) {
 }
 
 /**
+ * Process variables for user-profile.tpl.php.
+ *
+ * @param array $variables
+ * An associative array containing:
+ * - elements: An associative array containing the user information and any
+ * fields attached to the user. Properties used:
+ * - #account: The user account of the profile being viewed.
+ *
+ * @see user-profile.tpl.php
+ *
+ * Implements tempalte_preprocess_user_profile()
+ */
+function pnwds_preprocess_user_profile(&$vars) {
+  $elements = $vars['elements'];
+  $account = $vars['elements']['#account'];
+  $view_mode = $elements['#view_mode'];
+  $langcode = ( ($elements['#language']) != NULL ) ? $elements['#language'] : LANGUAGE_NONE;
+  
+  // Add theme hook suggestion for each user view_mode that is available
+  if ( !empty($view_mode) ) {
+    $vars['theme_hook_suggestions'][] = 'user_profile__' . $view_mode;
+  }
+  
+  switch($view_mode) {
+    case 'attendee':
+      // Address data trimmed down to locality only.
+      $location_date = $vars['field_profile_location'][0];
+      $city = $location['locality'];
+      $state = $location['administrative_area'];
+      $vars['user_profile']['location'] = '<div class="user__locale"><span class="user__location--city">' . $city . ',&nbsp;</span><span class="user__location--state">' . $state . '</span></div>';
+      // Full Name build of $account
+      $vars['user_profile']['user_name'] = $account->name;
+      $vars['user_profile']['user_link'] = !empty($account->name) ? '/users/' . str_replace(" ", "-", $account->name) : '/user/' . $account->uid;
+      
+      // Change user picture grnerated image style
+      $user_pic = $account->picture;
+      if(isset($user_pic)){
+        $file = $user_pic->uri;
+        $variables= array(
+          'style_name' => 'medium',
+          'path' => $file,
+          'alt' => $account->name,
+          'title' => $account->name,
+          'width' => '220px',
+          'height' => '220px',
+          'attributes' => array('class' => 'user__profile--image'),
+        );
+        
+        $attributes = array(
+          'attributes' => array('title' => t('View %user\'s profile.', array('%user' => $account->name))),
+          'html' => TRUE,
+        );
+        
+        $user_image = theme('image_style', $variables);
+        $vars['user_profile']['pnw_user_picture'] = l($user_image, "user/$account->uid", $attributes);
+      } else {
+        $variables= array(
+          'style_name' => 'medium',
+          'path' => 'sites/all/themes/pnwds/images/content/PNWDS_logo--user-default.png',
+          'alt' => $account->name,
+          'title' => $account->name,
+          'width' => '200px',
+          'height' => '290px',
+          'attributes' => array('class' => 'user__profile--image--default'),
+        );
+        
+        $attributes = array(
+          'attributes' => array('title' => t('View %user\'s profile.', array('%user' => $account->name))),
+          'html' => TRUE,
+        );
+        
+        $user_image = theme('image', $variables);
+        $vars['user_profile']['pnw_user_picture'] = l($user_image, "user/$account->uid", $attributes);
+      }
+    break;
+    case 'full':
+      // Create variable for full user_profile view that outputs another view_mode
+      $displayed_user = $elements['#account'];
+      $desired_view_mode = 'attendee';
+      
+      $vars['user_profile']['attendee_view_mode'] = user_view($displayed_user, $desired_view_mode, $langcode);
+    break;
+  }
+}
+
+/**
  * Implements hook_menu_alter()
  *
  * Alter the data being saved to the {menu_router} table after hook_menu is invoked.

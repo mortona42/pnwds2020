@@ -2464,6 +2464,550 @@ nav[role="navigation"] > ul .dropdown {
       margin-right: 0;
       *margin-left: -1.2em; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\000033}}
+.user__profile--attendee,
+.user--profile__attendee,
+.user--profile--attendee {
+  text-align: center;
+  position: relative;
+  margin-bottom: 1em;
+  /*
+    @include respond-to($medium) {
+      @include span-columns($total-columns / 3);
+    }
+  */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000311}}
+  .user__profile--attendee .user__profile--info .locale,
+  .user__profile--attendee .user--profile__info .locale,
+  .user__profile--attendee .user--profile--info .locale,
+  .user--profile__attendee .user__profile--info .locale,
+  .user--profile__attendee .user--profile__info .locale,
+  .user--profile__attendee .user--profile--info .locale,
+  .user--profile--attendee .user__profile--info .locale,
+  .user--profile--attendee .user--profile__info .locale,
+  .user--profile--attendee .user--profile--info .locale {
+    text-transform: uppercase;
+    font-size: 0.875em;
+    line-height: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000318}}
+  .user__profile--attendee .user--profile__picture,
+  .user--profile__attendee .user--profile__picture,
+  .user--profile--attendee .user--profile__picture {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    max-width: 200px;
+    max-height: 290px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000326}}
+    .user__profile--attendee .user--profile__picture > a:before,
+    .user--profile__attendee .user--profile__picture > a:before,
+    .user--profile--attendee .user--profile__picture > a:before {
+      content: '';
+      background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1407860982');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000342}}
+  .user__profile--attendee .user__profile--image,
+  .user--profile__attendee .user__profile--image,
+  .user--profile--attendee .user__profile--image {
+    display: inline-block;
+    min-width: 100%;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    padding: 4em 0em 1.75em;
+    vertical-align: bottom; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000348}}
+  .user__profile--attendee .user__profile--image--default,
+  .user--profile__attendee .user__profile--image--default,
+  .user--profile--attendee .user__profile--image--default {
+    display: inline-block;
+    min-width: 100%;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    vertical-align: bottom; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000353}}
+  .user__profile--attendee .user--profile__full-name,
+  .user--profile__attendee .user--profile__full-name,
+  .user--profile--attendee .user--profile__full-name {
+    margin-top: 0;
+    /* margin-bottom: 0; */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000360}}
+  .user__profile--attendee .field--name-field-drupal-org-username .field__item:before,
+  .user--profile__attendee .field--name-field-drupal-org-username .field__item:before,
+  .user--profile--attendee .field--name-field-drupal-org-username .field__item:before {
+    content: '';
+    display: inline-block;
+    background-image: url('data:image/png;base64,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');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000374}}
+  .user__profile--attendee .field--name-field-social-media-account a,
+  .user--profile__attendee .field--name-field-social-media-account a,
+  .user--profile--attendee .field--name-field-social-media-account a {
+    background-image: url('../images/icons/user--social/webaddress.png?1407868917');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-bottom: medium none !important;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    opacity: 0.8;
+    text-indent: -9999px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000388}}
+    .user__profile--attendee .field--name-field-social-media-account a:hover, .user__profile--attendee .field--name-field-social-media-account a:focus, .user__profile--attendee .field--name-field-social-media-account a:active,
+    .user--profile__attendee .field--name-field-social-media-account a:hover,
+    .user--profile__attendee .field--name-field-social-media-account a:focus,
+    .user--profile__attendee .field--name-field-social-media-account a:active,
+    .user--profile--attendee .field--name-field-social-media-account a:hover,
+    .user--profile--attendee .field--name-field-social-media-account a:focus,
+    .user--profile--attendee .field--name-field-social-media-account a:active {
+      opacity: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000392}}
+    .user__profile--attendee .field--name-field-social-media-account a[href*="drupal.org"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="drupal.org"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="drupal.org"] {
+      background-image: url('../images/icons/user--social/drupal.png?1398137172'); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000395}}
+    .user__profile--attendee .field--name-field-social-media-account a[href*="twitter.com"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="twitter.com"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="twitter.com"] {
+      background-image: url('../images/icons/user--social/twitter.png?1379648156'); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000399}}
+    .user__profile--attendee .field--name-field-social-media-account a[href*="facebook.com"], .user__profile--attendee .field--name-field-social-media-account a[href*="fb.me"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="facebook.com"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="fb.me"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="facebook.com"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="fb.me"] {
+      background-image: url('../images/icons/user--social/facebook.png?1379648420'); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003102}}
+    .user__profile--attendee .field--name-field-social-media-account a[href*="plus.google.com"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="plus.google.com"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="plus.google.com"] {
+      background-image: url('../images/icons/user--social/google-plus.png?1379648324'); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003105}}
+    .user__profile--attendee .field--name-field-social-media-account a[href*="linkedin.com"],
+    .user--profile__attendee .field--name-field-social-media-account a[href*="linkedin.com"],
+    .user--profile--attendee .field--name-field-social-media-account a[href*="linkedin.com"] {
+      background-image: url('../images/icons/user--social/linked-in-alt.png?1388221368'); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003110}}
+  .user__profile--attendee .field--name-field-social-media-account .field__items,
+  .user--profile__attendee .field--name-field-social-media-account .field__items,
+  .user--profile--attendee .field--name-field-social-media-account .field__items {
+    margin: 0.5em 0 0;
+    padding: 0;
+    display: block;
+    list-style: none outside none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003116}}
+    .user__profile--attendee .field--name-field-social-media-account .field__items .field__item,
+    .user--profile__attendee .field--name-field-social-media-account .field__items .field__item,
+    .user--profile--attendee .field--name-field-social-media-account .field__items .field__item {
+      display: inline-block;
+      padding-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\000036}}
+.user__profile--full .user__profile--attendee,
+.user__profile--full .user--profile__attendee,
+.user__profile--full .user--profile--attendee,
+.user--profile__full .user__profile--attendee,
+.user--profile__full .user--profile__attendee,
+.user--profile__full .user--profile--attendee,
+.user--profile--full .user__profile--attendee,
+.user--profile--full .user--profile__attendee,
+.user--profile--full .user--profile--attendee {
+  position: relative; }
+  @media screen and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\000036}}
+    .user__profile--full .user__profile--attendee,
+    .user__profile--full .user--profile__attendee,
+    .user__profile--full .user--profile--attendee,
+    .user--profile__full .user__profile--attendee,
+    .user--profile__full .user--profile__attendee,
+    .user--profile__full .user--profile--attendee,
+    .user--profile--full .user__profile--attendee,
+    .user--profile--full .user--profile__attendee,
+    .user--profile--full .user--profile--attendee {
+      width: 32.29167%;
+      float: left;
+      margin-right: 1.5625%; } }
+  @media screen and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\000036}}
+    .user__profile--full .user__profile--attendee,
+    .user__profile--full .user--profile__attendee,
+    .user__profile--full .user--profile--attendee,
+    .user--profile__full .user__profile--attendee,
+    .user--profile__full .user--profile__attendee,
+    .user--profile__full .user--profile--attendee,
+    .user--profile--full .user__profile--attendee,
+    .user--profile--full .user--profile__attendee,
+    .user--profile--full .user--profile--attendee {
+      width: 43.09339%;
+      float: left;
+      margin-right: 1.16732%; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000321}}
+  .user__profile--full .user__profile--attendee .user__profile--info,
+  .user__profile--full .user__profile--attendee .user--profile__info,
+  .user__profile--full .user__profile--attendee .user--profile--info,
+  .user__profile--full .user--profile__attendee .user__profile--info,
+  .user__profile--full .user--profile__attendee .user--profile__info,
+  .user__profile--full .user--profile__attendee .user--profile--info,
+  .user__profile--full .user--profile--attendee .user__profile--info,
+  .user__profile--full .user--profile--attendee .user--profile__info,
+  .user__profile--full .user--profile--attendee .user--profile--info,
+  .user--profile__full .user__profile--attendee .user__profile--info,
+  .user--profile__full .user__profile--attendee .user--profile__info,
+  .user--profile__full .user__profile--attendee .user--profile--info,
+  .user--profile__full .user--profile__attendee .user__profile--info,
+  .user--profile__full .user--profile__attendee .user--profile__info,
+  .user--profile__full .user--profile__attendee .user--profile--info,
+  .user--profile__full .user--profile--attendee .user__profile--info,
+  .user--profile__full .user--profile--attendee .user--profile__info,
+  .user--profile__full .user--profile--attendee .user--profile--info,
+  .user--profile--full .user__profile--attendee .user__profile--info,
+  .user--profile--full .user__profile--attendee .user--profile__info,
+  .user--profile--full .user__profile--attendee .user--profile--info,
+  .user--profile--full .user--profile__attendee .user__profile--info,
+  .user--profile--full .user--profile__attendee .user--profile__info,
+  .user--profile--full .user--profile__attendee .user--profile--info,
+  .user--profile--full .user--profile--attendee .user__profile--info,
+  .user--profile--full .user--profile--attendee .user--profile__info,
+  .user--profile--full .user--profile--attendee .user--profile--info {
+    padding-right: 50px; }
+    @media screen and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000321}}
+      .user__profile--full .user__profile--attendee .user__profile--info,
+      .user__profile--full .user__profile--attendee .user--profile__info,
+      .user__profile--full .user__profile--attendee .user--profile--info,
+      .user__profile--full .user--profile__attendee .user__profile--info,
+      .user__profile--full .user--profile__attendee .user--profile__info,
+      .user__profile--full .user--profile__attendee .user--profile--info,
+      .user__profile--full .user--profile--attendee .user__profile--info,
+      .user__profile--full .user--profile--attendee .user--profile__info,
+      .user__profile--full .user--profile--attendee .user--profile--info,
+      .user--profile__full .user__profile--attendee .user__profile--info,
+      .user--profile__full .user__profile--attendee .user--profile__info,
+      .user--profile__full .user__profile--attendee .user--profile--info,
+      .user--profile__full .user--profile__attendee .user__profile--info,
+      .user--profile__full .user--profile__attendee .user--profile__info,
+      .user--profile__full .user--profile__attendee .user--profile--info,
+      .user--profile__full .user--profile--attendee .user__profile--info,
+      .user--profile__full .user--profile--attendee .user--profile__info,
+      .user--profile__full .user--profile--attendee .user--profile--info,
+      .user--profile--full .user__profile--attendee .user__profile--info,
+      .user--profile--full .user__profile--attendee .user--profile__info,
+      .user--profile--full .user__profile--attendee .user--profile--info,
+      .user--profile--full .user--profile__attendee .user__profile--info,
+      .user--profile--full .user--profile__attendee .user--profile__info,
+      .user--profile--full .user--profile__attendee .user--profile--info,
+      .user--profile--full .user--profile--attendee .user__profile--info,
+      .user--profile--full .user--profile--attendee .user--profile__info,
+      .user--profile--full .user--profile--attendee .user--profile--info {
+        padding-right: 40px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000331}}
+  .user__profile--full .user__profile--attendee .user__profile--content,
+  .user__profile--full .user__profile--attendee .user--profile__content,
+  .user__profile--full .user__profile--attendee .user--profile--content,
+  .user__profile--full .user--profile__attendee .user__profile--content,
+  .user__profile--full .user--profile__attendee .user--profile__content,
+  .user__profile--full .user--profile__attendee .user--profile--content,
+  .user__profile--full .user--profile--attendee .user__profile--content,
+  .user__profile--full .user--profile--attendee .user--profile__content,
+  .user__profile--full .user--profile--attendee .user--profile--content,
+  .user--profile__full .user__profile--attendee .user__profile--content,
+  .user--profile__full .user__profile--attendee .user--profile__content,
+  .user--profile__full .user__profile--attendee .user--profile--content,
+  .user--profile__full .user--profile__attendee .user__profile--content,
+  .user--profile__full .user--profile__attendee .user--profile__content,
+  .user--profile__full .user--profile__attendee .user--profile--content,
+  .user--profile__full .user--profile--attendee .user__profile--content,
+  .user--profile__full .user--profile--attendee .user--profile__content,
+  .user--profile__full .user--profile--attendee .user--profile--content,
+  .user--profile--full .user__profile--attendee .user__profile--content,
+  .user--profile--full .user__profile--attendee .user--profile__content,
+  .user--profile--full .user__profile--attendee .user--profile--content,
+  .user--profile--full .user--profile__attendee .user__profile--content,
+  .user--profile--full .user--profile__attendee .user--profile__content,
+  .user--profile--full .user--profile__attendee .user--profile--content,
+  .user--profile--full .user--profile--attendee .user__profile--content,
+  .user--profile--full .user--profile--attendee .user--profile__content,
+  .user--profile--full .user--profile--attendee .user--profile--content {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 12px -4px rgba(26, 26, 26, 0.6) inset;
+    -moz-box-shadow: 0 0 12px -4px rgba(26, 26, 26, 0.6) inset;
+    box-shadow: 0 0 12px -4px rgba(26, 26, 26, 0.6) inset;
+    background-color: rgba(237, 237, 237, 0.6);
+    margin: 0.625em;
+    padding: 1em 0.625em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000339}}
+  .user__profile--full .user__profile--attendee .field--name-field-social-media-account,
+  .user__profile--full .user--profile__attendee .field--name-field-social-media-account,
+  .user__profile--full .user--profile--attendee .field--name-field-social-media-account,
+  .user--profile__full .user__profile--attendee .field--name-field-social-media-account,
+  .user--profile__full .user--profile__attendee .field--name-field-social-media-account,
+  .user--profile__full .user--profile--attendee .field--name-field-social-media-account,
+  .user--profile--full .user__profile--attendee .field--name-field-social-media-account,
+  .user--profile--full .user--profile__attendee .field--name-field-social-media-account,
+  .user--profile--full .user--profile--attendee .field--name-field-social-media-account {
+    position: absolute;
+    top: 0;
+    right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000344}}
+    .user__profile--full .user__profile--attendee .field--name-field-social-media-account .field__items,
+    .user__profile--full .user--profile__attendee .field--name-field-social-media-account .field__items,
+    .user__profile--full .user--profile--attendee .field--name-field-social-media-account .field__items,
+    .user--profile__full .user__profile--attendee .field--name-field-social-media-account .field__items,
+    .user--profile__full .user--profile__attendee .field--name-field-social-media-account .field__items,
+    .user--profile__full .user--profile--attendee .field--name-field-social-media-account .field__items,
+    .user--profile--full .user__profile--attendee .field--name-field-social-media-account .field__items,
+    .user--profile--full .user--profile__attendee .field--name-field-social-media-account .field__items,
+    .user--profile--full .user--profile--attendee .field--name-field-social-media-account .field__items {
+      margin: 0.5em 0 0;
+      padding: 0;
+      display: block;
+      list-style: none outside none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000350}}
+      .user__profile--full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item,
+      .user__profile--full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item,
+      .user__profile--full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile__full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile__full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile__full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile--full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile--full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item,
+      .user--profile--full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item {
+        display: block;
+        padding: 0 0 0.325em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000354}}
+        .user__profile--full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user__profile--full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user__profile--full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile__full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile__full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile__full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile--full .user__profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile--full .user--profile__attendee .field--name-field-social-media-account .field__items .field__item:last-child,
+        .user--profile--full .user--profile--attendee .field--name-field-social-media-account .field__items .field__item:last-child {
+          padding-bottom: 0; }
+    @media screen and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/user\/_user--full\.scss}line{font-family:\0000339}}
+      .user__profile--full .user__profile--attendee .field--name-field-social-media-account,
+      .user__profile--full .user--profile__attendee .field--name-field-social-media-account,
+      .user__profile--full .user--profile--attendee .field--name-field-social-media-account,
+      .user--profile__full .user__profile--attendee .field--name-field-social-media-account,
+      .user--profile__full .user--profile__attendee .field--name-field-social-media-account,
+      .user--profile__full .user--profile--attendee .field--name-field-social-media-account,
+      .user--profile--full .user__profile--attendee .field--name-field-social-media-account,
+      .user--profile--full .user--profile__attendee .field--name-field-social-media-account,
+      .user--profile--full .user--profile--attendee .field--name-field-social-media-account {
+        padding-right: 4%; } }
+
+@media screen and (min-width: 56.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\000038}}
+  .view-cod-community-attendees .user__profile--attendee,
+  .view-cod-community-attendees .user--profile__attendee,
+  .view-cod-community-attendees .user--profile--attendee {
+    width: 32.29167%;
+    float: left;
+    margin-right: 1.5625%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000312}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(3n+3),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(3n+3),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(3n+3) {
+      float: right;
+      margin-right: 0;
+      *margin-left: -1.2em;
+      vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000316}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(3n+1),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(3n+1),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(3n+1) {
+      clear: both; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000322}}
+.view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account .field__item,
+.view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account .field__item,
+.view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account .field__item {
+  display: inline-block;
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000332}}
+.csstransforms3d .view-cod-community-attendees .user__profile--attendee,
+.csstransforms3d .view-cod-community-attendees .user--profile__attendee,
+.csstransforms3d .view-cod-community-attendees .user--profile--attendee {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000336}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info,
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: right center 50%;
+    -moz-transform-origin: right center 50%;
+    -ms-transform-origin: right center 50%;
+    -o-transform-origin: right center 50%;
+    transform-origin: right center 50%;
+    -webkit-perspective: 500;
+    -moz-perspective: 500;
+    -ms-perspective: 500;
+    -o-perspective: 500;
+    perspective: 500;
+    /* backface-visibility: hidden; */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000344}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info {
+    -webkit-transform: rotateY(0deg) translateX(0);
+    -moz-transform: rotateY(0deg) translateX(0);
+    -ms-transform: rotateY(0deg) translateX(0);
+    -o-transform: rotateY(0deg) translateX(0);
+    transform: rotateY(0deg) translateX(0); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000347}}
+    .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__picture,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__picture,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__picture {
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      position: relative;
+      top: 0;
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000356}}
+    .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .locale,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .locale,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .locale {
+      position: relative;
+      top: 0;
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000362}}
+    .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name {
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      text-shadow: 0 0 0 rgba(26, 26, 26, 0);
+      z-index: 5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000370}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content {
+    -webkit-transform: rotateY(180deg) translateX(0) scale(0.6);
+    -moz-transform: rotateY(180deg) translateX(0) scale(0.6);
+    -ms-transform: rotateY(180deg) translateX(0) scale(0.6);
+    -o-transform: rotateY(180deg) translateX(0) scale(0.6);
+    transform: rotateY(180deg) translateX(0) scale(0.6);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    opacity: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000383}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account {
+    margin-top: 0;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000391}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__picture, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__picture,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__picture,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__picture,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__picture,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__picture {
+    -webkit-transform: rotateY(-180deg) scale(1.2);
+    -moz-transform: rotateY(-180deg) scale(1.2);
+    -ms-transform: rotateY(-180deg) scale(1.2);
+    -o-transform: rotateY(-180deg) scale(1.2);
+    transform: rotateY(-180deg) scale(1.2);
+    opacity: 0.3;
+    top: 24px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000398}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .locale, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .locale,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .locale,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .locale,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .locale,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .locale {
+    /* opacity: 0; */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003102}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    text-shadow: 1px 1px 4px rgba(26, 26, 26, 0.6);
+    top: -0.625em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003108}}
+  .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__content, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__content,
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__content {
+    -webkit-transform: rotateY(0deg) scale(0.8);
+    -moz-transform: rotateY(0deg) scale(0.8);
+    -ms-transform: rotateY(0deg) scale(0.8);
+    -o-transform: rotateY(0deg) scale(0.8);
+    transform: rotateY(0deg) scale(0.8);
+    opacity: 1; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_news--multi-news-block\.scss}line{font-family:\000034}}
 .view-cod-news.view-display-id-multi_news_block .item-list li {
   overflow: hidden;
