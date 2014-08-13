@@ -37,7 +37,6 @@
         @include transition(all 1s ease-in-out);
         @include transform-style(preserve-3d);
         @include transform-origin(right center);
-        @include perspective(500);
         /* backface-visibility: hidden; */
       }
       

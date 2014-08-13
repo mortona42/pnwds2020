@@ -577,14 +577,18 @@ input[id^="edit-cancel"],
     /* height: 100%; */
     position: relative; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000313}}
+.w-main {
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000318}}
 .w-footer.positioned {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000326}}
 blockquote {
   -webkit-box-shadow: 6px 6px 18px -5px rgba(26, 26, 26, 0.6);
   -moz-box-shadow: 6px 6px 18px -5px rgba(26, 26, 26, 0.6);
@@ -596,37 +600,37 @@ blockquote {
   margin-bottom: 20px;
   margin-left: 0;
   padding: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000337}}
   blockquote p,
   blockquote footer {
     display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000341}}
   blockquote p {
     font-size: 1.125em;
     font-style: italic; }
     @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000341}}
       blockquote p {
         font-size: 1.5em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000350}}
   blockquote footer {
     font-size: 0.625em; }
     @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000350}}
       blockquote footer {
         font-size: 1em; } }
   @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000326}}
     blockquote {
       max-width: 65%;
       margin: 0 auto 20px; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000364}}
 #modal-container {
   display: none;
   visibility: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\0000369}}
 .element-invisible {
   position: absolute !important;
   height: 1px;
@@ -2872,13 +2876,8 @@ nav[role="navigation"] > ul .dropdown {
     -ms-transform-origin: right center 50%;
     -o-transform-origin: right center 50%;
     transform-origin: right center 50%;
-    -webkit-perspective: 500;
-    -moz-perspective: 500;
-    -ms-perspective: 500;
-    -o-perspective: 500;
-    perspective: 500;
     /* backface-visibility: hidden; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000343}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info {
@@ -2887,7 +2886,7 @@ nav[role="navigation"] > ul .dropdown {
     -ms-transform: rotateY(0deg) translateX(0);
     -o-transform: rotateY(0deg) translateX(0);
     transform: rotateY(0deg) translateX(0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000346}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__picture,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__picture,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__picture {
@@ -2903,7 +2902,7 @@ nav[role="navigation"] > ul .dropdown {
       position: relative;
       top: 0;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000355}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .locale,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
@@ -2913,7 +2912,7 @@ nav[role="navigation"] > ul .dropdown {
       position: relative;
       top: 0;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000361}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name {
@@ -2928,7 +2927,7 @@ nav[role="navigation"] > ul .dropdown {
       transform: scale(1);
       text-shadow: 0 0 0 rgba(26, 26, 26, 0);
       z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000369}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content {
@@ -2946,7 +2945,7 @@ nav[role="navigation"] > ul .dropdown {
     width: 80%;
     height: 100%;
     opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000382}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account {
@@ -2956,7 +2955,7 @@ nav[role="navigation"] > ul .dropdown {
     -ms-transform: scale(0.8);
     -o-transform: scale(0.8);
     transform: scale(0.8); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000390}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__picture, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__picture,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__picture,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__picture,
@@ -2969,7 +2968,7 @@ nav[role="navigation"] > ul .dropdown {
     transform: rotateY(-180deg) scale(1.2);
     opacity: 0.3;
     top: 24px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000397}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .locale, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .locale,
@@ -2982,7 +2981,7 @@ nav[role="navigation"] > ul .dropdown {
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .locale {
     /* opacity: 0; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003101}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
@@ -2995,14 +2994,14 @@ nav[role="navigation"] > ul .dropdown {
     transform: scale(1.2);
     text-shadow: 2px 2px 3px rgba(26, 26, 26, 0.7);
     top: -0.625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003106}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name a, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name a {
       color: #449ad5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003111}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__content, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__content,
