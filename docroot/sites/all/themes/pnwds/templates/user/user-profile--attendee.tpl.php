@@ -38,8 +38,6 @@
  hide($user_profile['field_profile_last']);
  hide($user_profile['field_profile_location']);
  hide($user_profile['user_picture']);
- 
- dsm($user_profile);
 ?>
 
 <article class="user__profile user__profile--attendee"<?php print $attributes; ?>>
