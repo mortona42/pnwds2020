@@ -2823,15 +2823,51 @@ nav[role="navigation"] > ul .dropdown {
       .user--profile--full .user--profile--attendee .field--name-field-social-media-account {
         padding-right: 4%; } }
 
+@media screen and (min-width: 37.5em) and (max-width: 56.249em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\000039}}
+  .view-cod-community-attendees .user__profile--attendee,
+  .view-cod-community-attendees .user--profile__attendee,
+  .view-cod-community-attendees .user--profile--attendee,
+  .view-cod-community-attendees .user__profile--attendee,
+  .view-cod-community-attendees .user--profile__attendee,
+  .view-cod-community-attendees .user--profile--attendee {
+    width: 49.21875%;
+    float: left;
+    margin-right: 1.5625%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000313}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(2n+2),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(2n+2),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(2n+2),
+    .view-cod-community-attendees .user__profile--attendee:nth-child(2n+2),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(2n+2),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(2n+2) {
+      float: right;
+      margin-right: 0;
+      *margin-left: -1.2em;
+      vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000317}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(2n+1),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(2n+1),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(2n+1),
+    .view-cod-community-attendees .user__profile--attendee:nth-child(2n+1),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(2n+1),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(2n+1) {
+      clear: both; } }
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\000039}}
+  .view-cod-community-attendees .user__profile--attendee,
+  .view-cod-community-attendees .user--profile__attendee,
+  .view-cod-community-attendees .user--profile--attendee,
   .view-cod-community-attendees .user__profile--attendee,
   .view-cod-community-attendees .user--profile__attendee,
   .view-cod-community-attendees .user--profile--attendee {
     width: 32.29167%;
     float: left;
     margin-right: 1.5625%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000325}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(3n+3),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(3n+3),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(3n+3),
     .view-cod-community-attendees .user__profile--attendee:nth-child(3n+3),
     .view-cod-community-attendees .user--profile__attendee:nth-child(3n+3),
     .view-cod-community-attendees .user--profile--attendee:nth-child(3n+3) {
@@ -2839,29 +2875,51 @@ nav[role="navigation"] > ul .dropdown {
       margin-right: 0;
       *margin-left: -1.2em;
       vertical-align: top; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000329}}
+    .view-cod-community-attendees .user__profile--attendee:nth-child(3n+1),
+    .view-cod-community-attendees .user--profile__attendee:nth-child(3n+1),
+    .view-cod-community-attendees .user--profile--attendee:nth-child(3n+1),
     .view-cod-community-attendees .user__profile--attendee:nth-child(3n+1),
     .view-cod-community-attendees .user--profile__attendee:nth-child(3n+1),
     .view-cod-community-attendees .user--profile--attendee:nth-child(3n+1) {
       clear: both; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000335}}
+.view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account .field__item,
+.view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account .field__item,
+.view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account .field__item,
 .view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account .field__item,
 .view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account .field__item,
 .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account .field__item {
   display: inline-block;
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000345}}
 .csstransforms3d .view-cod-community-attendees .user__profile--attendee,
 .csstransforms3d .view-cod-community-attendees .user--profile__attendee,
-.csstransforms3d .view-cod-community-attendees .user--profile--attendee {
+.csstransforms3d .view-cod-community-attendees .user--profile--attendee, .csstransforms3d
+.view-cod-community-attendees .user__profile--attendee,
+.csstransforms3d
+.view-cod-community-attendees .user--profile__attendee,
+.csstransforms3d
+.view-cod-community-attendees .user--profile--attendee {
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000349}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info,
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee .user--profile__info,
+  .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee .user--profile__info,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee .user--profile__info,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee .user--profile__content {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -2877,19 +2935,29 @@ nav[role="navigation"] > ul .dropdown {
     -o-transform-origin: right center 50%;
     transform-origin: right center 50%;
     /* backface-visibility: hidden; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000356}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee .user--profile__info,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee .user--profile__info,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee .user--profile__info {
     -webkit-transform: rotateY(0deg) translateX(0);
     -moz-transform: rotateY(0deg) translateX(0);
     -ms-transform: rotateY(0deg) translateX(0);
     -o-transform: rotateY(0deg) translateX(0);
     transform: rotateY(0deg) translateX(0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000359}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__picture,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__picture,
-    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__picture {
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__picture, .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__picture,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__picture,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__picture {
       -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
@@ -2902,20 +2970,36 @@ nav[role="navigation"] > ul .dropdown {
       position: relative;
       top: 0;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000368}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .locale,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .locale,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name,
-    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .locale {
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .locale, .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee .user--profile__info .locale,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee .user--profile__info .locale,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee .user--profile__info .locale {
       position: relative;
       top: 0;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000374}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
-    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name {
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name, .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee .user--profile__info .user--profile__full-name,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee .user--profile__info .user--profile__full-name {
       -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
@@ -2927,10 +3011,15 @@ nav[role="navigation"] > ul .dropdown {
       transform: scale(1);
       text-shadow: 0 0 0 rgba(26, 26, 26, 0);
       z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000382}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .user--profile__content,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .user--profile__content, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee .user--profile__content {
     -webkit-transform: rotateY(180deg) translateX(0) scale(0.6);
     -moz-transform: rotateY(180deg) translateX(0) scale(0.6);
     -ms-transform: rotateY(180deg) translateX(0) scale(0.6);
@@ -2945,22 +3034,37 @@ nav[role="navigation"] > ul .dropdown {
     width: 80%;
     height: 100%;
     opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000395}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee .field--name-field-social-media-account,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee .field--name-field-social-media-account,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee .field--name-field-social-media-account {
     margin-top: 0;
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     -o-transform: scale(0.8);
     transform: scale(0.8); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003103}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__picture, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__picture,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__picture,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__picture,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__picture,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__picture {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__picture, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__picture, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__picture,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__picture,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__picture,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__picture,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__picture {
     -webkit-transform: rotateY(-180deg) scale(1.2);
     -moz-transform: rotateY(-180deg) scale(1.2);
     -ms-transform: rotateY(-180deg) scale(1.2);
@@ -2968,7 +3072,7 @@ nav[role="navigation"] > ul .dropdown {
     transform: rotateY(-180deg) scale(1.2);
     opacity: 0.3;
     top: 24px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003110}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .locale, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .locale,
@@ -2979,14 +3083,46 @@ nav[role="navigation"] > ul .dropdown {
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .locale,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .locale {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .locale, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .locale, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .locale,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .locale,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .locale,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .locale,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .locale {
     /* opacity: 0; */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003114}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -2994,19 +3130,39 @@ nav[role="navigation"] > ul .dropdown {
     transform: scale(1.2);
     text-shadow: 2px 2px 3px rgba(26, 26, 26, 0.7);
     top: -0.625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003119}}
     .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name a, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name a,
     .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name a,
-    .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name a {
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name a, .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name a, .csstransforms3d
+    .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name a,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name a,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name a,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name a,
+    .csstransforms3d
+    .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name a {
       color: #449ad5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003124}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__content, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__content,
-  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__content {
+  .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__content, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:hover .user--profile__content, .csstransforms3d
+  .view-cod-community-attendees .user__profile--attendee:focus .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:hover .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile__attendee:focus .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:hover .user--profile__content,
+  .csstransforms3d
+  .view-cod-community-attendees .user--profile--attendee:focus .user--profile__content {
     -webkit-transform: rotateY(0deg) scale(0.8);
     -moz-transform: rotateY(0deg) scale(0.8);
     -ms-transform: rotateY(0deg) scale(0.8);
