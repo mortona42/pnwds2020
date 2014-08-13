@@ -38,6 +38,8 @@
  hide($user_profile['field_profile_last']);
  hide($user_profile['field_profile_location']);
  hide($user_profile['user_picture']);
+ 
+ dsm($user_profile);
 ?>
 
 <article class="user__profile user__profile--attendee"<?php print $attributes; ?>>
@@ -66,7 +68,9 @@
     <?php endif; ?>
   </header>
   
-  <div class="user--profile__content">
-    <?php print render($user_profile); ?>
-  </div>
+  <?php if ( !empty($user_profile['field_drupal_org_username']) || !empty($user_profile['field_profile_job_title ']) || !empty($user_profile['field_profile_org']) ): ?>
+    <div class="user--profile__content">
+      <?php print render($user_profile); ?>
+    </div>
+  <?php endif; ?>
 </article>
