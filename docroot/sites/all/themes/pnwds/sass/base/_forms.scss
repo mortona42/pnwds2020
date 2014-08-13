@@ -59,7 +59,8 @@ input[id^="save-continue"],
 input[id^="edit-save"],
 input[type="submit"][id^="edit-field"],
 input[id^="edit-save"],
-input[id^="edit-actions-save"] {
+input[id^="edit-actions-save"],
+input[id^="mc-embedded-subscribe"] {
   @extend input.form-submit;
   background-color: $green;
   color: $white;
@@ -83,4 +84,8 @@ input[id^="edit-cancel"] {
   &:focus {
     background-color: shade($dark-blue, 20%);
   }
+}
+
+input[type="checkbox"] {
+  margin-right: 0.625em;
 }

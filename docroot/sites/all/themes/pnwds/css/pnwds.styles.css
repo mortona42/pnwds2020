@@ -431,7 +431,8 @@ input[id^="edit-actions-submit"],
 input[id^="save-continue"],
 input[id^="edit-save"],
 input[type="submit"][id^="edit-field"],
-input[id^="edit-actions-save"], input[id^="edit-preview"],
+input[id^="edit-actions-save"],
+input[id^="mc-embedded-subscribe"], input[id^="edit-preview"],
 input[id^="edit-next"],
 input[id^="preview-submit"],
 input[id^="edit-return"],
@@ -477,7 +478,8 @@ div.exposed-filters #edit-ticket-registrant .fieldset-description a,
   input[id^="save-continue"]:hover,
   input[id^="edit-save"]:hover,
   input[type="submit"][id^="edit-field"]:hover,
-  input[id^="edit-actions-save"]:hover, input[id^="edit-preview"]:hover,
+  input[id^="edit-actions-save"]:hover,
+  input[id^="mc-embedded-subscribe"]:hover, input[id^="edit-preview"]:hover,
   input[id^="edit-next"]:hover,
   input[id^="preview-submit"]:hover,
   input[id^="edit-return"]:hover,
@@ -488,7 +490,8 @@ div.exposed-filters #edit-ticket-registrant .fieldset-description a,
   input[id^="save-continue"]:focus,
   input[id^="edit-save"]:focus,
   input[type="submit"][id^="edit-field"]:focus,
-  input[id^="edit-actions-save"]:focus, input[id^="edit-preview"]:focus,
+  input[id^="edit-actions-save"]:focus,
+  input[id^="mc-embedded-subscribe"]:focus, input[id^="edit-preview"]:focus,
   input[id^="edit-next"]:focus,
   input[id^="preview-submit"]:focus,
   input[id^="edit-return"]:focus,
@@ -515,17 +518,18 @@ div.exposed-filters #edit-ticket-registrant .fieldset-description a,
     color: white;
     text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000363}}
 input[id^="edit-submit"], .checkout-buttons input.checkout-continue, #edit-ticket-registrant .fieldset-description a,
 input[id^="edit-actions-submit"],
 input[id^="save-continue"],
 input[id^="edit-save"],
 input[type="submit"][id^="edit-field"],
 input[id^="edit-save"],
-input[id^="edit-actions-save"] {
+input[id^="edit-actions-save"],
+input[id^="mc-embedded-subscribe"] {
   background-color: #007740;
   color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000369}}
   input[id^="edit-submit"]:hover, .checkout-buttons input.checkout-continue:hover, #edit-ticket-registrant .fieldset-description a:hover, input[id^="edit-submit"]:focus, .checkout-buttons input.checkout-continue:focus, #edit-ticket-registrant .fieldset-description a:focus,
   input[id^="edit-actions-submit"]:hover,
   input[id^="edit-actions-submit"]:focus,
@@ -538,10 +542,12 @@ input[id^="edit-actions-save"] {
   input[id^="edit-save"]:hover,
   input[id^="edit-save"]:focus,
   input[id^="edit-actions-save"]:hover,
-  input[id^="edit-actions-save"]:focus {
+  input[id^="edit-actions-save"]:focus,
+  input[id^="mc-embedded-subscribe"]:hover,
+  input[id^="mc-embedded-subscribe"]:focus {
     background-color: #005f33; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000378}}
 input[id^="edit-preview"],
 input[id^="edit-next"],
 input[id^="preview-submit"],
@@ -551,7 +557,7 @@ input[id^="edit-cancel"],
 .checkout-buttons input.checkout-back {
   background-color: #005198;
   color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000384}}
   input[id^="edit-preview"]:hover, input[id^="edit-preview"]:focus,
   input[id^="edit-next"]:hover,
   input[id^="edit-next"]:focus,
@@ -566,6 +572,10 @@ input[id^="edit-cancel"],
   .checkout-buttons input.checkout-cancel:focus,
   .checkout-buttons input.checkout-back:focus {
     background-color: #004079; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_forms\.scss}line{font-family:\0000389}}
+input[type="checkbox"] {
+  margin-right: 0.625em; }
 
 @media screen and (min-width: 56.25em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/base\/_html\.scss}line{font-family:\000035}}
@@ -2098,6 +2108,23 @@ nav[role="navigation"] > ul .dropdown {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/block\/_block--general\.scss}line{font-family:\0000312}}
   .l-region--sidebar-second .block > h2.block__title {
     margin-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/forms\/_mailchimp--signup\.scss}line{font-family:\000032}}
+#mc_embed_signup .indicates-required {
+  color: #f92f2f;
+  font-size: 0.75em;
+  text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/forms\/_mailchimp--signup\.scss}line{font-family:\000038}}
+#mc_embed_signup .asterisk {
+  color: #f92f2f; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/forms\/_mailchimp--signup\.scss}line{font-family:\0000312}}
+#mc_embed_signup .mc-field-group {
+  margin-bottom: 0.625em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/forms\/_mailchimp--signup\.scss}line{font-family:\0000316}}
+#mc_embed_signup label ~ input {
+  display: block;
+  clear: both;
+  width: 100%; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--full\.scss}line{font-family:\000033}}
 .node--news--full .node__submitted,
