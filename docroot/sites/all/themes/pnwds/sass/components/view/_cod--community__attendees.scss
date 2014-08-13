@@ -101,8 +101,12 @@
           
           .user--profile__full-name {
             @include transform(scale(1.2));
-            text-shadow: 1px 1px 4px rgba($black, 0.6);
+            text-shadow: 2px 2px 3px rgba($black, 0.7);
             top: -0.625em;
+            
+            a {
+              color: $link-light-blue;
+            }
           }
         }
         .user--profile__content {

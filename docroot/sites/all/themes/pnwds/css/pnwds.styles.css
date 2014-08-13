@@ -2993,9 +2993,16 @@ nav[role="navigation"] > ul .dropdown {
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
-    text-shadow: 1px 1px 4px rgba(26, 26, 26, 0.6);
+    text-shadow: 2px 2px 3px rgba(26, 26, 26, 0.7);
     top: -0.625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003107}}
+    .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__info .user--profile__full-name a, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__info .user--profile__full-name a,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__info .user--profile__full-name a,
+    .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__info .user--profile__full-name a,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee:hover .user--profile__info .user--profile__full-name a,
+    .csstransforms3d .view-cod-community-attendees .user--profile--attendee:focus .user--profile__info .user--profile__full-name a {
+      color: #449ad5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_cod--community__attendees\.scss}line{font-family:\00003112}}
   .csstransforms3d .view-cod-community-attendees .user__profile--attendee:hover .user--profile__content, .csstransforms3d .view-cod-community-attendees .user__profile--attendee:focus .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:hover .user--profile__content,
   .csstransforms3d .view-cod-community-attendees .user--profile__attendee:focus .user--profile__content,
