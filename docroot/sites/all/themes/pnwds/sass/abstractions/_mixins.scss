@@ -109,6 +109,20 @@
   }
 }
 
+// Grid layout
+@mixin gridlr($numPerRow, $spcaing) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+}
+
 // Makes an element visually hidden, but accessible.
 // @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {

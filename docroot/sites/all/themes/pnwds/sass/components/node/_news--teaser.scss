@@ -1,11 +1,87 @@
 .node__news--teaser,
 .node--news--teaser {
-  margin-bottom: 1.5em;
+  margin-bottom: emp(1.5em);
+  font-size: 0;
+  
+  .node__header,
+  .node__submitted,
+  .node__content {
+    font-size: 1rem;
+  }
   
   .node__submitted {
     margin: 0.325em 0;
     padding: 0.625em 0;
     border-top: 1px dotted $grey;
     border-bottom: 1px dotted $grey;
+  }
+    
+  @include respond-to($small) {
+    .node__submitted {
+      display: inline-block;
+      text-align: center;
+      margin-right: 1.625em;
+      width: 96px;
+      vertical-align: top;
+      
+      .submitted__timestamp {
+        clear: both;
+      }
+      
+      .submitted__author {
+        display: block;
+        text-align: center;
+        
+        .user-picture,
+        .author--name {
+          display: block;
+          clear: both;
+        }
+        
+        .user-picture {
+          width: 64px;
+          margin: 0 auto;
+        }
+      }
+      
+      .user-picture {
+        > a {
+          min-height: 93px;
+          min-width: 64px;
+          position: relative;
+          
+          &:before {
+            content: '';
+            background-image: image-url('content/PNWDS_logo--user--overlay__bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+        }
+        
+        img {
+          @include rwdImage;
+          vertical-align: bottom;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 0;
+        }
+      }
+    }
+    
+    .node__content {
+      display: inline-block;
+      max-width: calc(100% - (96px + #{emp(1.625em)}));
+    }
   }
 }

@@ -16,29 +16,29 @@
 /**
  * Utility Mixins
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003208}}
 ul.links--inline__separated {
   margin-top: 1em;
   padding-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003212}}
   ul.links--inline__separated > li {
     display: inline-block !important;
     list-style: none outside none !important;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003217}}
     ul.links--inline__separated > li a {
       border-right: 1px solid #1a1a1a;
       display: inline-block;
       line-height: 1;
       padding-right: 0.625em;
       margin-right: 0.625em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003225}}
     ul.links--inline__separated > li:first-child a {
       padding-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003229}}
     ul.links--inline__separated > li:last-child a {
       border-right: medium none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/abstractions\/_mixins\.scss}line{font-family:\00003233}}
     ul.links--inline__separated > li > ul {
       display: none; }
 
@@ -2196,14 +2196,94 @@ nav[role="navigation"] > ul .dropdown {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\000032}}
 .node__news--teaser,
 .node--news--teaser {
-  margin-bottom: 1.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\000035}}
+  margin-bottom: 24px;
+  font-size: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\000038}}
+  .node__news--teaser .node__header,
+  .node__news--teaser .node__submitted,
+  .node__news--teaser .node__content,
+  .node--news--teaser .node__header,
+  .node--news--teaser .node__submitted,
+  .node--news--teaser .node__content {
+    font-size: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000312}}
   .node__news--teaser .node__submitted,
   .node--news--teaser .node__submitted {
     margin: 0.325em 0;
     padding: 0.625em 0;
     border-top: 1px dotted #828282;
     border-bottom: 1px dotted #828282; }
+  @media screen and (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000320}}
+    .node__news--teaser .node__submitted,
+    .node--news--teaser .node__submitted {
+      display: inline-block;
+      text-align: center;
+      margin-right: 1.625em;
+      width: 96px;
+      vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000327}}
+      .node__news--teaser .node__submitted .submitted__timestamp,
+      .node--news--teaser .node__submitted .submitted__timestamp {
+        clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000331}}
+      .node__news--teaser .node__submitted .submitted__author,
+      .node--news--teaser .node__submitted .submitted__author {
+        display: block;
+        text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000336}}
+        .node__news--teaser .node__submitted .submitted__author .user-picture,
+        .node__news--teaser .node__submitted .submitted__author .author--name,
+        .node--news--teaser .node__submitted .submitted__author .user-picture,
+        .node--news--teaser .node__submitted .submitted__author .author--name {
+          display: block;
+          clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000341}}
+        .node__news--teaser .node__submitted .submitted__author .user-picture,
+        .node--news--teaser .node__submitted .submitted__author .user-picture {
+          width: 64px;
+          margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000348}}
+      .node__news--teaser .node__submitted .user-picture > a,
+      .node--news--teaser .node__submitted .user-picture > a {
+        min-height: 93px;
+        min-width: 64px;
+        position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000353}}
+        .node__news--teaser .node__submitted .user-picture > a:before,
+        .node--news--teaser .node__submitted .user-picture > a:before {
+          content: '';
+          background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1407860982');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000370}}
+      .node__news--teaser .node__submitted .user-picture img,
+      .node--news--teaser .node__submitted .user-picture img {
+        display: inline-block;
+        min-width: 100%;
+        width: 100%;
+        max-width: auto;
+        height: auto;
+        vertical-align: bottom;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/_news--teaser\.scss}line{font-family:\0000382}}
+    .node__news--teaser .node__content,
+    .node--news--teaser .node__content {
+      display: inline-block;
+      max-width: calc(100% - (96px + 26px)); } }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/node\/event\/_event--dates\.scss}line{font-family:\000031}}
 .event__dates {
