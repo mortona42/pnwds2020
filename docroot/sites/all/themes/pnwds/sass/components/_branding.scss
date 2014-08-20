@@ -18,6 +18,7 @@
   
   @include respond-to($medium) {
     display: inline-block;
+    float: left;
     text-align: center;
     max-width: 33%;
     min-width: 100px;
@@ -72,6 +73,7 @@ h1.site--branding__name {
   
   @include respond-to($medium) {
     display: inline-block;
+    float: left;
     font-size: 1.75rem;
     line-height: 1;
     text-align: left;
@@ -88,7 +90,29 @@ h1.site--branding__name {
   }
 }
 
-.site--branding__slogan {}
+h2.site--branding__slogan {
+  color: $white;
+  font-family: $branding-heavy;
+  font-size: 2.1rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.325em;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin-top: 0.625em;
+  
+  @include respond-to($medium) {
+    display: inline-block;
+    float: left;
+    font-size: 0.875rem;
+    line-height: 1;
+    text-align: left;
+    vertical-align: bottom;
+    margin-top: 0;
+    max-width: 66%;
+  }
+}
 
 // NOT FRONT
 @include respond-to($medium, max-width) {
