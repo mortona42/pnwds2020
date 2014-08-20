@@ -2285,7 +2285,7 @@ nav[role="navigation"] > ul .dropdown {
         .node--news--teaser .node__submitted .user-picture > a:before {
           content: '';
           background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1407860982');
-          background-position: center;
+          background-position: center bottom;
           background-repeat: no-repeat;
           background-size: contain;
           overflow: hidden;
