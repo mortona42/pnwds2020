@@ -3319,3 +3319,9 @@ nav[role="navigation"] > ul .dropdown {
   .view-cod-news.view-display-id-multi_news_block .item-list li:last-child {
     border-bottom: medium none;
     margin-bottom: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/view\/_news--multi-news-block\.scss}line{font-family:\0000318}}
+#block-views-cod-news-block-1 {
+  width: 100%;
+  float: left;
+  margin-right: 1.5625%; }

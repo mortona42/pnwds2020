@@ -14,3 +14,7 @@
     }
   }
 }
+
+#block-views-cod-news-block-1 {
+  @include span-columns($total-columns);
+}
