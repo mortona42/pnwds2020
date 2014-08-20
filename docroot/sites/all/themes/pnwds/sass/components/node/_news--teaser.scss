@@ -18,6 +18,8 @@
     
   @include respond-to($small) {
     .node__submitted {
+      border-top: medium none;
+      border-bottom: medium none;
       display: inline-block;
       text-align: center;
       margin-right: 1.625em;
@@ -71,7 +73,7 @@
           @include rwdImage;
           vertical-align: bottom;
           position: absolute;
-          bottom: 0;
+          bottom: 0px;
           left: 0;
           right: 0;
           z-index: 0;
