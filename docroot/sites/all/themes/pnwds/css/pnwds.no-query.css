@@ -1210,6 +1210,9 @@ h2.site--branding__slogan {
   text-align: center;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   margin-top: 0.625em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003105}}
+  .not-front h2.site--branding__slogan {
+    font-size: 0.875rem; }
   @media screen and (min-width: 56.25em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\0000393}}
     h2.site--branding__slogan {
@@ -1223,19 +1226,19 @@ h2.site--branding__slogan {
       max-width: 66%; } }
 
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003127}}
   .not-front .site--branding__logo-svg {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003131}}
   .not-front h1.site--branding__name {
     font-size: 1.85rem;
     margin: 0 auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003137}}
     .not-front h1.site--branding__name a .word1,
     .not-front h1.site--branding__name a .word2 {
       font-size: 1.4rem; } }
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_branding\.scss}line{font-family:\00003147}}
   .not-front .site--branding__logo-svg {
     display: inline-block; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/BLadwin\/Sites\/PNW\/site\/docroot\/sites\/all\/themes\/pnwds\/sass\/components\/_commerce--cart\.scss}line{font-family:\000032}}

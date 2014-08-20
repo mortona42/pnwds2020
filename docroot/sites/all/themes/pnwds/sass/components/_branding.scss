@@ -102,6 +102,10 @@ h2.site--branding__slogan {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   margin-top: 0.625em;
   
+  .not-front & {
+    font-size: 0.875rem;
+  }
+  
   @include respond-to($medium) {
     display: inline-block;
     float: left;
