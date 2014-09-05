@@ -70,12 +70,7 @@ Drupal.openlayers.layer.geojson = function(title, map, options) {
     else {
       // Fixed strategy.
       // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Strategy/Fixed-js.html
-      if (options.preload) {
-        options.strategies = [new OpenLayers.Strategy.Fixed({preload: true})];
-      }
-      else {
-        options.strategies = [new OpenLayers.Strategy.Fixed()];
-      }
+      options.strategies = [new OpenLayers.Strategy.Fixed()];
     }
     if(options.useScript){
       //use Script protocol to get around xss issues and 405 error

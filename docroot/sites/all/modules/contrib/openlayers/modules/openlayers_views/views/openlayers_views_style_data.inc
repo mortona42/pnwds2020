@@ -83,7 +83,7 @@ class openlayers_views_style_data extends views_plugin_style {
 
     $fields = array();
     foreach ($handlers as $field_id => $handler) {
-      $fields[$field_id] = $handler->ui_name() . ' (' . $field_id .')';
+      $fields[$field_id] = $handler->ui_name();
     }
 
     $form['data_source'] = array(
@@ -180,10 +180,21 @@ class openlayers_views_style_data extends views_plugin_style {
       '#default_value' => $this->options['data_source']['name_field'],
     );
 
-    $desc_options = array_merge(array(
-      '' => '',
-      '#row' => '<' . t('entire row') . '>',
-    ), $fields);
+    // For node content type, we can render the node as with a specific
+    // view mode.
+    if ($this->view->base_table == 'node') {
+      $desc_options = array_merge(array(
+        '' => '',
+        '#row' => '<' . t('entire row') . '>',
+        '#node' => '<' . t('entire node') . '>'
+      ), $fields);
+    }
+    else {
+      $desc_options = array_merge(array(
+        '' => '',
+        '#row' => '<' . t('entire row') . '>',
+      ), $fields);
+    }
 
     // Description field
     $form['data_source']['description_field'] = array(
@@ -196,6 +207,45 @@ class openlayers_views_style_data extends views_plugin_style {
       '#default_value' => $this->options['data_source']['description_field'],
     );
 
+    // Create view mode options
+    if ($this->view->base_table == 'node') {
+      // Available_view_modes is the array to contain the avaible
+      // view modes, for now this is not content type aware, but should be
+      $available_view_modes = array();
+      $entity_info = entity_get_info();
+      // Get the machine names of the view modes
+      $view_modes_machine_names[] = array_keys($entity_info['node']['view modes']);
+      // Get the labels (human readable) of the view modes
+      foreach ($entity_info['node']['view modes'] as $key => $view_mode) {
+        $view_modes_labels[] = $view_mode['label'];
+      }
+      // Combine the machine view mode name with the label, this could sure be done much better?
+      $entities_to_display = array_combine($view_modes_machine_names[0], $view_modes_labels);
+      //output the form
+      $form['data_source']['view_mode'] = array(
+        '#type' => 'select',
+        '#title' => t('View mode'),
+        '#description' => t('View modes are ways of displaying nodes.'),
+        '#options' => $entities_to_display,
+        '#default_value' => !empty($this->options['data_source']['view_mode']) ?
+          $this->options['data_source']['view_mode'] : 'full',
+        '#states' => array(
+          'visible' => array(
+            ':input[name="style_options[data_source][description_field]"]' => array('value' => '#node'),
+          ),
+        ),
+      );
+    }
+    $form['data_source']['style_field'] = array(
+      '#type'          => 'select',
+      '#title'         => t('Style Field'),
+      '#description'   => t('Choose the field which will appear as a style on '
+        . 'the layer.'),
+      '#required'      => FALSE,
+      '#options'       => array('' => '', ) + $fields,
+      '#default_value' => $this->options['data_source']['style_field'],
+    );
+
     // A simple way to display attributes and styling
     $form['attributes'] = array(
       '#type' => 'fieldset',
@@ -206,36 +256,38 @@ class openlayers_views_style_data extends views_plugin_style {
       '#collapsed' => TRUE,
     );
     $variable_fields = array();
-    foreach ($this->view->display_handler->get_handlers('field') as
-             $field => $handler) {
-        $variable_fields[$field] = '${' . $field . '}';
-    }
     if (!empty($this->options['data_source']['name_field'])) {
       $variable_fields['name'] = '${name}';
     }
     if (!empty($this->options['data_source']['description_field'])) {
       $variable_fields['description'] = '${description}';
     }
-
-    $form['attributes']['display'] = array(
-      '#title' => 'Select attributes to include in the features',
-      '#type' => 'checkboxes',
-      '#options' => $variable_fields,
-      '#default_value' => !empty($this->options['attributes']['display']) ?
-          $this->options['attributes']['display'] : array_combine(array_keys($variable_fields), array_keys($variable_fields)),
-      '#description' => t('Any fields that you select will be attached to '
-          . 'their respective feature (point, line, polygon) as attributes.  '
-          . 'These attributes can then be used to add variable styling to your '
-          . 'themes.  This is accomplished by using the %syntax syntax in the '
-          . 'values for a style.  You can see a list of available variables in '
-          . 'the view preview; these can be placed right in the style interface. '
-          . 'The field has been processed by Views.'
-          . 'By disabling some of them, you can reduce the size '
-          . 'of the Javascript included in your pages.'
-          . 'Please note that this does not apply to Grouped Displays.',
-          array(
-            '%syntax' => '${field_name}'
-          ))
+    foreach ($this->view->display_handler->get_handlers('field') as
+      $field => $handler) {
+          if (($field != $this->options['data_source']['name_field']) &&
+              ($field != $this->options['data_source']['description_field'])) {
+        $variable_fields[$field] = '${' . $field . '}';
+        $variable_fields[$field . '_rendered'] = '${' . $field . '_rendered}';
+      }
+    }
+    $form['attributes']['styling'] = array(
+      '#markup' => '
+      <p>' . t('Any fields that you add to this view will be attached to '
+      . 'their respective feature (point, line, polygon) as attributes.  '
+      . 'These attributes can then be used to add variable styling to your '
+      . 'themes.  This is accomplished by using the %syntax syntax in the '
+      . 'values for a style.  You can see a list of available variables in '
+      . 'the view preview; these can be placed right in the style interface. '
+      . 'The %rendered one means that it has been processed '
+      . 'by Views and may have a different value.',
+      array(
+        '%syntax' => '${field_name}',
+        '%rendered' => '_rendered'))
+      . '</p>'
+      . theme('item_list', array('items' => $variable_fields))
+      . '<p>'
+      . t('Please note that this does not apply to Grouped Displays.')
+      . '</p>',
     );
   }
 
@@ -248,82 +300,48 @@ class openlayers_views_style_data extends views_plugin_style {
   function map_features($sets = array()) {
     $features = $excluded_fields = array();
     $handlers = $this->display->handler->get_handlers('field');
-
     foreach ($sets as $title => $records) {
       foreach ($records as $id => $record) {
         $this->view->row_index = $id;
         $attributes = array();
-        $wkt = NULL;
-        $field_exclude = array();
-
-        // Save the 'exclude' options of fields as backup.
-        foreach ($this->view->field as $fid => $field) {
-          $field_exclude[$fid] = $field->options['exclude'];
-        }
-        // Loop through each fields and render it if there were only one
-        // field in the row, so we have all the goodness of Views's field
-        // wrapping, class customizations and label.
         foreach ($handlers as $hid => $handler) {
-          $field_id = $handler->options['id'];
-          // Exclude all the field from rendering
-          foreach ($this->view->field as $field) {
-            $field->options['exclude'] = TRUE;
+          if (!empty($handler->options['exclude']) && !in_array($hid, $this->options['data_source'])) {
+            $excluded_fields[] = $hid;
+            // Ensure that $handler->last_render is correctly populated with the
+            // value corresponding to the record being processed, otherwise
+            // fields whose output is rewritten based on excluded fields might
+            // get the wrong values.
+            $handler->last_render = $this->rendered_fields[$id][$hid];
           }
-          // Enable only the field we want to render the row.
-          $this->view->field[$field_id]->options['exclude'] = FALSE;
-          // Render the row.
-          $attributes[$hid] = trim($this->row_plugin->render($record));
-        }
-        // Restore the state of the exclude options in the fields.
-        foreach ($this->view->field as $fid => $field) {
-          $this->view->field[$fid]->options['exclude'] = $field_exclude[$fid];
+          else {
+            $attributes[$hid . '_rendered'] = $handler->allow_advanced_render() ? $handler->advanced_render($record) : $handler->render($record);
+            if (isset($record->{'field_' . $hid}) && empty($record->{'field_' . $hid})) {
+              // This is an empty field value so we cannot use
+              // $handler->original_value as that will be set to the value held
+              // by the last record that had this value set.
+              $attributes[$hid] = NULL;
+            }
+            else {
+              $attributes[$hid] = isset($handler->original_value) ? $handler->original_value : NULL;
+            }
+          }
         }
 
-        // Add the 'name' attribute.
-        if (isset($this->options['data_source']['name_field'])) {
-          if (isset($attributes[$this->options['data_source']['name_field']])) {
-            $attributes['name'] = $attributes[$this->options['data_source']['name_field']];
-          }
-        }
-
-        // Add the 'description' attribute.
         if (isset($this->options['data_source']['description_field'])) {
           // Handle rendering the whole record.
           if ($this->options['data_source']['description_field'] === '#row') {
-            $attributes['description'] = trim($this->row_plugin->render($record));
-          } else {
-            if (isset($attributes[$this->options['data_source']['description_field']])) {
-              $attributes['description'] = $attributes[$this->options['data_source']['description_field']];
-            }
+            $attributes['#row_rendered'] = $this->row_plugin->render($record);
           }
-        }
 
-        // We do not need the rendered value for these fields,
-        // just the raw value.
-        // This is why we use $this->rendered_fields.
-        if (isset($this->options['data_source']['value'])) {
-          switch ($this->options['data_source']['value']) {
-            case 'wkt':
-              $handler = $handlers[$this->options['data_source']['wkt']];
-              $wkt = $handler->allow_advanced_render() ? $handler->advanced_render($record) : $handler->render($record);
-              break;
-            case 'other_latlon':
-              $handler = $handlers[$this->options['data_source']['other_lon']];
-              $other_lon = $handler->allow_advanced_render() ? $handler->advanced_render($record) : $handler->render($record);
-              $handler = $handlers[$this->options['data_source']['other_lat']];
-              $other_lat = $handler->allow_advanced_render() ? $handler->advanced_render($record) : $handler->render($record);
-              $wkt = 'POINT(' . $other_lon . ' ' . $other_lat . ')';
-              break;
-          }
-        }
-
-        // Only render features that has been enabled in the configuration
-        // of the display.
-        if (isset($this->options['attributes']['display'])) {
-          foreach($this->options['attributes']['display'] as $fid => $value) {
-            if ($this->options['attributes']['display'][$fid] === 0) {
-              unset($attributes[$fid]);
-            }
+          // Handle rendering of a node view.
+          // TODO: This can be handled through the entity API module
+          // TODO: who provides a field: 'Rendered entity'.
+          if ($this->options['data_source']['description_field'] === '#node' &&
+            is_object($record) && isset($record->nid)) {
+            $view_mode = $this->options['data_source']['view_mode'] ? $this->options['data_source']['view_mode'] : 'full';
+            // This has to be done to avoid warning on some version of PHP.
+            $node_view = node_view(node_load($record->nid), $view_mode);
+            $attributes['#node_rendered'] = drupal_render($node_view);
           }
         }
 
@@ -331,9 +349,9 @@ class openlayers_views_style_data extends views_plugin_style {
         $feature = array(
           'projection' => 'EPSG:4326',
           'attributes' => $attributes,
-          'wkt' => $wkt,
+          'style' => $this->get_style($attributes, $handlers, $this->options['data_source'], $record),
+          'wkt' => $this->get_wkt($attributes, $handlers, $this->options['data_source']),
         );
-
         $features = $this->reduce_features($this->options['grouping'], $features, $feature, $title);
       }
     }
@@ -342,7 +360,9 @@ class openlayers_views_style_data extends views_plugin_style {
     if ($this->options['grouping']) {
       $features = $this->coalesce_groups($features, $handlers, $this->options['data_source']);
     }
-
+    else {
+      $features = $this->add_title_desc($features, $handlers, $this->options['data_source']);
+    }
     return $features;
   }
 
@@ -354,6 +374,58 @@ class openlayers_views_style_data extends views_plugin_style {
    */
   function datasource_dependent($type) {
     return array('visible' => array('#edit-style-options-data-source-value' => array('value' => $type)));
+  }
+
+  /**
+   * Find and compute styling attributes.
+   */
+  function get_style($feature, $handlers, $datasource, $record) {
+    $style = NULL;
+
+    if (isset($datasource['style_field']) && !empty($datasource['style_field'])) {
+      $style_field = $handlers[$datasource['style_field']];
+      // Check if field is not empty
+      if ($style_field->original_value) {
+        $style = $style_field->options['settings'];
+
+        if ($style_field->original_value) {
+          $image_info = image_get_info($style_field->original_value);
+          $style['graphicWidth'] = $image_info['width'];
+          $style['graphicHeight'] = $image_info['height'];
+
+          unset($style['imageStyle']);
+          $style['externalGraphic'] = file_create_url($style_field->original_value);
+        }
+
+        foreach ($style as $prop => $value) {
+          if (is_numeric($value)) {
+            $style[$prop] = (float) $value;
+          }
+          if (empty($value)) {
+            unset($style[$prop]);
+          }
+        }
+      }
+    }
+    return $style;
+  }
+
+  /**
+   * Find the data source of an element and pull it into a wkt field
+   *
+   * openlayers_views_style_data specific
+   */
+  function get_wkt($feature, $handlers, $datasource) {
+    $feature['projection'] = '4326';
+    switch ($datasource['value']) {
+      case 'wkt':
+        return strip_tags($feature[$datasource['wkt']]);
+        break;
+
+      case 'other_latlon':
+        return 'POINT(' . strip_tags($feature[$datasource['other_lon']]) . ' ' . strip_tags($feature[$datasource['other_lat']]) . ')';
+        break;
+    }
   }
 
   /**
@@ -385,22 +457,22 @@ class openlayers_views_style_data extends views_plugin_style {
 
         // Create name and description attributes.  Note that there are a
         // couple exceptions to using fields.
-        $exceptions = array('#row');
+        $exceptions = array('#row', '#node');
 
         // Run the output through a theme.
         $formatted_features[] = theme('openlayers_views_group_display_item',
           array(
             'name' => isset($handlers[$ds['name_field']]) ?
-              $subfeature['attributes'][$ds['name_field']] : FALSE,
+              $subfeature['attributes'][$ds['name_field'] . '_rendered'] : FALSE,
             'description' => (in_array($ds['description_field'], $exceptions) ||
               isset($handlers[$ds['description_field']])) ?
-              $subfeature['attributes'][$ds['description_field']] : FALSE
+              $subfeature['attributes'][$ds['description_field'] . '_rendered'] : FALSE
           )
         );
 
         // Remove rendered rows to keep data size down for JS.
         if (in_array($ds['description_field'], $exceptions)) {
-          unset($subfeature['attributes'][$ds['description_field']]);
+          unset($subfeature['attributes'][$ds['description_field'] . '_rendered']);
         }
       }
 
@@ -421,6 +493,35 @@ class openlayers_views_style_data extends views_plugin_style {
     geophp_load();
     $geophp = geoPHP::load($wkt_array, 'wkt');
     return $geophp->out('wkt');
+  }
+
+  /**
+   * Retrieve name and description for individual features when grouping is not enabled.
+   *
+   * openlayers_views_style_data specific
+   */
+  function add_title_desc($features, $handlers, $ds) {
+    foreach ($features as $k => &$f) {
+      // Create name/title attribute
+      if (isset($handlers[$ds['name_field']])) {
+        $f['attributes']['name'] = $f['attributes'][$ds['name_field'] . '_rendered'];
+      }
+
+      // Create description attribute.  Note that there are a couple
+      // exceptions to using fields
+      $exceptions = array('#row', '#node');
+      if (isset($ds['description_field'])) {
+        if (in_array($ds['description_field'], $exceptions) || isset($handlers[$ds['description_field']])) {
+          $f['attributes']['description'] = $f['attributes'][$ds['description_field'] . '_rendered'];
+
+          // Remove rendered row to keep data size down for JS.
+          if (in_array($ds['description_field'], $exceptions)) {
+            unset($f['attributes'][$ds['description_field'] . '_rendered']);
+          }
+        }
+      }
+    }
+    return $features;
   }
 
   /**

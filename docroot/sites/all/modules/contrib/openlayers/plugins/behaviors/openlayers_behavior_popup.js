@@ -54,41 +54,46 @@ Drupal.openlayers.addBehavior('openlayers_behavior_popup', function (data, optio
   // if only 1 layer exists, do not add as an array.  Kind of a
   // hack, see https://drupal.org/node/1393460
   if (layers.length == 1) {
-    //layers = layers[0];
+    layers = layers[0];
   }
 
   var popupSelect = new OpenLayers.Control.SelectFeature(layers,
     {
-      eventListeners:{
-        featurehighlighted:function(e){
-          lonlat = map.getLonLatFromPixel(
-            new OpenLayers.Pixel(
-              this.handlers.feature.evt.clientX - map.viewPortDiv.offsetLeft + jQuery(window).scrollLeft(),
-              this.handlers.feature.evt.clientY - map.viewPortDiv.offsetTop + jQuery(window).scrollTop()
-            )
-          );
-
-
-
-
-
-        }
-      },
       onSelect: function(feature) {
-        var lonlat;
-        if (options.popupAtPosition == 'mouse') {
-          lonlat = map.getLonLatFromPixel(
-            this.handlers.feature.evt.xy
-          );
-        } else {
-          lonlat = feature.geometry.getBounds().getCenterLonLat();
-        }
+        // Check if we have any zoom settings set. If zoom to point is enabled,
+        // it will disable the popup behavior for points,
+        // and the same for clusters.
+        if (options.zoomToPoint || options.zoomToCluster) {
+          var fullExtent;
+          // If we have zoomToCluster enabled and the feature is a cluster,
+          // accumulate the fullExtent of all points in the cluster.
+          var isCluster = typeof feature.cluster != 'undefined' && feature.cluster.length > 1;
+          if (options.zoomToCluster && isCluster) {
+            for (var i = 0; i < feature.cluster.length; i++) {
+              point = feature.cluster[i];
+              if (fullExtent instanceof OpenLayers.Bounds) {
+                fullExtent.extend(point.geometry.getBounds());
+              } else {
+                fullExtent = point.geometry.getBounds();
+              }
+            }
+          }
+          // Otherwise, if zoomToPoint is enabled and it's not a cluster, set
+          // the fullExtent to the bounds of the point.
+          else if (options.zoomToPoint && !isCluster){
+            fullExtent = feature.geometry.getBounds();
+          }
 
+          if (fullExtent instanceof OpenLayers.Bounds) {
+            map.zoomToExtent(fullExtent);
+            // Don't attempt to popup when zooming.
+            return;
+          }
+        }
         // Create FramedCloud popup.
         popup = new OpenLayers.Popup.FramedCloud(
           'popup',
-          lonlat,
-          //feature.geometry.getBounds().getCenterLonLat(),
+          feature.geometry.getBounds().getCenterLonLat(),
           null,
           Drupal.theme('openlayersPopup', feature),
           null,
@@ -110,9 +115,12 @@ Drupal.openlayers.addBehavior('openlayers_behavior_popup', function (data, optio
         Drupal.attachBehaviors();
       },
       onUnselect: function(feature) {
-        map.removePopup(feature.popup);
-        feature.popup.destroy();
-        feature.popup = null;
+        // If the feature has a popup, remove it.
+        if (feature.popup) {
+          map.removePopup(feature.popup);
+          feature.popup.destroy();
+          feature.popup = null;
+        }
         this.unselectAll();
         Drupal.attachBehaviors();
       }
