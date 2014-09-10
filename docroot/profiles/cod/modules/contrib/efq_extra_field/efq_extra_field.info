@@ -3,7 +3,8 @@ description = Allow retrieving extra fields from EFQ
 core = 7.x
 
 ; Information added by drush on 2014-09-05
-version = ""
+version = "7.x-1.x-dev"
+core = "7.x"
 project = "efq_extra_field"
 datestamp = "1409960684"
 
