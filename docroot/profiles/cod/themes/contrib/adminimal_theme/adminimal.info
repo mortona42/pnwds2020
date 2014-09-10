@@ -18,9 +18,9 @@ regions[sidebar_first] = First sidebar
 regions_hidden[] = sidebar_first
 
 
-; Information added by drush on 2014-06-27
+; Information added by drush on 2014-09-05
 version = "7.x-1.4+10-dev"
 core = "7.x"
 project = "adminimal_theme"
-datestamp = "1403854746"
+datestamp = "1409960638"
 

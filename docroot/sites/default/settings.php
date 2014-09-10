@@ -213,9 +213,9 @@
 
 $databases['default']['default'] = array(
   'driver' => 'mysql',
-  'database' => 'pnw',
+  'database' => 'pnwds',
   'username' => 'root',
-  'password' => 'Timfd@w!',
+  'password' => '',
   'host' => 'localhost',
   'prefix' => '',
   'collation' => 'utf8_general_ci',
