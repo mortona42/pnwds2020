@@ -41,6 +41,47 @@ function cod_registration_reg_perms($uid = NULL) {
   return TRUE;
 }
 
+/**
+ * Impliments hook_cron.
+ * Associates registrations with an event in case rules doesn't do it automatically.
+ * TODO: Make more performant. We're doing looping node loads and user loads. Aside
+ *    from making some really long joins, I'm not sure what else we can do here.
+ */
+function cod_registration_cron(){
+  // Fetch all active registration types
+  if (!module_exists('ticket_state'))
+    return;
+
+  foreach (ticket_get_ticket_types() as $ticket_type) {
+    // Make sure the ticket type is available
+    if (ticket_type_available($ticket_type)) {
+      $ticket_type = ticket_type_load($ticket_type->ttid);
+      $completed_state = $ticket_type->field_complete_state[LANGUAGE_NONE][0]['target_id'];
+
+      // Fetch all users for that ticket type that aren't assigned
+      $query = db_select('ticket_registration', 'tr');
+      $query->join('field_data_ticket_state', 's', 'tr.trid = s.entity_id');
+      $result = $query->fields('tr', array('user_uid'))
+        ->condition('tr.bundle', $ticket_type->ttid, '=')
+        ->condition('s.ticket_state_target_id', $completed_state, '=')
+        ->execute();
+
+      foreach ($result AS $record) {
+        $account = user_load($record->user_uid);
+        if (!og_is_member($ticket_type->entity_type, $ticket_type->entity_id, 'user', $account)) {
+          $og_membership = og_group(
+            $ticket_type->entity_type, $ticket_type->entity_id, array(
+              'entity_type' => 'user',
+              'entity' => $account->uid,
+              'field_name' => 'og_user_node',
+              'state' => OG_STATE_ACTIVE,
+            ));
+        }
+      }
+    }
+  }
+}
+
 /*
  * Registration forms
  */
