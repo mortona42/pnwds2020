@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the PNWDS Local Attractions feature.
+ */
+
+include_once 'pnwds_local_attractions.features.inc';

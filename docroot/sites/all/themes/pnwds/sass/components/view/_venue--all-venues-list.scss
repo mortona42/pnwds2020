@@ -1,0 +1,11 @@
+.venue--list {
+  @include clearfix;
+  display: block;
+  width: 100%;
+  
+  li {
+    @include respond-to($medium) {
+      @include gridlr(2, 16px);
+    }
+  }
+}

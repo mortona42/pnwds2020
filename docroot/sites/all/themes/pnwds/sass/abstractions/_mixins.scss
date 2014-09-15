@@ -110,8 +110,11 @@
 }
 
 // Grid layout
-@mixin gridlr($numPerRow, $spcaing) {
-  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+@mixin gridlr($numPerRow, $margin) {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});
   
   &:nth-child(n) {
     margin-bottom: $margin;
