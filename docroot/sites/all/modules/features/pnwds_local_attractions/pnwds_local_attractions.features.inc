@@ -69,5 +69,6 @@ function pnwds_local_attractions_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
