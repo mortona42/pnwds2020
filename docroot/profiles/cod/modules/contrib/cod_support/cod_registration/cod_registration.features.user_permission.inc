@@ -33,6 +33,7 @@ function cod_registration_user_default_permissions() {
     'name' => 'edit all ticket registrations',
     'roles' => array(
       'administrator' => 'administrator',
+      'sponsor organizer' => 'sponsor organizer',
     ),
     'module' => 'ticket',
   );
@@ -42,6 +43,7 @@ function cod_registration_user_default_permissions() {
     'name' => 'view all ticket registrations',
     'roles' => array(
       'administrator' => 'administrator',
+      'sponsor organizer' => 'sponsor organizer',
     ),
     'module' => 'ticket',
   );

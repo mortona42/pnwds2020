@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function cod_registration_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "mobile_codes" && $api == "default_mobile_codes_presets") {
+    return array("version" => "2");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }

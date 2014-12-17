@@ -23,11 +23,11 @@ function cod_registration_menu() {
     );
   }
 
-  $items['node/%node/check-in/%user'] = array(
+  $items['node/%node/tickets/checkin/%'] = array(
     'title'             => 'Registration',
     'access callback'   => 'cod_registration_reg_perms',
     'page callback'     => 'drupal_get_form',
-    'page arguments'    => array('cod_registration_checkin', 1,3),
+    'page arguments'    => array('cod_registration_checkin', 1,4),
     'type'              => MENU_CALLBACK,
   );
 
@@ -42,44 +42,107 @@ function cod_registration_reg_perms($uid = NULL) {
 }
 
 /**
- * Impliments hook_cron.
- * Associates registrations with an event in case rules doesn't do it automatically.
- * TODO: Make more performant. We're doing looping node loads and user loads. Aside
- *    from making some really long joins, I'm not sure what else we can do here.
+ * Implements hook_system_info_alter().
  */
-function cod_registration_cron(){
-  // Fetch all active registration types
-  if (!module_exists('ticket_state'))
-    return;
+function cod_registration_system_info_alter(&$info, $file, $type) {
+ // Only include the mobile codes feature if the module is enabled
+  if ($file->name == 'cod_registration' && module_exists('mobile_codes')) {
+    $info['features']['mobile_codes_presets'][] = 'cod_registration_qrcode';
+  }
+}
 
-  foreach (ticket_get_ticket_types() as $ticket_type) {
-    // Make sure the ticket type is available
-    if (ticket_type_available($ticket_type)) {
-      $ticket_type = ticket_type_load($ticket_type->ttid);
-      $completed_state = $ticket_type->field_complete_state[LANGUAGE_NONE][0]['target_id'];
+/*
+ * Registration Checkin Page. Marks the user as checked in and prints a badge if they want.
+ */
+function cod_registration_checkin($form, &$form_state, $group, $ticket_id) {
+  global $user;
+  module_load_include('inc', 'cod_registration', 'cod_registration.print');
 
-      // Fetch all users for that ticket type that aren't assigned
-      $query = db_select('ticket_registration', 'tr');
-      $query->join('field_data_ticket_state', 's', 'tr.trid = s.entity_id');
-      $result = $query->fields('tr', array('user_uid'))
-        ->condition('tr.bundle', $ticket_type->ttid, '=')
-        ->condition('s.ticket_state_target_id', $completed_state, '=')
-        ->execute();
+  // Who performed the check-in?
+  $registrar = $user->uid;
+  $ticket_data = ticket_registration_load($ticket_id);
 
-      foreach ($result AS $record) {
-        $account = user_load($record->user_uid);
-        if (!og_is_member($ticket_type->entity_type, $ticket_type->entity_id, 'user', $account)) {
-          $og_membership = og_group(
-            $ticket_type->entity_type, $ticket_type->entity_id, array(
-              'entity_type' => 'user',
-              'entity' => $account->uid,
-              'field_name' => 'og_user_node',
-              'state' => OG_STATE_ACTIVE,
-            ));
-        }
+  $form = drupal_get_form('ticket_registration_form', $ticket_data, 'edit');
+
+  $form['checkin'] = array(
+    '#markup' => t('Almost checked-in, please select which item you wish to check in for'),
+  );
+  $form['field_event'] = array(
+    '#type' => 'value',
+    '#value' => $group->nid,
+  );
+
+  $voc = taxonomy_vocabulary_machine_name_load('checkin_types');
+  $tree = taxonomy_get_tree($voc->vid);
+  $options = array('_none' => t('- None -'));
+  foreach($tree as $term) {
+    $options[$term->tid] = $term->name;
+  }
+  $form['field_checkin_type'] = array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => 862,
+    '#value_key' => 'tid',
+    '#weight' => 100,
+  );
+
+  $form['field_ticket_registration'] = array(
+    '#type' => 'value',
+    '#value' => $ticket_id,
+  );
+
+  $form['field_checkin_registrar'] = array(
+    '#type' => 'value',
+    '#value' => $registrar,
+  );
+
+  $form['print'] = array(
+    '#type' => 'submit',
+    '#value' => t('Print Badge'),
+    '#submit' => array('cod_registration_checkin_submit', 'cod_registration_confirmation_print_submit'),
+    '#weight' => 101,
+  );
+  $form['noprint'] = array(
+    '#type' => 'submit',
+    '#value' => t('Check-in'),
+    '#weight' => 102,
+  );
+
+  //custom submit functions for some sanity checking. Probably could use some more sanity
+  //nothing we really need to validate at this point
+  $form['#submit'][] = 'cod_registration_checkin_submit';
+
+  return $form;
+}
+
+function cod_registration_checkin_submit($form, &$form_state) {
+
+  $ticket_data = ticket_registration_load($form_state['values']['field_ticket_registration']);
+  $registered_account = user_load($ticket_data->user_uid);
+
+  //error_log(print_r($form_state,true));
+  foreach($registered_account->field_profile_checkin[LANGUAGE_NONE] AS $checkin_fields) {
+    if($field_collection_item = field_collection_item_load($checkin_fields['value'])) { // Load that field collection item.
+      if($field_collection_item->field_event[LANGUAGE_NONE][0]['target_id'] == $form_state['values']['field_event'] &&
+         $field_collection_item->field_checkin_type[LANGUAGE_NONE][0]['tid'] ==  $form_state['values']['field_checkin_type'] &&
+         $field_collection_item->field_checkin_value[LANGUAGE_NONE][0]['value'] == 1) {
+         drupal_set_message("You're already checked in");
+         return;
       }
     }
   }
+
+  $values = array();
+  $values['field_name'] = 'field_profile_checkin';
+  $values['field_event'][LANGUAGE_NONE][0]['target_id'] = $form_state['values']['field_event'];
+  $values['field_checkin_type'][LANGUAGE_NONE][0]['tid'] = $form_state['values']['field_checkin_type'];
+  $values['field_checkin_value'][LANGUAGE_NONE][0]['value'] = 1;
+  $values['field_checkin_registrar'][LANGUAGE_NONE][0]['target_id'] = $form_state['values']['field_checkin_registrar'];
+  $values['field_checkin_time'][LANGUAGE_NONE][0]['value'] = time();
+
+  $field_collection_item = entity_create('field_collection_item', $values);
+  $field_collection_item->setHostEntity('user', $registered_account);
+  $field_collection_item->save();
 }
 
 /*
@@ -142,7 +205,6 @@ function cod_registration_wizard($form, &$form_state, $event_id) {
 
   // Show the Next button only if there are more steps defined.
   if ($step < count($form_state['step_information'])) {
-    error_log(print_r($form_state,true));
     // The Next button should be included on every step
     $form['next'] = array(
       '#type' => 'submit',
@@ -190,7 +252,6 @@ function cod_registration_wizard($form, &$form_state, $event_id) {
     $form[$active]['#submit'] = array_merge($form['#submit'], $form[$active]['#submit']);
     unset($form['#submit']);
   }
-  dpm($form);
   return $form;
 }
 
@@ -246,8 +307,8 @@ function cod_registration_wizard_next_submit($form, &$form_state) {
 }
 
 function cod_registration_wizard_validate(&$form, &$form_state) {
-  dpm('validating');
-  dpm($form_state);
+  //dpm('validating');
+  //dpm($form_state);
 }
 // And now comes the magic of the wizard, the function that should handle all the
 // inputs from the user on each different step.
@@ -265,8 +326,8 @@ function cod_registration_wizard_validate(&$form, &$form_state) {
  * @ingroup form_example
  */
 function cod_registration_wizard_submit($form, &$form_state) {
-  dpm($form);
-  dpm($form_state);
+  //dpm($form);
+  //dpm($form_state);
   drupal_set_message("Successfully Registered!");
   $current_step = &$form_state['step'];
   $form_state['step_information'][$current_step]['stored_values'] = $form_state['values'];
@@ -292,4 +353,103 @@ function _cod_registration_steps() {
         'form' => 'ticket_register_form',
       ),
     );
+}
+
+/*
+ * Blocks!
+*/
+function cod_registration_block_info() {
+  // set up an empty array which will contain the block contents
+  $blocks = array();
+
+  // Generate listing of blocks from this module, for the admin/block page
+  $blocks['cod_registration_link'] = array(
+    'info' => t('Registration')
+  );
+
+  // return the built content
+  return $blocks;
+}
+
+/**
+* Implement hook_block_view()
+*
+* Generate HTML for the user_role_summary block
+* @param op the operation from the URL
+* @param delta offset
+* @returns block HTML
+*/
+function cod_registration_block_view($delta) {
+  // set up an empty array which will contain the block contents
+  $block = array();
+  switch($delta) {
+    case 'cod_registration_link':
+      $block['content'] = theme('cod_registration_link');
+      // Generate our block content
+      $block['subject'] = "";
+
+      break;
+  }
+    // return the built content
+  return $block;
+}
+
+function cod_registration_theme() {
+  return array (
+    'cod_registration_link' => array(),
+    'cod_registration_pdf' => array(
+      'variables' => array('content' => NULL),
+      'template' => 'cod-registration-pdf',
+    ),
+  );
+}
+
+function theme_cod_registration_link() {
+  global $user;
+
+  if (isset($user->uid) && $user->uid != 0 && $registrations = ticket_get_user_registrations($user, 'node', variable_get('cod_events_default_event', FALSE))) {
+      $string = 'You are registered';
+  }
+  else {
+      $string = 'Register now';
+      $reg_path = '2014';
+      $class = 'register-now';
+  }
+
+  if(isset($reg_path)) {
+    return l($string,$reg_path,array('attributes' => array('class' => array($class))));
+  } else {
+    return $string;
+  }
+}
+
+function cod_registration_get_vcard($registration) {
+  $vcard = _vcard_init();
+  $vcard->addParam('ENCODING', '8BIT');
+
+  if (isset($registration->field_profile_first[LANGUAGE_NONE][0]) || $registration->field_profile_last[LANGUAGE_NONE][0]) {
+    $vcard->setName($registration->field_profile_last[LANGUAGE_NONE][0]['safe_value'], $registration->field_profile_first[LANGUAGE_NONE][0]['safe_value'], '', '', '');
+    $vcard->addParam('ENCODING', '8BIT');
+    $vcard->setFormattedName($registration->field_profile_first[LANGUAGE_NONE][0]['safe_value'] . ' ' . $registration->field_profile_last[LANGUAGE_NONE][0]['safe_value']);
+    $vcard->addParam('ENCODING', '8BIT');
+  }
+
+  if ($registered_account = user_load($registration->user_uid)) {
+    $vcard->addEmail(check_plain($registered_account->mail));
+    $vcard->addParam('ENCODING', '8BIT');
+  }
+
+  // Organization
+  if (isset($registration->field_profile_org[LANGUAGE_NONE][0])) {
+    $vcard->addOrganization($registration->field_profile_org[LANGUAGE_NONE][0]['safe_value']);
+    $vcard->addParam('ENCODING', '8BIT');
+  }
+
+  // Organization
+  if (isset($registration->field_profile_job_title[LANGUAGE_NONE][0])) {
+    $vcard->setTitle($registration->field_profile_job_title[LANGUAGE_NONE][0]['safe_value']);
+    $vcard->addParam('ENCODING', '8BIT');
+  }
+
+  return $vcard;
 }
