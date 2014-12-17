@@ -103,7 +103,7 @@ function cod_bof_views_default_views() {
   $handler->display->display_options['sorts']['field_evttime_date_value']['id'] = 'field_evttime_date_value';
   $handler->display->display_options['sorts']['field_evttime_date_value']['table'] = 'field_data_field_evttime_date';
   $handler->display->display_options['sorts']['field_evttime_date_value']['field'] = 'field_evttime_date_value';
-  /* Contextual filter: Field: Event (og_group_ref) */
+  /* Contextual filter: Field: Conference (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -235,6 +235,13 @@ function cod_bof_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'bof_session' => 'bof_session',
+  );
   $export['cod_bof_schedule_content'] = $view;
 
   $view = new view();
@@ -305,7 +312,7 @@ function cod_bof_views_default_views() {
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['relationship'] = 'field_event_timeslots_node';
-  $handler->display->display_options['fields']['nid']['label'] = 'Event NID';
+  $handler->display->display_options['fields']['nid']['label'] = 'Conference NID';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Global: View */
   $handler->display->display_options['fields']['view']['id'] = 'view';

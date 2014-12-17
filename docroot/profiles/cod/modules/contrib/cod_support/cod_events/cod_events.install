@@ -360,3 +360,57 @@ function cod_events_update_7013() {
   features_revert($revert);
   return array();
 }
+
+/**
+ * Rename events to conferences.
+ */
+function cod_events_update_7014() {
+  $revert = array('cod_events' => array('page_manager_pages', 'views_view', 'flag'));
+  if (module_exists('cod_sponsors_pages')) {
+    $revert['cod_sponsors_pages'] = array('page_manager_pages');
+  }
+  if (module_exists('cod_sponsors')) {
+    $revert['cod_sponsors'] = array('field_instance');
+  }
+  if (module_exists('cod_session_management_pages')) {
+    $revert['cod_session_management_pages'] = array('page_manager_pages');
+  }
+  if (module_exists('cod_session')) {
+    $revert['cod_session'] = array('views_view', 'field_instance');
+  }
+  if (module_exists('cod_schedule')) {
+    $revert['cod_schedule'] = array('field_instance', 'views_view');
+  }
+  if (module_exists('cod_news')) {
+    $revert['cod_news'] = array('field_instance');
+  }
+  if (module_exists('cod_bof')) {
+    $revert['cod_bof'] = array('field_instance', 'views_view');
+  }
+  if (module_exists('cod_schedule_pages')) {
+    $revert['cod_schedule_pages'] = array('page_manager_pages');
+  }
+
+  features_revert($revert);
+
+    // Manually clear out stale menu links due to order of modules being enabled.
+  db_delete('menu_links')
+    ->condition('menu_name', 'management')
+    ->execute();
+  menu_rebuild();
+
+  // Finally, flush admin_menu's cache.
+  admin_menu_flush_caches();
+}
+
+/**
+ * Update pages to use permissions instead of roles for access
+ */
+function cod_events_update_7015() {
+  $revert = array(
+    'cod_events' => array('page_manager_pages'),
+  );
+  features_revert($revert);
+
+  return array();
+}

@@ -5,13 +5,17 @@ dependencies[] = cod_events
 dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = panels
+dependencies[] = views
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:2
+features[page_manager_pages][] = conference_admin
 features[page_manager_pages][] = program
+mtime = 1411995064
 
-; Information added by Drupal.org packaging script on 2014-09-05
-version = "7.x-1.0-beta3"
+
+; Information added by drush on 2014-12-17
+version = "7.x-1.0-beta5+6-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1409957334"
+datestamp = "1418783418"
 

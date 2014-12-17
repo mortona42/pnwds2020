@@ -22,12 +22,20 @@ function cod_sponsors_event_entity_integration() {
 /**
  * Implements hook_form_alter().
  */
-function cod_sponsors_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'sponsor_node_form') {
-    if(isset($form['og_group_ref'])) {
-      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#multiple'] = FALSE;
+function cod_sponsors_form_sponsor_node_form_alter(&$form, &$form_state, $form_id) {
+  if(isset($form['og_group_ref'])) {
+    $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#multiple'] = FALSE;
+  }
+  // TODO: We make an assumption that Sponsorships Levels are text.
+  if(isset($_GET['sponsorship_level']) &&
+     isset($form['field_sponsor_sponsorship_level']) &&
+     $key = array_search(strtolower(check_plain($_GET['sponsorship_level'])), array_map('strtolower',$form['field_sponsor_sponsorship_level'][$form['field_sponsor_sponsorship_level']['#language']]['#options']))) {
+    $form['field_sponsor_sponsorship_level'][$form['field_sponsor_sponsorship_level']['#language']]['#default_value'] = $key;
+    if (!user_access('edit any sponsor content')) {
+      $form['field_sponsor_sponsorship_level']['#disabled'] = TRUE;
     }
   }
+  // TODO, Hide sponsorship levels
 }
 
 /**
@@ -50,7 +58,7 @@ function cod_sponsors_menu() {
     'access callback' => 'node_access',
     'access arguments' => array('create', 'sponsor'),
   );
-  $items['admin/conference/events/%node/sponsors/add/sponsor'] = array(
+  $items['admin/conference/%node/sponsors/add/sponsor'] = array(
     'title' => t('Add Sponsor'),
     'page callback' => 'cod_events_add_content',
     'page arguments' => array(3, 6, 'admin/conference/events', 4),
@@ -59,7 +67,7 @@ function cod_sponsors_menu() {
     'weight' => -1,
     'type' => MENU_LOCAL_ACTION,
   );
-  $items['admin/conference/events/%node/sponsors/add/sponsorship_level'] = array(
+  $items['admin/conference/%node/sponsors/add/sponsorship_level'] = array(
     'title' => t('Add Sponsorship Level'),
     'page callback' => 'cod_events_add_term',
     'page arguments' => array(3, 6, 'admin/conference/events', 4),

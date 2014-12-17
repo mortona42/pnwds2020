@@ -136,7 +136,7 @@ function cod_install_finished(&$install_state) {
   drupal_flush_all_caches();
 
   // Enable the Origins theme and set it as the default.
-  $cod_themes = array('omega', 'pisces', 'adminimal');
+  $cod_themes = array('omega', 'pisces', 'adminimal', 'fisherman');
   theme_enable($cod_themes);
 
     // The Bartik theme is automatically enabled during installation. Disable it.
@@ -149,7 +149,7 @@ function cod_install_finished(&$install_state) {
   // Set the default and administration themes.
   variable_set('theme_default', 'pisces');
   // Set a default administrative theme:
-  variable_set('admin_theme', 'adminimal');
+  variable_set('admin_theme', 'fisherman');
   variable_set('node_admin_theme', FALSE);
 
   // We make custom code for the footer here because we want people to be able to freely edit it if they wish.
@@ -197,6 +197,9 @@ function cod_install_finished(&$install_state) {
     cod_session_generate_session_tracks($first_event, 'node', TRUE);
   }
 
+  // Update Incorrect foreign key references.
+  // See https://www.drupal.org/node/1969018 for more info.
+  cod_update_7007();
   // Run cron to populate update status tables (if available) so that users
   // will be warned if they've installed an out of date Drupal version.
   // Will also trigger indexing of profile-supplied content or feeds.
@@ -463,7 +466,7 @@ function cod_update_7003() {
 }
 
 /**
- * Make sure Adminimal and Picses are enabled if they are set as themes.
+ * Make sure Adminimal and Pisces are enabled if they are set as themes.
  */
 function cod_update_7004() {
   //Verify adminimal is enabled if its set as admin theme.
@@ -479,4 +482,54 @@ function cod_update_7004() {
     theme_disable(array('bartik'));
   }
   return array();
+}
+
+/**
+ * Set Fisherman as replacement Administration theme for Adminimal.
+ */
+function cod_update_7006() {
+  //Verify that Adminimal is set as admin theme, then switch to Fisherman.
+  if (variable_get('admin_theme', '') == 'adminimal') {
+    $admin_theme = 'fisherman';
+    theme_enable(array($admin_theme));
+    variable_set('admin_theme', $admin_theme);
+  }
+  return array();
+}
+
+/**
+ * Update foreign keys where necessary.
+ * See https://www.drupal.org/node/1969018 for more info.
+ */
+function cod_update_7007() {
+  // Load the base table configuration from the cache.
+  $base_tables = variable_get('entityreference:base-tables', array());
+
+  foreach (field_info_fields() as $field_name => $field) {
+
+    if ($field['type'] != 'entityreference') {
+      // Not an entity reference field.
+      continue;
+    }
+
+    // Read in the field config.
+    $field_name = field_read_field($field['field_name']);
+
+    // Create a foreign key to the target entity type base type, if available.
+    $entity_type = $field_name['settings']['target_type'];
+    if (isset($base_tables[$entity_type])) {
+      list($base_table, $id_column) = $base_tables[$entity_type];
+      $schema['foreign keys'][$base_table] = array(
+        'table' => $base_table,
+        'columns' => array('target_id' => $id_column),
+      );
+    }
+
+    // Update foreign keys to actually contain the proper entity foreign keys
+    // if they differ.
+    if ($field_name['foreign keys'] != $schema['foreign keys']) {
+      $field_name['foreign keys'] = $schema['foreign keys'];
+      field_update_field($field_name);
+    }
+  }
 }

@@ -219,7 +219,7 @@ function ticket_register_form_validate($form, &$form_state) {
 }
 
 /**
- * Tikcet register page form submit.
+ * Ticket register page form submit.
  */
 function ticket_register_form_submit($form, &$form_state) {
   multiple_entity_form_submit($form, $form_state);

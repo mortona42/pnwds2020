@@ -33,7 +33,7 @@ function cod_session_menu() {
     'access callback' => 'node_access',
     'access arguments' => array('create', 'session'),
   );
-  $items['admin/conference/events/%node/sessions/add/session'] = array(
+  $items['admin/conference/%node/sessions/add/session'] = array(
     'title' => t('Add Session'),
     'type' => MENU_LOCAL_ACTION,
     'page callback' => 'cod_events_add_content',
@@ -41,7 +41,7 @@ function cod_session_menu() {
     'access callback' => 'node_access',
     'access arguments' => array('create', 'session'),
   );
-  $items['admin/conference/events/%node/sessions/add/schedule-item'] = array(
+  $items['admin/conference/%node/sessions/add/schedule-item'] = array(
     'title' => t('Add Schedule Item'),
     'type' => MENU_LOCAL_ACTION,
     'page callback' => 'cod_events_add_content',
@@ -49,7 +49,7 @@ function cod_session_menu() {
     'access callback' => 'node_access',
     'access arguments' => array('create', 'schedule_item'),
   );
-  $items['admin/conference/events/%node/sessions/add/session_tracks'] = array(
+  $items['admin/conference/%node/sessions/add/session_tracks'] = array(
     'title' => t('Add Session Track'),
     'type' => MENU_LOCAL_ACTION,
     'page callback' => 'cod_events_add_term',
@@ -288,7 +288,7 @@ function cod_session_form_node_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Event (og_group_ref) ajax callback.
+ * Conference (og_group_ref) ajax callback.
  */
 function cod_session_events_filter($form, &$form_state) {
 

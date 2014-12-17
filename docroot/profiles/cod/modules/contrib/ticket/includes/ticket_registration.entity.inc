@@ -53,6 +53,60 @@ class TicketRegistration extends Entity {
   public function attendee() {
     return entity_load_single('user', $this->user_uid);
   }
+
+  /**
+   * Build content for Registration.
+   *
+   * @return array
+   *   Render array for a registration entity.
+   */
+  public function buildContent($view_mode = 'full', $langcode = NULL) {
+    $build = parent::buildContent($view_mode, $langcode);
+    $wrapper = entity_metadata_wrapper('ticket_registration', $this);
+
+    $host_entity_type_info = entity_get_info($this->bundle);
+    $host_entity = $this->ticket_type();
+    $author = $this->registrant();
+    $user = $this->attendee();
+    list(, , $host_entity_bundle) = entity_extract_ids($this->bundle, $host_entity);
+
+    $host_label = entity_label($this->bundle, $host_entity);
+
+    $host_uri = $host_entity ? entity_uri($this->bundle, $host_entity) : NULL;
+
+    $build['created'] = array(
+      '#prefix' => '<div class="field registration-created"><div class="field-label">' . t('Created') . '</div>',
+      '#markup' => format_date($this->created),
+      '#suffix' => '</div>',
+      '#weight' => -10,
+    );
+
+    $build['updated'] = array(
+      '#prefix' => '<div class="field registration-updated"><div class="field-label">' . t('Updated') . '</div>',
+      '#markup' => format_date($this->changed),
+      '#suffix' => '</div>',
+      '#weight' => -9,
+    );
+
+    $build['author'] = array(
+      '#prefix' => '<div class="field registration-author"><div class="field-label">' . t('Registrant') . '</div>',
+      '#theme' => 'username',
+      '#account' => $author,
+      '#suffix' => '</div>',
+      '#weight' => -8,
+    );
+
+    $build['user'] = array(
+      '#prefix' => '<div class="field registration-user"><div class="field-label">' . t('Attendee') . '</div>',
+      '#theme' => 'username',
+      '#account' => $user,
+      '#suffix' => '</div>',
+      '#weight' => -7,
+
+    );
+
+    return $build;
+  }
 }
 
 class TicketRegistrationUIController extends EntityContentUIController {

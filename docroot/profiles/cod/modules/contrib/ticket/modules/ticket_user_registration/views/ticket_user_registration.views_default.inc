@@ -149,6 +149,14 @@ function ticket_user_registration_views_default_views() {
   $handler->display->display_options['arguments']['user_uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['user_uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['user_uid']['summary_options']['items_per_page'] = '25';
+  if (module_exists('ticket_state')) {
+    /* Filter criterion: Ticket registration: State */
+    $handler->display->display_options['filters']['state']['id'] = 'state';
+    $handler->display->display_options['filters']['state']['table'] = 'ticket_registration';
+    $handler->display->display_options['filters']['state']['field'] = 'state';
+    $handler->display->display_options['filters']['state']['value'] = 'completed';
+    $handler->display->display_options['filters']['state']['group'] = 1;
+  }
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

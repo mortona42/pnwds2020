@@ -44,6 +44,7 @@ function cod_sponsors_user_default_permissions() {
   $permissions['view sponsors'] = array(
     'name' => 'view sponsors',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'cod_sponsors',

@@ -4,6 +4,18 @@ define('DEFAULT_EVENT','default_event');
 include_once('cod_events.features.inc');
 
 /**
+ * Implements hook_help().
+ */
+function cod_events_help($path, $arg) {
+  global $base_url;
+
+  switch ($path) {
+    case 'admin/conference':
+      return '<p>' . t('Below is a list of conferences for this site. Many have more than one. You may administer your conference(s) below, or create a new one.') . '</p>';
+  }
+}
+
+/**
  * Implements hook_menu_alter().
  * Change the OG 'groups' hook to be an event instead.
  */
@@ -22,23 +34,34 @@ function cod_events_menu_alter(&$items) {
   if (isset($items['node/%/tickets'])) {
     $item = $items['node/%/tickets'];
     $items['node/%/tickets']['access callback'] = 'cod_events_get_ticket_admin';
-    $items['admin/conference/events/%/tickets'] = $items['node/%/tickets'];
+    $items['admin/conference/%/tickets'] = $items['node/%/tickets'];
     // We're an event, so move the ticket access path.
-    $items['admin/conference/events/%/tickets']['access arguments'][] = TRUE;
+    $items['admin/conference/%/tickets']['access arguments'][] = TRUE;
     // Gotta change the entity id array segment.
-    $items['admin/conference/events/%/tickets']['access arguments'][1] = 3;
-    $items['admin/conference/events/%/tickets']['page arguments'][2] = 3;
+    $items['admin/conference/%/tickets']['access arguments'][1] = 2;
+    $items['admin/conference/%/tickets']['page arguments'][2] = 2;
     // Make it a menu local task with left weight.
-    $items['admin/conference/events/%/tickets']['type'] = MENU_LOCAL_TASK;
-    $items['admin/conference/events/%/tickets']['weight'] = -5;
+    $items['admin/conference/%/tickets']['type'] = MENU_LOCAL_TASK;
+    $items['admin/conference/%/tickets']['weight'] = -5;
+  }
+
+  if (isset($items['group/%/%/admin/permissions'])) {
+    $items['admin/conference/%/permissions'] = $items['group/%/%/admin/permissions'];
+    $items['admin/conference/%/permissions']['title'] = 'Permissions';
+    unset($items['admin/conference/%/permissions']['title arguments']);
+    unset($items['admin/conference/%/permissions']['title callback']);
+    $items['admin/conference/%/permissions']['page arguments'][1] = $items['admin/conference/%/permissions']['access arguments'][1] = 'node';
+    $items['admin/conference/%/permissions']['page arguments'][2] = $items['admin/conference/%/permissions']['access arguments'][2] = 2;
+    $items['admin/conference/%/permissions']['type'] = MENU_LOCAL_TASK;
+    $items['admin/conference/%/permissions']['weight'] = 5;
   }
 }
 
 function cod_events_menu() {
   $items = array();
 
-  $items['node/%node/event'] = array(
-    'title' => 'Manage Event',
+  $items['node/%node/conference'] = array(
+    'title' => 'Manage Conference',
     'page callback' => 'cod_events_manage_redirect_page',
     'page arguments' => array(1),
     'access callback' => 'cod_events_manage_redirect_page_access',
@@ -47,19 +70,20 @@ function cod_events_menu() {
     'weight' => 1,
   );
 
-  $items['admin/conference/events/add'] = array(
-    'title' => 'Add Event',
+  $items['admin/conference/add'] = array(
+    'title' => 'Add Conference',
     'page callback' => 'cod_events_add_redirect_page',
     'access callback' => 'node_access',
     'access arguments' => array('create', 'event'),
+    'type' => MENU_LOCAL_ACTION,
   );
 
-  $items['admin/conference/events/%node/edit'] = array(
-    'title' => 'Edit Event',
+  $items['admin/conference/%node/edit'] = array(
+    'title' => 'Edit Conference',
     'page callback' => 'node_page_edit',
-    'page arguments' => array(3),
+    'page arguments' => array(2),
     'access callback' => 'node_access',
-    'access arguments' => array('update', 3),
+    'access arguments' => array('update', 2),
     'weight' => -10,
     'type' => MENU_LOCAL_TASK,
     'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
@@ -94,15 +118,15 @@ function cod_events_manage_redirect_page($node) {
   array_shift($args);
   // Bring arguments together to do a full path redirect.
   $path = implode('/', $args);
-  drupal_goto('admin/conference/events/'.$node->nid.'/'.$path);
+  drupal_goto('admin/conference/'.$node->nid.'/'.$path);
 }
 
 /**
  * Make the event dashboard be an admin path
  */
-function cod_schedule_admin_paths() {
+function cod_events_admin_paths() {
   $paths = array(
-    'node/*/event' => TRUE,
+    'node/*/conference' => TRUE,
   );
   return $paths;
 }
@@ -246,7 +270,7 @@ function cod_events_form_cod_base_admin_settings_alter(&$form, &$form_state, $fo
     '#collapsed' => FALSE,
   );
 
-  $options = array(t('No Default Event'));
+  $options = array(t('No Default Conference'));
   $eventQuery = new EntityFieldQuery();
   $event_list =  $eventQuery->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'event')
@@ -258,7 +282,7 @@ function cod_events_form_cod_base_admin_settings_alter(&$form, &$form_state, $fo
     $events = array_keys($event_list['node']);
     $default_event = array_pop($events);
     variable_set('cod_events_default_event', $default_event);
-    $form['cod_events']['#description'] = t('Node !num is the only event and set to default', array('!num' => $default_event));
+    $form['cod_events']['#description'] = t('Node !num is the only conference and set to default', array('!num' => $default_event));
   }
   elseif (!empty($event_list['node'])) {
     $events = entity_load('node', array_keys($event_list['node']));
@@ -268,7 +292,7 @@ function cod_events_form_cod_base_admin_settings_alter(&$form, &$form_state, $fo
 
     $form['cod_events']['cod_events_default_event'] = array(
       '#type' => 'select',
-      '#title' => t('Default Event'),
+      '#title' => t('Default Conference'),
       '#options' => $options,
       '#default_value' => variable_get('cod_events_default_event', 0),
     );
@@ -330,8 +354,8 @@ function cod_events_og_context_negotiation_info() {
   $providers = array();
 
   $providers['default_event'] = array(
-    'name' => t('Default Event'),
-    'description' => t('Select group based on default event setting'),
+    'name' => t('Default Conference'),
+    'description' => t('Select group based on default conference setting'),
     'callback' => 'cod_events_og_context_handler_default_event',
   );
 
@@ -345,10 +369,12 @@ function cod_events_og_context_handler_default_event() {
   }
   if (empty($item['map'][2])) {
     // If we don't have this key in the array, it means the user doesn't have
-    // access to create this node.
-    return;
+    // global access to create this node.
+    $node_type = str_replace('-', '_', $item['original_map'][2]);
   }
-  $node_type = str_replace('-', '_', $item['map'][2]);
+  else {
+    $node_type = str_replace('-', '_', $item['map'][2]);
+  }
 
   if (!$fields = og_get_group_audience_fields('node', $node_type)) {
     return;
@@ -429,7 +455,7 @@ function cod_events_form_event_node_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function cod_events_redirect_submit($form, &$form_state) {
-  $form_state['redirect'] = 'admin/conference/events/' . $form_state['node']->nid;
+  $form_state['redirect'] = 'admin/conference/' . $form_state['node']->nid;
 }
 
 /**
@@ -460,8 +486,8 @@ function cod_events_add_term($event, $vocabulary) {
 
   $options = array();
   if (!empty($args)) {
-    $path = implode('/', $args);
-    $options['query']['destination'] = '/node/'.$event->nid.'/'.$path;
+    $path = array_shift($args) . '/' . $event->nid . '/' . array_shift($args);
+    $options['query']['destination'] = $path;
   }
   // Check to see if we're using a OG Vocabulary. Probably better way to do this.
   if ($vocab = taxonomy_vocabulary_machine_name_load($vocabulary . '_' . $event->nid)) {

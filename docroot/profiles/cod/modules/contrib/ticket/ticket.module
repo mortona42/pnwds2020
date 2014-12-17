@@ -570,6 +570,7 @@ function ticket_admin_paths() {
   $paths = array(
     '*/*/tickets' => TRUE,
     '*/*/tickets/*' => TRUE,
+    'ticket_registration/manage/*' => TRUE,
   );
   return $paths;
 }
@@ -807,5 +808,9 @@ function ticket_registration_delete_multiple($ticket_registration_ids) {
  *   returns SAVED_NEW or SAVED_UPDATED, depending on the operation performed.
  */
 function ticket_registration_save(TicketRegistration $ticket_registration) {
+
+  // Allow modules to perform updates to the ticket registration before its saved.
+  module_invoke_all('ticket_update', $ticket_registration);
+
   return $ticket_registration->save();
 }

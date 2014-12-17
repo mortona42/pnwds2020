@@ -90,7 +90,7 @@ function cod_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
-    'label' => 'Event',
+    'label' => 'Conference',
     'required' => FALSE,
     'settings' => array(
       'behaviors' => array(
@@ -129,7 +129,7 @@ function cod_news_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Event');
+  t('Conference');
 
   return $field_instances;
 }

@@ -108,8 +108,8 @@ function cod_paid_events_order_complete($entity, $type) {
     if (count($results['ticket_registration'])) {
       foreach (array_keys($results['ticket_registration']) as $trid) {
         $ticket_registration = ticket_registration_load($trid);
-        if (!empty($ticket_registration->ticket_type()->field_complete_state)) {
-          $ticket_registration->ticket_state = $ticket_registration->ticket_type()->field_complete_state;
+        if (!empty($ticket_registration->ticket_type()->field_checkout_complete_state)) {
+          $ticket_registration->ticket_state = $ticket_registration->ticket_type()->field_checkout_complete_state;
           ticket_registration_save($ticket_registration);
         }
       }
@@ -125,7 +125,7 @@ function cod_paid_events_form_event_node_form_alter(&$form, &$form_state) {
   foreach (element_children($form['field_event_tickets'][LANGUAGE_NONE]) as $key) {
     if (is_numeric($key)) {
       $element = ':input[name="field_event_tickets[und][' . $key . '][field_ticket_related_product][und]"]';
-      $form['field_event_tickets'][LANGUAGE_NONE][$key]['field_complete_state']['#states'] = array(
+      $form['field_event_tickets'][LANGUAGE_NONE][$key]['field_checkout_complete_state']['#states'] = array(
         'invisible' => array(
           $element => array('value' => '_none'),
         ),

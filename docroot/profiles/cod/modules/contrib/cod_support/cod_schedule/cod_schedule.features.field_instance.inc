@@ -30,7 +30,7 @@ function cod_schedule_field_default_field_instances() {
     ),
     'entity_type' => 'cod_event_room',
     'field_name' => 'og_group_ref',
-    'label' => 'Event',
+    'label' => 'Conference',
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
@@ -131,7 +131,7 @@ function cod_schedule_field_default_field_instances() {
     ),
     'entity_type' => 'cod_event_time',
     'field_name' => 'og_group_ref',
-    'label' => 'Event',
+    'label' => 'Conference',
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
@@ -431,7 +431,7 @@ function cod_schedule_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Allowed Types');
   t('Date and time');
-  t('Event');
+  t('Conference');
   t('Room');
   t('Scheduler (Time Slots)');
   t('Select the relevant time slots this session should appear at.');

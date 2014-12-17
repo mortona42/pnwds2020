@@ -196,6 +196,11 @@ function ticket_state_overview_form_submit($form, &$form_state) {
     $ticket_state->save();
   }
 
+  // Update the default settings for TICKET_TYPE_DEFAULT_STATE_FIELD
+  $field_instance = field_info_instance('ticket_type', TICKET_TYPE_DEFAULT_STATE_FIELD, 'ticket_type');
+  $field_instance['settings']['allowed_values'] = ticket_state_get_states_options();
+  field_update_instance($field_instance);
+
   drupal_set_message(t('Your ticket states have been saved.'));
 }
 

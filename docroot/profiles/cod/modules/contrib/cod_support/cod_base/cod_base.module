@@ -6,6 +6,19 @@
 
 include_once('cod_base.features.inc');
 
+/**
+ * Implements hook_permission().
+ */
+function cod_base_permission() {
+  $perms = array();
+
+  $perms['administer conferences'] = array(
+    'title' => t('Administer Conferences'),
+    'description' => t('Allows users change global conference settings.'),
+  );
+
+  return $perms;
+}
 
 /**
  * Implements hook_menu().
@@ -13,24 +26,14 @@ include_once('cod_base.features.inc');
 function cod_base_menu() {
   $items = array();
 
-  // Top level "Store" container.
-  $items['admin/conference'] = array(
-    'title' => 'Conference',
-    'description' => 'Administer your conference.',
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('access administration pages'),
-    'file path' => drupal_get_path('module', 'system'),
-    'file' => 'system.admin.inc',
-    'weight' => -7,
-  );
   $items['admin/conference/config'] = array(
     'title' => 'Configuration',
     'description' => 'Configure settings and business rules for your conference.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('cod_base_admin_settings'),
     'access arguments' => array('access administration pages'),
-    'type' => MENU_NORMAL_ITEM,
-    'weight' => 50,
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 20,
     'file path' => drupal_get_path('module', 'system'),
     'file' => 'system.admin.inc',
   );
