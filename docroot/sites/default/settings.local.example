@@ -1,0 +1,13 @@
+<?php
+
+$databases['default']['default'] = array(
+  'driver' => 'mysql',
+  'database' => 'pnwds',
+  'username' => 'root',
+  'password' => 'root',
+  'host' => 'localhost',
+  'prefix' => '',
+  'collation' => 'utf8_general_ci',
+);
+
+$conf['file_temporary_path'] = '/tmp';

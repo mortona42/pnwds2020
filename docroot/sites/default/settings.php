@@ -211,16 +211,6 @@
  * @endcode
  */
 
-$databases['default']['default'] = array(
-  'driver' => 'mysql',
-  'database' => 'pnwds',
-  'username' => 'root',
-  'password' => 'root',
-  'host' => 'localhost',
-  'prefix' => '',
-  'collation' => 'utf8_general_ci',
-);
-
 /**
  * Access control for update.php script.
  *
@@ -561,6 +551,16 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['allow_authorize_operations'] = FALSE;
 
+/**
+ * Include a local settings file if it exists.
+ * Copy settings.local.example to settings.local.php to get started.
+ */
+$local_settings = dirname(__FILE__) . '/settings.local.php';
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+
+// Acquia Site Specific include
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/pnwds/pnwds-settings.inc';
 }
