@@ -11,15 +11,20 @@ dependencies[] = menu
 dependencies[] = og
 dependencies[] = og_ui
 dependencies[] = strongarm
+dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[field_base][] = field_news_tags
 features[field_instance][] = node-news-body
+features[field_instance][] = node-news-field_news_image
+features[field_instance][] = node-news-field_news_tags
 features[field_instance][] = node-news-og_group_ref
 features[node][] = news
+features[taxonomy][] = news_tags
 features[variable][] = comment_anonymous_news
 features[variable][] = comment_default_mode_news
 features[variable][] = comment_default_per_page_news
@@ -27,6 +32,7 @@ features[variable][] = comment_form_location_news
 features[variable][] = comment_news
 features[variable][] = comment_preview_news
 features[variable][] = comment_subject_field_news
+features[variable][] = field_bundle_settings_node__news
 features[variable][] = menu_options_news
 features[variable][] = menu_parent_news
 features[variable][] = node_options_news
@@ -36,10 +42,7 @@ features[variable][] = pathauto_node_news_pattern
 features[views_view][] = cod_news
 install_option = cod
 
-
-; Information added by drush on 2014-12-17
-version = "7.x-1.0-beta5+6-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1418783418"
-
+datestamp = "1430468831"

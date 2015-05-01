@@ -15,6 +15,8 @@ function cod_registration_user_default_permissions() {
     'name' => 'administer ticket',
     'roles' => array(
       'administrator' => 'administrator',
+      'attendee manager' => 'attendee manager',
+      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );
@@ -24,6 +26,7 @@ function cod_registration_user_default_permissions() {
     'name' => 'administer ticket states',
     'roles' => array(
       'administrator' => 'administrator',
+      'attendee manager' => 'attendee manager',
     ),
     'module' => 'ticket_state',
   );
@@ -33,6 +36,8 @@ function cod_registration_user_default_permissions() {
     'name' => 'edit all ticket registrations',
     'roles' => array(
       'administrator' => 'administrator',
+      'attendee manager' => 'attendee manager',
+      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );
@@ -42,6 +47,8 @@ function cod_registration_user_default_permissions() {
     'name' => 'view all ticket registrations',
     'roles' => array(
       'administrator' => 'administrator',
+      'attendee manager' => 'attendee manager',
+      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );

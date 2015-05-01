@@ -34,15 +34,6 @@ function cod_schedule_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
-        'og_widget' => array(
-          'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
-          ),
-          'default' => array(
-            'widget_type' => 'options_select',
-          ),
-          'status' => TRUE,
-        ),
         'prepopulate' => array(
           'action' => 'hide',
           'action_on_edit' => 0,
@@ -56,9 +47,9 @@ function cod_schedule_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'og',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'og_complex',
+      'type' => 'options_select',
       'weight' => 8,
     ),
   );
@@ -70,14 +61,15 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'cod_time',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -121,11 +113,8 @@ function cod_schedule_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
@@ -135,15 +124,6 @@ function cod_schedule_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
-        'og_widget' => array(
-          'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
-          ),
-          'default' => array(
-            'widget_type' => 'options_select',
-          ),
-          'status' => TRUE,
-        ),
         'prepopulate' => array(
           'action' => 'hide',
           'action_on_edit' => 0,
@@ -157,9 +137,9 @@ function cod_schedule_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'og',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'og_complex',
+      'type' => 'options_select',
       'weight' => 3,
     ),
   );
@@ -173,9 +153,8 @@ function cod_schedule_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -319,7 +298,7 @@ function cod_schedule_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -430,8 +409,8 @@ function cod_schedule_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Allowed Types');
-  t('Date and time');
   t('Conference');
+  t('Date and time');
   t('Room');
   t('Scheduler (Time Slots)');
   t('Select the relevant time slots this session should appear at.');

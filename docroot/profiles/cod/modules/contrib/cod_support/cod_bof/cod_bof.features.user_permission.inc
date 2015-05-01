@@ -25,6 +25,7 @@ function cod_bof_user_default_permissions() {
     'name' => 'delete any bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
       'session organizer' => 'session organizer',
     ),
     'module' => 'node',
@@ -45,6 +46,7 @@ function cod_bof_user_default_permissions() {
     'name' => 'edit any bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
       'session organizer' => 'session organizer',
     ),
     'module' => 'node',
@@ -64,6 +66,7 @@ function cod_bof_user_default_permissions() {
   $permissions['view bofs'] = array(
     'name' => 'view bofs',
     'roles' => array(
+      'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'cod_bof',

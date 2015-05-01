@@ -342,6 +342,10 @@ function commerce_coupon_permission() {
     'title' => t('Redeem any coupon')
   );
 
+  $permissions['administer coupon types'] = array(
+    'title' => t('Administer coupon types')
+  );
+
   foreach (commerce_coupon_get_types() as $type => $info) {
     $permissions['redeem coupons of type ' . $type] = array(
       'title' => t('Redeem any %type coupon', array('%type' => $info['label']))
@@ -957,6 +961,7 @@ function commerce_coupon_views_api() {
 function commerce_coupon_commerce_coupon_discount_value_display_alter(&$text, $discount, $order) {
 
   // Common variables
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
   $discount_wrapper = entity_metadata_wrapper('commerce_discount', $discount);
   $offer_wrapper = $discount_wrapper->commerce_discount_offer;
   $offer_type = $offer_wrapper->type->value();
@@ -1002,17 +1007,28 @@ function commerce_coupon_commerce_coupon_discount_value_display_alter(&$text, $d
       $product_text = t('all products');
       $conditions = $discount_wrapper->inline_conditions->value();
 
+      // Get a list of product ids on the order.
+      $order_product_ids = array();
+      foreach ($order_wrapper->commerce_line_items as $commerce_line_item) {
+        if (isset($commerce_line_item->commerce_product)) {
+          $product_id = $commerce_line_item->commerce_product->getIdentifier();
+          $order_product_ids[$product_id] = $product_id;
+        }
+      }
+
       foreach($conditions as $condition) {
         if ($condition['condition_name'] == 'commerce_product_contains_products') {
           foreach ($condition['condition_settings']['sku'] as $data) {
-            $product = commerce_product_load($data['product_id']);
-            if ($product) {
-              $product_names[] = check_plain($product->title);
+            if (isset($order_product_ids[$data['product_id']])) {
+              $product = commerce_product_load($data['product_id']);
+              if ($product) {
+                $product_names[] = check_plain($product->title);
+              }
             }
           }
 
           if (isset($product_names)) {
-            $product_text = implode(', ', $product_names);
+            $product_text = '<em>' . implode('</em>, <em>', $product_names) . '</em>';
           }
           break;
         }
@@ -1465,6 +1481,9 @@ function commerce_coupon_form_commerce_discount_form_alter(&$form, &$form_state)
  * Form submit callback: save a coupon from the discount UI
  */
 function commerce_coupon_form_attach_coupons(&$form, &$form_state) {
+  // By default don't rebuild rules config.
+  $rebuild_rules = FALSE;
+
   if (!empty($form_state['coupons']) && !empty($form_state['commerce_discount']->discount_id)) {
     // Save coupons
     foreach ($form_state['coupons'] as $coupon) {
@@ -1478,6 +1497,9 @@ function commerce_coupon_form_attach_coupons(&$form, &$form_state) {
 
         // Save coupon.
         commerce_coupon_save($coupon);
+
+        // Force rules rebuild.
+        $rebuild_rules = TRUE;
       }
     }
   }
@@ -1502,13 +1524,18 @@ function commerce_coupon_form_attach_coupons(&$form, &$form_state) {
 
         if ($delete) {
           commerce_coupon_delete($original_coupon->coupon_id);
+
+          // Force rules rebuild.
+          $rebuild_rules = TRUE;
         }
       }
     }
   }
 
-  // Rebuild the rules again.
-  entity_defaults_rebuild(array('rules_config'));
+  // Rebuild the rules again if coupon added or deleted.
+  if($rebuild_rules) {
+    entity_defaults_rebuild(array('rules_config'));
+  }
 }
 
 /**

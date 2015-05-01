@@ -93,6 +93,8 @@ function cod_session_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -101,7 +103,11 @@ function cod_session_user_default_permissions() {
   $permissions['view sessions'] = array(
     'name' => 'view sessions',
     'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'email unverified' => 'email unverified',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'cod_session',
   );
@@ -110,7 +116,11 @@ function cod_session_user_default_permissions() {
   $permissions['view speakers'] = array(
     'name' => 'view speakers',
     'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'email unverified' => 'email unverified',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'cod_session',
   );

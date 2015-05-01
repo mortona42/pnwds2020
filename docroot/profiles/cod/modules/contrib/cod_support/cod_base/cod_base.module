@@ -38,7 +38,36 @@ function cod_base_menu() {
     'file' => 'system.admin.inc',
   );
 
+  $items['admin/conference/list'] = array(
+    'title' => 'Conference',
+    'description' => 'Configure conferences.',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+
+  $items['admin/conference'] = array(
+    'title' => 'Conference',
+    'description' => 'Configure conferences.',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
   return $items;
+}
+
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function cod_base_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  // Add action link 'admin/commerce/orders/add' on 'admin/commerce/orders'.
+  if ($root_path == 'admin/conference') {
+    $item = menu_get_item('admin/conference/add');
+    if ($item['access']) {
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+    }
+  }
 }
 
 /**

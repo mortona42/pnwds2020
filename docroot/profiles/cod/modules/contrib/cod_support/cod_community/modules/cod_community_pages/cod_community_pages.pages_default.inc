@@ -18,7 +18,7 @@ function cod_community_pages_default_page_manager_pages() {
   $page->path = 'node/%node/community';
   $page->access = array();
   $page->menu = array(
-    'type' => 'tab',
+    'type' => 'none',
     'title' => 'Community',
     'name' => 'navigation',
     'weight' => '0',
@@ -75,6 +75,30 @@ function cod_community_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-797bfb61-a42b-47a1-94da-7e49df24efbc';
+    $pane->panel = 'center';
+    $pane->type = 'block';
+    $pane->subtype = 'views-34b0d603b0e648e1a97b7976be45b9f6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '797bfb61-a42b-47a1-94da-7e49df24efbc';
+    $display->content['new-797bfb61-a42b-47a1-94da-7e49df24efbc'] = $pane;
+    $display->panels['center'][0] = 'new-797bfb61-a42b-47a1-94da-7e49df24efbc';
+    $pane = new stdClass();
     $pane->pid = 'new-dafcfd0f-4f89-4ace-b9b7-bee77657b467';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
@@ -92,11 +116,11 @@ function cod_community_pages_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'dafcfd0f-4f89-4ace-b9b7-bee77657b467';
     $display->content['new-dafcfd0f-4f89-4ace-b9b7-bee77657b467'] = $pane;
-    $display->panels['center'][0] = 'new-dafcfd0f-4f89-4ace-b9b7-bee77657b467';
+    $display->panels['center'][1] = 'new-dafcfd0f-4f89-4ace-b9b7-bee77657b467';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

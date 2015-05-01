@@ -32,6 +32,13 @@ regions[sidebar] = Sidebar
 regions[footer] = Footer
 
 ; ========================================
+; Layout
+; ========================================
+
+; Panels Module layouts
+plugins[panels][layouts] = 'layouts/panels'
+
+; ========================================
 ; Settings
 ; ========================================
 settings[toggle_logo] = 1
@@ -80,9 +87,7 @@ settings[omega_libraries][respond][status] = 0
 settings[omega_libraries][pie][status] = 0
 settings[omega_libraries][html5shiv][status] = 0
 
-; Information added by Drupal.org packaging script on 2014-12-17
-version = "7.x-1.0-beta5+3-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.x"
 project = "cod"
-datestamp = "1418783322"
-
+datestamp = "1430513448"

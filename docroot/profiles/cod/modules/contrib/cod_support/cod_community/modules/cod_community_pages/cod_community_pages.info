@@ -1,16 +1,14 @@
 name = COD Community Pages
 core = 7.x
-package = Features
+package = COD Pages
 dependencies[] = ctools
+dependencies[] = cod_community
 dependencies[] = page_manager
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:2
 features[page_manager_pages][] = community
 
-
-; Information added by drush on 2014-12-17
-version = "7.x-1.0-beta5+6-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1418783418"
-
+datestamp = "1430468831"

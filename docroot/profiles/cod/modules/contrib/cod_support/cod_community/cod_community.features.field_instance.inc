@@ -22,21 +22,17 @@ function cod_community_field_default_field_instances() {
     'description' => 'Indicate if tickets should have an attendee listing field added automatically. If unchecked, it will no longer add the field, however tickets already created with the field will need to have them manually removed.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
+        'label' => 'hidden',
+        'type' => 'hidden',
         'weight' => 12,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
+        'label' => 'hidden',
         'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
+        'label' => 'hidden',
         'type' => 'hidden',
         'weight' => 0,
       ),

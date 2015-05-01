@@ -22,3 +22,13 @@ function cod_news_update_7003() {
 
   return array();
 }
+
+/**
+ * Change the og_group_ref select widget to a plain select widget and other minor updates.
+ */
+function cod_news_update_7004() {
+  $revert = array(
+    'cod_news' => array('field_instance', 'variable', 'views_view'),
+  );
+  features_revert($revert);
+}

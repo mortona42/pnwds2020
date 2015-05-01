@@ -84,3 +84,13 @@ function cod_sponsors_update_7005() {
 
   return array();
 }
+
+/**
+ * Change the og_group_ref select widget to a plain select widget
+ */
+function cod_sponsors_update_7006() {
+  $revert = array(
+    'cod_sponsors' => array('field_instance'),
+  );
+  features_revert($revert);
+}

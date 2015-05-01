@@ -31,9 +31,7 @@ dependencies[] = adminimal_admin_menu
 dependencies[] = advanced_help
 dependencies[] = auto_nodetitle
 dependencies[] = content_access
-dependencies[] = context
 dependencies[] = contextual
-dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = ckeditor
 dependencies[] = dashboard
@@ -106,9 +104,7 @@ files[] = cod.profile
 ; System Requirements.
 php_memory_limit = 128M
 
-; Information added by Drupal.org packaging script on 2014-12-17
-version = "7.x-1.0-beta5+3-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.x"
 project = "cod"
-datestamp = "1418783322"
-
+datestamp = "1430513448"

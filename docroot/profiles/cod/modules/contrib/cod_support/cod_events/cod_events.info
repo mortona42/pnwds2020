@@ -27,6 +27,7 @@ dependencies[] = strongarm
 dependencies[] = subpathauto
 dependencies[] = text
 dependencies[] = views
+dependencies[] = views_content
 dependencies[] = views_field_view
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
@@ -35,14 +36,16 @@ features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_dates
 features[field_base][] = field_event_image
-features[field_base][] = field_event_program
+features[field_base][] = group_access
 features[field_base][] = group_group
 features[field_base][] = og_group_ref
+features[field_base][] = og_roles_permissions
 features[field_instance][] = node-event-body
 features[field_instance][] = node-event-field_dates
 features[field_instance][] = node-event-field_event_image
-features[field_instance][] = node-event-field_event_program
+features[field_instance][] = node-event-group_access
 features[field_instance][] = node-event-group_group
+features[field_instance][] = node-event-og_roles_permissions
 features[flag][] = default_event
 features[node][] = event
 features[og_features_permission][] = node:event:add user
@@ -82,6 +85,7 @@ features[variable][] = pathauto_node_event_pattern
 features[variable][] = subpathauto_depth
 features[variable][] = subpathauto_ignore_admin
 features[views_view][] = cod_events_admin
+features_exclude[dependencies][cod_community] = cod_community
 features_exclude[field_base][field_event_product] = field_event_product
 features_exclude[field_base][field_paid_event] = field_paid_event
 features_exclude[field_instance][node-event-field_event_product] = node-event-field_event_product
@@ -89,10 +93,7 @@ features_exclude[field_instance][node-event-field_paid_event] = node-event-field
 files[] = includes/views/handlers/cod_events_plugin_argument_default_event.inc
 files[] = includes/views/handlers/cod_events_plugin_argument_default_type.inc
 
-
-; Information added by drush on 2014-12-17
-version = "7.x-1.0-beta5+6-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1418783418"
-
+datestamp = "1430468831"

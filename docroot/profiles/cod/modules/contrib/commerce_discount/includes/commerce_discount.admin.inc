@@ -63,8 +63,10 @@ class CommerceDiscountUIController extends EntityDefaultUIController {
       'title' => 'List',
       'type' => MENU_DEFAULT_LOCAL_TASK,
     );
-    $items[$this->path . '/add']['title callback'] = 'commerce_discount_get_action_title';
-    $items[$this->path . '/import']['title callback'] = 'commerce_discount_get_action_title';
+    unset($items[$this->path . '/add']['title callback']);
+    unset($items[$this->path . '/import']['title callback']);
+    $items[$this->path . '/add']['title'] = t('Add discount');
+    $items[$this->path . '/import']['title'] = t('Import discount');
 
     $items[$this->path . '/settings'] = array(
       'title' => 'Settings',
@@ -76,6 +78,25 @@ class CommerceDiscountUIController extends EntityDefaultUIController {
       'file' => 'includes/commerce_discount.admin.inc',
       'file path' => drupal_get_path('module', 'commerce_discount'),
     );
+
+    $items[$this->path . '/rules'] = array(
+      'title' => 'Discount rules',
+      'description' => 'Manage discount rules',
+      'page callback' => 'drupal_goto',
+      'page arguments' => array(
+        'admin/config/workflow/rules',
+        array(
+          'query' => array(
+            'event' => 0,
+            'tag' => 'Commerce Discount',
+          ),
+        )
+      ),
+      'access arguments' => array('administer commerce discounts'),
+      'type' => MENU_LOCAL_TASK,
+      'weight' => 10,
+    );
+
     return $items;
   }
 }
@@ -93,18 +114,6 @@ function commerce_discount_overview_form() {
     $form['#attached']['css'][] = drupal_get_path('module', 'commerce_discount') . '/css/commerce_discount-rtl.css';
   }
   return $form;
-}
-
-/**
- * Gets the page/menu title for local action operations.
- */
-function commerce_discount_get_action_title($op, $entity_type) {
-  switch ($op) {
-    case 'add':
-      return t('Add discount');
-    case 'import':
-      return t('Import discount');
-  }
 }
 
 /**
@@ -130,7 +139,7 @@ function commerce_discount_form($form, &$form_state, CommerceDiscount $commerce_
     '#title' => t('Admin title'),
     '#type' => 'textfield',
     '#default_value' => $commerce_discount->label,
-    '#description' => t('Shown only on managment screens, not shown to customers.'),
+    '#description' => t('Shown only on management screens, not shown to customers.'),
     '#required' => TRUE,
   );
 
@@ -152,8 +161,8 @@ function commerce_discount_form($form, &$form_state, CommerceDiscount $commerce_
       'source' => array('label'),
     ),
     '#description' => t('A unique machine-readable name for this message type. It must only contain lowercase letters, numbers, and underscores.'),
-    // 32 characters minus the 'discount_' prefix.
-    '#maxlength' => 23,
+    // 64 characters minus the 9 character 'discount_' prefix.
+    '#maxlength' => 64 - 9,
     // This field should stay LTR even for RTL languages.
     '#field_prefix' => '<span dir="ltr">discount_',
     '#field_suffix' => '</span>&lrm;',

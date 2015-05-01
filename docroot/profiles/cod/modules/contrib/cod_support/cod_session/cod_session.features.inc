@@ -19,8 +19,11 @@ function cod_session_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function cod_session_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
+function cod_session_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'cod_session') . '/views',
+  );
 }
 
 /**
@@ -131,14 +134,6 @@ function cod_session_flag_default_flags() {
  */
 function cod_session_node_info() {
   $items = array(
-    'page' => array(
-      'name' => t('Basic page'),
-      'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'schedule_item' => array(
       'name' => t('Schedule Item'),
       'base' => 'node_content',

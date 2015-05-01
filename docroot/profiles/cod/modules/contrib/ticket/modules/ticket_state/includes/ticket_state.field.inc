@@ -112,7 +112,7 @@ function ticket_state_allowed_values($field, $instance = NULL, $entity_type = NU
       $values = $function($field, $instance, $entity_type, $entity, $cacheable);
     }
     else {
-      $values = array_intersect_key(ticket_state_get_states_options(),$field['settings']['allowed_values']);
+      $values = ticket_state_get_states_options();
     }
 
     if ($cacheable) {
@@ -235,7 +235,7 @@ function ticket_state_field_update_forbid($field, $prior_field, $has_data) {
  * - 'list_illegal_value': The value is not part of the list of allowed values.
  */
 function ticket_state_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
-  $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
+  $allowed_values = ticket_state_allowed_values($field, $instance, $entity_type, $entity);
   foreach ($items as $delta => $item) {
     if (!empty($item['value'])) {
       if (!empty($allowed_values) && !isset($allowed_values[$item['value']])) {
@@ -252,7 +252,7 @@ function ticket_state_field_validate($entity_type, $entity, $field, $instance, $
  * Implements hook_field_is_empty().
  */
 function ticket_state_field_is_empty($item, $field) {
-  if (!empty($item['value']) && (string) $item['value'] !== '0') {
+  if (!$item['value']) {
     return TRUE;
   }
   return FALSE;
@@ -282,53 +282,6 @@ function ticket_state_field_widget_info_alter(&$info) {
  */
 function ticket_state_options_list($field, $instance, $entity_type, $entity) {
   return ticket_state_get_states_options();
-}
-
-/**
- * Implements hook_field_formatter_info().
- */
-function ticket_state_field_formatter_info() {
-  return array(
-    'list_default' => array(
-      'label' => t('Default'),
-      'field types' => array('list_ticket_state'),
-    ),
-    'list_key' => array(
-      'label' => t('Key'),
-      'field types' => array('list_ticket_state'),
-    ),
-  );
-}
-
-/**
- * Implements hook_field_formatter_view().
- */
-function ticket_state_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
-  $element = array();
-
-  switch ($display['type']) {
-    case 'list_default':
-      $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
-      foreach ($items as $delta => $item) {
-        if (isset($allowed_values[$item['value']])) {
-          $output = field_filter_xss($allowed_values[$item['value']]);
-        }
-        else {
-          // If no match was found in allowed values, fall back to the key.
-          $output = field_filter_xss($item['value']);
-        }
-        $element[$delta] = array('#markup' => $output);
-      }
-      break;
-
-    case 'list_key':
-      foreach ($items as $delta => $item) {
-        $element[$delta] = array('#markup' => field_filter_xss($item['value']));
-      }
-      break;
-  }
-
-  return $element;
 }
 
 function ticket_state_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {

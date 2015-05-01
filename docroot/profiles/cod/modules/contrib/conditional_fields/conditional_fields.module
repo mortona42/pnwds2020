@@ -475,6 +475,7 @@ function conditional_fields_form_after_build($form, &$form_state) {
         }
         unset($behaviors[CONDITIONAL_FIELDS_FIELD_EDIT_HIDE_UNTRIGGERED_ORPHAN]);
         unset($behaviors[CONDITIONAL_FIELDS_FIELD_EDIT_HIDE_ORPHAN]);
+        unset($behaviors[CONDITIONAL_FIELDS_FIELD_EDIT_RESET_UNTRIGGERED]);
         continue;
       }
 
@@ -579,7 +580,7 @@ function conditional_fields_form_after_build($form, &$form_state) {
     if (!empty($behaviors)) {
       foreach ($behaviors as $behavior) {
         $behavior($form, $form_state, $dependent, $dependent_info);
-      }      
+      }
     }
 
     unset($behaviors);
@@ -606,7 +607,7 @@ function conditional_fields_form_after_build($form, &$form_state) {
         foreach ($states[$state_key]['OR'] as $constraint_key => $constraint_value) {
           $or[] = array($constraint_key => $constraint_value);
         }
-        // '1' as a string so that we get an object (which means logic groups 
+        // '1' as a string so that we get an object (which means logic groups
         // are ANDed together).
         $states_new[$state_key]['1'] = $or;
       }

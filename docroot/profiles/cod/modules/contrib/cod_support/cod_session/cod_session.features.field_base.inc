@@ -31,7 +31,7 @@ function cod_session_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'unprocessed' => 'Unprocessed',
+        'proposed' => 'Proposed',
         'accepted' => 'Accepted',
         'declined' => 'Declined',
         'featured' => 'Featured',
@@ -72,8 +72,8 @@ function cod_session_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'Unprocessed',
-        1 => 'Accepted',
+        'proposed' => 'Proposed',
+        'accepted' => 'Accepted',
       ),
       'allowed_values_function' => '',
     ),
@@ -101,9 +101,9 @@ function cod_session_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'advanced' => 'Advanced',
         'beginner' => 'Beginner',
         'intermediate' => 'Intermediate',
+        'advanced' => 'Advanced',
       ),
       'allowed_values_function' => '',
       'field_permissions' => array(
@@ -121,20 +121,12 @@ function cod_session_field_default_field_bases() {
   // Exported field_base: 'field_news_image'
   $field_bases['field_news_image'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_image',
     'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
+      'type' => 2,
     ),
     'indexes' => array(
       'fid' => array(
@@ -151,6 +143,81 @@ function cod_session_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_related_sponsor'
+  $field_bases['field_related_sponsor'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_related_sponsor',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'users' => array(
+        'columns' => array(
+          'target_id' => 'uid',
+        ),
+        'table' => 'users',
+      ),
+    ),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'sponsor' => 'sponsor',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_schedule_item_tags'
+  $field_bases['field_schedule_item_tags'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_schedule_item_tags',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'schedule_item_tags',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_slides'
   $field_bases['field_slides'] = array(
     'active' => 1,
@@ -160,14 +227,6 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'field_slides',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -268,7 +327,7 @@ function cod_session_field_default_field_bases() {
         'behaviors' => array(
           'og_vocab' => array(
             'status' => TRUE,
-            'use_context' => 'yes',
+            'use_context' => 'all',
           ),
           'views-select-list' => array(
             'status' => 0,
@@ -295,13 +354,8 @@ function cod_session_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'upload',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
+    'field_permissions' => array(
+      'type' => 0,
     ),
     'indexes' => array(
       'fid' => array(

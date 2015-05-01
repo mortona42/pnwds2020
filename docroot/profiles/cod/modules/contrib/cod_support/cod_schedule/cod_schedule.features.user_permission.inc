@@ -47,6 +47,7 @@ function cod_schedule_user_default_permissions() {
   $permissions['view field_session_timeslot'] = array(
     'name' => 'view field_session_timeslot',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -57,6 +58,7 @@ function cod_schedule_user_default_permissions() {
   $permissions['view own field_session_timeslot'] = array(
     'name' => 'view own field_session_timeslot',
     'roles' => array(
+      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),

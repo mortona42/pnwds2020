@@ -36,6 +36,7 @@ dependencies[] = views
 dependencies[] = views_autorefresh
 dependencies[] = views_bulk_operations
 dependencies[] = views_content
+dependencies[] = views_data_export
 dependencies[] = views_json
 dependencies[] = views_send
 dependencies[] = views_ui
@@ -47,6 +48,7 @@ features[field_base][] = field_accepted
 features[field_base][] = field_event_default_session_view
 features[field_base][] = field_experience
 features[field_base][] = field_news_image
+features[field_base][] = field_schedule_item_tags
 features[field_base][] = field_slides
 features[field_base][] = field_speakers
 features[field_base][] = og_vocabulary
@@ -63,6 +65,9 @@ features[field_instance][] = node-page-body
 features[field_instance][] = node-page-upload
 features[field_instance][] = node-schedule_item-body
 features[field_instance][] = node-schedule_item-field_accepted
+features[field_instance][] = node-schedule_item-field_experience
+features[field_instance][] = node-schedule_item-field_schedule_item_tags
+features[field_instance][] = node-schedule_item-field_speakers
 features[field_instance][] = node-schedule_item-og_group_ref
 features[field_instance][] = node-session-body
 features[field_instance][] = node-session-field_accepted
@@ -77,10 +82,10 @@ features[flag][] = session_schedule
 features[flag][] = session_vote
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-menu-quick-links
-features[node][] = page
 features[node][] = schedule_item
 features[node][] = session
 features[og_features_role][] = node:event:session organizer
+features[taxonomy][] = schedule_item_tags
 features[user_permission][] = create schedule_item content
 features[user_permission][] = create session content
 features[user_permission][] = delete any schedule_item content
@@ -139,11 +144,11 @@ features[views_view][] = cod_session_sessions_speaker_confirmation
 features[views_view][] = cod_session_speakers
 features[views_view][] = cod_session_tracks
 features[views_view][] = cod_session_user_presentations
+files[] = views/cod_session.views.inc
+files[] = views/cod_session_views_handler_field_track_link.inc
+files[] = views/cod_session_views_plugin_style_schedule.inc
 
-
-; Information added by drush on 2014-12-17
-version = "7.x-1.0-beta5+6-dev"
-core = "7.x"
+; Information added by drush on 2015-05-01
+version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1418783418"
-
+datestamp = "1430468831"

@@ -33,7 +33,7 @@ function cod_community_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -46,16 +46,12 @@ function cod_community_views_default_views() {
   $handler->display->display_options['relationships']['user_uid']['id'] = 'user_uid';
   $handler->display->display_options['relationships']['user_uid']['table'] = 'ticket_registration';
   $handler->display->display_options['relationships']['user_uid']['field'] = 'user_uid';
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['ticket_state_target_id']['id'] = 'ticket_state_target_id';
-  $handler->display->display_options['relationships']['ticket_state_target_id']['table'] = 'field_data_ticket_state';
-  $handler->display->display_options['relationships']['ticket_state_target_id']['field'] = 'ticket_state_target_id';
-  $handler->display->display_options['relationships']['ticket_state_target_id']['label'] = 'Ticket State';
-  $handler->display->display_options['relationships']['ticket_state_target_id']['required'] = TRUE;
+  $handler->display->display_options['relationships']['user_uid']['required'] = TRUE;
   /* Relationship: Ticket registration: Ticket Type */
   $handler->display->display_options['relationships']['ticket_type_ttid']['id'] = 'ticket_type_ttid';
   $handler->display->display_options['relationships']['ticket_type_ttid']['table'] = 'ticket_registration';
   $handler->display->display_options['relationships']['ticket_type_ttid']['field'] = 'ticket_type_ttid';
+  $handler->display->display_options['relationships']['ticket_type_ttid']['required'] = TRUE;
   /* Field: Ticket registration: Ticket Registration ID */
   $handler->display->display_options['fields']['trid']['id'] = 'trid';
   $handler->display->display_options['fields']['trid']['table'] = 'ticket_registration';
@@ -78,35 +74,31 @@ function cod_community_views_default_views() {
   $handler->display->display_options['fields']['name']['relationship'] = 'user_uid';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: User: First name */
+  /* Field: Field: First name */
   $handler->display->display_options['fields']['field_profile_first']['id'] = 'field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['table'] = 'field_data_field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['field'] = 'field_profile_first';
-  $handler->display->display_options['fields']['field_profile_first']['relationship'] = 'user_uid';
   $handler->display->display_options['fields']['field_profile_first']['label'] = '';
   $handler->display->display_options['fields']['field_profile_first']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_first']['type'] = 'text_plain';
-  /* Field: User: Last name */
+  /* Field: Field: Last name */
   $handler->display->display_options['fields']['field_profile_last']['id'] = 'field_profile_last';
   $handler->display->display_options['fields']['field_profile_last']['table'] = 'field_data_field_profile_last';
   $handler->display->display_options['fields']['field_profile_last']['field'] = 'field_profile_last';
-  $handler->display->display_options['fields']['field_profile_last']['relationship'] = 'user_uid';
   $handler->display->display_options['fields']['field_profile_last']['label'] = '';
   $handler->display->display_options['fields']['field_profile_last']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_last']['type'] = 'text_plain';
-  /* Field: User: Job title */
+  /* Field: Field: Job title */
   $handler->display->display_options['fields']['field_profile_job_title']['id'] = 'field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['table'] = 'field_data_field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['field'] = 'field_profile_job_title';
-  $handler->display->display_options['fields']['field_profile_job_title']['relationship'] = 'user_uid';
   $handler->display->display_options['fields']['field_profile_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_profile_job_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_job_title']['type'] = 'text_plain';
-  /* Field: User: Organization */
+  /* Field: Field: Organization */
   $handler->display->display_options['fields']['field_profile_org']['id'] = 'field_profile_org';
   $handler->display->display_options['fields']['field_profile_org']['table'] = 'field_data_field_profile_org';
   $handler->display->display_options['fields']['field_profile_org']['field'] = 'field_profile_org';
-  $handler->display->display_options['fields']['field_profile_org']['relationship'] = 'user_uid';
   $handler->display->display_options['fields']['field_profile_org']['label'] = '';
   $handler->display->display_options['fields']['field_profile_org']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_org']['type'] = 'text_plain';
@@ -123,12 +115,6 @@ function cod_community_views_default_views() {
   $handler->display->display_options['arguments']['entity_id']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['entity_id']['validate']['type'] = 'og';
   $handler->display->display_options['arguments']['entity_id']['validate']['fail'] = 'empty';
-  /* Filter criterion: Ticket registration state: Name */
-  $handler->display->display_options['filters']['name']['id'] = 'name';
-  $handler->display->display_options['filters']['name']['table'] = 'ticket_state';
-  $handler->display->display_options['filters']['name']['field'] = 'name';
-  $handler->display->display_options['filters']['name']['relationship'] = 'ticket_state_target_id';
-  $handler->display->display_options['filters']['name']['value'] = 'completed';
   /* Filter criterion: Field: Show on attendee listing page (field_ticket_attendee_listing) */
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['id'] = 'field_ticket_attendee_listing_value';
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['table'] = 'field_data_field_ticket_attendee_listing';
@@ -136,11 +122,12 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: User: First name (field_profile_first) */
+  $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['group'] = 1;
+  /* Filter criterion: Field: First name (field_profile_first) */
   $handler->display->display_options['filters']['field_profile_first_value']['id'] = 'field_profile_first_value';
   $handler->display->display_options['filters']['field_profile_first_value']['table'] = 'field_data_field_profile_first';
   $handler->display->display_options['filters']['field_profile_first_value']['field'] = 'field_profile_first_value';
-  $handler->display->display_options['filters']['field_profile_first_value']['relationship'] = 'user_uid';
+  $handler->display->display_options['filters']['field_profile_first_value']['group'] = 1;
   $handler->display->display_options['filters']['field_profile_first_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_first_value']['expose']['operator_id'] = 'field_profile_first_value_op';
   $handler->display->display_options['filters']['field_profile_first_value']['expose']['label'] = 'First name';
@@ -149,16 +136,20 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['field_profile_first_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
+    8 => 0,
+    9 => 0,
+    6 => 0,
+    7 => 0,
+    10 => 0,
     3 => 0,
     5 => 0,
-    6 => 0,
+    4 => 0,
   );
-  /* Filter criterion: User: Last name (field_profile_last) */
+  /* Filter criterion: Field: Last name (field_profile_last) */
   $handler->display->display_options['filters']['field_profile_last_value']['id'] = 'field_profile_last_value';
   $handler->display->display_options['filters']['field_profile_last_value']['table'] = 'field_data_field_profile_last';
   $handler->display->display_options['filters']['field_profile_last_value']['field'] = 'field_profile_last_value';
-  $handler->display->display_options['filters']['field_profile_last_value']['relationship'] = 'user_uid';
+  $handler->display->display_options['filters']['field_profile_last_value']['group'] = 1;
   $handler->display->display_options['filters']['field_profile_last_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_last_value']['expose']['operator_id'] = 'field_profile_last_value_op';
   $handler->display->display_options['filters']['field_profile_last_value']['expose']['label'] = 'Last name';
@@ -167,16 +158,20 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['field_profile_last_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
+    8 => 0,
+    9 => 0,
+    6 => 0,
+    7 => 0,
+    10 => 0,
     3 => 0,
     5 => 0,
-    6 => 0,
+    4 => 0,
   );
-  /* Filter criterion: User: Organization (field_profile_org) */
+  /* Filter criterion: Field: Organization (field_profile_org) */
   $handler->display->display_options['filters']['field_profile_org_value']['id'] = 'field_profile_org_value';
   $handler->display->display_options['filters']['field_profile_org_value']['table'] = 'field_data_field_profile_org';
   $handler->display->display_options['filters']['field_profile_org_value']['field'] = 'field_profile_org_value';
-  $handler->display->display_options['filters']['field_profile_org_value']['relationship'] = 'user_uid';
+  $handler->display->display_options['filters']['field_profile_org_value']['group'] = 1;
   $handler->display->display_options['filters']['field_profile_org_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_profile_org_value']['expose']['operator_id'] = 'field_profile_org_value_op';
   $handler->display->display_options['filters']['field_profile_org_value']['expose']['label'] = 'Organization';
@@ -185,10 +180,14 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['field_profile_org_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
+    8 => 0,
+    9 => 0,
+    6 => 0,
+    7 => 0,
+    10 => 0,
     3 => 0,
     5 => 0,
-    6 => 0,
+    4 => 0,
   );
   /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
@@ -196,6 +195,7 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
   $handler->display->display_options['filters']['uid']['relationship'] = 'user_uid';
   $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['group'] = 1;
   $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
   $handler->display->display_options['filters']['uid']['expose']['label'] = 'Username';
@@ -204,14 +204,27 @@ function cod_community_views_default_views() {
   $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
+    8 => 0,
+    9 => 0,
+    6 => 0,
+    7 => 0,
+    10 => 0,
     3 => 0,
     5 => 0,
-    6 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Ticket registration: Order state */
+  $handler->display->display_options['filters']['state']['id'] = 'state';
+  $handler->display->display_options['filters']['state']['table'] = 'ticket_registration';
+  $handler->display->display_options['filters']['state']['field'] = 'state';
+  $handler->display->display_options['filters']['state']['value'] = array(
+    'checked_in' => 'checked_in',
+    'completed' => 'completed',
   );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['argument_input'] = array(
     'entity_id' => array(
       'type' => 'context',

@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Enable panel pages when cod_community is first installed.
+ */
+function cod_community_install() {
+  // Enabled the associated community pages
+  $module_list = array('cod_community_pages');
+  module_enable($module_list);
+  return array();
+}
+
+/**
  * Enable community panels, and add attendee view selector field.
  */
 function cod_community_update_7001() {

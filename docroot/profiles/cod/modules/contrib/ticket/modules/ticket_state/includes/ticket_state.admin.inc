@@ -159,11 +159,11 @@ function ticket_state_overview_form($form, &$form_state) {
       );
       $form['state'][$tsid]['delete'] = array(
         '#type' => 'item',
-        '#markup' => l(t('delete'), 'admin/structure/ticket_state/manage/' . $state->identifier() . '/delete', array('query' => drupal_get_destination())),
+        '#markup' => l(t('delete'), 'admin/structure/ticket_states/manage/' . $state->identifier() . '/delete', array('query' => drupal_get_destination())),
       );
       $form['state'][$tsid]['export'] = array(
         '#type' => 'item',
-        '#markup' => l(t('export'), 'admin/structure/ticket_state/manage/' . $state->identifier() . '/export'),
+        '#markup' => l(t('export'), 'admin/structure/ticket_states/manage/' . $state->identifier() . '/export'),
       );
     }
   }

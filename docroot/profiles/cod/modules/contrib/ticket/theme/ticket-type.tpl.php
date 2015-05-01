@@ -12,8 +12,8 @@
  */
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <h3><?php print render($content['ticket_type_label']); ?></h3>
+  <h2><?php print render($content['ticket_type_label']); ?></h2>
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print render($content['ticket_type_description']); ?>
+    <?php print render($content); ?>
   </div>
 </div>

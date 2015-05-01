@@ -4,9 +4,7 @@ core = 7.x
 package = Panels
 dependencies[] = panels
 
-
-; Information added by drush on 2014-12-17
-version = ""
+; Information added by drush on 2014-03-18
+version = "7.x-1.x-dev"
 project = "panels_tabs"
-datestamp = "1418783355"
-
+datestamp = "1395155663"

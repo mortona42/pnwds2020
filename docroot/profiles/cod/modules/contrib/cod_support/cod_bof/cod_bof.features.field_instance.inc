@@ -116,6 +116,7 @@ function cod_bof_field_default_field_instances() {
   $field_instances['node-bof_session-og_group_ref'] = array(
     'bundle' => 'bof_session',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -142,17 +143,11 @@ function cod_bof_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Conference',
-    'required' => FALSE,
+    'required' => 1,
     'settings' => array(
       'behaviors' => array(
-        'og_widget' => array(
-          'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
-          ),
-          'default' => array(
-            'widget_type' => 'options_select',
-          ),
-          'status' => TRUE,
+        'prepopulate' => array(
+          'status' => 0,
         ),
       ),
       'user_register_form' => FALSE,
@@ -170,17 +165,18 @@ function cod_bof_field_default_field_instances() {
       ),
     ),
     'widget' => array(
-      'module' => 'og',
+      'active' => 0,
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'og_complex',
+      'type' => 'options_select',
       'weight' => 31,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
   t('Conference');
+  t('Description');
   t('Session Time Slot(s)');
 
   return $field_instances;

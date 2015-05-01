@@ -15,5 +15,5 @@ function ticket_admin_form($form, &$form_state) {
     '#markup' => t('<p>Use the Manage Fields tab to add custom ticket type fields. These fields will be available to users who manage ticket types on entities (i.e. event creators/editors).</p><p>Use the Manage Display tab to customize which ticket type fields are visible to users who will be viewing the ticketed entities and registering for tickets.</p>'),
   );
 
-  return $form;
+  return system_settings_form($form);
 }
