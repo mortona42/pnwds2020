@@ -264,15 +264,19 @@ function cod_schedule_update_session() {
  * Helper function determines days there are time slots for.
  */
 function cod_schedule_days($node, $content_type = NULL) {
+  if (empty($node)) {
+    return array();
+  }
+
   if (is_numeric($node)) {
     $node = node_load($node);
   }
 
-  if (isset($content_type)) {
+  if (!empty($content_type)) {
     $content_type = explode('+', $content_type);
   }
 
-  if (isset($content_type)) {
+  if (!empty($content_type)) {
     // Grab relevant days for a particular content type.
     // I think this kills kittens, puppies, and all that is holy.
     // TODO: Convert into a db_select statement.

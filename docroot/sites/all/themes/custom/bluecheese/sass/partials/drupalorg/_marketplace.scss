@@ -1,0 +1,159 @@
+/**
+ * Marketplace
+ */
+/* Organization node layout */
+.node-organization {
+
+  .intro {
+    @include span-columns(3);
+  }
+
+  .main {
+    @include span-columns(5);
+  }
+
+  .aside {
+    @include span-columns(4 omega);
+  }
+}
+
+.node-organization.node-teaser, .view-drupalorg-training {
+
+  .intro {
+    @include span-columns(3,8);
+  }
+
+  .main {
+    @include span-columns(5 omega,8);
+  }
+}
+
+.view-drupalorg-supporting-technologies {
+  .intro {
+    @include span-columns(2,8);
+  }
+  .main {
+    @include span-columns(6 omega, 8);
+  }
+}
+
+/* Services view */
+.view-drupalorg-organizations .view-header {
+
+  .nav {
+    @include span-columns(8, 8);
+  }
+
+  .nav-column {
+    @include span-columns(2, 8);
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+#content .view-drupalorg-organizations .view-header ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+/* hide JS actions */
+.view-drupalorg-organizations .view-header .show-link,
+.view-drupalorg-organizations .view-header .hide-link {
+  display: none;
+}
+.node-organization .website img {
+  display: block;
+}
+
+#content .node-organization dd {
+  padding-left: 0;
+}
+
+/* Training view */
+.view-drupalorg-supporting-technologies,
+.view-drupalorg-training {
+
+  .views-row {
+    @include span-columns(8 omega, 8);
+    margin-bottom: 1.385em;
+  }
+}
+
+/* Sidebar navigation */
+#block-menu-menu-hosting-types-menu ul.menu,
+#marketplace-services-quicknav ul.menu {
+  list-style: none;
+  padding: 0;
+}
+#block-menu-menu-hosting-types-menu li.leaf,
+#marketplace-services-quicknav li.leaf {
+  margin: 0 0 9px -15px;
+  list-style: none;
+}
+#block-menu-menu-hosting-types-menu li.leaf a,
+#marketplace-services-quicknav li.leaf a {
+  display: block;
+  padding: 0 12px 0 30px;
+  line-height: 36px;
+  color: $body-text;
+  background: $light-grey $arrow-mask no-repeat 0 0;
+  border-radius: 0 5px 5px 0;
+}
+#block-menu-menu-hosting-types-menu li.leaf a:hover, 
+#block-menu-menu-hosting-types-menu li.leaf a:focus,
+#marketplace-services-quicknav li.leaf a:hover,
+#marketplace-services-quicknav li.leaf a:focus {
+  background: nth($greys, 13) $arrow-mask no-repeat 0 0;
+  text-decoration: none;
+}
+#block-menu-menu-hosting-types-menu li.leaf .active,
+#block-menu-menu-hosting-types-menu li.leaf .active:hover, 
+#block-menu-menu-hosting-types-menu li.leaf .active:focus,
+#marketplace-services-quicknav li.leaf.active-trail a,
+#marketplace-services-quicknav li.leaf.active-trail a:hover,
+#marketplace-services-quicknav li.leaf.active-trail a:focus {
+  color: $white;
+  background: $arrow-mask no-repeat 0 0, $button-background;
+  background: $arrow-mask no-repeat 0 0, -moz-linear-gradient(top, $menu-gradient-top 0%, $menu-gradient-top 49%, $button-background 50%, $button-background 100%);
+  background: $arrow-mask no-repeat 0 0, -webkit-gradient(linear, left top, left bottom, color-stop(0%,$menu-gradient-top), color-stop(49%,$menu-gradient-top), color-stop(50%,$button-background), color-stop(100%,$button-background));
+  background: $arrow-mask no-repeat 0 0, -webkit-linear-gradient(top, $menu-gradient-top 0%,$menu-gradient-top 49%,$menu-gradient-down 50%,$menu-gradient-down 100%);
+  background: $arrow-mask no-repeat 0 0, -o-linear-gradient(top, $menu-gradient-top 0%,$menu-gradient-top 49%,$menu-gradient-down 50%,$menu-gradient-down 100%);
+  background: $arrow-mask no-repeat 0 0, -ms-linear-gradient(top, $menu-gradient-top 0%,$menu-gradient-top 49%,$menu-gradient-down 50%,$menu-gradient-down 100%);
+  background: $arrow-mask no-repeat 0 0, linear-gradient(top, $menu-gradient-top 0%,$menu-gradient-top 49%,$menu-gradient-down 50%,$menu-gradient-down 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0c720', endColorstr='#97bd1f',GradientType=0 );
+}
+
+#aside {
+  #block-block-40,
+  #block-block-42,
+  #block-block-46,
+  #block-block-62,
+  #block-menu-menu-hosting-types-menu,
+  #marketplace-services-quicknav {
+    background-color: $white;
+  }
+
+  #block-block-60 {
+    background-color: $white;
+    border-bottom: 1px solid nth($greys, 2);
+  }
+}
+
+#aside #block-views-drupalorg-training-block-1 {
+  background-color: $white;
+
+  ul.views-summary li {
+    line-height: 1.5em;
+
+    a {
+      padding: 0.153846em 0.384615em 0.230769em 1em;
+    }
+
+    a.active, a:hover, a:focus {
+      background-color: $dark-grey;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

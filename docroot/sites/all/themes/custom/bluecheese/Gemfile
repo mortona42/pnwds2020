@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+group :development do
+
+  # Sass, Compass and extensions.
+  gem 'sass'                    # Sass.
+  gem 'compass'                 # Framework built on Sass.
+  gem 'susy'                    # Susy grid framework.
+  gem 'breakpoint'              # Manages CSS media queries.
+  gem 'sass-globbing'           # Allows you to import many sass or scss files
+                                # in a single import statement.
+end

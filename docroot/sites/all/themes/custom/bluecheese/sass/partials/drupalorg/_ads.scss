@@ -1,0 +1,94 @@
+/**
+ * Ads
+ */
+#aside .block-google-admanager .block-inner {
+  padding: 0;
+}
+ 
+ #page .block-google-admanager {
+  background-color: $pale-yellow;
+  line-height: inherit;
+}
+.gam-holder {
+  margin: 0;
+}
+
+.gam-prefix {
+  padding: 1em 1em 12px;
+}
+.gam-suffix {
+  color: $dark-grey;
+  font-size: 0.92307em; /* 0.92307 * 13px = 12px */
+  padding: 12px 1em;
+}
+.gam-suffix a {
+  color: $black;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $black;
+  }
+}
+
+.gam-holder .text {
+  background-color: $pale-yellow;
+  width: 274px;
+  line-height: 1.5em;
+  padding: 13px;
+}
+
+.gam-holder .text a {
+  font-weight: bold;
+}
+
+/* Front page ad */
+body.front .gam-holder {
+  margin: 1.385em 0 0 0;
+}
+
+/* Books ads on /security and /documentation */
+#block-google_admanager-89caa04f148acdc52719b3d001e487c4  {
+  .gam-prefix {
+    padding: 1em;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .gam-suffix {
+    padding: 1em;
+  }
+}
+
+#block-google-admanager-d4111bf4bd49e16643c8fb77d603fc90 h2 {
+  padding-left: 1em;
+}
+#google_ads_div_Security_books_ad_container img,
+#google_ads_div_Redesign_books_ad_container img {
+  padding: 0 12px;
+}
+
+/* Supporting partner logos block */
+#aside #block-google-admanager-db95fef4e097f813743f6b195671b5c9 {
+  .block-inner {
+    padding: 1em;
+  }
+  .gam-prefix {
+    padding: 0 0 12px;
+  }
+}
+
+/* Donate button on /project/drupal */
+#donate {
+  float: left;
+  margin-bottom: 1em;
+}
+#donate div {
+  float:left;
+  margin-right:10px;
+}
+#donate span {
+  margin-left:18px;
+  font-size:0.692em;
+}

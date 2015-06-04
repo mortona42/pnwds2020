@@ -1,0 +1,111 @@
+@mixin supporter-logo($width, $height: $width / 2) {
+  display: inline-block;
+  float: left;
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+  width: $width;
+
+  .views-field-field-logo {
+    height: $height;
+    position: relative;
+  }
+
+  img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .views-field-field-short-description {
+    padding-right: 1em;
+  }
+}
+
+.view-drupalorg-supporters {
+  h2 {
+    @extend .h1;
+  }
+
+  .view-header {
+    .left {
+      clear: none;
+      float: left;
+      margin: 0 0 3em;
+      width: 58%;
+    }
+
+    .right {
+      clear: none;
+      float: right;
+      margin: 0;
+      text-align: right;
+      width: 42%;
+    }
+
+    h2 {
+      clear: both;
+    }
+  }
+
+  ul.grid {
+    @include clearfix;
+
+    &.cols-2 li {
+      @include supporter-logo(300px);
+    }
+
+    &.cols-4 li {
+      @include supporter-logo(150px, 100px);
+      min-height: 12em;
+    }
+  }
+
+  // Technology Supporters
+  &.view-display-id-attachment_2 {
+    ul.grid.cols-4 li {
+      @include supporter-logo(20%, 100px);
+    }
+  }
+}
+
+#content ul.grid {
+  padding-left: 0;
+}
+
+#aside {
+  #block-views-drupalorg-supporters-block-1,
+  #block-views-drupalorg-supporters-block-2,
+  #block-views-drupalorg-supporters-block-3,
+  #block-views-drupalorg-supporters-block-4 {
+    background: $white;
+
+    ul.views-summary li {
+      line-height: 1.5em;
+      a {
+        padding: 0.153846em 0.384615em 0.230769em 1em;
+      }
+      a.active, a:hover, a:focus {
+        background-color: $dark-grey;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#block-views-drupalorg-supporters-block-1,
+#block-views-drupalorg-supporters-block-2,
+#block-views-drupalorg-supporters-block-3,
+#block-views-drupalorg-supporters-block-4 {
+  .views-summary li {
+    .active,
+    a:focus,
+    a:hover {
+      @include icon-pointer;
+    }
+  }
+}

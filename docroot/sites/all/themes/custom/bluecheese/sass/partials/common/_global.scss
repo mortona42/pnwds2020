@@ -1,0 +1,62 @@
+////////////////////////
+// Global grid settings
+//
+// For the moment we are NOT using the container() mixin from Susy. We're specifying a pixel-width.
+// The reason is because our initial port is not aiming to be responsive.
+////////////////////////
+
+.container-12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  padding: 0 10px;
+  //@include susy-grid-background;
+}
+
+#header,
+#footer,
+#page {
+  min-width: 960px;
+}
+
+//Support for Legacy Grid-x classes - for db content like the support page
+/* todo: remove all grid classes post upgrade */
+.grid-1 {
+  @include span-columns(1);
+}
+.grid-2 {
+  @include span-columns(2);
+}
+.grid-3 {
+  @include span-columns(3);
+}
+.grid-4 {
+  @include span-columns(4);
+}
+.grid-5 {
+  @include span-columns(5);
+}
+.grid-6 {
+  @include span-columns(6);
+}
+.grid-7 {
+  @include span-columns(7);
+}
+.grid-8 {
+  @include span-columns(8);
+}
+.grid-9 {
+  @include span-columns(9);
+}
+.grid-10 {
+  @include span-columns(10);
+}
+.grid-11 {
+  @include span-columns(11);
+}
+.grid-12 {
+  @include span-columns(12);
+}
+.omega {
+  @include omega();
+}

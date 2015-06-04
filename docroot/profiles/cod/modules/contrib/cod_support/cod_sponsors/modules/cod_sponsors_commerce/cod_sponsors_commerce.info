@@ -20,7 +20,7 @@ features[field_instance][] = commerce_product-sponsor-og_group_ref
 files[] = views/cod_sponsors_commerce.views.inc
 files[] = views/cod_sponsors_commerce_views_handler_field_order_link.inc
 
-; Information added by drush on 2015-05-01
+; Information added by drush on 2015-06-04
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1430468831"
+datestamp = "1433383292"

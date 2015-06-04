@@ -95,3 +95,15 @@ function cod_schedule_update_7008() {
   );
   features_revert($revert);
 }
+
+/**
+ * Update the Cod Schedule Admin Pages to use the new schedule menu and remove quicktabs.
+ */
+function cod_schedule_update_7009() {
+  if (module_exists('cod_schedule_pages')){
+    $revert = array(
+      'cod_schedule_pages' => array('page_manager_pages'),
+    );
+    features_revert($revert);
+  }
+}

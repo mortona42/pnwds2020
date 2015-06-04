@@ -1,0 +1,219 @@
+////////////////////////
+// Susy Grid Layout
+////////////////////////
+$total-columns          : 12;
+$column-width           : 4em;
+$gutter-width           : 1.333333334em;
+$grid-padding           : $gutter-width;
+
+$show-grid-backgrounds  : false;
+
+////////////////////////
+// Primary Colors
+////////////////////////
+$dark-blue: #3333cc;
+$light-blue: black;
+$lime-green: green;
+
+////////////////////////
+// Secondary Colors
+////////////////////////
+$navy-blue: black;
+$light-navy-blue: black;
+$lighter-navy-blue: #3333cc;
+$strong-red: #d32101;
+$pale-yellow: #f6f6f2;
+$light-yellow: white;
+$dark-green: green;
+$grey: #9d9d93;
+$light-grey: #eee;
+$dark-grey: #666;
+$darker-grey: #999;
+$yellow-green: #eaeae1 #f9ffec #9fca44 #688a1f #888888;
+$light-red: #ebcccc #f6e8e8;
+$bright-blue: #3333cc;
+$greys: #555 #ddd #d8d8d2 #e1e1db #888 #e2e2df #858585 #e4e4e4 #c8c9c4 #55554a #ebebe7 #bfbfba #e3e3de;
+$blues: #000000 #044771 #000000 #15499f;
+$yellows: #ebe3a4 #e9b538;
+$light-black: #333333;
+$black: #000;
+$white: #fff;
+
+////////////////////////
+// Typography
+////////////////////////
+$body-text: #222;
+$main-header: $black;
+
+////////////////////////
+// Buttons
+////////////////////////
+$button-text: $white;
+$button-background: green;
+$button-background-hover: lightgreen;
+
+////////////////////////
+// Menus
+////////////////////////
+$menu-gradient-top: green;
+$menu-gradient-down: lightgreen;
+
+////////////////////////
+// Header
+////////////////////////
+$header-background: #cccccc;
+$header-text: $white;
+$header-link-hover: #cccccc;
+
+////////////////////////
+// Messages
+////////////////////////
+$messages-status: #d4efcc;
+$messages-help: #cde4f2;
+$messages-warning: #ffe69f;
+$messages-error: #ebcccc;
+$asterisk-warning: #e3901b;
+
+////////////////////////
+// Tables
+////////////////////////
+$row-active-background: #d7d7c7;
+$row-even-background: #eeeee0;
+$row-even-border: #d8d8d2;
+$row-odd-background: $white;
+$row-odd-border: #d8d8d2;
+$row-even-td-active: #e5e5d4;
+
+////////////////////////
+// Front tabs
+////////////////////////
+$tabs-blue: #27537a;
+$tabs-green: black;
+$tabs-violet: black;
+$tabs-red: black;
+
+////////////////////////
+// Issue queue
+////////////////////////
+$issue-grey: #cccccc;
+$issue-pale-grey: #f2f4fe;
+$issue-dark-grey: #939393;
+$issue-green: #a8ff98;
+$issue-blue: #b5c4fe;
+$issue-bright-blue: #4988fe;
+$issue-orange: #ffcf73;
+$issue-pink: #ffdccd #fc8596 #fdebed #fc2843 #fff6f6 #ffbca4;
+$issue-light-green: #bcffb3;
+$issue-lime: #edffec;
+$issue-bright-green: #93ff88;
+$issue-yellow: #feffec #ffb404 #f8fff1;
+$issue-status-1: #f9f9f9;
+$issue-status-2: #d7ffd8;
+$issue-status-3: #eff1fe;
+$issue-status-7: #fddddd;
+$issue-status-8: #ffffdd;
+$issue-status-13: #ffece8;
+$issue-status-14: #f1ffe8;
+$follow-flag-grey: #e9e9e9;
+$follow-flag-light: #F8F9F8;
+$follow-flag-border: #E7E8E8;
+
+////////////////////////
+// Sprites
+////////////////////////
+$sprite-small-icons: url(../images/none.png);
+$sprite-large-icons: url(../images/none.png);
+$sprite-horizontal: url(../images/none.png);
+$sprite-general: url(../images/none.png);
+$sprite-association: url(../images/none.png);
+$sprite-api: url(../images/none.png);
+$sprite-infrastructure: url(../images/none.png);
+$sprite-security: url(../images/sprites-security.png);
+$sprite-gettingstarted: url(../images/none.png);
+$arrow-mask: url(../images/arrow-mask.png);
+$icon-success: url(../images/none.png);
+$dot-green: url(../images/none.png);
+$dot-blue: url(../images/none.png);
+$dot-yellow: url(../images/none.png);
+$dot-red: url(../images/none.png);
+$icon-help: url(../images/none.gif);
+$icon-warning: url(../images/none.gif);
+$icon-error: url(../images/none.png);
+$icon-pointer: url(../images/pointer.png);
+$map-big: url(../images/world-map.png);
+$map-small: url(../images/world-map-4.png);
+$icon-blockquote: url(../images/none.png);
+$icon-throbber: url(../images/throbber-large.gif);
+
+// Colors
+//
+// http://infrastructure.drupal.org/drupal.org-style-guide/colour.html
+// moving to http://drupal.org/node/1051644
+//
+// -------------------------------------
+// Primary colors
+// -------------------------------------
+// Dark Blue #0678BE rgb(6,120,190)
+// Dark Blue 50% #83BCDE
+// Dark Blue 40% #9CC9E5
+// Dark Blue 30% #B4D7EB
+// Dark Blue 20% #CDE4F2 rgb(205,228,242)
+//
+// Light Blue #53B0EB rgb(83,176,235)
+//
+// Lime Green #96BC44 rgb(150,188,68)
+//
+// -------------------------------------
+// Secondary colors
+// -------------------------------------
+// Navy Blue #064771 rgb(6,71,113)
+// Light Navy Blue #0D7DC1 rgb(13,125,193)
+// Light Navy Blue 50% #9ECBE6 rgb(158,203,230)
+//
+// Pale Yellow #F6F6F2 rgb(246,246,242)
+// Light Yellow #E6FCB6 rgb(230,252,182)
+//
+// Gray #9D9D93 rgb(157,157,147)
+// Black #000 rgb(0,0,0)
+//
+// -------------------------------------
+// Not officially listed, but found prototypes
+// -------------------------------------
+// Yellow/Green (border, th bg) #EAEAE1
+// Yellow/Green (background) #F9FFEC
+//
+// Light Red (border) #EBCCCC
+// Light Red (background) #F6E8E8
+//
+// -------------------------------------
+// Typography
+// -------------------------------------
+// Gray body text #222
+// Header h1 #000
+// Gray headers h2-h4 #555
+// Gray headers h5-6 #222
+// Blue links #0678BE
+//
+// -------------------------------------
+// Colors not specified in style guide
+// -------------------------------------
+// Gray #666
+// Gray #nav-content border #E1E1DB
+//
+// Blue #nav-header BG #044771
+//
+// -------------------------------------
+// Help, status, and messages
+// -------------------------------------
+// Help:
+// Blue: Dark Blue 20%
+//
+// Asterisk:
+// Orange: rgb(227,144,27) NOT PART OF PALETTE
+
+////////////////////////
+// Typography
+////////////////////////
+
+$line-height: 1em;
+

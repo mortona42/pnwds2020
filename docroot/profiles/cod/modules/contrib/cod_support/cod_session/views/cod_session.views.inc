@@ -5,6 +5,25 @@
  */
 
 /**
+ * Implements hook_views_plugins().
+ */
+function cod_session_views_plugins() {
+  return array(
+    'module' => 'cod_session',
+    'pager' => array(
+      'session_more' => array(
+        'title' => t('COD Session Link Pager'),
+        'help' => t('cod_session'),
+        'help topic' => '',
+        'handler' => 'views_plugin_pager_session_more',
+        'uses options' => TRUE,
+        'parent' => 'some'
+      ),
+    ),
+  );
+}
+
+/**
  * Implements hook_views_data_alter().
  */
 function cod_session_views_data_alter(&$data) {

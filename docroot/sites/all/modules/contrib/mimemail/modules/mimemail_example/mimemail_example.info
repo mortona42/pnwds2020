@@ -1,0 +1,10 @@
+name = Mime Mail Example
+description = Example of how to use the Mime Mail module.
+dependencies[] = mimemail
+package = Example modules
+core = 7.x
+
+; Information added by drush on 2015-01-25
+version = "7.x-1.0-beta3"
+project = "mimemail"
+datestamp = "1422213834"

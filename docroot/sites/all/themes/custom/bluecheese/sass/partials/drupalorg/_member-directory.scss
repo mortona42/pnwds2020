@@ -1,0 +1,12 @@
+/**
+ * Member directory page (/profile)
+ */
+
+/* Search users block */
+#block-drupalorg_search-drupalorg_search_users form,
+#block-drupalorg_search-drupalorg_search_users .form-item {
+  margin: 0;
+}
+#block-drupalorg_search-drupalorg_search_users .form-text {
+  width: 150px;
+}

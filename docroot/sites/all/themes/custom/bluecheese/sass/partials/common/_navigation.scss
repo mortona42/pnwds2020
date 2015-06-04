@@ -1,0 +1,133 @@
+/**
+ * Navigation
+ */
+/* Main top navigation */
+#nav-header {
+  font-size: 0.923076em; /* 12px */
+
+  ul {
+    background: $navy-blue;
+    float: right;
+    padding: 0 0.75em 0 0.75em;
+  }
+
+  ul li {
+    float: left;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: $white;
+    display: block;
+    margin: 0.333333em 0.833333em;
+  }
+
+  a.home {
+    float: left;
+    margin-left: 0;
+  }
+
+  a:hover,
+  a:focus {
+    color: $header-link-hover; /* Not a standard color, matches prototype */
+    text-decoration: none;
+  }
+
+} // #nav-header
+
+/* User navigation: Homepage, Dashboard, Login */
+#nav-masthead {
+  @include span-columns(12 omega);
+  display: block;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+#nav-masthead ul li {
+  list-style: none;
+  float: left;
+  font-size: 0.923076em;  /* 12px */
+  margin-right: 0.615384em;
+}
+#nav-masthead ul li a {
+  background-color: $light-navy-blue;
+  @include border-radius(10px 10px 0 0);
+  color: $white;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0.416666em .75em 0.416666em 0.615384em;
+  text-decoration: none;
+}
+#nav-masthead ul li.active a,
+#nav-masthead ul li:hover a,
+#nav-masthead ul li:focus a {
+  background-color: $white;
+  color: $black;
+}
+
+/* Logged in user navigation */
+#userinfo {
+  float: left;
+  margin: 5px 0 0 .75em;
+}
+#userinfo a {
+  color: $white;
+  font-size: 0.92307em;  /* 0.92307 * 13 = 12px */
+  margin: 0 1em 0 0;
+  text-decoration: none;
+}
+
+/* Content Navigation Tabs */
+#nav-content ul {
+  @include pie-clearfix();
+  display: block;
+  border: 0;
+  border-bottom: 1px solid nth($greys, 2);
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 1.154em;
+}
+
+#nav-content ul li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+#nav-content ul li a {
+  color: $dark-blue;
+  display: block;
+  float: left;
+  height: 32px;
+  padding: 5px 11px 0 11px;
+  padding: 4px 12px 5px 12px;
+}
+
+#nav-content li.active,
+#nav-content li.active-parent a {
+  background-color: $white;
+  border: 1px solid nth($greys, 2);
+  border-bottom: 0;
+  @include border-radius(7px 7px 0 0);
+}
+
+#nav-content li.active a.active,
+#nav-content li.active-parent a {
+  padding: 0.307692em 0.692307em 0.846153em 0.692307em;
+}
+
+#nav-content li.active a.active,
+#nav-content li.active-parent a,
+#nav-content li a:hover,
+#nav-content li a:focus,
+#nav-content li.active-parent a  {
+  color: $black;
+}
+
+#nav-content li a:hover,
+#nav-content li a:focus, {
+  text-decoration: none;
+}

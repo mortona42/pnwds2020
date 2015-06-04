@@ -439,12 +439,22 @@ function cod_session_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
         'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
+          'action' => 'hide',
+          'action_on_edit' => 1,
           'fallback' => 'none',
           'providers' => array(
-            'og_context' => 0,
+            'og_context' => 1,
             'url' => 1,
           ),
           'skip_perm' => 0,
@@ -467,10 +477,10 @@ function cod_session_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'options',
+      'module' => 'og',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 5,
+      'type' => 'og_complex',
+      'weight' => 6,
     ),
   );
 
@@ -805,15 +815,25 @@ function cod_session_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
         'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
-          'fallback' => 'none',
+          'action' => 'hide',
+          'action_on_edit' => 1,
+          'fallback' => 'form_error',
           'providers' => array(
             'og_context' => 1,
             'url' => 1,
           ),
-          'skip_perm' => 0,
+          'skip_perm' => 'administer nodes',
           'status' => 1,
         ),
       ),
@@ -832,7 +852,7 @@ function cod_session_field_default_field_instances() {
       ),
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
@@ -910,8 +930,8 @@ function cod_session_field_default_field_instances() {
   t('Speaker(s)');
   t('Sponsor(s)');
   t('Status');
-  t('Type the username of the speaker, and to add more speakers click "Add another speaker"');
   t('Tags');
+  t('Type the username of the speaker, and to add more speakers click "Add another speaker"');
   t('Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)');
 
   return $field_instances;

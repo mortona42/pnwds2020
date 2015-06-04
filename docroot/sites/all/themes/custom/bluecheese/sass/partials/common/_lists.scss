@@ -1,0 +1,109 @@
+// Drupal resets.
+ul.primary,
+ul.primary li,
+ul.primary li.active,
+ul.secondary,
+ul.secondary li,
+ul.secondary li.active {
+  display: inline;
+}
+
+ul.menu,
+ul.menu li,
+ul.primary,
+ul.primary li,
+ul.primary li a,
+ul.primary li.active a,
+ul.secondary,
+ul.secondary li,
+ul.secondary li a,
+ul.secondary li.active,
+ul.secondary li.active a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.item-list ul li
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+  list-style-position: inherit;
+  list-style-type: none;
+}
+
+.block {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    &.menu {
+      padding: 0 0 0.25em 1em;
+    }
+  }
+}
+
+
+#content ul, #tinymce ul,
+ol,
+dd {
+  margin-bottom: 0.692em;
+  padding-left: 2em; // @todo: List items align, but bullets and numbers do not
+}
+
+#content [dir=rtl] ul,
+[dir=rtl] ol {
+  padding-left: 0;
+  padding-right: 2em;
+}
+ol {
+  list-style: decimal outside;
+  &.upper-alpha {
+    list-style-type: upper-alpha;
+  }
+}
+#aside .block ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.profile .item-list li,
+#aside .block .item-list li,
+#aside .block .links li,
+#homebox .block .menu li,
+#homebox .block .item-list li {
+  line-height: 1.2em;
+  margin: 0 0 0.6em 0;
+  padding: 0;
+  list-style: none;
+}
+
+#content .profile ul,
+#homebox ul,
+#homebox ol,
+#content .vertical-tabs-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+#content ul, #tinymce ul {
+  list-style-type: disc;
+}
+
+#content .item-list ul.flat,
+#content .item-list ul.links,
+#content .item-list ul.flat li,
+#content .item-list ul.links li,
+#content ul.flat,
+#content ul.links,
+#content ul.flat li,
+#content ul.links li,
+.vertical-tab-button {
+  list-style-type: none;
+  list-style-image: none;
+  margin-left: 0;
+  padding-left: 0;
+}

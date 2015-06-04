@@ -1,0 +1,32 @@
+/**
+ * Taxonomy terms
+ */
+.feed-item-categories a,
+.feed-item-categories a:link,
+.feed-item-categories a:visited,
+.terms a,
+.terms a:link,
+.terms a:visited,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:link,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:visited {
+  background-color: $white;
+  @include border-radius();
+  color: $dark-grey;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+.feed-item-categories a:hover,
+.feed-item-categories a:active,
+.feed-item-categories a:focus,
+.terms a:hover,
+.terms a:active,
+.terms a:focus,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:hover,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:active,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:focus {
+  background-color: $darker-grey;
+  color: $white;
+}

@@ -15,7 +15,6 @@ function cod_bof_user_default_permissions() {
     'name' => 'create bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -36,7 +35,6 @@ function cod_bof_user_default_permissions() {
     'name' => 'delete own bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -57,7 +55,6 @@ function cod_bof_user_default_permissions() {
     'name' => 'edit own bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );

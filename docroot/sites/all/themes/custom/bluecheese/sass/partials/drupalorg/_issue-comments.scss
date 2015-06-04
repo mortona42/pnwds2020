@@ -1,0 +1,15 @@
+// Issue changes table
+.field-name-field-issue-changes table {
+  border: 1px solid $light-grey;
+  color: $light-black;
+  font-size: 0.9em;
+
+  tr.even {
+    background: none;
+    border: none;
+  }
+
+  td {
+    padding: 0 1em;
+  }
+}

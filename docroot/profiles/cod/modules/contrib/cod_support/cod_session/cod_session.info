@@ -31,6 +31,7 @@ dependencies[] = quicktabs_tabstyles
 dependencies[] = search
 dependencies[] = strongarm
 dependencies[] = taxonomy
+dependencies[] = taxonomy_machine_name
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_autorefresh
@@ -146,9 +147,9 @@ features[views_view][] = cod_session_tracks
 features[views_view][] = cod_session_user_presentations
 files[] = views/cod_session.views.inc
 files[] = views/cod_session_views_handler_field_track_link.inc
-files[] = views/cod_session_views_plugin_style_schedule.inc
+files[] = views/views_plugin_pager_session_more.inc
 
-; Information added by drush on 2015-05-01
+; Information added by drush on 2015-06-04
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1430468831"
+datestamp = "1433383292"

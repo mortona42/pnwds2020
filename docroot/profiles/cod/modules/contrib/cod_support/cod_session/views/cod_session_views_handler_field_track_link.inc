@@ -38,31 +38,30 @@ class cod_session_views_handler_field_track_link extends views_handler_field {
       return;
     }
 
-    // Generate as link.
-    $this->options['alter']['make_link'] = TRUE;
+    // Generate as text.
+    //$this->options['alter']['make_link'] = TRUE;
 
     // Get the host (event) entity.
     $attributes = array();
-    $more_prefix = '';
-    $more_suffix = '';
     // Get the current taxonomy term, if its set
     $path = current_path();
-    // Making a global more link requires some changes
-    if ($this->field == 'sessions_more_link' && $values === FALSE) {
-      $values = new stdClass();
-      $values->taxonomy_term_data_name = $this->view->argument['tid']->validated_title;
-    }
-    if (isset($this->view->args[2])) {
+    if (isset($this->view->args[2]) && !empty($values)) {
       $path = substr(current_path(), 0, strrpos(current_path(), '/'));
-      if ($this->view->args[2] == $values->tid) {
+      if ($this->view->args[2] == str_replace('_', '-', $values->taxonomy_term_data_machine_name)) {
         $attributes = array('attributes' => array('class' => array('clicked')));
         $active = TRUE;
       }
     }
+     // Making a global more link requires some changes
+    if ($this->real_field == 'sessions_more_link' && $values === FALSE) {
+      $values = new stdClass();
+      $values->taxonomy_term_data_machine_name = isset($this->view->args[2]) ? $this->view->args[2] : '';
+      $values->taxonomy_term_data_name = isset($this->view->argument['tid']->validated_title) ? $this->view->argument['tid']->validated_title : '';
+    }
     if (!isset($active)) {
-      $path = $path . '/' . str_replace(' ', '-', $this->case_transform($values->taxonomy_term_data_name, 'lower'));
+      $path = $path . '/' . str_replace('_', '-', $values->taxonomy_term_data_machine_name);
     }
 
-    return l($more_prefix . $values->taxonomy_term_data_name . $more_suffix, $path, $attributes);
+    return l($values->taxonomy_term_data_name, $path, $attributes);
   }
 }

@@ -1179,9 +1179,6 @@ function drupal_check_profile($profile) {
 
   $info = install_profile_info($profile);
 
-  // Add the profile as a dependency itself, in order to see if it has requirements as well.
-  $info['dependencies'][] = $profile;
-
   // Collect requirement testing results.
   $requirements = array();
   foreach ($info['dependencies'] as $module) {

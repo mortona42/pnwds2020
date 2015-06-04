@@ -4,9 +4,7 @@ package = Rules
 core = 7.x
 dependencies[] = rules
 
-; Information added by Drupal.org packaging script on 2014-07-18
-version = "7.x-1.0-alpha4"
-core = "7.x"
+; Information added by drush on 2015-01-15
+version = "7.x-1.0-alpha5+0-dev"
 project = "inline_conditions"
-datestamp = "1405675129"
-
+datestamp = "1421306274"

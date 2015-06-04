@@ -1,0 +1,19 @@
+/* action-buttons should be big green boxes */
+input.action-button,
+a.action-button {
+  display: inline-block;
+  color: $button-text;
+  background: $button-background;
+  padding: 0.643em 1.5em;
+  font-size: 1.077em; /* 14pt */
+  border: none;
+  @include border-radius();
+}
+input.action-button:focus,
+input.action-button:hover,
+a.action-button:focus,
+a.action-button:hover {
+  text-decoration: none;
+  background: $button-background-hover;
+  color: $button-text;
+}

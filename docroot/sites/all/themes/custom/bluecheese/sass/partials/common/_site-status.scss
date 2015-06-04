@@ -1,0 +1,19 @@
+/**
+ * Styles for the site status indicator.
+ */
+#drupalorg-site-status {
+  background-color: $strong-red;
+  color: $white;
+  padding: 0.5em;
+  text-align: center;
+  position: relative;
+  -moz-box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  z-index: 1;
+}
+
+#drupalorg-site-status a {
+  color: $white;
+  text-decoration: underline;
+}

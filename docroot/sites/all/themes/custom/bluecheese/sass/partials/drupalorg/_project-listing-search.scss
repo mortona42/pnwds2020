@@ -1,0 +1,30 @@
+// Project listings search form
+#project-solr-browse-projects-form {
+  background-color: $pale-yellow;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  .form-item {
+    margin-bottom: 0.692em;
+  }
+}
+
+#project-solr-browse-projects-form .form-item,
+#project-solr-browse-projects-form #edit-submit,
+#project-solr-browse-projects-form #edit-submit-2 {
+  float: none;
+}
+
+#project-solr-browse-projects-form #edit-submit,
+#project-solr-browse-projects-form #edit-submit-2 {
+  margin-bottom: 0;
+}
+
+#project-solr-browse-projects-form .form-item>* {
+  display: inline;
+}
+
+#project-solr-browse-projects-form .results-count {
+  border-bottom: 1px solid nth($greys, 2);
+  margin: 0 0 1em 0;
+  padding-bottom: 0.5em;
+}

@@ -15,6 +15,7 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'create sponsor content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
       'sponsor organizer' => 'sponsor organizer',
     ),
     'module' => 'node',
@@ -25,6 +26,7 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'delete any sponsor content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
       'sponsor organizer' => 'sponsor organizer',
     ),
     'module' => 'node',
@@ -35,6 +37,7 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'edit any sponsor content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
       'sponsor organizer' => 'sponsor organizer',
     ),
     'module' => 'node',
@@ -45,7 +48,9 @@ function cod_sponsors_user_default_permissions() {
     'name' => 'view sponsors',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'email unverified' => 'email unverified',
     ),
     'module' => 'cod_sponsors',
   );

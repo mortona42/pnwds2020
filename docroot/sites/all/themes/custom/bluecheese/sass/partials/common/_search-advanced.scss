@@ -1,0 +1,77 @@
+// Search filter form e.g. X modules match your search
+
+.page-search #project-solr-browse-projects-form {
+  background: none;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.page-search #project-solr-browse-projects-form label {
+  font-weight: normal;
+}
+
+// 'Sort by' form
+.page-search #drupalorg-search-sort-form {
+  margin-bottom: 1em;
+}
+
+.page-search #drupalorg-search-sort-form .form-item {
+  margin-top: 0;
+}
+
+.page-search #edit-solrsort-wrapper label,
+.page-search #edit-solrsort-wrapper select {
+  display: inline;
+  font-weight: normal;
+  margin: 0 10px 0 0;
+}
+
+.page-search #edit-solrsort-wrapper {
+  margin-right: 0;
+}
+
+.page-search #content-top-region form.drupalorgSearch-processed input[type=submit] {
+  display: none;
+}
+
+// Sidebar search filters
+.page-search #aside .block {
+  background: none;
+}
+
+.page-search #aside .item-list ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: -10px;
+}
+
+.page-search #aside .item-list ul li {
+  list-style-type: none;
+  margin-bottom: 3px;
+  margin-left: 0;
+}
+
+// sidebar search form
+#drupalorg-crosssite-search-form .form-text {
+  width: 150px;
+}
+
+// todo: check where is drupalorg_news block
+#block-drupalorg_news-news-terms ul.links li a,
+.page-search #aside .item-list ul li a,
+.page-search #aside .item-list ul li a.facetapi-active {
+  color: $dark-blue;
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+
+.page-search #aside .item-list ul li a.selected,
+.page-search #aside .item-list ul li a:hover,
+.page-search #aside .item-list ul li a.facetapi-active,
+#block-drupalorg_news-news-terms ul.links li a.active,
+#block-drupalorg_news-news-terms ul.links li a:hover,
+#block-drupalorg_news-news-terms ul.links li a:focus {
+  background-color: $dark-grey;
+  color: $white;
+  text-decoration: none;
+}

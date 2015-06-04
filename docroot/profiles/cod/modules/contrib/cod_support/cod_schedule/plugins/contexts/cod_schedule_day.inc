@@ -49,8 +49,9 @@ function cod_schedule_context_create_day($empty, $data = NULL, $conf = FALSE) {
       $content_type = isset($data['content_type']) ? $data['content_type']: NULL;
       if ($data['day'] == '') {
         // Fetch the event via path. TODO: Get event via panels context.
-        if (arg(0) == 'node' && is_numeric(arg(1))) {
-          $event_days = cod_schedule_days(arg(1), $content_type);
+        if (isset($data['existing contexts']['argument_entity_id:node_1'])) {
+          $event_nid = $data['existing contexts']['argument_entity_id:node_1']->argument;
+          $event_days = cod_schedule_days($event_nid, $content_type);
           $today_dt = new DateTime();
           $event_start = new DateTime(array_shift($event_days));
           $event_end = new DateTime(array_pop($event_days));

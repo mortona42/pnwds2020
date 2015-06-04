@@ -1,0 +1,93 @@
+#homebox .homebox-column {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#homebox .homebox-portlet {
+  border: 0;
+  margin: 0 0 20px;
+
+  .portlet-content {
+    padding: 10px;
+  }
+
+  // My [security] issues. Specific blocks do not have a static ID, -[0-9] is
+  // appended for multiple instances of a block.
+  &[id^=homebox-block-drupalorg_security_issues],
+  &[id^=homebox-block-views_1764f77afedbacb7539d78cc3f1d414f] {
+    .portlet-content {
+      padding: 0;
+    }
+    td {
+      padding: 0.25em 10px;
+    }
+    .more-link {
+      padding: 0px 10px 10px 0px;
+    }
+  }
+}
+
+#homebox .homebox-placeholder {
+  margin: 0 0 14px;
+}
+
+#homebox .homebox-portlet .homebox-portlet-inner {
+  background-color: $pale-yellow;
+  border: 0;
+}
+
+#homebox .portlet-config {
+  padding: 0 10px 10px;
+}
+
+#homebox .homebox-portlet .portlet-header {
+  background: none;
+  font-size: 1.38461em;  // 1.38461 * 13 = 18px
+  font-weight: normal;
+  padding: 10px 10px 8px;
+}
+
+#homebox .homebox-portlet .portlet-minus,
+#homebox .homebox-portlet .portlet-maximize {
+  display: none;
+}
+
+#homebox .homebox-portlet .portlet-icon {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+#homebox-buttons,
+#homebox-add {
+  margin-bottom: 10px;
+}
+
+#homebox-add a.restore {
+  display: inline;
+  height: auto;
+  padding: 0;
+  width: auto;
+}
+
+html.js #drupalorg-set-home-wrapper {
+  label {
+    @include plus-right-sprite;
+    color: $lime-green;
+    cursor: pointer;
+  }
+
+  // Hide radio button and selected label.
+  input,
+  input[checked] + label {
+    display: none;
+  }
+}
+
+#homebox .homebox-column-wrapper {
+  @include span-columns(4,12);
+}
+
+#homebox .homebox-column-wrapper.homebox-column-wrapper-3 {
+  @include span-columns(4 omega,12);
+}

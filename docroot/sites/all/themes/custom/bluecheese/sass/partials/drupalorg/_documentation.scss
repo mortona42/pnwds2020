@@ -1,0 +1,23 @@
+/**
+ * Documentation pages
+ */
+
+/* Page status block */
+#block-drupalorg-handbook-meta-sidebar {
+  .page-status {
+    padding: 0.692em;
+  }
+  .page-ok {
+    background-color: $messages-status;
+  }
+  .page-needs-work {
+    background-color: $messages-warning;
+  }
+  .page-major-problem {
+    background-color: $messages-error;
+  }
+}
+
+#block-drupalorg-handbook-about-page dd {
+  padding-left: 0;
+}

@@ -1,0 +1,66 @@
+#page {
+  margin-bottom: 2.077em;
+  margin-top: 1.385em;
+}
+
+.page-title-wrapper {
+  @include span-columns(8);
+}
+
+#main {
+  @include span-columns(12 omega);
+  z-index: 1;
+}
+
+.one-sidebar #main {
+  @include span-columns(8);
+}
+
+#aside {
+  @include span-columns(4 omega);
+}
+
+//This is how we fix nested classes that are in content for now
+/* todo: remove grid classes post upgrade */
+.one-sidebar #main .grid-4 {
+  @include span-columns(4,8);
+}
+.one-sidebar #main .grid-4.omega {
+  @include omega();
+}
+
+/* todo: check if needed, page-titles are h1 everywhere */
+div#page-title {
+  margin-top: 0;
+}
+
+#page-subtitle {
+  margin-top: 0;
+}
+
+.breadcrumb {
+  padding-bottom: 0;
+}
+
+/* 'Add X to dashboard' link */
+#page-tools {
+  @include span-columns(4 omega);
+  margin: 0.692em 0 0;
+  float: right;
+  text-align: right;
+  li {
+    display: block;
+    padding: 0;
+  }
+  a {
+    color: $lime-green;
+  }
+  a.add {
+    @include plus-right-sprite;
+  }
+}
+
+// Underneath both content and sidebar.
+#content-bottom-region {
+  clear: both;
+}

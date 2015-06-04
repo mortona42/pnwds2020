@@ -1,0 +1,265 @@
+// Sidebar: Issue settings block
+#block-project-issue-issue-metadata {
+  #aside & .block-inner {
+    padding: 0 0;
+  }
+  .field {
+    padding: 0 1em;
+    line-height: 2em;
+  }
+  .field-label {
+    width: 36%;
+    border-bottom: 1px solid nth($greys, 11);
+  }
+  .field-items {
+    width: 64%;
+    border-bottom: 1px solid nth($greys, 11);
+  }
+  .field-name-field-issue-status {
+    padding: 1em 0 0.5em;
+    text-align: center;
+    font-weight: bold;
+
+    .field-items {
+      width: 100%;
+      border-bottom: none;
+    }
+  }
+  .field-name-taxonomy-vocabulary-9 {
+    .field-label {
+      border-bottom: none;
+    }
+    .field-items {
+      border-bottom: none;
+      width: 100%;
+
+      .field-item {
+        display: inline;
+      }
+
+      .field-item + .field-item:before {
+        content: ",\20";
+      }
+    }
+  }
+  .last-update {
+    padding: 0 0 1em;
+  }
+  #project-issue-jumplinks {
+    background: $white;
+    // These use an "active" class, so force them to bluecheese blue.
+    a {
+      color: $dark-blue;
+    }
+  }
+}
+
+// Issue status field backgrounds
+.field-issue-status-1 {
+  background-color: $issue-status-1;
+  border-bottom: 2px solid $issue-grey;
+}
+
+.field-issue-status-2 {
+  background-color: $issue-status-2;
+  border-bottom: 2px solid $issue-green;
+}
+
+.field-issue-status-3,
+.field-issue-status-4,
+.field-issue-status-5,
+.field-issue-status-6,
+.field-issue-status-16 {
+  background-color: $issue-status-3;
+  border-bottom: 2px solid $issue-blue;
+}
+
+.field-issue-status-7,
+.field-issue-status-18 {
+  background-color: $issue-status-7;
+  border-bottom: 2px solid nth($issue-pink, 2);
+}
+
+.field-issue-status-8 {
+  background-color: $issue-status-8;
+  border-bottom: 2px solid $issue-orange;
+}
+
+.field-issue-status-13 {
+  background-color: $issue-status-13;
+  border-bottom: 2px solid nth($issue-pink, 1);
+}
+
+.field-issue-status-14,
+.field-issue-status-15 {
+  background-color: $issue-status-14;
+  border-bottom: 2px solid $issue-light-green;
+}
+
+// Follow button
+// Part of the styles in _buttons.scss todo: reorganize
+.flag-project-issue-follow {
+  a.flag {
+    background-color: $follow-flag-grey;
+    @include background-image(linear-gradient(top, $follow-flag-light, $follow-flag-grey));
+    border: 1px solid $follow-flag-border;
+    display: inline-block;
+    @include border-radius();
+    text-align: center;
+    padding: 0.25em 0;
+    width: 6em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: $button-background-hover;
+      color: $white;
+      border: 1px solid $button-background-hover;
+    }
+  }
+  a.unflag-action {
+    background: $light-grey;
+    border: 1px solid $light-grey;
+  }
+  span.flag-tracker-count {
+    color: $dark-grey;
+    display: inline-block;
+    margin-top: 5px;
+  }
+}
+
+.extended-file-field-table-filename,
+.nodechanges-file-link {
+  max-width: 28em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.node-type-project-issue {
+  .flag-wrapper {
+    margin-bottom: 1.2em;
+  }
+  .block-project-issue {
+    .flag-wrapper {
+      text-align: center;
+      background: $white;
+      margin-bottom: 0;
+      padding: 2em 0;
+    }
+  }
+}
+
+.node-project-issue {
+  .logged-in #content & .submitted {
+    margin-bottom: 0;
+  }
+
+  // Prevent larger tables from expanding wider than the content area.
+  .field-name-field-issue-files table,
+  .field-name-field-issue-changes table.nodechanges-file-changes {
+    max-width: 580px;
+  }
+}
+
+// Since we set margins on the wrapper, floating it is more convenient.
+.issue-settings {
+  .form-item {
+    float: none;
+  }
+  .form-wrapper {
+    float: left;
+  }
+}
+#node_project_issue_form_group_issue_settings {
+  .form-wrapper {
+    // Remove margin between this and description for the whole row.
+    margin-bottom: 0;
+  }
+}
+
+.node-project_issue-form {
+  .form-item-title {
+    @include span-columns(6);
+  }
+  .issue-settings {
+    clear: none;
+    .form-type-textfield {
+      padding-right: 0;
+    }
+  }
+  #node_project_issue_form_group_issue_project_settings {
+    @include span-columns(6 omega);
+    .field-name-field-project {
+      @include span-columns(4, 6);
+      @include post(2, 6);
+    }
+    .field-widget-options-select {
+      margin-bottom: 0;
+    }
+  }
+  #node_project_issue_form_group_issue_settings {
+    @include span-columns(6);
+    & + .description {
+      clear: both;
+    }
+  }
+  // Add margin under description, which does not come with a margin.
+  .field-name-taxonomy-vocabulary-9 {
+    margin-top: .692em;
+  }
+  // Increase the width of these fields to span entire form width.
+  .form-item-title,
+  .form-item-taxonomy-vocabulary-9-und,
+  .field-name-field-issue-parent,
+  .field-name-field-issue-related {
+    input.form-text {
+      width: 100%;
+    }
+  }
+  .field-name-field-issue-category {
+    max-width: 25%;
+  }
+  .field-name-field-issue-priority {
+    max-width: 25%;
+  }
+  .field-name-field-issue-status {
+    max-width: 50%;
+  }
+  .field-name-field-issue-version {
+    max-width: 25%;
+  }
+  .field-name-field-issue-component {
+    max-width: 50%;
+  }
+  .field-name-field-issue-assigned {
+    max-width: 25%;
+  }
+}
+
+#drupalorg-issue-credit-form {
+  #edit-message {
+    width: 100%;
+  }
+  table {
+    width: inherit;
+    margin: 0.61538em 0;
+  }
+  .author {
+    text-align: center;
+  }
+  .number {
+    text-align: right;
+  }
+  textarea {
+    font-family: monospace;
+  }
+  .bar {
+    height: 1em;
+    background-color: $lime-green;
+    border-radius: 3px;
+    &.overflow {
+      background: none;
+      @include background-image(linear-gradient(left, $lime-green 0%, $lime-green 95%, rgba($lime-green,0) 100%));
+    }
+  }
+}

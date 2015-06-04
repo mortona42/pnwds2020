@@ -16,7 +16,7 @@ regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions_hidden[] = sidebar_first
 
-; Information added by drush on 2015-05-01
-version = "7.x-1.x"
+; Information added by drush on 2015-06-03
+version = "7.x-1.0-beta91"
 project = "cod"
-datestamp = "1430513448"
+datestamp = "1433290559"

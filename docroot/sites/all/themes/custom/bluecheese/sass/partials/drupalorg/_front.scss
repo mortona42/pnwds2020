@@ -1,0 +1,131 @@
+/**
+ * Front page
+ */
+
+.front #page {
+  margin-top: 1.385em;
+}
+
+#choose-drupal,
+#sites-with-drupal {
+  @include span-columns(4);
+}
+
+#community-map,
+#community-updates {
+  @include span-columns(6);
+}
+
+#community-updates {
+  @include omega;
+}
+
+/* Get started buttons */
+.front-get-started {
+  border: 1px solid nth($greys, 2);
+  border-width: 1px 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Case studies block */
+div.things-we-made-wrapper {
+  width: 300px;
+  overflow: hidden;
+  margin: 0 0 1em 0;
+}
+
+/* Help build D8 block */
+#develop-with-drupal {
+  @include span-columns(4 omega);
+  .logo {
+    @include span-columns(1 , 4);
+  }
+  .activities {
+    @include clearfix;
+  }
+  .intro {
+    background-color: $pale-yellow;
+    margin-bottom: 1.5em;
+    padding: 1em;
+  }
+}
+
+/* Current activity block (number of modules etc.) */
+.front-current-activity,
+.front-thisweek-activity {
+  td {
+    padding: 0;
+    white-space: nowrap;
+  }
+  td:first-child {
+    text-align: right;
+    padding-right: 0.4em;
+  }
+  th {
+    background: transparent;
+    font-weight: normal;
+    border-bottom: none;
+    padding: 0;
+  }
+  float: left;
+  margin-bottom: 1.385em;
+}
+.front-current-activity:first-child {
+  margin-right: 1.5em;
+}
+
+/* Links below current activity block */
+.front #content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* X people in Y countries */
+#front-drupal-stats {
+  @include span-columns(12 omega);
+  margin-top: 1.846em;
+  height: 6.923461em; /* 72px */
+  padding: 1.385em 0 0 64px;
+}
+#front-drupal-stats .inner  {
+  border-top: 1px solid $light-grey;
+  color: $grey;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.846em; /* 13px = 24px */
+  font-weight: 200;
+  line-height: 1.5em;
+  padding-top: 5px;
+  padding-left: 16px;
+}
+#front-drupal-stats em {
+  font-style: normal;
+  color: nth($greys, 10);
+}
+
+/* Text on the front page header */
+.region-highlighted p { // formally .standfirst
+  font-size: 1em;
+  line-height: 1.538461em;
+  padding-bottom: 1.538461em;
+  margin-top: 0.5em;
+  overflow: auto;
+}
+
+/* Search form */
+#header .form-item-search-block-form label {
+  color: $white;
+  display: block;
+  @include header-font;
+  font-size: 1.61538em;  /* 1.61538 * 13 = 21px */
+  font-weight: normal;
+  margin: 0 0 .5em 0;
+}
+
+.front #search-theme-form-advanced {
+  display: block;
+  margin: 9px 0 0 3px;
+  .fieldset-legend {
+    background: none;
+  }
+}

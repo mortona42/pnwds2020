@@ -1,0 +1,9 @@
+/* My issues */
+.view-project-issue-user-issues-searchapi .project-title {
+  font-weight: bold;
+}
+
+/* My projects */
+.view-project-issue-user-projects caption {
+  @include h2;
+}

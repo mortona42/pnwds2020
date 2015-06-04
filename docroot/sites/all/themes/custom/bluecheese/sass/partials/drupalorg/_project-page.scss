@@ -1,0 +1,71 @@
+// Project image
+.field-name-field-project-images {
+  clear: right;
+  float: right;
+  margin: 0 0 0.692em 20px;
+
+  .node-form & {
+    margin-left: 0;
+    clear: none;
+    float: none;
+  }
+}
+
+// Project information section
+.project-info .count {
+  font-weight: bold;
+}
+
+.node .field-name-field-supporting-organizations {
+  .field-collection-item-field-supporting-organizations {
+    margin-bottom: .4615em; // 6px
+  }
+  .field-name-field-organization {
+    float: left;
+    padding-right: 0.5em;
+  }
+}
+
+// Project links at the bottom
+.node-project-module ul.links {
+  margin: 1em 0;
+}
+
+// Project Releases Tables
+table.releases tr.ok td {
+  background-color: nth($yellow-green, 2);
+  border-bottom: 1px solid nth($yellow-green, 1);
+}
+
+table.releases tr.release-dev td {
+  background-color: nth($light-red, 2);
+  border-bottom: 1px solid $messages-error;
+}
+
+table.releases td {
+  vertical-align: middle;
+}
+
+#content table.releases td ul.links {
+  margin: 0;
+  padding: 0;
+}
+
+table.releases td.release-icon {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+table.releases td.release-icon img {
+  display: block;
+}
+
+table tr.notrecommended td {
+  background: nth($light-red, 2);
+  border-bottom: 1px solid $messages-error;
+}
+
+.view-project-release-download-table div.warning {
+  margin: 0;
+  width: 99%;
+}

@@ -1,0 +1,61 @@
+/* DA election pages */
+/* Candidate pages */
+.election-candidate .field-label {
+  margin: 1em 0 0.45em;
+}
+
+.election-candidate .replies-header {
+  margin-top: 2em;
+}
+
+.election-candidate div.reply {
+  border: none;
+  border-left: solid 1px nth($greys, 2);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+.election-candidate .reply-body .field-label {
+  display: none;
+}
+
+.election-candidate .reply-links {
+  margin-top: 0.5em;
+}
+
+.election-candidate .reply-links a {
+  margin-right: 0.5em;
+}
+
+/* List of candidates */
+#content .view-nominations ul {
+  padding-left: 0;
+}
+
+#content .view-nominations .views-row {
+  @include span-columns(4,8);
+}
+
+#content .view-nominations .views-row-even {
+  margin-right: 0;
+}
+
+#content .view-nominations .views-row-odd {
+  clear: left;
+}
+
+.view-nominations .election-candidate-name {
+  font-size: 1.538em;
+  line-height: 1.35em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.view-nominations .views-field {
+  margin-bottom: 0.5em;
+}
+
+.view-nominations .views-label {
+  display: none;
+}

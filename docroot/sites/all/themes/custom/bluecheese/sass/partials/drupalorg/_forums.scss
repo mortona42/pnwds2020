@@ -1,0 +1,117 @@
+/**
+ * Forums
+ */
+/* Limit width of forum pages to 8 columns */
+.node-type-forum #main {
+  @include span-columns(8);
+}
+
+.forum-topic-navigation {
+  margin-bottom: 10px;
+}
+
+/* #forum td > td {
+  border: 1px solid #f0f;
+}*/
+
+#forum ul {
+  padding: 0;
+}
+
+#forum tr td.container {
+  padding-left: 10px;
+}
+
+#forum td.forum .icon {
+  background-image: none;
+  width: auto;
+  margin: 0;
+}
+
+#forum tr td.container .name {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 3px; /*@todo: fix sprites here ;*/
+  padding: 0px 0 5px 20px;
+  min-width: 20px;  /* IE7 hack */
+}
+
+#forum div.indent {
+  margin-left: 30px;
+}
+
+#forum tr td.forum {
+  background: none;
+  padding: 0.25em 0.5em;
+}
+
+#forum tr td.forum .name {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 -155px; /*@todo:fix sprites here ;*/
+  min-width: 20px;  /* IE7 hack */
+}
+
+#forum tr td.forum .name,
+#forum .description {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+#forum .description {
+  font-size: 0.9em;
+}
+
+#content #forum .submitted {
+  color: $black;
+  font-size: 1em;
+  line-height: $line-height;
+  margin-bottom: 0.75em;
+}
+
+td.icon {
+  margin: 5px 0 0 0;
+}
+
+.icon16 {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.forum-default,
+.forum-hot {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 -155px;
+}
+
+.forum-hot-new,
+.forum-new {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 -410px;
+}
+
+.forum-closed {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 -380px;
+}
+
+.forum-sticky {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: 0 5px;
+}
+
+// Forum Action Links
+
+.page-forum #content ul.action-links {
+  padding-left: .5em;
+
+  li {
+    list-style-type: none;
+
+    a {
+      display: inline-block;
+      padding-left: 1.4em;
+      background: transparent $sprite-small-icons no-repeat;
+      background-position: 0 -415px;
+    }
+  }
+}

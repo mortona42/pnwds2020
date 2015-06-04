@@ -30,7 +30,7 @@ features_exclude[dependencies][page_manager] = page_manager
 features_exclude[dependencies][strongarm] = strongarm
 install_option = cod
 
-; Information added by drush on 2015-05-01
+; Information added by drush on 2015-06-04
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1430468831"
+datestamp = "1433383292"

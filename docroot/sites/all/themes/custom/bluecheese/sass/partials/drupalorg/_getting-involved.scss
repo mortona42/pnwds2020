@@ -1,0 +1,26 @@
+/**
+ * Getting involved page
+ */
+#content .getting-involved,
+#content .community-spotlight {
+  @include span-columns(4,8);
+}
+
+#content .community-spotlight {
+  @include omega;
+}
+
+/* Drupal.org activity block */
+#aside #block-drupalorg-drupalorg-activity {
+  background: $white;
+}
+
+/* todo: check if this is needed */
+.view-drupalorg-community-spotlight.view-display-id-block_1 .node-footer .links {
+  display: block;
+}
+/*
+.view-drupalorg-community-spotlight.view-display-id-block_1 .node-footer .separator {
+  display: none;
+}*/
+

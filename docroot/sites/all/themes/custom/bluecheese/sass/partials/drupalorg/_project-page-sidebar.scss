@@ -1,0 +1,38 @@
+// Issue cockpit block
+#aside-region .block-project-issue, #homebox .block-project_issue { // Homebox uses an underscore.
+  // Search issues
+  .form-item {
+    display: inline;
+    padding-right: 0.5em;
+  }
+  form a {
+    display: block;
+  }
+
+  // Header styling
+  h3 {
+    color: nth($greys, 1);
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  // Sparklines
+  .metric-label {
+    display: inline-block;
+    width: 7.6em;
+    text-align: right;
+  }
+}
+
+// Maintainers block
+#block-versioncontrol-project-project-maintainers {
+  div.vc-commit-times {
+    color: $dark-grey;
+    font-size: 0.92307em; // 0.92307 * 13px = 12px
+    margin-bottom: 0.5em;
+  }
+
+  span.vc-commits {
+    white-space: nowrap;
+  }
+}

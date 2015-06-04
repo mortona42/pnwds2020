@@ -1,0 +1,19 @@
+#content .view-user-mentees .view-content .item-list {
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    @include clearfix;
+    float: left;
+    margin: 0 1em 1em 0;
+    padding: 0 .5em .5em .5em;
+    text-align: center;
+    width: auto;
+  }
+
+  img {
+    height: auto;
+    max-width: 60px;
+  }
+}

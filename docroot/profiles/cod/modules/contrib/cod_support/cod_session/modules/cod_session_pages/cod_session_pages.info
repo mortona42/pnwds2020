@@ -2,7 +2,6 @@ name = COD Session Pages
 description = Manage Moderated Sessions, Session Items, and Voting
 core = 7.x
 package = COD Pages
-install_option = cod
 dependencies[] = cod_events_pages
 dependencies[] = cod_session
 dependencies[] = cod_session_management_pages
@@ -21,8 +20,9 @@ features[panelizer_defaults][] = node:schedule_item:default:default
 features[panelizer_defaults][] = node:session:default:default
 features[variable][] = panelizer_defaults_node_schedule_item
 features[variable][] = panelizer_defaults_node_session
+install_option = cod
 
-; Information added by drush on 2015-05-01
+; Information added by drush on 2015-06-04
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1430468831"
+datestamp = "1433383292"

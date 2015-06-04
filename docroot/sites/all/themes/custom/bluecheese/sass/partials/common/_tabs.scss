@@ -1,0 +1,44 @@
+/**
+ * Tabs (local tasks, subtasks)
+ */
+#tabs {
+  margin-bottom: 1.385em;
+}
+#tabs ul.tabs {
+  display: block;
+  border: 0;
+  padding: 0;
+}
+#tabs ul.tabs li {
+  float: left;
+  margin-right: 0.5em;
+}
+#tabs ul.tabs li a {
+  background-color: transparent;
+  border: 0;
+  color: $dark-green;
+  display: block;
+  padding: 0.231em 0.615em;
+  margin: 0;
+}
+#tabs ul.tabs li a:hover,
+#tabs ul.tabs li a:focus,
+#tabs ul.tabs li.active a,
+#tabs ul.primary li.parent-active a:focus,
+#tabs ul.primary li.parent-active a:hover {
+  background: $dark-green;
+  color: $white;
+  @include border-radius(3px);
+}
+#tabs ul.primary li.parent-active a {
+  background: $light-yellow;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-weight: bold;
+}
+#tabs ul.secondary {
+  color: $dark-green;
+  background: $light-yellow;
+  @include border-radius(3px);
+  font-size: 0.923em; /* 0.923 * 13px = 12px */
+}

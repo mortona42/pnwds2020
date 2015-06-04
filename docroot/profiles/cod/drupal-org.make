@@ -34,7 +34,7 @@ projects[adminimal_admin_menu][download][branch] = "7.x-1.x"
 projects[adminimal_admin_menu][download][revision] = "eca2f1c4"
 
 projects[advanced_help][type] = "module"
-projects[advanced_help][version] = "1.2"
+projects[advanced_help][version] = "1.3"
 projects[advanced_help][subdir] = "contrib"
 
 projects[apachesolr][type] = "module"
@@ -131,6 +131,10 @@ projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.7"
 
+; Allow contexts to load in information for existing contexts.
+; See https://www.drupal.org/node/2484541#comment-9899043 for more info.
+projects[ctools][patch][] = "http://drupal.org/files/issues/2484541-context-dependency-1.patch"
+
 projects[date][type] = "module"
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.9-rc1"
@@ -165,6 +169,10 @@ projects[entity][download][type] = "git"
 projects[entity][download][url] = "http://git.drupal.org/project/entity.git"
 projects[entity][download][branch] = "7.x-1.x"
 projects[entity][download][revision] = "4d76c5c2302e225fea2db7aba08d48f3558bf275"
+
+projects[entity_embed][type] = "module"
+projects[entity_embed][subdir] = "contrib"
+projects[entity_embed][version] = "1.0-alpha1"
 
 projects[entitycache][type] = "module"
 projects[entitycache][subdir] = "contrib"
@@ -220,20 +228,30 @@ projects[field_collection][type] = "module"
 projects[field_collection][subdir] = "contrib"
 projects[field_collection][version] = "1.0-beta8"
 
+projects[file_entity][type] = "module"
+projects[file_entity][subdir] = "contrib"
+projects[file_entity][download][type] = "git"
+projects[file_entity][download][url] = "http://git.drupal.org/project/file_entity.git"
+projects[file_entity][download][branch] = "7.x-2.x"
+projects[file_entity][download][revision] = "5effd7a"
+
 projects[flag][type] = "module"
 projects[flag][subdir] = "contrib"
 projects[flag][version] = "3.6"
 
 projects[inline_conditions][type] = "module"
-projects[inline_conditions][version] = "1.0-alpha4"
 projects[inline_conditions][subdir] = "contrib"
+projects[inline_conditions][download][type] = "git"
+projects[inline_conditions][download][url] = "http://git.drupal.org/project/inline_conditions.git"
+projects[inline_conditions][download][branch] = "7.x-1.x"
+projects[inline_conditions][download][revision] = "3dd9495e0a7b95f7e8a29141a8860b073cba2b6a"
 
 projects[inline_entity_form][type] = "module"
 projects[inline_entity_form][version] = "1.5"
 projects[inline_entity_form][subdir] = "contrib"
 
 projects[i18n][type] = "module"
-projects[i18n][version] = "1.12"
+projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.5"
@@ -247,6 +265,17 @@ projects[libraries][version] = "2.2"
 projects[link][type] = "module"
 projects[link][subdir] = "contrib"
 projects[link][version] = "1.3"
+
+projects[media][type] = "module"
+projects[media][subdir] = "contrib"
+projects[media][download][type] = "git"
+projects[media][download][url] = "http://git.drupal.org/project/media.git"
+projects[media][download][branch] = "7.x-2.x"
+projects[media][download][revision] = "9f7142b"
+
+projects[media_oembed][type] = "module"
+projects[media_oembed][subdir] = "contrib"
+projects[media_oembed][version] = "2.3"
 
 projects[module_filter][type] = "module"
 projects[module_filter][subdir] = "contrib"
@@ -271,6 +300,17 @@ projects[oauthconnector][download][url] = "http://git.drupal.org/project/oauthco
 projects[oauthconnector][download][branch] = "7.x-1.x"
 projects[oauthconnector][download][revision] = "0ce7ac9614710c0f68d0a58cb4ae4667f8bd6fa7"
 
+projects[oembed][type] = "module"
+projects[oembed][subdir] = "contrib"
+projects[oembed][download][type] = "git"
+projects[oembed][download][url] = "http://git.drupal.org/project/oembed.git"
+projects[oembed][download][branch] = "7.x-1.x"
+projects[oembed][download][revision] = "9aa5303"
+
+; Remove the media submodule as it conflicts with the Media: oEmbed module.
+; https://drupal.org/node/2269745#comment-8796261
+projects[oembed][patch][] = "https://drupal.org/files/issues/remove-media-submodule-2269745-2.patch"
+
 projects[og][type] = "module"
 projects[og][subdir] = "contrib"
 projects[og][download][type] = "git"
@@ -290,9 +330,9 @@ projects[og][patch][] = "http://drupal.org/files/og_ui-group_node_add_theme-1800
 ; http://www.drupal.org/node/2357459
 projects[og][patch][] = "http://drupal.org/files/issues/og_id_user_access.patch"
 
-; og_group_ref field should respect og_user_access()
-; http://drupal.org/node/1902086#comment-7026516
-; projects[og][patch][] = "http://drupal.org/files/1902086-og-ref-respect-og-user-access-3.patch"
+; OG Context is exiting prematurely, not setting the correct conference in some cases.
+; https://www.drupal.org/node/2493277#comment-9950303
+projects[og][patch][] = "http://drupal.org/files/issues/2493277-og-context-premature-empty-1.patch"
 
 projects[og_menu][type] = "module"
 projects[og_menu][subdir] = "contrib"
@@ -331,6 +371,9 @@ projects[panels][patch][1402860] = "http://drupal.org/files/issues/panelizer_is-
 ; IPE Insufficient for working with Panelizer Revisioning
 ; https://www.drupal.org/node/2462331#comment-9778921
 projects[panels][patch][2462331] = "http://drupal.org/files/issues/2462331-4.patch"
+
+; Allow CSS keyword replacements
+projects[panels][patch][1441218] = "http://drupal.org/files/issues/panels-css-keywords-1441218-65.patch"
 
 projects[panels_tabs][type] = "module"
 projects[panels_tabs][subdir] = "contrib"
@@ -378,6 +421,14 @@ projects[strongarm][download][type] = "git"
 projects[strongarm][download][url] = "http://git.drupal.org/project/strongarm.git"
 projects[strongarm][download][branch] = "7.x-2.x"
 projects[strongarm][download][revision] = "5a2326ba67"
+
+projects[taxonomy_machine_name][type] = "module"
+projects[taxonomy_machine_name][subdir] = "contrib"
+projects[taxonomy_machine_name][version] = "1.0"
+
+; Taxonomy validator should transform dashes to underscores
+; https://www.drupal.org/node/2496141
+projects[taxonomy_machine_name][patch][2496141] = "http://drupal.org/files/issues/taxonomy_validator-2496141-1.patch"
 
 ; For COD releases, we peg it to a release of ticket. For dev, we use the dev branch.
 ; Currently using the ticket_reservation branch for COD.
@@ -452,7 +503,7 @@ projects[votingapi][version] = "2.12"
 projects[votingapi][subdir] = "contrib"
 
 projects[webform][type] = "module"
-projects[webform][version] = "4.8"
+projects[webform][version] = "4.9"
 projects[webform][subdir] = "contrib"
 
 ; Contributed themes.

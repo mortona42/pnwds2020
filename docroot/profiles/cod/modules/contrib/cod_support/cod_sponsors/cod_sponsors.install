@@ -94,3 +94,13 @@ function cod_sponsors_update_7006() {
   );
   features_revert($revert);
 }
+
+/**
+ * Change Update the sponsors views blocks to panes.
+ */
+function cod_sponsors_update_7007() {
+  $revert = array(
+    'cod_sponsors' => array('views_view'),
+  );
+  features_revert($revert);
+}

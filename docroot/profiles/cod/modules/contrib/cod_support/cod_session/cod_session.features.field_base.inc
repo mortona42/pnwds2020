@@ -72,8 +72,8 @@ function cod_session_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'proposed' => 'Proposed',
-        'accepted' => 'Accepted',
+        'proposed' => 'proposed',
+        'accepted' => 'accepted',
       ),
       'allowed_values_function' => '',
     ),

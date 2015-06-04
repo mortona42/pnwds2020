@@ -1,0 +1,68 @@
+/**
+ * Git Styles
+ */
+#content .view-commitlog-commit-items ul,
+#content .view-vc-git-project-global-commits ul,
+#content .view-vc-git-project-user-commits ul,
+#content .view-vc-git-project-commit-view ul {
+  padding-left: 0;
+}
+.view-commitlog-commit-items ul,
+.view-vc-git-project-user-commits ul,
+.view-vc-git-project-commit-view ul {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+.view-commitlog-commit-items li div.title,
+.view-vc-git-project-global-commits li div.title,
+.view-vc-git-project-user-commits li div.title,
+.view-vc-git-project-commit-view li div.title {
+  color: nth($greys, 1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em; /* 1 * 13  = 13 */
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+.view-vc-git-project-global-commits li .views-field-path,
+.view-commitlog-commit-items li .views-field-path,
+.view-vc-git-project-user-commits li .views-field-path,
+.view-vc-git-project-commit-view li .views-field-path {
+  margin: 0 0 0.5em 10px;
+  clear: both;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed nth($greys, 4);
+}
+.view-commitlog-commit-items li .field-content pre,
+.view-vc-git-project-global-commits li .field-content pre,
+.view-vc-git-project-user-commits li .field-content pre,
+.view-vc-git-project-commit-view li .field-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 5px;
+  margin: 5px 0 20px 0;
+  border-bottom: 1px solid nth($greys, 4);
+}
+.view-commitlog-commit-items .field-content,
+.view-vc-git-project-global-commits .field-content,
+.view-vc-git-project-user-commits .field-content,
+.view-vc-git-project-commit-view .field-content {
+  margin: 0 0 2em 0;
+  padding: 0 0 1em 0;
+}
+.view-commitlog-commit-items .attribtution,
+.view-vc-git-project-global-commits .attribtution,
+.view-vc-git-project-user-commits .attribtution,
+.view-vc-git-project-commit-view .attribtution {
+  padding-bottom: 10px;
+}
+.views-field-visual-diffstat {
+  float: right;
+  margin-top: -25px;
+}
+/*
+ * Short-term change until we can get hover-text
+ * working on the changed lines text
+ */
+.views-field-changed-lines {
+  display: none;
+}

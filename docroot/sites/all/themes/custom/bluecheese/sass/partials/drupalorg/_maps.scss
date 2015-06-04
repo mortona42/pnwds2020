@@ -1,0 +1,98 @@
+// Front page and organization pages maps
+
+#organization-map,
+.homepage-map {
+  position: relative;
+}
+
+.homepage-map {
+  background: $map-big;
+  height: 0;
+  white-space: nowrap;
+  width: 100%;
+  @media all and (min-width: 470px) {
+    height: 250px;
+    width: 450px;
+  }
+}
+.drupalorg-map-pin {
+  position: absolute;
+}
+.homepage-map .homepage-pin {
+  display: none;
+}
+.drupalorg-map-pin:before,
+.homepage-map .homepage-pin:before {
+  content: '•';
+  display: inline-block;
+  font-size: 20px;
+  height: 10px;
+  left: -1px;
+  margin-right: 5px;
+  position: relative;
+  width: 10px;
+  top: -4px;
+}
+.homepage-pin-doc:before {
+  color: $tabs-green;
+}
+.homepage-pin-forum:before {
+  color: $tabs-violet;
+}
+
+.drupalorg-map-pin:before,
+.homepage-pin-commit:before {
+  color: $tabs-red;
+}
+
+.homepage-map .homepage-pin .content {
+  background: $white;
+  position: absolute;
+  border: 1px solid nth($greys, 12);
+  @include border-radius();
+  padding: 1px 4px;
+  bottom: 11px;
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: auto;
+}
+.homepage-map .homepage-pin-east .content {
+  right: -40px;
+}
+.homepage-map .homepage-pin-west .content {
+  left: -40px;
+}
+.homepage-map .homepage-pin:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -2px;
+  right: 0px;
+  background: $sprite-small-icons no-repeat 0 -734px;
+}
+.homepage-map .drupalcon a {
+  font-weight: bold;
+  color: nth($blues, 4);
+}
+
+#organization-map {
+  background: $map-small;
+  width: 300px;
+  height: 152px;
+}
+#organization-map .pin,
+.homepage-map .homepage-pin {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 -5px -5px;
+}
+
+#organization-map .latitude,
+#organization-map .longitude,
+.homepage-map .latitude,
+.homepage-map .longitude {
+  display: none;
+}

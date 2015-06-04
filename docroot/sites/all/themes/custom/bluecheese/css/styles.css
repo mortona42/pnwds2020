@@ -1,0 +1,4654 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearleft {
+  clear: left;
+}
+
+.clearright {
+  clear: right;
+}
+
+.right {
+  clear: right;
+  float: right;
+  margin: 0 0 0.692em 20px;
+}
+
+.left {
+  clear: left;
+  float: left;
+  margin: 0 20px 0.692em 0;
+}
+
+img.no-clear {
+  clear: none;
+}
+
+.drupalorg-site-api .ctools-collapsible-container {
+  margin-bottom: 5px;
+}
+
+ol.code-lines,
+ol.code-lines li {
+  margin: 0 0 0 30px;
+}
+
+#autocomplete {
+  background-color: white;
+  border: 1px solid #9d9d93;
+}
+#content #autocomplete ul {
+  padding-left: 5px;
+}
+#content #autocomplete li {
+  list-style-type: none;
+}
+
+.field-widget-entityreference-autocomplete .field-multiple-table .form-type-textfield {
+  position: relative;
+}
+
+body {
+  color: #222222;
+  background-color: white;
+  font-size: 0.8125em;
+}
+
+body,
+caption,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset {
+  font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+  line-height: 1.384615em;
+}
+
+h1,
+.h1,
+.view-drupalorg-supporters h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.385em;
+  margin: 0 0 0.692em;
+}
+
+h2, .h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.538em;
+  /* * 13px = 20px */
+  font-weight: normal;
+  line-height: 1.35em;
+  /* * 20px = 27px */
+  margin: 0 0 0.45em;
+}
+
+.block h2 {
+  margin-top: 0;
+}
+
+h3,
+.h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.231em;
+  line-height: 1.6875em;
+  margin: 0 0 0.5625em;
+}
+
+h3.top {
+  margin-top: 0;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-size: 1em;
+  line-height: 1.385em;
+  font-weight: bold;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+  color: #666666;
+}
+
+#content h4,
+#content .h4,
+#content h5,
+#content .h5,
+#content h6,
+#content .h6 {
+  margin: 0.5em 0 0.166667em;
+}
+
+p {
+  margin-bottom: 1.385em;
+}
+
+a,
+a:visited,
+a:active {
+  color: #0678be;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0678be;
+  text-decoration: underline;
+}
+
+a.all {
+  font-weight: bold;
+}
+
+a.tabledrag-handle .handle {
+  height: 2em;
+  width: 2em;
+}
+
+code,
+tt,
+pre {
+  background-color: #f6f6f2;
+  font-family: "Bitstream Vera Sans Mono", Monaco, "Lucida Console", monospace;
+  font-size: 0.9230em;
+  padding: 1px;
+  white-space: pre-wrap;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  background: white url(../images/blockquote-66.png) no-repeat 0 0;
+  margin: 1.384em 40px 1.384em 20px;
+  padding-left: 30px;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+
+acronym {
+  border-bottom: 1px dotted #666666;
+}
+
+sup {
+  font-size: 0.769em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+sub {
+  font-size: 0.923em;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+small {
+  font-size: 0.923em;
+}
+
+sup sup sup, sub sub sub, small small small {
+  font-size: 9px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  vertical-align: baseline;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #d8d8d2;
+  height: 1px;
+}
+
+dl {
+  margin-bottom: 0.692em;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0.692em 0 0;
+}
+
+dl.documentation dt {
+  font-size: 1.23076em;
+  margin-top: 0.563em;
+}
+dl.documentation dd {
+  padding-left: 0;
+}
+
+fieldset {
+  border: 1px solid #dddddd;
+  padding: 0.692em;
+  margin: 0 0 1.384em 0;
+}
+fieldset legend {
+  padding: 0 0.25em;
+}
+html.js fieldset.collapsed {
+  height: auto;
+}
+fieldset table:not(.sticky-headers) {
+  width: 100%;
+}
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) {
+  background: #f6f6f2;
+  border: none;
+}
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) legend {
+  padding: 0;
+  margin-bottom: .692em;
+  float: left;
+}
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) legend + * {
+  clear: both;
+}
+html.js fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced).collapsible legend {
+  width: 100%;
+}
+html.js fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced).collapsible .fieldset-legend {
+  background-position: 10px 60%;
+  margin: -0.692em;
+  padding: 0;
+}
+html.js fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced).collapsible.collapsed {
+  padding-bottom: 0;
+}
+html.js fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced).collapsible.collapsed .fieldset-legend {
+  background-position: 10px 50%;
+}
+html.js fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced).collapsible .fieldset-title {
+  display: inline-block;
+  padding: .692em .692em .692em 1.75em;
+  width: 100%;
+}
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) .summary {
+  display: none;
+}
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) a.link-button,
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) a.link-button:link,
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) a.link-button:visited,
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) a.link-button:active,
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) input[type="submit"],
+fieldset:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) button {
+  background: #9d9d93;
+}
+fieldset.filter-wrapper {
+  border-color: #eeeeee;
+  padding: 0.692em;
+}
+fieldset.filter-wrapper legend {
+  display: none;
+}
+fieldset.filter-wrapper .fieldset-wrapper {
+  display: block !important;
+}
+html.js fieldset.filter-wrapper.collapsed {
+  border-width: 1px;
+  border-top: 0;
+}
+fieldset.filter-wrapper .form-item {
+  padding: 0;
+}
+fieldset .filter-guidelines {
+  display: none;
+}
+fieldset .filter-help {
+  margin: 0;
+  padding: .1em 0;
+}
+
+#aside .block {
+  background: #f6f6f2;
+}
+#aside .block-inner {
+  padding: 1em;
+}
+
+.book-navigation {
+  clear: both;
+}
+.book-navigation ul.menu, .block .book-navigation ul.menu {
+  border-top: 1px solid #e1e1db;
+  display: block;
+  padding: 1em 0 0 3em;
+}
+.book-navigation .page-links {
+  border-top: 1px solid #e1e1db;
+  border-bottom: 1px solid #e1e1db;
+  margin-bottom: 20px;
+}
+
+#aside #block-drupalorg-handbook-meta-sidebar,
+#aside #block-drupalorg-handbook-about-page {
+  background: white;
+}
+
+/* action-buttons should be big green boxes */
+input.action-button,
+a.action-button {
+  display: inline-block;
+  color: white;
+  background: #9fc748;
+  padding: 0.643em 1.5em;
+  font-size: 1.077em;
+  /* 14pt */
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input.action-button:focus,
+input.action-button:hover,
+a.action-button:focus,
+a.action-button:hover {
+  text-decoration: none;
+  background: #8aaf3c;
+  color: white;
+}
+
+.comment {
+  border-top: 1px solid #d8d8d2;
+  margin-top: 0.692em;
+  padding-top: 0.692em;
+}
+.comment > h3 {
+  margin-bottom: 0;
+}
+.comment .submitted {
+  font-style: italic;
+}
+.comment .submitted a.username {
+  font-style: normal;
+  font-size: 1.2307em;
+}
+.comment .submitted time {
+  border-bottom: 1px dotted;
+  cursor: pointer;
+}
+.comment .permalink-wrapper {
+  float: right;
+  margin: -.2708em 0 0 0.5em;
+}
+.comment .permalink-wrapper .permalink {
+  font-weight: normal;
+  font-style: normal;
+  color: #999999;
+}
+.comment .permalink-wrapper .permalink:hover, .comment .permalink-wrapper .permalink:focus {
+  color: #0678be;
+}
+.comment .links {
+  float: right;
+}
+.comment .new {
+  float: right;
+  color: white;
+  background-color: #999999;
+  padding: 3px 6px;
+  margin: 0 0 0 0.5em;
+  text-transform: uppercase;
+  font-size: 0.8333em;
+  line-height: 1em;
+}
+.comment .picture {
+  float: left;
+  width: 40px;
+}
+.comment > h3, .comment .submitted, .comment .content {
+  margin-left: 50px;
+}
+.comment p:last-child {
+  margin-bottom: 0;
+}
+#content .comment ul:last-child {
+  margin-bottom: 0;
+}
+#content .comment.system-message .submitted {
+  float: right;
+  font-size: .7692em;
+  margin: .6em .6em 0 0;
+}
+.comment.system-message .submitted time {
+  display: none;
+}
+.comment.system-message:hover .submitted time, .comment.system-message:focus .submitted time {
+  display: inline;
+}
+.comment.system-message .permalink {
+  color: #666666;
+}
+.comment.system-message .new {
+  margin: 4px 4px 0 0;
+}
+.comment.system-message .content {
+  background: #f6f6f2;
+  color: #666666;
+  margin-left: 0;
+  border-left: 10px solid #9d9d93;
+  font-size: .923em;
+  padding: .5em 10px;
+}
+.comment.system-message.testing-failed .content {
+  border-left-color: #ffdccd;
+}
+.comment.system-message.queued-retesting .content {
+  border-left-color: #ffcf73;
+}
+.comment.system-message.closed .content {
+  border-left-color: #fc8596;
+}
+.comment.system-message.committed .content {
+  border-left-color: #8aaf3c;
+}
+.comment.system-message.committed .content a {
+  font-weight: bold;
+}
+#content .comment.system-message.committed .content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.comment.system-message.committed .content li {
+  margin-bottom: 0.5em;
+}
+.comment.system-message.committed .content li:last-child {
+  margin-bottom: 0;
+}
+
+.user-signature {
+  margin: 1.5em 0 0 0;
+  color: #666666;
+  font-size: 0.92307em;
+}
+
+.indented {
+  margin-left: 30px;
+}
+
+.indented .indented .indented .indented {
+  margin-left: 0;
+}
+
+[dir=rtl] .indented .indented .indented .indented {
+  margin-right: 0;
+}
+
+#content .node {
+  margin-bottom: 1.385em;
+}
+
+#content .node-sticky {
+  background-color: #f6f6f2;
+  padding: 10px;
+}
+
+#content .node-sticky h2.node-title {
+  margin-top: 0;
+}
+
+#content-top-region,
+#content,
+#content-bottom-region,
+#aside-region {
+  margin-bottom: 13px;
+}
+
+#content .submitted,
+#content .modified,
+#aggregator .feed-item-meta,
+#content .comment .links {
+  color: #666666;
+  font-size: 0.923em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.submitted time {
+  font-style: italic;
+}
+
+body.page-node #content .tabs {
+  float: right;
+}
+
+body.page-node #content .tabs ul.tabs li {
+  float: left;
+  display: block;
+  font-size: 0.92307em;
+  margin: 0 5px;
+  padding: 1px 4px;
+  text-decoration: none;
+}
+
+body.page-node #content .tabs ul.tabs li.active {
+  display: none;
+}
+
+.feed-source,
+#content .node-footer,
+#aggregator .feed-item-categories,
+.node .support,
+.field-field-assoc-benefit-restrictions,
+#block-drupalorg-handbook-license {
+  color: #666666;
+  font-size: 0.92307em;
+}
+
+div.codeblock {
+  background-color: #f6f6f2;
+  margin-bottom: .5em;
+}
+
+/**
+ * Footer
+ */
+#footer {
+  background-color: #f6f6f2;
+  font-size: 0.92307em;
+  /* 0.92307 * 13px = 12px */
+  line-height: 1.5em;
+  padding: 30px 0 20px;
+}
+#footer .doormat ul {
+  width: 17.94872%;
+  float: left;
+  margin-right: 2.5641%;
+  display: inline;
+}
+#footer .doormat ul:nth-child(5n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* Footer links */
+#footer-region li.first a {
+  color: #222222;
+}
+
+#footer-region a,
+#footer-region li.first a:hover {
+  color: #0678be;
+}
+
+/* Trademark block at the bottom */
+.region-footer .block {
+  border-top: 1px solid #e2e2df;
+  margin-top: 50px;
+  padding-top: 10px;
+}
+
+.region-footer .block .block-inner {
+  color: #666666;
+  text-align: center;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0 0.5ex;
+}
+
+.form-item,
+.form-checkboxes,
+.form-radios {
+  margin: 0;
+}
+
+.form-wrapper,
+.form-item-title,
+.text-format-wrapper {
+  margin-bottom: 0.692em;
+}
+.form-wrapper:last-child,
+.form-item-title:last-child,
+.text-format-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.filter-wrapper {
+  margin-bottom: 0;
+}
+
+.text-format-wrapper .description {
+  margin: 0;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item {
+  margin: 0.25em 0;
+}
+
+.form-item label {
+  font-weight: bold;
+}
+.form-item label.option {
+  font-weight: normal;
+}
+
+.description {
+  color: #6a6a60;
+  font-size: 0.8125em;
+}
+
+input, textarea, select {
+  margin: 0;
+  max-width: 100%;
+}
+
+.form-text,
+.form-textarea {
+  border: 1px solid #9d9d93;
+  padding: 5px;
+}
+
+html.js input.form-autocomplete {
+  background-position: 99% 6px;
+}
+html.js input.form-autocomplete.throbbing {
+  background-position: 99% -14px;
+}
+
+a.link-button,
+a.link-button:link,
+a.link-button:visited,
+a.link-button:active,
+input[type="submit"],
+button {
+  color: white;
+  background-color: #9fc748;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #9fc748), color-stop(50%, #96bc44));
+  background-image: -webkit-linear-gradient(top, #9fc748 50%, #96bc44 50%);
+  background-image: -moz-linear-gradient(top, #9fc748 50%, #96bc44 50%);
+  background-image: -o-linear-gradient(top, #9fc748 50%, #96bc44 50%);
+  background-image: linear-gradient(top, #9fc748 50%, #96bc44 50%);
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.38461em;
+  padding: 0 1em;
+  overflow: hidden;
+  text-align: center;
+}
+a.link-button:hover, a.link-button:focus,
+a.link-button:link:hover,
+a.link-button:link:focus,
+a.link-button:visited:hover,
+a.link-button:visited:focus,
+a.link-button:active:hover,
+a.link-button:active:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+button:hover,
+button:focus {
+  background-color: #8ab036;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #8ab036), color-stop(50%, #7e9e39));
+  background-image: -webkit-linear-gradient(top, #8ab036 50%, #7e9e39 50%);
+  background-image: -moz-linear-gradient(top, #8ab036 50%, #7e9e39 50%);
+  background-image: -o-linear-gradient(top, #8ab036 50%, #7e9e39 50%);
+  background-image: linear-gradient(top, #8ab036 50%, #7e9e39 50%);
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 0.92307em;
+  font-weight: bold;
+  padding: 0 1em;
+  line-height: 2.008em;
+  margin-right: 0.615384em;
+}
+
+a.link-button:focus,
+a.link-button:active {
+  outline: black dotted thin;
+}
+
+a.link-button:hover {
+  text-decoration: none;
+}
+
+.link-button span {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 36px;
+}
+
+input.default {
+  color: #888888;
+}
+
+.form-managed-file .form-file {
+  margin-right: 1em;
+}
+
+tr.odd.drag-previous, tr.even.drag-previous {
+  background: #e6fcb6;
+}
+
+form .field-multiple-table td.field-multiple-drag {
+  width: 40px;
+}
+
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
+  padding-right: 0;
+}
+
+tr.draggable span.warning {
+  margin-left: 0;
+}
+
+.vertical-tabs fieldset.vertical-tabs-pane {
+  padding: 0.692em 1em;
+}
+
+#user-profile-form .group-name {
+  overflow: hidden;
+  *zoom: 1;
+}
+#user-profile-form .group-name .field-name-field-first-name {
+  float: left;
+  margin-right: 1em;
+}
+#user-profile-form .group-name .form-type-textfield input,
+#user-profile-form .field-name-field-organizations .form-type-textfield input {
+  width: 20em;
+}
+
+.container-12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  padding: 0 10px;
+}
+
+#header,
+#footer,
+#page {
+  min-width: 960px;
+}
+
+/* todo: remove all grid classes post upgrade */
+.grid-1 {
+  width: 6.38298%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-2 {
+  width: 14.89362%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-3 {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-4 {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-5 {
+  width: 40.42553%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-6 {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-7 {
+  width: 57.44681%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-8 {
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-9 {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-10 {
+  width: 82.97872%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-11 {
+  width: 91.48936%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.grid-12 {
+  width: 100%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.omega {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+#header {
+  background-color: #56b3e6;
+}
+.drupalorg-site-security #header {
+  background: #843916;
+  background: linear-gradient(to bottom, #843916 0%, #c43d10 100%);
+}
+
+#header-left {
+  width: 57.44681%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+  padding-right: 8.51064%;
+  clear: left;
+}
+
+#header-right {
+  width: 40.42553%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+#header-content {
+  position: relative;
+  z-index: 2;
+}
+
+h1#site-name {
+  margin: 0;
+}
+
+div#site-name {
+  margin-bottom: 20px;
+}
+
+#site-name a {
+  display: block;
+  height: 63px;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 181px;
+}
+
+#site-name a:focus,
+#site-name a:active {
+  outline: white dotted thin;
+}
+
+#header-left h2 {
+  color: white;
+  font-size: 1.6153em;
+  font-weight: 200;
+  margin: 24px 0 12px 0;
+}
+
+#header-left-inner a {
+  color: white;
+}
+
+#header-right-inner {
+  margin-top: 46px;
+}
+
+/**
+ * jQuery styles
+ */
+/* Carousel on case-studies, a.d.o supporting-partners */
+.jcarousel-clip {
+  overflow: hidden;
+}
+
+ul.primary,
+ul.primary li,
+ul.primary li.active,
+ul.secondary,
+ul.secondary li,
+ul.secondary li.active {
+  display: inline;
+}
+
+ul.menu,
+ul.menu li,
+ul.primary,
+ul.primary li,
+ul.primary li a,
+ul.primary li.active a,
+ul.secondary,
+ul.secondary li,
+ul.secondary li a,
+ul.secondary li.active,
+ul.secondary li.active a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.item-list ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+  list-style-position: inherit;
+  list-style-type: none;
+}
+
+.block ul {
+  margin: 0;
+  padding: 0;
+}
+.block ul.menu {
+  padding: 0 0 0.25em 1em;
+}
+
+#content ul, #tinymce ul,
+ol,
+dd {
+  margin-bottom: 0.692em;
+  padding-left: 2em;
+}
+
+#content [dir=rtl] ul,
+[dir=rtl] ol {
+  padding-left: 0;
+  padding-right: 2em;
+}
+
+ol {
+  list-style: decimal outside;
+}
+ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+#aside .block ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.profile .item-list li,
+#aside .block .item-list li,
+#aside .block .links li,
+#homebox .block .menu li,
+#homebox .block .item-list li {
+  line-height: 1.2em;
+  margin: 0 0 0.6em 0;
+  padding: 0;
+  list-style: none;
+}
+
+#content .profile ul,
+#homebox ul,
+#homebox ol,
+#content .vertical-tabs-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+#content ul, #tinymce ul {
+  list-style-type: disc;
+}
+
+#content .item-list ul.flat,
+#content .item-list ul.links,
+#content .item-list ul.flat li,
+#content .item-list ul.links li,
+#content ul.flat,
+#content ul.links,
+#content ul.flat li,
+#content ul.links li,
+.vertical-tab-button {
+  list-style-type: none;
+  list-style-image: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.help,
+div.messages,
+div.warning,
+#block-system-help {
+  min-height: 1em;
+  padding: 1em 1em 1em 3.5em;
+}
+
+div.help a,
+div.messages a,
+div.warning a,
+#block-system-help a {
+  font-weight: bold;
+}
+
+div.messages {
+  margin-bottom: 10px;
+}
+div.messages ul {
+  margin: 0;
+}
+
+div.messages-multiple {
+  padding-bottom: 0;
+  padding-left: 4.5em;
+}
+
+div.messages-status {
+  background: #d4efcc url(../images/icon-success.png) 10px 14px no-repeat;
+}
+
+div.messages-status ul li {
+  list-style-image: url(../images/bullet-dot-green.png);
+}
+
+div.help,
+#block-system-help {
+  background: #cde4f2 url(../images/icon-help.gif) 10px 14px no-repeat;
+  margin-bottom: 20px;
+}
+
+div.help ul li,
+#block-system-help ul li {
+  list-style-image: url(../images/bullet-dot-blue.png);
+}
+
+div.more-help-link {
+  margin-bottom: .5em;
+}
+
+div.warning {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+span.warning {
+  color: #e3901b;
+  margin-left: .5em;
+}
+
+div.warning span.warning {
+  display: none;
+}
+
+div.messages-warning,
+div.warning {
+  background: #ffe69f url(../images/icon-warning.gif) 10px 14px no-repeat;
+}
+
+div.messages-warning ul li {
+  list-style-image: url(../images/bullet-dot-yellow.png);
+}
+
+div.messages-error, div.error {
+  background: #ebcccc url(../images/icon-error.png) 10px 14px no-repeat;
+}
+
+div.messages-error ul li {
+  list-style-image: url(../images/bullet-dot-red.png);
+}
+
+div.error {
+  padding: 1em 1em 1em 2.5em;
+}
+
+/* Creates a padded box for columns which mostly have lists, e.g. /start page */
+.narrow-box {
+  margin-bottom: 18px;
+  padding: 18px;
+}
+
+.narrow-box ul {
+  padding-left: 0 !important;
+}
+
+.narrow-box ul li {
+  list-style-type: none;
+}
+
+.narrow-box a.link-button {
+  margin: 0;
+}
+
+.narrow-box a.link-button span {
+  font-size: 0.92307em;
+  /* 0.92307 * 13px = 12px */
+  white-space: nowrap;
+}
+
+.narrow-box-list {
+  margin-bottom: 1.5em;
+}
+
+/**
+ * Navigation
+ */
+/* Main top navigation */
+#nav-header {
+  font-size: 0.923076em;
+  /* 12px */
+}
+#nav-header ul {
+  background: #064771;
+  float: right;
+  padding: 0 0.75em 0 0.75em;
+}
+#nav-header ul li {
+  float: left;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#nav-header a {
+  color: white;
+  display: block;
+  margin: 0.333333em 0.833333em;
+}
+#nav-header a.home {
+  float: left;
+  margin-left: 0;
+}
+#nav-header a:hover,
+#nav-header a:focus {
+  color: #a5e2ff;
+  /* Not a standard color, matches prototype */
+  text-decoration: none;
+}
+
+/* User navigation: Homepage, Dashboard, Login */
+#nav-masthead {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  display: block;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+#nav-masthead ul li {
+  list-style: none;
+  float: left;
+  font-size: 0.923076em;
+  /* 12px */
+  margin-right: 0.615384em;
+}
+
+#nav-masthead ul li a {
+  background-color: #0d7dc1;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0.416666em .75em 0.416666em 0.615384em;
+  text-decoration: none;
+}
+
+#nav-masthead ul li.active a,
+#nav-masthead ul li:hover a,
+#nav-masthead ul li:focus a {
+  background-color: white;
+  color: black;
+}
+
+/* Logged in user navigation */
+#userinfo {
+  float: left;
+  margin: 5px 0 0 .75em;
+}
+
+#userinfo a {
+  color: white;
+  font-size: 0.92307em;
+  /* 0.92307 * 13 = 12px */
+  margin: 0 1em 0 0;
+  text-decoration: none;
+}
+
+/* Content Navigation Tabs */
+#nav-content ul {
+  *zoom: 1;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 1.154em;
+}
+#nav-content ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav-content ul li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+#nav-content ul li a {
+  color: #0678be;
+  display: block;
+  float: left;
+  height: 32px;
+  padding: 5px 11px 0 11px;
+  padding: 4px 12px 5px 12px;
+}
+
+#nav-content li.active,
+#nav-content li.active-parent a {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-bottom: 0;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
+}
+
+#nav-content li.active a.active,
+#nav-content li.active-parent a {
+  padding: 0.307692em 0.692307em 0.846153em 0.692307em;
+}
+
+#nav-content li.active a.active,
+#nav-content li.active-parent a,
+#nav-content li a:hover,
+#nav-content li a:focus,
+#nav-content li.active-parent a {
+  color: black;
+}
+
+#nav-content li a:hover,
+#nav-content li a:focus {
+  text-decoration: none;
+}
+
+/* Dots between links at the bottom of book, forum nodes */
+.node-footer .links li + li:before {
+  content: " ⋅ ";
+}
+
+/* User picture on the node */
+.node .picture {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+#page {
+  margin-bottom: 2.077em;
+  margin-top: 1.385em;
+}
+
+.page-title-wrapper {
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#main {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  z-index: 1;
+}
+
+.one-sidebar #main {
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#aside {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* todo: remove grid classes post upgrade */
+.one-sidebar #main .grid-4 {
+  width: 48.3871%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+
+.one-sidebar #main .grid-4.omega {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* todo: check if needed, page-titles are h1 everywhere */
+div#page-title {
+  margin-top: 0;
+}
+
+#page-subtitle {
+  margin-top: 0;
+}
+
+.breadcrumb {
+  padding-bottom: 0;
+}
+
+/* 'Add X to dashboard' link */
+#page-tools {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  margin: 0.692em 0 0;
+  float: right;
+  text-align: right;
+}
+#page-tools li {
+  display: block;
+  padding: 0;
+}
+#page-tools a {
+  color: #96bc44;
+}
+#page-tools a.add {
+  background-image: url(../images/small-icons.png);
+  background-repeat: no-repeat;
+  background-position: right -188px;
+  padding-right: 18px;
+}
+
+#content-bottom-region {
+  clear: both;
+}
+
+#content .item-list .pager {
+  padding: 1em 0 0;
+  text-align: left;
+}
+
+.item-list ul.pager li {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.pager li.first {
+  padding: 0;
+}
+
+ul.pager a {
+  color: #2e6ab1;
+}
+
+.pager li.pager-current {
+  background-color: #2e6ab1;
+  color: white;
+}
+
+.page-search #project-solr-browse-projects-form {
+  background: none;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.page-search #project-solr-browse-projects-form label {
+  font-weight: normal;
+}
+
+.page-search #drupalorg-search-sort-form {
+  margin-bottom: 1em;
+}
+
+.page-search #drupalorg-search-sort-form .form-item {
+  margin-top: 0;
+}
+
+.page-search #edit-solrsort-wrapper label,
+.page-search #edit-solrsort-wrapper select {
+  display: inline;
+  font-weight: normal;
+  margin: 0 10px 0 0;
+}
+
+.page-search #edit-solrsort-wrapper {
+  margin-right: 0;
+}
+
+.page-search #content-top-region form.drupalorgSearch-processed input[type=submit] {
+  display: none;
+}
+
+.page-search #aside .block {
+  background: none;
+}
+
+.page-search #aside .item-list ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: -10px;
+}
+
+.page-search #aside .item-list ul li {
+  list-style-type: none;
+  margin-bottom: 3px;
+  margin-left: 0;
+}
+
+#drupalorg-crosssite-search-form .form-text {
+  width: 150px;
+}
+
+#block-drupalorg_news-news-terms ul.links li a,
+.page-search #aside .item-list ul li a,
+.page-search #aside .item-list ul li a.facetapi-active {
+  color: #0678be;
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+
+.page-search #aside .item-list ul li a.selected,
+.page-search #aside .item-list ul li a:hover,
+.page-search #aside .item-list ul li a.facetapi-active,
+#block-drupalorg_news-news-terms ul.links li a.active,
+#block-drupalorg_news-news-terms ul.links li a:hover,
+#block-drupalorg_news-news-terms ul.links li a:focus {
+  background-color: #666666;
+  color: white;
+  text-decoration: none;
+}
+
+.page-search h1 {
+  background-color: #f6f6f2;
+  color: #555555;
+  font-size: 1.38461em;
+  padding: 10px;
+}
+
+.page-search h1 em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.search-results {
+  padding-left: 0;
+}
+
+.search-results .title {
+  font-size: 1.231em;
+  margin: 0;
+}
+.search-results .search-snippet-info {
+  padding-left: 0;
+}
+
+.search-results .search-info {
+  color: #666666;
+  font-size: 0.92307em;
+}
+
+.search-results dd {
+  padding-left: 0;
+}
+
+.search-results dt {
+  font-size: 1em;
+}
+
+#header input[type="text"] {
+  background-color: white;
+  border: 3px solid #1885c8;
+  color: black;
+  float: left;
+  font-size: 1.07692em;
+  line-height: 1.4em;
+  margin: 0 4px 0 0;
+  *min-height: 18px;
+  padding: 10px 10px 10px 30px;
+  width: 275px;
+}
+
+#header input[type="text"]::-webkit-input-placeholder {
+  color: #999999;
+  font-size: 0.92857em;
+}
+
+#header input[type="text"]:-moz-placeholder {
+  color: #999999;
+  font-size: 0.92857em;
+}
+
+#header input[type="text"]:-ms-input-placeholder {
+  color: #999999;
+  font-size: 0.8em;
+}
+
+#header input[type="text"]:focus {
+  outline: #e4e4e4 solid 2px;
+}
+
+#header .fieldset-legend {
+  background: url(../../../../../misc/menu-expanded.png) 100% 65% no-repeat;
+  margin: 0 0.75em 0 0;
+  padding: 0 0.5em 0 0;
+}
+
+#header input[type="submit"] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 1.4em;
+  margin-top: 3px;
+  margin-right: 0;
+  padding: .33em 1em;
+}
+
+#search-theme-form-advanced {
+  display: none;
+  width: 275px;
+  position: absolute;
+}
+
+#search-theme-form-advanced fieldset {
+  border: 0;
+  line-height: 1.538461em;
+  margin: 0;
+  padding: 0;
+}
+
+html.js #search-theme-form-advanced {
+  display: block;
+}
+
+#search-theme-form-advanced fieldset.collapsible .fieldset-wrapper {
+  background-color: #0678be;
+  padding: 2em 10px 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#search-theme-form-advanced fieldset.collapsed .fieldset-wrapper {
+  background-color: transparent;
+}
+
+#search-theme-form-advanced fieldset.collapsible .form-radios {
+  border: 0;
+  color: white;
+}
+
+html.js #search-theme-form-advanced fieldset.collapsible .fieldset-wrapper {
+  overflow: visible;
+  float: left;
+}
+
+#search-theme-form-advanced legend {
+  margin: 0;
+  height: 1.538461em;
+  line-height: 1.538461em;
+}
+
+#search-theme-form-advanced fieldset.collapsible legend {
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+#search-theme-form-advanced fieldset.collapsible legend a {
+  color: black;
+  text-decoration: none;
+}
+
+#search-theme-form-advanced fieldset.collapsible legend a:hover {
+  text-decoration: underline;
+}
+
+#search-theme-form-advanced fieldset.collapsible legend a:focus {
+  outline: none;
+}
+
+#search-theme-form-advanced .form-radios,
+#search-theme-form-advanced .form-radios .form-item {
+  margin: 0;
+  float: left;
+}
+
+#search-theme-form-advanced .form-radios {
+  padding-top: 0;
+  width: 275px;
+  position: relative;
+}
+
+#search-theme-form-advanced fieldset.collapsible .form-radios {
+  width: 255px;
+}
+
+#search-theme-form-advanced .form-radios .form-item {
+  min-height: 1.538461em;
+  width: 135px;
+}
+
+#search-theme-form-advanced fieldset.collapsible .form-radios .form-item {
+  font-size: 0.923076em;
+  width: 127px;
+}
+
+#search-theme-form-advanced .form-radios .form-divider {
+  float: left;
+  width: 127px;
+}
+
+#search-theme-form-advanced .form-radios .form-item input {
+  margin: 0;
+}
+
+#search-theme-form-advanced .form-radios label {
+  color: white;
+}
+
+#search-theme-form-submit {
+  display: inline;
+  margin-top: 3px;
+}
+
+/**
+ * Styles for the site status indicator.
+ */
+#drupalorg-site-status {
+  background-color: #d32101;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+  position: relative;
+  -moz-box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(68, 68, 68, 0.5);
+  z-index: 1;
+}
+
+#drupalorg-site-status a {
+  color: white;
+  text-decoration: underline;
+}
+
+#content .node-footer a.comment_comments,
+#content .node-footer .comment-add a,
+div.nav-content-dashboard ul li.active span.hover a.edit span,
+div.nav-content-dashboard ul li.active span.hover a.delete,
+#dashboard a.remove-widget,
+#block-drupalorg_handbook-meta-sidebar .page-major-problem span,
+.project-info .alert,
+.rss-feed-link,
+.search-results .search-info .comments,
+.portlet-header .portlet-settings,
+.portlet-plus,
+.portlet-minus,
+.portlet-close,
+.portlet-maximize,
+.portlet-maximized .portlet-minimize {
+  background-image: url(../images/small-icons.png);
+  background-repeat: no-repeat;
+}
+
+#content .node-footer a.comment_comments,
+#content .node-footer .comment-add a {
+  background-position: 0 -415px;
+  padding-left: 15px;
+}
+
+div.nav-content-dashboard ul li.active span.hover a.edit span {
+  background-position: 8px -61px;
+  padding-left: 20px;
+}
+
+div.nav-content-dashboard ul li.active span.hover a.delete {
+  background-position: 8px -125px;
+  height: 12px;
+  padding-left: 20px;
+}
+
+#dashboard a.remove-widget {
+  background-position: 0 -128px;
+  height: 12px;
+  padding-left: 12px;
+}
+
+#block-drupalorg_handbook-meta-sidebar .page-major-problem span {
+  background-position: 0 -223px;
+  padding-left: 15px;
+}
+
+.project-info .alert {
+  background-position: 0 -223px;
+  padding-left: 16px;
+}
+
+.rss-feed-link {
+  background-position: 0 -30px;
+  padding-left: 20px;
+}
+
+.search-results .search-info .comments {
+  background-position: 0 -415px;
+  padding-left: 14px;
+}
+
+.portlet-header .portlet-settings {
+  background-position: 2px -64px;
+}
+
+.portlet-plus {
+  background-position: 2px -192px;
+}
+
+.portlet-close {
+  background-position: 2px -128px;
+}
+
+.page-search #aside .item-list ul li,
+#block-drupalorg_news-news-terms ul.links li {
+  line-height: 1.5em;
+}
+
+.page-search #aside .item-list ul li a.selected,
+.page-search #aside .item-list ul li a:hover,
+.page-search #aside .item-list ul li a.facetapi-active,
+#block-drupalorg_news-news-terms ul.links li a.active,
+#block-drupalorg_news-news-terms ul.links li a:hover,
+#block-drupalorg_news-news-terms ul.links li a:focus,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a.active,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a:hover,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a:focus,
+#block-views-drupalorg-training-block-1 ul.views-summary li a.active,
+#block-views-drupalorg-training-block-1 ul.views-summary li a:hover,
+#block-views-drupalorg-training-block-1 ul.views-summary li a:focus {
+  background-image: url(../images/pointer.png);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+input[name*="search"],
+#aboutwebbased a,
+#aboutcontentmanagement a,
+#aboutmodules a,
+#aboutthemes a,
+#aboutsearching a,
+#aboutsocial a,
+#aboutcommunity a,
+#aboutpersonalisation a {
+  background: white url(../images/large-icons.png) no-repeat;
+}
+
+input[name*="search"] {
+  background-position: 8px -856px;
+}
+
+#aboutwebbased a {
+  background-position: 4px 0;
+}
+
+#aboutcontentmanagement a {
+  background-position: 4px -96px;
+}
+
+#aboutmodules a {
+  background-position: 4px -192px;
+}
+
+#aboutthemes a {
+  background-position: 4px -288px;
+}
+
+#aboutsearching a {
+  background-position: 4px -384px;
+}
+
+#aboutsocial a {
+  background-position: 4px -480px;
+}
+
+#aboutcommunity a {
+  background-position: 4px -576px;
+}
+
+#aboutpersonalisation a {
+  background-position: 4px -1056px;
+}
+
+#header {
+  background-image: url(../images/sprites-horizontal.png);
+  background-repeat: repeat-x;
+}
+
+#header {
+  background-position: 0 -1088px;
+}
+
+body.front #header {
+  background-position: 0 0;
+}
+
+#site-name a,
+#front-drupal-stats,
+.image-tags span,
+.image-tags span a {
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+}
+
+#site-name a {
+  background-position: 0 -467px;
+}
+.drupalorg-site-association #site-name a {
+  background-image: url(../images/logo-association.png);
+  background-position: 0 7px;
+  width: 202px;
+  height: 70px;
+}
+
+#front-drupal-stats {
+  background-position: 0 -537px;
+}
+
+.image-tags span {
+  background-position: 0 -224px;
+}
+
+.image-tags a {
+  background-position: 100% -192px;
+}
+
+.feature-tags span {
+  background-position: 0 -288px;
+}
+
+.feature-tags a {
+  background-position: 100% -256px;
+}
+
+.node-sticky .image-tags span {
+  background-position: 0 -352px;
+}
+
+.node-sticky .image-tags a {
+  background-position: 100% -320px;
+}
+
+.drupalorg-site-api #site-name a {
+  background-image: url(../images/sprites-api.png);
+  background-position: 0 0;
+  width: 404px;
+}
+
+.drupalorg-site-infrastructure #site-name a {
+  background-image: url(../images/sprites-infrastructure.png);
+  background-position: 0 0;
+  width: 436px;
+}
+
+.drupalorg-site-security #site-name a {
+  background-image: url(../images/sprites-security.png);
+  background-position: 0 0;
+  width: 64px;
+  height: 73px;
+}
+
+/**
+ * @file
+ * Table styles
+ */
+table {
+  margin-bottom: 0.5em;
+  border-collapse: separate;
+  /* reset borders from collapsed */
+}
+
+thead th {
+  border-bottom: 0;
+  padding: 0.25em 0.5em;
+}
+
+th,
+td {
+  padding: 0.25em 0.5em;
+}
+
+th {
+  background: #eaeae1;
+  font-weight: bold;
+}
+
+th span.sort-header {
+  float: left;
+}
+
+.table-sort-asc,
+.table-sort-desc {
+  padding: 0 14px 0 0;
+}
+
+.table-sort-asc {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: right -636px;
+}
+
+.table-sort-desc {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: right -600px;
+}
+
+th a,
+th a:link,
+th a:visited {
+  color: #222222;
+}
+
+th.active {
+  background: #d7d7c7;
+}
+
+tr.even td.active {
+  background: #e5e5d4;
+  border-bottom: 1px solid #d7d7c7;
+  border-top: 1px solid #d7d7c7;
+}
+
+tr.odd td.active {
+  background: #eaeae1;
+}
+
+tr.even {
+  background: #eeeee0;
+  border-bottom: 1px solid #d8d8d2;
+  border-top: 1px solid #d8d8d2;
+  position: relative;
+}
+
+tr.odd {
+  background-color: white;
+  border: 0;
+  border-bottom: 1px solid #d8d8d2;
+  position: relative;
+}
+
+/**
+ * Tabs (local tasks, subtasks)
+ */
+#tabs {
+  margin-bottom: 1.385em;
+}
+
+#tabs ul.tabs {
+  display: block;
+  border: 0;
+  padding: 0;
+}
+
+#tabs ul.tabs li {
+  float: left;
+  margin-right: 0.5em;
+}
+
+#tabs ul.tabs li a {
+  background-color: transparent;
+  border: 0;
+  color: #668a19;
+  display: block;
+  padding: 0.231em 0.615em;
+  margin: 0;
+}
+
+#tabs ul.tabs li a:hover,
+#tabs ul.tabs li a:focus,
+#tabs ul.tabs li.active a,
+#tabs ul.primary li.parent-active a:focus,
+#tabs ul.primary li.parent-active a:hover {
+  background: #668a19;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#tabs ul.primary li.parent-active a {
+  background: #e6fcb6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-weight: bold;
+}
+
+#tabs ul.secondary {
+  color: #668a19;
+  background: #e6fcb6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 0.923em;
+  /* 0.923 * 13px = 12px */
+}
+
+/**
+ * Graphical tags
+ *
+ * Wraps tags in rounded corners.
+ * Used in source sites tags on the news page, feature tags, etc.
+ * 
+ * Tags should be inline and wrapped like this:
+ * 
+ * <span class="image-tags">
+ * <span><a href="#">Tag</a></span>
+ * </span>
+ * 
+ * The tags can have any color; make sure to give the
+ * second span the background-color you want
+ */
+/* todo: check which types of tags we use */
+.image-tags span {
+  background-color: #49a9e4;
+  display: inline-block;
+  font-size: .6em;
+  line-height: 18px;
+  padding-left: 4px;
+}
+
+.image-tags span a {
+  color: white;
+  display: inline-block;
+  line-height: 18px;
+  padding-right: 4px;
+}
+
+.source-tags .source-tag-688 {
+  /* Planet Drupal */
+  background-color: #9fca44;
+}
+
+.source-tags .source-tag-689 {
+  /* Drupal Association */
+  background-color: #eeeeee;
+}
+
+.source-tags .source-tag-689 a {
+  color: #666666;
+}
+
+.image-tags span:hover {
+  background-color: #044771;
+}
+
+.image-tags span:hover a {
+  text-decoration: none;
+}
+
+.source-tags span.source-tag-688:hover {
+  /* Planet Drupal */
+  background-color: #688a1f;
+}
+
+.source-tags span.source-tag-689:hover {
+  /* Drupal Association */
+  background-color: #999999;
+}
+
+.source-tags .source-tag-689 a:hover {
+  color: white;
+}
+
+.feature-tags span {
+  background-color: #ebe3a4;
+  color: black;
+}
+
+.feature-tags span a {
+  color: black;
+}
+
+.feature-tags span:hover {
+  background-color: #e9b538;
+}
+
+.feature-tags span:hover a {
+  color: white;
+}
+
+h2 .image-tags span {
+  margin-left: 1em;
+}
+
+/**
+ * Taxonomy terms
+ */
+.feed-item-categories a,
+.feed-item-categories a:link,
+.feed-item-categories a:visited,
+.terms a,
+.terms a:link,
+.terms a:visited,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:link,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:visited {
+  background-color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #666666;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+
+.feed-item-categories a:hover,
+.feed-item-categories a:active,
+.feed-item-categories a:focus,
+.terms a:hover,
+.terms a:active,
+.terms a:focus,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:hover,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:active,
+.view-drupalorg-casestudies .views-field-term-node-tid .field-content a:focus {
+  background-color: #999999;
+  color: white;
+}
+
+.profile h3 {
+  border-bottom: none;
+}
+.profile .main {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.profile .main h3 {
+  clear: left;
+}
+.profile .main dl {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0;
+}
+.profile .main dl dt {
+  width: 30.43478%;
+  float: left;
+  margin-right: 4.34783%;
+  display: inline;
+}
+.profile .main dl dd {
+  width: 65.21739%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  float: left;
+}
+.profile .main dt {
+  clear: left;
+  margin: 0 10px 0 0;
+}
+.profile .main dd {
+  padding: 0;
+  margin-bottom: 0.692em;
+}
+.profile .contact {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.profile .contact .user-picture {
+  float: none;
+  margin: 0;
+}
+.profile .contact .field {
+  margin-bottom: 1.3846em;
+}
+.profile .contact .field-name-field-organization-name, .profile .contact .field-name-field-job-title {
+  margin-bottom: 0;
+}
+.profile .contact .field-name-field-organizations > .field-items > .field-item {
+  margin-bottom: .6923em;
+}
+.profile .aside {
+  width: 23.40426%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+.profile .aside .da-membership-badge {
+  width: 63.63636%;
+  float: left;
+  margin-right: 9.09091%;
+  display: inline;
+}
+.profile .aside .field-name-field-mentors {
+  overflow: hidden;
+  *zoom: 1;
+}
+.profile .aside .field-name-field-mentors .field-item {
+  width: 27.27273%;
+  float: left;
+  margin-right: 9.09091%;
+  display: inline;
+  margin-bottom: 9.09091%;
+  line-height: 0;
+}
+.profile .aside .field-name-field-mentors .field-item:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+}
+
+.node-section {
+  border-bottom: 1px solid #d8d8d2;
+  padding-bottom: 0.692em;
+}
+
+.page-node-1 .node-footer-section {
+  width: 940px;
+}
+
+.one-sidebar #main .node-footer-section .grid-4 {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.one-sidebar #main .node-footer-section .grid-4.omega {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+.node-footer-section h3 {
+  margin: 1em 0 .5em;
+}
+
+.aboutsmall {
+  color: #555555;
+  font-size: 0.92307em;
+}
+#content .aboutsmall ul {
+  list-style: none;
+  margin-bottom: 1.5em;
+  padding-left: 0;
+}
+.aboutsmall h3 {
+  border-top: 1px solid #dddddd;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.aboutsmall dd {
+  padding-left: 0;
+}
+.aboutsmall strong,
+.aboutsmall dt {
+  color: #555555;
+}
+.aboutsmall .link-button {
+  float: left;
+  margin: 1em 0;
+}
+
+.color-swatch {
+  height: 6.923em;
+}
+
+/**
+ * Ads
+ */
+#aside .block-google-admanager .block-inner {
+  padding: 0;
+}
+
+#page .block-google-admanager {
+  background-color: #f6f6f2;
+  line-height: inherit;
+}
+
+.gam-holder {
+  margin: 0;
+}
+
+.gam-prefix {
+  padding: 1em 1em 12px;
+}
+
+.gam-suffix {
+  color: #666666;
+  font-size: 0.92307em;
+  /* 0.92307 * 13px = 12px */
+  padding: 12px 1em;
+}
+
+.gam-suffix a {
+  color: black;
+}
+.gam-suffix a:link, .gam-suffix a:visited, .gam-suffix a:active {
+  color: black;
+}
+
+.gam-holder .text {
+  background-color: #f6f6f2;
+  width: 274px;
+  line-height: 1.5em;
+  padding: 13px;
+}
+
+.gam-holder .text a {
+  font-weight: bold;
+}
+
+/* Front page ad */
+body.front .gam-holder {
+  margin: 1.385em 0 0 0;
+}
+
+/* Books ads on /security and /documentation */
+#block-google_admanager-89caa04f148acdc52719b3d001e487c4 .gam-prefix {
+  padding: 1em;
+}
+#block-google_admanager-89caa04f148acdc52719b3d001e487c4 .gam-prefix p {
+  margin-bottom: 0;
+}
+#block-google_admanager-89caa04f148acdc52719b3d001e487c4 .gam-suffix {
+  padding: 1em;
+}
+
+#block-google-admanager-d4111bf4bd49e16643c8fb77d603fc90 h2 {
+  padding-left: 1em;
+}
+
+#google_ads_div_Security_books_ad_container img,
+#google_ads_div_Redesign_books_ad_container img {
+  padding: 0 12px;
+}
+
+/* Supporting partner logos block */
+#aside #block-google-admanager-db95fef4e097f813743f6b195671b5c9 .block-inner {
+  padding: 1em;
+}
+#aside #block-google-admanager-db95fef4e097f813743f6b195671b5c9 .gam-prefix {
+  padding: 0 0 12px;
+}
+
+/* Donate button on /project/drupal */
+#donate {
+  float: left;
+  margin-bottom: 1em;
+}
+
+#donate div {
+  float: left;
+  margin-right: 10px;
+}
+
+#donate span {
+  margin-left: 18px;
+  font-size: 0.692em;
+}
+
+/* DA election pages */
+/* Candidate pages */
+.election-candidate .field-label {
+  margin: 1em 0 0.45em;
+}
+
+.election-candidate .replies-header {
+  margin-top: 2em;
+}
+
+.election-candidate div.reply {
+  border: none;
+  border-left: solid 1px #dddddd;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+.election-candidate .reply-body .field-label {
+  display: none;
+}
+
+.election-candidate .reply-links {
+  margin-top: 0.5em;
+}
+
+.election-candidate .reply-links a {
+  margin-right: 0.5em;
+}
+
+/* List of candidates */
+#content .view-nominations ul {
+  padding-left: 0;
+}
+
+#content .view-nominations .views-row {
+  width: 48.3871%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+
+#content .view-nominations .views-row-even {
+  margin-right: 0;
+}
+
+#content .view-nominations .views-row-odd {
+  clear: left;
+}
+
+.view-nominations .election-candidate-name {
+  font-size: 1.538em;
+  line-height: 1.35em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.view-nominations .views-field {
+  margin-bottom: 0.5em;
+}
+
+.view-nominations .views-label {
+  display: none;
+}
+
+/**
+ * Book listings
+ */
+.view-book-listings .views-row {
+  margin-bottom: 2.077em;
+}
+.view-book-listings .views-field-field-cover-image {
+  float: right;
+}
+.view-book-listings .views-label,
+.view-book-listings label {
+  font-weight: bold;
+}
+.view-book-listings .views-label {
+  float: left;
+  padding-right: 5px;
+}
+.view-book-listings .views-field {
+  clear: left;
+}
+.view-book-listings p {
+  margin-bottom: 0em;
+}
+.view-book-listings .view-filters {
+  margin-bottom: 2.077em;
+}
+
+.node-type-book-listing .content .field-name-field-cover-image {
+  float: right;
+}
+
+.node-type-book-listing .content .field-name-field-book-listing-authors .field-label {
+  float: left;
+}
+
+.node-type-book-listing .content .field-name-field-book-isbn-13,
+.node-type-book-listing .content .field-name-field-official-website,
+.node-type-book-listing .content .field-name-field-book-isbn-10,
+.node-type-book-listing .content .field-name-field-book-description,
+.view-book-listings .view-content .views-field-taxonomy-vocabulary-5,
+.view-book-listings .view-content .views-field-nothing,
+.view-book-listings .view-content .views-field-taxonomy-vocabulary-62 {
+  padding-top: 8px;
+}
+
+/* Sidebar guidelines link */
+#aside #block-drupalorg-handbook-book-listing-link {
+  background: white;
+}
+
+/**
+ * Case studies section
+ */
+/* View */
+.view-drupalorg-casestudies table.views-view-grid td {
+  padding: 0 0 1.5em;
+}
+.view-drupalorg-casestudies table.views-view-grid td {
+  width: 48.3871%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+.view-drupalorg-casestudies table.views-view-grid td.col-last {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+.view-drupalorg-casestudies .views-field-term-node-tid {
+  color: #666666;
+  font-size: 0.92307em;
+  /* 0.92307 * 13px = 12px */
+}
+
+/* Sidebar blocks */
+#aside #block-block-52 {
+  background-color: white;
+}
+
+#aside #block-views-drupalorg-casestudies-block-2 {
+  background-color: white;
+}
+#aside #block-views-drupalorg-casestudies-block-2 ul.views-summary li {
+  line-height: 1.5em;
+}
+#aside #block-views-drupalorg-casestudies-block-2 ul.views-summary li a {
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+#aside #block-views-drupalorg-casestudies-block-2 ul.views-summary li a.active, #aside #block-views-drupalorg-casestudies-block-2 ul.views-summary li a:hover, #aside #block-views-drupalorg-casestudies-block-2 ul.views-summary li a:focus {
+  background-color: #666666;
+  color: white;
+  text-decoration: none;
+}
+
+/* Slideshow */
+.view-drupalorg-casestudies .jcarousel-container {
+  background: #f6f6f2;
+  padding: 18px 16px 9px;
+  float: left;
+  width: 620px;
+  margin-bottom: 20px;
+}
+
+.view-drupalorg-casestudies .jcarousel-container .views-field-title h2 {
+  width: 465px;
+  margin-top: 18px;
+  float: left;
+}
+
+.view-drupalorg-casestudies .jcarousel-navigation {
+  position: absolute;
+  right: 10px;
+  margin-top: -32px;
+}
+
+.view-drupalorg-casestudies .jcarousel-navigation li {
+  float: left;
+  margin-right: 5px;
+}
+
+.view-drupalorg-casestudies .jcarousel-navigation li a {
+  color: white;
+  background: #008dcc;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 999px;
+  display: block;
+}
+
+.view-drupalorg-casestudies .jcarousel-navigation li a:hover,
+.view-drupalorg-casestudies .jcarousel-navigation li.active a {
+  background: #8faf2b;
+  text-decoration: none;
+}
+
+/* Case study node */
+.node-type-casestudy div.field-label {
+  font-weight: normal;
+  font-size: 1.538em;
+  line-height: 1.35em;
+  margin: 0 0 0.45em;
+}
+.node-type-casestudy .field-name-field-link {
+  margin: 1em 0;
+  font-weight: bold;
+}
+
+/**
+ * Community page
+ */
+.page-community .main {
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.page-community .sidebar {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+#recent-activity ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#recent-activity .item-list ul li {
+  margin-left: 0;
+}
+
+#homebox .homebox-column {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#homebox .homebox-portlet {
+  border: 0;
+  margin: 0 0 20px;
+}
+#homebox .homebox-portlet .portlet-content {
+  padding: 10px;
+}
+#homebox .homebox-portlet[id^=homebox-block-drupalorg_security_issues] .portlet-content, #homebox .homebox-portlet[id^=homebox-block-views_1764f77afedbacb7539d78cc3f1d414f] .portlet-content {
+  padding: 0;
+}
+#homebox .homebox-portlet[id^=homebox-block-drupalorg_security_issues] td, #homebox .homebox-portlet[id^=homebox-block-views_1764f77afedbacb7539d78cc3f1d414f] td {
+  padding: 0.25em 10px;
+}
+#homebox .homebox-portlet[id^=homebox-block-drupalorg_security_issues] .more-link, #homebox .homebox-portlet[id^=homebox-block-views_1764f77afedbacb7539d78cc3f1d414f] .more-link {
+  padding: 0px 10px 10px 0px;
+}
+
+#homebox .homebox-placeholder {
+  margin: 0 0 14px;
+}
+
+#homebox .homebox-portlet .homebox-portlet-inner {
+  background-color: #f6f6f2;
+  border: 0;
+}
+
+#homebox .portlet-config {
+  padding: 0 10px 10px;
+}
+
+#homebox .homebox-portlet .portlet-header {
+  background: none;
+  font-size: 1.38461em;
+  font-weight: normal;
+  padding: 10px 10px 8px;
+}
+
+#homebox .homebox-portlet .portlet-minus,
+#homebox .homebox-portlet .portlet-maximize {
+  display: none;
+}
+
+#homebox .homebox-portlet .portlet-icon {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+#homebox-buttons,
+#homebox-add {
+  margin-bottom: 10px;
+}
+
+#homebox-add a.restore {
+  display: inline;
+  height: auto;
+  padding: 0;
+  width: auto;
+}
+
+html.js #drupalorg-set-home-wrapper label {
+  background-image: url(../images/small-icons.png);
+  background-repeat: no-repeat;
+  background-position: right -188px;
+  padding-right: 18px;
+  color: #96bc44;
+  cursor: pointer;
+}
+html.js #drupalorg-set-home-wrapper input,
+html.js #drupalorg-set-home-wrapper input[checked] + label {
+  display: none;
+}
+
+#homebox .homebox-column-wrapper {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#homebox .homebox-column-wrapper.homebox-column-wrapper-3 {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/**
+ * Documentation pages
+ */
+/* Page status block */
+#block-drupalorg-handbook-meta-sidebar .page-status {
+  padding: 0.692em;
+}
+#block-drupalorg-handbook-meta-sidebar .page-ok {
+  background-color: #d4efcc;
+}
+#block-drupalorg-handbook-meta-sidebar .page-needs-work {
+  background-color: #ffe69f;
+}
+#block-drupalorg-handbook-meta-sidebar .page-major-problem {
+  background-color: #ebcccc;
+}
+
+#block-drupalorg-handbook-about-page dd {
+  padding-left: 0;
+}
+
+/**
+ * Download and Extend page
+ */
+#download,
+.drupal-modules-facets {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+#download > div,
+.drupal-modules-facets > div {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#download > .translations,
+.drupal-modules-facets > .index {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* Download Drupal button */
+#download .core ul li.download-core {
+  margin-bottom: 1.5em;
+}
+
+/* Drupal modules block */
+.drupal-modules {
+  margin-top: 0.692em;
+}
+
+/* D&E Home 'all' links in lists */
+#content li.more a,
+#content li.more a:link,
+#content li.more a:visited,
+#content li.more a:active,
+#content li.all a,
+#content li.all a:link,
+#content li.all a:visited,
+#content li.all a:active {
+  font-weight: bold;
+}
+
+/* D&E Home 'show only modules' form */
+#project-solr-version-form {
+  margin-bottom: 1em;
+}
+
+#project-solr-version-form .form-submit {
+  padding: 2px 5px;
+}
+
+#project-solr-version-form label,
+#project-solr-version-form select,
+#project-solr-version-form .form-submit {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+#project-solr-version-form label {
+  font-weight: normal;
+}
+
+.drupalorg-site-main.page-drupal-70 #header-right {
+  height: 559px;
+}
+
+/* Features page */
+#about-features h3 {
+  font: bold 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#about-features h3 a {
+  display: block;
+  padding: 4px 0 0 70px;
+  min-height: 50px;
+}
+
+/**
+ * Forums
+ */
+/* Limit width of forum pages to 8 columns */
+.node-type-forum #main {
+  width: 65.95745%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.forum-topic-navigation {
+  margin-bottom: 10px;
+}
+
+/* #forum td > td {
+  border: 1px solid #f0f;
+}*/
+#forum ul {
+  padding: 0;
+}
+
+#forum tr td.container {
+  padding-left: 10px;
+}
+
+#forum td.forum .icon {
+  background-image: none;
+  width: auto;
+  margin: 0;
+}
+
+#forum tr td.container .name {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 3px;
+  /*@todo: fix sprites here ;*/
+  padding: 0px 0 5px 20px;
+  min-width: 20px;
+  /* IE7 hack */
+}
+
+#forum div.indent {
+  margin-left: 30px;
+}
+
+#forum tr td.forum {
+  background: none;
+  padding: 0.25em 0.5em;
+}
+
+#forum tr td.forum .name {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 -155px;
+  /*@todo:fix sprites here ;*/
+  min-width: 20px;
+  /* IE7 hack */
+}
+
+#forum tr td.forum .name,
+#forum .description {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+#forum .description {
+  font-size: 0.9em;
+}
+
+#content #forum .submitted {
+  color: black;
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: 0.75em;
+}
+
+td.icon {
+  margin: 5px 0 0 0;
+}
+
+.icon16 {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.forum-default,
+.forum-hot {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 -155px;
+}
+
+.forum-hot-new,
+.forum-new {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 -410px;
+}
+
+.forum-closed {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 -380px;
+}
+
+.forum-sticky {
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 5px;
+}
+
+.page-forum #content ul.action-links {
+  padding-left: .5em;
+}
+.page-forum #content ul.action-links li {
+  list-style-type: none;
+}
+.page-forum #content ul.action-links li a {
+  display: inline-block;
+  padding-left: 1.4em;
+  background: transparent url(../images/small-icons.png) no-repeat;
+  background-position: 0 -415px;
+}
+
+/**
+ * Tabs on the front page
+ */
+.ui-widget {
+  font-size: 1em;
+  font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+}
+
+.ui-tabs {
+  padding: 0;
+}
+
+.ui-tabs-nav,
+.front #content ul.ui-tabs-nav {
+  *zoom: 1;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+  padding: 0;
+}
+.ui-tabs-nav:after,
+.front #content ul.ui-tabs-nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ui-tabs .ui-tabs-panel {
+  padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav li,
+#nav-content ul li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.ui-tabs .ui-tabs-nav a,
+.ui-tabs .ui-tabs-nav a:link,
+.ui-tabs .ui-tabs-nav a:visited,
+.ui-tabs .ui-tabs-nav a:hover {
+  color: #27537a;
+  display: block;
+  float: left;
+  height: 32px;
+  padding: 5px 11px 0 11px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  margin-bottom: -1px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-bottom: 0;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  color: black;
+}
+
+.ui-tabs-nav li a:hover,
+.ui-tabs-nav li a:focus {
+  text-decoration: none;
+}
+
+.ui-tabs-hide {
+  display: none;
+}
+
+.ui-tabs-nav a:active {
+  outline: none;
+}
+
+#tab-docs-link:before,
+#tab-forum-link:before,
+#tab-commits-link:before {
+  content: '●';
+  font-size: 20px;
+  line-height: 0px;
+  margin-right: 5px;
+  position: relative;
+  width: 11px;
+  top: 1px;
+}
+
+#tab-docs-link:before {
+  color: #c3dd93;
+}
+
+#tab-forum-link:before {
+  color: #8400fb;
+}
+
+#tab-commits-link:before {
+  color: #ee817a;
+}
+
+#content .ui-tabs-panel h6 {
+  margin: 0;
+}
+
+/**
+ * Front page
+ */
+.front #page {
+  margin-top: 1.385em;
+}
+
+#choose-drupal,
+#sites-with-drupal {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#community-map,
+#community-updates {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+#community-updates {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* Get started buttons */
+.front-get-started {
+  border: 1px solid #dddddd;
+  border-width: 1px 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Case studies block */
+div.things-we-made-wrapper {
+  width: 300px;
+  overflow: hidden;
+  margin: 0 0 1em 0;
+}
+
+/* Help build D8 block */
+#develop-with-drupal {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+#develop-with-drupal .logo {
+  width: 20.0%;
+  float: left;
+  margin-right: 6.66667%;
+  display: inline;
+}
+#develop-with-drupal .activities {
+  overflow: hidden;
+  *zoom: 1;
+}
+#develop-with-drupal .intro {
+  background-color: #f6f6f2;
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+
+/* Current activity block (number of modules etc.) */
+.front-current-activity,
+.front-thisweek-activity {
+  float: left;
+  margin-bottom: 1.385em;
+}
+.front-current-activity td,
+.front-thisweek-activity td {
+  padding: 0;
+  white-space: nowrap;
+}
+.front-current-activity td:first-child,
+.front-thisweek-activity td:first-child {
+  text-align: right;
+  padding-right: 0.4em;
+}
+.front-current-activity th,
+.front-thisweek-activity th {
+  background: transparent;
+  font-weight: normal;
+  border-bottom: none;
+  padding: 0;
+}
+
+.front-current-activity:first-child {
+  margin-right: 1.5em;
+}
+
+/* Links below current activity block */
+.front #content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* X people in Y countries */
+#front-drupal-stats {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  margin-top: 1.846em;
+  height: 6.923461em;
+  /* 72px */
+  padding: 1.385em 0 0 64px;
+}
+
+#front-drupal-stats .inner {
+  border-top: 1px solid #eeeeee;
+  color: #9d9d93;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.846em;
+  /* 13px = 24px */
+  font-weight: 200;
+  line-height: 1.5em;
+  padding-top: 5px;
+  padding-left: 16px;
+}
+
+#front-drupal-stats em {
+  font-style: normal;
+  color: #55554a;
+}
+
+/* Text on the front page header */
+.region-highlighted p {
+  font-size: 1em;
+  line-height: 1.538461em;
+  padding-bottom: 1.538461em;
+  margin-top: 0.5em;
+  overflow: auto;
+}
+
+/* Search form */
+#header .form-item-search-block-form label {
+  color: white;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.61538em;
+  /* 1.61538 * 13 = 21px */
+  font-weight: normal;
+  margin: 0 0 .5em 0;
+}
+
+.front #search-theme-form-advanced {
+  display: block;
+  margin: 9px 0 0 3px;
+}
+.front #search-theme-form-advanced .fieldset-legend {
+  background: none;
+}
+
+/**
+ * Getting involved page
+ */
+#content .getting-involved,
+#content .community-spotlight {
+  width: 48.3871%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+
+#content .community-spotlight {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* Drupal.org activity block */
+#aside #block-drupalorg-drupalorg-activity {
+  background: white;
+}
+
+/* todo: check if this is needed */
+.view-drupalorg-community-spotlight.view-display-id-block_1 .node-footer .links {
+  display: block;
+}
+
+/*
+.view-drupalorg-community-spotlight.view-display-id-block_1 .node-footer .separator {
+  display: none;
+}*/
+/**
+ * /start page
+ */
+.get-started.download-drupal, .get-started.extend-drupal, .get-started.documentation, .get-started.get-support {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+  position: relative;
+}
+
+.get-started.get-support {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  float: left;
+}
+
+.get-started.download-drupal h2, .get-started.extend-drupal h2, .get-started.documentation h2, .get-started.get-support h2 {
+  /*  text-indent: 300%;*/
+  background: url(../images/gettingstarted-sprite.png) no-repeat;
+  font-size: 1.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
+  height: 49px;
+  max-height: 49px;
+  padding: 12px 0 0 21px;
+  color: #008dcc;
+  position: relative;
+}
+.get-started.download-drupal h2:before, .get-started.extend-drupal h2:before, .get-started.documentation h2:before, .get-started.get-support h2:before {
+  color: white;
+  padding-right: 10px;
+}
+
+.get-started.download-drupal h2 {
+  color: #8faf2b;
+}
+.get-started.download-drupal h2:before {
+  content: '1 ';
+}
+
+.get-started.extend-drupal h2 {
+  background-position: 0 -49px;
+}
+.get-started.extend-drupal h2:before {
+  content: '2 ';
+}
+
+.get-started.documentation h2 {
+  background-position: 0 -98px;
+}
+.get-started.documentation h2:before {
+  content: '3 ';
+}
+
+.get-started.get-support h2 {
+  background-position: 0 -147px;
+}
+.get-started.get-support h2:before {
+  content: '4 ';
+}
+
+#getting-started img {
+  float: left;
+}
+
+/**
+ * Git Styles
+ */
+#content .view-commitlog-commit-items ul,
+#content .view-vc-git-project-global-commits ul,
+#content .view-vc-git-project-user-commits ul,
+#content .view-vc-git-project-commit-view ul {
+  padding-left: 0;
+}
+
+.view-commitlog-commit-items ul,
+.view-vc-git-project-user-commits ul,
+.view-vc-git-project-commit-view ul {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+.view-commitlog-commit-items li div.title,
+.view-vc-git-project-global-commits li div.title,
+.view-vc-git-project-user-commits li div.title,
+.view-vc-git-project-commit-view li div.title {
+  color: #555555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  /* 1 * 13  = 13 */
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+
+.view-vc-git-project-global-commits li .views-field-path,
+.view-commitlog-commit-items li .views-field-path,
+.view-vc-git-project-user-commits li .views-field-path,
+.view-vc-git-project-commit-view li .views-field-path {
+  margin: 0 0 0.5em 10px;
+  clear: both;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed #e1e1db;
+}
+
+.view-commitlog-commit-items li .field-content pre,
+.view-vc-git-project-global-commits li .field-content pre,
+.view-vc-git-project-user-commits li .field-content pre,
+.view-vc-git-project-commit-view li .field-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 5px;
+  margin: 5px 0 20px 0;
+  border-bottom: 1px solid #e1e1db;
+}
+
+.view-commitlog-commit-items .field-content,
+.view-vc-git-project-global-commits .field-content,
+.view-vc-git-project-user-commits .field-content,
+.view-vc-git-project-commit-view .field-content {
+  margin: 0 0 2em 0;
+  padding: 0 0 1em 0;
+}
+
+.view-commitlog-commit-items .attribtution,
+.view-vc-git-project-global-commits .attribtution,
+.view-vc-git-project-user-commits .attribtution,
+.view-vc-git-project-commit-view .attribtution {
+  padding-bottom: 10px;
+}
+
+.views-field-visual-diffstat {
+  float: right;
+  margin-top: -25px;
+}
+
+/*
+ * Short-term change until we can get hover-text
+ * working on the changed lines text
+ */
+.views-field-changed-lines {
+  display: none;
+}
+
+.field-name-field-issue-changes table {
+  border: 1px solid #eeeeee;
+  color: #333333;
+  font-size: 0.9em;
+}
+.field-name-field-issue-changes table tr.even {
+  background: none;
+  border: none;
+}
+.field-name-field-issue-changes table td {
+  padding: 0 1em;
+}
+
+/* My issues */
+.view-project-issue-user-issues-searchapi .project-title {
+  font-weight: bold;
+}
+
+/* My projects */
+.view-project-issue-user-projects caption {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.538em;
+  /* * 13px = 20px */
+  font-weight: normal;
+  line-height: 1.35em;
+  /* * 20px = 27px */
+  margin: 0 0 0.45em;
+}
+
+#aside #block-project-issue-issue-metadata .block-inner {
+  padding: 0 0;
+}
+#block-project-issue-issue-metadata .field {
+  padding: 0 1em;
+  line-height: 2em;
+}
+#block-project-issue-issue-metadata .field-label {
+  width: 36%;
+  border-bottom: 1px solid #ebebe7;
+}
+#block-project-issue-issue-metadata .field-items {
+  width: 64%;
+  border-bottom: 1px solid #ebebe7;
+}
+#block-project-issue-issue-metadata .field-name-field-issue-status {
+  padding: 1em 0 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+#block-project-issue-issue-metadata .field-name-field-issue-status .field-items {
+  width: 100%;
+  border-bottom: none;
+}
+#block-project-issue-issue-metadata .field-name-taxonomy-vocabulary-9 .field-label {
+  border-bottom: none;
+}
+#block-project-issue-issue-metadata .field-name-taxonomy-vocabulary-9 .field-items {
+  border-bottom: none;
+  width: 100%;
+}
+#block-project-issue-issue-metadata .field-name-taxonomy-vocabulary-9 .field-items .field-item {
+  display: inline;
+}
+#block-project-issue-issue-metadata .field-name-taxonomy-vocabulary-9 .field-items .field-item + .field-item:before {
+  content: ",\20";
+}
+#block-project-issue-issue-metadata .last-update {
+  padding: 0 0 1em;
+}
+#block-project-issue-issue-metadata #project-issue-jumplinks {
+  background: white;
+}
+#block-project-issue-issue-metadata #project-issue-jumplinks a {
+  color: #0678be;
+}
+
+.field-issue-status-1 {
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #cccccc;
+}
+
+.field-issue-status-2 {
+  background-color: #d7ffd8;
+  border-bottom: 2px solid #a8ff98;
+}
+
+.field-issue-status-3,
+.field-issue-status-4,
+.field-issue-status-5,
+.field-issue-status-6,
+.field-issue-status-16 {
+  background-color: #eff1fe;
+  border-bottom: 2px solid #b5c4fe;
+}
+
+.field-issue-status-7,
+.field-issue-status-18 {
+  background-color: #fddddd;
+  border-bottom: 2px solid #fc8596;
+}
+
+.field-issue-status-8 {
+  background-color: #ffffdd;
+  border-bottom: 2px solid #ffcf73;
+}
+
+.field-issue-status-13 {
+  background-color: #ffece8;
+  border-bottom: 2px solid #ffdccd;
+}
+
+.field-issue-status-14,
+.field-issue-status-15 {
+  background-color: #f1ffe8;
+  border-bottom: 2px solid #bcffb3;
+}
+
+.flag-project-issue-follow a.flag {
+  background-color: #e9e9e9;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f8f9f8), color-stop(100%, #e9e9e9));
+  background-image: -webkit-linear-gradient(top, #f8f9f8, #e9e9e9);
+  background-image: -moz-linear-gradient(top, #f8f9f8, #e9e9e9);
+  background-image: -o-linear-gradient(top, #f8f9f8, #e9e9e9);
+  background-image: linear-gradient(top, #f8f9f8, #e9e9e9);
+  border: 1px solid #e7e8e8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.25em 0;
+  width: 6em;
+  text-decoration: none;
+}
+.flag-project-issue-follow a.flag:hover, .flag-project-issue-follow a.flag:focus {
+  background: #8aaf3c;
+  color: white;
+  border: 1px solid #8aaf3c;
+}
+.flag-project-issue-follow a.unflag-action {
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+}
+.flag-project-issue-follow span.flag-tracker-count {
+  color: #666666;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.extended-file-field-table-filename,
+.nodechanges-file-link {
+  max-width: 28em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.node-type-project-issue .flag-wrapper {
+  margin-bottom: 1.2em;
+}
+.node-type-project-issue .block-project-issue .flag-wrapper {
+  text-align: center;
+  background: white;
+  margin-bottom: 0;
+  padding: 2em 0;
+}
+
+.logged-in #content .node-project-issue .submitted {
+  margin-bottom: 0;
+}
+.node-project-issue .field-name-field-issue-files table,
+.node-project-issue .field-name-field-issue-changes table.nodechanges-file-changes {
+  max-width: 580px;
+}
+
+.issue-settings .form-item {
+  float: none;
+}
+.issue-settings .form-wrapper {
+  float: left;
+}
+
+#node_project_issue_form_group_issue_settings .form-wrapper {
+  margin-bottom: 0;
+}
+
+.node-project_issue-form .form-item-title {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.node-project_issue-form .issue-settings {
+  clear: none;
+}
+.node-project_issue-form .issue-settings .form-type-textfield {
+  padding-right: 0;
+}
+.node-project_issue-form #node_project_issue_form_group_issue_project_settings {
+  width: 48.93617%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+.node-project_issue-form #node_project_issue_form_group_issue_project_settings .field-name-field-project {
+  width: 65.21739%;
+  float: left;
+  margin-right: 4.34783%;
+  display: inline;
+  margin-right: 34.78261%;
+}
+.node-project_issue-form #node_project_issue_form_group_issue_project_settings .field-widget-options-select {
+  margin-bottom: 0;
+}
+.node-project_issue-form #node_project_issue_form_group_issue_settings {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.node-project_issue-form #node_project_issue_form_group_issue_settings + .description {
+  clear: both;
+}
+.node-project_issue-form .field-name-taxonomy-vocabulary-9 {
+  margin-top: .692em;
+}
+.node-project_issue-form .form-item-title input.form-text,
+.node-project_issue-form .form-item-taxonomy-vocabulary-9-und input.form-text,
+.node-project_issue-form .field-name-field-issue-parent input.form-text,
+.node-project_issue-form .field-name-field-issue-related input.form-text {
+  width: 100%;
+}
+.node-project_issue-form .field-name-field-issue-category {
+  max-width: 25%;
+}
+.node-project_issue-form .field-name-field-issue-priority {
+  max-width: 25%;
+}
+.node-project_issue-form .field-name-field-issue-status {
+  max-width: 50%;
+}
+.node-project_issue-form .field-name-field-issue-version {
+  max-width: 25%;
+}
+.node-project_issue-form .field-name-field-issue-component {
+  max-width: 50%;
+}
+.node-project_issue-form .field-name-field-issue-assigned {
+  max-width: 25%;
+}
+
+#drupalorg-issue-credit-form #edit-message {
+  width: 100%;
+}
+#drupalorg-issue-credit-form table {
+  width: inherit;
+  margin: 0.61538em 0;
+}
+#drupalorg-issue-credit-form .author {
+  text-align: center;
+}
+#drupalorg-issue-credit-form .number {
+  text-align: right;
+}
+#drupalorg-issue-credit-form textarea {
+  font-family: monospace;
+}
+#drupalorg-issue-credit-form .bar {
+  height: 1em;
+  background-color: #96bc44;
+  border-radius: 3px;
+}
+#drupalorg-issue-credit-form .bar.overflow {
+  background: none;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #96bc44), color-stop(95%, #96bc44), color-stop(100%, rgba(150, 188, 68, 0)));
+  background-image: -webkit-linear-gradient(left, #96bc44 0%, #96bc44 95%, rgba(150, 188, 68, 0) 100%);
+  background-image: -moz-linear-gradient(left, #96bc44 0%, #96bc44 95%, rgba(150, 188, 68, 0) 100%);
+  background-image: -o-linear-gradient(left, #96bc44 0%, #96bc44 95%, rgba(150, 188, 68, 0) 100%);
+  background-image: linear-gradient(left, #96bc44 0%, #96bc44 95%, rgba(150, 188, 68, 0) 100%);
+}
+
+/**
+ * Issues queue
+ */
+/* reset - theme the td's instead of tr's for reliability */
+body .project-issue tr.odd,
+body .project-issue tr.even {
+  background: none;
+  border: none;
+}
+
+/* default state, override where required */
+.project-issue tr td,
+.project-issue tr td.active {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #d8d8d2;
+  border-top: 2px solid #cccccc;
+}
+
+.project-issue tr td.active {
+  background-color: white;
+  border-top: 2px solid #939393;
+}
+
+/* target the td's rather than tr's */
+.project-issue tr.state-1 td {
+  background-color: #f9f9f9;
+  border-top: 2px solid #cccccc;
+}
+
+.project-issue tr.state-1 td.active {
+  background-color: white;
+  border-top: 2px solid #939393;
+}
+
+.project-issue tr.state-2 td {
+  background-color: #d7ffd8;
+  border-top: 2px solid #a8ff98;
+}
+
+.project-issue tr.state-2 td.active {
+  background-color: #edffec;
+  border-top: 2px solid #96bc44;
+}
+
+.project-issue tr.state-3 td,
+.project-issue tr.state-4 td,
+.project-issue tr.state-5 td,
+.project-issue tr.state-6 td,
+.project-issue tr.state-16 td {
+  background-color: #eff1fe;
+  border-top: 2px solid #b5c4fe;
+}
+
+.project-issue tr.state-3 td.active,
+.project-issue tr.state-4 td.active,
+.project-issue tr.state-5 td.active,
+.project-issue tr.state-6 td.active,
+.project-issue tr.state-16 td.active {
+  background-color: #f2f4fe;
+  border-top: 2px solid #4988fe;
+}
+
+.project-issue tr.state-7 td,
+.project-issue tr.state-18 td {
+  background-color: #fddddd;
+  border-top: 2px solid #fc8596;
+}
+
+.project-issue tr.state-7 td.active,
+.project-issue tr.state-18 td.active {
+  background-color: #fdebed;
+  border-top: 2px solid #fc2843;
+}
+
+.project-issue tr.state-8 td {
+  background-color: #ffffdd;
+  border-top: 2px solid #ffcf73;
+}
+
+.project-issue tr.state-8 td.active {
+  background-color: #feffec;
+  border-top: 2px solid #ffb404;
+}
+
+.project-issue tr.state-13 td {
+  background-color: #ffece8;
+  border-top: 2px solid #ffdccd;
+}
+
+.project-issue tr.state-13 td.active {
+  background-color: #fff6f6;
+  border-top: 2px solid #ffbca4;
+}
+
+.project-issue tr.state-14 td,
+.project-issue tr.state-15 td {
+  background-color: #f1ffe8;
+  border-top: 2px solid #bcffb3;
+}
+
+.project-issue tr.state-14 td.active,
+.project-issue tr.state-15 td.active {
+  background-color: #f8fff1;
+  border-top: 2px solid #93ff88;
+}
+
+/* Search button on issue listings */
+.page-project-issues .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+}
+
+/* Create a new issue / Advanced search / E-mail notifications links */
+.page-project-issues #content ul.links li {
+  display: inline;
+  padding-right: 0.5em;
+}
+
+#organization-map,
+.homepage-map {
+  position: relative;
+}
+
+.homepage-map {
+  background: url(../images/world-map.png);
+  height: 0;
+  white-space: nowrap;
+  width: 100%;
+}
+@media all and (min-width: 470px) {
+  .homepage-map {
+    height: 250px;
+    width: 450px;
+  }
+}
+
+.drupalorg-map-pin {
+  position: absolute;
+}
+
+.homepage-map .homepage-pin {
+  display: none;
+}
+
+.drupalorg-map-pin:before,
+.homepage-map .homepage-pin:before {
+  content: '•';
+  display: inline-block;
+  font-size: 20px;
+  height: 10px;
+  left: -1px;
+  margin-right: 5px;
+  position: relative;
+  width: 10px;
+  top: -4px;
+}
+
+.homepage-pin-doc:before {
+  color: #c3dd93;
+}
+
+.homepage-pin-forum:before {
+  color: #8400fb;
+}
+
+.drupalorg-map-pin:before,
+.homepage-pin-commit:before {
+  color: #ee817a;
+}
+
+.homepage-map .homepage-pin .content {
+  background: white;
+  position: absolute;
+  border: 1px solid #bfbfba;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1px 4px;
+  bottom: 11px;
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: auto;
+}
+
+.homepage-map .homepage-pin-east .content {
+  right: -40px;
+}
+
+.homepage-map .homepage-pin-west .content {
+  left: -40px;
+}
+
+.homepage-map .homepage-pin:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -2px;
+  right: 0px;
+  background: url(../images/small-icons.png) no-repeat 0 -734px;
+}
+
+.homepage-map .drupalcon a {
+  font-weight: bold;
+  color: #15499f;
+}
+
+#organization-map {
+  background: url(../images/world-map-4.png);
+  width: 300px;
+  height: 152px;
+}
+
+#organization-map .pin,
+.homepage-map .homepage-pin {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 -5px -5px;
+}
+
+#organization-map .latitude,
+#organization-map .longitude,
+.homepage-map .latitude,
+.homepage-map .longitude {
+  display: none;
+}
+
+/**
+ * Marketplace
+ */
+/* Organization node layout */
+.node-organization .intro {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.node-organization .main {
+  width: 40.42553%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.node-organization .aside {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+.node-organization.node-teaser .intro, .view-drupalorg-training .intro {
+  width: 35.48387%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+.node-organization.node-teaser .main, .view-drupalorg-training .main {
+  width: 61.29032%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+.view-drupalorg-supporting-technologies .intro {
+  width: 22.58065%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+.view-drupalorg-supporting-technologies .main {
+  width: 74.19355%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+}
+
+/* Services view */
+.view-drupalorg-organizations .view-header .nav {
+  width: 100%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+.view-drupalorg-organizations .view-header .nav-column {
+  width: 22.58065%;
+  float: left;
+  margin-right: 3.22581%;
+  display: inline;
+}
+.view-drupalorg-organizations .view-header h3 {
+  margin-top: 0;
+}
+
+#content .view-drupalorg-organizations .view-header ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* hide JS actions */
+.view-drupalorg-organizations .view-header .show-link,
+.view-drupalorg-organizations .view-header .hide-link {
+  display: none;
+}
+
+.node-organization .website img {
+  display: block;
+}
+
+#content .node-organization dd {
+  padding-left: 0;
+}
+
+/* Training view */
+.view-drupalorg-supporting-technologies .views-row,
+.view-drupalorg-training .views-row {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.33333em;
+  display: inline;
+  margin-bottom: 1.385em;
+}
+
+/* Sidebar navigation */
+#block-menu-menu-hosting-types-menu ul.menu,
+#marketplace-services-quicknav ul.menu {
+  list-style: none;
+  padding: 0;
+}
+
+#block-menu-menu-hosting-types-menu li.leaf,
+#marketplace-services-quicknav li.leaf {
+  margin: 0 0 9px -15px;
+  list-style: none;
+}
+
+#block-menu-menu-hosting-types-menu li.leaf a,
+#marketplace-services-quicknav li.leaf a {
+  display: block;
+  padding: 0 12px 0 30px;
+  line-height: 36px;
+  color: #222222;
+  background: #eeeeee url(../images/arrow-mask.png) no-repeat 0 0;
+  border-radius: 0 5px 5px 0;
+}
+
+#block-menu-menu-hosting-types-menu li.leaf a:hover,
+#block-menu-menu-hosting-types-menu li.leaf a:focus,
+#marketplace-services-quicknav li.leaf a:hover,
+#marketplace-services-quicknav li.leaf a:focus {
+  background: #e3e3de url(../images/arrow-mask.png) no-repeat 0 0;
+  text-decoration: none;
+}
+
+#block-menu-menu-hosting-types-menu li.leaf .active,
+#block-menu-menu-hosting-types-menu li.leaf .active:hover,
+#block-menu-menu-hosting-types-menu li.leaf .active:focus,
+#marketplace-services-quicknav li.leaf.active-trail a,
+#marketplace-services-quicknav li.leaf.active-trail a:hover,
+#marketplace-services-quicknav li.leaf.active-trail a:focus {
+  color: white;
+  background: url(../images/arrow-mask.png) no-repeat 0 0, #9fc748;
+  background: url(../images/arrow-mask.png) no-repeat 0 0, -moz-linear-gradient(top, #a0c720 0%, #a0c720 49%, #9fc748 50%, #9fc748 100%);
+  background: url(../images/arrow-mask.png) no-repeat 0 0, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a0c720), color-stop(49%, #a0c720), color-stop(50%, #9fc748), color-stop(100%, #9fc748));
+  background: url(../images/arrow-mask.png) no-repeat 0 0, -webkit-linear-gradient(top, #a0c720 0%, #a0c720 49%, #97bd1f 50%, #97bd1f 100%);
+  background: url(../images/arrow-mask.png) no-repeat 0 0, -o-linear-gradient(top, #a0c720 0%, #a0c720 49%, #97bd1f 50%, #97bd1f 100%);
+  background: url(../images/arrow-mask.png) no-repeat 0 0, -ms-linear-gradient(top, #a0c720 0%, #a0c720 49%, #97bd1f 50%, #97bd1f 100%);
+  background: url(../images/arrow-mask.png) no-repeat 0 0, linear-gradient(top, #a0c720 0%, #a0c720 49%, #97bd1f 50%, #97bd1f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a0c720', endColorstr='#97bd1f',GradientType=0 );
+}
+
+#aside #block-block-40,
+#aside #block-block-42,
+#aside #block-block-46,
+#aside #block-block-62,
+#aside #block-menu-menu-hosting-types-menu,
+#aside #marketplace-services-quicknav {
+  background-color: white;
+}
+#aside #block-block-60 {
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+}
+
+#aside #block-views-drupalorg-training-block-1 {
+  background-color: white;
+}
+#aside #block-views-drupalorg-training-block-1 ul.views-summary li {
+  line-height: 1.5em;
+}
+#aside #block-views-drupalorg-training-block-1 ul.views-summary li a {
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+#aside #block-views-drupalorg-training-block-1 ul.views-summary li a.active, #aside #block-views-drupalorg-training-block-1 ul.views-summary li a:hover, #aside #block-views-drupalorg-training-block-1 ul.views-summary li a:focus {
+  background-color: #666666;
+  color: white;
+  text-decoration: none;
+}
+
+/**
+ * Member directory page (/profile)
+ */
+/* Search users block */
+#block-drupalorg_search-drupalorg_search_users form,
+#block-drupalorg_search-drupalorg_search_users .form-item {
+  margin: 0;
+}
+
+#block-drupalorg_search-drupalorg_search_users .form-text {
+  width: 150px;
+}
+
+/*
+ News page
+#block-drupalorg_news-news-terms .block-inner {
+  padding-left: 3px;
+}
+#block-drupalorg_news-news-terms.block {
+  background-color: $white;
+}
+#block-drupalorg_news-news-terms h2 {
+  margin-bottom: .5em;
+}
+#block-drupalorg_news-news-terms ul.links {
+  margin-left: -10px;
+}
+#block-drupalorg_news-news-terms ul.links li {
+  display: list-item;
+  margin-bottom: 4px;
+}
+*/
+/**
+ * Planet Drupal
+ */
+#aggregator .feed-item-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.538em;
+  /* * 13px = 20px */
+  font-weight: normal;
+  line-height: 1.35em;
+  /* * 20px = 27px */
+  margin: 0 0 0.45em;
+}
+#aggregator .feed-item {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 2.077em;
+}
+#aggregator .feed-item-date {
+  font-style: italic;
+}
+
+/* News menu in the sidebar */
+#aside #block-menu-menu-drupal-news {
+  background-color: white;
+}
+#aside #block-menu-menu-drupal-news ul.menu {
+  margin-left: -1em;
+  padding: 0;
+}
+#aside #block-menu-menu-drupal-news ul.menu li {
+  line-height: 1.5em;
+  list-style: none;
+  margin: 0 0 4px;
+}
+#aside #block-menu-menu-drupal-news ul.menu li a {
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+#aside #block-menu-menu-drupal-news ul.menu li a.active, #aside #block-menu-menu-drupal-news ul.menu li a:hover, #aside #block-menu-menu-drupal-news ul.menu li a:focus {
+  background-color: #666666;
+  color: white;
+  text-decoration: none;
+  background-image: url(../images/pointer.png);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+#project-solr-browse-projects-form {
+  background-color: #f6f6f2;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+#project-solr-browse-projects-form .form-item {
+  margin-bottom: 0.692em;
+}
+
+#project-solr-browse-projects-form .form-item,
+#project-solr-browse-projects-form #edit-submit,
+#project-solr-browse-projects-form #edit-submit-2 {
+  float: none;
+}
+
+#project-solr-browse-projects-form #edit-submit,
+#project-solr-browse-projects-form #edit-submit-2 {
+  margin-bottom: 0;
+}
+
+#project-solr-browse-projects-form .form-item > * {
+  display: inline;
+}
+
+#project-solr-browse-projects-form .results-count {
+  border-bottom: 1px solid #dddddd;
+  margin: 0 0 1em 0;
+  padding-bottom: 0.5em;
+}
+
+/**
+ * Project listings
+ */
+#project-overview .project {
+  border-bottom: 1px solid #e1e1db;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#project-overview .image-attach-teaser {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+#project-overview .image-attach-teaser img {
+  border: 1px solid #9d9d93;
+  display: block;
+}
+
+#project-overview ul.project-meta li {
+  color: #666666;
+  font-size: 0.92307em;
+  /* 0.92307 * 13px = 12px */
+  margin-bottom: 0;
+}
+
+#project-overview .links {
+  font-size: 1em;
+  /* Override project default */
+}
+
+/* Prevent unordered and ordered lists from wrapping images */
+#content #project-overview .project ul,
+#content #project-overview .project ol {
+  overflow: auto;
+}
+
+#aside-region .block-project-issue .form-item, #homebox .block-project_issue .form-item {
+  display: inline;
+  padding-right: 0.5em;
+}
+#aside-region .block-project-issue form a, #homebox .block-project_issue form a {
+  display: block;
+}
+#aside-region .block-project-issue h3, #homebox .block-project_issue h3 {
+  color: #555555;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+#aside-region .block-project-issue .metric-label, #homebox .block-project_issue .metric-label {
+  display: inline-block;
+  width: 7.6em;
+  text-align: right;
+}
+
+#block-versioncontrol-project-project-maintainers div.vc-commit-times {
+  color: #666666;
+  font-size: 0.92307em;
+  margin-bottom: 0.5em;
+}
+#block-versioncontrol-project-project-maintainers span.vc-commits {
+  white-space: nowrap;
+}
+
+.field-name-field-project-images {
+  clear: right;
+  float: right;
+  margin: 0 0 0.692em 20px;
+}
+.node-form .field-name-field-project-images {
+  margin-left: 0;
+  clear: none;
+  float: none;
+}
+
+.project-info .count {
+  font-weight: bold;
+}
+
+.node .field-name-field-supporting-organizations .field-collection-item-field-supporting-organizations {
+  margin-bottom: .4615em;
+}
+.node .field-name-field-supporting-organizations .field-name-field-organization {
+  float: left;
+  padding-right: 0.5em;
+}
+
+.node-project-module ul.links {
+  margin: 1em 0;
+}
+
+table.releases tr.ok td {
+  background-color: #f9ffec;
+  border-bottom: 1px solid #eaeae1;
+}
+
+table.releases tr.release-dev td {
+  background-color: #f6e8e8;
+  border-bottom: 1px solid #ebcccc;
+}
+
+table.releases td {
+  vertical-align: middle;
+}
+
+#content table.releases td ul.links {
+  margin: 0;
+  padding: 0;
+}
+
+table.releases td.release-icon {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+table.releases td.release-icon img {
+  display: block;
+}
+
+table tr.notrecommended td {
+  background: #f6e8e8;
+  border-bottom: 1px solid #ebcccc;
+}
+
+.view-project-release-download-table div.warning {
+  margin: 0;
+  width: 99%;
+}
+
+.view-drupalorg-supporters .view-header .left {
+  clear: none;
+  float: left;
+  margin: 0 0 3em;
+  width: 58%;
+}
+.view-drupalorg-supporters .view-header .right {
+  clear: none;
+  float: right;
+  margin: 0;
+  text-align: right;
+  width: 42%;
+}
+.view-drupalorg-supporters .view-header h2 {
+  clear: both;
+}
+.view-drupalorg-supporters ul.grid {
+  overflow: hidden;
+  *zoom: 1;
+}
+.view-drupalorg-supporters ul.grid.cols-2 li {
+  display: inline-block;
+  float: left;
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+  width: 300px;
+}
+.view-drupalorg-supporters ul.grid.cols-2 li .views-field-field-logo {
+  height: 150px;
+  position: relative;
+}
+.view-drupalorg-supporters ul.grid.cols-2 li img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.view-drupalorg-supporters ul.grid.cols-2 li .views-field-field-short-description {
+  padding-right: 1em;
+}
+.view-drupalorg-supporters ul.grid.cols-4 li {
+  display: inline-block;
+  float: left;
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+  width: 150px;
+  min-height: 12em;
+}
+.view-drupalorg-supporters ul.grid.cols-4 li .views-field-field-logo {
+  height: 100px;
+  position: relative;
+}
+.view-drupalorg-supporters ul.grid.cols-4 li img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.view-drupalorg-supporters ul.grid.cols-4 li .views-field-field-short-description {
+  padding-right: 1em;
+}
+.view-drupalorg-supporters.view-display-id-attachment_2 ul.grid.cols-4 li {
+  display: inline-block;
+  float: left;
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+  width: 20%;
+}
+.view-drupalorg-supporters.view-display-id-attachment_2 ul.grid.cols-4 li .views-field-field-logo {
+  height: 100px;
+  position: relative;
+}
+.view-drupalorg-supporters.view-display-id-attachment_2 ul.grid.cols-4 li img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.view-drupalorg-supporters.view-display-id-attachment_2 ul.grid.cols-4 li .views-field-field-short-description {
+  padding-right: 1em;
+}
+
+#content ul.grid {
+  padding-left: 0;
+}
+
+#aside #block-views-drupalorg-supporters-block-1,
+#aside #block-views-drupalorg-supporters-block-2,
+#aside #block-views-drupalorg-supporters-block-3,
+#aside #block-views-drupalorg-supporters-block-4 {
+  background: white;
+}
+#aside #block-views-drupalorg-supporters-block-1 ul.views-summary li,
+#aside #block-views-drupalorg-supporters-block-2 ul.views-summary li,
+#aside #block-views-drupalorg-supporters-block-3 ul.views-summary li,
+#aside #block-views-drupalorg-supporters-block-4 ul.views-summary li {
+  line-height: 1.5em;
+}
+#aside #block-views-drupalorg-supporters-block-1 ul.views-summary li a,
+#aside #block-views-drupalorg-supporters-block-2 ul.views-summary li a,
+#aside #block-views-drupalorg-supporters-block-3 ul.views-summary li a,
+#aside #block-views-drupalorg-supporters-block-4 ul.views-summary li a {
+  padding: 0.153846em 0.384615em 0.230769em 1em;
+}
+#aside #block-views-drupalorg-supporters-block-1 ul.views-summary li a.active, #aside #block-views-drupalorg-supporters-block-1 ul.views-summary li a:hover, #aside #block-views-drupalorg-supporters-block-1 ul.views-summary li a:focus,
+#aside #block-views-drupalorg-supporters-block-2 ul.views-summary li a.active,
+#aside #block-views-drupalorg-supporters-block-2 ul.views-summary li a:hover,
+#aside #block-views-drupalorg-supporters-block-2 ul.views-summary li a:focus,
+#aside #block-views-drupalorg-supporters-block-3 ul.views-summary li a.active,
+#aside #block-views-drupalorg-supporters-block-3 ul.views-summary li a:hover,
+#aside #block-views-drupalorg-supporters-block-3 ul.views-summary li a:focus,
+#aside #block-views-drupalorg-supporters-block-4 ul.views-summary li a.active,
+#aside #block-views-drupalorg-supporters-block-4 ul.views-summary li a:hover,
+#aside #block-views-drupalorg-supporters-block-4 ul.views-summary li a:focus {
+  background-color: #666666;
+  color: white;
+  text-decoration: none;
+}
+
+#block-views-drupalorg-supporters-block-1 .views-summary li .active,
+#block-views-drupalorg-supporters-block-1 .views-summary li a:focus,
+#block-views-drupalorg-supporters-block-1 .views-summary li a:hover,
+#block-views-drupalorg-supporters-block-2 .views-summary li .active,
+#block-views-drupalorg-supporters-block-2 .views-summary li a:focus,
+#block-views-drupalorg-supporters-block-2 .views-summary li a:hover,
+#block-views-drupalorg-supporters-block-3 .views-summary li .active,
+#block-views-drupalorg-supporters-block-3 .views-summary li a:focus,
+#block-views-drupalorg-supporters-block-3 .views-summary li a:hover,
+#block-views-drupalorg-supporters-block-4 .views-summary li .active,
+#block-views-drupalorg-supporters-block-4 .views-summary li a:focus,
+#block-views-drupalorg-supporters-block-4 .views-summary li a:hover {
+  background-image: url(../images/pointer.png);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+#content .view-user-mentees .view-content .item-list ul {
+  padding-left: 0;
+}
+#content .view-user-mentees .view-content .item-list li {
+  overflow: hidden;
+  *zoom: 1;
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 0 .5em .5em .5em;
+  text-align: center;
+  width: auto;
+}
+#content .view-user-mentees .view-content .item-list img {
+  height: auto;
+  max-width: 60px;
+}

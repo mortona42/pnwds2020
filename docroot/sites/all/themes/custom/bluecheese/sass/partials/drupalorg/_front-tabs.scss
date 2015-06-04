@@ -1,0 +1,98 @@
+/**
+ * Tabs on the front page
+ */
+
+.ui-widget {
+  font-size: 1em;
+  font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+}
+
+.ui-tabs {
+  padding: 0;
+}
+
+.ui-tabs-nav,
+.front #content ul.ui-tabs-nav {
+  @include pie-clearfix();
+  display: block;
+  border: 0;
+  border-bottom: 1px solid nth($greys, 2);
+  padding: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+  padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav li,
+#nav-content ul li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.ui-tabs .ui-tabs-nav a,
+.ui-tabs .ui-tabs-nav a:link,
+.ui-tabs .ui-tabs-nav a:visited,
+.ui-tabs .ui-tabs-nav a:hover {
+  color: $tabs-blue;
+  display: block;
+  float: left;
+  height: 32px;
+  padding: 5px 11px 0 11px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  margin-bottom: -1px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+  background-color: $white;
+  border: 1px solid nth($greys, 2);
+  border-bottom: 0;
+  @include border-radius(7px 7px 0 0);
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  color: $black;
+}
+
+.ui-tabs-nav li a:hover,
+.ui-tabs-nav li a:focus {
+  text-decoration: none;
+}
+
+.ui-tabs-hide {
+  display: none;
+}
+
+.ui-tabs-nav a:active {
+  outline: none;
+}
+
+#tab-docs-link:before,
+#tab-forum-link:before,
+#tab-commits-link:before {
+  content: '●';
+  font-size: 20px;
+  line-height: 0px; // to compensate for the larger font size
+  margin-right: 5px;
+  position: relative;
+  width: 11px;
+  top: 1px;
+}
+
+#tab-docs-link:before {
+  color: $tabs-green;
+}
+
+#tab-forum-link:before {
+  color: $tabs-violet;
+}
+
+#tab-commits-link:before {
+  color: $tabs-red;
+}
+
+#content .ui-tabs-panel h6 {
+  margin: 0;
+}

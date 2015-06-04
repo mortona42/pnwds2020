@@ -1,0 +1,20 @@
+/**
+ * Community page
+ */
+.page-community .main {
+  @include span-columns(8);
+}
+
+.page-community .sidebar {
+  @include span-columns(4 omega);
+}
+
+#recent-activity ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#recent-activity .item-list ul li {
+  margin-left: 0;
+}

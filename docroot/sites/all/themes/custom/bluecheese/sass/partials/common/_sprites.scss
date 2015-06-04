@@ -1,0 +1,252 @@
+// See each sprite's PSD file for adding images. PSD files are located in the assets directory.
+//
+// Add selector for the list of *all* elements using the background for image and repeat,
+// Define the background-position seperately per-element.
+//
+// Example:
+//
+// #nav-masthead li,
+// #nav-masthead li a {
+//   background-image: url(../images/sprites-header.png);
+//   background-repeat:no-repeat;
+// }
+//
+// #nav-masthead li a {
+//   background-position: 100% 0;
+// }
+//
+// #nav-masthead li {
+//   background-position: 0 -48px;
+// }
+//
+// Some files have images of variable height. Each image has its height
+// written next to it, so simply add the heights to know the background-position.
+
+// Small icons sprite
+#content .node-footer a.comment_comments,
+#content .node-footer .comment-add a,
+div.nav-content-dashboard ul li.active span.hover a.edit span,
+div.nav-content-dashboard ul li.active span.hover a.delete,
+#dashboard a.remove-widget,
+#block-drupalorg_handbook-meta-sidebar .page-major-problem span,
+.project-info .alert,
+.rss-feed-link,
+.search-results .search-info .comments,
+.portlet-header .portlet-settings,
+.portlet-plus,
+.portlet-minus,
+.portlet-close,
+.portlet-maximize,
+.portlet-maximized .portlet-minimize {
+  @include small-sprite;
+}
+
+#content .node-footer a.comment_comments,
+#content .node-footer .comment-add a {
+  background-position: 0 -415px;
+  padding-left: 15px;
+}
+
+div.nav-content-dashboard ul li.active span.hover a.edit span {
+  background-position: 8px -61px;
+  padding-left: 20px;
+}
+
+div.nav-content-dashboard ul li.active span.hover a.delete {
+  background-position: 8px -125px;
+  height: 12px;
+  padding-left: 20px;
+}
+
+#dashboard a.remove-widget {
+  background-position: 0 -128px;
+  height: 12px;
+  padding-left: 12px;
+}
+
+#block-drupalorg_handbook-meta-sidebar .page-major-problem span {
+  background-position: 0 -223px;
+  padding-left: 15px;
+}
+
+.project-info .alert {
+  background-position: 0 -223px;
+  padding-left: 16px;
+}
+
+.rss-feed-link {
+  background-position: 0 -30px;
+  padding-left: 20px;
+}
+
+.search-results .search-info .comments {
+  background-position: 0 -415px;
+  padding-left: 14px;
+}
+
+.portlet-header .portlet-settings {
+  background-position: 2px -64px;
+}
+
+.portlet-plus {
+  background-position: 2px -192px;
+}
+
+.portlet-close {
+  background-position: 2px -128px;
+}
+
+// Large icons sprite. Graphic has large transparent gaps.
+.page-search #aside .item-list ul li,
+#block-drupalorg_news-news-terms ul.links li {
+  line-height: 1.5em;
+}
+
+// Pointer icon.
+.page-search #aside .item-list ul li a.selected,
+.page-search #aside .item-list ul li a:hover,
+.page-search #aside .item-list ul li a.facetapi-active,
+#block-drupalorg_news-news-terms ul.links li a.active,
+#block-drupalorg_news-news-terms ul.links li a:hover,
+#block-drupalorg_news-news-terms ul.links li a:focus,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a.active,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a:hover,
+#block-views-drupalorg-casestudies-block-2 ul.views-summary li a:focus,
+#block-views-drupalorg-training-block-1 ul.views-summary li a.active,
+#block-views-drupalorg-training-block-1 ul.views-summary li a:hover,
+#block-views-drupalorg-training-block-1 ul.views-summary li a:focus {
+  @include icon-pointer;
+}
+
+input[name*="search"],
+#aboutwebbased a,
+#aboutcontentmanagement a,
+#aboutmodules a,
+#aboutthemes a,
+#aboutsearching a,
+#aboutsocial a,
+#aboutcommunity a,
+#aboutpersonalisation a {
+  background: $white $sprite-large-icons no-repeat;
+}
+
+input[name*="search"] {
+  background-position: 8px -856px;
+}
+
+#aboutwebbased a {
+  background-position: 4px 0;
+}
+
+#aboutcontentmanagement a {
+  background-position: 4px -96px;
+}
+
+#aboutmodules a {
+  background-position: 4px -192px;
+}
+
+#aboutthemes a {
+  background-position: 4px -288px;
+}
+
+#aboutsearching a {
+  background-position: 4px -384px;
+}
+
+#aboutsocial a {
+  background-position: 4px -480px;
+}
+
+#aboutcommunity a {
+  background-position: 4px -576px;
+}
+
+#aboutpersonalisation a {
+  background-position: 4px -1056px;
+}
+
+// Horizontally repeated images
+//
+// Used for images that are very small in width but usually high.
+// For example, gradients that are repeated on the x axis.
+#header {
+  background-image: $sprite-horizontal;
+  background-repeat: repeat-x;
+}
+
+#header {
+  background-position: 0 -1088px;
+}
+
+body.front #header {
+  background-position: 0 0;
+}
+
+// General sprites
+#site-name a,
+#front-drupal-stats,
+.image-tags span,
+.image-tags span a {
+  background-image: $sprite-general;
+  background-repeat: no-repeat;
+}
+
+#site-name a {
+  background-position: 0 -467px;
+
+  .drupalorg-site-association & {
+    background-image: $sprite-association;
+    background-position: 0 7px;
+    width: 202px;
+    height: 70px
+  }
+}
+
+
+#front-drupal-stats {
+  background-position: 0 -537px;
+}
+
+.image-tags span {
+  background-position: 0 -224px;
+}
+
+.image-tags a {
+  background-position: 100% -192px;
+}
+
+.feature-tags span {
+  background-position: 0 -288px;
+}
+
+.feature-tags a {
+  background-position: 100% -256px;
+}
+
+.node-sticky .image-tags span {
+  background-position: 0 -352px;
+}
+
+.node-sticky .image-tags a {
+  background-position: 100% -320px;
+}
+
+.drupalorg-site-api #site-name a {
+  background-image: $sprite-api;
+  background-position: 0 0;
+  width: 404px;
+}
+
+.drupalorg-site-infrastructure #site-name a {
+  background-image: $sprite-infrastructure;
+  background-position: 0 0;
+  width: 436px;
+}
+
+.drupalorg-site-security #site-name a {
+  background-image: $sprite-security;
+  background-position: 0 0;
+  width: 64px;
+  height: 73px;
+}

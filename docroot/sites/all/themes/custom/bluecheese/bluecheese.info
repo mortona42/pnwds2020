@@ -1,0 +1,29 @@
+name = "Bluecheese"
+description = "Bluecheese theme for Drupal.org with Sass, Compass, and Susy"
+screenshot = images/screenshot.png
+engine = phptemplate
+core = 7.x
+
+; -------- regions ---------------
+regions[page_tools] = Page Tools
+regions[sidebar_second] = Sidebar second
+regions[highlighted] = Highlighted
+regions[navigation] = Navigation
+regions[header] = Header
+regions[content_top] = Content: Top
+regions[content] = Content
+regions[content_bottom] = Content: Bottom
+regions[footer] = Footer
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+; -------- Styles ---------------
+stylesheets[all][] = css/styles.css
+
+; -------- Javascript ---------------
+scripts[] = js/bluecheese.js
+
+; -------- Theme based custom Vote Up Down Widgets ---------------
+plugins[vud][widgets] = widgets

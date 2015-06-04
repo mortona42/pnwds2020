@@ -1,0 +1,22 @@
+// Book pages
+.book-navigation {
+  clear: both;
+  
+  ul.menu,
+  .block & ul.menu {
+    border-top: 1px solid nth($greys, 4);
+    display: block;
+    padding: 1em 0 0 3em;
+  }
+  .page-links {
+    border-top: 1px solid nth($greys, 4);
+    border-bottom: 1px solid nth($greys, 4);
+    margin-bottom: 20px;
+  }
+}
+
+// Sidebar blocks on book pages
+#aside #block-drupalorg-handbook-meta-sidebar,
+#aside #block-drupalorg-handbook-about-page {
+  background: $white;
+}

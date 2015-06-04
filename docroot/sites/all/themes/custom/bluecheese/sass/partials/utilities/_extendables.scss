@@ -1,0 +1,22 @@
+.clear {
+  clear: both;
+}
+.clearleft {
+  clear: left;
+}
+.clearright {
+  clear: right;
+}
+.right {
+  clear: right;
+  float: right;
+  margin: 0 0 0.692em 20px;
+}
+.left {
+  clear: left;
+  float: left;
+  margin: 0 20px 0.692em 0;
+}
+img.no-clear {
+  clear: none;
+}

@@ -1,0 +1,18 @@
+#autocomplete {
+  background-color: $white;
+  border: 1px solid $grey;
+
+  #content & {
+    ul {
+      padding-left: 5px;
+    }
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+// Work around https://drupal.org/node/1218684.
+.field-widget-entityreference-autocomplete .field-multiple-table .form-type-textfield {
+  position: relative;
+}

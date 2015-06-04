@@ -1,0 +1,75 @@
+/**
+ * /start page
+ */
+.get-started {
+  &.download-drupal,
+  &.extend-drupal,
+  &.documentation,
+  &.get-support {
+    @include span-columns(3);
+    position: relative;
+    //@include post(0);
+    //width: 25%;//Not sure how else to fix this - Lewis
+  }
+}
+
+.get-started.get-support {
+  @include omega;
+  float: left;
+  //width: 24.98%
+}
+
+.get-started {
+  &.download-drupal h2,
+  &.extend-drupal h2,
+  &.documentation h2,
+  &.get-support h2 {
+  /*  text-indent: 300%;*/
+    background: $sprite-gettingstarted no-repeat;
+    font-size: 1.4em;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 240px;
+    height: 49px;
+    max-height: 49px;;
+    padding: 12px 0 0 21px;
+    color: nth($blues, 3);
+    position: relative;
+    &:before {
+      color: $white;
+      padding-right: 10px;
+    }
+  }
+}
+
+.get-started.download-drupal h2 {
+  color: nth($yellow-green, 5);
+  &:before {
+    content: '1 ';
+  }
+}
+
+.get-started.extend-drupal h2 {
+  background-position: 0 -49px;
+  &:before {
+    content: '2 ';
+  }
+}
+
+.get-started.documentation h2 {
+  background-position: 0 -98px;
+  &:before {
+    content: '3 ';
+  }
+}
+
+.get-started.get-support h2 {
+  background-position: 0 -147px;
+  &:before {
+    content: '4 ';
+  }
+}
+
+#getting-started img {
+  float: left;
+}

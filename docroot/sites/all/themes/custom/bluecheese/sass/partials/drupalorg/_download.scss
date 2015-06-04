@@ -1,0 +1,56 @@
+/**
+ * Download and Extend page
+ */
+#download,
+.drupal-modules-facets {
+  @include clearfix;
+}
+
+#download > div,
+.drupal-modules-facets > div {
+  @include span-columns(3);
+}
+
+#download > .translations,
+.drupal-modules-facets > .index {
+  @include omega;
+}
+
+/* Download Drupal button */
+#download .core ul li.download-core {
+  margin-bottom: 1.5em;
+}
+
+/* Drupal modules block */
+.drupal-modules {
+  margin-top: 0.692em;
+}
+
+/* D&E Home 'all' links in lists */
+#content li.more a,
+#content li.more a:link,
+#content li.more a:visited,
+#content li.more a:active,
+#content li.all a,
+#content li.all a:link,
+#content li.all a:visited,
+#content li.all a:active {
+  font-weight: bold;
+}
+
+/* D&E Home 'show only modules' form */
+#project-solr-version-form {
+  margin-bottom: 1em;
+}
+#project-solr-version-form .form-submit {
+  padding: 2px 5px;
+}
+#project-solr-version-form label,
+#project-solr-version-form select,
+#project-solr-version-form .form-submit {
+  float: left;
+  margin: 0 10px 0 0;
+}
+#project-solr-version-form label {
+  font-weight: normal;
+}

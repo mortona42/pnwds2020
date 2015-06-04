@@ -1,0 +1,87 @@
+// Messages
+div.help,
+div.messages,
+div.warning,
+#block-system-help {
+  min-height: 1em; // prevents divs from cutting off the icon (rare)
+  padding: 1em 1em 1em 3.5em;
+}
+
+div.help a,
+div.messages a,
+div.warning a,
+#block-system-help a {
+  font-weight: bold;
+}
+
+// Messages
+
+div.messages {
+  margin-bottom: 10px;
+  ul {
+    margin: 0; // Override core style.
+  }
+}
+
+div.messages-multiple {
+  padding-bottom: 0;
+  padding-left: 4.5em;
+}
+
+div.messages-status {
+  background: $messages-status $icon-success 10px 14px no-repeat;
+}
+div.messages-status ul li {
+  list-style-image: $dot-green;
+}
+
+// Help messages
+div.help,
+#block-system-help {
+  background: $messages-help $icon-help 10px 14px no-repeat; // Dark Blue 20%  @todo: standardize color, change graphic, add sprite
+  margin-bottom: 20px;
+}
+div.help ul li,
+#block-system-help ul li {
+  list-style-image: $dot-blue; // @todo: change graphic, add sprite
+}
+
+div.more-help-link {
+  margin-bottom: .5em;
+}
+
+// Warnings
+
+// Appears at bottom of forms
+div.warning {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+// Asterisk
+span.warning {
+  color: $asterisk-warning; // @todo: standardize color
+  margin-left: .5em;
+}
+
+div.warning span.warning {
+  display: none; // hide asterisk inside warning div (redundant)
+}
+
+div.messages-warning,
+div.warning {
+  background: $messages-warning $icon-warning 10px 14px no-repeat;
+}
+div.messages-warning ul li {
+  list-style-image: $dot-yellow;
+}
+
+div.messages-error, div.error {
+  background: $messages-error $icon-error 10px 14px no-repeat;
+}
+div.messages-error ul li {
+  list-style-image: $dot-red;
+}
+div.error {
+  padding: 1em 1em 1em 2.5em;
+}

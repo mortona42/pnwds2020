@@ -5,7 +5,7 @@ core = 7.x
 
 dependencies[] = ticket_state
 
-; Information added by drush on 2015-03-30
+; Information added by drush on 2015-05-08
 version = "7.x-1.0-beta4"
 project = "ticket"
-datestamp = "1427740460"
+datestamp = "1431041355"

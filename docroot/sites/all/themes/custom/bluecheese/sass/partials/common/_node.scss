@@ -1,0 +1,10 @@
+/* Dots between links at the bottom of book, forum nodes */
+.node-footer .links li + li:before {
+  content: " ⋅ ";
+}
+
+/* User picture on the node */
+.node .picture {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}

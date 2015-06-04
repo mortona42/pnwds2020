@@ -1,0 +1,52 @@
+/**
+ * Book listings
+ */
+
+.view-book-listings  {
+  .views-row {
+    margin-bottom: 2.077em;
+  }
+  .views-field-field-cover-image {
+    float: right;
+  }
+  .views-label,
+  label {
+    font-weight:  bold;
+  }
+  .views-label {
+    float: left;
+    padding-right: 5px;
+  }
+  .views-field {
+    clear: left;
+  }
+  p {
+    margin-bottom: 0em;
+  }
+  .view-filters {
+    margin-bottom: 2.077em;
+  }
+}
+
+.node-type-book-listing .content .field-name-field-cover-image {
+  float: right;
+}
+
+.node-type-book-listing .content .field-name-field-book-listing-authors .field-label {
+ float: left;
+}
+
+.node-type-book-listing .content .field-name-field-book-isbn-13,
+.node-type-book-listing .content .field-name-field-official-website,
+.node-type-book-listing .content .field-name-field-book-isbn-10,
+.node-type-book-listing .content .field-name-field-book-description,
+.view-book-listings .view-content .views-field-taxonomy-vocabulary-5,
+.view-book-listings .view-content .views-field-nothing,
+.view-book-listings .view-content .views-field-taxonomy-vocabulary-62 {
+  padding-top: 8px;
+}
+
+/* Sidebar guidelines link */
+#aside #block-drupalorg-handbook-book-listing-link {
+  background: $white;
+}

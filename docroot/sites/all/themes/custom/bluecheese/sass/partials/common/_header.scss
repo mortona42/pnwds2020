@@ -1,0 +1,58 @@
+#header {
+  background-color: $header-background;
+
+  .drupalorg-site-security & {
+    background: #843916;
+    background: linear-gradient(to bottom, #843916 0%,#c43d10 100%);
+  }
+}
+
+#header-left {
+  @include span-columns(7);
+  @include suffix(1);
+  clear: left;
+}
+
+#header-right {
+  @include span-columns(5 omega);
+}
+
+#header-content {
+  // Allows the "Refine your search" dropdown to be clickable.
+  position: relative;
+  z-index: 2;
+}
+
+// Name and logo
+h1#site-name {
+  margin: 0;
+}
+
+div#site-name {
+  margin-bottom: 20px;
+}
+#site-name a {
+  display: block;
+  height: 63px;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 181px;
+}
+#site-name a:focus,
+#site-name a:active {
+  outline: $white dotted thin;
+}
+
+#header-left h2 {
+  color: $header-text;
+  font-size: 1.6153em; // 1.6153 * 13px = 21px
+  font-weight: 200;
+  margin: 24px 0 12px 0;
+}
+#header-left-inner a {
+  color: $white;
+}
+
+#header-right-inner {
+  margin-top: 46px;
+}

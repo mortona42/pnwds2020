@@ -1,0 +1,22 @@
+#content .item-list .pager {
+  padding: 1em 0 0;
+  text-align: left;
+}
+
+.item-list ul.pager li {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.pager li.first {
+  padding: 0;
+}
+
+ul.pager a {
+  color: $bright-blue;
+}
+
+.pager li.pager-current {
+  background-color: $bright-blue;
+  color: $white;
+}

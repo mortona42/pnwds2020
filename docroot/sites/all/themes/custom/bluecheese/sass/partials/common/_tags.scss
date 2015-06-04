@@ -1,0 +1,82 @@
+/**
+ * Graphical tags
+ *
+ * Wraps tags in rounded corners.
+ * Used in source sites tags on the news page, feature tags, etc.
+ * 
+ * Tags should be inline and wrapped like this:
+ * 
+ * <span class="image-tags">
+ * <span><a href="#">Tag</a></span>
+ * </span>
+ * 
+ * The tags can have any color; make sure to give the
+ * second span the background-color you want
+ */
+/* todo: check which types of tags we use */
+.image-tags span {
+  background-color: $lighter-navy-blue;
+  display: inline-block;
+  font-size: .6em;
+  line-height: 18px;
+  padding-left: 4px;
+}
+.image-tags span a {
+  color: $white;
+  display: inline-block;
+  line-height: 18px;
+  padding-right: 4px;
+}
+
+.source-tags .source-tag-688 {/* Planet Drupal */
+  background-color: nth($yellow-green, 3);
+}
+
+.source-tags .source-tag-689 {/* Drupal Association */
+  background-color: $light-grey;
+}
+
+.source-tags .source-tag-689 a {
+  color: $dark-grey;
+}
+
+.image-tags span:hover {
+  background-color: nth($blues, 2);
+}
+
+.image-tags span:hover a {
+  text-decoration: none;
+}
+
+.source-tags span.source-tag-688:hover {/* Planet Drupal */
+  background-color: nth($yellow-green, 4);
+}
+
+.source-tags span.source-tag-689:hover {/* Drupal Association */
+  background-color: $darker-grey;
+}
+
+.source-tags .source-tag-689 a:hover {
+  color: $white;
+}
+
+.feature-tags span {
+  background-color: nth($yellows, 1);
+  color: $black;
+}
+
+.feature-tags span a {
+  color: $black;
+}
+
+.feature-tags span:hover {
+  background-color: nth($yellows, 2);
+}
+
+.feature-tags span:hover a {
+  color: $white;
+}
+
+h2 .image-tags span {
+  margin-left: 1em;
+}

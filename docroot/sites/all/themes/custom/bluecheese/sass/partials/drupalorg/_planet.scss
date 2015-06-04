@@ -1,0 +1,40 @@
+/**
+ * Planet Drupal
+ */
+#aggregator {
+  .feed-item-title {
+    @include h2;
+  }
+  .feed-item {
+    @include clearfix;
+    margin-bottom: 2.077em;
+  }
+  .feed-item-date {
+    font-style: italic;
+  }
+}
+
+/* News menu in the sidebar */
+#aside #block-menu-menu-drupal-news {
+  background-color: $white;
+  ul.menu {
+    margin-left: -1em;
+    padding: 0;
+  }
+  ul.menu li {
+    line-height: 1.5em;
+    list-style: none;
+    margin: 0 0 4px;
+    a {
+      padding: 0.153846em 0.384615em 0.230769em 1em;
+    }
+    a.active, a:hover, a:focus {
+      background-color: $dark-grey;
+      color: $white;
+      text-decoration: none;
+      background-image: $icon-pointer;
+      background-repeat: no-repeat;
+      background-position: 0 center;
+    }
+  }
+}

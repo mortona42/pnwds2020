@@ -26,7 +26,7 @@ function cod_session_user_default_permissions() {
     'name' => 'create session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'content editor' => 'content editor',
       'session organizer' => 'session organizer',
     ),
     'module' => 'node',
@@ -92,7 +92,6 @@ function cod_session_user_default_permissions() {
     'name' => 'edit own session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
       'content editor' => 'content editor',
       'session organizer' => 'session organizer',
     ),

@@ -197,10 +197,10 @@ function cod_session_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'display' => array(),

@@ -15,7 +15,7 @@ function cod_schedule_pages_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Schedule Admin Page';
   $page->admin_description = 'Cod Scheduler';
-  $page->path = 'admin/conference/%node/schedule';
+  $page->path = 'admin/conference/%node/schedule/!day';
   $page->access = array(
     'plugins' => array(
       0 => array(
@@ -60,6 +60,14 @@ function cod_schedule_pages_default_page_manager_pages() {
       'name' => 'entity_id:node',
       'settings' => array(),
     ),
+    'day' => array(
+      'id' => 1,
+      'identifier' => 'Schedule Day',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
   );
   $page->conf = array(
     'admin_paths' => FALSE,
@@ -74,7 +82,7 @@ function cod_schedule_pages_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Schedule Panel',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -83,6 +91,19 @@ function cod_schedule_pages_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'argument_string_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'twocol';
@@ -101,6 +122,32 @@ function cod_schedule_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-c16b040e-aa16-4c47-9b3d-4a6b1b9b40d4';
+    $pane->panel = 'left';
+    $pane->type = 'cod_schedule_menu_pane';
+    $pane->subtype = 'cod_schedule_menu_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'content_type' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'path_prefix' => '',
+      'date_format' => 'Y-m-d',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c16b040e-aa16-4c47-9b3d-4a6b1b9b40d4';
+    $display->content['new-c16b040e-aa16-4c47-9b3d-4a6b1b9b40d4'] = $pane;
+    $display->panels['left'][0] = 'new-c16b040e-aa16-4c47-9b3d-4a6b1b9b40d4';
+    $pane = new stdClass();
     $pane->pid = 'new-e960910c-0102-4b1c-96de-e59a3496beb8';
     $pane->panel = 'left';
     $pane->type = 'cod_schedule_scheduler_pane';
@@ -114,11 +161,11 @@ function cod_schedule_pages_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'e960910c-0102-4b1c-96de-e59a3496beb8';
     $display->content['new-e960910c-0102-4b1c-96de-e59a3496beb8'] = $pane;
-    $display->panels['left'][0] = 'new-e960910c-0102-4b1c-96de-e59a3496beb8';
+    $display->panels['left'][1] = 'new-e960910c-0102-4b1c-96de-e59a3496beb8';
     $pane = new stdClass();
     $pane->pid = 'new-e1cc7db0-4390-432a-ab4b-1e9611d50f4e';
     $pane->panel = 'right';
@@ -141,6 +188,36 @@ function cod_schedule_pages_default_page_manager_pages() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page-cod_schedule_admin_page__schedule_default_day';
+  $handler->task = 'page';
+  $handler->subtask = 'cod_schedule_admin_page';
+  $handler->handler = 'http_response';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'Schedule Default day',
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Schedule Default Day',
+        'keyword' => 'cod_schedule_default_day',
+        'name' => 'cod_schedule_day',
+        'day' => '',
+        'content_type' => '',
+        'id' => 1,
+      ),
+    ),
+    'relationships' => array(),
+    'code' => '301',
+    'destination' => 'admin/conference/%node:nid/schedule/%cod_schedule_default_day',
+    'name' => 'schedule_default_day',
+    'access' => array(
+      'plugins' => array(),
+      'logic' => 'and',
+    ),
+  );
   $page->default_handlers[$handler->name] = $handler;
   $pages['cod_schedule_admin_page'] = $page;
 
@@ -372,10 +449,12 @@ function cod_schedule_pages_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'content_type' => 'session+schedule_item',
+      'path_prefix' => '',
+      'date_format' => '',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
-      'content_type' => 'session+schedule_item',
     );
     $pane->cache = array();
     $pane->style = array(

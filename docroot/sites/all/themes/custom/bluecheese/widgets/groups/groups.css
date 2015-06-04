@@ -1,0 +1,160 @@
+/* $Id: groups.css,v 1.1.2.8 2010/12/15 15:15:10 realityloop Exp $ */
+
+.vud-widget-groups {
+  float: right;
+  clear: left;
+  padding: 2px;
+  margin: 0;
+  width: 70px;
+  padding: 0;
+}
+
+.vud-widget-groups a:hover {
+  text-decoration: none;
+}
+
+.vud-widget-groups .groups-score {
+  width: 50px;
+  color: #666;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  float: left;
+}
+
+.vud-widget-groups .groups-score .groups-current-score {
+  display: block;
+  font-size: 15px;
+}
+
+.vud-widget-groups .up-inactive,
+.vud-widget-groups .down-inactive {
+  display: block;
+  color: #999999;
+
+  width: 20px;
+  font-size: 15px;
+  height: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.vud-widget-groups .up-inactive:hover,
+.vud-widget-groups .down-inactive:hover {
+  font-size: 20px;
+}
+
+.vud-widget-groups .up-active,
+.vud-widget-groups .up-inactive,
+.vud-widget-groups .down-active,
+.vud-widget-groups .down-inactive {
+  display: block;
+  text-decoration: none;
+  width: 15px;
+  height: 16px;
+  background-image: url('arrows.png');
+}
+
+.vud-widget-groups a.up-inactive,
+.vud-widget-groups a.down-inactive,
+.vud-widget-groups span.up-inactive,
+.vud-widget-groups span.down-inactive {
+  cursor: pointer;
+}
+
+.vud-widget-groups .vud-link-up div {
+  float: left;
+  margin-right: 3px;
+}
+
+.vud-widget-groups .vud-link-down div {
+  float: left;
+  margin-left: 3px;
+}
+
+.vud-widget-groups .up-active,
+.vud-widget-groups .down-active {
+  display: block;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
+}
+
+.vud-widget-groups .up-active,
+.vud-widget-groups .up-inactive:hover {
+  background-position: -10px -10px;
+  float: left;
+}
+
+.vud-widget-groups .up-inactive {
+  background-position: -10px -82px;
+  float: left;
+}
+
+.vud-widget-groups .down-active,
+.vud-widget-groups .down-inactive:hover {
+  background-position: -10px -118px;
+  float: right;
+}
+
+.vud-widget-groups .down-inactive {
+  background-position: -10px -46px;
+  float: right;
+}
+
+
+.total-votes-groups {
+  font-weight: bold;
+  color: #494949;
+}
+
+.vud-term-table {
+  border: 1px solid #D3E7F4;
+  float: right;
+  width: 40em;
+  margin: 0.5em 0 0.5em 1em;
+}
+
+.vud-widget-groups .ctools-ajaxing {
+  padding-right: 0 !important;
+  display: block;
+  width: 15px;
+  height: 16px;
+  background-position: center;
+  float: left;
+}
+
+.vud-widget-groups .ctools-ajaxing.groups-click-up {
+  margin-right: 3px;
+}
+
+.vud-widget-groups .ctools-ajaxing.groups-click-down {
+  margin-left: 3px;
+}
+
+.vud-widget-groups .ctools-ajaxing span {
+  display: none;
+}
+
+.groups-voters {
+  float: right;
+  width: 15px;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}

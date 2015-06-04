@@ -1,0 +1,103 @@
+/**
+ * Case studies section
+ */
+
+/* View */
+.view-drupalorg-casestudies {
+
+  table.views-view-grid {
+    td {
+      padding: 0 0 1.5em;
+    }
+
+    td {
+      @include span-columns(4,8);
+    }
+
+    td.col-last {
+      @include omega();
+    }
+  }
+
+  .views-field-term-node-tid {
+    color: $dark-grey;
+    font-size: 0.92307em; /* 0.92307 * 13px = 12px */
+  }
+}
+
+/* Sidebar blocks */
+#aside #block-block-52 {
+  background-color: $white;
+}
+
+#aside #block-views-drupalorg-casestudies-block-2 {
+  background-color: $white;
+
+  ul.views-summary li {
+    line-height: 1.5em;
+
+    a {
+      padding: 0.153846em 0.384615em 0.230769em 1em;
+    }
+
+    a.active, a:hover, a:focus {
+      background-color: $dark-grey;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Slideshow */
+.view-drupalorg-casestudies .jcarousel-container {
+  background: $pale-yellow;
+  padding: 18px 16px 9px;
+  float: left;
+  width: 620px;
+  margin-bottom: 20px;
+}
+.view-drupalorg-casestudies .jcarousel-container .views-field-title h2 {
+  width: 465px;
+  margin-top: 18px;
+  float: left;
+}
+.view-drupalorg-casestudies .jcarousel-navigation {
+  position: absolute;
+  right: 10px;
+  margin-top: -32px;
+}
+.view-drupalorg-casestudies .jcarousel-navigation li {
+  float: left;
+  margin-right: 5px;
+}
+.view-drupalorg-casestudies .jcarousel-navigation li a {
+  color: $white;
+  background: nth($blues, 3);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 999px;
+  display: block;
+}
+.view-drupalorg-casestudies .jcarousel-navigation li a:hover,
+.view-drupalorg-casestudies .jcarousel-navigation li.active a {
+  background: nth($yellow-green, 5);
+  text-decoration: none;
+}
+
+/* Case study node */
+.node-type-casestudy {
+
+  div.field-label {
+    font-weight: normal;
+    font-size: 1.538em;
+    line-height: 1.35em;
+    margin: 0 0 0.45em;
+  }
+
+  .field-name-field-link {
+    margin: 1em 0;
+    font-weight: bold;
+  }
+}

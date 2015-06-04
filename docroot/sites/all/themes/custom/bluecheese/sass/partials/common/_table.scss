@@ -1,0 +1,77 @@
+/**
+ * @file
+ * Table styles
+ */
+ 
+table {
+  margin-bottom: 0.5em;
+  border-collapse: separate; /* reset borders from collapsed */
+}
+
+thead th {
+  border-bottom: 0;
+  padding: 0.25em 0.5em;
+}
+
+th,
+td {
+  padding: 0.25em 0.5em;
+}
+
+th {
+  background: nth($yellow-green, 1);
+  font-weight: bold;
+}
+
+th span.sort-header {
+  float: left;
+}
+
+.table-sort-asc,
+.table-sort-desc {
+  padding: 0 14px 0 0;
+}
+
+.table-sort-asc {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: right -636px;
+}
+
+.table-sort-desc {
+  background: transparent $sprite-small-icons no-repeat;
+  background-position: right -600px;
+}
+
+th a,
+th a:link,
+th a:visited {
+  color: $body-text;
+}
+
+th.active {
+  background: $row-active-background;
+}
+
+tr.even td.active {
+  background: $row-even-td-active;
+  border-bottom: 1px solid $row-active-background;
+  border-top: 1px solid $row-active-background;
+}
+
+tr.odd td.active {
+  background: nth($yellow-green, 1);
+}
+
+tr.even {
+  background: $row-even-background;
+  border-bottom: 1px solid $row-even-border;
+  border-top: 1px solid $row-even-border;
+  position: relative;
+}
+
+tr.odd {
+  background-color: $white;
+  border: 0;
+  border-bottom: 1px solid $row-even-border;
+  position: relative;
+}

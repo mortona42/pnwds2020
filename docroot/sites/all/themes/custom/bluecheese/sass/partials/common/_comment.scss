@@ -1,0 +1,132 @@
+.comment {
+  border-top: 1px solid nth($greys, 3);
+  margin-top: 0.692em;
+  padding-top: 0.692em;
+
+  > h3 {
+    margin-bottom: 0;
+  }
+  .submitted {
+    font-style: italic;
+    a.username {
+      font-style: normal;
+      font-size: 1.2307em;
+    }
+    time {
+      border-bottom: 1px dotted;
+      cursor: pointer;
+    }
+  }
+  .permalink-wrapper {
+    float: right;
+    margin: -.2708em 0 0 0.5em; // Align baseline with .submitted, and spacing.
+    .permalink {
+      font-weight: normal;
+      font-style: normal;
+      color: $darker-grey;
+      &:hover, &:focus {
+        color: $dark-blue;
+      }
+    }
+  }
+  .links {
+    float: right;
+  }
+  .new {
+    float: right;
+    color: $white;
+    background-color: $darker-grey;
+    padding: 3px 6px;
+    margin: 0 0 0 0.5em;
+    text-transform: uppercase;
+    font-size: 0.8333em;
+    line-height: 1em;
+  }
+  .picture {
+    float: left;
+    width: 40px;
+  }
+  // Move out of the way of the user picture.
+  > h3, .submitted, .content {
+    margin-left: 50px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+  #content & ul:last-child {
+    margin-bottom: 0;
+  }
+
+  // System message styling in issue comments.
+  &.system-message {
+    #content & .submitted {
+      float: right;
+      font-size: .7692em; // 10pt
+      margin: .6em .6em 0 0; // Matches .content padding.
+    }
+    .submitted time {
+      display: none;
+    }
+    &:hover .submitted time,
+    &:focus .submitted time {
+      display: inline;
+    }
+    .permalink {
+      color: $dark-grey;
+    }
+    .new {
+      margin: 4px 4px 0 0;
+    }
+    .content {
+      background: $pale-yellow;
+      color: $dark-grey;
+      margin-left: 0;
+      border-left: 10px solid $grey;
+      font-size: .923em; // * 13 = 12pt
+      padding: .5em 10px;
+    }
+    &.testing-failed .content {
+      border-left-color: nth($issue-pink, 1);
+    }
+    &.queued-retesting .content {
+      border-left-color: $issue-orange;
+    }
+    &.closed .content {
+      border-left-color: nth($issue-pink, 2);
+    }
+    &.committed .content {
+      border-left-color: $button-background-hover;
+      a {
+        font-weight: bold;
+      }
+      #content & ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin-bottom: 0.5em;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.user-signature {
+  margin: 1.5em 0 0 0; // 9px top margin. p:last-child removes the final p margin.
+  @include smaller;
+}
+
+.indented {
+  margin-left: 30px;
+}
+.indented .indented .indented .indented { // stop indenting comments after four levels of indention
+  margin-left: 0;
+}
+
+// RTL stop indenting comments after four levels of indention
+[dir=rtl] .indented .indented .indented .indented {
+  margin-right: 0;
+}

@@ -1,0 +1,289 @@
+body {
+  color: $body-text;
+  background-color: $white;
+  font-size: 0.8125em; // 16px x .8125 = 13px
+}
+
+body,
+caption,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset {
+  @include content-font;
+  line-height: 1.384615em; // 13px x 1.384615 = 18px
+}
+
+h1,
+.h1 {
+  @include header-font;
+  color: $black;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.385em;
+  margin: 0 0 0.692em;
+}
+
+h2, .h2 {
+  @include h2;
+}
+.block h2 {
+  margin-top: 0;
+}
+
+h3,
+.h3 {
+  @include header-font;
+  font-weight: bold;
+  font-size: 1.231em; // * 13px = 16px
+  line-height: 1.6875em; // * 16px = 27px
+  margin: 0 0 0.5625em;
+}
+h3.top { // For the top of columns
+  margin-top: 0;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-size: 1em; // 1 * 13  = 13
+  line-height: 1.385em;
+  font-weight: bold;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+  color: $dark-grey;
+}
+
+#content h4,
+#content .h4,
+#content h5,
+#content .h5,
+#content h6,
+#content .h6 {
+  margin: 0.5em 0 0.166667em;
+}
+
+p {
+  margin-bottom: 1.385em;
+}
+
+a,
+a:visited,
+a:active {
+  color: $dark-blue;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: $dark-blue;
+  text-decoration: underline;
+}
+
+a.all {
+  font-weight: bold;
+}
+
+a.tabledrag-handle .handle {
+  height: 2em;
+  width: 2em;
+}
+
+code,
+tt,
+pre {
+  background-color: $pale-yellow;
+  font-family: "Bitstream Vera Sans Mono", Monaco, "Lucida Console", monospace;
+  font-size: 0.9230em; // 0.9230 * 13px = 12px
+  padding: 1px;
+  white-space: pre-wrap;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  background: $white $icon-blockquote no-repeat 0 0;
+  margin: 1.384em 40px 1.384em 20px;
+  padding-left: 30px;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
+}
+
+acronym {
+  border-bottom: 1px dotted $dark-grey;
+}
+
+sup {
+  font-size: 0.769em; // * 13 = 10pt
+  line-height: 0;
+  vertical-align: super;
+}
+sub {
+  font-size: 0.923em; // * 13 = 12pt
+  line-height: 0;
+  vertical-align: sub;
+}
+
+small {
+  font-size: 0.923em; // * 13 = 12pt
+}
+
+// Prevent hiding content via multiple nested tags
+sup sup sup, sub sub sub, small small small {
+  font-size: 9px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  vertical-align: baseline
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid nth($greys, 3);
+  height: 1px;
+}
+
+dl {
+  margin-bottom: 0.692em;
+}
+dt {
+  font-weight: bold;
+  margin: 0.692em 0 0;
+}
+
+dl.documentation {
+  dt {
+    font-size: 1.23076em; // 1.23076 * 13 = 16px
+    margin-top: 0.563em;
+  }
+  dd {
+    padding-left: 0;
+  }
+}
+
+fieldset {
+  border: 1px solid nth($greys, 2);
+  padding: 0.692em;
+  margin: 0 0 1.384em 0;
+  legend {
+    padding: 0 0.25em;
+  }
+  // The collapsed fieldsets have a set height, reset it so it can be styled.
+  html.js &.collapsed {
+    height: auto;
+  }
+  // Tables inside fieldsets should have full width (for aesthetics).
+  table:not(.sticky-headers) {
+    width: 100%;
+  }
+  // General site-wide fieldset styling, not including specialized types.
+  &:not(.filter-wrapper):not(.vertical-tabs-pane):not(#edit-advanced) {
+    background: $pale-yellow;
+    border: none;
+    // Make legends and their links fully clickable and adjust the collapsed or
+    // expanded icon to match new positions.
+    legend {
+      padding: 0;
+      margin-bottom: .692em;
+      float: left;
+      // Make sure the next sibling clears the legend's floats.
+      + * {
+        clear: both;
+      }
+    }
+    html.js &.collapsible {
+      legend {
+        width: 100%;
+      }
+      .fieldset-legend {
+        background-position: 10px 60%;
+        margin: -0.692em;
+        padding: 0;
+      }
+      &.collapsed {
+        padding-bottom: 0;
+        .fieldset-legend {
+          background-position: 10px 50%;
+        }
+      }
+      .fieldset-title {
+        display: inline-block;
+        padding: .692em .692em .692em 1.75em;
+        width: 100%;
+      }
+    }
+    // Normal fieldsets do not need a summary (which affects styling).
+    // These are only for vertical tabs.
+    .summary {
+      display: none;
+    }
+    // Make buttons more aesthetically pleasing inside fieldsets.
+    a.link-button,
+    a.link-button:link,
+    a.link-button:visited,
+    a.link-button:active,
+    input[type="submit"],
+    button {
+      background: $grey;
+    }
+  }
+  // Adjust core filter module's styling on text formats for aesthetics.
+  &.filter-wrapper {
+    border-color: $light-grey;
+    padding: 0.692em;
+    legend {
+      display: none;
+    }
+    // !important needed here to override JS collapsed element attributes.
+    .fieldset-wrapper {
+      display: block !important;
+    }
+    // Reset borders.
+    html.js &.collapsed {
+      border-width: 1px;
+      border-top: 0;
+    }
+    .form-item {
+      padding: 0;
+    }
+  }
+  .filter-guidelines {
+    display: none;
+  }
+  .filter-help {
+    margin: 0;
+    padding: .1em 0;
+  }
+}

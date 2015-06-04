@@ -1,0 +1,71 @@
+// User profile pages, /user/N
+.profile {
+  h3 {
+    border-bottom: none; // Reset core style.
+  }
+  .main {
+    @include span-columns(6);
+    // Remove when profile fields are migrated.
+    h3 {
+      clear: left;
+    }
+    dl {
+      @include clearfix;
+      margin: 0;
+      dt {
+        @include span-columns(2, 6);
+      }
+      dd {
+        @include span-columns(4 omega, 6);
+        float: left;
+      }
+    }
+    // Remove when profile fields are migrated.
+    dt {
+      clear: left;
+      margin: 0 10px 0 0;
+    }
+    dd {
+      padding: 0;
+      margin-bottom: 0.692em;
+    }
+  }
+
+  .contact {
+    @include span-columns(3);
+
+    .user-picture { // Reset core styles.
+      float: none;
+      margin: 0;
+    }
+
+    .field {
+      margin-bottom: 1.3846em;
+    }
+    .field-name-field-organization-name, .field-name-field-job-title {
+      margin-bottom: 0;
+    }
+    .field-name-field-organizations>.field-items>.field-item {
+      margin-bottom: .6923em;
+    }
+  }
+
+  .aside {
+    @include span-columns(3 omega);
+
+    .da-membership-badge {
+      @include span-columns(2, 3);
+    }
+
+    // Grid of user pictures.
+    .field-name-field-mentors {
+      @include clearfix;
+      .field-item {
+        @include span-columns(1, 3);
+        @include nth-omega(3n);
+        margin-bottom: gutter(3);
+        line-height: 0;
+      }
+    }
+  }
+}
