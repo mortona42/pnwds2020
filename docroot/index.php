@@ -18,4 +18,6 @@ define('DRUPAL_ROOT', getcwd());
 
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
+// Add this line right here:
+registry_rebuild();
 menu_execute_active_handler();
