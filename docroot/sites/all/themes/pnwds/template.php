@@ -21,11 +21,11 @@ function pnwds_js_alter(&$javascript) {
     'sites/all/themes/pnwds/libraries/selectivizr/selectivizr.min.js',
     'sites/all/themes/pnwds/libraries/selectivizr/enquire.min.js'
   );
-
+  
   // Add LIBRARY for specific devices devices
   /*
     $user_agent = ( array_key_exists('HTTP_USER_AGENT', $_SERVER) ) ? $_SERVER['HTTP_USER_AGENT'] : '';
-
+    
     if ( $user_agent ) {
       if ( stripos($_SERVER['HTTP_USER_AGENT'], "iPad") ) {
         $iPad = TRUE;
@@ -41,7 +41,7 @@ function pnwds_js_alter(&$javascript) {
       }
       $tablet = ( $iPad || $AndroidTablet ) ? TRUE : FALSE;
     }
-
+    
     if ( $tablet ) {
       $header_scripts[] = 'sites/all/themes/pnwds/js/vendor/PLUGIN.SCRIPT.js';
       $javascript['sites/all/themes/pnwds/js/vendor/PLUGIN.SCRIPT.js'] = array( 'group' => 100,
@@ -65,7 +65,7 @@ function pnwds_js_alter(&$javascript) {
       $script['scope'] = 'footer';
     }
   }
-
+  
   // For context_breakpoint to work correctly, settings need to be defined in the head
   // $javascript['settings']['scope'] = 'header';
 }
@@ -78,7 +78,7 @@ function pnwds_js_alter(&$javascript) {
 function pnwds_preprocess_views_view_list(&$vars) {
   if (isset($vars['view']->name)) {
     $function = __FUNCTION__ . '__' . $vars['view']->name . '__' . $vars['view']->current_display;
-
+   
     if (function_exists($function)) {
      $function($vars);
     }
@@ -88,21 +88,11 @@ function pnwds_preprocess_views_view_list(&$vars) {
 function pnwds_preprocess_views_view_fields(&$vars) {
   if (isset($vars['view']->name)) {
     $function = __FUNCTION__ . '__' . $vars['view']->name . '__' . $vars['view']->current_display;
-
+   
     if (function_exists($function)) {
      $function($vars);
     }
   }
-}
-
-function pnwds_preprocess_panels_pane(&$vars) {
-  // get the subtype
-  $subtype = $vars['pane']->subtype;
-
-  // Add the subtype to the panel theme suggestions list
-  $vars['theme_hook_suggestions'][] = 'panels_pane__'.$subtype;
-
-  return $vars;
 }
 
 /**
@@ -111,7 +101,7 @@ function pnwds_preprocess_panels_pane(&$vars) {
 function pnwds_views_pre_render(&$view) {
   if (isset($view->name)) {
     $function = __FUNCTION__ . '__' . $view->name . '__' . $view->current_display;
-
+    
     if (function_exists($function)) {
       $function($view);
     }
@@ -133,21 +123,21 @@ function pnwds_preprocess_node(&$vars) {
   $view_mode = $vars['view_mode'];
   $type = $vars['type'];
   $nid = $vars['nid'];
-
+  
   // Create view_mode tpls
   if( !empty($view_mode) ) {
     $vars['theme_hook_suggestions'][] = 'node__' . $type . '__' . $view_mode;
     $vars['theme_hook_suggestions'][] = 'node__' . $nid . '__' . $view_mode;
     $vars['classes_array'][] = 'node__' . $type . '--' . $view_mode;
   }
-
+  
 /*
   switch($view_mode) {
     case 'slide':
     break;
   }
 */
-
+    
   switch($type) {
     case 'news':
       $vars['timestamp'] = '<span class="month">' . format_date($node->created, 'custom', 'M') . '</span><span class="day">' . format_date($node->created, 'custom', 'j') . '</span>';
@@ -186,12 +176,12 @@ function pnwds_preprocess_user_profile(&$vars) {
   $account = $vars['elements']['#account'];
   $view_mode = $elements['#view_mode'];
   $langcode = ( ($elements['#language']) != NULL ) ? $elements['#language'] : LANGUAGE_NONE;
-
+  
   // Add theme hook suggestion for each user view_mode that is available
   if ( !empty($view_mode) ) {
     $vars['theme_hook_suggestions'][] = 'user_profile__' . $view_mode;
   }
-
+  
   switch($view_mode) {
     case 'attendee':
       // Address data trimmed down to locality only.
@@ -202,7 +192,7 @@ function pnwds_preprocess_user_profile(&$vars) {
       // Full Name build of $account
       $vars['user_profile']['user_name'] = $account->name;
       $vars['user_profile']['user_link'] = !empty($account->name) ? '/users/' . str_replace(" ", "-", $account->name) : '/user/' . $account->uid;
-
+      
       // Change user picture grnerated image style
       $user_pic = $account->picture;
       if(isset($user_pic)){
@@ -216,12 +206,12 @@ function pnwds_preprocess_user_profile(&$vars) {
           'height' => '220px',
           'attributes' => array('class' => 'user__profile--image'),
         );
-
+        
         $attributes = array(
           'attributes' => array('title' => t('View %user\'s profile.', array('%user' => $account->name))),
           'html' => TRUE,
         );
-
+        
         $user_image = theme('image_style', $variables);
         $vars['user_profile']['pnw_user_picture'] = l($user_image, "user/$account->uid", $attributes);
       } else {
@@ -234,12 +224,12 @@ function pnwds_preprocess_user_profile(&$vars) {
           'height' => '290px',
           'attributes' => array('class' => 'user__profile--image--default'),
         );
-
+        
         $attributes = array(
           'attributes' => array('title' => t('View %user\'s profile.', array('%user' => $account->name))),
           'html' => TRUE,
         );
-
+        
         $user_image = theme('image', $variables);
         $vars['user_profile']['pnw_user_picture'] = l($user_image, "user/$account->uid", $attributes);
       }
@@ -248,7 +238,7 @@ function pnwds_preprocess_user_profile(&$vars) {
       // Create variable for full user_profile view that outputs another view_mode
       $displayed_user = $elements['#account'];
       $desired_view_mode = 'attendee';
-
+      
       $vars['user_profile']['attendee_view_mode'] = user_view($displayed_user, $desired_view_mode, $langcode);
     break;
   }
@@ -336,7 +326,7 @@ function pnwds_menu_tree__user_menu_inner($vars) {
 function pnwds_menu_link__user_menu_inner($vars) {
   $element = $vars['element'];
   $sub_menu = '';
-
+  
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
     $element['#attributes']['class'][] = 'dropdown';
@@ -346,9 +336,9 @@ function pnwds_menu_link__user_menu_inner($vars) {
   } else {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   }
-
+  
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
-
+  
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '</li>';
 }
 
@@ -453,4 +443,4 @@ function pnwds_form_ticket_field_formatter_view_form_alter(&$form, &$form_state,
   // Change the width of the ticket quantity input
   $form['ticket_quantity_1']['#size'] = 2;
   /* dsm($form); */
-}
+} 
