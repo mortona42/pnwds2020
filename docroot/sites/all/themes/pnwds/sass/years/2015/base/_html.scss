@@ -1,8 +1,10 @@
-a{
-	&:link, &:visited{
-		color: $DarkBlue;
-	}
-	&:hover{
-		color: $MediumGreen;
+.l-page{
+	a{
+		&:link, &:visited{
+			color: $DarkBlue2015;
+		}
+		&:hover{
+			color: $MediumGreen2015;
+		}
 	}
 }

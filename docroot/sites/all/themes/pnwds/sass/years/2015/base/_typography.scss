@@ -1,0 +1,15 @@
+$primaryFont2015: 'Arial', sans-serif;
+$headerFont2015: 'Lato', 'Arial', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: $headerFont2015 !important;
+}
+
+.l-page{
+	font-family: $primaryFont2015 !important;
+}

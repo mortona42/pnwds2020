@@ -1,8 +1,11 @@
 //Import all the partials for this year
 .section-2015{
-	@import "years/2015/variables/**/*";
-	@import "years/2015/base/**/*";
-	@import "years/2015/components/**/*";
-	@import "years/2015/layouts/**/*";
-	
+	@import "years/2015/variables/colors";
+	@import "years/2015/base/html";
+	@import "years/2015/base/forms";
+	@import "years/2015/base/typography";
+	@import "years/2015/components/pages/front";
+	@import "years/2015/components/regions/header";
+	@import "years/2015/components/regions/content";
+	@import "years/2015/components/regions/footer";
 }

@@ -1,0 +1,10 @@
+.w-footer{
+	background: $DarkBlue2015;
+	text-align: center;
+	a{
+		&:link, &:visited{
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+}

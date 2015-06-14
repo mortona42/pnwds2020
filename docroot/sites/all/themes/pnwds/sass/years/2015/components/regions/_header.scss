@@ -1,0 +1,51 @@
+.w-navigation{
+	background: none;
+	.block--system-user-menu{
+		position: absolute;
+		top: 30px;
+		right: 1.2em;
+		background: $DarkBlue2015;
+		border-radius: 20px;
+		z-index: 999;
+		li{
+			border-right: 1px solid $white;
+			&.last{
+				border-right: none;
+			}
+			a{
+				margin: 0px;
+				padding-left: 10px;
+				padding-right: 10px; 
+				&:link, &:visited{
+					color: $white;
+				}
+			}
+		}
+	}
+}
+.w-header{
+	background: $white;
+	.l-region--menu{
+		padding-top: 60px;
+		.block-menu{
+			float: right;
+		}
+		li{
+			display: inline-block;
+			margin-right: 5%;
+			&.last{
+				margin-right: 0px;
+			}
+		}
+		a{
+			&:link, &:visited{
+				color: $MediumGreen2015;
+				text-decoration: none;
+			}
+			&:hover{
+				color: $DarkBlue2015;
+				text-decoration: none;
+			}
+		}
+	}
+}
