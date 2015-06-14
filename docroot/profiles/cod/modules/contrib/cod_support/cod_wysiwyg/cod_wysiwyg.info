@@ -12,9 +12,8 @@ features[ckeditor_profile][] = Advanced
 features[features_api][] = api:2
 features[filter][] = filtered_html
 features[filter][] = full_html
-features[user_permission][] = use text format filtered_html
 
-; Information added by drush on 2015-06-04
+; Information added by drush on 2015-06-09
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433383292"
+datestamp = "1433835473"

@@ -12,11 +12,6 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_instance][] = node-page-og_group_ref
 features[node][] = page
-features[og_features_permission][] = node:event:create page content
-features[og_features_permission][] = node:event:delete any page content
-features[og_features_permission][] = node:event:delete own page content
-features[og_features_permission][] = node:event:update any page content
-features[og_features_permission][] = node:event:update own page content
 features[page_manager_pages][] = cod_basic_pages
 features[variable][] = field_bundle_settings_node__page
 features[variable][] = panelizer_defaults_node_page
@@ -30,7 +25,7 @@ features_exclude[dependencies][page_manager] = page_manager
 features_exclude[dependencies][strongarm] = strongarm
 install_option = cod
 
-; Information added by drush on 2015-06-04
+; Information added by drush on 2015-06-09
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433383292"
+datestamp = "1433835473"

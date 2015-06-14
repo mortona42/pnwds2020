@@ -31,3 +31,9 @@ function cod_basic_page_menu() {
 
   return $items;
 }
+
+function cod_basic_page_cod_default_permissions() {
+  return array(
+    'og_permission' => array('cod_basic_page'),
+  );
+}

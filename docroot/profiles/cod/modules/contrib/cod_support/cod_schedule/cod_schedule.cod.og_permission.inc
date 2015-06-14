@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_og_features_default_permissions().
+ * Implements hook_og_initial_permissions().
  */
-function cod_schedule_og_features_default_permissions() {
+function cod_schedule_og_initial_permissions() {
   $permissions = array();
 
   // Exported og permission: 'node:event:administer cod_event_room'

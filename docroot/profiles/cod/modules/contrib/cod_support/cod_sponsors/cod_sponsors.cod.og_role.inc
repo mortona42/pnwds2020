@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_og_features_default_roles().
+ * Implements hook_og_initial_roles().
  */
-function cod_sponsors_og_features_default_roles() {
+function cod_sponsors_og_initial_roles() {
   $roles = array();
 
   // Exported OG Role: 'node:event:sponsor organizer'.

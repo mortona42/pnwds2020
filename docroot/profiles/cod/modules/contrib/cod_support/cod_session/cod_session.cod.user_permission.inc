@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_session_user_default_permissions() {
+function cod_session_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'create schedule_item content'.
@@ -105,7 +105,6 @@ function cod_session_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'email unverified' => 'email unverified',
       'session organizer' => 'session organizer',
     ),
     'module' => 'cod_session',
@@ -118,7 +117,6 @@ function cod_session_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'email unverified' => 'email unverified',
       'session organizer' => 'session organizer',
     ),
     'module' => 'cod_session',

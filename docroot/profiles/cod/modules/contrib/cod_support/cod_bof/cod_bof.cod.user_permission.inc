@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_bof_user_default_permissions() {
+function cod_bof_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'create bof_session content'.
@@ -15,6 +15,8 @@ function cod_bof_user_default_permissions() {
     'name' => 'create bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -35,6 +37,8 @@ function cod_bof_user_default_permissions() {
     'name' => 'delete own bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -55,6 +59,8 @@ function cod_bof_user_default_permissions() {
     'name' => 'edit own bof_session content',
     'roles' => array(
       'administrator' => 'administrator',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -64,7 +70,8 @@ function cod_bof_user_default_permissions() {
     'name' => 'view bofs',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'cod_bof',
   );

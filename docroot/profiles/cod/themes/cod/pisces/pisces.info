@@ -87,7 +87,7 @@ settings[omega_libraries][respond][status] = 0
 settings[omega_libraries][pie][status] = 0
 settings[omega_libraries][html5shiv][status] = 0
 
-; Information added by drush on 2015-06-03
+; Information added by drush on 2015-06-05
 version = "7.x-1.0-beta91"
 project = "cod"
-datestamp = "1433290559"
+datestamp = "1433526533"

@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_sponsors_user_default_permissions() {
+function cod_sponsors_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'create sponsor content'.
@@ -50,7 +50,6 @@ function cod_sponsors_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'email unverified' => 'email unverified',
     ),
     'module' => 'cod_sponsors',
   );

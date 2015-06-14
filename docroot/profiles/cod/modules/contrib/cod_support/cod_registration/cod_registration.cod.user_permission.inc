@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_registration_user_default_permissions() {
+function cod_registration_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'administer ticket'.
@@ -16,7 +16,6 @@ function cod_registration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'attendee manager' => 'attendee manager',
-      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );
@@ -37,7 +36,6 @@ function cod_registration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'attendee manager' => 'attendee manager',
-      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );
@@ -48,7 +46,6 @@ function cod_registration_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'attendee manager' => 'attendee manager',
-      'content editor' => 'content editor',
     ),
     'module' => 'ticket',
   );

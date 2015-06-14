@@ -39,6 +39,17 @@ function cod_sponsors_form_sponsor_node_form_alter(&$form, &$form_state, $form_i
 }
 
 /**
+ * Implements hook_cod_default_permissions().
+ */
+function cod_sponsors_cod_default_permissions() {
+  return array(
+    'user_permission' => array('cod_sponsors'),
+    'user_role' => array('cod_sponsors'),
+    'og_role' => array('cod_sponsors'),
+  );
+}
+
+/**
  * Implements hook_menu().
  */
 function cod_sponsors_menu() {

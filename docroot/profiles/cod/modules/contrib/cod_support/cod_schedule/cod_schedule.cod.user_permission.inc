@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_schedule_user_default_permissions() {
+function cod_schedule_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'create field_session_timeslot'.
@@ -70,7 +70,8 @@ function cod_schedule_user_default_permissions() {
     'name' => 'view schedule',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'content editor' => 'content editor',
+      'session organizer' => 'session organizer',
     ),
     'module' => 'cod_schedule',
   );

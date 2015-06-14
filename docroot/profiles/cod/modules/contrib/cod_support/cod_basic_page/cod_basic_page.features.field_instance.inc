@@ -47,21 +47,21 @@ function cod_basic_page_field_default_field_instances() {
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(
-          'action' => 'none',
-          'action_on_edit' => 0,
-          'fallback' => 'none',
+          'action' => 'hide',
+          'action_on_edit' => 1,
+          'fallback' => 'redirect',
           'providers' => array(
             'og_context' => 1,
             'url' => 1,
           ),
-          'skip_perm' => 0,
+          'skip_perm' => 'administer nodes',
           'status' => 1,
         ),
       ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',

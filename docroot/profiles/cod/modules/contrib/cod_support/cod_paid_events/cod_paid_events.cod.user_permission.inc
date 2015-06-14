@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_paid_events_user_default_permissions() {
+function cod_paid_events_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'create field_checkout_complete_state'.

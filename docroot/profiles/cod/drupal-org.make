@@ -56,6 +56,10 @@ projects[auto_nodetitle][type] = "module"
 projects[auto_nodetitle][subdir] = "contrib"
 projects[auto_nodetitle][version] = "1.0"
 
+projects[better_exposed_filters][type] = "module"
+projects[better_exposed_filters][subdir] = "contrib"
+projects[better_exposed_filters][version] = "3.0-beta4"
+
 projects[breakpoints][type] = "module"
 projects[breakpoints][subdir] = "contrib"
 projects[breakpoints][version] = "1.3"
@@ -474,13 +478,29 @@ projects[views][subdir] = "contrib"
 ; Allow taxonomy term fields to be transformed when being passed as a value.
 projects[views][patch][] = "http://drupal.org/files/issues/views-taxonomy-name-case-transform-1.patch"
 
+projects[views_argument_substitutions][type] = "module"
+projects[views_argument_substitutions][subdir] = "contrib"
+projects[views_argument_substitutions][version] = "1.0-dev"
+projects[views_argument_substitutions][download][type] = "git"
+projects[views_argument_substitutions][download][url] = "http://git.drupal.org/project/views_argument_substitutions.git"
+projects[views_argument_substitutions][download][branch] = "7.x-1.x"
+projects[views_argument_substitutions][download][revision] = "95b810afc0bd8d078fd6ee2bbf96e487db4d0acc"
+
 projects[views_autorefresh][version] = "1.0-beta3"
 projects[views_autorefresh][type] = "module"
 projects[views_autorefresh][subdir] = "contrib"
 
+projects[views_block_filter_block][type] = "module"
+projects[views_block_filter_block][subdir] = "contrib"
+projects[views_block_filter_block][version] = "1.0-beta1"
+
 projects[views_datasource][type] = "module"
 projects[views_datasource][subdir] = "contrib"
 projects[views_datasource][version] = "1.0-alpha2"
+
+projects[views_date_format_sql][type] = "module"
+projects[views_date_format_sql][subdir] = "contrib"
+projects[views_date_format_sql][version] = "3.1"
 
 projects[views_field_view][version] = "1.1"
 projects[views_field_view][type] = "module"

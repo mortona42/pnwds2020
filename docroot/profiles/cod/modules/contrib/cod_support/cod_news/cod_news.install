@@ -32,3 +32,22 @@ function cod_news_update_7004() {
   );
   features_revert($revert);
 }
+
+/**
+ * Revert cod_news view feature to convert to the panel if the page is enabled.
+ */
+function cod_news_update_7005() {
+  // Enabled the associated news pages
+  $module_list = array('cod_news_pages');
+  module_enable($module_list);
+
+  if (module_exists('cod_news_pages')){
+    $revert = array(
+      'cod_news' => array('views_view'),
+      'cod_news_pages' => array('page_manager_pages'),
+    );
+    features_revert($revert);
+  }
+
+  return array();
+}

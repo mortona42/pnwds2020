@@ -35,6 +35,17 @@ function cod_session_views_api() {
 }
 
 /**
+ * Implements hook_cod_default_permissions().
+ */
+function cod_session_cod_default_permissions() {
+  return array(
+    'user_permission' => array('cod_session'),
+    'user_role' => array('cod_session'),
+    'og_role' => array('cod_session'),
+  );
+}
+
+/**
  * Implements hook_menu.
  * TODO: Update access callbacks for all session links.
  */

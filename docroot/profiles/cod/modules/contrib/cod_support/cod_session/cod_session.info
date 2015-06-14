@@ -48,7 +48,6 @@ features[features_api][] = api:2
 features[field_base][] = field_accepted
 features[field_base][] = field_event_default_session_view
 features[field_base][] = field_experience
-features[field_base][] = field_news_image
 features[field_base][] = field_schedule_item_tags
 features[field_base][] = field_slides
 features[field_base][] = field_speakers
@@ -85,19 +84,7 @@ features[menu_custom][] = main-menu
 features[menu_custom][] = menu-menu-quick-links
 features[node][] = schedule_item
 features[node][] = session
-features[og_features_role][] = node:event:session organizer
 features[taxonomy][] = schedule_item_tags
-features[user_permission][] = create schedule_item content
-features[user_permission][] = create session content
-features[user_permission][] = delete any schedule_item content
-features[user_permission][] = delete any session content
-features[user_permission][] = delete own session content
-features[user_permission][] = edit any schedule_item content
-features[user_permission][] = edit any session content
-features[user_permission][] = edit own session content
-features[user_permission][] = view sessions
-features[user_permission][] = view speakers
-features[user_role][] = session organizer
 features[variable][] = comment_anonymous_page
 features[variable][] = comment_anonymous_schedule_item
 features[variable][] = comment_anonymous_session
@@ -149,7 +136,7 @@ files[] = views/cod_session.views.inc
 files[] = views/cod_session_views_handler_field_track_link.inc
 files[] = views/views_plugin_pager_session_more.inc
 
-; Information added by drush on 2015-06-04
+; Information added by drush on 2015-06-09
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433383292"
+datestamp = "1433835473"

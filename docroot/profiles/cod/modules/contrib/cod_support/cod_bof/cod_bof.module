@@ -19,6 +19,15 @@ function cod_bof_permission() {
   return $perms;
 }
 
+/**
+ * Implements hook_cod_default_permissions().
+ */
+function cod_bof_cod_default_permissions() {
+  return array(
+    'user_permission' => array('cod_bof'),
+  );
+}
+
 function cod_bof_views_post_execute(&$view) {
 
   if ($view->name == 'cod_bof_schedule_content' && $view->current_display == 'default' && $view->args[1] == 'bof_session') {

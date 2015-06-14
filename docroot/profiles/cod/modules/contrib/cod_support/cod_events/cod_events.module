@@ -16,6 +16,17 @@ function cod_events_help($path, $arg) {
 }
 
 /**
+ * Implements hook_cod_default_permissions().
+ */
+function cod_events_cod_default_permissions() {
+  return array(
+    'og_permission' => array('cod_events'),
+    'og_role' => array('cod_events'),
+    'user_role' => array('cod_events'),
+  );
+}
+
+/**
  * Implements hook_menu_alter().
  * Change the OG 'groups' hook to be an event instead.
  */

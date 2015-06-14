@@ -102,3 +102,13 @@ function cod_base_entity_info_alter(&$entity_info) {
     'custom settings' => TRUE,
   );
 }
+
+/**
+ * Implements hook_cod_default_permissions().
+ */
+function cod_base_cod_default_permissions() {
+  return array(
+    'user_permission' => array('cod_base'),
+    'user_role' => array('cod_base'),
+  );
+}

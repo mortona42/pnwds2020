@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_og_features_default_permissions().
+ * Implements hook_og_initial_permissions().
  */
-function cod_events_og_features_default_permissions() {
+function cod_events_og_initial_permissions() {
   $permissions = array();
 
   // Exported og permission: 'node:event:add user'

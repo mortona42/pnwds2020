@@ -5,9 +5,9 @@
  */
 
 /**
- * Implements hook_user_default_permissions().
+ * Implements hook_user_initial_permissions().
  */
-function cod_wysiwyg_user_default_permissions() {
+function cod_wysiwyg_user_initial_permissions() {
   $permissions = array();
 
   // Exported permission: 'use text format filtered_html'.
