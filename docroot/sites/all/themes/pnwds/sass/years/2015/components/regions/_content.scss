@@ -1,7 +1,6 @@
 .l-main{
 	padding: 0px;
 	.l-content{
-		padding-left: 1.2em;
 	}
 	.l-sidebar-second{
 		padding-right: 1.2em;	
@@ -10,4 +9,11 @@
 		background: $LightBlue2015;
 		text-align: center;
 	}
+}
+.panel-layout{
+	max-width: none;
+}
+
+.field--name-body{
+	padding: 1em;
 }

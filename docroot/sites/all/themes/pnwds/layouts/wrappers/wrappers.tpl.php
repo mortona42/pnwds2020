@@ -16,10 +16,7 @@
             <div class="site--branding">
               <?php if ($logo) : ?>
                 <a href="<?php print $front_page; ?>" class="site--branding__logo" title="<?php print t('Home'); ?>" rel="home">
-                  <!--[if (lte IE 9)|(gt IEMobile 7)]>
                     <img src="<?php print $logo; ?>" onerror="this.onerror=null; this.src='/sites/all/themes/pnwds/logo.png'" alt="<?php print t('Home'); ?>" />
-                  <![endif]-->
-                  <?php include($logo); ?>
                 </a>
               <?php endif; ?>
 

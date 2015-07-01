@@ -15,12 +15,15 @@
   display: block;
   text-align: center;
   vertical-align: bottom;
-  
+  max-width: 300px;
   @include respond-to($medium) {
     display: inline-block;
     float: left;
     text-align: center;
-    max-width: 33%;
+    
+    .section-2014 &{
+    	max-width: 33%;
+    }
     min-width: 100px;
   }
 }
