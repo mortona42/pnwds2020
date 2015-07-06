@@ -9,6 +9,8 @@
  */
 function pnwds_attendees_entity_update($entity, $type) {
 
+  /*
+   * None of this should be needed anymore
   // Ticket Status is complete. Set user as an attendee.
   if ($type == 'ticket_registration') {
     $ticket_state = entity_metadata_wrapper('ticket_registration', $entity)->ticket_state->raw();
@@ -25,4 +27,5 @@ function pnwds_attendees_entity_update($entity, $type) {
       $user_wrapper->save();
     }
   }
+  */
 }
