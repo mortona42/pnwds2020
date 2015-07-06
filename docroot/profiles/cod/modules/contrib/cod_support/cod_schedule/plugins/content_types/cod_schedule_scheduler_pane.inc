@@ -38,8 +38,28 @@ function cod_schedule_pane_scheduler_render($subtype, $conf, $context = NULL) {
 function cod_schedule_schedule_admin_page($conference, $day) {
   module_load_include('inc', 'cod_schedule', 'includes/schedule.admin');
 
-  if (empty($day)) {
+  // Check to make sure that a) we have a valid day, and b) that the day lands
+  // Within the event.
+  if (empty($day) || empty($conference->field_dates)) {
     return t('Your event must have a <a href="@edit">start and end date</a>. <a href="@edit">Edit</a> event.', array('@edit' => url('node/'.$conference->nid.'/edit', array('fragment' => 'edit-field-dates', 'query' => array('destination' => 'admin/conference/' . $conference->nid . '/schedule')))));
+  }
+  // This is sad panda. Force a redirect to the first day if the day passed in is
+  // Invalid. Cannot do this in context because they aren't aware of the conference.
+  $event_days = cod_schedule_days($conference->nid);
+  $event_start = new DateTime(array_shift($event_days));
+  $event_end = new DateTime(array_pop($event_days));
+
+  // Do some sanity checking for those who like to input crazy stuff.
+  $day_comp = explode('-', $day);
+  if (count($day_comp) != 3 || !checkdate($day_comp[1], $day_comp[2], $day_comp[0])) {
+    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_start->getTimestamp()));
+  }
+  $today_dt = new DateTime($day);
+  if ($today_dt < $event_start) {
+    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_start->getTimestamp()));
+  }
+  if ($today_dt > $event_end) {
+    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_end->getTimestamp()));
   }
 
   // Grab the Rooms attached to the event.

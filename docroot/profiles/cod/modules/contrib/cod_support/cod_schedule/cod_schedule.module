@@ -282,6 +282,11 @@ function cod_schedule_days($node, $content_type = NULL) {
     $node = node_load($node);
   }
 
+  // Dates must exist for this page to work
+  if (empty($node->field_dates)) {
+    return array();
+  }
+
   if (!empty($content_type)) {
     $content_type = explode('+', $content_type);
   }

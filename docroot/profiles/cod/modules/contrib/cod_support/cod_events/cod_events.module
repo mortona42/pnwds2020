@@ -554,7 +554,7 @@ function cod_events_form_alter(&$form, &$form_state, $form_id) {
       }
     }
     // If the group node is not accessible, but is set as default, deny access.
-    if (!empty($default_event) && !node_access('view', $default_event)) {
+    if (!empty($default_event) && $default_event = node_load($default_event) && !node_access('view', $default_event)) {
       drupal_access_denied();
     }
 

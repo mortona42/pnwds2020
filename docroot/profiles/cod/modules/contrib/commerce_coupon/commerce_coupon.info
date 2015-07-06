@@ -15,7 +15,7 @@ files[] = includes/views/handlers/commerce_coupon_handler_argument_coupon_id.inc
 files[] = includes/views/handlers/commerce_coupon_handler_argument_coupon_code.inc
 files[] = commerce_coupon.info.inc
 
-; Information added by drush on 2015-02-18
-version = "7.x-2.0-beta4+13-dev"
+; Information added by drush on 2015-06-02
+version = "7.x-2.0-beta4+19-dev"
 project = "commerce_coupon"
-datestamp = "1424265318"
+datestamp = "1433275613"

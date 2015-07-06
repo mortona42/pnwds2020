@@ -101,6 +101,38 @@ function cod_events_field_default_field_bases() {
     'type_name' => 'product',
   );
 
+  // Exported field_base: 'field_url_title'
+  $field_bases['field_url_title'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_url_title',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'machine' => array(
+        0 => 'machine',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'safeword',
+    'settings' => array(
+      'allow_machine_changes' => 1,
+      'complete_path_label' => 'Complete path',
+      'machine_description' => 'A URL-safe version of the text. It may only contain lowercase letters, numbers and underscores. Leave blank to re-generate.',
+      'machine_label' => 'URL-safe',
+      'max_length' => 24,
+      'replace_pattern' => '(--|<[^<>]+>|[^/a-z0-9-])+',
+      'replace_value' => '-',
+      'show_complete_path' => 1,
+      'unique' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'safeword_title',
+  );
+
   // Exported field_base: 'group_access'
   $field_bases['group_access'] = array(
     'active' => 1,
@@ -162,6 +194,9 @@ function cod_events_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'group_theme',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'value' => array(
         0 => 'value',

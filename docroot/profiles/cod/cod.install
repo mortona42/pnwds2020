@@ -212,11 +212,11 @@ function cod_install_finished(&$install_state) {
     'auto_attach' => array('title' => 'title'),
     'hide_label' => array('page' => 0, 'entity' => 0),
   ));
-
   //TODO: Hardcoded to the first event that is created.
   if (module_exists('cod_session')) {
-    $first_event = node_load(1);
-    cod_session_generate_session_tracks($first_event, 'node', TRUE);
+    if ($first_event = node_load(1)) {
+      cod_session_generate_session_tracks($first_event, 'node', TRUE);
+    }
   }
 
   // Update Incorrect foreign key references.
@@ -226,7 +226,33 @@ function cod_install_finished(&$install_state) {
   // will be warned if they've installed an out of date Drupal version.
   // Will also trigger indexing of profile-supplied content or feeds.
   drupal_cron_run();
-  // END copy/paste from install_finished().
+
+  // Set default permissions per https://www.drupal.org/node/2500767.
+  $permissions = module_invoke_all('cod_default_permissions');
+  // Set user roles
+  if (isset($permissions['user_role'])) {
+    foreach($permissions['user_role'] AS $module) {
+      cod_install_roles($module);
+    }
+  }
+  // Set og roles
+  if (isset($permissions['og_role'])) {
+    foreach($permissions['og_role'] AS $module) {
+      cod_install_og_roles($module);
+    }
+  }
+  // Set user permissions
+  if (isset($permissions['user_permission'])) {
+    foreach($permissions['user_permission'] AS $module) {
+      cod_install_permissions($module);
+    }
+  }
+  // Set og permissions
+  if (isset($permissions['og_permission'])) {
+    foreach($permissions['og_permission'] AS $module) {
+      cod_install_og_permissions($module);
+    }
+  }
 
   if (isset($messages['error'])) {
     $output = '<p>' . (isset($messages['error']) ? st('Review the messages above before visiting <a href="@url">your new site</a>.', array('@url' => url(''))) : st('<a href="@url">Visit your new site</a>.', array('@url' => url('')))) . '</p>';

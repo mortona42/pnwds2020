@@ -5,7 +5,6 @@ package = COD
 project = cod_sponsors
 dependencies[] = cod_base
 dependencies[] = cod_events
-dependencies[] = cod_session
 dependencies[] = conditional_fields
 dependencies[] = ctools
 dependencies[] = entityreference
@@ -66,7 +65,7 @@ features[views_view][] = cod_sponsors
 features[views_view][] = cod_sponsors_admin
 features[views_view][] = cod_sponsors_levels
 
-; Information added by drush on 2015-06-09
+; Information added by drush on 2015-07-02
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433835473"
+datestamp = "1435803939"

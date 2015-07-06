@@ -12,31 +12,29 @@
 $plugin = array(
   'title' => t("Schedule Day"),
   // keyword to use for %substitution
-  'keyword' => 'cod_schedule_day',
+  'keyword' => 'cod_schedule_day_argument',
   'description' => t('Creates a date context from a day.'),
   'settings form' => 'cod_schedule_argument_day_settings_form',
-  'context' => 'cod_session_argument_day_context',
+  'context' => 'cod_schedule_argument_day_context',
   'placeholder form' => array(
     '#type' => 'textfield',
     '#description' => t('Enter a value for this argument'),
   ),
-  'path placeholder' => 'cod_session_argument_day_path_placeholder', // This is in pagemanager.
+  'path placeholder' => 'ctools_string_path_placeholder', // This is in pagemanager.
 );
 
 /**
  * Discover if this argument gives us the term we crave.
  */
-function cod_session_argument_day_context($arg = NULL, $conf = NULL, $empty = FALSE) {
+function cod_schedule_argument_day_context($arg = NULL, $conf = NULL, $empty = FALSE) {
   // If unset it wants a generic, unfilled context.
   if ($empty) {
-    return ctools_context_create_empty('cod_schedule_day');
+    return ctools_context_create_empty('string');
   }
 
-  if (!$arg) {
-    return FALSE;
-  }
-  $context = ctools_context_create('cod_schedule_day', $arg);
+  $context = ctools_context_create('string', $arg);
   $context->original_argument = $arg;
+
   return $context;
 }
 
@@ -50,6 +48,6 @@ function cod_schedule_argument_day_settings_form(&$form, &$form_state, $conf) {
 /**
  * Switch the placeholder based upon user settings.
  */
-function cod_session_argument_day_path_placeholder($argument) {
+function cod_schedule_argument_day_path_placeholder($argument) {
   return '%pm_arg';
 }

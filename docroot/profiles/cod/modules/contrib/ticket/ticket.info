@@ -27,7 +27,7 @@ files[] = views/ticket_views_handler_field_registration_link.inc
 files[] = views/ticket_views_handler_field_registration_link_cancel.inc
 files[] = views/ticket_views_handler_field_registration_link_edit.inc
 
-; Information added by drush on 2015-05-08
+; Information added by drush on 2015-06-26
 version = "7.x-1.0-beta4"
 project = "ticket"
-datestamp = "1431041355"
+datestamp = "1435274703"

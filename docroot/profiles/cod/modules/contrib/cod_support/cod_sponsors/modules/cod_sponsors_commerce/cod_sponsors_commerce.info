@@ -6,6 +6,7 @@ install_option = cod
 dependencies[] = cod_events
 dependencies[] = cod_sponsors
 dependencies[] = commerce_features
+dependencies[] = commerce_line_item
 dependencies[] = commerce_product_ui
 dependencies[] = entityreference
 dependencies[] = features
@@ -20,7 +21,7 @@ features[field_instance][] = commerce_product-sponsor-og_group_ref
 files[] = views/cod_sponsors_commerce.views.inc
 files[] = views/cod_sponsors_commerce_views_handler_field_order_link.inc
 
-; Information added by drush on 2015-06-09
+; Information added by drush on 2015-07-02
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433835473"
+datestamp = "1435803939"

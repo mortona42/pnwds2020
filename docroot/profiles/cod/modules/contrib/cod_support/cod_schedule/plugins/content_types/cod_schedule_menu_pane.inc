@@ -93,6 +93,7 @@ function cod_schedule_menu_render($event, $context = NULL, $content_type = NULL,
     $element['#href'] = $path_prefix . $data['link']['href'];
     $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
     $element['#original_link'] = $data['link'];
+    $element['#below'] = array();
     // Index using the link's unique mlid.
     // Index using the link's unique mlid.
     $build[] = $element;

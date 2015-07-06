@@ -115,7 +115,7 @@ function ticket_registration_form($form, &$form_state, $entity, $op = 'edit') {
     '#weight' => 40,
   );
 
-  if ($op != 'add' && $op != 'clone') {
+  if (user_access('delete own ticket registration') && $op != 'add' && $op != 'clone') {
     $form['actions']['delete'] = array(
       '#type' => 'submit',
       '#value' => t('Delete'),

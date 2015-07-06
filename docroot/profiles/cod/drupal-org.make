@@ -58,7 +58,7 @@ projects[auto_nodetitle][version] = "1.0"
 
 projects[better_exposed_filters][type] = "module"
 projects[better_exposed_filters][subdir] = "contrib"
-projects[better_exposed_filters][version] = "3.0-beta4"
+projects[better_exposed_filters][version] = "3.2"
 
 projects[breakpoints][type] = "module"
 projects[breakpoints][subdir] = "contrib"
@@ -87,6 +87,15 @@ projects[commerce][type] = "module"
 projects[commerce][version] = "1.11"
 projects[commerce][subdir] = "contrib"
 
+; Make "Add to cart" button text a display format setting
+; https://www.drupal.org/node/1147690
+projects[commerce][patch][] = http://drupal.org/files/issues/commerce_cart-button_text-1147690-75.patch
+
+; Possibility to show price difference/total price in attributes
+; https://www.drupal.org/node/1226466
+projects[commerce][patch][] = http://drupal.org/files/issues/product_select_options_token_display_alternative-1226466-36.patch
+
+
 projects[commerce_features][type] = "module"
 projects[commerce_features][subdir] = "contrib"
 projects[commerce_features][version] = "1.0"
@@ -101,17 +110,17 @@ projects[commerce_coupon][subdir] = "contrib"
 projects[commerce_coupon][download][type] = "git"
 projects[commerce_coupon][download][url] = "http://git.drupal.org/project/commerce_coupon.git"
 projects[commerce_coupon][download][branch] = "7.x-2.x"
-projects[commerce_coupon][download][revision] = "1cf041a3bec2255c6f309848b425c2eec96499f9"
-
-; Allowed admins to administer coupons.
-projects[commerce_coupon][patch][] = "http://drupal.org/files/issues/2427457-commerce-admin-permissions-1.patch"
+projects[commerce_coupon][download][revision] = "55bdc40eca0f7b32e11a77a94bf5ec21649849cc"
 
 projects[commerce_discount][type] = "module"
 projects[commerce_discount][subdir] = "contrib"
 projects[commerce_discount][download][type] = "git"
 projects[commerce_discount][download][url] = "http://git.drupal.org/project/commerce_discount.git"
 projects[commerce_discount][download][branch] = "7.x-1.x"
-projects[commerce_discount][download][revision] = "a1241d2ede760ad2d409ebafd90c4f32447508e9"
+projects[commerce_discount][download][revision] = "7a78225fb778b2ff0b71aa7d5a13bea824b07b69"
+
+; Add a weight to commerce_discount. https://www.drupal.org/node/1962484#comment-10026949
+projects[commerce_discount][patch][] = "https://www.drupal.org/files/issues/1962484-add-weight-commerce-discount-1.patch"
 
 projects[commerce_coupon_batch][type] = "module"
 projects[commerce_coupon_batch][subdir] = "contrib"
@@ -210,7 +219,7 @@ projects[entityreference_prepopulate][patch][] = "http://drupal.org/files/issues
 
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.5"
+projects[features][version] = "2.6"
 
 projects[fivestar][type] = "module"
 projects[fivestar][subdir] = "contrib"
@@ -251,14 +260,14 @@ projects[inline_conditions][download][branch] = "7.x-1.x"
 projects[inline_conditions][download][revision] = "3dd9495e0a7b95f7e8a29141a8860b073cba2b6a"
 
 projects[inline_entity_form][type] = "module"
-projects[inline_entity_form][version] = "1.5"
+projects[inline_entity_form][version] = "1.6"
 projects[inline_entity_form][subdir] = "contrib"
 
 projects[i18n][type] = "module"
 projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
 
-projects[jquery_update][version] = "2.5"
+projects[jquery_update][version] = "2.6"
 projects[jquery_update][type] = "module"
 projects[jquery_update][subdir] = "contrib"
 
@@ -287,10 +296,10 @@ projects[module_filter][version] = "2.0"
 
 projects[mollom][type] = "module"
 projects[mollom][subdir] = "contrib"
-projects[mollom][version] = "2.13"
+projects[mollom][version] = "2.14"
 
 projects[multiple_entity_form][type] = "module"
-projects[multiple_entity_form][version] = "1.2"
+projects[multiple_entity_form][version] = "1.3"
 projects[multiple_entity_form][subdir] = "contrib"
 
 projects[oauth][type] = "module"
@@ -405,11 +414,15 @@ projects[realname][version] = "1.2"
 
 projects[redirect][type] = "module"
 projects[redirect][subdir] = "contrib"
-projects[redirect][version] = "1.0-rc1"
+projects[redirect][version] = "1.0-rc2"
 
 projects[rules][type] = "module"
 projects[rules][subdir] = "contrib"
 projects[rules][version] = "2.9"
+
+projects[safeword][type] = "module"
+projects[safeword][subdir] = "contrib"
+projects[safeword][version] = "1.13"
 
 projects[smtp][type] = "module"
 projects[smtp][subdir] = "contrib"
@@ -515,7 +528,7 @@ projects[views_data_export][version] = "3.0-beta8"
 projects[views_data_export][subdir] = "contrib"
 
 projects[views_bulk_operations][type] = "module"
-projects[views_bulk_operations][version] = "3.2"
+projects[views_bulk_operations][version] = "3.3"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[votingapi][type] = "module"
@@ -539,6 +552,10 @@ projects[omega][download][revision] = "a4d56d4d4868ef"
 ; Backport all commits that are not susy 2 specific in Omega 4.x
 ; https://www.drupal.org/node/2398093#comment-9726835
 projects[omega][patch][] = "http://drupal.org/files/issues/2398093-omega4-backports-1.patch"
+
+; Hide blank messages in Omega 4.x
+; https://www.drupal.org/node/2512542#comment-10059838
+projects[omega][patch][] = "http://drupal.org/files/issues/blank_error_message-2512542-1.patch"
 
 ; Update panels headings in panels 3.5
 ; https://www.drupal.org/node/2453475

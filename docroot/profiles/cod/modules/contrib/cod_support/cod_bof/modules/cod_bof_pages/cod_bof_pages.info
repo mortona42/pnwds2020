@@ -16,7 +16,7 @@ features[page_manager_pages][] = cod_bof_pages
 features[panelizer_defaults][] = node:bof_session:default:default
 features[variable][] = panelizer_defaults_node_bof_session
 
-; Information added by drush on 2015-06-09
+; Information added by drush on 2015-07-02
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433835473"
+datestamp = "1435803939"

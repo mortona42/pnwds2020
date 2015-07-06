@@ -17,7 +17,7 @@ features[field_instance][] = user-user-field_dietary_needs
 features[field_instance][] = user-user-field_t_shirt_size
 install_option = cod
 
-; Information added by drush on 2015-06-09
+; Information added by drush on 2015-07-02
 version = "7.x-1.0-beta9"
 project = "cod_support"
-datestamp = "1433835473"
+datestamp = "1435803939"

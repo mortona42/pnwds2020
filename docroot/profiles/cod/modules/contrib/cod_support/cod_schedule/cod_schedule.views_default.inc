@@ -565,19 +565,6 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['sorts']['field_timeslot_room_target_id']['field'] = 'field_timeslot_room_target_id';
   $handler->display->display_options['sorts']['field_timeslot_room_target_id']['relationship'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: OG membership: Group ID */
-  $handler->display->display_options['arguments']['gid']['id'] = 'gid';
-  $handler->display->display_options['arguments']['gid']['table'] = 'og_membership';
-  $handler->display->display_options['arguments']['gid']['field'] = 'gid';
-  $handler->display->display_options['arguments']['gid']['relationship'] = 'field_timeslot_time_target_id';
-  $handler->display->display_options['arguments']['gid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['gid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['gid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['gid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['gid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['gid']['validate']['type'] = 'og';
-  $handler->display->display_options['arguments']['gid']['validate']['fail'] = 'access denied';
   /* Contextual filter: Field collection item: Allowed Types (field_timeslot_allowed_types) */
   $handler->display->display_options['arguments']['field_timeslot_allowed_types_value']['id'] = 'field_timeslot_allowed_types_value';
   $handler->display->display_options['arguments']['field_timeslot_allowed_types_value']['table'] = 'field_data_field_timeslot_allowed_types';
@@ -603,46 +590,7 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['arguments']['field_evttime_date_value']['granularity'] = 'day';
   $handler->display->display_options['arguments']['field_evttime_date_value']['granularity_reset'] = 0;
   $handler->display->display_options['arguments']['field_evttime_date_value']['timezone'] = 'America/Los_Angeles';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Taxonomy term: Term ID */
-  $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['relationship'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['filters']['tid_raw']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid_raw']['expose']['operator_id'] = 'tid_raw_op';
-  $handler->display->display_options['filters']['tid_raw']['expose']['label'] = 'Term ID';
-  $handler->display->display_options['filters']['tid_raw']['expose']['operator'] = 'tid_raw_op';
-  $handler->display->display_options['filters']['tid_raw']['expose']['identifier'] = 'track_id';
-  $handler->display->display_options['filters']['tid_raw']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    8 => 0,
-    9 => 0,
-    6 => 0,
-    7 => 0,
-    10 => 0,
-    3 => 0,
-    5 => 0,
-    4 => 0,
-  );
   $handler->display->display_options['argument_input'] = array(
-    'gid' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Conference',
-    ),
     'field_timeslot_allowed_types_value' => array(
       'type' => 'fixed',
       'context' => 'entity:comment.author',

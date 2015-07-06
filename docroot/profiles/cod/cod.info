@@ -104,7 +104,7 @@ files[] = cod.profile
 ; System Requirements.
 php_memory_limit = 128M
 
-; Information added by drush on 2015-06-05
-version = "7.x-1.0-beta91"
+; Information added by drush on 2015-07-06
+version = "7.x-1.x"
 project = "cod"
-datestamp = "1433526533"
+datestamp = "1436206037"
