@@ -1,0 +1,37 @@
+//Font Stacks
+$branding-light: "texgyreadventor", texgyreadventor, "Futura Light", Futura-Light, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+$branding-heavy: "texgyreadventor", texgyreadventor, "Futura Bold", Futura-Bold, "Futura", Futura, "Geneva", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+
+$headings: "League Gothic", "Impact", Impact, sans-serif;
+$navigation: "Nunito", Verdana, sans-serif;
+
+$sans-serif: "texgyreadventor", "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", "Nunito", Verdana, sans-serif;
+$serif: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
+
+//Typography
+$copy-color: $black;
+$copy-font-family: $sans-serif;
+$copy-font-size: 16px;
+$copy-font-weight: 300;
+$copy-line-height: 1.625em;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$header-font-family: $headings;
+$header-font-weight: 400;
+$header-font-style: normal;
+$header-font-color: $copy-color;
+$header-line-height: 1.23;
+$header-letter-spacing: 0;
+
+$header-top-margin: .325em;
+$header-bottom-margin: .325em;
+$header-text-rendering: optimizeLegibility;
+
+$h1-font-size: pem(40px);
+$h2-font-size: pem(28px);
+$h3-font-size: pem(24px);
+$h4-font-size: pem(20px);
+$h5-font-size: pem(16px);
+$h6-font-size: 1em;

@@ -1,0 +1,21 @@
+#mc_embed_signup {
+  .indicates-required {
+    color: $red;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+  
+  .asterisk {
+    color: $red;
+  }
+  
+  .mc-field-group {
+    margin-bottom: 0.625em;
+  }
+  
+  label ~ input {
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+}

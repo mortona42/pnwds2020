@@ -1,0 +1,131 @@
+.view-cod-community-attendees,
+.view-cod-community-attendees {
+  @include respond-to($small) {
+    $total-columns: 12;
+  }
+  
+  .user__profile--attendee,
+  .user--profile__attendee,
+  .user--profile--attendee {
+    @include respond-to($small, $medium) {
+      @include span-columns($total-columns/ 2);
+      
+      &:nth-child(2n+2) {
+        @include omega;
+        vertical-align: top;
+      }
+      &:nth-child(2n+1) {
+        clear:both;
+      }
+    }
+    
+    @include respond-to($medium) {
+      @include span-columns($total-columns/ 3);
+      
+      &:nth-child(3n+3) {
+        @include omega;
+        vertical-align: top;
+      }
+      &:nth-child(3n+1) {
+        clear:both;
+      }
+    }
+    
+    .field--name-field-social-media-account {
+      .field__item {
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+  
+  .csstransforms3d & {
+    .user__profile--attendee,
+    .user--profile__attendee,
+    .user--profile--attendee {
+      position: relative;
+      
+      .user--profile__info,
+      .user--profile__content {
+        @include transition(all 1s ease-in-out);
+        @include transform-style(preserve-3d);
+        @include transform-origin(right center);
+        /* backface-visibility: hidden; */
+      }
+      
+      .user--profile__info {
+        @include transform(rotateY(0deg) translateX(0));
+        
+        .user--profile__picture {
+          @include transition(all 1s ease-in-out);
+          @include transform(scale(1));
+          position: relative;
+          top: 0;
+          z-index: 1;
+        }
+        
+        .user--profile__full-name,
+        .locale {
+          position: relative;
+          top: 0;
+          z-index: 1;
+        }
+        
+        .user--profile__full-name {
+          @include transition(all 1s ease-in-out);
+          @include transform(scale(1));
+          text-shadow: 0 0 0 rgba($black, 0);
+          z-index: 5;
+        }
+      }
+      
+      .user--profile__content {
+        @include transform(rotateY(180deg) translateX(0) scale(0.6));
+        backface-visibility: hidden;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        opacity: 0;
+      }
+      
+      .field--name-field-social-media-account {
+        margin-top: 0;
+        @include transform(scale(0.8));
+      }
+      
+      &:hover,
+      &:focus {
+        .user--profile__info {
+          .user--profile__picture {
+            @include transform(rotateY(-180deg) scale(1.2));
+            opacity: 0.3;
+            top: 24px;
+          }
+          
+          .user--profile__full-name,
+          .locale {
+            /* opacity: 0; */
+          }
+          
+          .user--profile__full-name {
+            @include transform(scale(1.2));
+            text-shadow: 2px 2px 3px rgba($black, 0.7);
+            top: -0.625em;
+            
+            a {
+              color: $link-light-blue;
+            }
+          }
+        }
+        .user--profile__content {
+          @include transform(rotateY(0deg) scale(0.8));
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

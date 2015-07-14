@@ -1,0 +1,65 @@
+.user__profile--full,
+.user--profile__full,
+.user--profile--full {
+  .user__profile--attendee,
+  .user--profile__attendee,
+  .user--profile--attendee {
+    position: relative;
+    
+    @include respond-to($small) {
+      $total-columns: 12;
+      @include span-columns($total-columns / 3);
+    }
+    
+    @include respond-to($medium) {
+      $total-columns: 16;
+      @include span-columns(($total-columns / 4) + 3);
+    }
+    
+    .user__profile--info,
+    .user--profile__info,
+    .user--profile--info {
+      padding-right: 50px;
+      
+      @include respond-to($small) {
+        padding-right: 40px;
+      }
+    }
+    
+    .user__profile--content,
+    .user--profile__content,
+    .user--profile--content {
+      @include border-radius(6px);
+      @include box-shadow($drop-shadow__inner-glow-shallow-dark);
+      background-color: rgba($lightest-grey, 0.6);
+      margin: 0.625em;
+      padding: 1em 0.625em;
+    }
+    
+    .field--name-field-social-media-account {
+      position: absolute;
+      top: 0;
+      right: 0;
+      
+      .field__items {
+        margin: 0.5em 0 0;
+        padding: 0;
+        display: block;
+        list-style: none outside none;
+        
+        .field__item {
+          display: block;
+          padding: 0 0 0.325em;
+          
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+      
+      @include respond-to($medium) {
+        padding-right: 4%;
+      }
+    }
+  }
+}

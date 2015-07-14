@@ -1,0 +1,7 @@
+.node__news--listing,
+.node--news--listing {
+  @include span-columns($total-columns);
+  margin-right: 0;
+  
+  .node__header {}
+}

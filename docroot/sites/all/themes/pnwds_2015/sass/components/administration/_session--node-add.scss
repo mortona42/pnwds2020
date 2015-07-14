@@ -1,0 +1,107 @@
+.node-session-form {
+  @include respond-to($medium) {
+    @include span-columns($total-columns);
+    
+    .form-item-title,
+    .field-name-body,
+    .form-actions {
+      @include span-columns($total-columns);
+    }
+    
+    .field-name-field-news-image,
+    .field-name-field-speakers,
+    .field-name-field-slides,
+    .group-audience {
+      @include span-columns($total-columns / 2 !important);
+    }
+    
+    .field-name-field-news-image,
+    .field-name-field-slides {
+      @include suffix(1);
+    }
+    
+    .field-name-field-speakers,
+    .group-audience {
+      @include omega;
+    }
+    
+    .field-name-field-speakers {
+      position: relative;
+      z-index: 1;
+      
+      .tabledrag-toggle-weight-wrapper {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+      }
+      
+      .field-label {
+        padding-left: 0.5em;
+      }
+    }
+    
+    div[class*="field-name-"],
+    div[class*="vertical-tabs"] {
+      &:not(div.field-name-body),
+      &:not(div.field-name-field-news-image),
+      &:not(div.field-name-field-speakers),
+      &:not(div.field-name-field-slides) {
+        @include span-columns($total-columns);
+      }
+    }
+  }
+  
+  @include respond-to($medium, max-width) {
+    .field-name-field-speakers {
+      .field-label {
+        padding-left: 0.5em;
+      }
+      
+      table {
+        display: block;
+        max-width: 100%;
+        
+        thead {
+          display: table;
+          width: 100%;
+          tr {
+            display: table-row;
+            th {
+              display: table-cell;
+            }
+          }
+        }
+        
+        tbody {
+          display: inline-block;
+          max-width: 100%;
+          tr {
+            display: block;
+            max-width: 100%;
+            td {
+              display: inline-block;
+              max-width: 70%;
+              width: auto;
+            }
+          }
+        }
+        
+        .form-item {
+          display: inline-block;
+          width: auto;
+          
+          input {
+            max-width: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

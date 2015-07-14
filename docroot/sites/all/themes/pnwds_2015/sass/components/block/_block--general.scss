@@ -1,0 +1,16 @@
+.l-region--sidebar-second {
+  .block {
+    background-color: rgba($white, 0.7);
+    padding: 1em;
+    margin-bottom: $vert-spacing-unit;
+    
+    &:last-child,
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    > h2.block__title {
+      margin-top: 0;
+    }
+  }
+}

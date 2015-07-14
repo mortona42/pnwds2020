@@ -1,0 +1,176 @@
+// Basehold.it placeholder baseline calculation helper
+/*
+body {
+  position: relative;
+  
+  &:after {
+    background: url('http://basehold.it/image.php?height=26') repeat top left;
+    content: '';
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &:active {
+    &:after {
+      display: none;
+    }
+  }
+}
+*/
+
+html,
+body {
+  color: $copy-color;
+  font-family: $copy-font-family;
+  font-size: $copy-font-size;
+  font-weight: $copy-font-weight;
+  line-height: $copy-line-height;
+}
+
+%dark_bg {
+  color: $white;
+  
+  &:link,
+  &:visited {
+    color: $white;
+  }
+  
+  &:hover,
+  &:focus {
+    color: $light-grey;
+  }
+}
+
+$header-font-sizes: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, $h5-font-size, $h6-font-size;
+
+@for $i from 1 through length($header-font-sizes) {
+  h#{$i} {
+    color: $header-font-color;
+    font-size: nth($header-font-sizes, $i);
+    font-family: $header-font-family;
+    font-style:  $header-font-style;
+    font-weight: $header-font-weight;
+    line-height: $header-line-height;
+    letter-spacing: $header-letter-spacing;
+    margin-top: $header-top-margin;
+    margin-bottom: $header-bottom-margin;
+    
+    a {
+      &:link,
+      &:visited {
+        color: $link-dark-blue;
+        font-weight: $header-font-weight;
+        text-decoration: none;
+      }
+      
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active,
+      &.active-trail {
+        display: inline-block;
+        vertical-align: bottom;
+        font-family: $header-font-family;
+      }
+      
+      &:hover,
+      &:focus {
+        color: $link-light-blue;
+      }
+    }
+  }
+}
+
+a {
+  @include transition(all 300ms ease-in);
+  font-family: $sans-serif;
+  display: inline-block;
+  
+  &:link,
+  &:visited {
+    color: $link-dark-blue;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  
+  &:hover,
+  &:focus {
+    color: $link-light-blue;
+    text-decoration: underline;
+  }
+  
+  &:active {}
+}
+
+.l-region--navigation,
+.l-region--menu {
+  a {
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    
+    &:hover,
+    &:focus {
+      color: tint($blue, 20%);
+    }
+  }
+}
+
+
+p {
+  margin-bottom: $vert-spacing-unit;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @include respond-to($medium) {
+    .node__content &,
+    .node--content &,
+    .node-content & {
+      font-size: 1.125em;
+    }
+  }
+}
+
+//Below this are customizations over 2014
+
+.l-page{
+	a{
+		&:link, &:visited{
+			color: $DarkBlue2015;
+		}
+		&:hover{
+			color: $MediumGreen2015;
+		}
+	}
+}
+
+$primaryFont2015: 'Arial', sans-serif;
+$headerFont2015: 'Lato', 'Arial', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: $headerFont2015 !important;
+}
+
+.l-page{
+	font-family: $primaryFont2015 !important;
+}

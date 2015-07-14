@@ -1,0 +1,68 @@
+.ticket-register-form {
+  fieldset {
+    /* @include box-shadow($drop-shadow__glow-shallow-dark); */
+    background-color: rgba($white, 0.7);
+    border: medium none;
+    
+    legend {
+      top: 1em;
+      position: relative;
+      padding-left: 0;
+      margin-bottom: 0.625em;
+      
+      @include respond-to($medium) {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  
+  @include respond-to($medium) {
+    > div {
+      > input {}
+    }
+  }
+}
+
+#edit-ticket-registrant {
+  .fieldset-description {
+    .placeholder {
+      font-weight: bold;
+    }
+    
+    a {
+      @extend input[id^="edit-submit"];
+      font-size: 0.75em;
+    }
+  }
+}
+
+fieldset[id^="edit-ticket-registrationnew"] {
+  @include respond-to($medium) {
+    @include span-columns($total-columns / 2);
+    
+    &:nth-child(2n - 1) {
+      @include omega;
+    }
+    
+/*
+    &:nth-child(2n) {
+      &:last-of-type {
+        @include span-columns($total-columns);
+        @include prefix($total-columns / 4);
+        @include suffix($total-columns / 4);
+      }
+    }
+*/
+  }
+}
+.pane-node-field-event-tickets{
+	.field--name-ticket-type-label{
+		display: none;
+	}
+	.field--name-commerce-price{
+		font-size: 32px;
+		color: $MediumBlue2015;
+		@include text-shadow(1px 1px 1px $medium-grey);
+	}
+}

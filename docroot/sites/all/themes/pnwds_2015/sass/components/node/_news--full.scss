@@ -1,0 +1,41 @@
+.node--news--full,
+.node__news--full {
+  .node__submitted {
+    @include border-radius(4px);
+    background-color: rgba($white, 0.8);
+    margin: 0.325em;
+    padding: 0.625em;
+    
+    .submitted__timestamp,
+    .submitted__author {
+      display: block;
+      width: 100%;
+      vertical-align: top;
+    }
+    
+    .submitted__timestamp {
+      margin-top: 0.625em;
+    }
+    
+    .user-picture {
+      width: 48px;
+      height: auto;
+    }
+    
+    .month {
+      @include border-radius(4px 0 0 4px);
+    }
+    
+    .day {
+      @include border-radius(0 4px 4px 0);
+    }
+    
+    .time {
+      color: $copy-color;
+    }
+    @include respond-to($medium) {
+      @include span-columns(4);
+      @include omega;
+    }
+  }
+}

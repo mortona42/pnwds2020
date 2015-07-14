@@ -1,0 +1,19 @@
+@import "abstractions/**/*";
+@import "variables/**/*";
+
+// Hide the toolbar or admin menu on small screens.
+@include respond-to($medium, max-width) {
+  html {
+    body.toolbar,
+    body.admin-menu {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+  
+  .w-navigation {
+    .admin-menu & {
+      top: 47px;
+    }
+  }
+}

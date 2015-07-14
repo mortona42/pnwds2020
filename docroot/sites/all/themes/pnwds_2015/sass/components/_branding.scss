@@ -1,0 +1,151 @@
+// Hide Event Title [#page--title] on front page when mobile
+@include respond-to($small, max-width) {
+  .front #page--title {
+    @include element-invisible;
+  }
+}
+
+.l-branding {}
+
+.site--branding {
+  font-size: 0;
+}
+
+.site--branding__logo {
+  display: block;
+  text-align: center;
+  vertical-align: bottom;
+	max-width: 350px;
+	width: 100%;
+  @include respond-to($medium) {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    min-width: 100px;
+  }
+}
+
+.site--branding__logo-svg {
+  width: 100%;
+  height: 250px;
+  
+  @include respond-to($medium) {
+    width: auto;
+    height: 104px;
+    vertical-align: bottom;
+  }
+}
+
+h1.site--branding__name {
+  font-family: $branding-heavy;
+  font-size: 2.1rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  
+  a {
+    &:link,
+    &:visited {
+      color: $white;
+      font-family: $branding-heavy;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    span {
+      display: inline;
+    }
+    
+    .word1,
+    .word2 {
+      font-family: $branding-light;
+      font-size: 1.575rem;
+      font-weight: 300;
+    }
+    
+    .word2:after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+  
+  @include respond-to($medium) {
+    display: inline-block;
+    float: left;
+    font-size: 1.75rem;
+    line-height: 1;
+    text-align: left;
+    vertical-align: bottom;
+    margin-bottom: 0.375em;
+    max-width: 66%;
+    
+    a {
+      .word1,
+      .word2 {
+        font-size: 1.325rem;
+      }
+    }
+  }
+}
+
+h2.site--branding__slogan {
+  color: $white;
+  font-family: $branding-heavy;
+  font-size: 2.1rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.325em;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin-top: 0.625em;
+  
+  .not-front & {
+    font-size: 0.875rem;
+  }
+  
+  @include respond-to($medium) {
+    display: inline-block;
+    float: left;
+    font-size: 0.875rem;
+    line-height: 1;
+    text-align: left;
+    vertical-align: bottom;
+    margin-top: 0;
+    max-width: 66%;
+  }
+}
+
+// NOT FRONT
+@include respond-to($medium, max-width) {
+  .not-front {
+    .site--branding {}
+    .site--branding__logo {}
+    
+    .site--branding__logo-svg {
+      display: none;
+    }
+    
+    h1.site--branding__name {
+      font-size: 1.85rem;
+      margin: 0 auto;
+      
+      a {
+        .word1,
+        .word2 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($medium) {
+  .not-front {
+    .site--branding__logo-svg {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,590 @@
+/**
+ * Navigation Styles
+ */
+%main-menu {
+  background-color: transparent;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  @include respond-to($medium, max-width) {
+    @include box-shadow(0 -1px 12px 3px rgba($true-black, 0.4) inset);
+    background-color: $green;
+    
+    &:before {
+      background: image-url('backgrounds/bg-overlay--diag__semi-trans.png') repeat left top transparent;
+      display: inline-block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+// Top level li
+%main-menu__top {
+  background-color: $true-white;
+  
+  @include respond-to($medium) {
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    input {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  
+  &:hover,
+  &:focus {
+    > a {
+      @include respond-to($medium) {
+        @include box-shadow(0px 5px 7px -5px rgba($black, 0.6) inset);
+        background-color: transparent;
+        border-top-color: $blue;
+        text-shadow: 0 2px 2px rgba($black, 0.6);
+      }
+    }
+  }
+  
+  &:first-child {
+    a {
+      margin-left: 0;
+    }
+  }
+  
+  &:last-child {
+    a {
+      margin-right: 0;
+    }
+  }
+}
+
+// Top level links
+%main-menu__top-links {
+  background-color: $white;
+  display: block;
+  font-family: $navigation;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: 5px 1.25em;
+  width: 100%;
+  
+  &:link,
+  &:visited {
+    color: $black;
+    text-decoration: none;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($blue, 0.8);
+  }
+  
+  @include respond-to($medium) {
+    @include transition(all 300ms ease);
+    @include box-shadow(0px 5px 7px -5px rgba(0, 0, 0, 0) inset);
+    background-color: transparent;
+    border-top: 2px solid transparent;
+    display: inline-block;
+    font-size: 0.875rem;
+    width: auto;
+    margin: auto 0.75em;
+    padding: 0 .5em;
+    vertical-align: bottom;
+    
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+      text-shadow: 0 0 0 transparent;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      @include box-shadow(0px 5px 7px -5px rgba($black, 0.6) inset);
+      background-color: transparent;
+      border-top-color: $blue;
+      text-shadow: 0 2px 2px rgba($black, 0.6);
+    }
+  }
+}
+
+// Dropdown
+%main-menu__submenu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  
+  @include respond-to($medium) {
+    @include box-shadow(0 6px 12px -2px rgba($black, 0.6));
+    @include box-sizing(border-box);
+    background-color: rgba($white, 0.6);
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    min-width: 220px;
+  }
+}
+
+// Lower level li
+%main-menu__lower {
+  background-color: $true-white;
+  
+  @include respond-to($medium) {
+    @include transition(all 300ms ease);
+    background-color: $white;
+    border-bottom: 2px solid $blue;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0.5em;
+    
+    &:hover,
+    &:focus {
+      background-color: tint($blue, 60%);
+    }
+    
+    input {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  
+  &:last-child {
+    border-bottom: medium none;
+  }
+}
+
+// Dropdown links
+%main-menu__submenu-links {
+  @extend %main-menu__top-links;
+  @include respond-to($medium, max-width) {
+    background-color: $lightest-grey;
+  }
+  
+  @include respond-to($medium) {
+    @include box-shadow(0px 5px 7px -5px rgba($black, 0) inset);
+    border-top: medium none;
+    color: $black;
+    display: block;
+    margin: 0;
+    
+    &:link,
+    &:visited {
+      color: $black;
+      text-align: left;
+      text-decoration: none;
+      text-shadow: 1px 1px 1px rgba($black, 0);
+      text-transform: capitalize;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      @include box-shadow(0px 5px 7px -5px rgba($black, 0) inset);
+      background-color: transparent;
+      border-top: medium none;
+      color: $dark-blue;
+      text-shadow: 1px 1px 1px rgba($black, 0.4);
+    }
+  }
+}
+
+
+.menu--main-menu,
+.menu--user-menu {
+  @extend %main-menu;
+  
+  // Top level menu items
+  > .level-1 {
+    @extend %main-menu__top;
+    
+    > a,
+    > .nolink {
+      @extend %main-menu__top-links;
+    }
+    
+    // Hello subnav!
+    &.clicked ul,
+    &.tapped ul {
+      display: block;
+    }
+  }
+  
+  // Submenu
+  ul {
+    @extend %main-menu__submenu;
+    
+    > .level-2 {
+      @extend %main-menu__lower;
+      
+      > a {
+        @extend %main-menu__submenu-links;
+      }
+    }
+  }
+}
+
+.menu--user-menu {
+  > .level-1 {
+    > a {
+      border-top: medium none;
+      
+      &:hover,
+      &:focus {
+        @include box-shadow(0 0 0 0 transparent inset);
+        color: tint($blue, 60%);
+      }
+      
+      @include respond-to($medium) {
+        font-size: 0.675em;
+      }
+    }
+  }
+}
+
+/**
+ * RWD Menu Styles
+ * These are set to use a max-width breakpoint because it's easier to set these styles
+ * specifically for mobile then to unset them for larger breakpoints
+ */
+.w-navigation {
+  @include respond-to($medium, max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    
+    ~ .w-header {
+      padding-top: 46px;
+    }
+  }
+}
+
+.l-region--navigation {
+  @include respond-to($medium, max-width) {
+    min-height: 46px;
+    
+    .block {
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    .block--system-user-menu {
+      min-height: 46px;
+    }
+  }
+}
+
+.l-region--menu {
+  @include respond-to($medium) {
+    padding-top: 72px;
+  }
+}
+
+input#main-menu-toggle[type=checkbox],
+input#user-menu-toggle[type=checkbox] {
+  @include respond-to($medium, max-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    display: none;
+    
+    ~ ul {}
+    
+    &:checked  {
+      ~ label {
+        color: $white;
+      }
+      
+      ~ ul {}
+    }
+  }
+  
+  @include respond-to($medium) {
+    @include element-invisible;
+  }
+}
+
+input#main-menu-toggle[type=checkbox] {
+  @include respond-to($medium, max-width) {
+    ~ ul {
+      @include transform(scaleY(0));
+      @include transform-origin(0%, 0%);
+      @include transition-property(transform max-height);
+      @include transition-duration(600ms);
+      @include transition-delay(0ms);
+      max-height: 0;
+      height: auto;
+      position: absolute;
+      top: 100%;
+      z-index: 5;
+    }
+    
+    &:checked  {
+      ~ ul {
+        @include transform(scaleY(1));
+        @include transform-origin(0%, 0%);
+        @include transition-property(transform max-height);
+        @include transition-duration(600ms);
+        @include transition-delay(0ms);
+        max-height: 420px;
+        overflow-y: scroll;
+      }
+    }
+  }
+}
+
+input#user-menu-toggle[type=checkbox] {
+  @include respond-to($medium, max-width) {
+    ~ ul {
+      @include transition-property(margin-bottom max-height);
+      @include transition-duration(600ms);
+      position: relative;
+      margin-bottom: 0;
+      max-height: 0;
+      overflow: hidden;
+      top: 0;
+      z-index: 4;
+    }
+    
+    ~ label {
+      @include transition-property(bottom);
+      @include transition-duration(600ms);
+      bottom: 0;
+    }
+    
+    &:checked  {
+      ~ label {
+        bottom: -46px;
+        z-index: 5;
+      }
+      
+      ~ ul {
+        margin-bottom: 46px;
+        max-height: 320px;
+      }
+    }
+  }
+}
+  
+label[for="main-menu-toggle"],
+label[for="user-menu-toggle"] {
+  @include respond-to($medium, max-width) {
+    width: 44px;
+    height: 46px;
+    margin: 0 10px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+  }
+  
+  @include respond-to($medium) {
+    @include element-invisible;
+  }
+}
+  
+label[for="main-menu-toggle"] {
+  background-image: image-url("icons/icon--menu.png");
+  left: auto;
+  right: 0;
+  bottom: 100%;
+}
+  
+label[for="user-menu-toggle"] {
+  background-image: image-url("icons/icon--user.png");
+}
+
+#main-menu,
+#user-menu {
+  outline: none !important;
+  
+  * {
+    &:focus {
+      outline: none !important;
+    }
+  }
+  
+  .block {
+    margin-bottom: 0;
+  }
+
+  ul,
+  li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+  
+  @include respond-to($medium) {
+    padding: 0;
+  }
+}
+
+.menu--user-menu {
+  @include respond-to($medium) {
+    text-align: right;
+  }
+}
+
+nav[role="navigation"] > ul .dropdown {
+  position: relative;
+
+  @include respond-to($medium, max-width) {
+    [data-toggle="dropdown"] {
+      display: block;
+      padding: 10px;
+      
+      &:before {
+        @include transition(transform 300ms);
+        @include transform(rotate(0deg));
+        position: absolute;
+        display: block;
+        content: '\25BC';
+        font-size: 0.7em;
+        top: 1em;
+        right: 1.5em;
+        z-index: 3;
+      }
+      
+      &:after {
+        background-color: rgba($light-grey, 0.3); 
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 46px;
+        min-width: 46px;
+        height: 100%;
+        max-height: 46px;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+    
+    > .dropdown-menu {
+      @include transform(scaleY(0));
+      @include transform-origin(50%, 0%);
+      @include transition-property(max-height, transform);
+      @include transition-duration(300ms, 300ms);
+      @include transition-delay(0s, 0s);
+      max-height: 0;
+      overflow: hidden;
+      background-color: rgba($light-grey, 0.3);
+      display: block;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        padding: 0;
+  
+        a {
+          display: block;
+          padding: 10px 10px;
+        }
+        
+        &:last-child {
+          a {
+            @include box-shadow(0px -10px 16px -16px rgba(0, 0, 0, 0.6) inset);
+          }
+        }
+      }
+    }
+    
+    > input[type="checkbox"] {
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 46px;
+      min-width: 46px;
+      height: 100%;
+      max-height: 46px;
+      cursor: pointer;
+      z-index: 4;
+      
+      &:checked ~ .dropdown-menu {
+        @include transform(scaleY(1));
+        @include transition-property(max-height, transform);
+        @include transition-duration(300ms, 300ms);
+        @include transition-delay(0s, 0s);
+        max-height: 9999px;
+      }
+        
+      &:checked + a[data-toggle="dropdown"] {
+        &:before {
+          @include transform(rotate(-180deg));
+        }
+      }
+    }
+  }
+  
+  @include respond-to($medium) {
+    > input[type="checkbox"] {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    [data-toggle="dropdown"] {
+      position: relative;
+      
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    
+    .dropdown-menu {
+      @include transform(scaleY(0));
+      @include transform-origin(50%, 0%);
+      @include transition-property(max-height, transform);
+      @include transition-duration(300ms, 300ms);
+      @include transition-delay(0s, 0s);
+      background-color: rgba($true-white, 0.6);
+      display: block;
+      max-height: 0;
+      top: 100%;
+      padding-top: 1.5rem;
+    }
+      
+    &:hover,
+    &:focus {
+      overflow: visible;
+      
+      > .dropdown-menu {
+        @include transform(scaleY(1));
+        @include transition-property(max-height, transform);
+        @include transition-duration(300ms, 300ms);
+        @include transition-delay(0s, 0s);
+        max-height: 420px;
+      }
+      
+      .theme-icon-arrow-down {}
+    }
+  }
+}

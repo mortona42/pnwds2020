@@ -1,0 +1,16 @@
+.openlayers-popup {
+  
+}
+
+.openlayers-tooltip-name {
+  display: none;
+  visibility: hidden;
+}
+
+#popup_GroupDiv {
+  div {
+    > img {
+      /* display: none; */
+    }
+  }
+}

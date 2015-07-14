@@ -1,0 +1,70 @@
+.openlayers-views-map {}
+
+.openlayers-map-venue-map {
+  > :first-child,
+  .olForeignContainer {
+    position: absolute !important;
+  }
+
+/* NOT WORKING BECAUSE MAP PIN DESCRIPTIONS ARE OFFSET
+ * @todo:
+ *  - investigate further and file patch to openlayers default styles if necessary
+ */
+/*
+  .olMapViewport  {
+    position: static !important;
+  }
+*/
+}
+
+#map-layer-toggle {
+  .baseLbl,
+  .baseLayersDiv,
+  .dataLbl {
+    display: none;
+  }
+  
+  .dataLayersDiv {
+    padding: 0.5em 0;
+    
+    input, label {
+      display: inline-block;
+    }
+
+    @include respond-to($medium) {
+      
+      br {
+        display: none;
+        clear: none;
+      }
+      
+      input {
+        margin-right: 0.375em;
+      }
+    }
+    
+/*
+    input[name="Lodging & Hotels"] + label {
+      background-image: image-url("pins/pin--hotel__gold.png");
+    }
+    input[name="Local Attractions"] + label {
+      background-image: image-url("pins/pin--attraction__green.png");
+    }
+    input[name="Main Event Venue"] + label {
+      background-image: image-url("pins/pin--main-event__blue.png");
+    }
+    input[name="After Party"] + label {
+      background-image: image-url("pins/pin--party__red.png");
+    }
+*/
+  }
+  
+  .olButton {
+    background-color: transparent;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    margin-left: 0;
+    margin-right: 1em;
+  }
+}

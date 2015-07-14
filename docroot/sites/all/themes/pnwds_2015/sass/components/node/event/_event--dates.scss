@@ -1,0 +1,73 @@
+.event__dates {
+  font-size: 0;
+
+  .event__date {
+    @include border-radius(4px);
+    color: $white;
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 1%;
+    padding: 0;
+    overflow: hidden;
+    width: 46%;
+    float: left;
+  }
+
+  .date__item {
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1em;
+    width: auto;
+    vertical-align: top;
+    padding: 0.325em;
+  }
+
+  .date__item--day,
+  .date__item--month,
+  .date__item--date,
+  .date__item--year,
+  .date__item--time {}
+
+  .date__item--day {
+    background-color: $true-white;
+    color: $b-blue;
+    width: 100%;
+  }
+
+  .date__item--month {
+    background-color: $b-blue;
+    font-weight: normal;
+    width: 33%;
+  }
+
+  .date__item--date {
+    width: 25%;
+  }
+
+  .date__item--date,
+  .date__item--year {
+    background-color: $b-green;
+    letter-spacing: 0.05em;
+  }
+
+  .date__item--year {
+    background-color: $b-pale-green;
+    width: 42%;
+  }
+
+  .date__item--time {
+    color: $b-green;
+
+    &.date__end--time {
+      color: $red;
+    }
+  }
+}
+
+.event--date__start,
+.event--date__end {}
+
+.date__start--item {}
+.date__end--item {}
