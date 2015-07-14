@@ -654,7 +654,7 @@ blockquote {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/base\/_lists\.scss}line{font-family:\000038}}
 .node__content ul, .node--content ul, .node-content ul {
-  list-style: disc outside url('../images/icons/icon__list--drop.png?1430358448');
+  list-style: disc outside url('../images/icons/icon__list--drop.png?1436858103');
   margin-bottom: 20px;
   padding-left: 2em; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/base\/_lists\.scss}line{font-family:\0000313}}
@@ -1118,14 +1118,14 @@ html {
   min-height: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_backgrounds\.scss}line{font-family:\000033}}
   .section-2014 html {
-    background-image: url('../images/backgrounds/bg--diag__semi-trans.png?1430358448'); }
+    background-image: url('../images/backgrounds/bg--diag__semi-trans.png?1436858103'); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_backgrounds\.scss}line{font-family:\0000313}}
 .w-navigation,
 .w-header,
 .w-footer {
   background-color: rgba(0, 119, 64, 0.95);
-  background-image: url('../images/backgrounds/bg-overlay--diag__semi-trans.png?1430358448');
+  background-image: url('../images/backgrounds/bg-overlay--diag__semi-trans.png?1436858103');
   background-position: left top;
   background-repeat: repeat;
   color: white; }
@@ -1320,7 +1320,7 @@ h2.site--branding__slogan {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_navigation\.scss}line{font-family:\0000314}}
       .menu--main-menu:before,
       .menu--user-menu:before {
-        background: url('../images/backgrounds/bg-overlay--diag__semi-trans.png?1430358448') repeat left top transparent;
+        background: url('../images/backgrounds/bg-overlay--diag__semi-trans.png?1436858103') repeat left top transparent;
         display: inline-block;
         content: "";
         position: absolute;
@@ -1769,14 +1769,14 @@ h2.site--branding__slogan {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_navigation\.scss}line{font-family:\00003410}}
 label[for="main-menu-toggle"] {
-  background-image: url('../images/icons/icon--menu.png?1430358448');
+  background-image: url('../images/icons/icon--menu.png?1436858103');
   left: auto;
   right: 0;
   bottom: 100%; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_navigation\.scss}line{font-family:\00003417}}
 label[for="user-menu-toggle"] {
-  background-image: url('../images/icons/icon--user.png?1430358448'); }
+  background-image: url('../images/icons/icon--user.png?1436858103'); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/_navigation\.scss}line{font-family:\00003422}}
 #main-menu,
@@ -2374,7 +2374,7 @@ nav[role="navigation"] > ul .dropdown {
         .node__news--teaser .node__submitted .user-picture > a:before,
         .node--news--teaser .node__submitted .user-picture > a:before {
           content: '';
-          background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1430358448');
+          background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1436858103');
           background-position: center bottom;
           background-repeat: no-repeat;
           background-size: contain;
@@ -2538,9 +2538,6 @@ nav[role="navigation"] > ul .dropdown {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000330}}
       .page-node-651 .seattle-hero h1 span.title-bold {
         font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000336}}
-.page-node-651 .field--name-body {
-  text-align: center; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/regions\/_content\.scss}line{font-family:\000031}}
 .l-main {
@@ -2892,7 +2889,7 @@ nav[role="navigation"] > ul .dropdown {
     .user--profile__attendee .user--profile__picture > a:before,
     .user--profile--attendee .user--profile__picture > a:before {
       content: '';
-      background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1430358448');
+      background-image: url('../images/content/PNWDS_logo--user--overlay__bg.png?1436858103');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -2946,7 +2943,7 @@ nav[role="navigation"] > ul .dropdown {
   .user__profile--attendee .field--name-field-social-media-account a,
   .user--profile__attendee .field--name-field-social-media-account a,
   .user--profile--attendee .field--name-field-social-media-account a {
-    background-image: url('../images/icons/user--social/webaddress.png?1430358448');
+    background-image: url('../images/icons/user--social/webaddress.png?1436858103');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-bottom: medium none !important;
@@ -2969,29 +2966,29 @@ nav[role="navigation"] > ul .dropdown {
     .user__profile--attendee .field--name-field-social-media-account a[href*="drupal.org"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="drupal.org"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="drupal.org"] {
-      background-image: url('../images/icons/user--social/drupal.png?1430358448'); }
+      background-image: url('../images/icons/user--social/drupal.png?1436858103'); }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000395}}
     .user__profile--attendee .field--name-field-social-media-account a[href*="twitter.com"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="twitter.com"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="twitter.com"] {
-      background-image: url('../images/icons/user--social/twitter.png?1430358448'); }
+      background-image: url('../images/icons/user--social/twitter.png?1436858103'); }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\0000399}}
     .user__profile--attendee .field--name-field-social-media-account a[href*="facebook.com"], .user__profile--attendee .field--name-field-social-media-account a[href*="fb.me"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="facebook.com"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="fb.me"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="facebook.com"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="fb.me"] {
-      background-image: url('../images/icons/user--social/facebook.png?1430358448'); }
+      background-image: url('../images/icons/user--social/facebook.png?1436858103'); }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003102}}
     .user__profile--attendee .field--name-field-social-media-account a[href*="plus.google.com"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="plus.google.com"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="plus.google.com"] {
-      background-image: url('../images/icons/user--social/google-plus.png?1430358448'); }
+      background-image: url('../images/icons/user--social/google-plus.png?1436858103'); }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003105}}
     .user__profile--attendee .field--name-field-social-media-account a[href*="linkedin.com"],
     .user--profile__attendee .field--name-field-social-media-account a[href*="linkedin.com"],
     .user--profile--attendee .field--name-field-social-media-account a[href*="linkedin.com"] {
-      background-image: url('../images/icons/user--social/linked-in-alt.png?1430358448'); }
+      background-image: url('../images/icons/user--social/linked-in-alt.png?1436858103'); }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/user\/_user--attendee\.scss}line{font-family:\00003110}}
   .user__profile--attendee .field--name-field-social-media-account .field__items,
   .user--profile__attendee .field--name-field-social-media-account .field__items,
