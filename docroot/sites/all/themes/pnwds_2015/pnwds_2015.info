@@ -19,6 +19,13 @@ stylesheets[all][] = css/pnwds.no-query.css
 scripts[] = js/pnwds.behaviors.js
 
 ; ========================================
+; Layout
+; ========================================
+
+; Panels Module layouts
+plugins[panels][layouts] = 'layouts/panels'
+
+; ========================================
 ; Regions
 ; ========================================
 regions[navigation]     = Navigation bar

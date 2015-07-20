@@ -33,4 +33,27 @@
 			}
 		}
 	}
+	h2.pane-title{
+		color: $MediumGreen2015;
+		margin: 20px 0;
+	}
+	.right-triptych{
+		h2.pane-title{
+			padding-top: 100px;
+			background: url(../images/icons/register.png) center top no-repeat;
+		}
+	}
+	.left-triptych{
+		h2.pane-title{
+			padding-top: 100px;
+			background: url(../images/icons/info.png) center top no-repeat;
+		}
+	}
+	.middle-triptych{
+		h2.pane-title{
+			padding-top: 100px;
+			background: url(../images/icons/news.png) center top no-repeat;
+		}
+	}
+	
 }

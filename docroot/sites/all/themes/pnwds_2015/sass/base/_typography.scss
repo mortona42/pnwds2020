@@ -26,10 +26,13 @@ body {
 }
 */
 
+$primaryFont2015: 'Arial', sans-serif;
+$headerFont2015: 'Lato', 'Arial', sans-serif;
+
 html,
 body {
   color: $copy-color;
-  font-family: $copy-font-family;
+  font-family: $primaryFont2015;
   font-size: $copy-font-size;
   font-weight: $copy-font-weight;
   line-height: $copy-line-height;
@@ -55,7 +58,7 @@ $header-font-sizes: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, 
   h#{$i} {
     color: $header-font-color;
     font-size: nth($header-font-sizes, $i);
-    font-family: $header-font-family;
+    font-family: $headerFont2015;
     font-style:  $header-font-style;
     font-weight: $header-font-weight;
     line-height: $header-line-height;
@@ -80,7 +83,7 @@ $header-font-sizes: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, 
       &.active-trail {
         display: inline-block;
         vertical-align: bottom;
-        font-family: $header-font-family;
+        font-family: $headerFont2015;
       }
       
       &:hover,
@@ -159,8 +162,7 @@ p {
 	}
 }
 
-$primaryFont2015: 'Arial', sans-serif;
-$headerFont2015: 'Lato', 'Arial', sans-serif;
+
 
 h1,
 h2,
