@@ -2541,16 +2541,17 @@ nav[role="navigation"] > ul .dropdown {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000336}}
 .page-node-651 h2.pane-title {
   color: #5f805d;
-  margin: 20px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000341}}
+  margin: 20px 0;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000342}}
 .page-node-651 .right-triptych h2.pane-title {
   padding-top: 100px;
   background: url(../images/icons/register.png) center top no-repeat; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000348}}
 .page-node-651 .left-triptych h2.pane-title {
   padding-top: 100px;
   background: url(../images/icons/info.png) center top no-repeat; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/pages\/_front\.scss}line{font-family:\0000354}}
 .page-node-651 .middle-triptych h2.pane-title {
   padding-top: 100px;
   background: url(../images/icons/news.png) center top no-repeat; }
