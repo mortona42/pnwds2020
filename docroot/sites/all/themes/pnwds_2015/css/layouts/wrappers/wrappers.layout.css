@@ -21,25 +21,24 @@
  * Styling of the "Carpe Diem - Main Layout" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000332}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000339}}
 .l-menu,
 .l-region--header {
   width: 100%;
   float: left;
   margin-right: 1.16732%;
-  display: inline; }
+  display: inline;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000346}}
 .l-header {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000358}}
 .l-navigation,
 .l-header,
 .l-main,
@@ -52,26 +51,27 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
-  position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/\.rbenv\/versions\/1\.9\.3-p286\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.6\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
-  .l-navigation:after,
-  .l-header:after,
-  .l-main:after,
-  .l-footer:after {
-    content: "";
-    display: table;
-    clear: both; }
+  position: relative;
+}
+.l-navigation:after,
+.l-header:after,
+.l-main:after,
+.l-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000366}}
 .l-navigation {
-  padding-bottom: 0; }
-  @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000366}}
-    .l-navigation {
-      padding-left: 0;
-      padding-right: 0; } }
+  padding-bottom: 0;
+}
+@media screen and (max-width: 56.249em) {
+  .l-navigation {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000381}}
 .l-preface,
 .l-content,
 .l-sidebar-first,
@@ -81,21 +81,21 @@
   float: left;
   margin-right: 1.16732%;
   display: inline;
-  margin-right: 0; }
+  margin-right: 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000386}}
 .l-footer {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 @media screen and (min-width: 56.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000395}}
   .l-branding {
     width: 36.77043%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
+    display: inline;
+  }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\0000399}}
   .l-menu {
     width: 62.06226%;
     float: left;
@@ -104,30 +104,30 @@
     float: right;
     margin-right: 0;
     *margin-left: -1.2em;
-    display: inline; }
+    display: inline;
+  }
 
   /* Content Area */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003106}}
   .l-content {
     width: 100%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
+    display: inline;
+  }
 
   /* Sidebars */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003111}}
   .has-one-sidebar .l-content {
     width: 74.70817%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003114}}
+    display: inline;
+  }
   .has-one-sidebar .l-sidebar-first {
     width: 24.12451%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003117}}
+    display: inline;
+  }
   .has-one-sidebar .l-sidebar-second {
     width: 24.12451%;
     float: left;
@@ -136,27 +136,27 @@
     float: right;
     margin-right: 0;
     *margin-left: -1.2em;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003123}}
+    display: inline;
+  }
   .has-one-sidebar.has-sidebar-first .l-content {
     float: right;
     margin-right: 0;
     *margin-left: -1.2em;
-    display: inline; }
+    display: inline;
+  }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003133}}
   .has-two-sidebars .l-sidebar-first {
     width: 24.12451%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003136}}
+    display: inline;
+  }
   .has-two-sidebars .l-content {
     width: 49.41634%;
     float: left;
     margin-right: 1.16732%;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003139}}
+    display: inline;
+  }
   .has-two-sidebars .l-sidebar-second {
     width: 24.12451%;
     float: left;
@@ -165,14 +165,16 @@
     float: right;
     margin-right: 0;
     *margin-left: -1.2em;
-    display: inline; }
+    display: inline;
+  }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003146}}
   .l-sidebar-first,
   .l-sidebar-second {
-    margin-top: 3em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/layouts\/wrappers\/wrappers\.layout\.scss}line{font-family:\00003153}}
+    margin-top: 3em;
+  }
+}
 .l-region--help,
 .l-sidebar-first,
 .l-sidebar-second {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
