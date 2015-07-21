@@ -149,7 +149,7 @@ function pnwds_2015_preprocess_user_profile(&$vars) {
   switch($view_mode) {
     case 'attendee':
       // Address data trimmed down to locality only.
-      $location_date = $vars['field_profile_location'][0];
+      $location = $vars['field_profile_location'][0];
       $city = $location['locality'];
       $state = $location['administrative_area'];
       $vars['user_profile']['location'] = '<div class="user__locale"><span class="user__location--city">' . $city . ',&nbsp;</span><span class="user__location--state">' . $state . '</span></div>';
