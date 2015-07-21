@@ -19,6 +19,8 @@
 	max-width: none;
 }
 
-.field--name-body{
-	padding: 1em;
+.not-front{
+	.field--name-body{
+		padding: 1em;
+	}
 }

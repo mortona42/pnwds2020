@@ -3,7 +3,6 @@
 	.l-region--postscript, .w-navigation, .l-region--menu, .site--branding__name, #page--title{
 		display: none;
 	}
-	
 	.seattle-hero{
 		min-height: 300px;
 		max-height: 800px;
@@ -33,6 +32,13 @@
 			}
 		}
 	}
+	.panel-pane{
+		padding: 1em;
+		font-size: 1em;
+		.node__content p{
+			font-size: 1em !important;
+		}
+	}
 	h2.pane-title{
 		color: $MediumGreen2015;
 		margin: 20px 0;
@@ -54,6 +60,21 @@
 		h2.pane-title{
 			padding-top: 100px;
 			background: url(../images/icons/news.png) center top no-repeat;
+		}
+		.views-row{
+			h2{
+				font-size: 20px;
+				margin-bottom: 5px;
+				a{
+					color: $MediumGreen2015;
+					&:hover{
+						color:$MediumBlue2015;
+					}
+				}
+			}
+			.field--name-body{
+				padding: 0px;
+			}
 		}
 	}
 	

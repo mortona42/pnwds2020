@@ -2591,6 +2591,13 @@ nav[role="navigation"] > ul .dropdown {
 .page-node-651 .seattle-hero h1 span.title-bold {
   font-weight: bold;
 }
+.page-node-651 .panel-pane {
+  padding: 1em;
+  font-size: 1em;
+}
+.page-node-651 .panel-pane .node__content p {
+  font-size: 1em !important;
+}
 .page-node-651 h2.pane-title {
   color: #5f805d;
   margin: 20px 0;
@@ -2607,6 +2614,19 @@ nav[role="navigation"] > ul .dropdown {
 .page-node-651 .middle-triptych h2.pane-title {
   padding-top: 100px;
   background: url(../images/icons/news.png) center top no-repeat;
+}
+.page-node-651 .middle-triptych .views-row h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.page-node-651 .middle-triptych .views-row h2 a {
+  color: #5f805d;
+}
+.page-node-651 .middle-triptych .views-row h2 a:hover {
+  color: #5c6c97;
+}
+.page-node-651 .middle-triptych .views-row .field--name-body {
+  padding: 0px;
 }
 
 .l-main {
@@ -2629,7 +2649,7 @@ nav[role="navigation"] > ul .dropdown {
   max-width: none;
 }
 
-.field--name-body {
+.not-front .field--name-body {
   padding: 1em;
 }
 
