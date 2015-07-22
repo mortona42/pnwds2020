@@ -181,7 +181,7 @@ function pnwds_2015_preprocess_user_profile(&$vars) {
       } else {
         $variables= array(
           'style_name' => 'medium',
-          'path' => 'sites/all/themes/pnwds/images/content/pnwds_logo--user-default.png',
+          'path' => 'sites/all/themes/pnwds_2015/images/content/PNWDS_logo--user-default.png',
           'alt' => $account->name,
           'title' => $account->name,
           'width' => '200px',
@@ -405,6 +405,7 @@ function pnwds_2015_form_ticket_field_formatter_view_form_alter(&$form, &$form_s
   // FORM_ID is "user_register_form" this code would run only on the user
   // registration form.
   // Change the width of the ticket quantity input
-  $form['ticket_quantity_1']['#size'] = 2;
-  /* dsm($form); */
+  $form['ticket_36']['ticket_type'][36]['ticket_quantity_36']['#default_value'] = 1;
+  $form['ticket_36']['ticket_type'][36]['ticket_quantity_36']['#size'] = 2;
+   dpm($form); 
 }
