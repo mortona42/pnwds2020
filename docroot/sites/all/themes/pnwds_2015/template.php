@@ -407,5 +407,4 @@ function pnwds_2015_form_ticket_field_formatter_view_form_alter(&$form, &$form_s
   // Change the width of the ticket quantity input
   $form['ticket_36']['ticket_type'][36]['ticket_quantity_36']['#default_value'] = 1;
   $form['ticket_36']['ticket_type'][36]['ticket_quantity_36']['#size'] = 2;
-   dpm($form); 
 }
