@@ -2,17 +2,19 @@
   @include respond-to($medium) {
     @include span-columns($total-columns);
     
-    .form-item-title,
+    
     .field-name-body,
     .form-actions {
       @include span-columns($total-columns);
     }
     
+    .form-item-title,
     .field-name-field-news-image,
     .field-name-field-speakers,
     .field-name-field-slides,
     .group-audience {
       @include span-columns($total-columns / 2 !important);
+      float: left;
     }
     
     .field-name-field-news-image,
@@ -53,6 +55,7 @@
       &:not(div.field-name-field-speakers),
       &:not(div.field-name-field-slides) {
         @include span-columns($total-columns);
+        clear: both;
       }
     }
   }
@@ -104,4 +107,8 @@
       }
     }
   }
+  
+  #field-cod-events-filter{
+		display: none;
+	}
 }
