@@ -18,10 +18,6 @@
     }
     
     .field-name-field-news-image,
-    .field-name-field-slides {
-      @include suffix(1);
-    }
-    
     .field-name-field-speakers,
     .group-audience {
       @include omega;
@@ -110,5 +106,8 @@
   
   #field-cod-events-filter{
 		display: none;
+	}
+	.group-schedule{
+		clear: both;
 	}
 }

@@ -2085,21 +2085,18 @@ nav[role="navigation"] > ul .dropdown {
       float: left;
       margin-right: 1.16732%;
       float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000322}}
     .node-session-form .field-name-field-news-image,
-    .node-session-form .field-name-field-slides {
-      padding-right: 6.32296%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000326}}
     .node-session-form .field-name-field-speakers,
     .node-session-form .group-audience {
       float: right;
       margin-right: 0;
       *margin-left: -1.2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000326}}
     .node-session-form .field-name-field-speakers {
       position: relative;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000330}}
       .node-session-form .field-name-field-speakers .tabledrag-toggle-weight-wrapper {
         text-align: center;
         width: 100%;
@@ -2110,10 +2107,10 @@ nav[role="navigation"] > ul .dropdown {
         right: 0;
         bottom: auto;
         left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000342}}
       .node-session-form .field-name-field-speakers .field-label {
         padding-left: 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000352}}
     .node-session-form div[class*="field-name-"]:not(div.field-name-body), .node-session-form div[class*="field-name-"]:not(div.field-name-field-news-image), .node-session-form div[class*="field-name-"]:not(div.field-name-field-speakers), .node-session-form div[class*="field-name-"]:not(div.field-name-field-slides),
     .node-session-form div[class*="vertical-tabs"]:not(div.field-name-body),
     .node-session-form div[class*="vertical-tabs"]:not(div.field-name-field-news-image),
@@ -2124,47 +2121,50 @@ nav[role="navigation"] > ul .dropdown {
       margin-right: 1.16732%;
       clear: both; } }
 @media screen and (max-width: 56.249em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000361}}
   .node-session-form .field-name-field-speakers .field-label {
     padding-left: 0.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000365}}
   .node-session-form .field-name-field-speakers table {
     display: block;
     max-width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000369}}
     .node-session-form .field-name-field-speakers table thead {
       display: table;
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000372}}
       .node-session-form .field-name-field-speakers table thead tr {
         display: table-row; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000374}}
         .node-session-form .field-name-field-speakers table thead tr th {
           display: table-cell; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000380}}
     .node-session-form .field-name-field-speakers table tbody {
       display: inline-block;
       max-width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000383}}
       .node-session-form .field-name-field-speakers table tbody tr {
         display: block;
         max-width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000386}}
         .node-session-form .field-name-field-speakers table tbody tr td {
           display: inline-block;
           max-width: 70%;
           width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000394}}
     .node-session-form .field-name-field-speakers table .form-item {
       display: inline-block;
       width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\0000398}}
       .node-session-form .field-name-field-speakers table .form-item input {
         max-width: 100%;
         width: auto; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\00003107}}
 .node-session-form #field-cod-events-filter {
   display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/administration\/_session--node-add\.scss}line{font-family:\00003110}}
+.node-session-form .group-schedule {
+  clear: both; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/block\/_block--general\.scss}line{font-family:\000032}}
 .l-region--sidebar-second .block {
