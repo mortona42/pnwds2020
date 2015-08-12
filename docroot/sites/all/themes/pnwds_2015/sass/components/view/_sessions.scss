@@ -36,3 +36,22 @@
 		}
 	}
 }
+.view-display-id-page_sessions_mine{
+	h3{
+		color: $MediumBlue2015 !important;
+		border-bottom: 4px solid $MediumGreen2015;
+		padding-bottom: 5px;
+	}
+	.views-field-title h3{
+		border-bottom: none;
+	}
+	.views-row{
+		margin-bottom: 25px;
+	}
+	.views-exposed-widgets{
+		margin-bottom: 50px;
+		select{
+			height: 35px;
+		}
+	}
+}

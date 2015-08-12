@@ -3661,6 +3661,24 @@ nav[role="navigation"] > ul .dropdown {
     .view-cod-session-sessions.view-display-id-block_session_summary .views-row {
       width: auto; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_sessions\.scss}line{font-family:\0000340}}
+.view-display-id-page_sessions_mine h3 {
+  color: #5c6c97 !important;
+  border-bottom: 4px solid #5f805d;
+  padding-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_sessions\.scss}line{font-family:\0000345}}
+.view-display-id-page_sessions_mine .views-field-title h3 {
+  border-bottom: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_sessions\.scss}line{font-family:\0000348}}
+.view-display-id-page_sessions_mine .views-row {
+  margin-bottom: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_sessions\.scss}line{font-family:\0000351}}
+.view-display-id-page_sessions_mine .views-exposed-widgets {
+  margin-bottom: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_sessions\.scss}line{font-family:\0000353}}
+  .view-display-id-page_sessions_mine .views-exposed-widgets select {
+    height: 35px; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/CellarDoorCEO\/sites\/pnwds\/docroot\/sites\/all\/themes\/pnwds_2015\/sass\/components\/view\/_venue--all-venues-list\.scss}line{font-family:\000031}}
 .venue--list {
   overflow: hidden;
