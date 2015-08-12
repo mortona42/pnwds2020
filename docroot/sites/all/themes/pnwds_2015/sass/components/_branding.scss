@@ -17,12 +17,14 @@
   vertical-align: bottom;
 	max-width: 350px;
 	width: 100%;
+	margin-left: -56px;
+	margin-bottom: -60px;
   @include respond-to($medium) {
     display: inline-block;
     float: left;
     text-align: center;
     min-width: 100px;
-    margin-left: -106px;
+    
   }
 }
 

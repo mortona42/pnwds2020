@@ -1,0 +1,38 @@
+.view-cod-session-tracks{
+	&.view-display-id-track_session_filter{
+		border-bottom: 4px solid $MediumGreen2015;
+		ul{
+			display: inline-block;
+		}
+		.views-row{
+			float: left;
+			margin-right: 50px;
+		}
+	}
+	&.view-display-id-track_session_summary{
+		h2{
+			border-bottom: 4px solid $DarkBlue2015;
+		}
+		.views-row{
+			margin-bottom: 25px;
+		}
+		.view-content{
+			@include clearfix;
+		}
+	}
+}
+.view-cod-session-sessions{
+	&.view-display-id-block_session_summary{
+		.views-row{
+			float: left;
+			width: 100%;
+			margin-right: 50px;
+			text-align: center;
+			background: $LightBlue2015;
+			padding: 20px;
+			@include respond-to($small) {
+				width: auto;
+		  }
+		}
+	}
+}

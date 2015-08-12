@@ -9,9 +9,9 @@
 		background: $LightBlue2015;
 		text-align: center;
 	}
-	.page--title{
+	.page--title, .pane-page-title h1{
 		background: $MediumBlue2015;
-		color: $white;
+		color: $white !important;
 		padding: 5px 10px;
 	}
 }
