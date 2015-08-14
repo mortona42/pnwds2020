@@ -31,6 +31,12 @@
 				}
 			}
 		}
+		a.button{
+			&:hover{
+				color: $white;
+				background: $MediumGreen2015;
+			}
+		}
 	}
 	.panel-pane{
 		padding: 1em;
