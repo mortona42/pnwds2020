@@ -378,7 +378,7 @@ input#user-menu-toggle[type=checkbox] {
     
     &:checked  {
       ~ label {
-        bottom: -46px;
+        bottom: 0px;
         z-index: 5;
       }
       

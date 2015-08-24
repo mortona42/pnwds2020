@@ -1,6 +1,6 @@
 //Temp Splash Setup
 .page-node-651{
-	.l-region--postscript, .w-navigation, .l-region--menu, .site--branding__name, #page--title{
+	.l-region--postscript, .site--branding__name, #page--title{
 		display: none;
 	}
 	.seattle-hero{
@@ -84,6 +84,22 @@
 			.field--name-body{
 				padding: 0px;
 			}
+		}
+	}
+	
+	.pane-cod-sponsors-cod-sponsors-main-view-pane{
+		text-align: center;
+		h3{
+			color: $white;
+			background: $MediumBlue2015;
+			padding: 10px;
+			font-size: 2em;
+		}
+		.Baker{
+			max-width: 160px;
+		}
+		.Adams{
+			max-width: 100px;
 		}
 	}
 	
