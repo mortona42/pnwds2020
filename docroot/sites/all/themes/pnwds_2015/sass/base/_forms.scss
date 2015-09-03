@@ -98,7 +98,7 @@ input[type="checkbox"] {
  }
  
  .webform-component-textfield, .webform-component-email{
-	  input, input:hover{
+	  input, input:hover, input:focus{
 			background: none;
 		  border: 1px solid $black;
 		  border-radius: 0px;
