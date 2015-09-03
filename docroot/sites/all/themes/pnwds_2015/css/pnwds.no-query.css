@@ -606,6 +606,12 @@ input[type="text"].form-autocomplete, input[type="text"].throbbing {
   text-align: left;
 }
 
+.ticket-field-formatter-view-form, .node-event .event__dates,
+.node--event .event__dates,
+.node__event .event__dates {
+  width: 100% !important;
+}
+
 @media screen and (min-width: 56.25em) {
   html,
   body,
