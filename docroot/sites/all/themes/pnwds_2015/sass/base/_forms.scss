@@ -96,3 +96,11 @@ input[type="checkbox"] {
 		 background-position: 100% 10px;
 	 }
  }
+ 
+ .webform-component-textfield input{
+	background: none;
+  border: 1px solid $black;
+  border-radius: 0px;
+  color: $black;
+  text-align: left;
+ }
