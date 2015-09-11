@@ -86,8 +86,3 @@ settings[omega_libraries][selectivizr][status] = 0
 settings[omega_libraries][respond][status] = 0
 settings[omega_libraries][pie][status] = 0
 settings[omega_libraries][html5shiv][status] = 0
-
-; Information added by drush on 2015-07-06
-version = "7.x-1.x"
-project = "cod"
-datestamp = "1436206037"

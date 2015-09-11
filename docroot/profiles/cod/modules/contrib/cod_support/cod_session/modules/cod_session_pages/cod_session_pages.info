@@ -21,8 +21,3 @@ features[panelizer_defaults][] = node:session:default:default
 features[variable][] = panelizer_defaults_node_schedule_item
 features[variable][] = panelizer_defaults_node_session
 install_option = cod
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

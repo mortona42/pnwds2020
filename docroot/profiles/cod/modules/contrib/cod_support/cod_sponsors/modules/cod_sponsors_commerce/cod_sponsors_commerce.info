@@ -20,8 +20,3 @@ features[field_instance][] = commerce_product-sponsor-og_group_ref
 ; Views includes.
 files[] = views/cod_sponsors_commerce.views.inc
 files[] = views/cod_sponsors_commerce_views_handler_field_order_link.inc
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

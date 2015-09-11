@@ -15,8 +15,3 @@ regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions_hidden[] = sidebar_first
-
-; Information added by drush on 2015-07-06
-version = "7.x-1.x"
-project = "cod"
-datestamp = "1436206037"

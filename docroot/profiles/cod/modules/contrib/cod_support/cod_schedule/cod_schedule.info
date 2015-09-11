@@ -37,8 +37,3 @@ features[views_view][] = cod_schedule_duplicate_timeslots
 features[views_view][] = cod_schedule_timeslot_widget
 files[] = cod_schedule.entity.inc
 install_option = cod
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

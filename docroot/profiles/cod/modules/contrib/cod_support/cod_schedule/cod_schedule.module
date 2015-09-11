@@ -76,18 +76,7 @@ function cod_schedule_menu() {
     'weight' => -10,
   );
 
-  /*
-  $items['admin/conference/%node/schedule'] = array(
-    'title' => 'Schedule',
-    'type' => MENU_LOCAL_TASK,
-    'page callback' => 'cod_schedule_schedule_admin_page',
-    'page arguments' => array(3),
-    'access callback' => 'node_access',
-    'access arguments' => array('update', 3),
-    'weight' => 0,
-    'file' => 'includes/schedule.admin.inc',
-  );
-  */
+
   $items['admin/conference/%node/schedule/room'] = array(
     'title' => 'Add Room',
     'type' => MENU_LOCAL_ACTION,
@@ -101,11 +90,10 @@ function cod_schedule_menu() {
   $items['admin/conference/%node/schedule/time'] = array(
     'title' => 'Add Time',
     'type' => MENU_LOCAL_ACTION,
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('cod_event_time_form', new CodEventTime(), 'add', 2),
+    'page callback' => 'cod_schedule_add_time',
+    'page arguments' => array(2),
     'access callback' => 'entity_access',
     'access arguments' => array('create', 'cod_event_time'),
-    'file' => 'includes/schedule.admin.inc',
   );
 
   // NoJS/AJAX callbacks that can use the default Schedule AJAX form system.
@@ -130,6 +118,20 @@ function cod_schedule_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Callback to send a user to the add time page and prepopulate the current
+ * conference.
+ */
+function cod_schedule_add_time($event) {
+  $options = array(
+    'query' => array(
+      'og_group_ref' => $event->nid,
+    ),
+  );
+
+  drupal_goto('admin/conference/config/times/add', $options);
 }
 
 /**
@@ -312,7 +314,7 @@ function cod_schedule_days($node, $content_type = NULL) {
     // Once we fetch all of the event ids for a particular content type, filter to
     // the individual datetimes for each.
     //$evttids = implode(',', array_map('intval', $ids));
-    $result = db_query("SELECT DISTINCT FROM_UNIXTIME((UNIX_TIMESTAMP(field_evttime_date_value)+field_evttime_date_offset), '%Y-%m-%d') AS datetime FROM field_data_field_evttime_date ed, cod_event_time ctime
+    $result = db_query("SELECT DISTINCT FROM_UNIXTIME(UNIX_TIMESTAMP(field_evttime_date_value), '%Y-%m-%d') AS datetime FROM field_data_field_evttime_date ed, cod_event_time ctime
        WHERE ed.entity_id = ctime.evttid AND ctime.evttid IN (:evttid) ORDER BY datetime", array(':evttid' => $ids));
 
     if ($times = array_keys($result->fetchAllKeyed()))

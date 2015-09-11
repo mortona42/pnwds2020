@@ -113,11 +113,6 @@ function cod_event_room_form_submit_delete(&$form, &$form_state) {
  */
 function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, $op = 'update', $node = NULL) {
 
-  if (isset($node) && is_object($node) && !cod_schedule_days($node)) {
-    drupal_set_message(l(t("You must first set a date for the event."), 'admin/conference/'.$node->nid.'/edit',array('fragment' => 'edit-field-dates')), 'warning');
-    drupal_goto('admin/conference/'.$node->nid.'/schedule');
-  }
-
   $form_state['cod_event_time'] = $cod_event_time;
 
   if (!isset($form_state['wrapper_callback'])) {
@@ -136,6 +131,12 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
   );
 
   field_attach_form('cod_event_time', $cod_event_time, $form, $form_state);
+
+  if (isset($node) && is_object($node) && !cod_schedule_days($node)) {
+    drupal_set_message(l(t("You must first set a date for the event."), 'admin/conference/'.$node->nid.'/edit',array('fragment' => 'edit-field-dates')), 'warning');
+    drupal_goto('admin/conference/'.$node->nid.'/schedule');
+  }
+
   if (isset($node->field_dates[LANGUAGE_NONE][0])) {
     //Set the default time to be closer to the event date.
     $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['value'] = $node->field_dates[LANGUAGE_NONE][0]['value'];

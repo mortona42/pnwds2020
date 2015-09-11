@@ -107,3 +107,76 @@ function cod_schedule_update_7009() {
     features_revert($revert);
   }
 }
+
+/**
+ * Change the event time date field to not use a timezone.
+ */
+function cod_schedule_update_7011() {
+  $data_raw = db_select('field_config', 'fc')
+    ->fields('fc', array('data'))
+    ->condition('field_name', 'field_evttime_date')
+    ->execute()
+    ->fetchField();
+  $data = unserialize($data_raw);
+  $data['settings']['timezone_db'] = '';
+  $data['settings']['tz_handling'] = 'none';
+
+  $data_raw = serialize($data);
+  $result = db_update('field_config')
+    ->fields(array('data' => $data_raw))
+    ->condition('field_name', 'field_evttime_date')
+    ->execute();
+
+  $revert = array(
+    'cod_schedule' => array('field_base'),
+  );
+  features_revert($revert);
+}
+
+/*
+ * Update offsets for times to local time and remove the columns afterward.
+ */
+function cod_schedule_update_7012() {
+  $dates = db_query("SELECT DISTINCT ed.entity_id, ed.field_evttime_date_value AS value1,
+   ed.field_evttime_date_value2 AS value2, field_evttime_date_timezone AS tz
+  FROM field_data_field_evttime_date ed ORDER BY entity_id");
+
+  $records = array();
+  // Get all the records before we do inplace updates of the same table.
+  foreach ($dates as $record) {
+    $records[] = $record;
+  }
+  if (variable_get('date_default_timezone', 'UTC') == 'UTC' || variable_get('date_default_timezone', 'UTC') == 'GMT') {
+    foreach($records AS $record) {
+      $value1 = new DateTime($record->value1 ." UTC");
+      $value2 = new DateTime($record->value2 ." UTC");
+      $value1->setTimezone(new DateTimeZone($record->tz));
+      $value2->setTimezone(new DateTimeZone($record->tz));
+
+      db_update('field_data_field_evttime_date')
+        ->fields(array(
+          'field_evttime_date_value' => $value1->format('Y-m-d H:i:s'),
+          'field_evttime_date_value2' => $value2->format('Y-m-d H:i:s'),
+        ))
+        ->condition('entity_id', $record->entity_id)
+        ->execute();
+      db_update('field_revision_field_evttime_date')
+        ->fields(array(
+          'field_evttime_date_value' => $value1->format('Y-m-d H:i:s'),
+          'field_evttime_date_value2' => $value2->format('Y-m-d H:i:s'),
+        ))
+        ->condition('entity_id', $record->entity_id)
+        ->execute();
+      }
+      db_drop_field('field_data_field_evttime_date', 'field_evttime_date_timezone');
+      db_drop_field('field_data_field_evttime_date', 'field_evttime_date_offset');
+      db_drop_field('field_data_field_evttime_date', 'field_evttime_date_offset2');
+      db_drop_field('field_revision_field_evttime_date', 'field_evttime_date_timezone');
+      db_drop_field('field_revision_field_evttime_date', 'field_evttime_date_offset');
+      db_drop_field('field_revision_field_evttime_date', 'field_evttime_date_offset2');
+  }
+  else {
+    drupal_set_message("Warning, your site's timezone is not set to UTC. Please check your timeslot times manually");
+  }
+  return array();
+}

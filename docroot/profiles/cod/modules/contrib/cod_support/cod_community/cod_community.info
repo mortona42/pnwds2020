@@ -18,8 +18,3 @@ features[field_base][] = field_ticket_attendee_listing
 features[field_instance][] = node-event-field_ticket_attendee_listing
 features[views_view][] = cod_community_attendees
 install_option = cod
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

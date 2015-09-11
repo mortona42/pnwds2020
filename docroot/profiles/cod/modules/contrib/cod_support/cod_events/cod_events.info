@@ -86,8 +86,3 @@ features_exclude[field_instance][node-event-field_event_product] = node-event-fi
 features_exclude[field_instance][node-event-field_paid_event] = node-event-field_paid_event
 files[] = includes/views/handlers/cod_events_plugin_argument_default_event.inc
 files[] = includes/views/handlers/cod_events_plugin_argument_default_type.inc
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

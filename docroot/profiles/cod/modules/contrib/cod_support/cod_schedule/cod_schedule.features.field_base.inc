@@ -20,7 +20,6 @@ function cod_schedule_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'revision_id' => array(
         0 => 'revision_id',
@@ -46,7 +45,6 @@ function cod_schedule_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -61,9 +59,9 @@ function cod_schedule_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
-      'timezone_db' => 'UTC',
+      'timezone_db' => '',
       'todate' => 'required',
-      'tz_handling' => 'date',
+      'tz_handling' => 'none',
     ),
     'translatable' => 0,
     'type' => 'datetime',
@@ -78,14 +76,6 @@ function cod_schedule_field_default_field_bases() {
     'field_name' => 'field_session_timeslot',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'field_collection_item' => array(
-        'columns' => array(
-          'target_id' => 'item_id',
-        ),
-        'table' => 'field_collection_item',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -124,7 +114,6 @@ function cod_schedule_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -153,14 +142,6 @@ function cod_schedule_field_default_field_bases() {
     'field_name' => 'field_timeslot_room',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'cod_event_room' => array(
-        'columns' => array(
-          'target_id' => 'evtrid',
-        ),
-        'table' => 'cod_event_room',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -197,14 +178,6 @@ function cod_schedule_field_default_field_bases() {
     'field_name' => 'field_timeslot_time',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'cod_event_time' => array(
-        'columns' => array(
-          'target_id' => 'evttid',
-        ),
-        'table' => 'cod_event_time',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(

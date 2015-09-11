@@ -86,13 +86,13 @@ function ticket_user_registration_form_ticket_register_form_alter(&$form, &$form
   $return_url = $parent_entity->entity_type . '/' . $parent_entity->entity_id . '/registration';
   $form['ticket_registrant'] = array(
     '#type' => 'fieldset',
-    '#title' => 'Ticket Registrant',
+    '#title' => 'Your information',
     '#description' => $form['#user_category'] == 'account' ? t('Hello %email. Not you? !signout.', array('%email' => $form['#user']->mail, '!signout' => l(t('Start over'), 'user/logout', array('query' => array('destination' => $return_url))))) : t('Have an account already? !signin', array('!signin' => l(t('Sign-in'), 'user/login', array('query' => array('destination' => $return_url))))),
     '#weight' => -1000,
   );
   $form['ticket_registrant']['ticket_user_registration_email'] = array(
     '#type' => 'textfield',
-    '#title' => t('Registrant e-mail address'),
+    '#title' => t('Your e-mail address'),
     '#description' => t('Enter the e-mail address of the person who manages this order. The e-mail address will be used to create an account if one does not exist already.'),
     '#maxlength' => EMAIL_MAX_LENGTH,
     '#required' => TRUE,

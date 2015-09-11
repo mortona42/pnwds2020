@@ -629,3 +629,10 @@ function cod_update_7008() {
     }
   }
 }
+
+/**
+ * Enable distro update so users don't accidentally bork their COD site while updating.
+ */
+function cod_update_7009() {
+  module_enable(array('distro_update'));
+}

@@ -43,6 +43,7 @@ dependencies[] = date_views
 dependencies[] = devel
 dependencies[] = devel_generate
 dependencies[] = diff
+dependencies[] = distro_update
 dependencies[] = efq_extra_field
 dependencies[] = entity
 dependencies[] = entityreference
@@ -103,8 +104,3 @@ files[] = cod.profile
 
 ; System Requirements.
 php_memory_limit = 128M
-
-; Information added by drush on 2015-07-06
-version = "7.x-1.x"
-project = "cod"
-datestamp = "1436206037"

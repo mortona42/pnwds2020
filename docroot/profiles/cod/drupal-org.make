@@ -19,19 +19,15 @@ projects[admin_icons][download][branch] = "7.x-1.x"
 projects[admin_icons][download][revision] = "60d9f28801533fecc92216a60d444d89d80e7611"
 
 projects[admin_menu][type] = "module"
-projects[admin_menu][version] = "3.0-rc5"
 projects[admin_menu][subdir] = "contrib"
 projects[admin_menu][download][type] = "git"
 projects[admin_menu][download][url] = "http://git.drupal.org/project/admin_menu.git"
 projects[admin_menu][download][branch] = "7.x-3.x"
-projects[admin_menu][download][revision] = "b07d37b8"
+projects[admin_menu][download][revision] = "67abd3a2e42c28167551b5d0e753ca322bc592ce"
 
 projects[adminimal_admin_menu][type] = "module"
 projects[adminimal_admin_menu][subdir] = "contrib"
-projects[adminimal_admin_menu][download][type] = "git"
-projects[adminimal_admin_menu][download][url] = "http://git.drupal.org/project/adminimal_admin_menu.git"
-projects[adminimal_admin_menu][download][branch] = "7.x-1.x"
-projects[adminimal_admin_menu][download][revision] = "eca2f1c4"
+projects[adminimal_admin_menu][version] = "1.6"
 
 projects[advanced_help][type] = "module"
 projects[advanced_help][version] = "1.3"
@@ -78,10 +74,10 @@ projects[ckeditor][patch][] = "http://drupal.org/files/issues/ckeditor-accomodat
 
 projects[cod_support][type] = "module"
 projects[cod_support][subdir] = "contrib"
-projects[cod_support][version] = "1.0-beta9"
+projects[cod_support][version] = "2.0-alpha2"
 projects[cod_support][download][type] = "git"
 projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
-projects[cod_support][download][branch] = "7.x-1.x"
+projects[cod_support][download][branch] = "7.x-2.x"
 
 projects[commerce][type] = "module"
 projects[commerce][version] = "1.11"
@@ -95,10 +91,9 @@ projects[commerce][patch][] = http://drupal.org/files/issues/commerce_cart-butto
 ; https://www.drupal.org/node/1226466
 projects[commerce][patch][] = http://drupal.org/files/issues/product_select_options_token_display_alternative-1226466-36.patch
 
-
 projects[commerce_features][type] = "module"
 projects[commerce_features][subdir] = "contrib"
-projects[commerce_features][version] = "1.0"
+projects[commerce_features][version] = "1.1"
 
 projects[commerce_stock][type] = "module"
 projects[commerce_stock][subdir] = "contrib"
@@ -138,11 +133,11 @@ projects[conditional_fields][subdir] = "contrib"
 projects[conditional_fields][download][type] = "git"
 projects[conditional_fields][download][url] = "http://git.drupal.org/project/conditional_fields.git"
 projects[conditional_fields][download][branch] = "7.x-3.x"
-projects[conditional_fields][download][revision] = "0b37992f49ec9f63f78f947168f236e49ef718e0"
+projects[conditional_fields][download][revision] = "12ab0cb0e0660278b2a9e330aae2f13b97c8459e"
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.7"
+projects[ctools][version] = "1.9"
 
 ; Allow contexts to load in information for existing contexts.
 ; See https://www.drupal.org/node/2484541#comment-9899043 for more info.
@@ -150,18 +145,18 @@ projects[ctools][patch][] = "http://drupal.org/files/issues/2484541-context-depe
 
 projects[date][type] = "module"
 projects[date][subdir] = "contrib"
-projects[date][version] = "2.9-rc1"
+projects[date][version] = "2.9"
 
 ; Allow date to work with timezones
 projects[date][patch][] = "http://drupal.org/files/issues/date-views-filter-timezone-1820304-18.patch"
 
 projects[date_ical][type] = "module"
 projects[date_ical][subdir] = "contrib"
-projects[date_ical][version] = "3.3"
+projects[date_ical][version] = "3.4"
 
 ; Remove icalcreator library from the date_ical module
 ; https://drupal.org/node/2209165
-projects[date_ical][patch][] = "http://drupal.org/files/issues/date_ical_remove_makefile.patch"
+projects[date_ical][patch][] = "http://drupal.org/files/issues/date_ical_remove_makefile-3.patch"
 
 ; Keeping this to the latest version, since it should only be used for development.
 projects[devel][version] = "1.5"
@@ -171,6 +166,14 @@ projects[devel][subdir] = "contrib"
 projects[diff][type] = "module"
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
+
+; Distro Update
+projects[distro_update][version] = "1.x-dev"
+projects[distro_update][type] = "module"
+projects[distro_update][subdir] = "contrib"
+projects[distro_update][download][type] = "git"
+projects[distro_update][download][revision] = "f5ab9fe"
+projects[distro_update][download][branch] = "7.x-1.x"
 
 projects[efq_extra_field][type] = "module"
 projects[efq_extra_field][subdir] = "contrib"
@@ -211,7 +214,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[entityreference_prepopulate][download][type] = "git"
 projects[entityreference_prepopulate][download][url] = "http://git.drupal.org/project/entityreference_prepopulate.git"
 projects[entityreference_prepopulate][download][branch] = "7.x-1.x"
-projects[entityreference_prepopulate][download][revision] = "9b40518a"
+projects[entityreference_prepopulate][download][revision] = "0ffdec817b5b3158066245390668e8636fea1d2a"
 
 ; Allow entityreference prepopulate function when an ajax callback is performed.
 ; https://www.drupal.org/node/1970320 and https://www.drupal.org/node/2295951
@@ -330,6 +333,7 @@ projects[og][download][type] = "git"
 projects[og][download][url] = "http://git.drupal.org/project/og.git"
 projects[og][download][branch] = "7.x-2.x"
 projects[og][download][revision] = "cc9c04036a80fcf27a4e9533b6cb0820e3e750be"
+; Do NOT update OG until the og_context_init code is removed. It breaks things.. =(
 
 ; Auto-assign role to group manager broken on groups with overridden roles.
 ; https://drupal.org/node/2005800#comment-7684873
@@ -369,11 +373,11 @@ projects[og_theme][version] = "2.0"
 projects[panelizer][version] = "3.x-dev"
 projects[panelizer][subdir] = "contrib"
 projects[panelizer][download][type] = "git"
-projects[panelizer][download][revision] = "7f28657"
+projects[panelizer][download][revision] = "442d8a9dd2262b8c5fdb3cf439e46e5c9668346f"
 projects[panelizer][download][branch] = "7.x-3.x"
 ; Better Revision Handling
 ; http://drupal.org/node/2457113
-projects[panelizer][patch][2457113] = "http://drupal.org/files/issues/2457113-18.patch"
+projects[panelizer][patch][2457113] = "http://drupal.org/files/issues/panelizer-better_revision-2457113-48.patch"
 
 projects[panels][version] = "3.5"
 projects[panels][type] = "module"
@@ -448,15 +452,13 @@ projects[taxonomy_machine_name][version] = "1.0"
 projects[taxonomy_machine_name][patch][2496141] = "http://drupal.org/files/issues/taxonomy_validator-2496141-1.patch"
 
 ; For COD releases, we peg it to a release of ticket. For dev, we use the dev branch.
-; Currently using the ticket_reservation branch for COD.
 projects[ticket][type] = "module"
 projects[ticket][subdir] = "contrib"
 projects[ticket][version] = "1.0-beta4"
 projects[ticket][download][type] = "git"
 projects[ticket][download][url] = "http://git.drupal.org/project/ticket.git"
-;projects[ticket][download][branch] = "7.x-1.x"
-projects[ticket][download][branch] = "ticket_reservation"
-;projects[ticket][download][revision] = "d834077dced70360866f5d98c29cb5b8dceace20"
+projects[ticket][download][branch] = "7.x-1.x"
+;projects[ticket][download][revision] = "1b530acb2d31f2536ef777c98c28fb7fbc8a73b7"
 
 projects[title][type] = "module"
 projects[title][version] = "1.0-alpha7"
@@ -505,7 +507,7 @@ projects[views_autorefresh][subdir] = "contrib"
 
 projects[views_block_filter_block][type] = "module"
 projects[views_block_filter_block][subdir] = "contrib"
-projects[views_block_filter_block][version] = "1.0-beta1"
+projects[views_block_filter_block][version] = "1.0-beta2"
 
 projects[views_datasource][type] = "module"
 projects[views_datasource][subdir] = "contrib"
@@ -536,7 +538,7 @@ projects[votingapi][version] = "2.12"
 projects[votingapi][subdir] = "contrib"
 
 projects[webform][type] = "module"
-projects[webform][version] = "4.9"
+projects[webform][version] = "4.10"
 projects[webform][subdir] = "contrib"
 
 ; Contributed themes.
@@ -563,33 +565,48 @@ projects[omega][patch][] = "http://drupal.org/files/issues/omega-2453475-panels-
 
 projects[adminimal_theme][type] = "theme"
 projects[adminimal_theme][subdir] = "contrib"
-projects[adminimal_theme][version] = "1.21"
+projects[adminimal_theme][version] = "1.22"
 
 ; Libraries.
 ; NOTE: These need to be listed in http://drupal.org/packaging-whitelist.
-libraries[underscore][download][type] = "get"
-libraries[underscore][type] = "libraries"
-libraries[underscore][download][url] = "https://github.com/jashkenas/underscore/archive/1.4.4.zip"
-
 libraries[backbone][download][type] = "get"
-libraries[backbone][type] = "libraries"
-libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/1.0.0.tar.gz"
+libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/1.1.0.zip"
 
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3.4/ckeditor_4.3.4_full.zip"
-libraries[ckeditor][type] = "libraries"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor%20for%20Drupal/edit/ckeditor_4.4.3_edit.zip"
 
 libraries[ckeditor_lineutils][download][type] = "get"
-libraries[ckeditor_lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.3.4.zip"
+libraries[ckeditor_lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.4.3.zip"
 libraries[ckeditor_lineutils][type] = "libraries"
 libraries[ckeditor_lineutils][subdir] = "ckeditor/plugins"
 libraries[ckeditor_lineutils][directory_name] = "lineutils"
 
 libraries[ckeditor_widget][download][type] = "get"
-libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.3.4.zip"
+libraries[ckeditor_widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.4.3.zip"
 libraries[ckeditor_widget][type] = "libraries"
 libraries[ckeditor_widget][subdir] = "ckeditor/plugins"
 libraries[ckeditor_widget][directory_name] = "widget"
+
+libraries[colorbox][download][type] = "get"
+libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/1.x.zip"
+
+libraries[jsonpath][download][type] = "get"
+libraries[jsonpath][download][url] = "https://jsonpath.googlecode.com/files/jsonpath-0.8.1.php"
+
+libraries[modernizr][download][type] = "get"
+libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.7.1.zip"
+
+libraries[plupload][download][type] = "get"
+libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+; Remove plupload library examples folder for Drupal distribution
+; http://drupal.org/node/1903850
+libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
+
+libraries[underscore][download][type] = "get"
+libraries[underscore][download][url] = "https://github.com/jashkenas/underscore/archive/1.5.2.zip"
+
+libraries[tablesaw][download][type] = "get"
+libraries[tablesaw][download][url] = "https://github.com/filamentgroup/tablesaw/releases/download/v1.0.4/tablesaw-1.0.4.zip"
 
 libraries[placeholder][download][type] = "get"
 libraries[placeholder][type] = "libraries"

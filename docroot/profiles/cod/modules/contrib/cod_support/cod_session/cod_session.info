@@ -135,8 +135,3 @@ features[views_view][] = cod_session_user_presentations
 files[] = views/cod_session.views.inc
 files[] = views/cod_session_views_handler_field_track_link.inc
 files[] = views/views_plugin_pager_session_more.inc
-
-; Information added by drush on 2015-07-02
-version = "7.x-1.0-beta9"
-project = "cod_support"
-datestamp = "1435803939"

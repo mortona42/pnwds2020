@@ -6,7 +6,7 @@ dependencies[] = conditional_fields
 files[] = conditional_fields.test
 hidden = TRUE
 
-; Information added by drush on 2015-02-19
-version = "7.x-3.0-alpha1+15-dev"
+; Information added by drush on 2015-06-08
+version = "7.x-3.0-alpha1+17-dev"
 project = "conditional_fields"
-datestamp = "1424367474"
+datestamp = "1433775218"

@@ -26,6 +26,53 @@ Panelizer 7.x-3.x-dev, xxxx-xx-xx
 #2451643 by DamienMcKenna: Reworked logic controlling when warning messages are
   displayed about page_manager needing to be enabled.
 #2457711 by DamienMcKenna: 'content' local tasks should have been default.
+#2465333 by EclipseGc: Add hook_panelizer_access_alter() for the new
+  hook_panelizer_access().
+#2462315 by DamienMcKenna: Fix update 7115 and regressions caused by it.
+#2469411 by DamienMcKenna: Added Book Navigation pane to the default display if
+  the Book module is enabled.
+#2421321 by DamienMcKenna: Fixed logic that resulted in access-denied errors
+  when loading settings pages.
+#2467725 by DamienMcKenna: Additional fixes to update 7115.
+#2450271 by mpotter: Nested Panels displays caused title to be displayed for
+  wrong node.
+#2469593 by DamienMcKenna: Added submission pane to the default display if
+  the Webform module is enabled.
+#2422667 by Devin Carlson, DamienMcKenna: Add basic test coverage.
+#2460537 by DamienMcKenna: Fixed "Notice: Undefined offset: 3 in
+  _menu_translate" error.
+#2470257 by DamienMcKenna: Incorrect destination URLs in some forms resulted in
+  "missing" links; removed references to the /list pages.
+#2470257 by gmclelland: Fixed 'list' paths on main Panelizer admin page.
+#2193221 by DamienMcKenna: New 'help' text field for site builders to add
+  editorial guidelines for the display seletor on entity forms.
+#2483133 by DamienMcKenna: Properly identify whether term_view is enabled in
+  Page Manager.
+#2480999 by drclaw: Machine name didn't autocomplete when cloning a display.
+#2481015 by drclaw: Machine names of new displays must be unique.
+#2408691 by ruloweb: Invalid pane id when revisioning is enabled.
+By DamienMcKenna: Updated comments around entity_allows_revisions().
+#1963124 by micnap, mgifford, DamienMcKenna: Resolve WCAG2 accessibility errors
+  on main settings page.
+#2237943 by knobo, DamienMcKenna: Entity display as "Panelizer" in Views should
+  allow selectable view mode.
+#2429561 by stevector, DamienMcKenna: Indicate on Field UI display settings
+  pages and in hook_requirements when Panelizer is being used and field output
+  is redundant.
+By DamienMcKenna: Ensure all ksort() calls only happen on arrays.
+#1963124 by DamienMcKenna: Require CTools 1.9 so that it has show.js.
+#2533402 by badjava: Incorrect usage of the 'clone' keyword.
+#2151837 by DamienMcKenna, muschpusch: Improved the README.txt file.
+#2514068 by mpotter, hefox, DamienMcKenna: entity_extract_ids() may return a
+  NULL for revision_id.
+#2512342 by sonfordangeles, DamienMcKenna: panelizer_add_revision_info_form()
+  was not handling the entity object correctly, so the revision functionality
+  was not going to work correctly.
+#2524258 by kovacsaba, DamienMcKenna: hook_views_plugins_alter() needs to know
+  what module the plugin comes from.
+#2565449 by benjy, DamienMcKenna: CTools export-ui library not always loaded.
+#2382879 by mglaman: Allow layout selection to be assigned as the default via
+  the IPE interface.
 
 
 Panelizer 7.x-3.2-beta1, 2015-02-02
