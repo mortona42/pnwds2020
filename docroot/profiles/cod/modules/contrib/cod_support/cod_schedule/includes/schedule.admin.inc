@@ -322,7 +322,13 @@ function cod_schedule_field_collection_item_add($field_name, $entity_type, $enti
   if (!isset($info[$entity_type])) {
     return MENU_NOT_FOUND;
   }
-  $result = entity_load($entity_type, array($entity_id));
+
+  $result = array();
+  if(is_array($entity_id)) {
+    $result = entity_load($entity_type, $entity_id);
+  } else {
+    $result = entity_load($entity_type, array($entity_id));
+  }
 
   $entity = reset($result);
 
