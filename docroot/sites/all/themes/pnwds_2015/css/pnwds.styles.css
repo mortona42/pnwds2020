@@ -691,12 +691,12 @@ blockquote footer {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.node__content ul, .node--content ul, .node-content ul {
+.node__content ul, .node--content ul, .node-content ul, .field--name-body ul {
   list-style: disc outside url('../images/icons/icon__list--drop.png?1440780740');
   margin-bottom: 20px;
   padding-left: 2em;
 }
-.node__content ul li, .node--content ul li, .node-content ul li {
+.node__content ul li, .node--content ul li, .node-content ul li, .field--name-body ul li {
   vertical-align: top;
 }
 .panel-pane ul.quicktabs-tabs {
@@ -769,6 +769,9 @@ blockquote footer {
 }
 .panel-pane ul.quicktabs-tabs > li:last-child {
   margin-right: 0;
+}
+.field--name-body ul {
+  list-style-image: none;
 }
 
 ol {
@@ -2714,7 +2717,7 @@ nav[role="navigation"] > ul .dropdown {
 }
 
 .not-front .field--name-body {
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .w-footer {
