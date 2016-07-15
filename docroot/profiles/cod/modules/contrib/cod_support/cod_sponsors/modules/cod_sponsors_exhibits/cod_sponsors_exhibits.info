@@ -21,3 +21,10 @@ features_exclude[dependencies][ctools] = ctools
 
 ; Views includes.
 files[] = views/cod_sponsors_exhibits.views.inc
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

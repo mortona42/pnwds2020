@@ -8,6 +8,11 @@
  * Implements hook_views_default_views_alter().
  */
 function cod_sponsors_exhibits_views_default_views_alter(&$views) {
+  if (!field_info_instance('node', 'field_sponsor_booth_request', 'sponsor') ||
+      !field_info_instance('node', 'field_sponsor_booth_number', 'sponsor')) {
+    return;
+  }
+
   if (isset($views['cod_sponsors_admin'])) {
     $style_info = array(
       'field_sponsor_booth_request' => array(
@@ -70,6 +75,8 @@ function cod_sponsors_exhibits_views_default_views_alter(&$views) {
     $handler->display->display_options['style_options']['columns']['field_sponsor_booth_number'] = 'field_sponsor_booth_number';
 
     // Set the fields
-    $handler->display->display_options['fields'] = array_merge($fields, $handler->display->display_options['fields']);
+    if (is_array($handler->display->display_options['fields'])) {
+      $handler->display->display_options['fields'] = array_merge($fields, $handler->display->display_options['fields']);
+    }
   }
 }

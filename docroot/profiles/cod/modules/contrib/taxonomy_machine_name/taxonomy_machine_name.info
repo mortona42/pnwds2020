@@ -8,15 +8,16 @@ files[] = taxonomy_machine_name.views.inc
 files[] = taxonomy_machine_name.token.inc
 files[] = taxonomy_machine_name.migrate.inc
 files[] = views/modules/taxonomy/views_plugin_argument_validate_taxonomy_term_machine_name.inc
+files[] = views/modules/taxonomy/views_plugin_field_taxonomy_term_machine_name.inc
 
 dependencies[] = taxonomy
 dependencies[] = token
 dependencies[] = entity
 
 
-; Information added by Drupal.org packaging script on 2015-05-07
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2015-12-08
+version = "7.x-1.2"
 core = "7.x"
 project = "taxonomy_machine_name"
-datestamp = "1430991787"
+datestamp = "1449573840"
 

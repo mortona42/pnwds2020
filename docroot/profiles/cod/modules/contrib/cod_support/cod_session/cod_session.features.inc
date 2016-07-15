@@ -21,38 +21,6 @@ function cod_session_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function cod_session_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Speaker confirmation flag".
-  $flags['session_confirm'] = array(
-    'entity_type' => 'node',
-    'title' => 'Speaker confirmation flag',
-    'global' => 0,
-    'types' => array(
-      0 => 'session',
-    ),
-    'flag_short' => 'I confirm that I can present this sesssion at the listed date and time.',
-    'flag_long' => 'Once confirmed, you cannot unconfirm without contacting the session organizers.',
-    'flag_message' => 'Thanks for confirming that you can present [node:title] at this date and time!',
-    'unflag_short' => 'Cancel confirmation',
-    'unflag_long' => '',
-    'unflag_message' => '',
-    'unflag_denied_text' => 'You have confirmed that you will be presenting for this session.',
-    'link_type' => 'toggle',
-    'weight' => 0,
-    'show_in_links' => array(
-      'teaser' => TRUE,
-      'full' => TRUE,
-    ),
-    'show_as_field' => FALSE,
-    'show_on_form' => 0,
-    'access_author' => 'own',
-    'show_contextual_link' => 0,
-    'i18n' => 0,
-    'module' => 'cod_session',
-    'locked' => array(
-      0 => 'name',
-    ),
-    'api_version' => 3,
-  );
   // Exported flag: "Session Attending".
   $flags['session_schedule'] = array(
     'entity_type' => 'node',

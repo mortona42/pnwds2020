@@ -10,7 +10,7 @@
 function cod_registration_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-field_event_tickets'
+  // Exported field_instance: 'node-event-field_event_tickets'.
   $field_instances['node-event-field_event_tickets'] = array(
     'bundle' => 'event',
     'deleted' => 0,

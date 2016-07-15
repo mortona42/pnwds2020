@@ -49,3 +49,10 @@ features[views_view][] = cod_bof_schedule
 features[views_view][] = cod_bof_schedule_content
 features[views_view][] = cod_bof_schedule_timeslots
 install_option = cod
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

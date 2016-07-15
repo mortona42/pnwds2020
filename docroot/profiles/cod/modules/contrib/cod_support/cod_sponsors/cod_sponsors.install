@@ -115,3 +115,13 @@ function cod_sponsors_update_7008() {
     }
   }
 }
+
+/**
+ * Revert the view to give better context arguments.
+ */
+function cod_sponsors_update_7009() {
+  $revert = array(
+    'cod_sponsors' => array('views_view'),
+  );
+  features_revert($revert);
+}

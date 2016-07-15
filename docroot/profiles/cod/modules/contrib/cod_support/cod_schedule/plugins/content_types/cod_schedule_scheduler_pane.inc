@@ -3,28 +3,15 @@
 * This plugin array is more or less self documenting
 */
 $plugin = array(
-  // the title in the admin
   'title' => t('Scheduler Pane'),
-  // no one knows if "single" defaults to FALSE...
   'single' => TRUE,
-  // oh joy, I get my own section of panel panes
   'category' => array(t('Conference Organizing'), -9),
-  'edit form' => 'cod_events_pane_content_type_edit_form',
   'render callback' => 'cod_schedule_pane_scheduler_render'
 );
 
-
-/**
-* Run-time rendering of the body of the block (content type)
-* See ctools_plugin_examples for more advanced info
-*/
 function cod_schedule_pane_scheduler_render($subtype, $conf, $context = NULL) {
-  // our output is generate by js. Any markup or theme functions
-  // could go here.
-  // that private js function is so bad that fixing it will be the
-  // basis of the next tutorial
   $block = new stdClass();
-  $block->title = t('Room/Timeslot Scheduler');
+  // $block->title = t('Room/Timeslot Scheduler');
 
   if($event = node_load(array_shift($context))) {
     $block->content = cod_schedule_schedule_admin_page($event, array_shift($context));
@@ -38,28 +25,10 @@ function cod_schedule_pane_scheduler_render($subtype, $conf, $context = NULL) {
 function cod_schedule_schedule_admin_page($conference, $day) {
   module_load_include('inc', 'cod_schedule', 'includes/schedule.admin');
 
-  // Check to make sure that a) we have a valid day, and b) that the day lands
-  // Within the event.
-  if (empty($day) || empty($conference->field_dates)) {
+  // Grab the days.
+  //$days = cod_schedule_days($conference);
+  if (empty($day)) {
     return t('Your event must have a <a href="@edit">start and end date</a>. <a href="@edit">Edit</a> event.', array('@edit' => url('node/'.$conference->nid.'/edit', array('fragment' => 'edit-field-dates', 'query' => array('destination' => 'admin/conference/' . $conference->nid . '/schedule')))));
-  }
-  // This is sad panda. Force a redirect to the first day if the day passed in is
-  // Invalid. Cannot do this in context because they aren't aware of the conference.
-  $event_days = cod_schedule_days($conference->nid);
-  $event_start = new DateTime(array_shift($event_days));
-  $event_end = new DateTime(array_pop($event_days));
-
-  // Do some sanity checking for those who like to input crazy stuff.
-  $day_comp = explode('-', $day);
-  if (count($day_comp) != 3 || !checkdate($day_comp[1], $day_comp[2], $day_comp[0])) {
-    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_start->getTimestamp()));
-  }
-  $today_dt = new DateTime($day);
-  if ($today_dt < $event_start) {
-    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_start->getTimestamp()));
-  }
-  if ($today_dt > $event_end) {
-    drupal_goto(dirname(current_path()) . '/' . date('Y-m-d', $event_end->getTimestamp()));
   }
 
   // Grab the Rooms attached to the event.
@@ -94,13 +63,10 @@ function cod_schedule_schedule_admin_page($conference, $day) {
   $schedule_items = array();
   foreach($sessions as $session) {
     if(!empty($session->field_session_timeslot)) {
-      // @TODO We understand that this does not support multiple timeslots for a session or multilingual. We will fix that
-      // with the next patch and more discussion.
-      $schedule_items[ $session->field_session_timeslot['und'][0]['target_id'] ][] = $session;
+      $schedule_items[$session->field_session_timeslot['und'][0]['target_id']][] = $session;
     }
   }
 
-  // Create the table for each day.
   $tz = new DateTimeZone($conference->field_dates[LANGUAGE_NONE][0]['timezone']);
   $tz_db = new DateTimeZone($conference->field_dates[LANGUAGE_NONE][0]['timezone_db']);
 
@@ -121,7 +87,8 @@ function cod_schedule_schedule_admin_page($conference, $day) {
     ->fieldCondition('field_evttime_date', 'value2', format_date($day_end, 'custom', 'Y-m-d H:i:s'), '<=')
     ->fieldOrderBy('field_evttime_date', 'value')
     ->execute();
-  $header = array(t('Time'));
+
+  $header = array(t('Times'), t('Rooms'));
   $rows = array();
 
   if (isset($times['cod_event_time'])) {
@@ -136,19 +103,26 @@ function cod_schedule_schedule_admin_page($conference, $day) {
         )
       );
 
+      $room_table_rows = array();
       foreach ($rooms['cod_event_room'] as $roomid => $room) {
-        if (empty($rows)) {
-          $room_label = $room->extraFields->name;
-          $room_edit_uri = 'admin/conference/config/rooms/manage/' . $roomid;
-          $header[] = l($room_label, $room_edit_uri, array('query' => array('destination' => 'admin/conference/'.$conference->nid.'/schedule')));
-        }
+        $room_table_row = array(
+          array(
+            'data'=> l($room->extraFields->name, 'admin/conference/config/rooms/manage/' . $roomid, array('query' => array('destination' => 'admin/conference/'.$conference->nid.'/schedule')))
+            , 'style'=>'width:125px;'));
 
-        // @TODO Cache reset var is manually set to TRUE until we invalidate the cache when a schedule item is updated
-        $output = cod_schedule_schedule_grid_item($conference, $evttid, $roomid, TRUE, $schedule_items);
-        $row[] = array(
-          'data' => drupal_render($output),
-        );
+        $render = cod_schedule_schedule_grid_item($conference, $evttid, $roomid, TRUE, $schedule_items);
+        $room_table_row[] = drupal_render($render);
+        $room_table_rows[] = $room_table_row;
       }
+
+      if(!empty($room_table_rows)) {
+        $table_rows_what_now = array('data' => theme('table', array( 'rows' => $room_table_rows)));
+        $row[] = $table_rows_what_now;
+      }
+      else {
+        $row[] = "";
+      }
+
       $rows[] = $row;
     }
   }
@@ -161,6 +135,7 @@ function cod_schedule_schedule_admin_page($conference, $day) {
     $contents = theme('table', array('header' => $header, 'rows' => $rows));
   }
 
+  drupal_set_title("");
   ctools_include('modal');
   ctools_modal_add_js();
   drupal_add_library('system', 'ui.sortable');

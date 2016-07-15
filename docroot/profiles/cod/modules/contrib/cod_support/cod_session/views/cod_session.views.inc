@@ -46,6 +46,22 @@ function cod_session_views_data_alter(&$data) {
 }
 
 /**
+ * Implements hook_views_plugins_alter().
+ */
+function cod_session_views_plugins_alter(&$plugins) {
+  if (isset($plugins['argument validator']['taxonomy_term']['handler'])) {
+    $handler = 'views_plugin_argument_validate_cod_session';
+    $path = drupal_get_path('module', 'cod_session') . '/views/modules/taxonomy';
+    $file = 'views_plugin_argument_validate_cod_session.inc';
+
+    $plugins['argument validator']['taxonomy_term']['handler'] = $handler;
+    $plugins['argument validator']['taxonomy_term']['path'] = $path;
+    $plugins['argument validator']['taxonomy_term']['file'] = $file;
+    $plugins['argument validator']['taxonomy_term']['module'] = 'cod_session';
+  }
+}
+
+/**
  * Implements hook_views_data().
 
 function cod_session_views_data() {

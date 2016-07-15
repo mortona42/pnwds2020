@@ -388,3 +388,30 @@ function cod_session_update_7020() {
   );
   features_revert($revert);
 }
+
+/**
+ * Enable the cod_session_confirm module
+ */
+function cod_session_update_7021() {
+  if (!module_exists('cod_session_confirm')) {
+    module_enable(array('cod_session_confirm'));
+  }
+}
+
+/**
+ * Enable the cod_news image intergation module
+ */
+function cod_session_update_7022() {
+  if (module_exists('cod_news') && !module_exists('cod_news_session')) {
+    module_enable(array('cod_news_session'));
+  }
+}
+
+/**
+ * Enable the related sponsors session feature.
+ */
+function cod_session_update_7023() {
+  if (module_exists('cod_sponsors') && !module_exists('cod_sponsors_session')) {
+    module_enable(array('cod_sponsors_session'));
+  }
+}

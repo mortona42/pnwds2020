@@ -40,9 +40,10 @@ function cod_paid_events_ticket_registered_redirect_alter(&$redirect, &$registra
   global $user;
   // Reset the cart for a new order.
   $order = commerce_cart_order_new($user->uid);
-
+  $conference = '';
   foreach ($registrations as $registration) {
     $ticket_type = $registration->ticket_type();
+    $conference = $ticket_type->entity_id;
     if (!empty($ticket_type->field_ticket_related_product) && $product = commerce_product_load($ticket_type->field_ticket_related_product[LANGUAGE_NONE][0]['product_id'])) {
       // Add line items to the cart.
       $line_item = commerce_product_line_item_new($product);
@@ -69,7 +70,10 @@ function cod_paid_events_ticket_registered_redirect_alter(&$redirect, &$registra
 
     rules_invoke_event('cod_paid_events_add_ticket_to_order', $order, $registration);
   }
-
+  // After all registrations go through, add to the order.
+  // Assign an order to the conference.
+  $order->og_group_ref[LANGUAGE_NONE][0]['target_id'] = $conference;
+  commerce_order_save($order);
 }
 
 /**

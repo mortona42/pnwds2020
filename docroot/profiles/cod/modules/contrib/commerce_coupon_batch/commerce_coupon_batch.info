@@ -5,7 +5,9 @@ dependencies[] = commerce_coupon
 dependencies[] = views_bulk_operations
 core = 7.x
 
-; Information added by drush on 2014-03-24
-version = "7.x-2.x-dev"
+
+; Information added by drush on 2016-07-03
+version = ""
 project = "commerce_coupon_batch"
-datestamp = "1395700323"
+datestamp = "1467529541"
+

@@ -5,7 +5,10 @@ dependencies[] = i18n_string
 package = Multilingual - Internationalization
 core = 7.x
 hidden = TRUE
-; Information added by drush on 2015-02-27
-version = "7.x-1.6+6-dev"
+
+; Information added by drush on 2016-07-03
+version = "7.x-1.7+0-dev"
+core = "7.x"
 project = "entity"
-datestamp = "1425056902"
+datestamp = "1467529522"
+

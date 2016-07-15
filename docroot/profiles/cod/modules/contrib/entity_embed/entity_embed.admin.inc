@@ -125,6 +125,11 @@ function entity_embed_dialog_form($form, &$form_state, $input, $filter_format, $
           '#default_value' => $entity_element['data-entity-id'],
           '#required' => TRUE,
           '#description' => t('Select a file to embed using the media browser.'),
+          '#media_options' => array(
+            'global' => array(
+              'types' => isset($embed_button->entity_type_bundles) ? $embed_button->entity_type_bundles : array(),
+            ),
+          ),
         );
       }
 
@@ -136,6 +141,9 @@ function entity_embed_dialog_form($form, &$form_state, $input, $filter_format, $
         '#type' => 'actions',
       );
       $form['actions']['save_modal'] = array(
+        '#attributes' => array(
+          'class' => array('button--primary'),
+        ),
         '#type' => 'submit',
         '#value' => t('Next'),
         // No regular submit-handler. This form only works via JavaScript.
@@ -265,6 +273,9 @@ function entity_embed_dialog_form($form, &$form_state, $input, $filter_format, $
         ),
       );
       $form['actions']['save_modal'] = array(
+        '#attributes' => array(
+          'class' => array('button--primary'),
+        ),
         '#type' => 'submit',
         '#value' => t('Embed'),
         // No regular submit-handler. This form only works via JavaScript.

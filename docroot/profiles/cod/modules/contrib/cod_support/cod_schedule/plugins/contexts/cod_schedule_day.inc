@@ -53,8 +53,14 @@ function cod_schedule_context_create_day($empty, $data = NULL, $conf = FALSE) {
           $event_nid = $data['existing contexts']['argument_entity_id:node_1']->argument;
           $event_days = cod_schedule_days($event_nid, $content_type);
           $today_dt = new DateTime();
+          // If our event is one day, start and end are the same.
           $event_start = new DateTime(array_shift($event_days));
-          $event_end = new DateTime(array_pop($event_days));
+          if (empty($event_days)) {
+            $event_end = $event_start;
+          }
+          else {
+            $event_end = new DateTime(array_pop($event_days));
+          }
           if ($today_dt < $event_start) {
             $date = $event_start;
           }

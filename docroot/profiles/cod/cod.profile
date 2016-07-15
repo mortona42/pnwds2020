@@ -21,6 +21,11 @@ function system_form_install_select_profile_form_alter(&$form, $form_state) {
   }
 }
 
+function system_form_install_configure_form_alter(&$form, &$form_state) {
+  // Change descriptions of the default timezone
+  $form['server_settings']['date_default_timezone']['#description'] = t('Select the default timezone for your site. Note: Each conference can have a unique timezone for scheduling.');
+}
+
 function _cod_get_optional_modules() {
   $modules = system_rebuild_module_data();
   $cod_modules = array();

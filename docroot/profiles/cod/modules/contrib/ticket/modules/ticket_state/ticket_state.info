@@ -17,7 +17,10 @@ files[] = includes/ticket_state.admin.inc
 files[] = views/ticket_state.views.inc
 files[] = views/ticket_state_handler_field_ticket_state.inc
 files[] = views/ticket_state_handler_filter_ticket_state.inc
-; Information added by drush on 2015-07-14
-version = "7.x-1.0-beta4"
+
+; Information added by drush on 2016-07-03
+version = "7.x-1.0-beta4+57-dev"
+core = "7.x"
 project = "ticket"
-datestamp = "1436916530"
+datestamp = "1467529474"
+

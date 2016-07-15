@@ -86,3 +86,10 @@ settings[omega_libraries][selectivizr][status] = 0
 settings[omega_libraries][respond][status] = 0
 settings[omega_libraries][pie][status] = 0
 settings[omega_libraries][html5shiv][status] = 0
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod"
+datestamp = "1467529434"
+

@@ -3,7 +3,9 @@ description = Icon font library for use with other modules and themes.
 core = 7.x
 
 
-; Information added by drush on 2012-09-28
-version = "7.x-1.x-dev"
+
+; Information added by drush on 2016-07-03
+version = ""
 project = "admin_icons"
-datestamp = "1348864295"
+datestamp = "1467529576"
+

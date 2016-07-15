@@ -26,6 +26,9 @@ function ticket_registration_view_page($ticket_type) {
     }
   }
 
+  // Set the path so exposed filters form action is set properly.
+  $view->override_path = current_path();
+
   // Default back to the default display.
   return $view->preview($dname, array($ticket_type->ttid));
 }

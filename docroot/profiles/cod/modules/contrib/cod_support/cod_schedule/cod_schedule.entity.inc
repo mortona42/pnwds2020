@@ -137,7 +137,7 @@ class CodEventTime extends Entity {
     $date_field2 = new DateTime($date_field2);
     $date_field2 = format_date(($date_field2->getTimestamp()), $type);
 
-    return $date_field1 . '-' . $date_field2;
+    return $date_field1 . ' to ' . $date_field2;
   }
 
   /**

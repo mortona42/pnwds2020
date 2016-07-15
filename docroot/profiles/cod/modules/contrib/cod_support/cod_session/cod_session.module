@@ -57,16 +57,16 @@ function cod_session_menu() {
     'type' => MENU_CALLBACK,
     'page callback' => 'cod_events_add_content',
     'page arguments' => array(1, 3),
-    'access callback' => 'node_access',
-    'access arguments' => array('create', 'session'),
+    'access callback' => 'cod_events_manage_redirect_page_access',
+    'access arguments' => array('create', 'session', 1),
   );
   $items['node/%node/add/schedule-item'] = array(
     'title' => t('Add Session'),
     'type' => MENU_CALLBACK,
     'page callback' => 'cod_events_add_content',
     'page arguments' => array(1, 3),
-    'access callback' => 'node_access',
-    'access arguments' => array('create', 'schedule_item'),
+    'access callback' => 'cod_events_manage_redirect_page_access',
+    'access arguments' => array('create', 'schedule_item', 1),
   );
   $items['admin/conference/%node/sessions/add/session'] = array(
     'title' => t('Add Session'),
@@ -96,7 +96,8 @@ function cod_session_menu() {
 }
 
 function cod_session_module_implements_alter(&$implementations, $hook) {
-  if ($hook == 'views_data_alter') {
+  if ($hook == 'views_data_alter' ||
+      $hook == 'views_plugins_alter') {
     // Move views_pre_render() to the end of the list. module_implements()
     // iterates through $implementations with a foreach loop which PHP iterates
     // in the order that the items were added, so to move an item to the end of

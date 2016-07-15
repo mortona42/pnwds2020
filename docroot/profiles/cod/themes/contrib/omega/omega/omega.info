@@ -19,7 +19,10 @@ regions[footer]         = Footer
 plugins[panels][layouts] = panels/layouts
 plugins[panels][styles] = panels/styles
 
-; Information added by drush on 2014-10-22
+
+; Information added by drush on 2016-07-03
 version = "7.x-4.3+2-dev"
+core = "7.x"
 project = "omega"
-datestamp = "1413967429"
+datestamp = "1467529447"
+

@@ -20,3 +20,10 @@ features[field_instance][] = commerce_product-sponsor-og_group_ref
 ; Views includes.
 files[] = views/cod_sponsors_commerce.views.inc
 files[] = views/cod_sponsors_commerce_views_handler_field_order_link.inc
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

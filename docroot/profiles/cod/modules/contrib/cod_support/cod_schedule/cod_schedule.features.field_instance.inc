@@ -10,7 +10,7 @@
 function cod_schedule_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'cod_event_room-cod_event_room-og_group_ref'
+  // Exported field_instance: 'cod_event_room-cod_event_room-og_group_ref'.
   $field_instances['cod_event_room-cod_event_room-og_group_ref'] = array(
     'bundle' => 'cod_event_room',
     'default_value' => NULL,
@@ -54,7 +54,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'cod_event_time-cod_event_time-field_evttime_date'
+  // Exported field_instance:
+  // 'cod_event_time-cod_event_time-field_evttime_date'.
   $field_instances['cod_event_time-cod_event_time-field_evttime_date'] = array(
     'bundle' => 'cod_event_time',
     'deleted' => 0,
@@ -70,6 +71,20 @@ function cod_schedule_field_default_field_instances() {
           'multiple_number' => '',
           'multiple_to' => '',
           'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'cod_time',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -103,7 +118,7 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'cod_event_time-cod_event_time-og_group_ref'
+  // Exported field_instance: 'cod_event_time-cod_event_time-og_group_ref'.
   $field_instances['cod_event_time-cod_event_time-og_group_ref'] = array(
     'bundle' => 'cod_event_time',
     'default_value' => NULL,
@@ -112,6 +127,12 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'token' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -144,7 +165,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_allowed_types'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_allowed_types'.
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_allowed_types'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -152,6 +174,12 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'token' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -174,7 +202,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_room'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_room'.
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_room'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -183,6 +212,15 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'token' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
@@ -217,7 +255,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_time'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_time'.
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_time'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -232,6 +271,16 @@ function cod_schedule_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
     ),
@@ -260,7 +309,7 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_timeslots'
+  // Exported field_instance: 'node-event-field_event_timeslots'.
   $field_instances['node-event-field_event_timeslots'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -302,7 +351,7 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-field_session_timeslot'
+  // Exported field_instance: 'node-schedule_item-field_session_timeslot'.
   $field_instances['node-schedule_item-field_session_timeslot'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -354,7 +403,7 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-field_session_timeslot'
+  // Exported field_instance: 'node-session-field_session_timeslot'.
   $field_instances['node-session-field_session_timeslot'] = array(
     'bundle' => 'session',
     'default_value' => NULL,

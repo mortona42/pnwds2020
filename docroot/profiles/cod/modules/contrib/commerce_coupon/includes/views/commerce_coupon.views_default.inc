@@ -1,6 +1,11 @@
 <?php
 
-/*
+/**
+ * @file
+ * Default views for Commerce Coupon.
+ */
+
+/**
  * Implements hook_views_default_views().
  */
 function commerce_coupon_views_default_views() {

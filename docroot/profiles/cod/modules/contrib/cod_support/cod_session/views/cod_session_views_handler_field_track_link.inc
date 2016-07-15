@@ -45,6 +45,10 @@ class cod_session_views_handler_field_track_link extends views_handler_field {
     $attributes = array();
     // Get the current taxonomy term, if its set
     $path = current_path();
+    // Set the machine name by default.
+    if (!isset($values->taxonomy_term_data_machine_name)) {
+      $values->taxonomy_term_data_machine_name = '';
+    }
     if (isset($this->view->args[2]) && !empty($values)) {
       $path = substr(current_path(), 0, strrpos(current_path(), '/'));
       if ($this->view->args[2] == str_replace('_', '-', $values->taxonomy_term_data_machine_name)) {

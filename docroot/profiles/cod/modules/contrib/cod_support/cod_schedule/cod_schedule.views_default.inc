@@ -119,6 +119,12 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Autorefresh */
+  $handler->display->display_options['header']['autorefresh']['id'] = 'autorefresh';
+  $handler->display->display_options['header']['autorefresh']['table'] = 'views';
+  $handler->display->display_options['header']['autorefresh']['field'] = 'autorefresh';
+  $handler->display->display_options['header']['autorefresh']['interval'] = '30000';
+  $handler->display->display_options['header']['autorefresh']['display'] = 'page_1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Time: Time ID */
   $handler->display->display_options['fields']['evttid']['id'] = 'evttid';
@@ -152,7 +158,7 @@ function cod_schedule_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Field: Conference */
+  /* Field: Field: Groups audience */
   $handler->display->display_options['fields']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['fields']['og_group_ref']['table'] = 'og_membership';
   $handler->display->display_options['fields']['og_group_ref']['field'] = 'og_group_ref';
@@ -184,7 +190,7 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['filters']['field_evttime_date_value2']['granularity'] = 'minute';
   $handler->display->display_options['filters']['field_evttime_date_value2']['default_date'] = '10 minutes';
   $handler->display->display_options['filters']['field_evttime_date_value2']['year_range'] = '-1:+1';
-  $handler->display->display_options['path'] = 'node/%/program/schedule/sessions/sign';
+  $handler->display->display_options['path'] = 'node/%/schedule/sessions/sign';
   $export['cod_schedule'] = $view;
 
   $view = new view();
@@ -219,7 +225,7 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Nothing for this time.';
-  $handler->display->display_options['empty']['area']['format'] = 'wiki_filter';
+  $handler->display->display_options['empty']['area']['format'] = 'plain_text';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['id'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';

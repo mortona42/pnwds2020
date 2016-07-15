@@ -6,7 +6,10 @@ dependencies[] = uuid
 dependencies[] = entity
 package = Features
 
-; Information added by drush on 2013-06-26
+
+; Information added by drush on 2016-07-03
 version = "7.x-1.0-alpha3+8-dev"
+core = "7.x"
 project = "uuid_features"
-datestamp = "1372274881"
+datestamp = "1467529459"
+

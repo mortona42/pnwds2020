@@ -29,6 +29,5 @@ function cod_session_menu_default_menu_custom() {
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
   t('Utility links that display on every page of the site, such as "Your account" and "Your schedule"');
 
-
   return $menus;
 }

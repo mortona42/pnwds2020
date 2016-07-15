@@ -5,7 +5,10 @@ dependencies[] = entityreference_prepopulate
 dependencies[] = og_context
 hidden = TRUE
 
-; Information added by drush on 2015-07-28
+
+; Information added by drush on 2016-07-03
 version = "7.x-1.5+7-dev"
+core = "7.x"
 project = "entityreference_prepopulate"
-datestamp = "1438070459"
+datestamp = "1467529517"
+

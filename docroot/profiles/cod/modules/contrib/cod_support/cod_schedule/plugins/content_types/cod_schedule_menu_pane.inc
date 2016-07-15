@@ -1,27 +1,16 @@
 <?php
 /**
-* This plugin array is more or less self documenting
-*/
+ * This plugin array is more or less self documenting
+ */
 $plugin = array(
-  // the title in the admin
   'title' => t('Schedule Day Menu'),
-  // no one knows if "single" defaults to FALSE...
   'single' => TRUE,
-  // oh joy, I get my own section of panel panes
   'category' => array(t('Conference Organizing'), -9),
   'edit form' => 'cod_schedule_pane_menu_edit_form',
   'render callback' => 'cod_schedule_menu_pane_render'
 );
 
-/**
-* Run-time rendering of the body of the block (content type)
-* See ctools_plugin_examples for more advanced info
-*/
 function cod_schedule_menu_pane_render($subtype, $conf, $context = NULL) {
-  // our output is generate by js. Any markup or theme functions
-  // could go here.
-  // that private js function is so bad that fixing it will be the
-  // basis of the next tutorial
   $block = new stdClass();
   $block->title = '';
 
@@ -113,28 +102,28 @@ function cod_schedule_pane_menu_edit_form($form, &$form_state) {
   $conf = &$form_state['conf'];
 
   $form['content_type'] = array(
-      '#title' => t('Enter an optional content type'),
-      '#type' => 'textfield',
-      '#maxlength' => 64,
-      '#default_value' => !empty($conf['content_type']) ? $conf['content_type'] : '',
-      '#weight' => -11,
+    '#title' => t('Enter an optional content type'),
+    '#type' => 'textfield',
+    '#maxlength' => 64,
+    '#default_value' => !empty($conf['content_type']) ? $conf['content_type'] : '',
+    '#weight' => -11,
   );
 
   $form['path_prefix'] = array(
-      '#title' => t('Enter an path prefix'),
-      '#type' => 'textfield',
-      '#maxlength' => 64,
-      '#description' => 'Add an optional path prefix before the date. Do not append a slash',
-      '#default_value' => !empty($conf['path_prefix']) ? $conf['path_prefix'] : '',
-      '#weight' => -2,
+    '#title' => t('Enter an path prefix'),
+    '#type' => 'textfield',
+    '#maxlength' => 64,
+    '#description' => 'Add an optional path prefix before the date. Do not append a slash',
+    '#default_value' => !empty($conf['path_prefix']) ? $conf['path_prefix'] : '',
+    '#weight' => -2,
   );
 
   $form['date_format'] = array(
-      '#title' => t('Optional day title format'),
-      '#type' => 'textfield',
-      '#maxlength' => 32,
-      '#default_value' => !empty($conf['date_format']) ? $conf['date_format'] : '',
-      '#weight' => -10,
+    '#title' => t('Optional day title format'),
+    '#type' => 'textfield',
+    '#maxlength' => 32,
+    '#default_value' => !empty($conf['date_format']) ? $conf['date_format'] : '',
+    '#weight' => -10,
   );
 
   return $form;
@@ -146,5 +135,4 @@ function cod_schedule_pane_menu_edit_form_submit($form, &$form_state) {
   $form_state['conf']['content_type'] = $form_state['values']['content_type'];
   $form_state['conf']['path_prefix'] = $form_state['values']['path_prefix'];
   $form_state['conf']['date_format'] = $form_state['values']['date_format'];
-
 }

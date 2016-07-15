@@ -99,25 +99,6 @@ function cod_events_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-953eed62-a7ab-4e14-a3c3-6b54bc9268d6';
-  $pane->panel = 'middle';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'ticket_registration-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '953eed62-a7ab-4e14-a3c3-6b54bc9268d6';
-  $display->content['new-953eed62-a7ab-4e14-a3c3-6b54bc9268d6'] = $pane;
-  $display->panels['middle'][0] = 'new-953eed62-a7ab-4e14-a3c3-6b54bc9268d6';
-  $pane = new stdClass();
   $pane->pid = 'new-b3bf5ce8-48dd-4abe-a06f-c73772de5965';
   $pane->panel = 'middle';
   $pane->type = 'views_panes';
@@ -135,7 +116,7 @@ function cod_events_default_page_manager_pages() {
   $pane->locks = array();
   $pane->uuid = 'b3bf5ce8-48dd-4abe-a06f-c73772de5965';
   $display->content['new-b3bf5ce8-48dd-4abe-a06f-c73772de5965'] = $pane;
-  $display->panels['middle'][1] = 'new-b3bf5ce8-48dd-4abe-a06f-c73772de5965';
+  $display->panels['middle'][0] = 'new-b3bf5ce8-48dd-4abe-a06f-c73772de5965';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -10,7 +10,7 @@
 function cod_session_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-field_event_default_session_view'
+  // Exported field_instance: 'node-event-field_event_default_session_view'.
   $field_instances['node-event-field_event_default_session_view'] = array(
     'bundle' => 'event',
     'default_value' => array(
@@ -56,7 +56,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -106,7 +106,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-upload'
+  // Exported field_instance: 'node-page-upload'.
   $field_instances['node-page-upload'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -154,7 +154,7 @@ function cod_session_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => '',
-      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp',
+      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp svg',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -169,7 +169,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-body'
+  // Exported field_instance: 'node-schedule_item-body'.
   $field_instances['node-schedule_item-body'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -220,7 +220,7 @@ function cod_session_field_default_field_instances() {
     'widget_type' => 'text_textarea_with_summary',
   );
 
-  // Exported field_instance: 'node-schedule_item-field_accepted'
+  // Exported field_instance: 'node-schedule_item-field_accepted'.
   $field_instances['node-schedule_item-field_accepted'] = array(
     'bundle' => 'schedule_item',
     'default_value' => 'proposed',
@@ -262,7 +262,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-field_experience'
+  // Exported field_instance: 'node-schedule_item-field_experience'.
   $field_instances['node-schedule_item-field_experience'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -305,7 +305,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-field_schedule_item_tags'
+  // Exported field_instance: 'node-schedule_item-field_schedule_item_tags'.
   $field_instances['node-schedule_item-field_schedule_item_tags'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -406,7 +406,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-og_group_ref'
+  // Exported field_instance: 'node-schedule_item-og_group_ref'.
   $field_instances['node-schedule_item-og_group_ref'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -484,10 +484,26 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-body'
+  // Exported field_instance: 'node-session-body'.
   $field_instances['node-session-body'] = array(
     'bundle' => 'session',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '<p>Please give us a detailed overview of your session and why attendees will be excited to hear about it. &nbsp;</p>
+
+<p>Ensure that you let us know:</p>
+
+<ul>
+	<li>What level of knowledge should attendees have before walking into your session</li>
+	<li>What will your session accomplish and what will attendees walk away having learned</li>
+</ul>
+
+<p>&nbsp;</p>
+',
+        'format' => 'filtered_html',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -536,7 +552,7 @@ function cod_session_field_default_field_instances() {
     'widget_type' => 'text_textarea_with_summary',
   );
 
-  // Exported field_instance: 'node-session-field_accepted'
+  // Exported field_instance: 'node-session-field_accepted'.
   $field_instances['node-session-field_accepted'] = array(
     'bundle' => 'session',
     'default_value' => array(
@@ -584,7 +600,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-field_experience'
+  // Exported field_instance: 'node-session-field_experience'.
   $field_instances['node-session-field_experience'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
@@ -627,59 +643,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-field_news_image'
-  $field_instances['node-session-field_news_image'] = array(
-    'bundle' => 'session',
-    'deleted' => 0,
-    'description' => 'An image to be used for highlighted sessions in the front page rotator.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_news_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-session-field_slides'
+  // Exported field_instance: 'node-session-field_slides'.
   $field_instances['node-session-field_slides'] = array(
     'bundle' => 'session',
     'deleted' => 0,
@@ -727,7 +691,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-field_speakers'
+  // Exported field_instance: 'node-session-field_speakers'.
   $field_instances['node-session-field_speakers'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
@@ -782,7 +746,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-og_group_ref'
+  // Exported field_instance: 'node-session-og_group_ref'.
   $field_instances['node-session-og_group_ref'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
@@ -860,7 +824,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-session-og_vocabulary'
+  // Exported field_instance: 'node-session-og_vocabulary'.
   $field_instances['node-session-og_vocabulary'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
@@ -893,7 +857,7 @@ function cod_session_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_vocabulary',
     'label' => 'Session Track',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(

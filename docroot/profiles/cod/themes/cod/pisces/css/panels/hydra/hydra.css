@@ -58,7 +58,7 @@ body {
       color: #aec8e4; }
 
 .l-highlighted-wrapper {
-  background: url(../images/highlighted.png) #4d5770 top left repeat-x;
+  background-color: #4d5770;
   height: 300px; }
 
 .l-region--highlighted {

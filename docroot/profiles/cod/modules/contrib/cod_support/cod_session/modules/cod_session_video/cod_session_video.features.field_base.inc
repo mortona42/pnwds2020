@@ -10,7 +10,7 @@
 function cod_session_video_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_session_video'
+  // Exported field_base: 'field_session_video'.
   $field_bases['field_session_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -18,7 +18,7 @@ function cod_session_video_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_session_video',
     'field_permissions' => array(
-      'type' => 0,
+      'type' => 2,
     ),
     'indexes' => array(
       'fid' => array(

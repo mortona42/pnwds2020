@@ -5,19 +5,13 @@
  */
 
 /**
- * Implements hook_ctools_plugin_api().
- */
-function cod_registration_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "strongarm" && $api == "strongarm") {
-    return array("version" => "1");
-  }
-}
-
-/**
  * Implements hook_views_api().
  */
-function cod_registration_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
+function cod_registration_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'cod_registration') . '/views',
+  );
 }
 
 /**

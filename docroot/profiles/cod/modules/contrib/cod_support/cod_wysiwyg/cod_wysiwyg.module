@@ -15,7 +15,7 @@ function cod_wysiwyg_process_filter_format($element) {
   global $user;
   $formats = filter_formats($user);
   if (count($formats) <= 2 && array_key_exists('filtered_html', $formats)) {
-    unset($element['format']);
+    $element['format']['#access'] = FALSE;
     $element['#format'] = 'filtered_html';
   }
   return $element;

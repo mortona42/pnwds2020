@@ -18,3 +18,10 @@ features[field_base][] = field_ticket_attendee_listing
 features[field_instance][] = node-event-field_ticket_attendee_listing
 features[views_view][] = cod_community_attendees
 install_option = cod
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

@@ -53,7 +53,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_sponsor_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_url']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_sponsor_url']['type'] = 'link_plain';
-  /* Field: Content: Logo */
+  /* Field: Content: Sponsor logo */
   $handler->display->display_options['fields']['field_sponsor_logo']['id'] = 'field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['table'] = 'field_data_field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['field'] = 'field_sponsor_logo';
@@ -151,7 +151,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Logo */
+  /* Field: Content: Sponsor logo */
   $handler->display->display_options['fields']['field_sponsor_logo']['id'] = 'field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['table'] = 'field_data_field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['field'] = 'field_sponsor_logo';
@@ -178,7 +178,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['element_wrapper_class'] = 'level';
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Module Level */
+  /* Field: Content: Sponsor module level */
   $handler->display->display_options['fields']['field_sponsor_module_level']['id'] = 'field_sponsor_module_level';
   $handler->display->display_options['fields']['field_sponsor_module_level']['table'] = 'field_data_field_sponsor_module_level';
   $handler->display->display_options['fields']['field_sponsor_module_level']['field'] = 'field_sponsor_module_level';
@@ -225,18 +225,19 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_title'] = 'Sponsor Block Pane';
   $handler->display->display_options['argument_input'] = array(
     'gid' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
+      'type' => 'context',
+      'context' => 'entity:node.nid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Conference',
     ),
     'tid' => array(
-      'type' => 'user',
-      'context' => 'entity:comment.author',
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
@@ -368,7 +369,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['relationships']['uid']['required'] = TRUE;
-  /* Field: Content: Logo */
+  /* Field: Content: Sponsor logo */
   $handler->display->display_options['fields']['field_sponsor_logo']['id'] = 'field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['table'] = 'field_data_field_sponsor_logo';
   $handler->display->display_options['fields']['field_sponsor_logo']['field'] = 'field_sponsor_logo';

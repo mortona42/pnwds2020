@@ -144,7 +144,12 @@ function cod_events_add_redirect_page($content_type, $event = NULL) {
  * Just a redirect menu item to easily take users to the management pages.
  * Add an access check to make sure its only on event nodes
  */
-function cod_events_manage_redirect_page_access($op, $node) {
+function cod_events_manage_redirect_page_access($op, $node, $event = NULL) {
+  // Redirecting from an event add page
+  if(isset($event)) {
+    return og_user_access('node', $event->nid, $op .' '. $node . ' content');
+  }
+
   if($node->type != 'event') {
     return FALSE;
   }
@@ -261,6 +266,31 @@ function cod_events_ctools_plugin_directory($module, $plugin) {
     return "plugins/entityreference/$plugin";
   }
 }
+
+/**
+ * Wrapper function for og_group_ref to return the correct og_group_ref
+ * value based on if its a select widget or a og selector.
+ *
+ * @param $object -- could be a node or form element.
+ */
+function cod_events_get_event($entity_type, $entity) {
+  // If its a stdClass we can assume its probably an entity
+  if (!empty($entity->og_group_ref)) {
+    $wrapper = entity_metadata_wrapper($entity_type, $entity);
+    $events = $wrapper->og_group_ref->value();
+    return array_shift($events);
+  }
+  // If empty its a new item, return og_context.
+  else {
+    if ($context = og_context()) {
+      if (isset($context['gid'])) {
+        return entity_load_single($context['group_type'], $context['gid']);
+      }
+    }
+  }
+  return FALSE;
+}
+
 
 /**
  * Implements hook_og_user_access_alter().

@@ -44,7 +44,7 @@ function taxonomy_machine_name_migrate_api() {
 function taxonomy_machine_name_entity_property_info_alter(&$infos) {
   $infos['taxonomy_term']['properties']['machine_name'] = array(
     'label'              => t('Machine name'),
-    'type'               => 'varchar',
+    'type'               => 'text',
     'required'           => FALSE,
     'description'        => 'The taxonomy term machine name.',
     'schema field'       => 'machine_name',
@@ -175,9 +175,11 @@ function taxonomy_machine_name_clean_name($name, $force = FALSE) {
     else {
       // Final fallback.
       $machine_name = drupal_strtolower(str_replace('_', '-', $name));
-      $machine_name = preg_replace('/[^a-z0-9\_]/i', '_', $machine_name);
-      $machine_name = trim($machine_name, '_');
     }
+
+    // Remove remaining accents.
+    $machine_name = preg_replace('/[^a-z0-9\_]/i', '_', $machine_name);
+    $machine_name = trim($machine_name, '_');
   }
   else {
     $machine_name = trim(drupal_strtolower($name));

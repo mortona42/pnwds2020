@@ -13,7 +13,7 @@ function taxonomy_machine_name_views_data_alter(&$data) {
     'title'    => t('Machine name'),
     'help'     => t('The taxonomy term machine name.'),
     'field'    => array(
-      'handler'        => 'views_handler_field',
+      'handler'        => 'views_plugin_field_taxonomy_term_machine_name',
       'click sortable' => TRUE,
     ),
     'sort'     => array(

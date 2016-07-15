@@ -8,7 +8,8 @@
 /**
  * Form constructor for the COD session room form.
  */
-function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, $op = 'update', $node = NULL) {
+function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, $op = 'update', $conference = NULL) {
+  $form['#entity'] = $cod_event_room;
   $form_state['cod_event_room'] = $cod_event_room;
   if (!isset($form_state['wrapper_callback'])) {
     $form_state['wrapper_callback'] = 'entity_ui_main_form_defaults';
@@ -28,11 +29,12 @@ function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, 
     '#required' => TRUE,
     '#size' => 30,
   );
+
   $form['capacity'] = array(
-    '#title' => t('Capacity'),
+    '#title' => t('Session Capacity'),
     '#type' => 'textfield',
     '#default_value' => $cod_event_room->capacity,
-    '#description' => t('Total person capacity of a room.'),
+    '#description' => t('Total session capacity of a room.'),
     '#required' => FALSE,
     '#size' => 5,
   );
@@ -43,9 +45,19 @@ function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, 
     $submit += $form['#submit'];
   }
 
-  if (isset($node) && is_object($node)) {
-    // Check for both the og_widget and select or hidden widgets to set default value.
-    isset($form['og_group_ref'][LANGUAGE_NONE][0]['default']) ? $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid : $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $node->nid;
+  // Set the default conference on add
+  if (isset($conference) && is_object($conference) && $op == 'add') {
+    // og select widget
+    if (isset($form['og_group_ref'][LANGUAGE_NONE][0])) {
+      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+    }
+    // standard select widget
+    else {
+      $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $conference->nid;
+    }
+  }
+  // Remove the group reference field if the user isn't a site admin.
+  if (!user_access('administer conferences')) {
     $form['og_group_ref']['#access'] = FALSE;
   }
 
@@ -56,8 +68,8 @@ function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, 
     '#submit' => $submit + array('cod_event_room_form_submit'),
     '#weight' => 40,
   );
-  if (isset($node->nid)) {
-    $form['actions']['submit']['#redirect'] = 'admin/conference/'.$node->nid.'/schedule';
+  if (isset($conference->nid)) {
+    $form['actions']['submit']['#redirect'] = 'admin/conference/'.$conference->nid.'/schedule';
   }
   $form['weight'] = array(
     '#type' => 'weight',
@@ -111,7 +123,30 @@ function cod_event_room_form_submit_delete(&$form, &$form_state) {
 /**
  * Form constructor for the COD session time form.
  */
-function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, $op = 'update', $node = NULL) {
+function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, $op = 'update', $conference = NULL) {
+  // The conference variable can be called as the bundle of the Time as well.
+  // When that happens, reassign the variable.
+  if ($conference == 'cod_event_time') {
+    $bundle = $conference;
+
+    // Check to see if we have a conference loaded in the og_group_ref already.
+    if (isset($cod_event_time->og_group_ref[LANGUAGE_NONE][0]['target_id'])) {
+      $conference = node_load($cod_event_time->og_group_ref[LANGUAGE_NONE][0]['target_id']);
+      $form['#conference'] = $conference;
+    }
+    // Redirect user, because we don't want times created without an event.
+    else {
+      drupal_set_message("Time must be added via the scheduler for your conference. (Manage Conference -> Scheduler)", 'warning');
+      drupal_goto('admin/conference/');
+    }
+  } else {
+    $form['#conference'] = $conference;
+  }
+  $form['#entity'] = $cod_event_time;
+  if (isset($conference) && is_object($conference) && !cod_schedule_days($conference)) {
+    drupal_set_message(l(t("You must first set a date for the event."), 'admin/conference/'.$conference->nid.'/edit',array('fragment' => 'edit-field-dates')), 'warning');
+    drupal_goto('admin/conference/'.$conference->nid.'/schedule');
+  }
 
   $form_state['cod_event_time'] = $cod_event_time;
 
@@ -131,23 +166,45 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
   );
 
   field_attach_form('cod_event_time', $cod_event_time, $form, $form_state);
-
-  if (isset($node) && is_object($node) && !cod_schedule_days($node)) {
-    drupal_set_message(l(t("You must first set a date for the event."), 'admin/conference/'.$node->nid.'/edit',array('fragment' => 'edit-field-dates')), 'warning');
-    drupal_goto('admin/conference/'.$node->nid.'/schedule');
-  }
-
-  if (isset($node->field_dates[LANGUAGE_NONE][0])) {
+  if (isset($conference->field_dates[LANGUAGE_NONE][0]) && $op == 'add') {
     //Set the default time to be closer to the event date.
-    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['value'] = $node->field_dates[LANGUAGE_NONE][0]['value'];
-    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['value2'] = $node->field_dates[LANGUAGE_NONE][0]['value']+3600;
-    $form['field_evttime_date'][LANGUAGE_NONE][0]['timezone']['#type'] = 'value';
-    $form['field_evttime_date'][LANGUAGE_NONE][0]['timezone']['#value'] = $node->field_dates[LANGUAGE_NONE][0]['timezone'];
+    //Set the timezone for the date to match the event.
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['value'] = $conference->field_dates[LANGUAGE_NONE][0]['value'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['value2'] = $conference->field_dates[LANGUAGE_NONE][0]['value']+3600;
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value'] = $conference->field_dates[LANGUAGE_NONE][0]['value'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value2'] = $conference->field_dates[LANGUAGE_NONE][0]['value']+3600;
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['timezone_db'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['timezone_db'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
   }
+  // Set an existing time to the eventtime
+/*
+  else {
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#default_value']['timezone_db'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['timezone'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['timezone_db'] = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value'] = $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value'] . " " . $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+    $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value2'] = $form['field_evttime_date'][LANGUAGE_NONE][0]['#date_items']['value2'] . " " . $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
+  }
+*/
 
-  if (isset($node) && is_object($node)) {
-    // Check for both the og_widget and select or hidden widgets to set default value.
-    isset($form['og_group_ref'][LANGUAGE_NONE][0]['default']) ? $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid : $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $node->nid;
+  // Set the default conference on add
+  if (isset($conference) && is_object($conference) && $op == 'add') {
+    // og select widget
+    if (isset($form['og_group_ref'][LANGUAGE_NONE][0])) {
+      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+    }
+    // standard select widget
+    else {
+      $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $conference->nid;
+    }
+  }
+  // Remove the group reference field if the user isn't a site admin.
+  if (!user_access('administer conferences')) {
     $form['og_group_ref']['#access'] = FALSE;
   }
 
@@ -163,8 +220,8 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
     '#submit' => $submit + array('cod_event_time_form_submit'),
     '#weight' => 40,
   );
-  if (isset($node->nid)) {
-    $form['actions']['submit']['#redirect'] = 'admin/conference/'.$node->nid.'/schedule';
+  if (isset($conference->nid)) {
+    $form['actions']['submit']['#redirect'] = 'admin/conference/'.$conference->nid.'/schedule';
   }
 
   if (!$cod_event_time->isLocked() && $op != 'add' && $op != 'clone') {
@@ -185,6 +242,21 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
  * Form API submit callback for the save button.
  */
 function cod_event_time_form_submit(&$form, &$form_state) {
+  // Before we submit the time for the first time (create), we need to change
+  // the time to the timezone of the event relative to sitetime.
+  if ($form_state['op'] == 'add') {
+    // The form_state value is set to the site timezone, so we need to get back
+    // to the conference tz by calculating setting the timezone to eventtz.
+    $eventtz = new DateTimeZone($form['#conference']->field_dates[LANGUAGE_NONE][0]['timezone']);
+
+    // Convert the timezone fields.
+    $value1 = new DateTime($form_state['values']['field_evttime_date'][LANGUAGE_NONE][0]['value']);
+    $value2 = new DateTime($form_state['values']['field_evttime_date'][LANGUAGE_NONE][0]['value2']);
+    $value1->setTimezone($eventtz);
+    $value2->setTimezone($eventtz);
+    $form_state['values']['field_evttime_date'][LANGUAGE_NONE][0]['value'] = $value1->format('Y-m-d H:i:s');
+    $form_state['values']['field_evttime_date'][LANGUAGE_NONE][0]['value2'] = $value2->format('Y-m-d H:i:s');
+  }
   $cod_event_time = entity_ui_form_submit_build_entity($form, $form_state);
 
   // Save and go back.
@@ -323,13 +395,11 @@ function cod_schedule_field_collection_item_add($field_name, $entity_type, $enti
     return MENU_NOT_FOUND;
   }
 
-  $result = array();
   if(is_array($entity_id)) {
-    $result = entity_load($entity_type, $entity_id);
-  } else {
-    $result = entity_load($entity_type, array($entity_id));
+    $entity_id = reset($entity_id);
   }
 
+  $result = entity_load($entity_type, array($entity_id));
   $entity = reset($result);
 
   if (!$entity) {
@@ -400,24 +470,12 @@ function cod_schedule_schedule_grid_item($event, $time, $room, $reset = FALSE, $
         }
       }
 
-
       $op = 'edit';
-      /*
-       * @TODO (Connerton) I don't think we need this if we turn the "edit timeslot" link into a gear contextual link
-      if (isset($timeslot->field_timeslot_allowed_types[LANGUAGE_NONE])) {
-        foreach ($timeslot->field_timeslot_allowed_types[LANGUAGE_NONE] as $type) {
-          $items[]['data'] = node_type_get_name($type['value']);
-        }
-      }
-      */
     }
     else {
       $op = 'add';
     }
 
-    // (Connerton) If there are no session in a timeslot, then the ul element won't even render. This makes sure that happens
-    // However it produces an empty <li class="first last"></li> which doesn't seem to hurt anything. Not sure how I
-    // feel about that....
     if(empty($sessions)) {
       $sessions[] = array('data' => '');
     }
@@ -433,6 +491,9 @@ function cod_schedule_schedule_grid_item($event, $time, $room, $reset = FALSE, $
       'dropdown' => array(
         '#links' => $items,
         '#theme' => 'ctools_dropdown',
+        '#attributes' => array(
+          'class' => 'cod-events-schedule-timeslot-' . $time . '-' . $room,
+        ),
       ),
       'sessions' => array(
         '#items' => $sessions,
@@ -444,13 +505,6 @@ function cod_schedule_schedule_grid_item($event, $time, $room, $reset = FALSE, $
         ),
       ),
     );
-    /*   Link to the Ctools modal.
-     *             '#items' => $items,
-                 '#theme' => 'item_list',
-                 '#attributes' => array(
-                   'id' => 'cod-events-schedule-timeslot-' . $time . '-' . $room,
-                 ),
-     */
 
     cache_set($cid, $output);
     return $output;

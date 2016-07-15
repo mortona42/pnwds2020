@@ -16,3 +16,10 @@ features[field_group][] = group_cod_profile_details|user|user|form
 features[field_instance][] = user-user-field_dietary_needs
 features[field_instance][] = user-user-field_t_shirt_size
 install_option = cod
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

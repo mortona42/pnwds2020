@@ -10,7 +10,7 @@
 function cod_schedule_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_event_timeslots'
+  // Exported field_base: 'field_event_timeslots'.
   $field_bases['field_event_timeslots'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -35,7 +35,7 @@ function cod_schedule_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_evttime_date'
+  // Exported field_base: 'field_evttime_date'.
   $field_bases['field_evttime_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -67,7 +67,7 @@ function cod_schedule_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_session_timeslot'
+  // Exported field_base: 'field_session_timeslot'.
   $field_bases['field_session_timeslot'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -104,7 +104,7 @@ function cod_schedule_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_timeslot_allowed_types'
+  // Exported field_base: 'field_timeslot_allowed_types'.
   $field_bases['field_timeslot_allowed_types'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -133,7 +133,7 @@ function cod_schedule_field_default_field_bases() {
     'type' => 'list_cts',
   );
 
-  // Exported field_base: 'field_timeslot_room'
+  // Exported field_base: 'field_timeslot_room'.
   $field_bases['field_timeslot_room'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -169,7 +169,7 @@ function cod_schedule_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_timeslot_time'
+  // Exported field_base: 'field_timeslot_time'.
   $field_bases['field_timeslot_time'] = array(
     'active' => 1,
     'cardinality' => -1,

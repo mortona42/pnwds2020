@@ -16,3 +16,10 @@ features[page_manager_pages][] = cod_front_page
 features[views_view][] = cod_front_page_conferences
 features_exclude[dependencies][page_manager] = page_manager
 install_option = cod
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

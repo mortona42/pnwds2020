@@ -10,7 +10,7 @@
 function cod_session_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_accepted'
+  // Exported field_base: 'field_accepted'.
   $field_bases['field_accepted'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -21,7 +21,6 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -52,7 +51,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_event_default_session_view'
+  // Exported field_base: 'field_event_default_session_view'.
   $field_bases['field_event_default_session_view'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -62,7 +61,6 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 1,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -81,7 +79,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_experience'
+  // Exported field_base: 'field_experience'.
   $field_bases['field_experience'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -91,7 +89,6 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -118,53 +115,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_related_sponsor'
-  $field_bases['field_related_sponsor'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_related_sponsor',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(
-      'users' => array(
-        'columns' => array(
-          'target_id' => 'uid',
-        ),
-        'table' => 'users',
-      ),
-    ),
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'sponsor' => 'sponsor',
-        ),
-      ),
-      'target_type' => 'node',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
-  // Exported field_base: 'field_schedule_item_tags'
+  // Exported field_base: 'field_schedule_item_tags'.
   $field_bases['field_schedule_item_tags'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -193,7 +144,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_slides'
+  // Exported field_base: 'field_slides'.
   $field_bases['field_slides'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -226,7 +177,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_speakers'
+  // Exported field_base: 'field_speakers'.
   $field_bases['field_speakers'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -235,14 +186,6 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'field_speakers',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'users' => array(
-        'columns' => array(
-          'target_id' => 'uid',
-        ),
-        'table' => 'users',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -271,7 +214,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'og_vocabulary'
+  // Exported field_base: 'og_vocabulary'.
   $field_bases['og_vocabulary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -280,14 +223,6 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'og_vocabulary',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'taxonomy_term_data' => array(
-        'columns' => array(
-          'target_id' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -322,7 +257,7 @@ function cod_session_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'upload'
+  // Exported field_base: 'upload'.
   $field_bases['upload'] = array(
     'active' => 1,
     'cardinality' => -1,

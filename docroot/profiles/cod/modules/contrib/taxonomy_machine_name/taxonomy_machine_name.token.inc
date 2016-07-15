@@ -25,7 +25,12 @@ function taxonomy_machine_name_tokens_alter(array &$replacements, array $context
     $sanitize = !empty($options['sanitize']);
 
     if ($context['type'] == 'term') {
-      $term = $context['data']['term'];
+      if (isset($context['data']['term'])) {
+        $term = $context['data']['term'];
+      }
+      elseif (isset($context['data']['taxonomy_term'])) {
+        $term = $context['data']['taxonomy_term'];
+      }
     }
     elseif ($context['type'] == 'entity' && $context['data']['entity_type'] == 'taxonomy_term') {
       $term = $context['data']['entity'];

@@ -318,8 +318,8 @@ function cod_session_strongarm() {
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'revision',
-    2 => 'panelizer',
+    1 => 'panelizer',
+    2 => 'revision',
   );
   $export['node_options_page'] = $strongarm;
 
@@ -328,7 +328,8 @@ function cod_session_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_schedule_item';
   $strongarm->value = array(
-    0 => 'panelizer',
+    0 => 'revision',
+    1 => 'panelizer',
   );
   $export['node_options_schedule_item'] = $strongarm;
 
@@ -398,6 +399,13 @@ function cod_session_strongarm() {
   $strongarm->name = 'pathauto_node_session_pattern';
   $strongarm->value = '[node:og-group-ref:0:url:path]/sessions/[node:title]';
   $export['pathauto_node_session_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_schedule_item_tags_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_schedule_item_tags_pattern'] = $strongarm;
 
   return $export;
 }

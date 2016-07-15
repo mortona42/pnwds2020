@@ -52,9 +52,26 @@ function cod_paid_events_update_7001(&$sandbox) {
 /**
  * Change the og_group_ref select widget to a plain select widget and other minor updates.
  */
-function cod_paid_events_7002() {
+function cod_paid_events_update_7002() {
   $revert = array(
     'cod_news' => array('field_instance', 'views_view'),
+  );
+  features_revert($revert);
+}
+
+/**
+ * Cod commerce module is required. Enable the module.
+ */
+function cod_paid_events_update_7003() {
+  module_enable(array('cod_commerce'));
+}
+
+/**
+ * Enable rules for paid events
+ */
+function cod_paid_events_update_7004() {
+  $revert = array(
+    'cod_paid_events' => array('rules_config'),
   );
   features_revert($revert);
 }

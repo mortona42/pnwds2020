@@ -76,7 +76,18 @@ function cod_schedule_menu() {
     'weight' => -10,
   );
 
-
+  /*
+  $items['admin/conference/%node/schedule'] = array(
+    'title' => 'Schedule',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'cod_schedule_schedule_admin_page',
+    'page arguments' => array(3),
+    'access callback' => 'node_access',
+    'access arguments' => array('update', 3),
+    'weight' => 0,
+    'file' => 'includes/schedule.admin.inc',
+  );
+  */
   $items['admin/conference/%node/schedule/room'] = array(
     'title' => 'Add Room',
     'type' => MENU_LOCAL_ACTION,
@@ -90,10 +101,11 @@ function cod_schedule_menu() {
   $items['admin/conference/%node/schedule/time'] = array(
     'title' => 'Add Time',
     'type' => MENU_LOCAL_ACTION,
-    'page callback' => 'cod_schedule_add_time',
-    'page arguments' => array(2),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cod_event_time_form', new CodEventTime(), 'add', 2),
     'access callback' => 'entity_access',
     'access arguments' => array('create', 'cod_event_time'),
+    'file' => 'includes/schedule.admin.inc',
   );
 
   // NoJS/AJAX callbacks that can use the default Schedule AJAX form system.
@@ -117,21 +129,13 @@ function cod_schedule_menu() {
     'access callback' => TRUE,
   );
 
-  return $items;
-}
-
-/**
- * Callback to send a user to the add time page and prepopulate the current
- * conference.
- */
-function cod_schedule_add_time($event) {
-  $options = array(
-    'query' => array(
-      'og_group_ref' => $event->nid,
-    ),
+  $items['ajax/cod-schedule/items/%/%'] = array(
+    'page callback' => 'cod_schedule_ajax_fetch_items',
+    'page arguments' => array(3, 4),
+    'access callback' => TRUE,
   );
 
-  drupal_goto('admin/conference/config/times/add', $options);
+  return $items;
 }
 
 /**
@@ -198,24 +202,79 @@ function cod_schedule_og_permission() {
   return $perms;
 }
 
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function cod_schedule_theme_registry_alter(&$theme_registry) {
+	// Defined path to the current module.
+	$module_path = drupal_get_path('module', 'cod_schedule');
+	// Find all .tpl.php files in this module's folder recursively.
+	$template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path .'/templates');
+	// Iterate through all found template file objects.
+	foreach ($template_file_objects as $key => $template_file_object) {
+		// If the template has not already been overridden by a theme.
+		if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+			// Alter the theme path and template elements.
+			$theme_registry[$key]['theme path'] = $module_path .'/templates';
+			$theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+			$theme_registry[$key]['type'] = 'module';
+		}
+	}
+}
+
 function cod_schedule_form_node_form_alter(&$form, &$form_state) {
+  // Get current event if it exists.
+  if (isset($form['#node'])) {
+    $event = cod_events_get_event('node', $form['#node']);
+  }
+
+  // Don't show the timeslots on the event edit page
   if (isset($form['#node_edit_form']) && isset($form['field_event_timeslots'])) {
     $form['field_event_timeslots']['#access'] = FALSE;
   }
 
-  if (isset($form['field_session_timeslot']) && !empty($form['og_group_ref'][LANGUAGE_NONE]['#default_value'])) {
-    $form = _cod_schedule_timeslot_view_widget($form, $form['og_group_ref'][LANGUAGE_NONE]['#default_value'][0], $form['#bundle']);
+  // By default, no one should directly edit the session timeslot
+  if (isset($form['field_session_timeslot'])) {
+    $form['field_session_timeslot']['#access'] = FALSE;
   }
 
-  if (isset($form['field_session_timeslot']) && $form['og_group_ref']['#access'] == TRUE) {
+  if (isset($form['field_session_timeslot']) && !empty($event)) {
+    $form = _cod_schedule_timeslot_view_widget($form, $event, $form['#bundle']);
+  }
+
+  if (isset($form['field_session_timeslot']) && (og_user_access('node', $event->nid, 'administer schedule') || user_access('administer schedule'))) {
+    // TODO: Set the notice so when you change the event, it changes the link.
+    // TODO: Show the current timeslot if one is set.
+    $form['field_session_timeslot']['#access'] = TRUE;
+    $form['field_session_timeslot_notice'] = array(
+      '#title' => t("Timeslots"),
+      '#markup' => t('It is recommended to use the !scheduler to assign this !session_type to a timeslot. Only select timeslots here when this !session_type is scheduled multiple times for the event. Not seeing a desired timeslot? Make sure the blank timeslot has been created with the scheduler.', array('!session_type' => $form['#node']->type, '!scheduler' => l('conference scheduler', '/admin/conference/' . $event->nid . '/schedule'))),
+      '#weight' => 33,
+    );
+    $form['#group_children']['field_session_timeslot_notice'] = 'group_schedule';
+
      if (isset($form_state['entityreference_prepopulate']['node'][$form['#bundle']]['og_group_ref'])) {
        $form['field_session_timeslot']['#states'] = array(
-         'invisible' => array(':input[name="og_group_ref[und]"]' => array('value' => '_none')),
+         'invisible' => array(
+           'xor',
+           array(':input[name="og_group_ref[und][0][default]"]' => array('value' => '_none')),
+           // This sort of works, but would be better if it fired after
+           // the autocomplete. Note that this field is only available
+           // to administrators.
+           array(':input[name="og_group_ref[und][0][admin][0][target_id]"]' => array('empty' => TRUE)),
+         ),
        );
      }
      else {
        $form['field_session_timeslot']['#states'] = array(
-         'visible' => array(':input[name="og_group_ref[und]"]' => array('!value' => '_none')),
+         'visible' => array(
+           'xor',
+           array(':input[name="og_group_ref[und][0][default]"]' => array('!value' => '_none')),
+           // This sort of works, but would be better if it fired after
+           // the autocomplete. Note that this field is only available
+           // to administrators.
+           array(':input[name="og_group_ref[und][0][admin][0][target_id]"]' => array('empty' => FALSE)),
+         ),
        );
      }
 
@@ -234,6 +293,7 @@ function cod_schedule_update_session() {
   $session_nid = check_plain($_POST['session']);
   $timeslot_id = isset($_POST['timeslot']) ? check_plain($_POST['timeslot']) : NULL;
 
+  // The term 'session' here is pretty loose. It means schedule_item and bofs as well.
   $session = node_load($session_nid);
   $wrapper = entity_metadata_wrapper('node', $session);
 
@@ -254,11 +314,12 @@ function cod_schedule_update_session() {
     $timeslot = entity_load_single('field_collection_item', $timeslot_id);
     $fc_wrapper = entity_metadata_wrapper('field_collection_item', $timeslot);
     $allowed_values = $fc_wrapper->field_timeslot_allowed_types->value();
-    if (in_array('session', $allowed_values)) {
-      $fc_wrapper->field_timeslot_allowed_types->offsetSet(array_search('session', $allowed_values), 'session');
+    $type = $session->type;
+    if (in_array($type, $allowed_values)) {
+      $fc_wrapper->field_timeslot_allowed_types->offsetSet(array_search($type, $allowed_values), $type);
     }
     else {
-      $fc_wrapper->field_timeslot_allowed_types->offsetSet(count($allowed_values), 'session');
+      $fc_wrapper->field_timeslot_allowed_types->offsetSet(count($allowed_values), $type);
     }
     $fc_wrapper->save();
 
@@ -272,67 +333,50 @@ function cod_schedule_update_session() {
   drupal_json_output($timeslot_id);
 }
 
+function cod_schedule_ajax_fetch_items($eventid, $type = 'session') {
+  $content = array();
+  $sessions = cod_schedule_get_unscheduled_sessions($eventid, $type);
+  $session_items = cod_schedule_format_unscheduled_sessions($sessions);
+
+  if(empty($session_items)) {
+    $session_items[] = '';
+  }
+
+  $content['list'] = array(
+    '#theme' => 'item_list',
+    '#items' => $session_items,
+    '#attributes' => array(
+      'class' => array(
+        'sortable-sessions'
+      ),
+    ),
+  );
+
+  $content = drupal_render($content);
+  drupal_json_output($content);
+}
+
 /**
  * Helper function determines days there are time slots for.
  */
-function cod_schedule_days($node, $content_type = NULL) {
-  if (empty($node)) {
-    return array();
+function cod_schedule_days($conference) {
+
+  // If the conference is being passed as a nid, load the conference.
+  if (!is_object($conference) && is_numeric($conference)) {
+    $conference = node_load($conference);
   }
+  if(!empty($conference->field_dates)) {
+    $tz = $conference->field_dates[LANGUAGE_NONE][0]['timezone'];
 
-  if (is_numeric($node)) {
-    $node = node_load($node);
-  }
-
-  // Dates must exist for this page to work
-  if (empty($node->field_dates)) {
-    return array();
-  }
-
-  if (!empty($content_type)) {
-    $content_type = explode('+', $content_type);
-  }
-
-  if (!empty($content_type)) {
-    // Grab relevant days for a particular content type.
-    // I think this kills kittens, puppies, and all that is holy.
-    // TODO: Convert into a db_select statement.
-    $result = db_query("SELECT cod_event_time_field_data_field_timeslot_time.evttid AS evttid
-    FROM
-    {field_collection_item} field_collection_item
-    LEFT JOIN {field_data_field_timeslot_time} field_data_field_timeslot_time ON field_collection_item.item_id = field_data_field_timeslot_time.entity_id AND (field_data_field_timeslot_time.entity_type = 'field_collection_item' AND field_data_field_timeslot_time.deleted = '0')
-    INNER JOIN {cod_event_time} cod_event_time_field_data_field_timeslot_time ON field_data_field_timeslot_time.field_timeslot_time_target_id = cod_event_time_field_data_field_timeslot_time.evttid
-    INNER JOIN {field_data_field_event_timeslots} field_data_field_event_timeslots ON field_collection_item.item_id = field_data_field_event_timeslots.field_event_timeslots_value
-    INNER JOIN {node} field_event_timeslots_field_collection_item ON field_data_field_event_timeslots.entity_id = field_event_timeslots_field_collection_item.nid
-    LEFT JOIN {field_data_field_timeslot_allowed_types} field_data_field_timeslot_allowed_types ON field_collection_item.item_id = field_data_field_timeslot_allowed_types.entity_id AND (field_data_field_timeslot_allowed_types.entity_type = 'field_collection_item' AND field_data_field_timeslot_allowed_types.deleted = '0')
-    WHERE (( (field_data_field_timeslot_allowed_types.field_timeslot_allowed_types_value IN (:content_type)) AND (field_event_timeslots_field_collection_item.nid = :event_id) ))", array(
-      ':content_type' => $content_type,
-      ':event_id' => $node->nid
-    ));
-
-    $ids = array_keys($result->fetchAllAssoc('evttid'));
-    // Once we fetch all of the event ids for a particular content type, filter to
-    // the individual datetimes for each.
-    //$evttids = implode(',', array_map('intval', $ids));
-    $result = db_query("SELECT DISTINCT FROM_UNIXTIME(UNIX_TIMESTAMP(field_evttime_date_value), '%Y-%m-%d') AS datetime FROM field_data_field_evttime_date ed, cod_event_time ctime
-       WHERE ed.entity_id = ctime.evttid AND ctime.evttid IN (:evttid) ORDER BY datetime", array(':evttid' => $ids));
-
-    if ($times = array_keys($result->fetchAllKeyed()))
-      return $times;
-  }
-
-  if(!empty($node->field_dates)) {
-    $tz = $node->field_dates[LANGUAGE_NONE][0]['timezone'];
-
-    $start_time = format_date($node->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'Y-m-d', $tz);
-    $end_time = format_date($node->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'Y-m-d', $tz);
+    $start_time = format_date($conference->field_dates[LANGUAGE_NONE][0]['value'], 'custom', 'Y-m-d', $tz);
+    $end_time = format_date($conference->field_dates[LANGUAGE_NONE][0]['value2'], 'custom', 'Y-m-d', $tz);
     $event_start = DateTime::createFromFormat('U', strtotime($start_time));
     $event_end = DateTime::createFromFormat('U', strtotime($end_time));
     $event_duration = date_diff($event_start, $event_end);
     $i = 0;
     $days = array();
     while($i <= $event_duration->days) {
-      $days[] = date('Y-m-d', strtotime('+'.$i.' day', $node->field_dates[LANGUAGE_NONE][0]['value']));
+      $days[] = date('Y-m-d', strtotime('+'.$i.' day', $conference->field_dates[LANGUAGE_NONE][0]['value']));
       $i++;
     }
     return $days;
@@ -450,6 +494,25 @@ function cod_schedule_entity_info() {
 }
 
 /**
+ * Impliements a new flag type
+ */
+function cod_schedule_flag_link_type_info() {
+  return array(
+    'raw_link' => array(
+      'title' => 'Raw link',
+      'description' => 'Provides a raw flag link',
+    ),
+  );
+}
+
+/**
+ * Implements hook_flag_link().
+ */
+function cod_schedule_flag_link($flag, $action, $entity_id) {
+  return flag_flag_link($flag, $action, $entity_id);
+}
+
+/**
  * Implements hook_field_extra_fields().
  */
 function cod_schedule_field_extra_fields() {
@@ -461,8 +524,8 @@ function cod_schedule_field_extra_fields() {
         'weight' => -10,
       ),
       'capacity' => array(
-        'label' => t('Capacity'),
-        'description' => t('Total person capacity of a room.'),
+        'label' => t('Session Capacity'),
+        'description' => t('Total session capacity of a room.'),
         'weight' => 6,
       ),
     ),
@@ -644,6 +707,54 @@ function cod_schedule_schedule_access($event) {
 }
 
 /**
+ * Returns all sessions without a time slot.
+ * The results are not fully instantiated entities, just the required fields for performance.
+ *
+ * @param int $event_id
+ * @return array Returns an array of entities keyed on the entity Id.
+ */
+function cod_schedule_get_unscheduled_sessions($event_id, $type) {
+    $query = new EntityFieldQueryExtraFields();
+    $query->entityCondition('entity_type', 'node');
+    $query->entityCondition('bundle', $type);
+    $query->propertyCondition('status', '1');
+    $query->fieldCondition('og_group_ref', 'target_id', $event_id);
+
+    if($type != 'bof_session') {
+        $query->fieldCondition('field_accepted', 'value', 'accepted', '=');
+      }
+
+  // Fetch Extra fields with our query
+  $query->addExtraField('', 'title', 'title', 'node');
+
+  $query->addTag('session_no_time_slot');
+  $query->propertyOrderBy('title');
+  $results = $query->execute();
+
+  return (!isset($results['node']) ? NULL : $results['node']);
+}
+
+function cod_schedule_query_session_no_time_slot_alter(QueryAlterableInterface $query) {
+    $query->leftJoin('field_data_field_session_timeslot', 't', 'node.nid = t.entity_id');
+    $query->isNull('t.field_session_timeslot_target_id');
+  }
+
+function cod_schedule_format_unscheduled_sessions($sessions) {
+    $session_items = array();
+    // Build the UL element of sessions.
+    if($sessions) {
+        foreach($sessions as $nid => $session) {
+            $session_items[] = array(
+                'data' => l($session->extraFields->title, 'node/' . $session->nid),
+                'data-nid' => $session->nid,
+              );
+          }
+  }
+  return $session_items;
+}
+
+
+/**
  * Get timeslots by event, time and room.
  */
 function cod_schedule_timeslot_load_by_info($time, $room) {
@@ -701,8 +812,8 @@ function cod_schedule_cod_event_ajax_elements($form, $nid, $bundle) {
  * Set the timeslot widget with proper view arguments based on page context.
  * @return string
  */
-function _cod_schedule_timeslot_view_widget($form, $event_nid, $bundle) {
-  $args = array($event_nid, $bundle);
+function _cod_schedule_timeslot_view_widget($form, $event, $bundle) {
+  $args = array($event->nid, $bundle);
   $view = views_get_view('cod_schedule_timeslot_widget');
   $display_name = 'entityreference_1';
 
@@ -737,6 +848,33 @@ function _cod_schedule_timeslot_view_widget($form, $event_nid, $bundle) {
   }
 
   return $form;
+}
+
+/**
+ * Alter the flag link for json views
+ */
+function cod_schedule_views_pre_render(&$view) {
+  if ($view->name == 'cod_schedule_content' && $view->current_display == 'json') {
+  }
+  switch ($view->name) {
+    case 'cod_schedule_content':
+      //  override the global custom text field value
+     // $view->field['nothing']->options['alter']['text'] = 'My custom text';
+    break;
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter
+ * Needed because some modules self-destruct the custom theme system.
+ */
+function cod_schedule_module_implements_alter(&$implementations, $hook) {
+  /* Make sure our schedule custom theme actually fires. */
+  if ($hook == 'custom_theme') {
+    $group = $implementations['cod_schedule'];
+    unset($implementations['cod_schedule']);
+    $implementations['cod_schedule'] = $group;
+  }
 }
 
 function cod_schedule_custom_theme() {

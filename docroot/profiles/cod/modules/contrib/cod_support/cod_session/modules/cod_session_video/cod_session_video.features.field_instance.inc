@@ -10,7 +10,7 @@
 function cod_session_video_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-session-field_session_video'
+  // Exported field_instance: 'node-session-field_session_video'.
   $field_instances['node-session-field_session_video'] = array(
     'bundle' => 'session',
     'deleted' => 0,

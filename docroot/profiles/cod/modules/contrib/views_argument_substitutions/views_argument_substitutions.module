@@ -138,6 +138,12 @@ function views_argument_substitutions_views_query_substitutions($obj) {
     foreach ($view->exposed_raw_input as $field_name => $input) {
       $value = NULL;
       if (!empty($input)) {
+        if (is_array($input) && isset($input['value'])) {
+          $input = db_like($input['value']);
+        }
+        else {
+          $input = '';
+        }
         $value = db_like($input);
       }
       $field_name = db_like($field_name);

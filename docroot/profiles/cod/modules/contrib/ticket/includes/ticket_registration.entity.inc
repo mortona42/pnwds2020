@@ -41,10 +41,18 @@ class TicketRegistration extends Entity {
   }
 
   /**
-   * A helper function to get a registration's host entity.
+   * A helper function to get a registration's host entity. Depricated. Use the
+   * host_entity function below instead.
    */
   public function host() {
     return entity_load_single($this->ticket_type()->entity_type, $this->ticket_type()->entity_id);
+  }
+
+  /**
+   * A helper function to get a registration's host entity.
+   */
+  public function host_entity() {
+    return entity_metadata_wrapper($this->ticket_type()->entity_type, $this->ticket_type()->entity_id);
   }
 
   /**

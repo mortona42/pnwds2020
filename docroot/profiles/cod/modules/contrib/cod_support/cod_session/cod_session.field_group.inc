@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function cod_session_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function cod_session_field_group_info() {
       ),
     ),
   );
-  $export['group_audience|node|session|default'] = $field_group;
+  $field_groups['group_audience|node|session|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -54,16 +54,22 @@ function cod_session_field_group_info() {
       0 => 'og_vocabulary',
       1 => 'field_experience',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'classes' => ' group-audience field-group-fieldset',
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
-  $export['group_audience|node|session|form'] = $field_group;
+  $field_groups['group_audience|node|session|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -90,7 +96,7 @@ function cod_session_field_group_info() {
       ),
     ),
   );
-  $export['group_event_sessions|node|event|form'] = $field_group;
+  $field_groups['group_event_sessions|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -116,7 +122,7 @@ function cod_session_field_group_info() {
       ),
     ),
   );
-  $export['group_schedule_info|node|schedule_item|default'] = $field_group;
+  $field_groups['group_schedule_info|node|schedule_item|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -142,7 +148,7 @@ function cod_session_field_group_info() {
       ),
     ),
   );
-  $export['group_schedule_info|node|session|default'] = $field_group;
+  $field_groups['group_schedule_info|node|session|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -171,7 +177,7 @@ function cod_session_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $export['group_schedule|node|schedule_item|form'] = $field_group;
+  $field_groups['group_schedule|node|schedule_item|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -198,7 +204,14 @@ function cod_session_field_group_info() {
       ),
     ),
   );
-  $export['group_schedule|node|session|form'] = $field_group;
+  $field_groups['group_schedule|node|session|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Audience');
+  t('Schedule Info');
+  t('Schedule info');
+  t('Sessions Details');
+
+  return $field_groups;
 }

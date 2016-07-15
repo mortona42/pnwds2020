@@ -18,13 +18,20 @@ function cod_wysiwyg_filter_default_formats() {
     'status' => 1,
     'weight' => -9,
     'filters' => array(
-      'filter_html' => array(
-        'weight' => 1,
+      'filter_url' => array(
+        'weight' => -48,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h4> <h5> <h6>  <p> <br> <img> <strike>',
+          'filter_url_length' => 128,
+        ),
+      ),
+      'filter_html' => array(
+        'weight' => -47,
+        'status' => 1,
+        'settings' => array(
+          'allowed_html' => '<h4> <h5> <h6> <em> <strong> <pre> <code> <del> <img> <blockquote> <q> <cite> <sup> <sub> <s> <p> <br>  <ul> <ol> <li> <dl> <dt> <dd> <a> <address> <b> <u> <i> <table> <tr> <td> <th> <tbody> <thead> <tfoot> <colgroup> <caption> <hr> <div> <!-->',
           'filter_html_help' => 1,
-          'filter_html_nofollow' => 0,
+          'filter_html_nofollow' => 1,
         ),
       ),
       'filter_htmlcorrector' => array(
@@ -42,7 +49,15 @@ function cod_wysiwyg_filter_default_formats() {
     'cache' => 1,
     'status' => 1,
     'weight' => -10,
-    'filters' => array(),
+    'filters' => array(
+      'filter_url' => array(
+        'weight' => 10,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 128,
+        ),
+      ),
+    ),
   );
 
   return $formats;

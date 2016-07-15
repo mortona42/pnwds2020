@@ -7,8 +7,16 @@ dependencies[] = ckeditor
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = strongarm
-datestamp = 1358798210
-features[ckeditor_profile][] = Advanced
+features[ckeditor_profile][] = CKEditor Global Profile
+features[ckeditor_profile][] = Filtered
+features[ckeditor_profile][] = Full
 features[features_api][] = api:2
 features[filter][] = filtered_html
 features[filter][] = full_html
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+

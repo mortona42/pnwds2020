@@ -10,7 +10,7 @@
 function cod_sponsors_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_body'
+  // Exported field_instance: 'node-sponsor-field_sponsor_body'.
   $field_instances['node-sponsor-field_sponsor_body'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -58,7 +58,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_logo'
+  // Exported field_instance: 'node-sponsor-field_sponsor_logo'.
   $field_instances['node-sponsor-field_sponsor_logo'] = array(
     'bundle' => 'sponsor',
     'deleted' => 0,
@@ -114,7 +114,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_module_level'
+  // Exported field_instance: 'node-sponsor-field_sponsor_module_level'.
   $field_instances['node-sponsor-field_sponsor_module_level'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -160,7 +160,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_related_attendees'
+  // Exported field_instance: 'node-sponsor-field_sponsor_related_attendees'.
   $field_instances['node-sponsor-field_sponsor_related_attendees'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -209,7 +209,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_sponsorship_level'
+  // Exported field_instance: 'node-sponsor-field_sponsor_sponsorship_level'.
   $field_instances['node-sponsor-field_sponsor_sponsorship_level'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -252,7 +252,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-field_sponsor_url'
+  // Exported field_instance: 'node-sponsor-field_sponsor_url'.
   $field_instances['node-sponsor-field_sponsor_url'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -314,7 +314,7 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsor-og_group_ref'
+  // Exported field_instance: 'node-sponsor-og_group_ref'.
   $field_instances['node-sponsor-og_group_ref'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
@@ -350,24 +350,11 @@ function cod_sponsors_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'behaviors' => array(
-        'og_widget' => array(
-          'access_override' => 0,
-          'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
-          ),
-          'default' => array(
-            'widget_type' => 'options_select',
-          ),
-          'status' => TRUE,
-        ),
         'prepopulate' => array(
           'action' => 'hide',
           'action_on_edit' => 0,
           'fallback' => 'none',
-          'providers' => array(
-            'og_context' => 1,
-            'url' => 1,
-          ),
+          'og_context' => 0,
           'skip_perm' => 0,
           'status' => 1,
         ),
@@ -376,9 +363,9 @@ function cod_sponsors_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'og',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'og_complex',
+      'type' => 'options_select',
       'weight' => 6,
     ),
   );

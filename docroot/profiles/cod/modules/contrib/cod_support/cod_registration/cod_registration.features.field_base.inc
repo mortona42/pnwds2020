@@ -10,7 +10,7 @@
 function cod_registration_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_event_tickets'
+  // Exported field_base: 'field_event_tickets'.
   $field_bases['field_event_tickets'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -19,14 +19,6 @@ function cod_registration_field_default_field_bases() {
     'field_name' => 'field_event_tickets',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'ttid' => array(
-        'columns' => array(
-          'value' => 'ttid',
-        ),
-        'table' => 'ticket_type',
-      ),
     ),
     'indexes' => array(
       'value' => array(

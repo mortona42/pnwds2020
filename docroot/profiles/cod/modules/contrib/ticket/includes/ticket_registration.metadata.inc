@@ -59,10 +59,20 @@ class TicketRegistrationMetadataController extends EntityDefaultMetadataControll
       'getter callback' => 'ticket_registration_get_properties',
     );
 
+    $properties['host_entity'] = array(
+      'label' => t('Host entity'),
+      'type' => 'entity',
+      'description' => t('The entity containing the registration_type field.'),
+      'getter callback' => 'ticket_registration_get_properties',
+    );
+
+    /*
+     * This field is Depricated in favor of the 'host_entity' property.
+     */
     $properties['entity'] = array(
       'label' => t('Host entity'),
       'type' => 'entity',
-      'description' => t('The loaded host entity.'),
+      'description' => t('The loaded host entity. (Depricated: use the "host_entity" property instead.'),
       'getter callback' => 'ticket_registration_get_properties',
     );
 
