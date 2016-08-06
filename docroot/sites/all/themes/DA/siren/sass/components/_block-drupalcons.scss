@@ -1,0 +1,34 @@
+.l-region--errata {
+  h3 {
+    margin-bottom: 0;
+  }
+  .block {
+    max-width: 55em;
+    margin: auto;
+    img {
+      float: left;
+      margin-right: 1.5em;
+    }
+  }
+  .event {
+    width: 100%;
+    clear: both;
+    margin: auto;
+    padding: 0.25em;
+    @include breakpoint($medium) {
+      padding: 2em;
+      width: 70%;
+    }
+    @include breakpoint(920px) {
+      clear: none;
+      float: left;
+      width: 44%;
+      margin: 0;
+      margin-right: 6%;
+      padding: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

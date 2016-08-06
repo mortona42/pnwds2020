@@ -1,0 +1,77 @@
+.page-node-13 {
+  #tracks {
+    padding-left: 0;
+    text-align: center;
+    li {
+      display: inline-table;
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0 1% 1% 0;
+      @include breakpoint(0 $mid-small) {
+        width: 40%;
+        &:nth-child(2n+1) {
+          clear: left;
+        }
+      }
+      @include breakpoint($mid-small $medium) {
+        width: 20%;
+        &:nth-child(3n+1) {
+          clear: left;
+        }
+      }
+      @include breakpoint($medium) {
+        width: 15%;
+        &:nth-child(6n+1) {
+          clear: left;
+        }
+      }
+      a {
+        color: $dk-blue;
+        display: block;
+        font-size: 1em;
+        line-height: 1;
+        padding: 1em;
+        text-align: center;
+        @include border-radius(3.5em);
+        &:hover, &.clicked {
+          color: $dk-green;
+          text-decoration: none;
+        }
+        &:before {
+          content: "";
+          display: block;
+          background-color: $dk-blue;
+          height: 5em;
+          width: 5em;
+          margin: 1em auto;
+          @include border-radius(5em);
+        }
+        @include breakpoint($mid-small) {
+          background-position: top 20% center;
+          padding: 0 0.25em;
+        }
+      }
+    }
+  }
+  .track-content {
+    div {
+      background-color: lighten($lt-gray, 3%);
+      border: 2px solid $gray;
+      @include border-radius(4px);
+      margin-bottom: 4.5em;
+      padding: 2em;
+      &:first-child {
+        margin-top: 5em;
+      }
+      &:before {
+        content: "";
+        display: block;
+        background-color: $dk-blue !important;
+        height: 5em;
+        width: 5em;
+        margin: -4.5em auto 0 auto;
+        @include border-radius(5em);
+      }
+    }
+  }
+}

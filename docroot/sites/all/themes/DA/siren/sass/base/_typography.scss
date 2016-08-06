@@ -1,0 +1,33 @@
+@import url(//fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,400italic);
+
+body {
+  font-family: $font-body;
+  font-size: 18px;
+  line-height: 1.556;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.012;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.051;
+}
+
+h3 {
+  font-size: 1.65em;
+  line-height: 1.0625;
+}
+
+h4, h5, h6 {
+  font-size: 1.4em;
+  line-height: 1.037;
+  text-transform: uppercase;
+}

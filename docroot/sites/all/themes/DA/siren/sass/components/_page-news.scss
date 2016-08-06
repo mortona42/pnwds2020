@@ -1,0 +1,24 @@
+.page-node-news, .page-news {
+  .l-content {
+    margin: 1em auto;
+    width: 94%;
+    @include breakpoint($large) {
+      max-width: $large;
+      margin: 0 auto;
+    }
+  }
+  .page-title {
+    padding: 0.72em;
+  }
+  .view-cod-news {
+    padding: 2em;
+    .links {
+      width: 100%;
+    }
+  }
+  .feed-icon {
+    padding-bottom: 1em;
+    display: block;
+    float: left;
+    margin-left: 2em;}
+}

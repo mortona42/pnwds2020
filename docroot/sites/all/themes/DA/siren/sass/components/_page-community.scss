@@ -1,0 +1,101 @@
+.page-node-community {
+  .page-title {
+    display: none;
+  }
+  .l-main .preface {
+    padding: 4.25em 0px 4em;
+    text-align: center;
+    z-index: 0;
+    a {
+      color: $gray;
+    }
+    p {
+      margin: 1em auto;
+      max-width: 60%;
+    }
+    h1 {
+      margin-bottom: 0;
+      padding: 0;
+    }
+    .panel-pane {
+      padding: 0;
+    }
+    form {
+      padding: 2em 0;
+      .views-exposed-widget {
+        width: 100%;
+        @include breakpoint($mid-small) {
+          width: 32%;
+          &:nth-child(4n+4) {
+            clear: left;
+          }
+        }
+        label, .description {
+          text-align: left;
+        }
+        input, select {
+          width: 100%;
+        }
+        #edit-submit-drupalcon-attendees {
+          &:hover, &:focus {
+          }
+          &.active {
+          }
+        }
+      }
+    }
+  }
+  .l-main .container.content {
+    margin-top: 2em;
+  }
+  .view-drupalcon-attendees {
+    .views-row {
+      background-color: $white;
+      border: 1px solid $dk-gray;
+      float: left;
+      margin: 2% 0 0 2%;
+      min-height: 16.5em;
+      padding: 1em;
+      text-align: center;
+      word-wrap: break-word;
+      width: 48%;
+      @include breakpoint($mid-small) {
+        width: 31%;
+      }
+      @include breakpoint($medium) {
+        width: 23%;
+      }
+      @include breakpoint(950px) {
+        width: 18%;
+        &:nth-child(5n+1) {
+          clear: left;
+          margin-left: 0;
+        }
+      }
+      &:hover {
+        background-color: lighten($lt-gray,10%);
+      }
+      .views-field-picture img {
+        border: 1px solid $gray;
+      }
+      .views-field-name {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+      }
+      .views-field-field-profile-first, .views-field-field-profile-last {
+        font-weight: bold;
+      }
+      .views-field-field-profile-job-title {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+      }
+      .views-field-field-profile-org {
+        font-size: 0.9em;
+        font-style: italic;
+      }
+    }
+    .pager {
+      padding-top: 2em;
+    }
+  }
+}

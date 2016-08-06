@@ -1,0 +1,1362 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans);
+/* line 1, ../sass/abstractions/_editorial.scss */
+.button-link, .taurus .triptych .button-link, .orion .triptych .button-link, .node-type-event .orion a.button-link, .node-type-event .taurus a.button-link, .node-type-event .orion .left-header .more-link a, .node-type-event .taurus .left-header .more-link a, .node-type-event .orion .right-header a, .node-type-event .taurus .right-header a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .view-community-keynotes .flag-session-vote a, .page-node-registration .content #edit-submit, .page-node-sessions-proposed .view-pager a, .page-node-sessions-accepted .view-pager a {
+  background-color: transparent;
+  border: 3px solid #0b73d4;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: #0b73d4;
+  display: inline-block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  padding: 0.4em 1em;
+  text-transform: uppercase; }
+  /* line 11, ../sass/abstractions/_editorial.scss */
+  .button-link:hover, .taurus .triptych .button-link:hover, .orion .triptych .button-link:hover, .node-type-event .orion a.button-link:hover, .node-type-event .taurus a.button-link:hover, .node-type-event .orion .left-header .more-link a:hover, .node-type-event .taurus .left-header .more-link a:hover, .node-type-event .orion .right-header a:hover, .node-type-event .taurus .right-header a:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .view-community-keynotes .flag-session-vote a:hover, .page-node-registration .content #edit-submit:hover, .page-node-sessions-proposed .view-pager a:hover, .page-node-sessions-accepted .view-pager a:hover, .button-link:focus, .taurus .triptych .button-link:focus, .orion .triptych .button-link:focus, .node-type-event .orion a.button-link:focus, .node-type-event .taurus a.button-link:focus, .node-type-event .orion .left-header .more-link a:focus, .node-type-event .taurus .left-header .more-link a:focus, .node-type-event .orion .right-header a:focus, .node-type-event .taurus .right-header a:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus, .view-community-keynotes .flag-session-vote a:focus, .page-node-registration .content #edit-submit:focus, .page-node-sessions-proposed .view-pager a:focus, .page-node-sessions-accepted .view-pager a:focus {
+    background-color: #0b73d4;
+    color: #ffffff;
+    text-decoration: none; }
+  /* line 16, ../sass/abstractions/_editorial.scss */
+  .button-link.active, .taurus .triptych .active.button-link, .orion .triptych .active.button-link, .node-type-event .orion a.active.button-link, .node-type-event .taurus a.active.button-link, .node-type-event .orion .left-header .more-link a.active, .node-type-event .taurus .left-header .more-link a.active, .node-type-event .orion .right-header a.active, .node-type-event .taurus .right-header a.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .view-community-keynotes .flag-session-vote a.active, .page-node-registration .content .active#edit-submit, .page-node-sessions-proposed .view-pager a.active, .page-node-sessions-accepted .view-pager a.active {
+    color: #ffffff;
+    background-color: #3b44a1;
+    border-color: #3b44a1; }
+
+/* line 1, ../sass/abstractions/_placeholders.scss */
+.l-main .l-content, .l-main .has-no-sidebars .l-content, .l-main .administrative {
+  margin: 0 auto; }
+
+/* line 1, ../sass/base/_base.scss */
+body {
+  background-color: #ffffff; }
+
+/* line 5, ../sass/base/_base.scss */
+.l-branding {
+  background: url("../images/bg-header-watercolor-small-short.jpg?2") #0b73d4 center bottom no-repeat;
+  background-size: cover;
+  height: 300px;
+  color: #ffffff;
+  text-align: center; }
+  /* line 22, ../sass/base/_base.scss */
+  .l-branding .site-branding__logo {
+    height: 90%;
+    width: 100%;
+    display: block;
+    text-align: center; }
+    /* line 27, ../sass/base/_base.scss */
+    .l-branding .site-branding__logo img {
+      height: 0;
+      width: 0; }
+  /* line 32, ../sass/base/_base.scss */
+  .l-branding .l-region--branding {
+    margin-top: -70px;
+    z-index: 8; }
+    /* line 38, ../sass/base/_base.scss */
+    .l-branding .l-region--branding p {
+      padding: 0;
+      margin: 0; }
+    /* line 42, ../sass/base/_base.scss */
+    .l-branding .l-region--branding a {
+      background: url(../images/bg-branding-register.png) no-repeat top center/contain;
+      display: block;
+      height: 70px;
+      text-indent: -9999px; }
+      /* line 47, ../sass/base/_base.scss */
+      .l-branding .l-region--branding a:hover, .l-branding .l-region--branding a:focus {
+        background-image: url(../images/bg-branding-register-hover.png); }
+
+/* line 54, ../sass/base/_base.scss */
+.l-page .l-highlighted-wrapper {
+  background-color: #ffffff;
+  height: auto;
+  margin-top: -4em;
+  padding: 0; }
+  /* line 59, ../sass/base/_base.scss */
+  .l-page .l-highlighted-wrapper .l-region--highlighted {
+    padding: 4em 0 0 0; }
+
+/* line 67, ../sass/base/_base.scss */
+#block-cod-sponsors-diamond {
+  background-color: transparent;
+  margin: 0 auto;
+  width: 400px;
+  position: relative;
+  z-index: 12; }
+  /* line 76, ../sass/base/_base.scss */
+  #block-cod-sponsors-diamond h2 {
+    color: #3b44a1;
+    border: none;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.8em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    letter-spacing: 0.14em; }
+  /* line 88, ../sass/base/_base.scss */
+  #block-cod-sponsors-diamond .view-content {
+    list-style-image: none;
+    list-style-type: none;
+    overflow: auto; }
+  /* line 93, ../sass/base/_base.scss */
+  #block-cod-sponsors-diamond ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  /* line 98, ../sass/base/_base.scss */
+  #block-cod-sponsors-diamond .views-row {
+    margin-left: 0;
+    min-height: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0; }
+
+/* line 113, ../sass/base/_base.scss */
+.l-main-wrapper .l-constrained {
+  background-color: transparent; }
+
+/* line 118, ../sass/base/_base.scss */
+.l-main .l-content, .l-main .has-no-sidebars .l-content {
+  padding: 2px; }
+  /* line 121, ../sass/base/_base.scss */
+  .l-main .l-content .title-region, .l-main .has-no-sidebars .l-content .title-region {
+    background-color: white;
+    padding-top: 2em; }
+  /* line 125, ../sass/base/_base.scss */
+  .l-main .l-content .messages, .l-main .has-no-sidebars .l-content .messages {
+    max-width: none;
+    width: 100%; }
+  /* line 129, ../sass/base/_base.scss */
+  .l-main .l-content .node, .l-main .l-content .panel-layout, .l-main .has-no-sidebars .l-content .node, .l-main .has-no-sidebars .l-content .panel-layout {
+    background-color: white; }
+  /* line 133, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .pane-node-title, .l-main .has-no-sidebars .l-content .hydra .pane-node-title {
+    padding: 2em 0 0 0; }
+  /* line 136, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .pane-node-body, .l-main .has-no-sidebars .l-content .hydra .pane-node-body {
+    padding-top: 0; }
+  /* line 139, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .top-right-content, .l-main .has-no-sidebars .l-content .hydra .top-right-content {
+    padding-top: 2em; }
+  /* line 143, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .top-right-content a, .l-main .l-content .hydra .bottom-right-content a, .l-main .has-no-sidebars .l-content .hydra .top-right-content a, .l-main .has-no-sidebars .l-content .hydra .bottom-right-content a {
+    color: #0b73d4; }
+  /* line 146, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .top-right-content .panel-pane, .l-main .l-content .hydra .bottom-right-content .panel-pane, .l-main .has-no-sidebars .l-content .hydra .top-right-content .panel-pane, .l-main .has-no-sidebars .l-content .hydra .bottom-right-content .panel-pane {
+    border-color: #f6f6f6; }
+  /* line 149, ../sass/base/_base.scss */
+  .l-main .l-content .hydra .top-right-content .pane-title, .l-main .l-content .hydra .bottom-right-content .pane-title, .l-main .has-no-sidebars .l-content .hydra .top-right-content .pane-title, .l-main .has-no-sidebars .l-content .hydra .bottom-right-content .pane-title {
+    background-color: transparent;
+    color: #0b73d4;
+    padding: 0; }
+/* line 158, ../sass/base/_base.scss */
+.l-main .administrative {
+  position: relative;
+  z-index: 10; }
+  /* line 162, ../sass/base/_base.scss */
+  .l-main .administrative li a {
+    color: #3b44a1;
+    background-color: #ffffff;
+    border: none; }
+    /* line 166, ../sass/base/_base.scss */
+    .l-main .administrative li a:hover, .l-main .administrative li a:focus {
+      background-color: #3b44a1;
+      color: #ffffff; }
+    /* line 170, ../sass/base/_base.scss */
+    .l-main .administrative li a.active {
+      border: none; }
+
+/* line 178, ../sass/base/_base.scss */
+.taurus .container, .orion .container {
+  z-index: 5; }
+  /* line 180, ../sass/base/_base.scss */
+  .taurus .container .pane-title, .orion .container .pane-title {
+    color: #0b73d4;
+    text-align: center; }
+/* line 185, ../sass/base/_base.scss */
+.taurus .header, .orion .header {
+  background-color: transparent;
+  color: #4e4e4e;
+  padding: 2em 0; }
+  /* line 189, ../sass/base/_base.scss */
+  .taurus .header .left-header, .orion .header .left-header {
+    padding: 0; }
+    /* line 194, ../sass/base/_base.scss */
+    .taurus .header .left-header .pane-title, .orion .header .left-header .pane-title {
+      color: #0b73d4;
+      text-align: left;
+      margin-top: 0px; }
+    /* line 200, ../sass/base/_base.scss */
+    .taurus .header .left-header .node__title a, .orion .header .left-header .node__title a {
+      color: #0b73d4; }
+  /* line 205, ../sass/base/_base.scss */
+  .taurus .header .right-header, .orion .header .right-header {
+    color: #4e4e4e;
+    padding: 0; }
+    /* line 208, ../sass/base/_base.scss */
+    .taurus .header .right-header .pane-title, .orion .header .right-header .pane-title {
+      color: #3b44a1;
+      margin-top: 0; }
+/* line 214, ../sass/base/_base.scss */
+.taurus .triptych, .orion .triptych {
+  color: #4e4e4e;
+  text-align: center; }
+  /* line 217, ../sass/base/_base.scss */
+  .taurus .triptych h2, .orion .triptych h2 {
+    font-size: 1.6em; }
+  /* line 220, ../sass/base/_base.scss */
+  .taurus .triptych .left-triptych, .orion .triptych .left-triptych {
+    padding-right: 1em; }
+  /* line 223, ../sass/base/_base.scss */
+  .taurus .triptych .middle-triptych, .orion .triptych .middle-triptych {
+    padding: 0 1em; }
+  /* line 226, ../sass/base/_base.scss */
+  .taurus .triptych .right-triptych, .orion .triptych .right-triptych {
+    padding-left: 1em; }
+/* line 233, ../sass/base/_base.scss */
+.taurus .preface, .orion .preface {
+  background-color: #ffffff; }
+/* line 236, ../sass/base/_base.scss */
+.taurus .content, .orion .content {
+  background-color: #ebf5fe;
+  color: #4e4e4e; }
+/* line 247, ../sass/base/_base.scss */
+.taurus .content-inner .left-content-inner, .orion .content-inner .left-content-inner {
+  padding-right: 4em; }
+/* line 252, ../sass/base/_base.scss */
+.taurus .footer .panel-pane, .orion .footer .panel-pane {
+  overflow: auto; }
+
+/* line 258, ../sass/base/_base.scss */
+.l-errata-wrapper {
+  position: relative; }
+  /* line 260, ../sass/base/_base.scss */
+  .l-errata-wrapper h2 {
+    text-align: center; }
+  /* line 263, ../sass/base/_base.scss */
+  .l-errata-wrapper .l-region--errata {
+    overflow: auto; }
+
+/* line 268, ../sass/base/_base.scss */
+.l-footer-wrapper {
+  background-color: #3b44a1;
+  color: #ffffff; }
+  /* line 271, ../sass/base/_base.scss */
+  .l-footer-wrapper a {
+    color: #ffffff; }
+    /* line 273, ../sass/base/_base.scss */
+    .l-footer-wrapper a:hover, .l-footer-wrapper a.active {
+      color: #89c7f8;
+      text-decoration: none; }
+
+/* line 281, ../sass/base/_base.scss */
+.l-region--footer .block > ul > li > a {
+  color: #ffffff;
+  font-family: "Montserrat", Helvetica, Arial sans-serif; }
+  /* line 284, ../sass/base/_base.scss */
+  .l-region--footer .block > ul > li > a:link, .l-region--footer .block > ul > li > a:visited {
+    color: #ffffff; }
+  /* line 287, ../sass/base/_base.scss */
+  .l-region--footer .block > ul > li > a:hover, .l-region--footer .block > ul > li > a.active {
+    color: #89c7f8;
+    text-decoration: none; }
+/* line 292, ../sass/base/_base.scss */
+.l-region--footer .block--block {
+  bottom: 2px;
+  margin: 0px; }
+
+/* line 3, ../sass/base/_typography.scss */
+body {
+  color: #4e4e4e;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.556; }
+  /* line 8, ../sass/base/_typography.scss */
+  body a {
+    color: #0b73d4; }
+
+/* line 13, ../sass/base/_typography.scss */
+h1, h2, h3, .page-node-sponsors .preface .subheader, h4, h5, h6 {
+  color: #3b44a1;
+  font-family: "Montserrat", Helvetica, Arial sans-serif;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+/* line 20, ../sass/base/_typography.scss */
+h1 {
+  font-size: 2.5em;
+  line-height: 1.012; }
+
+/* line 25, ../sass/base/_typography.scss */
+h2 {
+  font-size: 2em;
+  line-height: 1.051; }
+
+/* line 30, ../sass/base/_typography.scss */
+h3, .page-node-sponsors .preface .subheader {
+  font-size: 1.65em;
+  line-height: 1.0625; }
+
+/* line 35, ../sass/base/_typography.scss */
+h4, h5, h6 {
+  font-size: 1.4em;
+  line-height: 1.037; }
+
+/* line 1, ../sass/components/_footer.scss */
+.l-page .l-footer-wrapper {
+  background: url(../images/bg-footer.jpg) #0b73d4 no-repeat center top/auto 100%;
+  padding-top: 200px;
+  min-height: 600px; }
+
+/* line 15, ../sass/components/_footer.scss */
+.l-region--footer .block > ul > li.last li a[href*="facebook"] {
+  background: url("../images/social/facebook.png") transparent center center no-repeat; }
+  /* line 17, ../sass/components/_footer.scss */
+  .l-region--footer .block > ul > li.last li a[href*="facebook"]:hover {
+    opacity: 0.7; }
+/* line 21, ../sass/components/_footer.scss */
+.l-region--footer .block > ul > li.last li a[href*="flickr"] {
+  background: url("../images/social/flickr.png") transparent center center no-repeat; }
+  /* line 23, ../sass/components/_footer.scss */
+  .l-region--footer .block > ul > li.last li a[href*="flickr"]:hover {
+    opacity: 0.7; }
+/* line 27, ../sass/components/_footer.scss */
+.l-region--footer .block > ul > li.last li a[href*="twitter"] {
+  background: url("../images/social/twitter.png") transparent center center no-repeat; }
+  /* line 29, ../sass/components/_footer.scss */
+  .l-region--footer .block > ul > li.last li a[href*="twitter"]:hover {
+    opacity: 0.7; }
+/* line 33, ../sass/components/_footer.scss */
+.l-region--footer .block > ul > li.last li a[href*="subscribe"] {
+  background: url("../images/social/newsletter.png") transparent center center no-repeat; }
+  /* line 35, ../sass/components/_footer.scss */
+  .l-region--footer .block > ul > li.last li a[href*="subscribe"]:hover {
+    opacity: 0.7; }
+/* line 39, ../sass/components/_footer.scss */
+.l-region--footer .block > ul > li.last li a[href*="rss"] {
+  background: url("../images/social/rss.png") transparent center center no-repeat; }
+  /* line 41, ../sass/components/_footer.scss */
+  .l-region--footer .block > ul > li.last li a[href*="rss"]:hover {
+    opacity: 0.7; }
+
+/* line 2, ../sass/components/_front.scss */
+.node-type-event .l-page .l-highlighted-wrapper {
+  height: auto;
+  margin-top: -5em; }
+/* line 6, ../sass/components/_front.scss */
+.node-type-event .l-main {
+  background: none;
+  padding: 0; }
+  /* line 9, ../sass/components/_front.scss */
+  .node-type-event .l-main .l-content {
+    background: none;
+    background-color: transparent;
+    border: 0 none;
+    border-image: none;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    width: 100%; }
+    /* line 18, ../sass/components/_front.scss */
+    .node-type-event .l-main .l-content .node, .node-type-event .l-main .l-content .panel-layout {
+      background-color: transparent; }
+/* line 23, ../sass/components/_front.scss */
+.node-type-event .l-header-inner {
+  background-color: transparent; }
+/* line 45, ../sass/components/_front.scss */
+.node-type-event .orion a, .node-type-event .taurus a {
+  color: #0b73d4; }
+/* line 52, ../sass/components/_front.scss */
+.node-type-event .orion .left-header .more-link, .node-type-event .taurus .left-header .more-link {
+  text-align: left; }
+/* line 59, ../sass/components/_front.scss */
+.node-type-event .orion .right-header, .node-type-event .taurus .right-header {
+  text-align: center; }
+/* line 65, ../sass/components/_front.scss */
+.node-type-event .orion .footer, .node-type-event .taurus .footer {
+  text-align: center;
+  text-align: center; }
+  /* line 31, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer h1, .node-type-event .orion .footer h2, .node-type-event .taurus .footer h1, .node-type-event .taurus .footer h2 {
+    border-top: 4px solid #89c7f8;
+    display: inline-block;
+    padding-top: 75px;
+    width: 100%; }
+  /* line 68, ../sass/components/_front.scss */
+  .node-type-event .orion .footer .button-link, .node-type-event .orion .footer .left-header .more-link a, .node-type-event .orion .left-header .more-link .footer a, .node-type-event .taurus .left-header .more-link .orion .footer a, .node-type-event .orion .footer .right-header a, .node-type-event .orion .right-header .footer a, .node-type-event .taurus .right-header .orion .footer a, .node-type-event .orion .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .orion .footer a, .node-type-event .orion .footer .view-community-keynotes .flag-session-vote a, .view-community-keynotes .flag-session-vote .node-type-event .orion .footer a, .node-type-event .orion .footer .page-node-registration .content #edit-submit, .page-node-registration .content .node-type-event .orion .footer #edit-submit, .node-type-event .orion .footer .page-node-sessions-proposed .view-pager a, .page-node-sessions-proposed .view-pager .node-type-event .orion .footer a, .node-type-event .orion .footer .page-node-sessions-accepted .view-pager a, .page-node-sessions-accepted .view-pager .node-type-event .orion .footer a, .node-type-event .taurus .footer .button-link, .node-type-event .orion .left-header .more-link .taurus .footer a, .node-type-event .taurus .footer .left-header .more-link a, .node-type-event .taurus .left-header .more-link .footer a, .node-type-event .orion .right-header .taurus .footer a, .node-type-event .taurus .footer .right-header a, .node-type-event .taurus .right-header .footer a, .node-type-event .taurus .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .taurus .footer a, .node-type-event .taurus .footer .view-community-keynotes .flag-session-vote a, .view-community-keynotes .flag-session-vote .node-type-event .taurus .footer a, .node-type-event .taurus .footer .page-node-registration .content #edit-submit, .page-node-registration .content .node-type-event .taurus .footer #edit-submit, .node-type-event .taurus .footer .page-node-sessions-proposed .view-pager a, .page-node-sessions-proposed .view-pager .node-type-event .taurus .footer a, .node-type-event .taurus .footer .page-node-sessions-accepted .view-pager a, .page-node-sessions-accepted .view-pager .node-type-event .taurus .footer a {
+    border-color: #0b73d4;
+    color: #0b73d4;
+    font-size: 1em; }
+    /* line 72, ../sass/components/_front.scss */
+    .node-type-event .orion .footer .button-link:hover, .node-type-event .orion .footer .left-header .more-link a:hover, .node-type-event .orion .left-header .more-link .footer a:hover, .node-type-event .taurus .left-header .more-link .orion .footer a:hover, .node-type-event .orion .footer .right-header a:hover, .node-type-event .orion .right-header .footer a:hover, .node-type-event .taurus .right-header .orion .footer a:hover, .node-type-event .orion .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .orion .footer a:hover, .node-type-event .orion .footer .view-community-keynotes .flag-session-vote a:hover, .view-community-keynotes .flag-session-vote .node-type-event .orion .footer a:hover, .node-type-event .orion .footer .page-node-registration .content #edit-submit:hover, .page-node-registration .content .node-type-event .orion .footer #edit-submit:hover, .node-type-event .orion .footer .page-node-sessions-proposed .view-pager a:hover, .page-node-sessions-proposed .view-pager .node-type-event .orion .footer a:hover, .node-type-event .orion .footer .page-node-sessions-accepted .view-pager a:hover, .page-node-sessions-accepted .view-pager .node-type-event .orion .footer a:hover, .node-type-event .orion .footer .button-link:focus, .node-type-event .orion .footer .left-header .more-link a:focus, .node-type-event .orion .left-header .more-link .footer a:focus, .node-type-event .taurus .left-header .more-link .orion .footer a:focus, .node-type-event .orion .footer .right-header a:focus, .node-type-event .orion .right-header .footer a:focus, .node-type-event .taurus .right-header .orion .footer a:focus, .node-type-event .orion .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .orion .footer a:focus, .node-type-event .orion .footer .view-community-keynotes .flag-session-vote a:focus, .view-community-keynotes .flag-session-vote .node-type-event .orion .footer a:focus, .node-type-event .orion .footer .page-node-registration .content #edit-submit:focus, .page-node-registration .content .node-type-event .orion .footer #edit-submit:focus, .node-type-event .orion .footer .page-node-sessions-proposed .view-pager a:focus, .page-node-sessions-proposed .view-pager .node-type-event .orion .footer a:focus, .node-type-event .orion .footer .page-node-sessions-accepted .view-pager a:focus, .page-node-sessions-accepted .view-pager .node-type-event .orion .footer a:focus, .node-type-event .taurus .footer .button-link:hover, .node-type-event .orion .left-header .more-link .taurus .footer a:hover, .node-type-event .taurus .footer .left-header .more-link a:hover, .node-type-event .taurus .left-header .more-link .footer a:hover, .node-type-event .orion .right-header .taurus .footer a:hover, .node-type-event .taurus .footer .right-header a:hover, .node-type-event .taurus .right-header .footer a:hover, .node-type-event .taurus .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .taurus .footer a:hover, .node-type-event .taurus .footer .view-community-keynotes .flag-session-vote a:hover, .view-community-keynotes .flag-session-vote .node-type-event .taurus .footer a:hover, .node-type-event .taurus .footer .page-node-registration .content #edit-submit:hover, .page-node-registration .content .node-type-event .taurus .footer #edit-submit:hover, .node-type-event .taurus .footer .page-node-sessions-proposed .view-pager a:hover, .page-node-sessions-proposed .view-pager .node-type-event .taurus .footer a:hover, .node-type-event .taurus .footer .page-node-sessions-accepted .view-pager a:hover, .page-node-sessions-accepted .view-pager .node-type-event .taurus .footer a:hover, .node-type-event .taurus .footer .button-link:focus, .node-type-event .orion .left-header .more-link .taurus .footer a:focus, .node-type-event .taurus .footer .left-header .more-link a:focus, .node-type-event .taurus .left-header .more-link .footer a:focus, .node-type-event .orion .right-header .taurus .footer a:focus, .node-type-event .taurus .footer .right-header a:focus, .node-type-event .taurus .right-header .footer a:focus, .node-type-event .taurus .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .taurus .footer a:focus, .node-type-event .taurus .footer .view-community-keynotes .flag-session-vote a:focus, .view-community-keynotes .flag-session-vote .node-type-event .taurus .footer a:focus, .node-type-event .taurus .footer .page-node-registration .content #edit-submit:focus, .page-node-registration .content .node-type-event .taurus .footer #edit-submit:focus, .node-type-event .taurus .footer .page-node-sessions-proposed .view-pager a:focus, .page-node-sessions-proposed .view-pager .node-type-event .taurus .footer a:focus, .node-type-event .taurus .footer .page-node-sessions-accepted .view-pager a:focus, .page-node-sessions-accepted .view-pager .node-type-event .taurus .footer a:focus {
+      background-color: #0b73d4;
+      color: #ffffff; }
+    /* line 76, ../sass/components/_front.scss */
+    .node-type-event .orion .footer .button-link.active, .node-type-event .orion .footer .left-header .more-link a.active, .node-type-event .orion .left-header .more-link .footer a.active, .node-type-event .taurus .left-header .more-link .orion .footer a.active, .node-type-event .orion .footer .right-header a.active, .node-type-event .orion .right-header .footer a.active, .node-type-event .taurus .right-header .orion .footer a.active, .node-type-event .orion .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .orion .footer a.active, .node-type-event .orion .footer .view-community-keynotes .flag-session-vote a.active, .view-community-keynotes .flag-session-vote .node-type-event .orion .footer a.active, .node-type-event .orion .footer .page-node-registration .content .active#edit-submit, .page-node-registration .content .node-type-event .orion .footer .active#edit-submit, .node-type-event .orion .footer .page-node-sessions-proposed .view-pager a.active, .page-node-sessions-proposed .view-pager .node-type-event .orion .footer a.active, .node-type-event .orion .footer .page-node-sessions-accepted .view-pager a.active, .page-node-sessions-accepted .view-pager .node-type-event .orion .footer a.active, .node-type-event .taurus .footer .button-link.active, .node-type-event .orion .left-header .more-link .taurus .footer a.active, .node-type-event .taurus .footer .left-header .more-link a.active, .node-type-event .taurus .left-header .more-link .footer a.active, .node-type-event .orion .right-header .taurus .footer a.active, .node-type-event .taurus .footer .right-header a.active, .node-type-event .taurus .right-header .footer a.active, .node-type-event .taurus .footer .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .node-type-event .taurus .footer a.active, .node-type-event .taurus .footer .view-community-keynotes .flag-session-vote a.active, .view-community-keynotes .flag-session-vote .node-type-event .taurus .footer a.active, .node-type-event .taurus .footer .page-node-registration .content .active#edit-submit, .page-node-registration .content .node-type-event .taurus .footer .active#edit-submit, .node-type-event .taurus .footer .page-node-sessions-proposed .view-pager a.active, .page-node-sessions-proposed .view-pager .node-type-event .taurus .footer a.active, .node-type-event .taurus .footer .page-node-sessions-accepted .view-pager a.active, .page-node-sessions-accepted .view-pager .node-type-event .taurus .footer a.active {
+      color: #ffffff;
+      background-color: #0b73d4;
+      border-color: #0b73d4; }
+  /* line 45, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .being-human a, .node-type-event .taurus .footer .being-human a {
+    background: url("../images/tracks/being-human.svg") center center no-repeat; }
+  /* line 50, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .business a, .node-type-event .taurus .footer .business a {
+    background: url("../images/tracks/business.svg") center center no-repeat; }
+  /* line 55, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .drupal-showcase a, .node-type-event .taurus .footer .drupal-showcase a {
+    background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+  /* line 60, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .coding-and-development a, .node-type-event .taurus .footer .coding-and-development a {
+    background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+  /* line 65, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .community-keynote a, .node-type-event .taurus .footer .community-keynote a {
+    background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+  /* line 70, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .content-strategy a, .node-type-event .taurus .footer .content-strategy a {
+    background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+  /* line 75, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .core-conversations a, .node-type-event .taurus .footer .core-conversations a {
+    background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+  /* line 80, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .devops a, .node-type-event .taurus .footer .devops a {
+    background: url("../images/tracks/devops.svg") center center no-repeat; }
+  /* line 85, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .drupal-org a, .node-type-event .orion .footer .drupalorg a, .node-type-event .taurus .footer .drupal-org a, .node-type-event .taurus .footer .drupalorg a {
+    background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+  /* line 90, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .front-end a, .node-type-event .orion .footer .frontend a, .node-type-event .taurus .footer .front-end a, .node-type-event .taurus .footer .frontend a {
+    background: url("../images/tracks/front-end.svg") center center no-repeat; }
+  /* line 95, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .horizons a, .node-type-event .taurus .footer .horizons a {
+    background: url("../images/tracks/horizons.svg") center center no-repeat; }
+  /* line 100, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .php a, .node-type-event .taurus .footer .php a {
+    background: url("../images/tracks/php.svg") center center no-repeat; }
+  /* line 105, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .project-management a, .node-type-event .taurus .footer .project-management a {
+    background: url("../images/tracks/project-management.svg") center center no-repeat; }
+  /* line 110, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .performance-and-scaling a, .node-type-event .taurus .footer .performance-and-scaling a {
+    background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+  /* line 115, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .site-building a, .node-type-event .taurus .footer .site-building a {
+    background: url("../images/tracks/site-building.svg") center center no-repeat; }
+  /* line 120, ../sass/abstractions/_mixins.scss */
+  .node-type-event .orion .footer .symfony a, .node-type-event .taurus .footer .symfony a {
+    background: url("../images/tracks/symfony.svg") center center no-repeat; }
+  /* line 83, ../sass/components/_front.scss */
+  .node-type-event .orion .footer .pane-custom li, .node-type-event .taurus .footer .pane-custom li {
+    display: inline-table;
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0 1% 1% 0;
+    width: 100%; }
+    /* line 107, ../sass/components/_front.scss */
+    .node-type-event .orion .footer .pane-custom li a, .node-type-event .taurus .footer .pane-custom li a {
+      background-position: left center;
+      background-size: 60px;
+      color: #0b73d4;
+      display: block;
+      font-size: 1em;
+      height: 100px;
+      line-height: 1;
+      padding: 2.75em 2em 2.75em 7em;
+      text-align: left; }
+      /* line 117, ../sass/components/_front.scss */
+      .node-type-event .orion .footer .pane-custom li a:hover, .node-type-event .orion .footer .pane-custom li a.clicked, .node-type-event .taurus .footer .pane-custom li a:hover, .node-type-event .taurus .footer .pane-custom li a.clicked {
+        color: #0b73d4;
+        text-decoration: none; }
+
+/* line 1, ../sass/components/_navigation.scss */
+.l-navigation {
+  background-color: #06335b;
+  color: #ffffff;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  height: 3em;
+  margin-bottom: 0;
+  padding: 0.25em;
+  text-transform: uppercase; }
+  /* line 10, ../sass/components/_navigation.scss */
+  .l-navigation a {
+    color: #ffffff; }
+
+/* line 78, ../sass/components/_navigation.scss */
+[id^="block-menu-menu-"] {
+  width: 73%; }
+
+/* line 82, ../sass/components/_navigation.scss */
+#block-system-user-menu {
+  width: 27%; }
+  /* line 84, ../sass/components/_navigation.scss */
+  #block-system-user-menu li {
+    float: right; }
+
+/* line 4, ../sass/components/_node-news.scss */
+.node-news .hydra .content .top-right-content {
+  padding: 1em 0 2em 10px; }
+  /* line 6, ../sass/components/_node-news.scss */
+  .node-news .hydra .content .top-right-content .panel-pane {
+    padding-top: 0; }
+  /* line 9, ../sass/components/_node-news.scss */
+  .node-news .hydra .content .top-right-content .pane-title {
+    font-size: 1.85em;
+    margin-top: 0; }
+
+/* line 2, ../sass/components/_page-bofs.scss */
+.page-node-bofs .pane-cod-schedule-menu-pane {
+  margin: 2em 0px 0 0; }
+  /* line 4, ../sass/components/_page-bofs.scss */
+  .page-node-bofs .pane-cod-schedule-menu-pane a {
+    background-color: #ffffff;
+    border: 1px solid #0b73d4;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -o-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -khtml-border-radius: 32px;
+    border-radius: 32px;
+    color: #0b73d4;
+    display: block;
+    margin: 0 0.5em;
+    padding: 0.5em 0.8em;
+    text-decoration: none;
+    width: 100%; }
+    /* line 17, ../sass/components/_page-bofs.scss */
+    .page-node-bofs .pane-cod-schedule-menu-pane a.active {
+      background-color: #0b73d4;
+      color: #ffffff; }
+    /* line 21, ../sass/components/_page-bofs.scss */
+    .page-node-bofs .pane-cod-schedule-menu-pane a:hover, .page-node-bofs .pane-cod-schedule-menu-pane a:focus {
+      background-color: #3b44a1;
+      border: 1px solid #3b44a1;
+      color: #ffffff; }
+/* line 29, ../sass/components/_page-bofs.scss */
+.page-node-bofs .view-cod-bof-schedule-timeslots h3, .page-node-bofs .view-cod-bof-schedule-timeslots .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-bofs .view-cod-bof-schedule-timeslots .subheader {
+  color: #0b73d4; }
+/* line 32, ../sass/components/_page-bofs.scss */
+.page-node-bofs .view-cod-bof-schedule-timeslots .views-field-name {
+  font-weight: normal; }
+/* line 35, ../sass/components/_page-bofs.scss */
+.page-node-bofs .view-cod-bof-schedule-timeslots .timeslot {
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 2em;
+  padding: 2em; }
+  /* line 40, ../sass/components/_page-bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule-timeslots .timeslot .timeslot-content > .views-row {
+    border-bottom: 1px solid #0b73d4;
+    margin: 0;
+    padding: 1em 0; }
+/* line 46, ../sass/components/_page-bofs.scss */
+.page-node-bofs .view-cod-bof-schedule-timeslots .views-row {
+  margin: 2em 0; }
+  /* line 48, ../sass/components/_page-bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a {
+    text-align: center; }
+
+/* line 2, ../sass/components/_page-community.scss */
+.page-node-community .l-main .preface {
+  padding: 0; }
+/* line 5, ../sass/components/_page-community.scss */
+.page-node-community .content .pane-title {
+  text-align: center; }
+/* line 8, ../sass/components/_page-community.scss */
+.page-node-community .view-drupalcon-attendees .views-row {
+  border: 2px solid #eee; }
+  /* line 10, ../sass/components/_page-community.scss */
+  .page-node-community .view-drupalcon-attendees .views-row .views-field-picture img {
+    border: 1px solid #eee;
+    max-width: 100px; }
+
+/* line 2, ../sass/components/_page-forms.scss */
+.page-node-add .l-main-wrapper .l-main, .page-node-edit .l-main-wrapper .l-main, .page-user-edit .l-main-wrapper .l-main, .page-user .l-main-wrapper .l-main, .page-ticket .l-main-wrapper .l-main, .page-ticket-register .l-main-wrapper .l-main, .page-ticket-registration .l-main-wrapper .l-main, .page-ticket-redeem .l-main-wrapper .l-main, .page-checkout .l-main-wrapper .l-main, .page-node-submission .l-main-wrapper .l-main {
+  background-image: none; }
+/* line 5, ../sass/components/_page-forms.scss */
+.page-node-add .title-region, .page-node-edit .title-region, .page-user-edit .title-region, .page-user .title-region, .page-ticket .title-region, .page-ticket-register .title-region, .page-ticket-registration .title-region, .page-ticket-redeem .title-region, .page-checkout .title-region, .page-node-submission .title-region {
+  padding: 1em; }
+/* line 8, ../sass/components/_page-forms.scss */
+.page-node-add .node-form, .page-node-edit .node-form, .page-user-edit .node-form, .page-user .node-form, .page-ticket .node-form, .page-ticket-register .node-form, .page-ticket-registration .node-form, .page-ticket-redeem .node-form, .page-checkout .node-form, .page-node-submission .node-form {
+  background-color: white;
+  padding: 1em; }
+
+/* line 2, ../sass/components/_page-registration.scss */
+.page-node-registration .page-title {
+  color: #0b73d4; }
+/* line 6, ../sass/components/_page-registration.scss */
+.page-node-registration .content .pane-title {
+  color: #0b73d4;
+  text-align: center; }
+/* line 10, ../sass/components/_page-registration.scss */
+.page-node-registration .content #edit-submit {
+  font-size: 1.25em;
+  margin: 1em 0 0 0;
+  width: 100%; }
+/* line 20, ../sass/components/_page-registration.scss */
+.page-node-registration .entity-ticket-type {
+  background-color: #ffffff;
+  border: 2px solid #0b73d4;
+  padding: 2em;
+  margin-bottom: 2em; }
+  /* line 25, ../sass/components/_page-registration.scss */
+  .page-node-registration .entity-ticket-type .field--name-commerce-price {
+    background-color: #0b73d4;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0) 8px, #0b73d4 0%) top left, linear-gradient(225deg, rgba(0, 0, 0, 0) 8px, #0b73d4 0%) top right, linear-gradient(315deg, rgba(0, 0, 0, 0) 8px, #0b73d4 0%) bottom right, linear-gradient(45deg, rgba(0, 0, 0, 0) 8px, #0b73d4 0%) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 10px, #0b73d4 11px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 10px, #0b73d4 11px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 10px, #0b73d4 11px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 10px, #0b73d4 11px);
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica, Arial sans-serif;
+    padding: 0.4em 1em;
+    margin: 1em 0; }
+
+/* line 2, ../sass/components/_page-schedule.scss */
+.page-node-schedule .pane-cod-schedule-menu-pane {
+  margin: 2em 0px 0 0; }
+  /* line 4, ../sass/components/_page-schedule.scss */
+  .page-node-schedule .pane-cod-schedule-menu-pane a {
+    background-color: #ffffff;
+    border: 1px solid #0b73d4;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -o-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -khtml-border-radius: 32px;
+    border-radius: 32px;
+    color: #0b73d4;
+    display: block;
+    margin: 0 0.5em;
+    padding: 0.5em 0.8em;
+    text-decoration: none;
+    width: 100%; }
+    /* line 17, ../sass/components/_page-schedule.scss */
+    .page-node-schedule .pane-cod-schedule-menu-pane a.active {
+      background-color: #0b73d4;
+      color: #ffffff; }
+    /* line 21, ../sass/components/_page-schedule.scss */
+    .page-node-schedule .pane-cod-schedule-menu-pane a:hover, .page-node-schedule .pane-cod-schedule-menu-pane a:focus {
+      background-color: #3b44a1;
+      border: 1px solid #3b44a1;
+      color: #ffffff; }
+/* line 29, ../sass/components/_page-schedule.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks ul {
+  padding-left: 0; }
+/* line 45, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .being-human a {
+  background: url("../images/tracks/being-human.svg") center center no-repeat; }
+/* line 50, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .business a {
+  background: url("../images/tracks/business.svg") center center no-repeat; }
+/* line 55, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .drupal-showcase a {
+  background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+/* line 60, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .coding-and-development a {
+  background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+/* line 65, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .community-keynote a {
+  background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+/* line 70, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .content-strategy a {
+  background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+/* line 75, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .core-conversations a {
+  background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+/* line 80, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .devops a {
+  background: url("../images/tracks/devops.svg") center center no-repeat; }
+/* line 85, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .drupal-org a, .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .drupalorg a {
+  background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+/* line 90, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .front-end a, .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .frontend a {
+  background: url("../images/tracks/front-end.svg") center center no-repeat; }
+/* line 95, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .horizons a {
+  background: url("../images/tracks/horizons.svg") center center no-repeat; }
+/* line 100, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .php a {
+  background: url("../images/tracks/php.svg") center center no-repeat; }
+/* line 105, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .project-management a {
+  background: url("../images/tracks/project-management.svg") center center no-repeat; }
+/* line 110, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .performance-and-scaling a {
+  background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+/* line 115, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .site-building a {
+  background: url("../images/tracks/site-building.svg") center center no-repeat; }
+/* line 120, ../sass/abstractions/_mixins.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks .symfony a {
+  background: url("../images/tracks/symfony.svg") center center no-repeat; }
+/* line 33, ../sass/components/_page-schedule.scss */
+.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li {
+  display: inline-table;
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0 1% 1% 0;
+  width: 100%; }
+  /* line 57, ../sass/components/_page-schedule.scss */
+  .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li .views-field a {
+    background-position: left center;
+    background-size: 60px;
+    color: #0b73d4;
+    display: block;
+    font-size: 1em;
+    height: 100px;
+    line-height: 1;
+    padding: 2.75em 2em 2.75em 7em;
+    text-align: left; }
+    /* line 67, ../sass/components/_page-schedule.scss */
+    .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li .views-field a:hover, .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li .views-field a.clicked {
+      color: #3b44a1;
+      text-decoration: none; }
+/* line 80, ../sass/components/_page-schedule.scss */
+.page-node-schedule .view-cod-schedule-content {
+  padding-top: 4em; }
+  /* line 82, ../sass/components/_page-schedule.scss */
+  .page-node-schedule .view-cod-schedule-content > .view-content {
+    margin: auto; }
+    /* line 45, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .being-human.session {
+      background: url("../images/tracks/being-human.svg") center center no-repeat; }
+    /* line 50, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .business.session {
+      background: url("../images/tracks/business.svg") center center no-repeat; }
+    /* line 55, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .drupal-showcase.session {
+      background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+    /* line 60, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .coding-and-development.session {
+      background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+    /* line 65, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .community-keynote.session {
+      background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+    /* line 70, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .content-strategy.session {
+      background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+    /* line 75, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .core-conversations.session {
+      background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+    /* line 80, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .devops.session {
+      background: url("../images/tracks/devops.svg") center center no-repeat; }
+    /* line 85, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .drupal-org.session, .page-node-schedule .view-cod-schedule-content > .view-content .drupalorg.session {
+      background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+    /* line 90, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .front-end.session, .page-node-schedule .view-cod-schedule-content > .view-content .frontend.session {
+      background: url("../images/tracks/front-end.svg") center center no-repeat; }
+    /* line 95, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .horizons.session {
+      background: url("../images/tracks/horizons.svg") center center no-repeat; }
+    /* line 100, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .php.session {
+      background: url("../images/tracks/php.svg") center center no-repeat; }
+    /* line 105, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .project-management.session {
+      background: url("../images/tracks/project-management.svg") center center no-repeat; }
+    /* line 110, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .performance-and-scaling.session {
+      background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+    /* line 115, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .site-building.session {
+      background: url("../images/tracks/site-building.svg") center center no-repeat; }
+    /* line 120, ../sass/abstractions/_mixins.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .symfony.session {
+      background: url("../images/tracks/symfony.svg") center center no-repeat; }
+    /* line 85, ../sass/components/_page-schedule.scss */
+    .page-node-schedule .view-cod-schedule-content > .view-content .timeslot {
+      clear: both;
+      margin-bottom: 0;
+      overflow: auto;
+      padding: 1em; }
+      /* line 93, ../sass/components/_page-schedule.scss */
+      .page-node-schedule .view-cod-schedule-content > .view-content .timeslot h3, .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .subheader {
+        font-size: 2em; }
+        /* line 95, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot h3 a, .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .subheader a {
+          color: #000;
+          font-size: 0.9em; }
+      /* line 100, ../sass/components/_page-schedule.scss */
+      .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .date-display-single {
+        display: block;
+        width: 170px;
+        margin: 0 auto; }
+      /* line 106, ../sass/components/_page-schedule.scss */
+      .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .schedule-item {
+        background-color: #0b73d4;
+        color: #ffffff;
+        text-align: center; }
+        /* line 110, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .schedule-item .views-field-ops {
+          display: none;
+          margin-top: 0; }
+        /* line 114, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .schedule-item .views-field-field-speakers {
+          background-color: transparent;
+          border: none;
+          padding: 0.5em 0 0 0;
+          position: relative; }
+      /* line 121, ../sass/components/_page-schedule.scss */
+      .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row {
+        background-color: #ffffff;
+        background-size: 50px;
+        background-position: bottom 75px right 8px;
+        border-color: #0b73d4;
+        float: left;
+        padding-bottom: 5em;
+        position: relative;
+        text-align: left; }
+        /* line 130, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row h3, .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .subheader {
+          color: #000;
+          font-family: "Open Sans", Helvetica, Arial, sans-serif;
+          margin: 0;
+          min-height: 120px;
+          padding-bottom: 2em;
+          font-size: 1em; }
+          /* line 137, ../sass/components/_page-schedule.scss */
+          .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row h3 a, .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .subheader a {
+            color: #000; }
+        /* line 141, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .flag-session-schedule {
+          color: #0b73d4; }
+          /* line 143, ../sass/components/_page-schedule.scss */
+          .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .flag-session-schedule a {
+            color: #0b73d4; }
+        /* line 147, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .views-field-field-speakers {
+          background-color: #0b73d4;
+          border: 4px solid #fff;
+          color: #ffffff;
+          padding: 1em;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%; }
+          /* line 156, ../sass/components/_page-schedule.scss */
+          .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .views-field-field-speakers a {
+            color: #ffffff; }
+        /* line 160, ../sass/components/_page-schedule.scss */
+        .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .views-field-title {
+          color: #000;
+          line-height: 1.25;
+          margin-bottom: 0.5em; }
+          /* line 164, ../sass/components/_page-schedule.scss */
+          .page-node-schedule .view-cod-schedule-content > .view-content .timeslot .timeslot-content .views-row .views-field-title a {
+            color: #000; }
+  /* line 172, ../sass/components/_page-schedule.scss */
+  .page-node-schedule .view-cod-schedule-content h2 {
+    color: #0b73d4;
+    margin-top: 0.5em;
+    text-align: center; }
+    /* line 176, ../sass/components/_page-schedule.scss */
+    .page-node-schedule .view-cod-schedule-content h2 a {
+      color: #0b73d4; }
+
+/* line 2, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .l-content .preface, .page-node-sessions-accepted .l-content .preface {
+  padding: 4.25em 0px 4em;
+  text-align: center; }
+  /* line 5, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .l-content .preface .button-link, .page-node-sessions-proposed .l-content .preface .node-type-event .orion .left-header .more-link a, .node-type-event .orion .left-header .more-link .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .node-type-event .taurus .left-header .more-link a, .node-type-event .taurus .left-header .more-link .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .node-type-event .orion .right-header a, .node-type-event .orion .right-header .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .node-type-event .taurus .right-header a, .node-type-event .taurus .right-header .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .view-community-keynotes .flag-session-vote a, .view-community-keynotes .flag-session-vote .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .page-node-registration .content #edit-submit, .page-node-registration .content .page-node-sessions-proposed .l-content .preface #edit-submit, .page-node-sessions-proposed .l-content .preface .view-pager a, .page-node-sessions-proposed .view-pager .l-content .preface a, .page-node-sessions-accepted .view-pager .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-accepted .l-content .preface .button-link, .page-node-sessions-accepted .l-content .preface .node-type-event .orion .left-header .more-link a, .node-type-event .orion .left-header .more-link .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .node-type-event .taurus .left-header .more-link a, .node-type-event .taurus .left-header .more-link .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .node-type-event .orion .right-header a, .node-type-event .orion .right-header .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .node-type-event .taurus .right-header a, .node-type-event .taurus .right-header .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .view-community-keynotes .flag-session-vote a, .view-community-keynotes .flag-session-vote .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .page-node-registration .content #edit-submit, .page-node-registration .content .page-node-sessions-accepted .l-content .preface #edit-submit, .page-node-sessions-proposed .view-pager .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .view-pager a, .page-node-sessions-accepted .view-pager .l-content .preface a {
+    margin-top: 1em; }
+  /* line 8, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .l-content .preface .panel-pane, .page-node-sessions-accepted .l-content .preface .panel-pane {
+    clear: both;
+    padding: 0; }
+  /* line 13, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter ul, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter ul {
+    padding-left: 0; }
+  /* line 45, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .being-human a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .being-human a {
+    background: url("../images/tracks/being-human.svg") center center no-repeat; }
+  /* line 50, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .business a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .business a {
+    background: url("../images/tracks/business.svg") center center no-repeat; }
+  /* line 55, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .drupal-showcase a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .drupal-showcase a {
+    background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+  /* line 60, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .coding-and-development a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .coding-and-development a {
+    background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+  /* line 65, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .community-keynote a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .community-keynote a {
+    background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+  /* line 70, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .content-strategy a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .content-strategy a {
+    background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+  /* line 75, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .core-conversations a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .core-conversations a {
+    background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+  /* line 80, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .devops a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .devops a {
+    background: url("../images/tracks/devops.svg") center center no-repeat; }
+  /* line 85, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .drupal-org a, .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .drupalorg a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .drupal-org a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .drupalorg a {
+    background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+  /* line 90, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .front-end a, .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .frontend a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .front-end a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .frontend a {
+    background: url("../images/tracks/front-end.svg") center center no-repeat; }
+  /* line 95, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .horizons a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .horizons a {
+    background: url("../images/tracks/horizons.svg") center center no-repeat; }
+  /* line 100, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .php a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .php a {
+    background: url("../images/tracks/php.svg") center center no-repeat; }
+  /* line 105, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .project-management a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .project-management a {
+    background: url("../images/tracks/project-management.svg") center center no-repeat; }
+  /* line 110, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .performance-and-scaling a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .performance-and-scaling a {
+    background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+  /* line 115, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .site-building a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .site-building a {
+    background: url("../images/tracks/site-building.svg") center center no-repeat; }
+  /* line 120, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter .symfony a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter .symfony a {
+    background: url("../images/tracks/symfony.svg") center center no-repeat; }
+  /* line 17, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row {
+    display: inline-table;
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0 1% 1% 0;
+    width: 100%; }
+    /* line 41, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row a {
+      background-position: left center;
+      background-size: 60px;
+      color: #0b73d4;
+      display: block;
+      font-size: 1em;
+      height: 100px;
+      line-height: 1;
+      padding: 2.75em 2em 2.75em 7em;
+      text-align: left; }
+      /* line 51, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row a:hover, .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row a.clicked, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row a:hover, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row a.clicked {
+        color: #3b44a1;
+        text-decoration: none; }
+/* line 65, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .page-title, .page-node-sessions-accepted .page-title {
+  display: none; }
+/* line 68, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .views-exposed-form, .page-node-sessions-accepted .views-exposed-form {
+  max-width: 520px;
+  margin: auto;
+  text-align: center; }
+  /* line 72, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .views-exposed-form select, .page-node-sessions-proposed .views-exposed-form input, .page-node-sessions-accepted .views-exposed-form select, .page-node-sessions-accepted .views-exposed-form input {
+    width: 100%; }
+  /* line 75, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .views-exposed-form .views-exposed-widget, .page-node-sessions-accepted .views-exposed-form .views-exposed-widget {
+    width: 48%; }
+/* line 79, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .view-display-id-track_session_summary, .page-node-sessions-accepted .view-display-id-track_session_summary {
+  padding-top: 4em; }
+  /* line 81, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content {
+    margin: auto; }
+    /* line 45, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .being-human .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .being-human .views-row {
+      background: url("../images/tracks/being-human.svg") center center no-repeat; }
+    /* line 50, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .business .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .business .views-row {
+      background: url("../images/tracks/business.svg") center center no-repeat; }
+    /* line 55, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .drupal-showcase .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .drupal-showcase .views-row {
+      background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+    /* line 60, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .coding-and-development .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .coding-and-development .views-row {
+      background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+    /* line 65, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .community-keynote .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .community-keynote .views-row {
+      background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+    /* line 70, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .content-strategy .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .content-strategy .views-row {
+      background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+    /* line 75, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .core-conversations .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .core-conversations .views-row {
+      background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+    /* line 80, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .devops .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .devops .views-row {
+      background: url("../images/tracks/devops.svg") center center no-repeat; }
+    /* line 85, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .drupal-org .views-row, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .drupalorg .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .drupal-org .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .drupalorg .views-row {
+      background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+    /* line 90, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .front-end .views-row, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .frontend .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .front-end .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .frontend .views-row {
+      background: url("../images/tracks/front-end.svg") center center no-repeat; }
+    /* line 95, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .horizons .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .horizons .views-row {
+      background: url("../images/tracks/horizons.svg") center center no-repeat; }
+    /* line 100, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .php .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .php .views-row {
+      background: url("../images/tracks/php.svg") center center no-repeat; }
+    /* line 105, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .project-management .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .project-management .views-row {
+      background: url("../images/tracks/project-management.svg") center center no-repeat; }
+    /* line 110, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .performance-and-scaling .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .performance-and-scaling .views-row {
+      background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+    /* line 115, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .site-building .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .site-building .views-row {
+      background: url("../images/tracks/site-building.svg") center center no-repeat; }
+    /* line 120, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content .symfony .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content .symfony .views-row {
+      background: url("../images/tracks/symfony.svg") center center no-repeat; }
+    /* line 84, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row {
+      clear: both;
+      margin-bottom: 4.5em;
+      overflow: auto;
+      padding: 2em; }
+      /* line 89, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row h2, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row h2 {
+        display: block; }
+      /* line 92, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row:before, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row:before {
+        background-size: 80px;
+        content: "";
+        display: block;
+        height: 100px;
+        width: 120px;
+        margin: 0 auto; }
+      /* line 101, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row {
+        background-color: #ffffff;
+        background-size: 50px;
+        background-position: bottom 75px right 8px;
+        border-color: #0b73d4;
+        float: left;
+        padding-bottom: 4em;
+        position: relative;
+        text-align: left; }
+        /* line 134, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .subheader, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .subheader {
+          color: #000;
+          font-family: "Open Sans", Helvetica, Arial, sans-serif;
+          margin: 0;
+          min-height: 120px;
+          padding-bottom: 2em;
+          font-size: 1em; }
+          /* line 141, ../sass/components/_page-sessions.scss */
+          .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3 a, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .subheader a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3 a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .subheader a {
+            color: #000;
+            text-transform: none; }
+        /* line 146, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .flag-session-schedule, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .flag-session-schedule {
+          color: #0b73d4; }
+          /* line 148, ../sass/components/_page-sessions.scss */
+          .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .flag-session-schedule a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .flag-session-schedule a {
+            color: #0b73d4; }
+        /* line 152, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-field-speakers, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-field-speakers {
+          background-color: #0b73d4;
+          border: 4px solid #fff;
+          color: #ffffff;
+          padding: 1em;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%; }
+          /* line 161, ../sass/components/_page-sessions.scss */
+          .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-field-speakers a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-field-speakers a {
+            color: #ffffff; }
+        /* line 165, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-title, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-title {
+          color: #000;
+          line-height: 1.25;
+          margin-bottom: 0.5em; }
+          /* line 169, ../sass/components/_page-sessions.scss */
+          .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-title a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row .views-field-title a {
+            color: #000; }
+  /* line 177, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary h2, .page-node-sessions-accepted .view-display-id-track_session_summary h2 {
+    color: #0b73d4;
+    margin-top: 0.5em;
+    text-align: center; }
+    /* line 181, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-display-id-track_session_summary h2 a, .page-node-sessions-accepted .view-display-id-track_session_summary h2 a {
+      color: #0b73d4; }
+  /* line 45, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .being-human:before, .page-node-sessions-accepted .view-display-id-track_session_summary .being-human:before {
+    background: url("../images/tracks/being-human.svg") center center no-repeat; }
+  /* line 50, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .business:before, .page-node-sessions-accepted .view-display-id-track_session_summary .business:before {
+    background: url("../images/tracks/business.svg") center center no-repeat; }
+  /* line 55, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .drupal-showcase:before, .page-node-sessions-accepted .view-display-id-track_session_summary .drupal-showcase:before {
+    background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+  /* line 60, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .coding-and-development:before, .page-node-sessions-accepted .view-display-id-track_session_summary .coding-and-development:before {
+    background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+  /* line 65, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .community-keynote:before, .page-node-sessions-accepted .view-display-id-track_session_summary .community-keynote:before {
+    background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+  /* line 70, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .content-strategy:before, .page-node-sessions-accepted .view-display-id-track_session_summary .content-strategy:before {
+    background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+  /* line 75, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .core-conversations:before, .page-node-sessions-accepted .view-display-id-track_session_summary .core-conversations:before {
+    background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+  /* line 80, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .devops:before, .page-node-sessions-accepted .view-display-id-track_session_summary .devops:before {
+    background: url("../images/tracks/devops.svg") center center no-repeat; }
+  /* line 85, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .drupal-org:before, .page-node-sessions-proposed .view-display-id-track_session_summary .drupalorg:before, .page-node-sessions-accepted .view-display-id-track_session_summary .drupal-org:before, .page-node-sessions-accepted .view-display-id-track_session_summary .drupalorg:before {
+    background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+  /* line 90, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .front-end:before, .page-node-sessions-proposed .view-display-id-track_session_summary .frontend:before, .page-node-sessions-accepted .view-display-id-track_session_summary .front-end:before, .page-node-sessions-accepted .view-display-id-track_session_summary .frontend:before {
+    background: url("../images/tracks/front-end.svg") center center no-repeat; }
+  /* line 95, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .horizons:before, .page-node-sessions-accepted .view-display-id-track_session_summary .horizons:before {
+    background: url("../images/tracks/horizons.svg") center center no-repeat; }
+  /* line 100, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .php:before, .page-node-sessions-accepted .view-display-id-track_session_summary .php:before {
+    background: url("../images/tracks/php.svg") center center no-repeat; }
+  /* line 105, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .project-management:before, .page-node-sessions-accepted .view-display-id-track_session_summary .project-management:before {
+    background: url("../images/tracks/project-management.svg") center center no-repeat; }
+  /* line 110, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .performance-and-scaling:before, .page-node-sessions-accepted .view-display-id-track_session_summary .performance-and-scaling:before {
+    background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+  /* line 115, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .site-building:before, .page-node-sessions-accepted .view-display-id-track_session_summary .site-building:before {
+    background: url("../images/tracks/site-building.svg") center center no-repeat; }
+  /* line 120, ../sass/abstractions/_mixins.scss */
+  .page-node-sessions-proposed .view-display-id-track_session_summary .symfony:before, .page-node-sessions-accepted .view-display-id-track_session_summary .symfony:before {
+    background: url("../images/tracks/symfony.svg") center center no-repeat; }
+/* line 187, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .view-pager, .page-node-sessions-accepted .view-pager {
+  clear: both;
+  text-align: center;
+  padding-top: 1em; }
+  /* line 191, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .view-pager a, .page-node-sessions-accepted .view-pager a {
+    border-color: #0b73d4;
+    color: #0b73d4; }
+    /* line 195, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-pager a:hover, .page-node-sessions-proposed .view-pager a.active, .page-node-sessions-proposed .view-pager a:focus, .page-node-sessions-accepted .view-pager a:hover, .page-node-sessions-accepted .view-pager a.active, .page-node-sessions-accepted .view-pager a:focus {
+      background-color: #0b73d4;
+      color: #ffffff; }
+/* line 45, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .being-human .view-header:before, .page-node-sessions-accepted .being-human .view-header:before {
+  background: url("../images/tracks/being-human.svg") center center no-repeat; }
+/* line 50, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .business .view-header:before, .page-node-sessions-accepted .business .view-header:before {
+  background: url("../images/tracks/business.svg") center center no-repeat; }
+/* line 55, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .drupal-showcase .view-header:before, .page-node-sessions-accepted .drupal-showcase .view-header:before {
+  background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+/* line 60, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .coding-and-development .view-header:before, .page-node-sessions-accepted .coding-and-development .view-header:before {
+  background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+/* line 65, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .community-keynote .view-header:before, .page-node-sessions-accepted .community-keynote .view-header:before {
+  background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+/* line 70, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .content-strategy .view-header:before, .page-node-sessions-accepted .content-strategy .view-header:before {
+  background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+/* line 75, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .core-conversations .view-header:before, .page-node-sessions-accepted .core-conversations .view-header:before {
+  background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+/* line 80, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .devops .view-header:before, .page-node-sessions-accepted .devops .view-header:before {
+  background: url("../images/tracks/devops.svg") center center no-repeat; }
+/* line 85, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .drupal-org .view-header:before, .page-node-sessions-proposed .drupalorg .view-header:before, .page-node-sessions-accepted .drupal-org .view-header:before, .page-node-sessions-accepted .drupalorg .view-header:before {
+  background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+/* line 90, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .front-end .view-header:before, .page-node-sessions-proposed .frontend .view-header:before, .page-node-sessions-accepted .front-end .view-header:before, .page-node-sessions-accepted .frontend .view-header:before {
+  background: url("../images/tracks/front-end.svg") center center no-repeat; }
+/* line 95, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .horizons .view-header:before, .page-node-sessions-accepted .horizons .view-header:before {
+  background: url("../images/tracks/horizons.svg") center center no-repeat; }
+/* line 100, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .php .view-header:before, .page-node-sessions-accepted .php .view-header:before {
+  background: url("../images/tracks/php.svg") center center no-repeat; }
+/* line 105, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .project-management .view-header:before, .page-node-sessions-accepted .project-management .view-header:before {
+  background: url("../images/tracks/project-management.svg") center center no-repeat; }
+/* line 110, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .performance-and-scaling .view-header:before, .page-node-sessions-accepted .performance-and-scaling .view-header:before {
+  background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+/* line 115, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .site-building .view-header:before, .page-node-sessions-accepted .site-building .view-header:before {
+  background: url("../images/tracks/site-building.svg") center center no-repeat; }
+/* line 120, ../sass/abstractions/_mixins.scss */
+.page-node-sessions-proposed .symfony .view-header:before, .page-node-sessions-accepted .symfony .view-header:before {
+  background: url("../images/tracks/symfony.svg") center center no-repeat; }
+/* line 202, ../sass/components/_page-sessions.scss */
+.page-node-sessions-proposed .view-display-id-panel_sessions_by_track, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track {
+  margin: auto; }
+  /* line 204, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-header, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-header {
+    text-align: center; }
+    /* line 206, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-header h2, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-header h2 {
+      display: block; }
+      /* line 208, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-header h2 a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-header h2 a {
+        color: #000;
+        font-size: 0.9em; }
+    /* line 213, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-header:before, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-header:before {
+      background-size: 80px;
+      content: "";
+      display: block;
+      height: 90px;
+      width: 204px;
+      margin: 0 auto; }
+  /* line 222, ../sass/components/_page-sessions.scss */
+  .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content {
+    margin-bottom: 4.5em;
+    padding: 2em; }
+    /* line 45, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .being-human, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .being-human {
+      background: url("../images/tracks/being-human.svg") center center no-repeat; }
+    /* line 50, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .business, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .business {
+      background: url("../images/tracks/business.svg") center center no-repeat; }
+    /* line 55, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .drupal-showcase, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .drupal-showcase {
+      background: url("../images/tracks/drupal-showcase.svg") center center no-repeat; }
+    /* line 60, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .coding-and-development, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .coding-and-development {
+      background: url("../images/tracks/coding-and-development.svg") center center no-repeat; }
+    /* line 65, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .community-keynote, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .community-keynote {
+      background: url("../images/tracks/community-keynote.svg") center center no-repeat; }
+    /* line 70, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .content-strategy, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .content-strategy {
+      background: url("../images/tracks/content-strategy.svg") center center no-repeat; }
+    /* line 75, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .core-conversations, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .core-conversations {
+      background: url("../images/tracks/core-conversations.svg") center center no-repeat; }
+    /* line 80, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .devops, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .devops {
+      background: url("../images/tracks/devops.svg") center center no-repeat; }
+    /* line 85, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .drupal-org, .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .drupalorg, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .drupal-org, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .drupalorg {
+      background: url("../images/tracks/drupal-org.svg") center center no-repeat; }
+    /* line 90, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .front-end, .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .frontend, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .front-end, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .frontend {
+      background: url("../images/tracks/front-end.svg") center center no-repeat; }
+    /* line 95, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .horizons, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .horizons {
+      background: url("../images/tracks/horizons.svg") center center no-repeat; }
+    /* line 100, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .php, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .php {
+      background: url("../images/tracks/php.svg") center center no-repeat; }
+    /* line 105, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .project-management, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .project-management {
+      background: url("../images/tracks/project-management.svg") center center no-repeat; }
+    /* line 110, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .performance-and-scaling, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .performance-and-scaling {
+      background: url("../images/tracks/performance-and-scaling.svg") center center no-repeat; }
+    /* line 115, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .site-building, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .site-building {
+      background: url("../images/tracks/site-building.svg") center center no-repeat; }
+    /* line 120, ../sass/abstractions/_mixins.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .symfony, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .symfony {
+      background: url("../images/tracks/symfony.svg") center center no-repeat; }
+    /* line 226, ../sass/components/_page-sessions.scss */
+    .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row {
+      background-color: #ffffff;
+      background-size: 50px;
+      background-position: bottom 75px right 8px;
+      border: 2px solid #0b73d4;
+      float: left;
+      padding-bottom: 4em;
+      position: relative;
+      text-align: left; }
+      /* line 259, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row h3, .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .subheader, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row h3, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .page-node-sponsors .preface .subheader, .page-node-sponsors .preface .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .subheader {
+        color: #000;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        margin: 0;
+        min-height: 120px;
+        padding-bottom: 2em;
+        font-size: 1em; }
+        /* line 266, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row h3 a, .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .subheader a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row h3 a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .page-node-sponsors .preface .subheader a, .page-node-sponsors .preface .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .subheader a {
+          color: #000;
+          text-transform: none; }
+      /* line 271, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .flag-session-schedule, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .flag-session-schedule {
+        color: #0b73d4; }
+        /* line 273, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .flag-session-schedule a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .flag-session-schedule a {
+          color: #0b73d4; }
+      /* line 277, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-field-speakers, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-field-speakers {
+        background-color: #0b73d4;
+        border: 4px solid #fff;
+        color: #ffffff;
+        padding: 1em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; }
+        /* line 286, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-field-speakers a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-field-speakers a {
+          color: #ffffff; }
+      /* line 290, ../sass/components/_page-sessions.scss */
+      .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-title, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-title {
+        color: #000;
+        line-height: 1.25;
+        margin-bottom: 0.5em; }
+        /* line 294, ../sass/components/_page-sessions.scss */
+        .page-node-sessions-proposed .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-title a, .page-node-sessions-accepted .view-display-id-panel_sessions_by_track .view-content .views-row .views-field-title a {
+          color: #000; }
+
+/* line 1, ../sass/components/_page-sponsors.scss */
+.page-node-sponsors {
+  text-align: center; }
+  /* line 31, ../sass/abstractions/_mixins.scss */
+  .page-node-sponsors h1, .page-node-sponsors h2 {
+    border-top: 4px solid #89c7f8;
+    display: inline-block;
+    padding-top: 75px;
+    width: 100%; }
+  /* line 3, ../sass/components/_page-sponsors.scss */
+  .page-node-sponsors .preface {
+    text-align: center; }
+  /* line 9, ../sass/components/_page-sponsors.scss */
+  .page-node-sponsors .level-inner {
+    text-align: center; }
+    /* line 11, ../sass/components/_page-sponsors.scss */
+    .page-node-sponsors .level-inner h2 {
+      padding: 75px 0; }
+
+/* line 2, ../sass/components/_pane-news.scss */
+.header .view-cod-news h2 {
+  color: #000; }
+  /* line 4, ../sass/components/_pane-news.scss */
+  .header .view-cod-news h2 a {
+    color: #adadad; }
+
+/* line 2, ../sass/components/_pane-sponsors.scss */
+.pane-cod-sponsors-platinum .views-row {
+  float: left;
+  list-style-type: none;
+  margin-left: 1%;
+  min-height: 150px;
+  overflow: auto;
+  padding: 1em 1em 8em 1em;
+  width: 100%; }
+
+/* line 26, ../sass/components/_pane-sponsors.scss */
+.pane-cod-sponsors-sponsored .views-row {
+  float: left;
+  margin-left: 0%;
+  min-height: 0;
+  padding: 1em;
+  width: 100%; }
+
+/*# sourceMappingURL=dublin2016.no-query.css.map */

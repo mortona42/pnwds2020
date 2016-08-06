@@ -1,0 +1,106 @@
+body {
+  background-color: $lt-gray;
+  background-image: none;
+  a {
+    color: $dk-blue;
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.l-main-wrapper .l-constrained {
+  min-height: 25em;
+  position: relative;
+  width: auto;
+  .administrative > .tabs {
+    margin: 0 auto;
+    max-width: $large;
+    padding-bottom: 1em;
+  }
+}
+
+.panel-layout {
+  margin: 0px;
+  max-width: 100%;
+}
+
+.panel-pane {
+  padding: 1em 0;
+}
+
+.l-main-wrapper .container-inner {
+  @extend %constrained-width;
+}
+
+.no-panels-layout .l-main-wrapper {
+  .administrative, .l-content {
+    @extend %constrained-width;
+  }
+}
+
+.l-header-inner {
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.location-action {
+  display: none;
+}
+
+.l-content {
+  margin-bottom: 1em;
+}
+
+.panels-layout .page-title {
+  @extend %constrained-width;
+}
+
+.not-front .l-content {
+  background-color: transparent;
+}
+
+.l-epilogue-wrapper {
+  background-color: $lt-blue;
+  color: $dk-gray;
+  padding-bottom: 1em;
+  .block {
+    max-width: $large;
+    margin: auto;
+  }
+  .pane-title {
+    margin: 1em 0;
+  }
+
+}
+
+.l-errata-wrapper {
+  background-color: $white;
+  color: $dk-blue;
+  padding-bottom: 1em;
+  padding: 0 0.72em 2em 0.72em;
+  @include clearfix;
+  .l-region {
+    padding: 3em 0px;
+  }
+  .pane-title {
+    margin: 1em 0;
+  }
+}
+
+.l-footer-wrapper {
+  color: $dk-gray;
+  a {
+    color: $blue;
+    text-decoration: none;
+    &:hover, &.active {
+      color: $dk-blue;
+    }
+  }
+}
+
+.l-region--footer {
+  @extend %constrained-width;
+}

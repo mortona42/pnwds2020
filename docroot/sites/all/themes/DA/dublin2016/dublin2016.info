@@ -1,0 +1,34 @@
+name = Dublin 2016
+description = DrupalCon Dublin 2016 theme
+base theme = siren
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/dublin2016.normalize.css
+stylesheets[all][] = css/dublin2016.hacks.css
+stylesheets[all][] = css/dublin2016.styles.css
+stylesheets[all][] = css/dublin2016.no-query.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/dublin2016.behaviors.js
+
+; ========================================
+; Regions
+; ========================================
+regions[navigation] = Navigation
+regions[branding] = Branding
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[preface] = Preface
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[epilogue] = Epilogue
+regions[errata] = Errata
+regions[footer] = Footer

@@ -1,0 +1,296 @@
+body {
+  background-color: $white;
+}
+
+.l-branding {
+  background: url('../images/bg-header-watercolor-small-short.jpg?2') $blue center bottom no-repeat;
+  background-size: cover;
+  height: 300px;
+  @include breakpoint(480px) {
+    height: 400px;
+  }
+  @include breakpoint($mid-small) {
+    background: url('../images/bg-header-watercolor-short.jpg?2') $blue center bottom no-repeat;
+    background-size: cover;
+    height: 400px;
+  }
+  @include breakpoint(1500px) {
+    height: 500px;
+  }
+  color: $white;
+  text-align: center;
+  .site-branding__logo {
+    height: 90%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    img {
+      height: 0;
+      width: 0;
+    }
+  }
+  .l-region--branding {
+    margin-top: -70px;
+    z-index: 8;
+    @include breakpoint($mid-small) {
+      margin-top: -120px;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      background: url(../images/bg-branding-register.png) no-repeat top center / contain;
+      display: block;
+      height: 70px;
+      text-indent: -9999px;
+      &:hover, &:focus {
+        background-image: url(../images/bg-branding-register-hover.png);
+      }
+    }
+  }
+}
+
+.l-page .l-highlighted-wrapper {
+  background-color: $white;
+  height: auto;
+  margin-top: -4em;
+  padding: 0;
+  .l-region--highlighted {
+    padding: 4em 0 0 0;
+    @include breakpoint($medium) {
+      padding-top: 2em;
+    }
+  }
+}
+
+#block-cod-sponsors-diamond {
+  background-color: transparent;
+  margin: 0 auto;
+  width: 400px;
+  position: relative;
+  z-index: 12;
+  @include breakpoint($medium) {
+    width: 600px;
+  }
+  h2 {
+    color: $dk-blue;
+    border: none; //to prevent hr-header from touching this block
+    font-family: $font-body;
+    font-size: 0.8em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    letter-spacing: 0.14em;
+  }
+  .view-content {
+    list-style-image: none;
+    list-style-type: none;
+    overflow: auto;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .views-row {
+    margin-left: 0;
+    min-height: 0;
+    text-align: center;
+    width: 100%;
+    @include breakpoint($medium) {
+      width: 135px;
+      &.views-row-2 {
+        margin: 0 50px;
+      }
+    }
+    padding: 0;
+  }
+}
+
+.l-main-wrapper .l-constrained {
+  background-color: transparent;
+}
+
+.l-main {
+  .l-content, .has-no-sidebars .l-content {
+    @extend %constrained-width;
+    padding: 2px;
+    .title-region {
+      background-color: white;
+      padding-top: 2em;
+    }
+    .messages {
+      max-width: none;
+      width: 100%;
+    }
+    .node, .panel-layout {
+      background-color: white;
+    }
+    .hydra {
+      .pane-node-title {
+        padding: 2em 0 0 0;
+      }
+      .pane-node-body {
+        padding-top: 0;
+      }
+      .top-right-content {
+        padding-top: 2em;
+      }
+      .top-right-content, .bottom-right-content {
+        a {
+          color: $blue;
+        }
+        .panel-pane {
+          border-color: $lt-gray;
+        }
+        .pane-title {
+          background-color: transparent;
+          color: $blue;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .administrative {
+    @extend %constrained-width;
+    position: relative;
+    z-index: 10;
+    li a {
+      color: $dk-blue;
+      background-color: $white;
+      border: none;
+      &:hover, &:focus {
+        background-color: $dk-blue;
+        color: $white;
+      }
+      &.active {
+        border: none;
+      }
+    }
+  }
+}
+
+.taurus, .orion {
+  .container {
+    z-index: 5;
+    .pane-title {
+      color: $blue;
+      text-align: center;
+    }
+  }
+  .header {
+    background-color: transparent;
+    color: $dk-gray;
+    padding: 2em 0;
+    .left-header {
+      padding: 0;
+      @include breakpoint($medium) {
+        width: 64%;
+      }
+      .pane-title {
+        color: $blue;
+        text-align: left;
+        margin-top: 0px;
+      }
+      .node__title {
+        a {
+          color: $blue;
+        }
+      }
+    }
+    .right-header {
+      color: $dk-gray;
+      padding: 0;
+      .pane-title {
+        color: $dk-blue;
+        margin-top: 0;
+      }
+    }
+  }
+  .triptych {
+    color: $dk-gray;
+    text-align: center;
+    h2 {
+      font-size: 1.6em;
+    }
+    .left-triptych {
+      padding-right: 1em;
+    }
+    .middle-triptych {
+      padding: 0 1em;
+    }
+    .right-triptych {
+      padding-left: 1em;
+    }
+    .button-link {
+      @extend .button-link;
+    }
+  }
+  .preface {
+    background-color: $white;
+  }
+  .content {
+    background-color: $ltr-blue;
+    @include breakpoint($medium) {
+      background: url("../images/bg-region-content.jpg") $ltr-blue no-repeat center right -200px / contain;
+    }
+    @include breakpoint($large) {
+      background: url("../images/bg-region-content.jpg") $ltr-blue no-repeat center right / contain;
+    }
+    color: $dk-gray;
+  }
+  .content-inner {
+    .left-content-inner {
+      padding-right: 4em;
+    }
+  }
+  .footer {
+    .panel-pane {
+      overflow: auto;
+    }
+  }
+}
+
+.l-errata-wrapper {
+  position: relative;
+  h2 {
+    text-align: center;
+  }
+  .l-region--errata {
+    overflow: auto;
+  }
+}
+
+.l-footer-wrapper {
+  background-color: $dk-blue;
+  color: $white;
+  a {
+    color: $white;
+    &:hover, &.active {
+      color: $lt-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.l-region--footer {
+  .block > ul > li > a {
+    color: $white;
+    font-family: $font-display;
+    &:link, &:visited {
+      color: $white;
+    }
+    &:hover, &.active {
+      color: $lt-blue;
+      text-decoration: none;
+    }
+  }
+  .block--block {
+    bottom: 2px;
+    margin: 0px;
+  }
+}

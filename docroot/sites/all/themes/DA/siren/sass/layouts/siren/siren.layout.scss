@@ -1,0 +1,112 @@
+/*******************************************************************************
+ * siren.layout.scss
+ *
+ * Styles for the Siren layout.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Set breakpoint values.
+$small: 420px;
+$tab  : 768px;
+$menu:  980px;
+$desk : 1200px;
+$large: 1600px;
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 25px;
+$horz-spacing-unit: 1em;
+
+$grids: 4;
+$grids: add-grid(12 at $tab);
+
+$gutters: 1/16;
+
+
+.l-constrained {
+  @include pie-clearfix;
+}
+
+/* Header */
+.l-header {
+  padding-top: 0;
+}
+
+.l-branding {
+  text-align: center;
+  width: 100%;
+}
+
+/* Content Area */
+.l-highlighted-wrapper {
+  padding: $vert-spacing-unit 0;
+}
+.l-region--highlighted {
+  @extend .l-constrained;
+}
+.l-region--help {
+  margin-bottom: $vert-spacing-unit;
+}
+
+/* Sidebars */
+.l-region--sidebar .block {
+  padding: $vert-spacing-unit $horz-spacing-unit;
+  margin-bottom: 4px;
+}
+
+/* Footer */
+.l-footer-wrapper {
+  padding: 3em 0;
+}
+.l-region--footer {
+  @extend .l-constrained;
+}
+
+@include breakpoint($tab, true) {
+  /* Sidebars */
+  .l-content {
+    @include grid-span(8, 1);
+  }
+  .has-no-sidebars .l-content {
+    @include grid-span(12, 1);
+  }
+  .l-region--sidebar {
+    @include grid-span(4, 9);
+    clear: right;
+  }
+}
+
+@include breakpoint($desk, true) {
+  /* Sidebars */
+  .l-content {
+    @include grid-span(8, 1);
+  }
+  .has-no-sidebars .l-content {
+    @include grid-span(12, 1);
+  }
+  .l-region--sidebar {
+    @include grid-span(4, 9);
+    clear: none;
+  }
+}
+
+@include breakpoint($large, true) {
+
+  /* Sidebars */
+  .l-content {
+    @include grid-span(8, 1);
+  }
+  .has-no-sidebars .l-content {
+    @include grid-span(12, 1);
+  }
+  .l-region--sidebar {
+    @include grid-span(4, 9);
+    clear: none;
+  }
+}
+
+.l-content, .has-no-sidebars .l-content {
+  float: none;
+  margin: 0 auto;
+}

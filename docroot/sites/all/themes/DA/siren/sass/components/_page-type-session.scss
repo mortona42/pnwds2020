@@ -1,0 +1,41 @@
+.node-type-session, .node-type-schedule-item, .node-type-bof {
+  .l-content {
+    h1 {
+      margin: 0;
+    }
+    .content {
+      float: none;
+      margin: auto;
+      .page-title {
+        padding-left: 0;
+      }
+      width: 94%;
+      @include breakpoint($large) {
+        max-width: $large;
+      }
+    }
+    .pane-node-field-speakers {
+      color: $dk-green;
+    }
+    .hydra {
+      .top-right-content, .bottom-right-content {
+        .panel-pane {
+          border: 2px solid $dk-blue;
+          padding: 0.75em;
+          margin-bottom: 1em;
+          overflow: auto;
+        }
+        .pane-title {
+          background-color: $dk-blue;
+          color: $lt-gray;
+          font-size: 1.5em;
+          padding: 0.5em 0.75em;
+          margin: 0 0 0.75em 0;
+        }
+      }
+    }
+  }
+  .comment-wrapper {
+    @extend %constrained-width;
+  }
+}

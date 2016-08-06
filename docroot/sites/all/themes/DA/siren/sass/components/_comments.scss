@@ -1,0 +1,121 @@
+.comment-wrapper {
+  h3 {
+    margin: 0.5em 0;
+    a {
+      color: $dk-gray;
+    }
+  }
+  .new {
+    background-color: $dk-green;
+    color: $white;
+    padding: 0 1em;
+  }
+  margin: 2em 0;
+  .comment {
+    background-color: lighten($lt-gray,3%);
+    border: 2px solid $gray;
+    @include border-radius(4px);
+    @include clearfix;
+    margin-bottom: 2em;
+    padding: 2em;
+    text-align: left;
+    footer {
+      float: left;
+      font-size: 0.8em;
+      padding: 1.25em;
+      text-align: center;
+      width: 100%;
+      @include breakpoint($medium) {
+        width: 20%;
+      }
+    }
+    .comment-content {
+      float: left;
+      padding-left: 1em;
+      width: 100%;
+    }
+    .links {
+      width: 100%;
+    }
+  }
+  .comments__form-title {
+    background: none;
+    font-size: 1.8em;
+    margin-top: 4em;
+  }
+  .user-picture img {
+    @include border-radius(10em);
+  }
+  .indented {
+    background: url('../images/indented.svg') left 2em top 3em no-repeat;
+    background-size: 2em 2em;
+    .no-svg & {
+      background-image: url("../images/indented.png");
+    }
+    padding-left: 8em;
+    margin-left: 0;
+    @include breakpoint($medium) {
+      footer {
+        width: 24%;
+      }
+      .comment-content {
+        width: 76%;
+      }
+    }
+  }
+  .comment-form {
+    margin: auto;
+    text-align: left;
+  }
+}
+
+.page-comment .l-content, .page-comment .has-no-sidebars .l-content  {
+  margin: 1em auto;
+  width: 94%;
+  @include breakpoint($large) {
+    max-width: $large;
+    margin: 0 auto;
+  }
+  h3 {
+    margin: 0.5em 0;
+    a {
+      color: $dk-gray;
+    }
+  }
+  .page-title {
+    padding: 0.72em 0;
+  }
+  .comment {
+    background-color: lighten($lt-gray,3%);
+    border: 2px solid $gray;
+    @include border-radius(4px);
+    @include clearfix;
+    margin-bottom: 2em;
+    padding: 2em;
+    text-align: left;
+    footer {
+      float: left;
+      font-size: 0.8em;
+      padding: 1.25em;
+      text-align: center;
+      width: 100%;
+      @include breakpoint($medium) {
+        width: 20%;
+      }
+    }
+    .comment-content {
+      float: left;
+      padding-left: 1em;
+      width: 100%;
+      @include breakpoint($medium) {
+        width: 80%;
+      }
+    }
+    .links {
+      width: 100%;
+    }
+  }
+  .user-picture img {
+    @include border-radius(10em);
+  }
+}

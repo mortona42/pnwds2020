@@ -1,0 +1,126 @@
+.page-node-schedule {
+  .title-region {
+    text-align: center;
+    .button-link {
+      margin-top: 1em;
+      &:hover, &.active {
+        color: $dk-green;
+      }
+    }
+    .panel-pane {
+      clear: both;
+      padding: 0;
+    }
+  }
+  .pane-cod-schedule-menu-pane {
+    margin: 1em 0;
+    padding: 1em 2em;
+    text-align: center;
+    a {
+      margin: 0 0.1em;
+    }
+    ul {
+      font-weight: normal;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        display: inline;
+        list-style-image: none;
+        list-style-type: none;
+      }
+    }
+  }
+  .pane-cod-session-tracks-schedule-session-tracks {
+    @extend %constrained-width;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      float: left;
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0 1% 1% 0;
+      width: 100%;
+      a {
+        font-size: 1.25em;
+        line-height: 1;
+        text-align: center;
+      }
+    }
+  }
+  .view-cod-schedule-content > .view-content {
+    h3 {
+      background-color: transparent;
+      font-weight: normal;
+      text-align: center;
+    }
+    > .timeslot {
+      margin-bottom: 2em;
+      overflow: auto;
+      position: relative;
+      padding: 2em;
+    }
+    .timeslot-content {
+      width: 100%;
+    }
+    .gutter-size {
+      width: 2%;
+    }
+    .schedule-item, .session {
+      background-color: white;
+      border: 1px solid $gray;
+      margin-bottom: 2%;
+      padding: 1em;
+      text-align: center;
+      width: 100%;
+      clear: both;
+      float: left;
+      position: relative;
+    }
+    .session {
+      clear: none;
+      float: none;
+      overflow: auto;
+      padding: 1em 1em 5em 1em;
+      width: 100%;
+      @include breakpoint($medium) {
+        width: 49%
+      }
+      @include breakpoint($large) {
+        width: 31%
+      }
+    }
+    .views-row.session {
+      background-size: cover;
+      background-position: right 40px bottom;
+    }
+    .views-field-name, .views-field-field-speakers, .views-field-ops {
+      background-image: none;
+      clear: both;
+      float: none;
+      height: auto;
+      line-height: 1.25;
+      padding: 0;
+    }
+    .views-field-title {
+      line-height: 1.25;
+      a {
+        color: $dk-blue;
+      }
+    }
+    .views-field-ops {
+      margin: 1em 0 0 0;
+      a {
+        color: $gray-blue;
+      }
+    }
+  }
+}
+
+.view-cod-session-sessions {
+  table {
+    max-width: none;
+    width: 100%;
+  }
+}

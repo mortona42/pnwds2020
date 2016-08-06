@@ -1,0 +1,43 @@
+.page-node-training .l-content {
+  .title-region {
+    max-width: none;
+    padding: 7.25em 0px 1em 1em;
+    margin-top: -4.25em;
+    text-align: center;
+    z-index: -1;
+    h1.page-title {
+      padding: 0px;
+      a {
+        color: $gray;
+      }
+    }
+  }
+  .pane-drupalcon-trainings-panel-pane-2 {
+    h2 {
+      display: inline-block;
+      margin: 1em 0;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  .view-content {
+    text-align: center;
+    > h3 {
+      display: inline-block;
+      margin: 1em 0;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .views-row {
+      background-color: $white;
+      border: 1px solid $dk-gray;
+      overflow: auto;
+      margin-bottom: 1em;
+      padding: 2em;
+      text-align: left;
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
