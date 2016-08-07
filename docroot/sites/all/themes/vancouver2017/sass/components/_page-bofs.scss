@@ -1,0 +1,54 @@
+// .page-node-bofs {
+//   .pane-cod-schedule-menu-pane {
+//     margin: 2em 0px 0 0;
+//     a {
+//       background-color: $white;
+//       border: 1px solid $blue;
+//       @include border-radius(32px);
+//       color: $blue;
+//       display: block;
+//       margin: 0 0.5em;
+//       padding: 0.5em 0.8em;
+//       text-decoration: none;
+//       width: 100%;
+//       @include breakpoint($medium) {
+//         display: inline;
+//       }
+//       &.active {
+//         background-color: $blue;
+//         color: $white;
+//       }
+//       &:hover, &:focus {
+//         background-color: $dk-blue;
+//         border: 1px solid $dk-blue;
+//         color: $white;
+//       }
+//     }
+//   }
+//   .view-cod-bof-schedule-timeslots {
+//     h3 {
+//       color: $blue;
+//     }
+//     .views-field-name {
+//       font-weight: normal;
+//     }
+//     .timeslot {
+//       background-color: $white;
+//       border: none;
+//       margin-bottom: 2em;
+//       padding: 2em;
+//       .timeslot-content > .views-row {
+//         border-bottom: 1px solid $blue;
+//         margin: 0;
+//         padding: 1em 0;
+//       }
+//     }
+//     .views-row {
+//       margin: 2em 0;
+//       .attachment a {
+//         @extend .button-link;
+//         text-align: center;
+//       }
+//     }
+//   }
+// }

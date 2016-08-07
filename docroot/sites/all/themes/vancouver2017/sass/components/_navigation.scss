@@ -1,0 +1,87 @@
+// .l-navigation {
+//   background-color: $dkr-blue;
+//   color: $white;
+//   font-family: $font-body;
+//   font-size: 1em;
+//   height: 3em;
+//   margin-bottom: 0;
+//   padding: 0.25em;
+//   text-transform: uppercase;
+//   a {
+//     color: $white;
+//   }
+//   @include breakpoint($medium) {
+//     .menu {
+//       text-align: center;
+//       > li {
+//         margin-right: 0;
+//         text-align: left;
+//         z-index: 10;
+//         a:link, a:visited {
+//           padding: 0.25em 0.75em 2em 0.75em;
+//           color: $white;
+//           &:hover, &:focus {
+//             color: $lt-blue;
+//           }
+//         }
+//         &:hover, &:focus {
+//           &.expanded > .menu-block > .menu, &.expanded > .menu-block > .menu:hover {
+//             background-color: $white;
+//             border-top: none;
+//             display: block;
+//             font-family: $font-body;
+//             font-size: 1em;
+//             position: absolute;
+//             text-transform: none;
+//             top: 3.4em;
+//             left: 0;
+//             z-index: 6;
+//             li {
+//               border-top: none;
+//               padding: 0.25em 1em;
+//               margin-right: 0;
+//               width: 100%;
+//               &:hover {
+//                 background-color: $blue;
+//                 a {
+//                   color: $white;
+//                 }
+//               }
+//             }
+//             &:before {
+//               border: solid transparent;
+//               border-bottom-color: $white;
+//               border-width: 12px;
+//               bottom: 100%;
+//               left: 20px;
+//               content: " ";
+//               height: 0;
+//               width: 0;
+//               position: absolute;
+//               pointer-events: none;
+//             }
+//             a {
+//               color: $dk-gray;
+//               display: block;
+//               width: 100%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     ul {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+// [id^="block-menu-menu-"] {
+//   width: 73%;
+// }
+
+// #block-system-user-menu {
+//   width: 27%;
+//   li {
+//     float: right;
+//   }
+// }
