@@ -1,0 +1,86 @@
+.l-region--footer {
+  margin: 0 auto;
+  max-width: $large;
+  .block {
+    margin: 0;
+    width: 100%;
+    &:nth-child(2) {
+      text-align: center;
+    }
+    > ul > li {
+      margin: 2em 0;
+      list-style-image: none;
+      list-style-type: none;
+      @include breakpoint($small) {
+        @include grid-span(6);
+        margin-right: 0;
+      }
+      @include breakpoint($large) {
+        @include grid-span(3);
+        margin-right: 0;
+      }
+      > a {
+        font-family: $font-display;
+        font-size: 2em;
+        color: $gray;
+      }
+      &.last {
+        li {
+          a {
+            display: block;
+            float: left;
+            text-indent: -9999px;
+            margin: 0.5em 2em 0.5em 0;
+            height: 25px;
+            width: 25px;
+            @include breakpoint($large) {
+              margin-right: 3em;
+            }
+          }
+          a[href*="facebook"] {
+            background: url("../images/social/facebook.png") transparent center center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          a[href*="flickr"] {
+            background: url("../images/social/flickr.png") transparent center center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          a[href*="twitter"] {
+            background: url("../images/social/twitter.png") transparent center center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          a[href*="subscribe"] {
+            background: url("../images/social/newsletter.png") transparent center center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          a[href*="rss"] {
+            background: url("../images/social/rss.png") transparent center center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  ul {
+    margin: 0 0 2em 0;
+    padding: 0;
+    .leaf {
+      list-style-image: none;
+      list-style-type: none;
+      }
+
+    }
+  }
+  .block__content {
+    clear: both;
+  }
+}

@@ -1,0 +1,76 @@
+form fieldset {
+  border: none;
+  border-bottom: 1px solid $gray;
+  padding: 1.5em 0;
+  margin: 2em 0;
+}
+
+button, input, optgroup, select, textarea {
+  border: 1px solid lighten($gray,30%);
+  @include border-radius(4px);
+  padding: 0.4em 0.6em;
+  width: 100%;
+  &.minute, &.hour, &.month, &.day, &.year, &.hasDatepicker {
+    width: auto;
+  }
+}
+
+input[value="Save"], input[value="Add another item"], input[value="Upload"] {
+  background-color: $green;
+  &:hover {
+    background-color: darken($green,8%);
+  }
+}
+
+input[value="Remove"] {
+  background-color: #b83326;
+  &:hover {
+    background-color: darken(#b83326,8%);
+  }
+}
+
+input[value="Upload"] {
+  @include border-radius-multi(0, 4px, 4px, 0);
+  padding: 0.4em 0.75em 0.6em 0.75em;
+}
+
+.form-file {
+  @include border-radius-multi(4px,0,0,4px);
+}
+
+.form-submit {
+  @include border-radius(4px);
+  background-color: lighten($gray,14%);
+  color: $white;
+  margin-right: 0.6em;
+  width: auto;
+  &:hover {
+    background-color: $gray;
+    color: $white;
+    text-decoration: none;
+  }
+  .active {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+    @include border-radius(4px);
+  }
+}
+
+.form-checkbox, .form-radio, .form-file {
+  width: auto;
+}
+
+.filter-guidelines, .filter-wrapper .form-item {
+  padding: 1em 0;
+}
+
+html.js .form-autocomplete,
+html.js input.form-autocomplete {
+  background: url('../images/throbber.gif') $white no-repeat;
+  background-position: 98% -62px;
+}
+
+html.js input.throbbing {
+  background-position: 98% 9px;
+}

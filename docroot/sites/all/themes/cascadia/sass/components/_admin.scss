@@ -1,0 +1,47 @@
+body.cke_editable {
+  background-color: $white;
+}
+
+#edit-field-event-tickets {
+  background-color: transparent;
+  th, tr.odd, tr.even, td {
+    background-color: transparent;
+  }
+}
+
+.messages {
+  margin: 1em auto;
+  width: 94%;
+  @include breakpoint($large) {
+    max-width: $large;
+    margin: 0 auto;
+  }
+}
+
+.page-node-webform {
+  .l-content {
+    max-width: $large;
+  }
+}
+
+.webform-confirmation {
+  margin: 1em auto;
+  width: 94%;
+  @include breakpoint($large) {
+    max-width: $large;
+    margin: 0 auto;
+  }
+}
+
+.links {
+  padding: 0.72em 0px;
+  margin: auto;
+  width: 94%;
+  @include breakpoint($large) {
+    max-width: $large;
+  }
+}
+
+.action-links {
+  @extend %constrained-width;
+}

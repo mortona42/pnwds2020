@@ -1,0 +1,98 @@
+.orion {
+  .header {
+    background-color: $dk-blue;
+    color: $white;
+    padding-bottom: 175px;
+    padding-top: 2em;
+    a {
+      color: $lt-blue;
+    }
+    .left-header {
+      @include breakpoint(0 $medium) {
+        clear: both;
+        width: 100%;
+      }
+      .pane-title {
+        color: $lt-blue;
+      }
+      .more-link {
+        text-align: left;
+        a {
+          background-color: transparent;
+          border: 2px solid #BE2626;
+          display: inline-block;
+          font-size: 1.4em;
+          padding: 0.4em 1em;
+          text-decoration: none;
+          border-color: $blue;
+          color: $blue;
+          &:hover, &:focus {
+            background-color: $blue;
+            color: $dk-blue;
+          }
+          &.active {
+            color: $dk-blue;
+            background-color: $blue;
+            border-color: $blue;
+          }
+        }
+      }
+    }
+    .right-header {
+      color: $blue;
+      padding: 1em;
+      @include breakpoint(0 $medium) {
+        clear: both;
+        padding: 1em 0;
+        width: 100%;
+      }
+      h2 {
+        color: $white;
+      }
+    }
+    .pane-title a {
+      color: $gray;
+    }
+    img {
+      border: 4px solid $lt-gray;
+    }
+    .button-link {
+      border-color: $blue;
+      color: $blue;
+      &:hover, &:focus {
+        background-color: $blue;
+        color: $dk-blue;
+      }
+      &.active {
+        color: $dk-blue;
+        background-color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+  .preface {
+    background-color: $dk-green;
+    color: lighten($green, 30%);
+    a {
+      color: lighten($green, 15%);
+    }
+    .pane-title {
+      //text-align: center;
+    }
+    .button-link {
+      border: 2px solid lighten($green, 15%);
+    }
+    .button-link:hover {
+      background-color: lighten($green, 15%);
+      color: $dk-green;
+    }
+
+  }
+  .footer {
+    color: $gray;
+    .pane-title {
+      color: $dk-gray;
+      margin-top: 1em;
+    }
+  }
+}

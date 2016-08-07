@@ -1,0 +1,18 @@
+.page-ticket-register {
+  .profile-details {
+    display: none;
+  }
+  .registration-data-toggle {
+    font-size: 0.8em;
+    margin-bottom: 1.8em;
+    background-color: $lt-gray;
+  }
+  .ticket-register-form {
+    & > div > fieldset > legend {
+      font-size: 1.4em;
+    }
+  }
+  select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+#edit-back, #edit-cancel {
+  @extend .form-submit;
+  border: 2px solid $gray-blue;
+  color: $gray-blue;
+  margin-left: 0.6em;
+  padding: 0.4em 0.6em;
+  &:hover, &:focus {
+    background-color: $gray-blue;
+    color: $white;
+    text-decoration: none;
+  }
+  &.active {
+    color: $white;
+    background-color: $lt-gray;
+    border-color: $lt-gray;
+  }
+}
+
+.page-checkout {
+  table.checkout-review {
+    border: none;
+    margin-top: 1em;
+    tr:nth-child(2n) {
+      background-color: $white;
+    }
+    table {
+      border: none;
+    }
+  }
+}

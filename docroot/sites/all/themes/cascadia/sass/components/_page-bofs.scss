@@ -1,0 +1,71 @@
+.page-node-bofs {
+  .title-region {
+    text-align: center;
+    .panel-pane {
+      clear: both;
+      padding: 0;
+    }
+  }
+  .pane-cod-schedule-menu-pane {
+    margin: 2em 0;
+    padding: 2em;
+    text-align: center;
+    a {
+      color: $dk-blue;
+      margin: 0 0.1em;
+      padding: 0.15em 0.3em;
+      &:hover {
+        color: $gray-blue;
+        text-decoration: none;
+      }
+      &.active {
+        background-color: $dk-green;
+        color: $lt-gray;
+      }
+    }
+    ul {
+      font-weight: normal;
+      margin: 0;
+      text-align: center;
+      li {
+        display: inline;
+        list-style-image: none;
+        list-style-type: none;
+      }
+    }
+  }
+  .view-cod-bof-schedule-timeslots {
+    .timeslot {
+      background-color: $white;
+      border: 1px solid $gray;
+      margin-bottom: 2em;
+      padding: 2em;
+      .timeslot-content > .views-row {
+        border-bottom: 1px solid $gray;
+        margin: 2em 0;
+        padding: 2em 0;
+      }
+    }
+    h3 {
+      font-size: 2.4em;
+      font-weight: normal;
+      color: $dk-blue;
+      text-align: center;
+    }
+    .views-row {
+      margin: 2em 0;
+      .attachment a {
+        @extend .button-link;
+        text-align: center;
+        a:hover {
+          color: $lt-gray;
+        }
+      }
+    }
+    .views-field-name {
+      font-size: 1.25em;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
