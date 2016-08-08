@@ -1,14 +1,21 @@
-@import url(//fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,400italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,500);
 
 body {
-  font-family: $font-body;
-  font-size: 18px;
-  line-height: 1.556;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-display;
-  font-weight: 300;
+  font-family: $alt-font-family;
+  font-weight: 700;
+  margin: 0 0 1em;
+  a {
+    text-decoration: none;
+  }
 }
 
 h1 {
@@ -30,4 +37,29 @@ h4, h5, h6 {
   font-size: 1.4em;
   line-height: 1.037;
   text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($link-color, 25%);
+    text-decoration: none;
+  }
+}
+
+hr {
+  border-bottom: $form-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 20px 0;
 }

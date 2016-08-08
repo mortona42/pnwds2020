@@ -1,13 +1,5 @@
 body {
-  background-color: $lt-gray;
   background-image: none;
-  a {
-    color: $dk-blue;
-    text-decoration: none;
-    &:hover, &:active {
-      text-decoration: underline;
-    }
-  }
 }
 
 .l-main-wrapper .l-constrained {

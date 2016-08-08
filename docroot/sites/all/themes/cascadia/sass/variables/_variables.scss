@@ -1,0 +1,57 @@
+// Breakpoints
+$small:     420px;
+$mid-small: 600px;
+$medium:    770px;
+$large:     1100px;
+$full:      1350px;
+
+// Colors
+$white:     #fff;
+$lt-gray:   #9A9A9A;
+$gray:      #6a7076;
+$dk-gray:   #303030;
+
+// Action Colors
+// $success: 
+// $warning  
+// $error:   
+
+// Brand Colors
+$green:     #6ca439;
+$dk-green:  #36521d;
+$lt-blue:   #c9ecff;
+$blue:      #59afe1;
+$dk-blue:   #356785;
+$lt-gray-blue: #8b96b2;
+$gray-blue: #4d5770;
+
+// Typography
+$base-font-family: 'Roboto', sans-serif;
+$alt-font-family:  'Roboto Condensed', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.6;
+$base-font-color: $dk-gray;
+
+$link-color: #000;
+
+// Animation
+$base-duration: 0.2;
+$base-timing: ease-in-out;
+
+// Forms
+$form-background-color: #F9F9F9;
+
+$form-border-color: #979797;
+$form-border-size: 1px;
+$form-border-style: solid;
+$form-border: $form-border-size $form-border-style $form-border-color;
+
+$form-border-radius: 0px;
+
+$form-box-shadow: none;
+$form-box-shadow-focus: none;
+
+// Legacy support
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: true;
+$legacy-support-for-ie8: true;
