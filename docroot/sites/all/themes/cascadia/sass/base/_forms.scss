@@ -1,76 +1,179 @@
-form fieldset {
-  border: none;
-  border-bottom: 1px solid $gray;
-  padding: 1.5em 0;
-  margin: 2em 0;
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-button, input, optgroup, select, textarea {
-  border: 1px solid lighten($gray,30%);
-  @include border-radius(4px);
-  padding: 0.4em 0.6em;
+legend {
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-family: $alt-font-family;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  appearance: none;
+  background-color: $form-background-color;
+  border: $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 8px;
+  //transition: border-color $base-duration $base-timing;
   width: 100%;
-  &.minute, &.hour, &.month, &.day, &.year, &.hasDatepicker {
-    width: auto;
-  }
-}
 
-input[value="Save"], input[value="Add another item"], input[value="Upload"] {
-  background-color: $green;
   &:hover {
-    background-color: darken($green,8%);
+    border-color: shade($form-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: shade($form-border-color, 50%);
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($form-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $form-border;
+    }
+  }
+
+  &::placeholder {
+    color: $gray;
   }
 }
 
-input[value="Remove"] {
-  background-color: #b83326;
-  &:hover {
-    background-color: darken(#b83326,8%);
-  }
+textarea {
+  resize: vertical;
 }
 
-input[value="Upload"] {
-  @include border-radius-multi(0, 4px, 4px, 0);
-  padding: 0.4em 0.75em 0.6em 0.75em;
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 5px;
 }
 
-.form-file {
-  @include border-radius-multi(4px,0,0,4px);
+[type="file"] {
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.form-submit {
-  @include border-radius(4px);
-  background-color: lighten($gray,14%);
-  color: $white;
-  margin-right: 0.6em;
-  width: auto;
-  &:hover {
-    background-color: $gray;
-    color: $white;
-    text-decoration: none;
-  }
-  .active {
-    color: $white;
-    background-color: $green;
-    border-color: $green;
-    @include border-radius(4px);
-  }
+select {
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.form-checkbox, .form-radio, .form-file {
-  width: auto;
+.description {
+  color: $lt-gray;
+  font-style: italic;
+  font-size: 0.85em;
 }
 
-.filter-guidelines, .filter-wrapper .form-item {
-  padding: 1em 0;
-}
 
-html.js .form-autocomplete,
-html.js input.form-autocomplete {
-  background: url('../images/throbber.gif') $white no-repeat;
-  background-position: 98% -62px;
-}
+// form fieldset {
+//   border: none;
+//   border-bottom: 1px solid $gray;
+//   padding: 1.5em 0;
+//   margin: 2em 0;
+// }
 
-html.js input.throbbing {
-  background-position: 98% 9px;
-}
+// button, input, optgroup, select, textarea {
+//   border: 1px solid lighten($gray,30%);
+//   @include border-radius(4px);
+//   padding: 0.4em 0.6em;
+//   width: 100%;
+//   &.minute, &.hour, &.month, &.day, &.year, &.hasDatepicker {
+//     width: auto;
+//   }
+// }
+
+// input[value="Save"], input[value="Add another item"], input[value="Upload"] {
+//   background-color: $green;
+//   &:hover {
+//     background-color: darken($green,8%);
+//   }
+// }
+
+// input[value="Remove"] {
+//   background-color: #b83326;
+//   &:hover {
+//     background-color: darken(#b83326,8%);
+//   }
+// }
+
+// input[value="Upload"] {
+//   @include border-radius-multi(0, 4px, 4px, 0);
+//   padding: 0.4em 0.75em 0.6em 0.75em;
+// }
+
+// .form-file {
+//   @include border-radius-multi(4px,0,0,4px);
+// }
+
+// .form-submit {
+//   @include border-radius(4px);
+//   background-color: lighten($gray,14%);
+//   color: $white;
+//   margin-right: 0.6em;
+//   width: auto;
+//   &:hover {
+//     background-color: $gray;
+//     color: $white;
+//     text-decoration: none;
+//   }
+//   .active {
+//     color: $white;
+//     background-color: $green;
+//     border-color: $green;
+//     @include border-radius(4px);
+//   }
+// }
+
+// .form-checkbox, .form-radio, .form-file {
+//   width: auto;
+// }
+
+// .filter-guidelines, .filter-wrapper .form-item {
+//   padding: 1em 0;
+// }
+
+// html.js .form-autocomplete,
+// html.js input.form-autocomplete {
+//   background: url('../images/throbber.gif') $white no-repeat;
+//   background-position: 98% -62px;
+// }
+
+// html.js input.throbbing {
+//   background-position: 98% 9px;
+// }

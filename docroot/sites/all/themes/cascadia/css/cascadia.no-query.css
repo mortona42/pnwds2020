@@ -87,91 +87,212 @@ body {
     .l-footer-wrapper a:hover, .l-footer-wrapper a.active {
       color: #356785; }
 
-form fieldset {
-  border: none;
-  border-bottom: 1px solid #6a7076;
-  padding: 1.5em 0;
-  margin: 2em 0; }
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: none;
+  background-color: #00874b;
+  border: 0;
+  border-radius: 0px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2 ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  button:hover, button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: #006c3c;
+    color: #fff; }
+  button:disabled,
+  input[type="button"]:disabled,
+  input[type="reset"]:disabled,
+  input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    button:disabled:hover,
+    input[type="button"]:disabled:hover,
+    input[type="reset"]:disabled:hover,
+    input[type="submit"]:disabled:hover {
+      background-color: #00874b; }
 
-button, input, optgroup, select, textarea {
-  border: 1px solid #b9bdc0;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0.4em 0.6em;
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 0; }
+
+label {
+  display: block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+select,
+textarea {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  appearance: none;
+  background-color: #f9f9f9;
+  border: 1px solid #979797;
+  border-radius: 0px;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 8px;
   width: 100%; }
-  button.minute, button.hour, button.month, button.day, button.year, button.hasDatepicker, input.minute, input.hour, input.month, input.day, input.year, input.hasDatepicker, optgroup.minute, optgroup.hour, optgroup.month, optgroup.day, optgroup.year, optgroup.hasDatepicker, select.minute, select.hour, select.month, select.day, select.year, select.hasDatepicker, textarea.minute, textarea.hour, textarea.month, textarea.day, textarea.year, textarea.hasDatepicker {
-    width: auto; }
+  input[type="color"]:hover,
+  input[type="date"]:hover,
+  input[type="datetime"]:hover,
+  input[type="datetime-local"]:hover,
+  input[type="email"]:hover,
+  input[type="month"]:hover,
+  input[type="number"]:hover,
+  input[type="password"]:hover,
+  input[type="search"]:hover,
+  input[type="tel"]:hover,
+  input[type="text"]:hover,
+  input[type="time"]:hover,
+  input[type="url"]:hover,
+  input[type="week"]:hover,
+  input:not([type]):hover,
+  select:hover,
+  textarea:hover {
+    border-color: #787878; }
+  input[type="color"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="email"]:focus,
+  input[type="month"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="week"]:focus,
+  input:not([type]):focus,
+  select:focus,
+  textarea:focus {
+    border-color: #4b4b4b;
+    box-shadow: none;
+    outline: none; }
+  input[type="color"]:disabled,
+  input[type="date"]:disabled,
+  input[type="datetime"]:disabled,
+  input[type="datetime-local"]:disabled,
+  input[type="email"]:disabled,
+  input[type="month"]:disabled,
+  input[type="number"]:disabled,
+  input[type="password"]:disabled,
+  input[type="search"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="text"]:disabled,
+  input[type="time"]:disabled,
+  input[type="url"]:disabled,
+  input[type="week"]:disabled,
+  input:not([type]):disabled,
+  select:disabled,
+  textarea:disabled {
+    background-color: #ececec;
+    cursor: not-allowed; }
+    input[type="color"]:disabled:hover,
+    input[type="date"]:disabled:hover,
+    input[type="datetime"]:disabled:hover,
+    input[type="datetime-local"]:disabled:hover,
+    input[type="email"]:disabled:hover,
+    input[type="month"]:disabled:hover,
+    input[type="number"]:disabled:hover,
+    input[type="password"]:disabled:hover,
+    input[type="search"]:disabled:hover,
+    input[type="tel"]:disabled:hover,
+    input[type="text"]:disabled:hover,
+    input[type="time"]:disabled:hover,
+    input[type="url"]:disabled:hover,
+    input[type="week"]:disabled:hover,
+    input:not([type]):disabled:hover,
+    select:disabled:hover,
+    textarea:disabled:hover {
+      border: 1px solid #979797; }
+  input[type="color"]::placeholder,
+  input[type="date"]::placeholder,
+  input[type="datetime"]::placeholder,
+  input[type="datetime-local"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="month"]::placeholder,
+  input[type="number"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="search"]::placeholder,
+  input[type="tel"]::placeholder,
+  input[type="text"]::placeholder,
+  input[type="time"]::placeholder,
+  input[type="url"]::placeholder,
+  input[type="week"]::placeholder,
+  input:not([type])::placeholder,
+  select::placeholder,
+  textarea::placeholder {
+    color: #6a7076; }
 
-input[value="Save"], input[value="Add another item"], input[value="Upload"] {
-  background-color: #6ca439; }
-  input[value="Save"]:hover, input[value="Add another item"]:hover, input[value="Upload"]:hover {
-    background-color: #58862e; }
+textarea {
+  resize: vertical; }
 
-input[value="Remove"] {
-  background-color: #b83326; }
-  input[value="Remove"]:hover {
-    background-color: #962a1f; }
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 5px; }
 
-input[value="Upload"] {
-  -moz-border-radius: 0 4px 4px 0;
-  -webkit-border-radius: 0 4px 4px 0;
-  -o-border-radius: 0 4px 4px 0;
-  -ms-border-radius: 0 4px 4px 0;
-  -khtml-border-radius: 0 4px 4px 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0.4em 0.75em 0.6em 0.75em; }
+[type="file"] {
+  margin-bottom: 10px;
+  width: 100%; }
 
-.form-file {
-  -moz-border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  -ms-border-radius: 4px 0 0 4px;
-  -khtml-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px; }
+select {
+  margin-bottom: 10px;
+  width: 100%; }
 
-.form-submit, #edit-back, #edit-cancel {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #8e9499;
-  color: white;
-  margin-right: 0.6em;
-  width: auto; }
-  .form-submit:hover, #edit-back:hover, #edit-cancel:hover {
-    background-color: #6a7076;
-    color: white;
-    text-decoration: none; }
-  .form-submit .active, #edit-back .active, #edit-cancel .active {
-    color: white;
-    background-color: #6ca439;
-    border-color: #6ca439;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    border-radius: 4px; }
-
-.form-checkbox, .form-radio, .form-file {
-  width: auto; }
-
-.filter-guidelines, .filter-wrapper .form-item {
-  padding: 1em 0; }
-
-html.js .form-autocomplete,
-html.js input.form-autocomplete {
-  background: url("../images/throbber.gif") white no-repeat;
-  background-position: 98% -62px; }
-
-html.js input.throbbing {
-  background-position: 98% 9px; }
+.description {
+  color: #9a9a9a;
+  font-style: italic;
+  font-size: 0.85em; }
 
 menu, ol, ul {
   padding-left: 18px; }
