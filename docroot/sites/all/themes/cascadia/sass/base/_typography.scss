@@ -63,3 +63,29 @@ hr {
   border-top: 0;
   margin: 20px 0;
 }
+
+menu, ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  background-color: $dk-white;
+  border-left: solid 8px $primary-color;
+  margin: 1em 0;
+  padding: 30px;
+}
+
+/**
+ ** Typography for textareas. Some defaults need to be re-applied.
+ */
+
+.field--type-text-with-summary {
+  ol, ul {
+    list-style: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 18px;
+  }
+}

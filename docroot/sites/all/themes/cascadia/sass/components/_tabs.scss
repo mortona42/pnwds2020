@@ -1,0 +1,54 @@
+.tabs--primary {
+  padding-top: 1em;
+}
+
+.tabs--primary, .tabs--secondary {
+  border-bottom: solid 1px #CCC;
+  margin-bottom: 0;
+  font-family: $alt-font-family;
+  font-weight: 500;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  li {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: -1px;
+  }
+  a {
+    //@include border-radius-multi(0,0,0,0);
+    background-color: transparent;
+    border-bottom: 0px solid #CCC;
+    padding: 5px 0;
+    transition: border $base-duration $base-timing;
+    &:hover, &:focus {
+      border-width: 2px;
+      background-color: transparent;
+      //color: $white;
+      //text-decoration: none;
+    }
+  }
+  a.active {
+    border-width: 3px;
+    border-color: #000;
+    //color: $white;
+    //background-color: $green;
+    //border-color: $green;
+    //@include border-radius-multi(0,0,0,0);
+  }
+}
+
+.tabs--secondary {
+  a {
+    border: 2px solid $lt-blue;
+    color: $dk-blue;
+    &:hover, &:focus {
+      background-color: $lt-blue;
+      color: $dk-blue;
+    }
+  }
+  a.active {
+    color: $dk-blue;
+    background-color: $lt-blue;
+    border-color: $lt-blue;
+  }
+}

@@ -14,8 +14,9 @@ legend {
 label {
   display: block;
   font-family: $alt-font-family;
-  font-weight: 300;
-  margin-bottom: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-bottom: 1px;
   text-transform: uppercase;
 }
 
@@ -47,7 +48,7 @@ textarea {
   box-sizing: border-box;
   margin-bottom: 5px;
   padding: 8px;
-  //transition: border-color $base-duration $base-timing;
+  transition: border-color $base-duration $base-timing;
   width: 100%;
 
   &:hover {
@@ -97,9 +98,12 @@ select {
 .description {
   color: $lt-gray;
   font-style: italic;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 
+/**
+ ** Legacy reference from Siren theme. @TODO: Delete when theme is finalized.
+ */
 
 // form fieldset {
 //   border: none;
