@@ -2,6 +2,31 @@
   padding-top: 1em;
 }
 
+// Reference from Siren theme. @TODO: remove if not needed.
+// .tabs--primary {
+//   border-bottom: none;
+//   margin-bottom: 0;
+//   li {
+//     float: left;
+//     margin-right: 0;
+//   }
+//   a {
+//     @include border-radius-multi(6px,6px,0,0);
+//     background-color: lighten($lt-blue,26%);
+//     &:hover {
+//       background-color: lighten($lt-blue,20%);
+//       text-decoration: none;
+//     }
+//   }
+//   .active {
+//     color: #000000;
+//   }
+//   a.active {
+//     background-color: $white;
+//     @include border-radius-multi(6px,6px,0,0);
+//   }
+// }
+
 .tabs--primary, .tabs--secondary {
   border-bottom: solid 1px #CCC;
   margin-bottom: 0;
@@ -9,31 +34,29 @@
   font-weight: 500;
   font-size: 0.9em;
   text-transform: uppercase;
+
   li {
     float: left;
     margin-right: 30px;
     margin-bottom: -1px;
   }
+
   a {
-    //@include border-radius-multi(0,0,0,0);
     background-color: transparent;
     border-bottom: 0px solid #CCC;
     padding: 5px 0;
     transition: border $base-duration $base-timing;
+
     &:hover, &:focus {
       border-width: 2px;
       background-color: transparent;
-      //color: $white;
-      //text-decoration: none;
     }
-  }
-  a.active {
-    border-width: 3px;
-    border-color: #000;
-    //color: $white;
-    //background-color: $green;
-    //border-color: $green;
-    //@include border-radius-multi(0,0,0,0);
+
+    &.active {
+      background-color: transparent;
+      border-width: 3px;
+      border-color: #000;
+    }
   }
 }
 

@@ -7,11 +7,13 @@ body {
   font-size: $base-font-size;
   font-weight: 300;
   line-height: $base-line-height;
+  letter-spacing: 0.03em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $alt-font-family;
   font-weight: 700;
+  line-height: $heading-line-height;
   margin: 0 0 1em;
   a {
     text-decoration: none;
@@ -19,24 +21,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5em;
-  line-height: 1.012;
+  font-size: 4em;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 2em;
-  line-height: 1.051;
+  font-size: 3em;
+  line-height: 1.1;
 }
 
 h3 {
-  font-size: 1.65em;
-  line-height: 1.0625;
+  font-size: 2em;
 }
 
-h4, h5, h6 {
-  font-size: 1.4em;
-  line-height: 1.037;
-  text-transform: uppercase;
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.2em;
 }
 
 p {
@@ -51,7 +54,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($link-color, 25%);
+    color: lighten($link-color, 15%);
     text-decoration: none;
   }
 }
@@ -81,11 +84,26 @@ blockquote {
  ** Typography for textareas. Some defaults need to be re-applied.
  */
 
-.field--type-text-with-summary {
+.field--full-html {
+
   ol, ul {
-    list-style: disc;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  ol {
+    list-style-type: decimal;
     padding-left: 18px;
   }
+
+  ul {
+    padding-left: 8px;
+    li {
+      text-indent: -8px;
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+
 }

@@ -11,7 +11,7 @@
 $small: 420px;
 $tab  : 768px;
 $menu:  980px;
-$desk : 1200px;
+$desk : 1280px;
 $large: 1600px;
 
 // Set consistent vertical and horizontal spacing units.
@@ -25,7 +25,11 @@ $gutters: 1/16;
 
 
 .l-constrained {
-  @include pie-clearfix;
+  margin: 0 auto;
+  width: 94%;
+  @include breakpoint($desk) {
+    max-width: $desk;
+  }
 }
 
 /* Header */
@@ -43,7 +47,7 @@ $gutters: 1/16;
   padding: $vert-spacing-unit 0;
 }
 .l-region--highlighted {
-  @extend .l-constrained;
+  //@extend .l-constrained;
 }
 .l-region--help {
   margin-bottom: $vert-spacing-unit;
@@ -60,7 +64,7 @@ $gutters: 1/16;
   padding: 3em 0;
 }
 .l-region--footer {
-  @extend .l-constrained;
+  //@extend .l-constrained;
 }
 
 @include breakpoint($tab, true) {

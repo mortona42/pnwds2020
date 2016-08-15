@@ -22,21 +22,15 @@ body {
   padding: 1em 0;
 }
 
-.l-main-wrapper .container-inner {
+.l-main {
   @extend %constrained-width;
 }
 
-.no-panels-layout .l-main-wrapper {
-  .administrative, .l-content {
-    @extend %constrained-width;
-  }
-}
-
-.l-header-inner {
-  margin: 0 auto;
-  position: relative;
-  z-index: 5;
-}
+// .no-panels-layout .l-main-wrapper {
+//   .administrative, .l-content {
+//     @extend %constrained-width;
+//   }
+// }
 
 .location-action {
   display: none;
@@ -46,9 +40,9 @@ body {
   margin-bottom: 1em;
 }
 
-.panels-layout .page-title {
-  @extend %constrained-width;
-}
+// .panels-layout .page-title {
+//   @extend %constrained-width;
+// }
 
 .not-front .l-content {
   background-color: transparent;

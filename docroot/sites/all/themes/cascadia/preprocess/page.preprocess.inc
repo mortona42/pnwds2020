@@ -1,5 +1,9 @@
 <?php
 
+/**
+* Implements hook_preprocess_page().
+*/
+
 function cascadia_preprocess_page(&$vars) {
   if(arg(2) == 'schedule') {
     drupal_add_js('/sites/all/libraries/isotope/isotope.pkgd.min.js', 'file');

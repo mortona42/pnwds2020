@@ -1,0 +1,25 @@
+.l-header {
+  @extend %constrained-width;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include pie-clearfix;
+
+  .l-branding {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 120px);
+    @include breakpoint($menu-full) {
+      width: 255px;
+    }
+  }
+
+  .l-header-content {
+    display: inline-block;
+    float: right;
+    width: 100px;
+    @include breakpoint($menu-full) {
+      width: calc(100% - 275px);
+    }
+  }
+
+}

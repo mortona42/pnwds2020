@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Theme settings file for the Yggdrasil theme.
+ * Theme settings file for the Cascadia theme.
  */
 
 require_once dirname(__FILE__) . '/template.php';

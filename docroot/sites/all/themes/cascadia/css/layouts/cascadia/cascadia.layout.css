@@ -3,12 +3,12 @@
  *
  * Styles for the Cascadia layout.
  ******************************************************************************/
-.l-constrained, .l-region--highlighted, .l-region--footer {
-  *zoom: 1; }
-  .l-constrained:after, .l-region--highlighted:after, .l-region--footer:after {
-    content: "";
-    display: table;
-    clear: both; }
+.l-constrained {
+  margin: 0 auto;
+  width: 94%; }
+  @media (min-width: 1280px) {
+    .l-constrained {
+      max-width: 1280px; } }
 
 /* Header */
 .l-header {
@@ -57,7 +57,7 @@
     margin-right: 0;
     clear: none;
     clear: right; } }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   /* Sidebars */
   .l-content {
     width: 66.50246%;

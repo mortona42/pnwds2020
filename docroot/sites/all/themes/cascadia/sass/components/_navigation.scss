@@ -1,230 +1,366 @@
-.l-region--navigation {
-  .menu {
-    padding-left: 0;
-    a {
-      text-decoration: none;
-    }
-    li {
-      display: inline;
-      font-size: 0.88em;
-      list-style-image: none;
-      padding: 8px 12px;
-      white-space: nowrap;
-    }
-    .expanded .menu {
-      display: none;
-    }
-  }
-}
-
-.mean-container .mean-bar {
-  background: $gray 20px 11px no-repeat;
-  float: left;
-  min-height: 40px;
-  padding: 6px 0 0 0;
-  position: absolute;
-  width: 100%;
-  z-index: 999999;
-}
-.mean-container .mean-nav {
-  background: none repeat scroll 0 0 $white;
-  float: left;
-  margin-top: 40px;
-  width: 100%;
-  ul li {
-    a {
-      border-bottom: 1px solid $lt-gray;
-      color: $gray;
-      display: block;
-      float: left;
-      margin: 0;
-      padding: 1em 5%;
-      text-align: left;
-      text-decoration: none;
-      text-transform: none;
-      width: 90%;
-    }
-    a.mean-expand {
-      background: url(../images/expand.gif) transparent center center no-repeat;
-      &:hover {
-        background: url(../images/expand.gif) transparent center center no-repeat;
-      }
-      &.mean-clicked {
-        background: url(../images/collapse.gif) transparent center center no-repeat;
-      }
-    }
-    li {
-      background-color: $lt-gray;
-      &:first-child {
-        border-top: 1px solid darken($lt-gray,10%);
-      }
-      a {
-        border-bottom: 1px solid darken($lt-gray,10%);
-        padding: 1em 7%;
-        width: 86%;
-      }
-    }
-  }
-}
-.mean-nav > ul > li:last-child {
-  background-color: $blue;
-  a {
-    color: $white;
-    text-align: center;
-  }
-}
-.mean-container .l-region--preface .menu {
-  display: none;
-}
-
-.l-region--preface .menu {
-  padding-left: 0;
-  li {
-    background-color: $lt-gray;
-    display: inline;
-    font-size: 0.84em;
-    list-style-image: none;
-    list-style: none;
-    padding: 10px 12px;
-    &:hover {
-      background-color: $blue;
-      a:link, a:visited {
-        color: $white;
-      }
-    }
-    a {
-      text-decoration: none;
-      &:link, &:visited {
-        color: $gray;
-      }
-    }
-  }
-}
-
-.tabs--primary {
-  border-bottom: none;
-  margin-bottom: 0;
-  li {
-    float: left;
-    margin-right: 0;
-  }
-  a {
-    @include border-radius-multi(6px,6px,0,0);
-    background-color: lighten($lt-blue,26%);
-    &:hover {
-      background-color: lighten($lt-blue,20%);
-      text-decoration: none;
-    }
-  }
-  .active {
-    color: #000000;
-  }
-  a.active {
-    background-color: $white;
-    @include border-radius-multi(6px,6px,0,0);
-  }
-}
-
 .l-navigation {
-  background-color: $lt-blue;
+  background-color: $primary-color;
   font-family: $alt-font-family;
-  font-size: 1.4em;
-  height: 2.45em;
+  font-size: 1.3em;
   margin-bottom: 1em;
-  .l-constrained {
-    @extend %constrained-width;
-  }
-  a {
-    color: $dk-blue;
-  }
-  @include breakpoint($medium) {
-    .menu > li {
-      display: block;
-      float: left;
-      position: relative;
-      a {
-        display: block;
-        padding: 0.2em 0 1.4em 0;
-      }
-      &:hover {
-        a {
-          color: lighten($dk-blue,15%);
-        }
-        &.expanded > .menu-block > .menu, &.expanded > .menu-block > .menu:hover {
-          background-color: $dk-green;
-          display: block;
-          font-family: $base-font-family;
-          font-size: 1em;
-          position: absolute;
-          top: 3em;
-          z-index: 6;
-          &:before {
-            border: solid transparent;
-            border-bottom-color: $dk-green;
-            border-width: 12px;
-            bottom: 100%;
-            left: 20px;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+
+  // Level 1
+  .menu {
+    text-align: right;
+    padding: 20px 0;
+
+    > li {
+      list-style: none;
+      padding: 10px 0;
+      white-space: nowrap;
+
+      &.collapsed {
+        > a {
+          &:after {
+            display: inline-block;
+            content: '';
+            width: 28px;
+            height: 15px;
+            margin-right: -48px;
+            margin-left: 20px;
+            background-image: url(../images/cascadia-icon-sprite.png);
+            background-position: left -150px;
           }
-          li {
-            border-top: none;
-            padding: 0;
-            margin-right: 0;
-            width: 100%;
-            &:hover {
-              background-color: $dk-blue;
+        }
+      }
+
+      &.expanded {
+        > a {
+          &:after {
+            display: inline-block;
+            content: '';
+            width: 28px;
+            height: 15px;
+            margin-right: -48px;
+            margin-left: 20px;
+            background-image: url(../images/cascadia-icon-sprite.png);
+            background-position: left -200px;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      color: #FFF;
+      line-height: 1.6em;
+      text-decoration: none;
+      margin-right: 65px;
+    }
+
+  }
+
+  // Level 2
+  .menu > li > .menu {
+    // @TODO: impliment toggle
+    display: none;
+    margin-top: 10px;
+    font-size: 0.85em;
+
+    > li {
+      margin-right: 0;
+    }
+
+  }
+
+
+  @include breakpoint($menu-full) {
+    font-size: 1.1em;
+    height: 4em;
+
+    .l-region--navigation {
+      margin: 0 auto;
+      width: 94%;
+      max-width: $large;
+    }
+
+    // Level 1
+    .menu {
+      padding: 0;
+      text-align: left;
+
+      > li {
+        display: inline-block;
+        float: left;
+        position: relative;
+
+        &.collapsed {
+          > a {
+            &:after {
+              display: inline-block;
+              content: '';
+              width: 22px;
+              height: 15px;
+              margin-right: 0;
+              margin-left: 0;
+              background-image: url(../images/cascadia-icon-sprite.png);
+              background-position: 10px -78px;
+              background-size: 100% auto;
             }
           }
-          a {
-            color: $white;
-            display: block;
-            padding: 0.5em 1em;
-            width: 100%;
+        }
+
+        &.expanded {
+          > a {
+            &:after {
+              display: inline-block;
+              content: '';
+              width: 22px;
+              height: 15px;
+              margin-right: 0;
+              margin-left: 0;
+              background-image: url(../images/cascadia-icon-sprite.png);
+              background-position: 10px -104px;
+              background-size: 100% auto;
+            }
           }
         }
+
       }
-      &.active-trail {
-        a {
-          color: $lt-blue;
+
+      a {
+        margin-right: 35px;
+        &:hover {
+          border-bottom: solid 2px #FFF;
         }
       }
-      &.first {
-        padding-left: 0;
-      }
-      &.last {
-        padding-right: 0;
-        margin-right: 0;
-      }
+
     }
-    ul {
-      margin: 0;
-      padding: 0;
+
+  }
+
+}
+
+.block--system-user-menu {
+  .menu {
+    a {
+      color: #CCC;
     }
   }
 }
 
-*[id^='block-menu-menu-']{
-  @include breakpoint($medium) {
-    float: left;
-    width: 66%;
+// @TODO: make reusable class, not year specific.
+.block--menu-menu-2015 {
+
+  // Level 1
+  .menu {
+
   }
+
+  // Level 2
+  .menu > li > .menu {
+    //display: none;
+    background-color: $dk-primary-color;
+  }
+
+  @include breakpoint($menu-full) {
+
+    // Level 1
+    .menu {
+
+    }
+
+    // Level 2
+    .menu > .menu {
+    }
+
+  }
+
 }
 
-#block-system-user-menu {
-  @include breakpoint($medium) {
-    float: right;
-    width: 34%;
-  }
-}
+// .mean-container .mean-bar {
+//   background: $gray 20px 11px no-repeat;
+//   float: left;
+//   min-height: 40px;
+//   padding: 6px 0 0 0;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 999999;
+// }
+// .mean-container .mean-nav {
+//   background: none repeat scroll 0 0 $white;
+//   float: left;
+//   margin-top: 40px;
+//   width: 100%;
+//   ul li {
+//     a {
+//       border-bottom: 1px solid $lt-gray;
+//       color: $gray;
+//       display: block;
+//       float: left;
+//       margin: 0;
+//       padding: 1em 5%;
+//       text-align: left;
+//       text-decoration: none;
+//       text-transform: none;
+//       width: 90%;
+//     }
+//     a.mean-expand {
+//       background: url(../images/expand.gif) transparent center center no-repeat;
+//       &:hover {
+//         background: url(../images/expand.gif) transparent center center no-repeat;
+//       }
+//       &.mean-clicked {
+//         background: url(../images/collapse.gif) transparent center center no-repeat;
+//       }
+//     }
+//     li {
+//       background-color: $lt-gray;
+//       &:first-child {
+//         border-top: 1px solid darken($lt-gray,10%);
+//       }
+//       a {
+//         border-bottom: 1px solid darken($lt-gray,10%);
+//         padding: 1em 7%;
+//         width: 86%;
+//       }
+//     }
+//   }
+// }
+// .mean-nav > ul > li:last-child {
+//   background-color: $blue;
+//   a {
+//     color: $white;
+//     text-align: center;
+//   }
+// }
+// .mean-container .l-region--preface .menu {
+//   display: none;
+// }
+
+// .l-region--preface .menu {
+//   padding-left: 0;
+//   li {
+//     background-color: $lt-gray;
+//     display: inline;
+//     font-size: 0.84em;
+//     list-style-image: none;
+//     list-style: none;
+//     padding: 10px 12px;
+//     &:hover {
+//       background-color: $blue;
+//       a:link, a:visited {
+//         color: $white;
+//       }
+//     }
+//     a {
+//       text-decoration: none;
+//       &:link, &:visited {
+//         color: $gray;
+//       }
+//     }
+//   }
+// }
+
+// .l-navigation {
+//   background-color: $primary-color;
+//   font-family: $alt-font-family;
+//   font-size: 1.1em;
+//   height: 2.45em;
+//   margin-bottom: 1em;
+//   text-transform: uppercase;
+//   .l-region--navigation {
+//     @extend %constrained-width;
+//   }
+//   a {
+//     color: #FFF;
+//   }
+//   @include breakpoint($medium) {
+//     .menu > li {
+//       display: block;
+//       float: left;
+//       position: relative;
+//       a {
+//         display: block;
+//         padding: 0.2em 0 1.4em 0;
+//       }
+//       &:hover {
+//         a {
+//           color: lighten($dk-blue,15%);
+//         }
+//         &.expanded > .menu-block > .menu, &.expanded > .menu-block > .menu:hover {
+//           background-color: $dk-green;
+//           display: block;
+//           font-family: $base-font-family;
+//           font-size: 1em;
+//           position: absolute;
+//           top: 3em;
+//           z-index: 6;
+//           &:before {
+//             border: solid transparent;
+//             border-bottom-color: $dk-green;
+//             border-width: 12px;
+//             bottom: 100%;
+//             left: 20px;
+//             content: " ";
+//             height: 0;
+//             width: 0;
+//             position: absolute;
+//             pointer-events: none;
+//           }
+//           li {
+//             border-top: none;
+//             padding: 0;
+//             margin-right: 0;
+//             width: 100%;
+//             &:hover {
+//               background-color: $dk-blue;
+//             }
+//           }
+//           a {
+//             color: $white;
+//             display: block;
+//             padding: 0.5em 1em;
+//             width: 100%;
+//           }
+//         }
+//       }
+//       &.active-trail {
+//         a {
+//           color: $lt-blue;
+//         }
+//       }
+//       &.first {
+//         padding-left: 0;
+//       }
+//       &.last {
+//         padding-right: 0;
+//         margin-right: 0;
+//       }
+//     }
+//     ul {
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+// }
+
+// *[id^='block-menu-menu-']{
+//   @include breakpoint($medium) {
+//     float: left;
+//     width: 66%;
+//   }
+// }
+
+// #block-system-user-menu {
+//   @include breakpoint($medium) {
+//     float: right;
+//     width: 34%;
+//   }
+// }
 
 
 
-.administrative {
-  ul {
-    @extend %constrained-width;
-  }
-}
+// .administrative {
+//   ul {
+//     @extend %constrained-width;
+//   }
+// }
