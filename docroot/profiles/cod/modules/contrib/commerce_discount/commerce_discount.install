@@ -102,13 +102,6 @@ function commerce_discount_schema() {
         'description' => 'The discount offer type (bundle).',
         'default' => '',
       ),
-      'currency' => array(
-        'type' => 'varchar',
-        'length' => 12,
-        'not null' => TRUE,
-        'description' => 'Currency code for this type.',
-        'default' => '',
-      ),
     ),
     'primary key' => array('discount_offer_id'),
   );
@@ -1091,6 +1084,11 @@ function commerce_discount_update_7109() {
  * Enable and update usage and date sub-modules into discount core.
  */
 function commerce_discount_update_7110() {
+  // Fail early if the Date module is not present.
+  if (!module_exists('date')) {
+    throw new DrupalUpdateException('The Date module is required.');
+  }
+
   commerce_discount_install_helper();
   $fields = field_read_fields(array(), array('include_inactive' => TRUE));
 
@@ -1121,20 +1119,4 @@ function commerce_discount_update_7110() {
   field_info_cache_clear();
 
   return t('Discount date and usage sub-modules are now in core.');
-}
-
-/**
- * Add a currency column to discount offers.
- */
-function commerce_discount_update_7111() {
-  $schema = commerce_discount_schema();
-  // Add the uuid column to the display table.
-  $table = 'commerce_discount_offer';
-  $field = 'currency';
-  // Due to a previous failure, the column may already exist:
-  if (!db_field_exists($table, $field)) {
-    $spec = $schema[$table]['fields'][$field];
-    db_add_field($table, $field, $spec);
-    $msg[] = t('Added commerce_discount_offer.currency column.');
-  }
 }

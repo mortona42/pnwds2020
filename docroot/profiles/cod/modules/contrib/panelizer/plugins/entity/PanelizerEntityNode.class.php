@@ -25,12 +25,6 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
    * Implement the save function for the entity.
    */
   public function entity_save($entity) {
-    if (module_exists('workbench_moderation') && workbench_moderation_node_type_moderated($entity->type)) {
-      $live_entity = workbench_moderation_node_live_load($entity);
-      if ($live_entity->vid != $entity->vid) {
-        $entity->revision = TRUE;
-      }
-    }
     node_save($entity);
   }
 
@@ -50,10 +44,10 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
 
     list($entity_id, $revision_id, $bundle) = entity_extract_ids($this->entity_type, $entity);
 
-    $node_options = variable_get('node_options_' . $bundle, array('status', 'promote', 'panelizer'));
+    $node_options = variable_get('node_options_' . $bundle, array('status', 'promote'));
 
     // Whether or not the entity supports revisions.
-    $retval[0] = in_array('panelizer', $node_options);
+    $retval[0] = TRUE;
 
     // Whether or not the user can control if a revision is created.
     $retval[1] = user_access('administer nodes');
@@ -64,6 +58,9 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
     return $retval;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   function get_default_display($bundle, $view_mode) {
     $display = parent::get_default_display($bundle, $view_mode);
     // Add the node title to the display since we can't get that automatically.
@@ -144,31 +141,7 @@ class PanelizerEntityNode extends PanelizerEntityDefault {
         $bundle = $form['#node_type']->type;
         $this->add_bundle_setting_form($form, $form_state, $bundle, array('type'));
       }
-
-      if (module_exists('workbench_moderation')) {
-        // Disable the 'revision' checkbox when the 'moderation' checkbox is checked, so that moderation
-        // can not be enabled unless revisions are enabled.
-        $form['workflow']['node_options']['revision']['#states'] = array(
-          'disabled' => array(':input[name="node_options[panelizer]"]' => array('checked' => FALSE)),
-        );
-
-        // Disable the 'moderation' checkbox when the 'revision' checkbox is not checked, so that
-        // revisions can not be turned off without also turning off moderation.
-        $form['workflow']['node_options']['#options']['panelizer'] = t('Enable panelizer revisions');
-        $form['workflow']['node_options']['panelizer']['#description'] = t('Revisions must be enabled in order to create panelizer revisions.');
-        $form['workflow']['node_options']['panelizer']['#states'] = array(
-          'disabled' => array(':input[name="node_options[revision]"]' => array('checked' => FALSE)),
-        );
-      }
     }
-  }
-
-  public function add_bundle_setting_form_validate($form, &$form_state, $bundle, $type_location) {
-    // Ensure that revisions are enabled if panelizer revisions are.
-    if (isset($form_state['values']['node_options']['panelizer']) || array_key_exists('panelizer', $form_state['values']['node_options'])) {
-      $form_state['values']['node_options']['revision'] = 1;
-    }
-    parent::add_bundle_setting_form_validate($form, $form_state, $bundle, $type_location);
   }
 
   public function hook_page_alter(&$page) {
