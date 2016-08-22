@@ -1,0 +1,12 @@
+.arbutus {
+
+  @media (min-width: $mid-large) {
+    .container-inner {
+      max-width: $mid-large;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+}
