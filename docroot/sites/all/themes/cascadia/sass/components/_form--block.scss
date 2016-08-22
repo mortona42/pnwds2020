@@ -1,0 +1,14 @@
+.form--block {
+  border: $form-border-size $form-border-style #CCC;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 30px;
+}
+
+.form--subscribe {
+  max-width: $mid-small;
+  .button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -29,6 +29,8 @@ regions[help] = Help
 regions[preface] = Preface
 regions[content] = Content
 regions[sidebar] = Sidebar
+regions[epilogue] = Epilogue
+regions[errata] = Errata
 regions[footer] = Footer
 
 ; ========================================

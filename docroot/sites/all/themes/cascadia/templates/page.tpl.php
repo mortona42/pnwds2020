@@ -1,4 +1,5 @@
-<div<?php print $attributes; ?>>
+<div class="l-page-wrapper"><div<?php print $attributes; ?>>
+
   <header class="l-header-wrapper" role="banner">
     <div class="l-header">
       <div class="l-branding site-branding">
@@ -34,11 +35,11 @@
       <a id="main-content"></a>
 
       <div class="l-content" role="main">
-        <?php if (!$is_front): ?>
+        <?php if (!isset($node) || (isset($node) && $node->type != 'event') && (isset($node) && $node->type != 'session') && (isset($node) && $node->type != 'schedule_item') && (isset($node) && $node->type != 'bof')): ?>
           <?php print render($page['preface']); ?>
           <?php print render($title_prefix); ?>
           <?php if ($title): ?>
-            <h1><?php print $title; ?></h1>
+            <div class="title-region"><h1 class="page-title"><?php print $title; ?></h1></div>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
         <?php endif; ?>
@@ -58,9 +59,22 @@
     </div>
   </div>
 
+  <?php if (!empty($page['epilogue'])): ?>
+    <footer class="l-epilogue-wrapper" role="contentinfo">
+      <?php print render($page['epilogue']); ?>
+    </footer>
+  <?php endif; ?>
+
+  <?php if (!empty($page['errata'])): ?>
+    <footer class="l-errata-wrapper" role="contentinfo">
+      <?php print render($page['errata']); ?>
+    </footer>
+  <?php endif; ?>
+
   <?php if (!empty($page['footer'])): ?>
     <footer class="l-footer-wrapper" role="contentinfo">
       <?php print render($page['footer']); ?>
     </footer>
   <?php endif; ?>
-</div>
+
+</div></div>

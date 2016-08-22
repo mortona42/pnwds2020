@@ -9,14 +9,14 @@ body.cke_editable {
   }
 }
 
-.messages {
-  margin: 1em auto;
-  width: 94%;
-  @include breakpoint($large) {
-    max-width: $large;
-    margin: 0 auto;
-  }
-}
+// .messages {
+//   margin: 1em auto;
+//   width: 94%;
+//   @include breakpoint($large) {
+//     max-width: $large;
+//     margin: 0 auto;
+//   }
+// }
 
 .page-node-webform {
   .l-content {

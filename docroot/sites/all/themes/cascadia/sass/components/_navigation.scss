@@ -127,7 +127,7 @@
       }
 
       a {
-        margin-right: 35px;
+        margin-right: 30px;
         &:hover {
           border-bottom: solid 2px #FFF;
         }
@@ -143,6 +143,27 @@
   .menu {
     a {
       color: #CCC;
+    }
+  }
+
+  @include breakpoint($menu-full) {
+    .menu {
+
+      &:before {
+        content: '/';
+        float: left;
+        display: inline-block;
+        color: #CCC;
+        margin-right: 20px;
+        padding: 10px 0;
+      }
+
+      a {
+        &:hover {
+          border-color: #CCC;
+        }
+      }
+
     }
   }
 }
