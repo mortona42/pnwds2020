@@ -54,6 +54,18 @@
         // The anchor is then appended to the current element.
         $anchor.appendTo(this);
       });
+
+
+      $('.menu-item--parent .js-menu-item-toggle').on('click', function () {
+        if ($(this).is('.js-menu-item-toggle-active')) {
+          $(this).removeClass('js-menu-item-toggle-active');
+          $(this).closest('.menu-item--parent').removeClass('menu-item--active');
+        } else {
+          $(this).addClass('js-menu-item-toggle-active');
+          $(this).closest('.menu-item--parent').addClass('menu-item--active');
+        }
+      });
+
     }
   };
 

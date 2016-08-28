@@ -7,14 +7,6 @@
   margin: 0 auto;
   width: 94%; }
 
-/* Header */
-.l-header {
-  padding-top: 0; }
-
-.l-branding {
-  text-align: center;
-  width: 100%; }
-
 /* Content Area */
 .l-highlighted-wrapper {
   padding: 25px 0; }
