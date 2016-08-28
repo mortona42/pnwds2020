@@ -3,6 +3,10 @@
   padding-top: 20px;
   padding-bottom: 20px;
   @include pie-clearfix;
+  display: -webkit-flex;
+  display: flex;
+  align-items: -webkit-center;
+  align-items: center;
 
   .l-branding {
     display: inline-block;

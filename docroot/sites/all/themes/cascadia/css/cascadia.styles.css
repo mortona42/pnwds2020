@@ -860,7 +860,11 @@ body.cke_editable {
 .l-header {
   padding-top: 20px;
   padding-bottom: 20px;
-  *zoom: 1; }
+  *zoom: 1;
+  display: -webkit-flex;
+  display: flex;
+  align-items: -webkit-center;
+  align-items: center; }
   .l-header:after {
     content: "";
     display: table;
