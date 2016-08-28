@@ -93,6 +93,13 @@ blockquote {
 }
 
 /**
+ ** Utility classes
+ */
+.text-light {
+  color: $lt-gray;
+}
+
+/**
  ** Typography for textareas. Some defaults need to be re-applied.
  */
 

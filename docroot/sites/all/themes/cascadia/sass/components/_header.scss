@@ -3,6 +3,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   @include pie-clearfix;
+  // @TODO: Compass mixins not working for some reason -- LW
   display: -webkit-flex;
   display: flex;
   align-items: -webkit-center;
