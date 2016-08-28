@@ -414,6 +414,8 @@ blockquote {
  */
 .text-light {
   color: #9a9a9a; }
+  .text-light a {
+    color: inherit; }
 
 /**
  ** Typography for textareas. Some defaults need to be re-applied.

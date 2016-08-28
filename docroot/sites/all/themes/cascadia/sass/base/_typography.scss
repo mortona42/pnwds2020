@@ -97,6 +97,9 @@ blockquote {
  */
 .text-light {
   color: $lt-gray;
+  a {
+    color: inherit;
+  }
 }
 
 /**
