@@ -825,12 +825,6 @@ body.cke_editable {
   margin-bottom: 2em;
   padding: 30px; }
 
-.form--subscribe {
-  max-width: 600px; }
-  .form--subscribe .button {
-    margin-right: auto;
-    margin-left: auto; }
-
 .user-login {
   max-width: 480px; }
 
