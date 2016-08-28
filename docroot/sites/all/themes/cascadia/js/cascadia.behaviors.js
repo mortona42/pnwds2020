@@ -66,6 +66,24 @@
         }
       });
 
+      // Scroll to top
+      $('a.js-page-top').on('click', function(event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: 0 }, 400);
+      });
+
+      // Scroll to hash url
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if(target.length) {
+          event.preventDefault();
+          var targetOffset = target.offset().top;
+          $('html, body').stop().animate({
+              scrollTop: targetOffset - 80
+          }, 400);
+        }
+      });
+
     }
   };
 

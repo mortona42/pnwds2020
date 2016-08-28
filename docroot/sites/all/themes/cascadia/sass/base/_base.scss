@@ -75,18 +75,3 @@ body {
     margin: 1em 0;
   }
 }
-
-.l-footer-wrapper {
-  color: $dk-gray;
-  a {
-    color: $blue;
-    text-decoration: none;
-    &:hover, &.active {
-      color: $dk-blue;
-    }
-  }
-}
-
-.l-region--footer {
-  @extend %constrained-width;
-}

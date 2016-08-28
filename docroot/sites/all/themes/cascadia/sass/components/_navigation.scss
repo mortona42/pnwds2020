@@ -220,6 +220,23 @@
 
 }
 
+.menu__button-toggle {
+  font-family: $alt-font-family;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:before {
+    display: inline-block;
+    width: 28px;
+    height: 15px;
+    margin-left: 20px;
+    margin-right: 15px;
+    background-image: url(../images/cascadia-icon-sprite.png);
+    background-position: left -60px;
+    cursor: pointer;
+  }
+}
+
 // .mean-container .mean-bar {
 //   background: $gray 20px 11px no-repeat;
 //   float: left;
