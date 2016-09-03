@@ -92,20 +92,10 @@ blockquote {
   padding: 30px;
 }
 
-/**
- ** Utility classes
- */
-.text-light {
-  color: $lt-gray;
-  a {
-    color: inherit;
-  }
-}
 
 /**
  ** Typography for textareas. Some defaults need to be re-applied.
  */
-
 .field--full-html {
 
   ol, ul {

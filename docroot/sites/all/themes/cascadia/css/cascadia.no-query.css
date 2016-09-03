@@ -410,14 +410,6 @@ blockquote {
   padding: 30px; }
 
 /**
- ** Utility classes
- */
-.text-light {
-  color: #9a9a9a; }
-  .text-light a {
-    color: inherit; }
-
-/**
  ** Typography for textareas. Some defaults need to be re-applied.
  */
 .field--full-html ol, .field--full-html ul {
@@ -1452,3 +1444,8 @@ body.cke_editable {
     max-width: 900px;
     margin-right: auto;
     margin-left: auto; } }
+
+.text-light {
+  color: #9a9a9a; }
+  .text-light a {
+    color: inherit; }
