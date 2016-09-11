@@ -1,0 +1,26 @@
+.block--cod-sponsors {
+  overflow: hidden;
+
+  .block__title {
+    color: darken($dk-white, 10%);
+    font-size: 1.4em;
+    text-transform: uppercase;
+  }
+
+}
+
+#block-cod-sponsors-gold {
+
+  .block__title {
+    font-size: 2.2em;
+  }
+
+}
+
+#block-cod-sponsors-silver {
+
+  .block__title {
+    font-size: 1.8em;
+  }
+
+}
