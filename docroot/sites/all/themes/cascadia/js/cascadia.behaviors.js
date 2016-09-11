@@ -56,16 +56,6 @@
       });
 
 
-      $('.menu-item--parent .js-menu-item-toggle').on('click', function () {
-        if ($(this).is('.js-menu-item-toggle-active')) {
-          $(this).removeClass('js-menu-item-toggle-active');
-          $(this).closest('.menu-item--parent').removeClass('menu-item--active');
-        } else {
-          $(this).addClass('js-menu-item-toggle-active');
-          $(this).closest('.menu-item--parent').addClass('menu-item--active');
-        }
-      });
-
       // Scroll to top
       $('a.js-page-top').on('click', function(event) {
         event.preventDefault();
@@ -81,6 +71,48 @@
           $('html, body').stop().animate({
               scrollTop: targetOffset - 80
           }, 400);
+        }
+      });
+
+      // Mobile menu toggle
+      $('.js-menu-toggle').on('click', function(event) {
+        if ($(this).is('.js-menu-toggle-active')) {
+          $(this).removeClass('js-menu-toggle-active');
+          $(this).removeClass('menu__button-toggle--active');
+          $('.l-region--navigation').slideUp('fast');
+        } else {
+          $(this).addClass('js-menu-toggle-active');
+          $(this).addClass('menu__button-toggle--active');
+          $('.l-region--navigation').slideDown('fast');
+        }
+      });
+
+      // Sub-menu click toggle
+      $('.menu-item--parent .js-menu-item-toggle').on('click', function () {
+        if ($(this).is('.js-menu-item-toggle-active')) {
+          // COLLAPSE SUB-MENU
+          $(this).removeClass('js-menu-item-toggle-active');
+          $(this).closest('.menu-item--parent').removeClass('menu-item--active');
+          $(this).siblings('ul.menu').slideUp('fast');
+        } else {
+          // EXPAND SUB-MENU
+          // Close open sub-menu
+          $('ul.menu li .js-menu-item-toggle').removeClass('js-menu-item-toggle-active');
+          $('ul.menu li').removeClass('menu-item--active');
+          $('ul.menu li ul.menu').slideUp('fast');
+          // Open new sub-menu
+          $(this).addClass('js-menu-item-toggle-active');
+          $(this).closest('.menu-item--parent').addClass('menu-item--active');
+          $(this).siblings('ul.menu').slideDown('fast');
+        }
+      });
+      // Sub-menu hover toggle for desktop
+      $('.menu-item--parent').on('mouseover mouseout', function () {
+        if ($(window).width() >= 770) {
+          // TOGGLE SUB-MENU
+          // @TODO: Fix. Getting called twice.
+          $(this).toggleClass('menu-item--active');
+          $(this).find('ul.menu').slideToggle('fast');
         }
       });
 

@@ -21,7 +21,7 @@
   .l-header-content {
     display: inline-block;
     float: right;
-    width: 100px;
+    width: 120px;
     @include breakpoint($menu-full) {
       width: calc(100% - 275px);
     }

@@ -5,6 +5,7 @@
   text-transform: uppercase;
 
   .l-region--navigation {
+    display: none;
     position: absolute;
     width: 100%;
     background-color: $primary-color;
@@ -33,18 +34,19 @@
           margin-left: 20px;
           margin-right: 15px;
           background-image: url(../images/cascadia-icon-sprite.png);
-          background-position: left -150px;
+          background-position: left -151px;
+          background-repeat: no-repeat;
           cursor: pointer;
         }
       }
 
       &.menu-item--active {
         > span {
-          background-position: left -200px;
+          background-position: left -201px;
         }
 
         > .menu {
-          display: block;
+          //display: block;
         }
 
       }
@@ -74,14 +76,16 @@
 
   }
 
-
   @include breakpoint($menu-full) {
+    position: relative;
     background-color: $primary-color;
     font-size: 1em;
-    height: 4em;
+    height: 65px;
 
     .l-region--navigation {
-      position: relative;
+      // important used to override any inline JS hiding menu for smaller screens.
+      display: block !important;
+      position: static;
       margin: 0 auto;
       width: 94%;
       max-width: $large;
@@ -108,15 +112,15 @@
             margin-right: 25px;
             margin-left: -25px;
             background-image: url(../images/cascadia-icon-sprite.png);
-            background-position: 10px -78px;
-            background-size: 100% auto;
+            background-position: 10px -248px;
+            background-repeat: no-repeat;
             cursor: pointer;
           }
         }
 
         &.menu-item--active {
           > span {
-            background-position: 10px -104px;
+            background-position: 10px -299px;
           }
 
         }
@@ -140,9 +144,12 @@
     // Level 2
     .menu > li > .menu {
       position: absolute;
-      top: 46px;
+      top: 64px;
       right: 0;
       left: 0;
+      margin-top: 0;
+      padding-right: 3%;
+      padding-left: 3%;
 
       > li {
         &:hover {
@@ -156,6 +163,14 @@
 
     }
 
+  }
+
+  @include breakpoint(1360px) {
+    // Level 2
+    // Centre sub nav when exceeds max width of 1280px
+    .menu > li > .menu {
+      padding-left: calc((100% - 1280px) / 2);
+    }
   }
 
 }
@@ -222,18 +237,29 @@
 
 .menu__button-toggle {
   font-family: $alt-font-family;
-  font-size: 0.9em;
+  font-size: 0.95em;
   text-transform: uppercase;
+  text-align: right;
   cursor: pointer;
-  &:before {
+  margin-top: 16px;
+  &:after {
+    content: "";
     display: inline-block;
     width: 28px;
-    height: 15px;
-    margin-left: 20px;
-    margin-right: 15px;
+    height: 22px;
+    margin-left: 10px;
     background-image: url(../images/cascadia-icon-sprite.png);
-    background-position: left -60px;
-    cursor: pointer;
+    background-position: left -352px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+  &.menu__button-toggle--active {
+    &:after {
+      background-position: left -402px;
+    }
+  }
+  @include breakpoint($menu-full) {
+    display: none;
   }
 }
 
