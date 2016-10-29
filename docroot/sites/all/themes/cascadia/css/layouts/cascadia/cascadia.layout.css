@@ -29,10 +29,10 @@
 @media (min-width: 768px) {
   /* Sidebars */
   .l-content {
-    width: 66.50246%;
+    width: 66.10169%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none; }
 
   .has-no-sidebars .l-content {
@@ -43,7 +43,7 @@
     clear: none; }
 
   .l-region--sidebar {
-    width: 33.00493%;
+    width: 32.20339%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -52,10 +52,10 @@
 @media (min-width: 1280px) {
   /* Sidebars */
   .l-content {
-    width: 66.50246%;
+    width: 66.10169%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none; }
 
   .has-no-sidebars .l-content {
@@ -66,7 +66,7 @@
     clear: none; }
 
   .l-region--sidebar {
-    width: 33.00493%;
+    width: 32.20339%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -75,10 +75,10 @@
 @media (min-width: 1600px) {
   /* Sidebars */
   .l-content {
-    width: 66.50246%;
+    width: 66.10169%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none; }
 
   .has-no-sidebars .l-content {
@@ -89,7 +89,7 @@
     clear: none; }
 
   .l-region--sidebar {
-    width: 33.00493%;
+    width: 32.20339%;
     float: right;
     margin-left: 0;
     margin-right: 0;
