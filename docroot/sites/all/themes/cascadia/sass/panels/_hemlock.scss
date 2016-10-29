@@ -1,0 +1,15 @@
+.hemlock {
+  @media (min-width: $mid-large) {
+    .container-inner {
+      max-width: $large;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .left-content {
+      @include grid-span(6, 1);
+    }
+    .right-content {
+      @include grid-span(6, 7);
+    }
+  }
+}
