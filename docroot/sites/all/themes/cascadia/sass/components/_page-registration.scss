@@ -29,13 +29,47 @@
     margin-bottom: 0;
   }
   .cod_paid_event__commerce-price {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     color: $secondary-color;
   }
   input[type="text"] {
     max-width: 125px;
   }
+}
+
+.page-ticket {
+
+  #edit-ticket-registrant {
+    .fieldset-description {
+      @extend .form--block;
+      font-size: 1.2em;
+      margin-top: 0;
+      a {
+        @extend .button;
+        width: calc(100% - 50px);
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  #edit-ticket-registrant,
+  #edit-ticket-registrationnew-0 {
+    legend {
+      font-family: $alt-font-family;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    .fieldset-wrapper {
+      @extend .form--block;
+      @include grid-span(6, 1);
+    }
+    .form-item {
+      //
+    }
+  }
+
 }
 
 // .pane-node-field-event-tickets {

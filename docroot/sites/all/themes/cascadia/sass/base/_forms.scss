@@ -91,8 +91,13 @@ textarea {
 }
 
 select {
+  -webkit-appearance: none;
   margin-bottom: 10px;
   width: 100%;
+  padding: 6px 8px;
+  background-image: url('../images/cascadia-icon-sprite.png');
+  background-position: right -450px;
+  background-repeat: no-repeat;
 }
 
 .description {

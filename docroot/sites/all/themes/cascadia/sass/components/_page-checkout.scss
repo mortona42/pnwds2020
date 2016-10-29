@@ -1,0 +1,79 @@
+.page-checkout {
+
+  .commerce-checkout-form-checkout {
+    overflow: hidden;
+  }
+
+  .account,
+  .customer_profile_billing,
+  .commerce_coupon {
+    legend {
+      font-family: $alt-font-family;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    .fieldset-wrapper {
+      @extend .form--block;
+      margin-top: 0;
+    }
+    @include breakpoint($medium) {
+      @include grid-span(6, 1);
+      clear: left;
+    }
+  }
+
+  .commerce_coupon {
+    .fieldset-wrapper {
+      overflow: hidden;
+    }
+    .form-item-commerce-coupon-coupon-code {
+      width: calc(100% - 160px);
+      float: left;
+      margin-right: 20px;
+    }
+    input[type="submit"] {
+      margin-top: 22px;
+    }
+  }
+
+  .cart_contents {
+    legend {
+      font-family: $alt-font-family;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    @include breakpoint($medium) {
+      @include grid-span(5, 8);
+    }
+  }
+
+  .checkout_review {
+    @include breakpoint($medium) {
+      @include grid-span(6, 1);
+      clear: left;
+    }
+  }
+
+  .commerce_payment {
+    legend {
+      font-family: $alt-font-family;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    .fieldset-wrapper {
+      @extend .form--block;
+      margin-top: 0;
+    }
+    @include breakpoint($medium) {
+      @include grid-span(5, 8);
+    }
+  }
+
+  .checkout-buttons {
+    clear: both;
+    #edit-continue {
+      margin-right: 10px;
+    }
+  }
+
+}

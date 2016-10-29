@@ -61,6 +61,9 @@ body {
 
 button,
 .button,
+#edit-back,
+#edit-cancel,
+.page-ticket #edit-ticket-registrant .fieldset-description a,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -86,7 +89,13 @@ input[type="submit"] {
   white-space: nowrap; }
   button:hover, button:focus,
   .button:hover,
+  #edit-back:hover,
+  #edit-cancel:hover,
+  .page-ticket #edit-ticket-registrant .fieldset-description a:hover,
   .button:focus,
+  #edit-back:focus,
+  #edit-cancel:focus,
+  .page-ticket #edit-ticket-registrant .fieldset-description a:focus,
   input[type="button"]:hover,
   input[type="button"]:focus,
   input[type="reset"]:hover,
@@ -97,6 +106,9 @@ input[type="submit"] {
     color: #fff; }
   button:disabled,
   .button:disabled,
+  #edit-back:disabled,
+  #edit-cancel:disabled,
+  .page-ticket #edit-ticket-registrant .fieldset-description a:disabled,
   input[type="button"]:disabled,
   input[type="reset"]:disabled,
   input[type="submit"]:disabled {
@@ -104,12 +116,18 @@ input[type="submit"] {
     opacity: 0.5; }
     button:disabled:hover,
     .button:disabled:hover,
+    #edit-back:disabled:hover,
+    #edit-cancel:disabled:hover,
+    .page-ticket #edit-ticket-registrant .fieldset-description a:disabled:hover,
     input[type="button"]:disabled:hover,
     input[type="reset"]:disabled:hover,
     input[type="submit"]:disabled:hover {
       background-color: #00874b; }
   button.button--large,
   .button.button--large,
+  .button--large#edit-back,
+  .button--large#edit-cancel,
+  .page-ticket #edit-ticket-registrant .fieldset-description a.button--large,
   input[type="button"].button--large,
   input[type="reset"].button--large,
   input[type="submit"].button--large {
@@ -272,8 +290,13 @@ textarea {
   width: 100%; }
 
 select {
+  -webkit-appearance: none;
   margin-bottom: 10px;
-  width: 100%; }
+  width: 100%;
+  padding: 6px 8px;
+  background-image: url("../images/cascadia-icon-sprite.png");
+  background-position: right -450px;
+  background-repeat: no-repeat; }
 
 .description {
   color: #9A9A9A;
@@ -289,54 +312,26 @@ img, media {
 .l-region--sidebar .block img {
   width: 100%; }
 
-tr:nth-child(even) {
-  background: #f1f2f5; }
-
 table {
-  border: 1px solid #b9bdc0;
+  border-bottom: 1px solid #b9bdc0;
   border-collapse: collapse;
   margin: 0 0 30px 0;
   width: 100%; }
-  @media (min-width: 1280px) {
-    table {
-      max-width: 60%; } }
   table th {
-    background-color: #9A9A9A;
+    background-color: transparent;
     padding: 0.5em;
     margin: 0.25em; }
     table th a:link, table th a:visited {
       color: #9A9A9A; }
   table tr {
-    margin: 0.25em; }
+    margin: 0.25em;
+    border-top: 1px solid #b9bdc0; }
     table tr.odd {
-      background-color: #9A9A9A; }
-      table tr.odd td.active {
-        background-color: #a2a2a2; }
+      background-color: transparent; }
       table tr.odd .form-item {
         white-space: normal; }
-    table tr:nth-child(2n) {
-      background-color: #9A9A9A; }
-      table tr:nth-child(2n) td.active {
-        background-color: #a2a2a2; }
     table tr td {
-      padding: 1em; }
-      table tr td:first-child {
-        padding-right: 10px;
-        width: auto; }
-
-.sticky-header {
-  background-color: #9A9A9A; }
-
-.tabledrag-handle {
-  height: 30px;
-  width: 26px; }
-  .tabledrag-handle .handle {
-    background-position: 0 0;
-    background-size: 100%;
-    height: 30px;
-    width: 26px;
-    margin: 0;
-    padding: 0; }
+      padding: 0.5em; }
 
 body {
   color: #303030;
@@ -740,18 +735,15 @@ body.cke_editable {
     border-radius: 10em; }
 
 #edit-back, #edit-cancel {
-  border: 2px solid #4d5770;
-  color: #4d5770;
+  background-color: transparent;
+  border: 2px solid #00874b;
+  color: #00874b;
   margin-left: 0.6em;
-  padding: 0.4em 0.6em; }
+  padding: 10px 21px; }
   #edit-back:hover, #edit-back:focus, #edit-cancel:hover, #edit-cancel:focus {
-    background-color: #4d5770;
+    background-color: #00874b;
     color: #FFF;
     text-decoration: none; }
-  #edit-back.active, #edit-cancel.active {
-    color: #FFF;
-    background-color: #9A9A9A;
-    border-color: #9A9A9A; }
 
 .page-checkout table.checkout-review {
   border: none;
@@ -812,7 +804,10 @@ body.cke_editable {
     margin-right: 0;
     clear: none; } }
 
-.form--block {
+.form--block, .page-checkout .account .fieldset-wrapper,
+.page-checkout .customer_profile_billing .fieldset-wrapper,
+.page-checkout .commerce_coupon .fieldset-wrapper, .page-checkout .commerce_payment .fieldset-wrapper, .page-ticket #edit-ticket-registrant .fieldset-description, .page-ticket #edit-ticket-registrant .fieldset-wrapper,
+.page-ticket #edit-ticket-registrationnew-0 .fieldset-wrapper {
   border: 1px solid #CCC;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -1057,6 +1052,73 @@ body.cke_editable {
   font-weight: bold;
   text-align: center; }
 
+.page-checkout .commerce-checkout-form-checkout {
+  overflow: hidden; }
+.page-checkout .account legend,
+.page-checkout .customer_profile_billing legend,
+.page-checkout .commerce_coupon legend {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase; }
+.page-checkout .account .fieldset-wrapper,
+.page-checkout .customer_profile_billing .fieldset-wrapper,
+.page-checkout .commerce_coupon .fieldset-wrapper {
+  margin-top: 0; }
+@media (min-width: 770px) {
+  .page-checkout .account,
+  .page-checkout .customer_profile_billing,
+  .page-checkout .commerce_coupon {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    clear: left; } }
+.page-checkout .commerce_coupon .fieldset-wrapper {
+  overflow: hidden; }
+.page-checkout .commerce_coupon .form-item-commerce-coupon-coupon-code {
+  width: calc(100% - 160px);
+  float: left;
+  margin-right: 20px; }
+.page-checkout .commerce_coupon input[type="submit"] {
+  margin-top: 22px; }
+.page-checkout .cart_contents legend {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase; }
+@media (min-width: 770px) {
+  .page-checkout .cart_contents {
+    width: 40.67797%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; } }
+@media (min-width: 770px) {
+  .page-checkout .checkout_review {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    clear: left; } }
+.page-checkout .commerce_payment legend {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase; }
+.page-checkout .commerce_payment .fieldset-wrapper {
+  margin-top: 0; }
+@media (min-width: 770px) {
+  .page-checkout .commerce_payment {
+    width: 40.67797%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; } }
+.page-checkout .checkout-buttons {
+  clear: both; }
+  .page-checkout .checkout-buttons #edit-continue {
+    margin-right: 10px; }
+
 .page-node-community .page-title {
   display: none; }
 .page-node-community .l-main .preface {
@@ -1159,11 +1221,30 @@ body.cke_editable {
   .entity-ticket-type h3 {
     margin-bottom: 0; }
   .entity-ticket-type .cod_paid_event__commerce-price {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     color: #00874b; }
   .entity-ticket-type input[type="text"] {
     max-width: 125px; }
+
+.page-ticket #edit-ticket-registrant .fieldset-description {
+  font-size: 1.2em;
+  margin-top: 0; }
+  .page-ticket #edit-ticket-registrant .fieldset-description a {
+    width: calc(100% - 50px);
+    margin-top: 10px; }
+.page-ticket #edit-ticket-registrant legend,
+.page-ticket #edit-ticket-registrationnew-0 legend {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase; }
+.page-ticket #edit-ticket-registrant .fieldset-wrapper,
+.page-ticket #edit-ticket-registrationnew-0 .fieldset-wrapper {
+  width: 49.15254%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none; }
 
 .page-node-schedule .title-region {
   text-align: center; }
