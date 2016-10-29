@@ -937,7 +937,7 @@ table.checkout-review .pane-title td {
           display: inline-block;
           float: left; }
           .l-navigation .menu > li.menu-item--parent > a {
-            padding-right: 25px; }
+            margin-right: 25px; }
           .l-navigation .menu > li.menu-item--parent > span {
             display: inline-block;
             width: 22px;
