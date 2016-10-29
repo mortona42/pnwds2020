@@ -24,3 +24,13 @@
     }
   }
 }
+
+// Commerce style overrides
+table.checkout-review .pane-data-full {
+  padding-right: 0;
+  padding-left: 0;
+}
+table.checkout-review .pane-title td {
+  padding: 0;
+  font-family: $alt-font-family;
+}

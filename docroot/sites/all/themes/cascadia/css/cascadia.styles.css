@@ -753,6 +753,14 @@ body.cke_editable {
   .page-checkout table.checkout-review table {
     border: none; }
 
+table.checkout-review .pane-data-full {
+  padding-right: 0;
+  padding-left: 0; }
+
+table.checkout-review .pane-title td {
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif; }
+
 .button-link, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-sessions-proposed .view-footer a, .page-node-sessions-accepted .view-footer a {
   background-color: transparent;
   border: 2px solid #303030;
@@ -1687,17 +1695,6 @@ body.cke_editable {
   color: #356785;
   background-color: #c9ecff;
   border-color: #c9ecff; }
-
-.page-ticket-register .profile-details {
-  display: none; }
-.page-ticket-register .registration-data-toggle {
-  font-size: 0.8em;
-  margin-bottom: 1.8em;
-  background-color: #9A9A9A; }
-.page-ticket-register .ticket-register-form > div > fieldset > legend {
-  font-size: 1.4em; }
-.page-ticket-register select {
-  width: 100%; }
 
 .user-profile h2 {
   margin-bottom: 0; }
