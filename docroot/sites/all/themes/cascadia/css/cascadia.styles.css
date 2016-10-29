@@ -757,9 +757,19 @@ table.checkout-review .pane-data-full {
   padding-right: 0;
   padding-left: 0; }
 
-table.checkout-review .pane-title td {
-  padding: 0;
-  font-family: "Roboto Condensed", sans-serif; }
+table.checkout-review .pane-title {
+  border-top: 0;
+  border-bottom: 0; }
+  table.checkout-review .pane-title td {
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase; }
+table.checkout-review .pane-data {
+  border-top: 0;
+  margin-bottom: 40px; }
 
 .button-link, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-sessions-proposed .view-footer a, .page-node-sessions-accepted .view-footer a {
   background-color: transparent;
@@ -1241,6 +1251,8 @@ table.checkout-review .pane-title td {
   .page-ticket #edit-ticket-registrant .fieldset-description a {
     width: calc(100% - 50px);
     margin-top: 10px; }
+.page-ticket .registration-data-toggle {
+  max-width: 300px; }
 .page-ticket #edit-ticket-registrant legend,
 .page-ticket #edit-ticket-registrationnew-0 legend {
   font-family: "Roboto Condensed", sans-serif;
