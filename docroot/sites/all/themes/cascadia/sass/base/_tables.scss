@@ -7,9 +7,6 @@ table {
     background-color: transparent;
     padding: 0.5em;
     margin: 0.25em;
-    a:link, a:visited {
-      color: $lt-gray;
-    }
   }
   tr {
     margin: 0.25em;
@@ -22,6 +19,9 @@ table {
     }
     td {
       padding: 0.5em;
+      &.active {
+        background-color: transparent;
+      }
     }
   }
 }
