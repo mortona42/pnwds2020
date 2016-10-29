@@ -753,6 +753,24 @@ body.cke_editable {
   .page-checkout table.checkout-review table {
     border: none; }
 
+table.checkout-review .pane-data-full {
+  padding-right: 0;
+  padding-left: 0; }
+
+table.checkout-review .pane-title {
+  border-top: 0;
+  border-bottom: 0; }
+  table.checkout-review .pane-title td {
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase; }
+table.checkout-review .pane-data {
+  border-top: 0;
+  margin-bottom: 40px; }
+
 .button-link, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-sessions-proposed .view-footer a, .page-node-sessions-accepted .view-footer a {
   background-color: transparent;
   border: 2px solid #303030;
@@ -942,10 +960,10 @@ body.cke_editable {
             cursor: pointer; }
           .l-navigation .menu > li.menu-item--active > span {
             background-position: 10px -299px; }
-          .l-navigation .menu > li:hover {
-            padding-bottom: 8px; }
-            .l-navigation .menu > li:hover > a {
-              border-bottom: solid 2px #FFF; }
+          .l-navigation .menu > li.menu-item--active > a, .l-navigation .menu > li > a.active-trail, .l-navigation .menu > li > a.active, .l-navigation .menu > li > a:active {
+            box-shadow: 0 2px 0 0 #fff; }
+          .l-navigation .menu > li > a:focus, .l-navigation .menu > li > a:hover {
+            box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.5); }
         .l-navigation .menu a {
           margin-right: 30px; }
       .l-navigation .menu > li > .menu {
@@ -955,11 +973,7 @@ body.cke_editable {
         left: 0;
         margin-top: 0;
         padding-right: 3%;
-        padding-left: 3%; }
-        .l-navigation .menu > li > .menu > li:hover {
-          padding-bottom: 9px; }
-        .l-navigation .menu > li > .menu a {
-          border-width: 1px; } }
+        padding-left: 3%; } }
   @media (min-width: 1360px) {
     .l-navigation .menu > li > .menu {
       padding-left: calc((100% - 1280px) / 2); } }
@@ -974,8 +988,10 @@ body.cke_editable {
     color: #CCC;
     margin-right: 25px;
     padding: 10px 0; }
-  .block--system-user-menu .menu li:hover a {
-    border-color: #CCC; } }
+  .block--system-user-menu .menu li.menu-item--active > a, .block--system-user-menu .menu li > a.active-trail, .block--system-user-menu .menu li > a.active, .block--system-user-menu .menu li > a:active {
+    box-shadow: 0 2px 0 0 #cccccc; }
+  .block--system-user-menu .menu li > a:focus, .block--system-user-menu .menu li > a:hover {
+    box-shadow: 0 2px 0 0 rgba(204, 204, 204, 0.5); } }
 
 .menu__button-toggle {
   font-family: "Roboto Condensed", sans-serif;
@@ -1233,6 +1249,8 @@ body.cke_editable {
   .page-ticket #edit-ticket-registrant .fieldset-description a {
     width: calc(100% - 50px);
     margin-top: 10px; }
+.page-ticket .registration-data-toggle {
+  max-width: 300px; }
 .page-ticket #edit-ticket-registrant legend,
 .page-ticket #edit-ticket-registrationnew-0 legend {
   font-family: "Roboto Condensed", sans-serif;
@@ -1687,17 +1705,6 @@ body.cke_editable {
   color: #356785;
   background-color: #c9ecff;
   border-color: #c9ecff; }
-
-.page-ticket-register .profile-details {
-  display: none; }
-.page-ticket-register .registration-data-toggle {
-  font-size: 0.8em;
-  margin-bottom: 1.8em;
-  background-color: #9A9A9A; }
-.page-ticket-register .ticket-register-form > div > fieldset > legend {
-  font-size: 1.4em; }
-.page-ticket-register select {
-  width: 100%; }
 
 .user-profile h2 {
   margin-bottom: 0; }

@@ -44,15 +44,8 @@
         }
       }
 
-      &.menu-item--active {
-        > span {
-          background-position: left -201px;
-        }
-
-        > .menu {
-          //display: block;
-        }
-
+      &.menu-item--active > span {
+        background-position: left -201px;
       }
     }
 
@@ -63,7 +56,6 @@
       text-decoration: none;
       margin-right: 65px;
     }
-
   }
 
   // Level 2
@@ -77,7 +69,6 @@
     > li {
       margin-right: 0;
     }
-
   }
 
   @include breakpoint($menu-full) {
@@ -123,27 +114,25 @@
           }
         }
 
-        &.menu-item--active {
-          > span {
-            background-position: 10px -299px;
-          }
-
+        &.menu-item--active > span {
+          background-position: 10px -299px;
         }
 
-        &:hover {
-          padding-bottom: 8px;
-          > a {
-            border-bottom: solid 2px #FFF;
-          }
-
+        &.menu-item--active > a,
+        & > a.active-trail,
+        & > a.active,
+        & > a:active {
+          box-shadow: 0 2px 0 0 #fff;
         }
-
+        & > a:focus,
+        & > a:hover {
+          box-shadow: 0 2px 0 0 rgba(255, 255, 255, .5);
+        }
       }
 
       a {
         margin-right: 30px;
       }
-
     }
 
     // Level 2
@@ -155,19 +144,7 @@
       margin-top: 0;
       padding-right: 3%;
       padding-left: 3%;
-
-      > li {
-        &:hover {
-          padding-bottom: 9px;
-        }
-      }
-
-      a {
-        border-width: 1px;
-      }
-
     }
-
   }
 
   @include breakpoint(1360px) {
@@ -177,19 +154,15 @@
       padding-left: calc((100% - 1280px) / 2);
     }
   }
-
 }
 
 .block--system-user-menu {
-  .menu {
-    a {
-      color: #CCC;
-    }
+  .menu a {
+    color: #CCC;
   }
 
   @include breakpoint($menu-full) {
     .menu {
-
       &:before {
         content: '/';
         float: left;
@@ -200,13 +173,17 @@
       }
 
       li {
-        &:hover {
-          a {
-            border-color: #CCC;
-          }
+        &.menu-item--active > a,
+        & > a.active-trail,
+        & > a.active,
+        & > a:active {
+          box-shadow: 0 2px 0 0 rgb(204, 204, 204);
+        }
+        & > a:focus,
+        & > a:hover {
+          box-shadow: 0 2px 0 0 rgba(204, 204, 204, .5);
         }
       }
-
     }
   }
 }
@@ -229,11 +206,13 @@
     background-repeat: no-repeat;
     vertical-align: middle;
   }
+
   &.menu__button-toggle--active {
     &:after {
       background-position: left -402px;
     }
   }
+
   @include breakpoint($menu-full) {
     display: none;
   }
