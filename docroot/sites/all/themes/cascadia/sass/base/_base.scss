@@ -24,6 +24,8 @@ body {
 
 .l-main {
   @extend %constrained-width;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 // .no-panels-layout .l-main-wrapper {

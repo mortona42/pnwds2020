@@ -1,78 +1,78 @@
-.page-node-add, .page-node-edit, .page-user-edit, .page-user, .page-ticket, .page-ticket-register, .page-ticket-registration, .page-ticket-redeem, .page-checkout, .page-node-submission {
-  table {
-    max-width: $large;
-    th {
-      font-size: 1em;
-      font-weight: 300;
-      padding: 0.5em;
-      margin: 0.25em;
-    }
-    tr {
-      margin: 0.25em;
-      &.odd {
-        background-color: lighten($lt-gray, 10%);
-      }
-      &:nth-child(2n) {
-        background-color: $lt-gray;
-      }
-    }
-  }
-  .l-main-wrapper {
-    padding: 2em 0;
-  }
-  .l-main {
-    background-color: $white;
-    padding: 0.5em;
-    @include breakpoint($medium) {
-      padding: 2em;
-    }
-    .page-title {
-      padding-left: 0;
-    }
-  }
-  .fieldset-legend {
-    font-weight: bold;
-  }
-  #edit-title {
-    width: 100%;
-  }
-  .field-multiple-drag {
-    width: 10%;
-  }
-  .form-autocomplete, .form-text {
-    width: 100%;
-  }
-  .field-add-more-submit {
-    margin-top: 0.5em;
-  }
-  .file-widget {
-    .form-file {
-      width: 75%;
-    }
-    .form-submit {
-      margin-right: 0;
-      width: 25%;
-    }
-  }
-  div.vertical-tabs {
-    border-color: darken($lt-gray,20%);
-  }
-  .vertical-tabs ul.vertical-tabs-list {
-    border-color: darken($lt-gray,20%);
-    li {
-      background-color: $lt-gray;
-      border-color: darken($lt-gray,20%);
-      &.selected {
-        background-color: lighten($lt-gray,3%);
-      }
-    }
-  }
-  .administrative {
-    ul {
-      width: auto;
-    }
-  }
-  .messages {
-    width: auto;
-  }
-}
+// .page-node-add, .page-node-edit, .page-user-edit, .page-user, .page-ticket, .page-ticket-register, .page-ticket-registration, .page-ticket-redeem, .page-checkout, .page-node-submission {
+//   table {
+//     max-width: $large;
+//     th {
+//       font-size: 1em;
+//       font-weight: 300;
+//       padding: 0.5em;
+//       margin: 0.25em;
+//     }
+//     tr {
+//       margin: 0.25em;
+//       &.odd {
+//         background-color: lighten($lt-gray, 10%);
+//       }
+//       &:nth-child(2n) {
+//         background-color: $lt-gray;
+//       }
+//     }
+//   }
+//   .l-main-wrapper {
+//     padding: 2em 0;
+//   }
+//   .l-main {
+//     background-color: $white;
+//     padding: 0.5em;
+//     @include breakpoint($medium) {
+//       padding: 2em;
+//     }
+//     .page-title {
+//       padding-left: 0;
+//     }
+//   }
+//   .fieldset-legend {
+//     font-weight: bold;
+//   }
+//   #edit-title {
+//     width: 100%;
+//   }
+//   .field-multiple-drag {
+//     width: 10%;
+//   }
+//   .form-autocomplete, .form-text {
+//     width: 100%;
+//   }
+//   .field-add-more-submit {
+//     margin-top: 0.5em;
+//   }
+//   .file-widget {
+//     .form-file {
+//       width: 75%;
+//     }
+//     .form-submit {
+//       margin-right: 0;
+//       width: 25%;
+//     }
+//   }
+//   div.vertical-tabs {
+//     border-color: darken($lt-gray,20%);
+//   }
+//   .vertical-tabs ul.vertical-tabs-list {
+//     border-color: darken($lt-gray,20%);
+//     li {
+//       background-color: $lt-gray;
+//       border-color: darken($lt-gray,20%);
+//       &.selected {
+//         background-color: lighten($lt-gray,3%);
+//       }
+//     }
+//   }
+//   .administrative {
+//     ul {
+//       width: auto;
+//     }
+//   }
+//   .messages {
+//     width: auto;
+//   }
+// }

@@ -13,6 +13,10 @@
     padding-bottom: 10px;
   }
 
+  .block--menu {
+    position: static;
+  }
+
   // Level 1
   .menu {
     text-align: right;
@@ -81,6 +85,7 @@
     background-color: $primary-color;
     font-size: 1em;
     height: 65px;
+    margin-bottom: 0;
 
     .l-region--navigation {
       // important used to override any inline JS hiding menu for smaller screens.
@@ -204,35 +209,6 @@
 
     }
   }
-}
-
-// @TODO: make reusable class, not year specific.
-.block--menu-menu-2015 {
-
-  // Level 1
-  .menu {
-
-  }
-
-  // Level 2
-  .menu > li > .menu {
-    //display: none;
-    background-color: $dk-primary-color;
-  }
-
-  @include breakpoint($menu-full) {
-
-    // Level 1
-    .menu {
-
-    }
-
-    // Level 2
-    .menu > .menu {
-    }
-
-  }
-
 }
 
 .menu__button-toggle {

@@ -1,88 +1,100 @@
 .page-node-registration {
   .title-region {
-    max-width: none;
-    text-align: center;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
   }
-  .preface {
-    @include breakpoint($medium) {
-      .panel-pane {
-        float: left;
-        width: 48%;
-        &:first-child {
-          margin-right: 2%;
-        }
-      }
-    }
-  }
-  .ticket-field-formatter-view-form {
-    text-align: center;
-  }
+  // .preface {
+  //   @include breakpoint($medium) {
+  //     .panel-pane {
+  //       float: left;
+  //       width: 48%;
+  //       &:first-child {
+  //         margin-right: 2%;
+  //       }
+  //     }
+  //   }
+  // }
+  // .ticket-field-formatter-view-form {
+  //   text-align: center;
+  // }
   #edit-submit {
-    margin: 1em 0 0 0;
-    width: 100%;
-    @include breakpoint($mid-small) {
-      width: 60%;
-    }
+    width: 300px;
   }
-}
-
-.pane-node-field-event-tickets {
-  overflow: auto;
 }
 
 .entity-ticket-type {
-  text-align: left;
+  max-width: 300px;
   h3 {
-    float: left;
-    font-size: 1.25em;
-    margin: 0;
-    margin-right: 1em;
-    padding: 1.65em 0;
-    @include breakpoint($medium) {
-      width: 24%;
-    }
+    margin-bottom: 0;
   }
-  .field--name-commerce-price {
-    float: left;
-    font-size: 1.25em;
-    padding: 1.4em 0;
-    width: auto;
+  .cod_paid_event__commerce-price {
+    font-size: 4em;
+    font-weight: bold;
+    color: $secondary-color;
   }
-  .field--name-ticket-type-description {
-    clear: both;
-  }
-  .form-item {
-    clear: both;
-    float: left;
-    width: 100%;
-    @include breakpoint(440px) {
-      clear: right;
-      float: right;
-      width: auto;
-    }
-    label {
-      font-size: 0.9em;
-      font-weight: normal;
-      padding-bottom: 0.35em;
-    }
-    input {
-      border-color: $dk-gray;
-      @include breakpoint(0 440px) {
-        width: 100%;
-      }
-    }
+  input[type="text"] {
+    max-width: 125px;
   }
 }
 
-.page-ticket {
-  .wizard-trail {
-    color: $gray-blue;
-    font-size: 1em;
-    text-align: left;
-    margin-bottom: 2em;
-  }
-  .messages {
-    width: 100%;
-    margin: 0 0 1em 0;
-  }
-}
+// .pane-node-field-event-tickets {
+//   overflow: auto;
+// }
+
+// .entity-ticket-type {
+//   text-align: left;
+//   h3 {
+//     float: left;
+//     font-size: 1.25em;
+//     margin: 0;
+//     margin-right: 1em;
+//     padding: 1.65em 0;
+//     @include breakpoint($medium) {
+//       width: 24%;
+//     }
+//   }
+//   .field--name-commerce-price {
+//     float: left;
+//     font-size: 1.25em;
+//     padding: 1.4em 0;
+//     width: auto;
+//   }
+//   .field--name-ticket-type-description {
+//     clear: both;
+//   }
+//   .form-item {
+//     clear: both;
+//     float: left;
+//     width: 100%;
+//     @include breakpoint(440px) {
+//       clear: right;
+//       float: right;
+//       width: auto;
+//     }
+//     label {
+//       font-size: 0.9em;
+//       font-weight: normal;
+//       padding-bottom: 0.35em;
+//     }
+//     input {
+//       border-color: $dk-gray;
+//       @include breakpoint(0 440px) {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// .page-ticket {
+//   .wizard-trail {
+//     color: $gray-blue;
+//     font-size: 1em;
+//     text-align: left;
+//     margin-bottom: 2em;
+//   }
+//   .messages {
+//     width: 100%;
+//     margin: 0 0 1em 0;
+//   }
+// }

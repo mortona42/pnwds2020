@@ -97,9 +97,11 @@
         } else {
           // EXPAND SUB-MENU
           // Close open sub-menu
-          $('ul.menu li .js-menu-item-toggle').removeClass('js-menu-item-toggle-active');
-          $('ul.menu li').removeClass('menu-item--active');
-          $('ul.menu li ul.menu').slideUp('fast');
+          $('.menu-item--parent').each(function () {
+            $(this).find('.js-menu-item-toggle').removeClass('js-menu-item-toggle-active');
+            $(this).removeClass('menu-item--active');
+            $(this).find('ul.menu').slideUp('fast');
+          });
           // Open new sub-menu
           $(this).addClass('js-menu-item-toggle-active');
           $(this).closest('.menu-item--parent').addClass('menu-item--active');
@@ -107,14 +109,15 @@
         }
       });
       // Sub-menu hover toggle for desktop
-      $('.menu-item--parent').on('mouseover mouseout', function () {
-        if ($(window).width() >= 770) {
-          // TOGGLE SUB-MENU
-          // @TODO: Fix. Getting called twice.
-          $(this).toggleClass('menu-item--active');
-          $(this).find('ul.menu').slideToggle('fast');
-        }
-      });
+      // $('.menu-item--parent').on('mouseenter', function () {
+      //   if ($(window).width() >= 770) {
+      //     // $(this).find('.js-menu-item-toggle').once().click();
+      //     // TOGGLE SUB-MENU
+      //     // @TODO: Fix. Getting called twice.
+      //     // $(this).toggleClass('menu-item--active');
+      //     // $(this).find('ul.menu').slideToggle('fast');
+      //   }
+      // });
 
     }
   };

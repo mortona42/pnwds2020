@@ -1,21 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,500);
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
-
-img, video {
-  max-width: 100%;
-  height: auto; }
-
 .l-main, .l-region--footer, .l-header, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content, .view-display-id-panel_sessions_by_track {
   margin: 0 auto;
   width: 94%;
@@ -35,6 +19,10 @@ body {
 
 .panel-pane {
   padding: 1em 0; }
+
+.l-main {
+  margin-top: 40px;
+  margin-bottom: 40px; }
 
 .location-action {
   display: none; }
@@ -56,7 +44,7 @@ body {
     margin: 1em 0; }
 
 .l-errata-wrapper {
-  background-color: white;
+  background-color: #FFF;
   color: #356785;
   padding-bottom: 1em;
   padding: 0 0.72em 2em 0.72em;
@@ -168,7 +156,7 @@ textarea {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   appearance: none;
-  background-color: #f9f9f9;
+  background-color: #F9F9F9;
   border: 1px solid #979797;
   border-radius: 0px;
   box-shadow: none;
@@ -194,7 +182,7 @@ textarea {
   input:not([type]):hover,
   select:hover,
   textarea:hover {
-    border-color: #787878; }
+    border-color: #797979; }
   input[type="color"]:focus,
   input[type="date"]:focus,
   input[type="datetime"]:focus,
@@ -212,7 +200,7 @@ textarea {
   input:not([type]):focus,
   select:focus,
   textarea:focus {
-    border-color: #4b4b4b;
+    border-color: #4c4c4c;
     box-shadow: none;
     outline: none; }
   input[type="color"]:disabled,
@@ -232,7 +220,7 @@ textarea {
   input:not([type]):disabled,
   select:disabled,
   textarea:disabled {
-    background-color: #ececec;
+    background-color: #ededed;
     cursor: not-allowed; }
     input[type="color"]:disabled:hover,
     input[type="date"]:disabled:hover,
@@ -288,7 +276,7 @@ select {
   width: 100%; }
 
 .description {
-  color: #9a9a9a;
+  color: #9A9A9A;
   font-style: italic;
   font-size: 0.75em; }
 
@@ -313,21 +301,21 @@ table {
     table {
       max-width: 60%; } }
   table th {
-    background-color: #9a9a9a;
+    background-color: #9A9A9A;
     padding: 0.5em;
     margin: 0.25em; }
     table th a:link, table th a:visited {
-      color: #9a9a9a; }
+      color: #9A9A9A; }
   table tr {
     margin: 0.25em; }
     table tr.odd {
-      background-color: #9a9a9a; }
+      background-color: #9A9A9A; }
       table tr.odd td.active {
         background-color: #a2a2a2; }
       table tr.odd .form-item {
         white-space: normal; }
     table tr:nth-child(2n) {
-      background-color: #9a9a9a; }
+      background-color: #9A9A9A; }
       table tr:nth-child(2n) td.active {
         background-color: #a2a2a2; }
     table tr td {
@@ -337,7 +325,7 @@ table {
         width: auto; }
 
 .sticky-header {
-  background-color: #9a9a9a; }
+  background-color: #9A9A9A; }
 
 .tabledrag-handle {
   height: 30px;
@@ -399,7 +387,7 @@ p {
   margin: 0 0 1em; }
 
 a {
-  color: black;
+  color: #000;
   text-decoration: underline;
   transition: color 0.2 ease-in-out; }
   a:active, a:focus, a:hover {
@@ -419,7 +407,7 @@ menu, ol, ul {
   padding: 0; }
 
 blockquote {
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
   border-left: solid 8px #1963a3;
   margin: 1em 0;
   padding: 30px; }
@@ -460,7 +448,7 @@ blockquote {
       height: 81%; } }
 
 body.cke_editable {
-  background-color: white; }
+  background-color: #FFF; }
 
 #edit-field-event-tickets {
   background-color: transparent; }
@@ -632,7 +620,7 @@ body.cke_editable {
       color: #303030; }
   .comment-wrapper .new {
     background-color: #36521d;
-    color: white;
+    color: #FFF;
     padding: 0 1em; }
   .comment-wrapper .comment {
     background-color: #a2a2a2;
@@ -758,18 +746,18 @@ body.cke_editable {
   padding: 0.4em 0.6em; }
   #edit-back:hover, #edit-back:focus, #edit-cancel:hover, #edit-cancel:focus {
     background-color: #4d5770;
-    color: white;
+    color: #FFF;
     text-decoration: none; }
   #edit-back.active, #edit-cancel.active {
-    color: white;
-    background-color: #9a9a9a;
-    border-color: #9a9a9a; }
+    color: #FFF;
+    background-color: #9A9A9A;
+    border-color: #9A9A9A; }
 
 .page-checkout table.checkout-review {
   border: none;
   margin-top: 1em; }
   .page-checkout table.checkout-review tr:nth-child(2n) {
-    background-color: white; }
+    background-color: #FFF; }
   .page-checkout table.checkout-review table {
     border: none; }
 
@@ -781,15 +769,15 @@ body.cke_editable {
   padding: 0.4em 1em; }
   .button-link:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .page-node-sessions-proposed .view-footer a:hover, .page-node-sessions-accepted .view-footer a:hover, .button-link:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus, .page-node-sessions-proposed .view-footer a:focus, .page-node-sessions-accepted .view-footer a:focus {
     background-color: #303030;
-    color: white;
+    color: #FFF;
     text-decoration: none; }
   .button-link.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .page-node-sessions-proposed .view-footer a.active, .page-node-sessions-accepted .view-footer a.active {
-    color: white;
+    color: #FFF;
     background-color: #6a7076;
     border-color: #6a7076; }
 
 .l-footer-wrapper {
-  background-color: whitesmoke; }
+  background-color: #F5F5F5; }
 
 @media (min-width: 770px) {
   .l-region--footer {
@@ -802,7 +790,7 @@ body.cke_editable {
       width: 49.15254%;
       float: left;
       margin-right: -100%;
-      margin-left: 0%;
+      margin-left: 0;
       clear: none; }
     .l-region--footer .menu--footer {
       width: 49.15254%;
@@ -815,7 +803,7 @@ body.cke_editable {
     width: 66.10169%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none; }
   .l-region--footer .menu--footer {
     width: 32.20339%;
@@ -825,7 +813,7 @@ body.cke_editable {
     clear: none; } }
 
 .form--block {
-  border: 1px solid #cccccc;
+  border: 1px solid #CCC;
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 30px; }
@@ -890,6 +878,8 @@ body.cke_editable {
     background-color: #1963a3;
     padding-top: 10px;
     padding-bottom: 10px; }
+  .l-navigation .block--menu {
+    position: static; }
   .l-navigation .menu {
     text-align: right;
     padding: 20px 0; }
@@ -929,7 +919,8 @@ body.cke_editable {
       position: relative;
       background-color: #1963a3;
       font-size: 1em;
-      height: 65px; }
+      height: 65px;
+      margin-bottom: 0; }
       .l-navigation .l-region--navigation {
         display: block !important;
         position: static;
@@ -991,9 +982,6 @@ body.cke_editable {
   .block--system-user-menu .menu li:hover a {
     border-color: #CCC; } }
 
-.block--menu-menu-2015 .menu > li > .menu {
-  background-color: #0c305b; }
-
 .menu__button-toggle {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 0.95em;
@@ -1035,7 +1023,7 @@ body.cke_editable {
       text-decoration: none; }
     .page-node-bofs .pane-cod-schedule-menu-pane a.active {
       background-color: #36521d;
-      color: #9a9a9a; }
+      color: #9A9A9A; }
   .page-node-bofs .pane-cod-schedule-menu-pane ul {
     font-weight: normal;
     margin: 0;
@@ -1045,7 +1033,7 @@ body.cke_editable {
       list-style-image: none;
       list-style-type: none; }
 .page-node-bofs .view-cod-bof-schedule-timeslots .timeslot {
-  background-color: white;
+  background-color: #FFF;
   border: 1px solid #6a7076;
   margin-bottom: 2em;
   padding: 2em; }
@@ -1063,7 +1051,7 @@ body.cke_editable {
   .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a {
     text-align: center; }
     .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a a:hover {
-      color: #9a9a9a; }
+      color: #9A9A9A; }
 .page-node-bofs .view-cod-bof-schedule-timeslots .views-field-name {
   font-size: 1.25em;
   font-weight: bold;
@@ -1101,7 +1089,7 @@ body.cke_editable {
 .page-node-community .l-main .container.content {
   margin-top: 2em; }
 .page-node-community .view-drupalcon-attendees .views-row {
-  background-color: white;
+  background-color: #FFF;
   border: 1px solid #303030;
   float: left;
   margin: 2% 0 0 2%;
@@ -1123,7 +1111,7 @@ body.cke_editable {
         clear: left;
         margin-left: 0; } }
   .page-node-community .view-drupalcon-attendees .views-row:hover {
-    background-color: #b3b3b3; }
+    background-color: #b4b4b4; }
   .page-node-community .view-drupalcon-attendees .views-row .views-field-picture img {
     border: 1px solid #6a7076; }
   .page-node-community .view-drupalcon-attendees .views-row .views-field-name {
@@ -1139,58 +1127,6 @@ body.cke_editable {
     font-style: italic; }
 .page-node-community .view-drupalcon-attendees .pager {
   padding-top: 2em; }
-
-.page-node-add table, .page-node-edit table, .page-user-edit table, .page-user table, .page-ticket table, .page-ticket-register table, .page-ticket-registration table, .page-ticket-redeem table, .page-checkout table, .page-node-submission table {
-  max-width: 1280px; }
-  .page-node-add table th, .page-node-edit table th, .page-user-edit table th, .page-user table th, .page-ticket table th, .page-ticket-register table th, .page-ticket-registration table th, .page-ticket-redeem table th, .page-checkout table th, .page-node-submission table th {
-    font-size: 1em;
-    font-weight: 300;
-    padding: 0.5em;
-    margin: 0.25em; }
-  .page-node-add table tr, .page-node-edit table tr, .page-user-edit table tr, .page-user table tr, .page-ticket table tr, .page-ticket-register table tr, .page-ticket-registration table tr, .page-ticket-redeem table tr, .page-checkout table tr, .page-node-submission table tr {
-    margin: 0.25em; }
-    .page-node-add table tr.odd, .page-node-edit table tr.odd, .page-user-edit table tr.odd, .page-user table tr.odd, .page-ticket table tr.odd, .page-ticket-register table tr.odd, .page-ticket-registration table tr.odd, .page-ticket-redeem table tr.odd, .page-checkout table tr.odd, .page-node-submission table tr.odd {
-      background-color: #b3b3b3; }
-    .page-node-add table tr:nth-child(2n), .page-node-edit table tr:nth-child(2n), .page-user-edit table tr:nth-child(2n), .page-user table tr:nth-child(2n), .page-ticket table tr:nth-child(2n), .page-ticket-register table tr:nth-child(2n), .page-ticket-registration table tr:nth-child(2n), .page-ticket-redeem table tr:nth-child(2n), .page-checkout table tr:nth-child(2n), .page-node-submission table tr:nth-child(2n) {
-      background-color: #9a9a9a; }
-.page-node-add .l-main-wrapper, .page-node-edit .l-main-wrapper, .page-user-edit .l-main-wrapper, .page-user .l-main-wrapper, .page-ticket .l-main-wrapper, .page-ticket-register .l-main-wrapper, .page-ticket-registration .l-main-wrapper, .page-ticket-redeem .l-main-wrapper, .page-checkout .l-main-wrapper, .page-node-submission .l-main-wrapper {
-  padding: 2em 0; }
-.page-node-add .l-main, .page-node-edit .l-main, .page-user-edit .l-main, .page-user .l-main, .page-ticket .l-main, .page-ticket-register .l-main, .page-ticket-registration .l-main, .page-ticket-redeem .l-main, .page-checkout .l-main, .page-node-submission .l-main {
-  background-color: white;
-  padding: 0.5em; }
-  @media (min-width: 770px) {
-    .page-node-add .l-main, .page-node-edit .l-main, .page-user-edit .l-main, .page-user .l-main, .page-ticket .l-main, .page-ticket-register .l-main, .page-ticket-registration .l-main, .page-ticket-redeem .l-main, .page-checkout .l-main, .page-node-submission .l-main {
-      padding: 2em; } }
-  .page-node-add .l-main .page-title, .page-node-edit .l-main .page-title, .page-user-edit .l-main .page-title, .page-user .l-main .page-title, .page-ticket .l-main .page-title, .page-ticket-register .l-main .page-title, .page-ticket-registration .l-main .page-title, .page-ticket-redeem .l-main .page-title, .page-checkout .l-main .page-title, .page-node-submission .l-main .page-title {
-    padding-left: 0; }
-.page-node-add .fieldset-legend, .page-node-edit .fieldset-legend, .page-user-edit .fieldset-legend, .page-user .fieldset-legend, .page-ticket .fieldset-legend, .page-ticket-register .fieldset-legend, .page-ticket-registration .fieldset-legend, .page-ticket-redeem .fieldset-legend, .page-checkout .fieldset-legend, .page-node-submission .fieldset-legend {
-  font-weight: bold; }
-.page-node-add #edit-title, .page-node-edit #edit-title, .page-user-edit #edit-title, .page-user #edit-title, .page-ticket #edit-title, .page-ticket-register #edit-title, .page-ticket-registration #edit-title, .page-ticket-redeem #edit-title, .page-checkout #edit-title, .page-node-submission #edit-title {
-  width: 100%; }
-.page-node-add .field-multiple-drag, .page-node-edit .field-multiple-drag, .page-user-edit .field-multiple-drag, .page-user .field-multiple-drag, .page-ticket .field-multiple-drag, .page-ticket-register .field-multiple-drag, .page-ticket-registration .field-multiple-drag, .page-ticket-redeem .field-multiple-drag, .page-checkout .field-multiple-drag, .page-node-submission .field-multiple-drag {
-  width: 10%; }
-.page-node-add .form-autocomplete, .page-node-add .form-text, .page-node-edit .form-autocomplete, .page-node-edit .form-text, .page-user-edit .form-autocomplete, .page-user-edit .form-text, .page-user .form-autocomplete, .page-user .form-text, .page-ticket .form-autocomplete, .page-ticket .form-text, .page-ticket-register .form-autocomplete, .page-ticket-register .form-text, .page-ticket-registration .form-autocomplete, .page-ticket-registration .form-text, .page-ticket-redeem .form-autocomplete, .page-ticket-redeem .form-text, .page-checkout .form-autocomplete, .page-checkout .form-text, .page-node-submission .form-autocomplete, .page-node-submission .form-text {
-  width: 100%; }
-.page-node-add .field-add-more-submit, .page-node-edit .field-add-more-submit, .page-user-edit .field-add-more-submit, .page-user .field-add-more-submit, .page-ticket .field-add-more-submit, .page-ticket-register .field-add-more-submit, .page-ticket-registration .field-add-more-submit, .page-ticket-redeem .field-add-more-submit, .page-checkout .field-add-more-submit, .page-node-submission .field-add-more-submit {
-  margin-top: 0.5em; }
-.page-node-add .file-widget .form-file, .page-node-edit .file-widget .form-file, .page-user-edit .file-widget .form-file, .page-user .file-widget .form-file, .page-ticket .file-widget .form-file, .page-ticket-register .file-widget .form-file, .page-ticket-registration .file-widget .form-file, .page-ticket-redeem .file-widget .form-file, .page-checkout .file-widget .form-file, .page-node-submission .file-widget .form-file {
-  width: 75%; }
-.page-node-add .file-widget .form-submit, .page-node-add .file-widget #edit-back, .page-node-add .file-widget #edit-cancel, .page-node-edit .file-widget .form-submit, .page-node-edit .file-widget #edit-back, .page-node-edit .file-widget #edit-cancel, .page-user-edit .file-widget .form-submit, .page-user-edit .file-widget #edit-back, .page-user-edit .file-widget #edit-cancel, .page-user .file-widget .form-submit, .page-user .file-widget #edit-back, .page-user .file-widget #edit-cancel, .page-ticket .file-widget .form-submit, .page-ticket .file-widget #edit-back, .page-ticket .file-widget #edit-cancel, .page-ticket-register .file-widget .form-submit, .page-ticket-register .file-widget #edit-back, .page-ticket-register .file-widget #edit-cancel, .page-ticket-registration .file-widget .form-submit, .page-ticket-registration .file-widget #edit-back, .page-ticket-registration .file-widget #edit-cancel, .page-ticket-redeem .file-widget .form-submit, .page-ticket-redeem .file-widget #edit-back, .page-ticket-redeem .file-widget #edit-cancel, .page-checkout .file-widget .form-submit, .page-checkout .file-widget #edit-back, .page-checkout .file-widget #edit-cancel, .page-node-submission .file-widget .form-submit, .page-node-submission .file-widget #edit-back, .page-node-submission .file-widget #edit-cancel {
-  margin-right: 0;
-  width: 25%; }
-.page-node-add div.vertical-tabs, .page-node-edit div.vertical-tabs, .page-user-edit div.vertical-tabs, .page-user div.vertical-tabs, .page-ticket div.vertical-tabs, .page-ticket-register div.vertical-tabs, .page-ticket-registration div.vertical-tabs, .page-ticket-redeem div.vertical-tabs, .page-checkout div.vertical-tabs, .page-node-submission div.vertical-tabs {
-  border-color: #676767; }
-.page-node-add .vertical-tabs ul.vertical-tabs-list, .page-node-edit .vertical-tabs ul.vertical-tabs-list, .page-user-edit .vertical-tabs ul.vertical-tabs-list, .page-user .vertical-tabs ul.vertical-tabs-list, .page-ticket .vertical-tabs ul.vertical-tabs-list, .page-ticket-register .vertical-tabs ul.vertical-tabs-list, .page-ticket-registration .vertical-tabs ul.vertical-tabs-list, .page-ticket-redeem .vertical-tabs ul.vertical-tabs-list, .page-checkout .vertical-tabs ul.vertical-tabs-list, .page-node-submission .vertical-tabs ul.vertical-tabs-list {
-  border-color: #676767; }
-  .page-node-add .vertical-tabs ul.vertical-tabs-list li, .page-node-edit .vertical-tabs ul.vertical-tabs-list li, .page-user-edit .vertical-tabs ul.vertical-tabs-list li, .page-user .vertical-tabs ul.vertical-tabs-list li, .page-ticket .vertical-tabs ul.vertical-tabs-list li, .page-ticket-register .vertical-tabs ul.vertical-tabs-list li, .page-ticket-registration .vertical-tabs ul.vertical-tabs-list li, .page-ticket-redeem .vertical-tabs ul.vertical-tabs-list li, .page-checkout .vertical-tabs ul.vertical-tabs-list li, .page-node-submission .vertical-tabs ul.vertical-tabs-list li {
-    background-color: #9a9a9a;
-    border-color: #676767; }
-    .page-node-add .vertical-tabs ul.vertical-tabs-list li.selected, .page-node-edit .vertical-tabs ul.vertical-tabs-list li.selected, .page-user-edit .vertical-tabs ul.vertical-tabs-list li.selected, .page-user .vertical-tabs ul.vertical-tabs-list li.selected, .page-ticket .vertical-tabs ul.vertical-tabs-list li.selected, .page-ticket-register .vertical-tabs ul.vertical-tabs-list li.selected, .page-ticket-registration .vertical-tabs ul.vertical-tabs-list li.selected, .page-ticket-redeem .vertical-tabs ul.vertical-tabs-list li.selected, .page-checkout .vertical-tabs ul.vertical-tabs-list li.selected, .page-node-submission .vertical-tabs ul.vertical-tabs-list li.selected {
-      background-color: #a2a2a2; }
-.page-node-add .administrative ul, .page-node-edit .administrative ul, .page-user-edit .administrative ul, .page-user .administrative ul, .page-ticket .administrative ul, .page-ticket-register .administrative ul, .page-ticket-registration .administrative ul, .page-ticket-redeem .administrative ul, .page-checkout .administrative ul, .page-node-submission .administrative ul {
-  width: auto; }
-.page-node-add .messages, .page-node-edit .messages, .page-user-edit .messages, .page-user .messages, .page-ticket .messages, .page-ticket-register .messages, .page-ticket-registration .messages, .page-ticket-redeem .messages, .page-checkout .messages, .page-node-submission .messages {
-  width: auto; }
 
 .page-node-news .l-content, .page-news .l-content {
   margin: 1em auto;
@@ -1212,71 +1148,22 @@ body.cke_editable {
   margin-left: 2em; }
 
 .page-node-registration .title-region {
-  max-width: none;
-  text-align: center; }
-@media (min-width: 770px) {
-  .page-node-registration .preface .panel-pane {
-    float: left;
-    width: 48%; }
-    .page-node-registration .preface .panel-pane:first-child {
-      margin-right: 2%; } }
-.page-node-registration .ticket-field-formatter-view-form {
-  text-align: center; }
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto; }
 .page-node-registration #edit-submit {
-  margin: 1em 0 0 0;
-  width: 100%; }
-  @media (min-width: 600px) {
-    .page-node-registration #edit-submit {
-      width: 60%; } }
-
-.pane-node-field-event-tickets {
-  overflow: auto; }
+  width: 300px; }
 
 .entity-ticket-type {
-  text-align: left; }
+  max-width: 300px; }
   .entity-ticket-type h3 {
-    float: left;
-    font-size: 1.25em;
-    margin: 0;
-    margin-right: 1em;
-    padding: 1.65em 0; }
-    @media (min-width: 770px) {
-      .entity-ticket-type h3 {
-        width: 24%; } }
-  .entity-ticket-type .field--name-commerce-price {
-    float: left;
-    font-size: 1.25em;
-    padding: 1.4em 0;
-    width: auto; }
-  .entity-ticket-type .field--name-ticket-type-description {
-    clear: both; }
-  .entity-ticket-type .form-item {
-    clear: both;
-    float: left;
-    width: 100%; }
-    @media (min-width: 440px) {
-      .entity-ticket-type .form-item {
-        clear: right;
-        float: right;
-        width: auto; } }
-    .entity-ticket-type .form-item label {
-      font-size: 0.9em;
-      font-weight: normal;
-      padding-bottom: 0.35em; }
-    .entity-ticket-type .form-item input {
-      border-color: #303030; }
-      @media (min-width: 0) and (max-width: 440px) {
-        .entity-ticket-type .form-item input {
-          width: 100%; } }
-
-.page-ticket .wizard-trail {
-  color: #4d5770;
-  font-size: 1em;
-  text-align: left;
-  margin-bottom: 2em; }
-.page-ticket .messages {
-  width: 100%;
-  margin: 0 0 1em 0; }
+    margin-bottom: 0; }
+  .entity-ticket-type .cod_paid_event__commerce-price {
+    font-size: 4em;
+    font-weight: bold;
+    color: #00874b; }
+  .entity-ticket-type input[type="text"] {
+    max-width: 125px; }
 
 .page-node-schedule .title-region {
   text-align: center; }
@@ -1586,7 +1473,7 @@ body.cke_editable {
     padding-left: 50px;
     padding-right: 50px; }
   .page-node-training .l-content .view-content .views-row {
-    background-color: white;
+    background-color: #FFF;
     border: 1px solid #303030;
     overflow: auto;
     margin-bottom: 1em;
@@ -1615,7 +1502,7 @@ body.cke_editable {
   overflow: auto; }
 .node-type-session .l-content .hydra .top-right-content .pane-title, .node-type-session .l-content .hydra .bottom-right-content .pane-title, .node-type-schedule-item .l-content .hydra .top-right-content .pane-title, .node-type-schedule-item .l-content .hydra .bottom-right-content .pane-title, .node-type-bof .l-content .hydra .top-right-content .pane-title, .node-type-bof .l-content .hydra .bottom-right-content .pane-title {
   background-color: #356785;
-  color: #9a9a9a;
+  color: #9A9A9A;
   font-size: 1.5em;
   padding: 0.5em 0.75em;
   margin: 0 0 0.75em 0; }
@@ -1631,16 +1518,16 @@ body.cke_editable {
       background: #6a7076; }
       .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a {
         background: none;
-        color: white;
+        color: #FFF;
         padding-bottom: 4px; }
     .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a, .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a, .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a {
       background: none;
-      color: white;
+      color: #FFF;
       padding-bottom: 4px; }
 .view-cod-session-schedule .views-field-field-slot-datetime-1, .view-cod-session-schedule .views-field-field-evttime-date-1, .view-cod-bof-schedule .views-field-field-slot-datetime-1, .view-cod-bof-schedule .views-field-field-evttime-date-1, .view-cod-schedule .views-field-field-slot-datetime-1, .view-cod-schedule .views-field-field-evttime-date-1 {
   background: #59afe1;
   clear: both;
-  color: white;
+  color: #FFF;
   padding: 15px;
   font-weight: bold;
   text-align: center;
@@ -1725,7 +1612,7 @@ body.cke_editable {
 .page-ticket-register .registration-data-toggle {
   font-size: 0.8em;
   margin-bottom: 1.8em;
-  background-color: #9a9a9a; }
+  background-color: #9A9A9A; }
 .page-ticket-register .ticket-register-form > div > fieldset > legend {
   font-size: 1.4em; }
 .page-ticket-register select {
@@ -1748,6 +1635,6 @@ body.cke_editable {
     margin-left: auto; } }
 
 .text-light {
-  color: #9a9a9a; }
+  color: #9A9A9A; }
   .text-light a {
     color: inherit; }
