@@ -52,23 +52,70 @@
   }
 }
 
+
+/* Display sponsors' logos, with gold > silver > bronze, decreasing size. */
+
+/* Note that these adjustments only affect the **width**. Each gets an appropriate amount of horizontal space on
+   the screen. However, some logos are taller than others, and some are big and solid. The logos should be
+   **manually shrunk** first and whitespace-padded on the sides if it is tall or extra-solid. Logos
+   that are wide and sparse (such as for Affinity Bridge) should have *less* whitespace at their sides,
+   to make them bigger. */
+
+/* $gold-shrinkage : 1;   No shrinkage.. */
+$silver-shrinkage: .667;  /* Note that by reducing it linearly by 2/3, you're really reducing the area to 4/9. */
+$bronze-shrinkage: .444;  /* And here we shrink it by the same amount again (2/3 of 2/3). */
+
+$one-wide-logo-width : 100%;  /* on narrow displays */
+$two-wide-logo-width :  49%;  /* on medium-width displays */
+$four-wide-logo-width : 24%;  /* on full monitors */
+
+/* This is the default setup, with widths for 'gold' sponsors. */
 .view-cod-sponsors {
   .views-row {
     float: left;
     margin-left: 1%;
-    min-height: 150px;
     padding: 1em;
-    width: 100%;
+    width: $one-wide-logo-width;
     @include breakpoint($small $mid-small) {
-      width: 49%;
+      width: $two-wide-logo-width;
       &:nth-child(2n+1) {
         clear: left;
       }
     }
     @include breakpoint($mid-small) {
-      width: 24%;
+      width: $four-wide-logo-width;
       &:nth-child(4n+1) {
         clear: left;
+      }
+    }
+  }
+}
+
+/* override the widths for 'silver'. */
+#block-cod-sponsors-silver {
+  .view-cod-sponsors {
+    .views-row {
+      width: $one-wide-logo-width * $silver-shrinkage;
+      @include breakpoint($small $mid-small) {
+        width: $two-wide-logo-width * $silver-shrinkage;
+      }
+      @include breakpoint($mid-small) {
+        width: $four-wide-logo-width * $silver-shrinkage;
+      }
+    }
+  }
+}
+
+/* override the widths for 'bronze'. */
+#block-cod-sponsors-bronze {
+  .view-cod-sponsors {
+    .views-row {
+      width: $one-wide-logo-width * $bronze-shrinkage;
+      @include breakpoint($small $mid-small) {
+        width: $two-wide-logo-width * $bronze-shrinkage;
+      }
+      @include breakpoint($mid-small) {
+        width: $four-wide-logo-width * $bronze-shrinkage;
       }
     }
   }

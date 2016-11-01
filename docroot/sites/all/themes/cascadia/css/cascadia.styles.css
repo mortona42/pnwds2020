@@ -578,10 +578,17 @@ body.cke_editable {
     overflow: auto;
     position: relative; }
 
+/* Display sponsors' logos, with gold > silver > bronze, decreasing size. */
+/* $gold-shrinkage : 1;   No shrinkage.. */
+/* Note that by reducing it linearly by 2/3, you're really reducing the area to 4/9. */
+/* And here we shrink it by the same amount again (2/3 of 2/3). */
+/* on narrow displays */
+/* on medium-width displays */
+/* on full monitors */
+/* This is the default setup, with widths for 'gold' sponsors. */
 .view-cod-sponsors .views-row {
   float: left;
   margin-left: 1%;
-  min-height: 150px;
   padding: 1em;
   width: 100%; }
   @media (min-width: 420px) and (max-width: 600px) {
@@ -594,6 +601,26 @@ body.cke_editable {
       width: 24%; }
       .view-cod-sponsors .views-row:nth-child(4n+1) {
         clear: left; } }
+
+/* override the widths for 'silver'. */
+#block-cod-sponsors-silver .view-cod-sponsors .views-row {
+  width: 66.7%; }
+  @media (min-width: 420px) and (max-width: 600px) {
+    #block-cod-sponsors-silver .view-cod-sponsors .views-row {
+      width: 32.683%; } }
+  @media (min-width: 600px) {
+    #block-cod-sponsors-silver .view-cod-sponsors .views-row {
+      width: 16.008%; } }
+
+/* override the widths for 'bronze'. */
+#block-cod-sponsors-bronze .view-cod-sponsors .views-row {
+  width: 44.4%; }
+  @media (min-width: 420px) and (max-width: 600px) {
+    #block-cod-sponsors-bronze .view-cod-sponsors .views-row {
+      width: 21.756%; } }
+  @media (min-width: 600px) {
+    #block-cod-sponsors-bronze .view-cod-sponsors .views-row {
+      width: 10.656%; } }
 
 .pane-cod-sponsors-sponsored .views-row {
   float: left;
