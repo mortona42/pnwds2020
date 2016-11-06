@@ -1,3 +1,99 @@
+/* line 1, ../sass/components/_pane--hero-2017.scss */
+.l-page-wrapper {
+  overflow: hidden; }
 
+/* line 5, ../sass/components/_pane--hero-2017.scss */
+.preface {
+  position: relative; }
+
+/* line 9, ../sass/components/_pane--hero-2017.scss */
+.tabs--primary {
+  position: relative;
+  z-index: 3; }
+
+/* line 14, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__image {
+  background-color: #6ebadc;
+  padding-top: 90%;
+  padding-bottom: 0;
+  margin-top: -40px;
+  width: calc(100% + 160px);
+  margin-left: -80px; }
+  /* line 21, ../sass/components/_pane--hero-2017.scss */
+  .pane--hero-2017__image img {
+    display: block; }
+  @media (min-width: 420px) {
+    /* line 14, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2017__image {
+      padding-top: 68%; } }
+  @media (min-width: 600px) {
+    /* line 14, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2017__image {
+      padding-top: 30%; } }
+  @media (min-width: 770px) {
+    /* line 14, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2017__image {
+      padding-top: 23%; } }
+  @media (min-width: 900px) {
+    /* line 14, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2017__image {
+      padding-top: 0%; } }
+
+/* line 38, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__content {
+  position: absolute;
+  top: 12%;
+  width: 100%;
+  z-index: 2;
+  text-align: center; }
+
+/* line 46, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__title {
+  color: #0f3b61;
+  font-weight: 900;
+  font-size: 69px;
+  line-height: 0.9em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase; }
+
+/* line 54, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__subtitle {
+  color: #1963a3;
+  font-weight: 900;
+  font-size: 78px;
+  line-height: 0.9em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase; }
+
+/* line 62, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__location {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.5em;
+  text-transform: uppercase; }
+
+/* line 69, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__date {
+  color: #fa4d13;
+  font-size: 33px;
+  line-height: 1.1em;
+  text-transform: uppercase; }
+
+/* line 76, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2017__button {
+  margin: 20px 0; }
+  /* line 78, ../sass/components/_pane--hero-2017.scss */
+  .pane--hero-2017__button a {
+    background-color: #fa4d13;
+    border-radius: 40px;
+    color: #FFF;
+    text-decoration: none;
+    padding-right: 40px;
+    padding-left: 40px; }
+    /* line 85, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2017__button a:hover {
+      background-color: #d53905;
+      text-decoration: none; }
 
 /*# sourceMappingURL=vancouver2017.styles.css.map */

@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['js/{,**/}*.js', '!js/{,**/}*.min.js'],
-        tasks: ['jshint', 'uglify:dev']
+        // tasks: ['jshint', 'uglify:dev']
       }
     },
 
@@ -57,12 +57,12 @@ module.exports = function (grunt) {
       }
     },
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['js/{,**/}*.js', '!js/{,**/}*.min.js']
-    },
+    // jshint: {
+    //   options: {
+    //     jshintrc: '.jshintrc'
+    //   },
+    //   all: ['js/{,**/}*.js', '!js/{,**/}*.min.js']
+    // },
 
     uglify: {
       dev: {

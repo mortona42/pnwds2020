@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,500);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,500,900);
 .l-main, .l-region--footer, .l-header, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content, .view-display-id-panel_sessions_by_track {
   margin: 0 auto;
   width: 94%;
@@ -952,6 +952,8 @@ table.checkout-review .pane-data {
   clear: both; }
   .page-checkout .checkout-buttons #edit-continue {
     margin-right: 10px; }
+.page-checkout .commerce-paypal-wps-redirect-form .checkout-help {
+  margin: 0 0 1em; }
 
 .page-node-community .page-title {
   display: none; }
@@ -1491,13 +1493,15 @@ table.checkout-review .pane-data {
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto; }
-  .hemlock .left-content {
+  .hemlock .left-content,
+  .hemlock .left-header {
     width: 49.15254%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: none; }
-  .hemlock .right-content {
+  .hemlock .right-content,
+  .hemlock .right-header {
     width: 49.15254%;
     float: right;
     margin-left: 0;

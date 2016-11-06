@@ -5,10 +5,12 @@
       margin-right: auto;
       margin-left: auto;
     }
-    .left-content {
+    .left-content,
+    .left-header {
       @include grid-span(6, 1);
     }
-    .right-content {
+    .right-content,
+    .right-header {
       @include grid-span(6, 7);
     }
   }
