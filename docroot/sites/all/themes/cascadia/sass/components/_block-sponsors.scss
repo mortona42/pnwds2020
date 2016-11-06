@@ -73,7 +73,6 @@ $four-wide-logo-width : 24%;  /* on full monitors */
 .view-cod-sponsors {
   .views-row {
     float: left;
-    margin-left: 1%;
     padding: 1em;
     width: $one-wide-logo-width;
     @include breakpoint($small $mid-small) {

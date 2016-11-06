@@ -523,12 +523,31 @@ body.cke_editable {
     overflow: auto;
     position: relative; }
 
+/* Display sponsors' logos, with gold > silver > bronze, decreasing size. */
+/* Note that these adjustments only affect the **width**. Each gets an appropriate amount of horizontal space on
+   the screen. However, some logos are taller than others, and some are big and solid. The logos should be
+   **manually shrunk** first and whitespace-padded on the sides if it is tall or extra-solid. Logos
+   that are wide and sparse (such as for Affinity Bridge) should have *less* whitespace at their sides,
+   to make them bigger. */
+/* $gold-shrinkage : 1;   No shrinkage.. */
+/* Note that by reducing it linearly by 2/3, you're really reducing the area to 4/9. */
+/* And here we shrink it by the same amount again (2/3 of 2/3). */
+/* on narrow displays */
+/* on medium-width displays */
+/* on full monitors */
+/* This is the default setup, with widths for 'gold' sponsors. */
 .view-cod-sponsors .views-row {
   float: left;
-  margin-left: 1%;
-  min-height: 150px;
   padding: 1em;
   width: 100%; }
+
+/* override the widths for 'silver'. */
+#block-cod-sponsors-silver .view-cod-sponsors .views-row {
+  width: 66.7%; }
+
+/* override the widths for 'bronze'. */
+#block-cod-sponsors-bronze .view-cod-sponsors .views-row {
+  width: 44.4%; }
 
 .pane-cod-sponsors-sponsored .views-row {
   float: left;
@@ -1339,10 +1358,23 @@ table.checkout-review .pane-data {
   margin: 0 0 0.75em 0; }
 
 .pane--front-cta .pane-title {
-  margin-bottom: .5em;
+  margin-bottom: 25px;
+  padding-left: 72px;
   font-size: 1.8em;
   line-height: 1.3em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-indent: -72px; }
+  .pane--front-cta .pane-title:before {
+    content: '';
+    display: inline-block;
+    width: 52px;
+    height: 48px;
+    background-image: url("../images/cascadia-icon-sprite.png");
+    background-position: left -500px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    margin-top: -4px;
+    vertical-align: middle; }
 
 .pane--front-intro {
   font-size: 1.65em;
@@ -1476,3 +1508,6 @@ table.checkout-review .pane-data {
   color: #9A9A9A; }
   .text-light a {
     color: inherit; }
+
+.text-small {
+  font-size: 0.85em; }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="50px" height="501px" viewBox="0 0 50 501" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="60px" height="561px" viewBox="0 0 60 561" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
     <title>cascadia-icon-sprite</title>
     <desc>Created with Sketch.</desc>
@@ -39,7 +39,12 @@
                 <path d="M3,309.5 L12,309.5" id="Chevron_-_Down-Copy-3" stroke="#FFFFFF"></path>
                 <path d="M4,209.5 L20,209.5" id="Chevron_-_Down-Copy-3" stroke="#FFFFFF"></path>
             </g>
+            <g id="Loudspeaker-Copy-3" transform="translate(2.000000, 507.000000)" stroke-width="2" stroke="#00874B">
+                <polygon id="Shape" points="46 40 8 25 8 15 46 0"></polygon>
+                <path d="M8,25 L5,25 C2.2,25 0,22.8 0,20 L0,20 C0,17.2 2.2,15 5,15 L8,15" id="Shape"></path>
+                <path d="M30.4,33.9 L29,37.5 C28.2,39.6 25.9,40.6 23.8,39.8 L23.8,39.8 L14.5,36.2 C12.5,35.4 11.4,33.1 12.2,31 L13.6,27.3" id="Shape"></path>
+            </g>
         </g>
-        <polygon id="Path-157" fill="#242424" points="29 467 33.0508346 471.911811 37 467"></polygon>
+        <polygon id="Path-157" fill="#242424" points="42 467 46.0508346 471.911811 50 467"></polygon>
     </g>
 </svg>
