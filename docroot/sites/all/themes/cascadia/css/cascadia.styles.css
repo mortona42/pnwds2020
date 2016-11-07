@@ -921,6 +921,7 @@ table.checkout-review .pane-data {
   .l-navigation .l-region--navigation {
     display: none;
     position: absolute;
+    z-index: 3;
     width: 100%;
     background-color: #1963a3;
     padding-top: 10px;
