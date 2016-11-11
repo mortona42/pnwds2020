@@ -21,7 +21,7 @@ body {
   padding: 1em 0; }
 
 .l-main {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px; }
 
 .location-action {
@@ -307,6 +307,10 @@ select {
  ** Legacy reference from Siren theme. @TODO: Delete when theme is finalized.
  */
 img, media {
+  max-width: 100%; }
+
+iframe {
+  border: none;
   max-width: 100%; }
 
 .l-region--sidebar .block img {
@@ -1814,6 +1818,10 @@ table.checkout-review .pane-data {
   color: #9A9A9A; }
   .text-light a {
     color: inherit; }
+
+.text-large {
+  font-size: 1.65em;
+  line-height: 1.45em; }
 
 .text-small {
   font-size: 0.85em; }
