@@ -2,6 +2,12 @@ body.cke_editable {
   background-color: $white;
 }
 
+#admin-menu {
+  .js-menu-item-toggle {
+    display: none !important;
+  }
+}
+
 #edit-field-event-tickets {
   background-color: transparent;
   th, tr.odd, tr.even, td {

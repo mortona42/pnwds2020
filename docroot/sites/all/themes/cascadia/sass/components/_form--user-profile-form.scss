@@ -1,0 +1,28 @@
+.user-profile-form {
+
+  @media (min-width: $mid-large) {
+    .form-item-name,
+    .field-name-field-profile-first,
+    .field-name-field-profile-job-title,
+    #edit-contact,
+    .field-name-field-profile-phone,
+    .form-item-field-profile-location-und-0-country,
+    .form-item-field-profile-location-und-0-thoroughfare {
+      @include grid-span(6, 1);
+      clear: left;
+    }
+    .form-item-mail,
+    .field-name-field-profile-last,
+    .field-name-field-profile-org,
+    .form-item-field-profile-location-und-0-premise {
+      @include grid-span(6, 7);
+    }
+    .form-item-pass,
+    fieldset,
+    .street-block,
+    .locality-block {
+      clear: left;
+    }
+  }
+
+}

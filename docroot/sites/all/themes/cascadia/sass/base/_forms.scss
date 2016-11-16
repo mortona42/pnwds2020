@@ -1,22 +1,28 @@
 fieldset {
   background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  .fieldset-description {
+    margin: 0 0 1em;
+  }
 }
 
 legend {
-  font-weight: 600;
   margin-bottom: 5px;
   padding: 0;
+  font-family: $alt-font-family;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 label {
   display: block;
+  margin-bottom: 1px;
   font-family: $alt-font-family;
   font-size: 0.85em;
   font-weight: 500;
-  margin-bottom: 1px;
   text-transform: uppercase;
 }
 
@@ -73,6 +79,17 @@ textarea {
   &::placeholder {
     color: $gray;
   }
+
+}
+
+.form-autocomplete {
+  html.js & {
+    background-position: 99% 13px;
+    padding-right: 30px;
+    &.throbbing {
+      background-position: 99% -16px;
+    }
+  }
 }
 
 textarea {
@@ -104,85 +121,78 @@ select {
   color: $lt-gray;
   font-style: italic;
   font-size: 0.75em;
+  margin: 0 0 1em;
 }
 
-/**
- ** Legacy reference from Siren theme. @TODO: Delete when theme is finalized.
- */
+.file-widget {
+  input[type="submit"] {
+    margin-bottom: 10px;
+  }
+  .messages.file-upload-js-error {
+    padding: 10px;
+    font-size: 0.85em;
+  }
+}
 
-// form fieldset {
-//   border: none;
-//   border-bottom: 1px solid $gray;
-//   padding: 1.5em 0;
-//   margin: 2em 0;
-// }
+.field-multiple-table {
+  border-bottom: none;
+  margin-bottom: 10px;
+  th {
+    min-width: 50px;
+    padding: 0;
+    margin: 0;
+    font-family: $alt-font-family;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    label {
+      font-size: 1em;
+    }
+  }
+  tr {
+    border-top: none;
+  }
+  tr.even, tr.odd {
+    background-color: transparent;
+  }
+  td {
+    padding-left: 0;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  input {
+    margin-bottom: 0;
+  }
+  .field-multiple-drag {
+    background-image: url('../images/cascadia-icon-sprite.png');
+    background-position: left -560px;
+    background-repeat: no-repeat;
+    padding: 0;
+    a {
+      display: block;
+      padding: 0.5em;
+    }
+    .handle {
+      background-image: none;
+    }
+    .tabledrag-changed {
+      display: none;
+    }
+  }
 
-// button, input, optgroup, select, textarea {
-//   border: 1px solid lighten($gray,30%);
-//   @include border-radius(4px);
-//   padding: 0.4em 0.6em;
-//   width: 100%;
-//   &.minute, &.hour, &.month, &.day, &.year, &.hasDatepicker {
-//     width: auto;
-//   }
-// }
+}
+.tabledrag-toggle-weight-wrapper {
+  font-family: $alt-font-family;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+.tabledrag-changed-warning.messages {
+  padding: 10px;
+  font-size: 0.85em;
+}
 
-// input[value="Save"], input[value="Add another item"], input[value="Upload"] {
-//   background-color: $green;
-//   &:hover {
-//     background-color: darken($green,8%);
-//   }
-// }
 
-// input[value="Remove"] {
-//   background-color: #b83326;
-//   &:hover {
-//     background-color: darken(#b83326,8%);
-//   }
-// }
 
-// input[value="Upload"] {
-//   @include border-radius-multi(0, 4px, 4px, 0);
-//   padding: 0.4em 0.75em 0.6em 0.75em;
-// }
 
-// .form-file {
-//   @include border-radius-multi(4px,0,0,4px);
-// }
 
-// .form-submit {
-//   @include border-radius(4px);
-//   background-color: lighten($gray,14%);
-//   color: $white;
-//   margin-right: 0.6em;
-//   width: auto;
-//   &:hover {
-//     background-color: $gray;
-//     color: $white;
-//     text-decoration: none;
-//   }
-//   .active {
-//     color: $white;
-//     background-color: $green;
-//     border-color: $green;
-//     @include border-radius(4px);
-//   }
-// }
-
-// .form-checkbox, .form-radio, .form-file {
-//   width: auto;
-// }
-
-// .filter-guidelines, .filter-wrapper .form-item {
-//   padding: 1em 0;
-// }
-
-// html.js .form-autocomplete,
-// html.js input.form-autocomplete {
-//   background: url('../images/throbber.gif') $white no-repeat;
-//   background-position: 98% -62px;
-// }
-
-// html.js input.throbbing {
-//   background-position: 98% 9px;
-// }
