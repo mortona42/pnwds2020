@@ -455,7 +455,7 @@ function cod_session_pages_panelizer_defaults() {
   $pane->panel = 'left_content';
   $pane->type = 'node_links';
   $pane->subtype = 'node_links';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 0,
