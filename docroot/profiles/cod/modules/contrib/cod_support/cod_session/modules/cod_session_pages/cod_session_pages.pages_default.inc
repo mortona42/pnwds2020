@@ -127,7 +127,7 @@ function cod_session_pages_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'cygnus';
+  $display->layout = 'douglas';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -242,7 +242,7 @@ function cod_session_pages_default_page_manager_pages() {
   $pane->panel = 'preface';
   $pane->type = 'page_title';
   $pane->subtype = 'page_title';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'markup' => 'h1',
@@ -332,7 +332,7 @@ function cod_session_pages_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'cygnus';
+  $display->layout = 'douglas';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -444,7 +444,7 @@ function cod_session_pages_default_page_manager_pages() {
   $pane->panel = 'preface';
   $pane->type = 'page_title';
   $pane->subtype = 'page_title';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'markup' => 'h1',
