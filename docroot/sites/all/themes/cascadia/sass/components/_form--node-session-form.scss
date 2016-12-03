@@ -5,18 +5,23 @@
 
     .form-item-title,
     .field-name-body,
-    #field-cod-events-filter {
+    .field-name-field-experience,
+    #field-cod-events-filter,
+    #field-cod-session-og-vocabulary {
       @include grid-span(7.5, 1);
       clear: left;
       margin-bottom: 30px;
     }
 
     .field-name-field-speakers,
-    .field-name-field-slides,
-    .required-fields {
+    .field-name-field-slides {
       @include grid-span(4, 9);
       clear: right;
       margin-bottom: 30px;
+    }
+
+    .form-item-title {
+      margin-top: 29px;
     }
 
     .required-fields h3 {

@@ -10,19 +10,19 @@
     margin: 2em 0;
     padding: 2em;
     text-align: center;
-    a {
-      color: $dk-blue;
-      margin: 0 0.1em;
-      padding: 0.15em 0.3em;
-      &:hover {
-        color: $gray-blue;
-        text-decoration: none;
-      }
-      &.active {
-        background-color: $dk-green;
-        color: $lt-gray;
-      }
-    }
+    // a {
+    //   color: $dk-blue;
+    //   margin: 0 0.1em;
+    //   padding: 0.15em 0.3em;
+    //   &:hover {
+    //     color: $gray-blue;
+    //     text-decoration: none;
+    //   }
+    //   &.active {
+    //     background-color: $dk-green;
+    //     color: $lt-gray;
+    //   }
+    // }
     ul {
       font-weight: normal;
       margin: 0;
@@ -49,7 +49,7 @@
     h3 {
       font-size: 2.4em;
       font-weight: normal;
-      color: $dk-blue;
+      //color: $dk-blue;
       text-align: center;
     }
     .views-row {

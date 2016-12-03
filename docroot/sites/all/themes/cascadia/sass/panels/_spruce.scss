@@ -1,0 +1,33 @@
+.spruce {
+
+  .pane-node-title {
+    padding: 0;
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $mid-large) {
+    .container-inner {
+      max-width: $large;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .top-right-content,
+    .bottom-right-content {
+      @include grid-span(3, 10);
+      clear: right;
+    }
+    .left-content {
+      @include grid-span(8, 1);
+    }
+    // .left-content,
+    // .left-header {
+    //   @include grid-span(6, 1);
+    // }
+    // .right-content,
+    // .right-header {
+    //   @include grid-span(6, 7);
+    // }
+  }
+}

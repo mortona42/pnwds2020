@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,500,900);
-.l-main, .l-region--footer, .l-header, .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content, .view-display-id-panel_sessions_by_track {
+.l-main, .l-region--footer, .l-header {
   margin: 0 auto;
   width: 94%;
   max-width: 1280px; }
@@ -23,41 +23,6 @@ body {
 .l-main {
   margin-top: 60px;
   margin-bottom: 40px; }
-
-.location-action {
-  display: none; }
-
-.l-content {
-  margin-bottom: 1em; }
-
-.not-front .l-content {
-  background-color: transparent; }
-
-.l-epilogue-wrapper {
-  background-color: #c9ecff;
-  color: #303030;
-  padding-bottom: 1em; }
-  .l-epilogue-wrapper .block {
-    max-width: 1280px;
-    margin: auto; }
-  .l-epilogue-wrapper .pane-title {
-    margin: 1em 0; }
-
-.l-errata-wrapper {
-  background-color: #FFF;
-  color: #356785;
-  padding-bottom: 1em;
-  padding: 0 0.72em 2em 0.72em;
-  *zoom: 1; }
-  .l-errata-wrapper:before, .l-errata-wrapper:after {
-    content: "";
-    display: table; }
-  .l-errata-wrapper:after {
-    clear: both; }
-  .l-errata-wrapper .l-region {
-    padding: 3em 0px; }
-  .l-errata-wrapper .pane-title {
-    margin: 1em 0; }
 
 button,
 .button,
@@ -510,6 +475,8 @@ blockquote {
     text-indent: -8px; }
     .field--full-html ul li:before {
       content: "- "; }
+    .field--full-html ul li p {
+      display: inline; }
 
 .videoEmbed {
   position: relative;
@@ -606,19 +573,7 @@ body.cke_editable {
       right: 0;
       bottom: 0;
       left: 0;
-      background: #59afe1; }
-    .l-sponsors-wrapper .block h2 {
-      color: #c9ecff;
-      font-family: "Roboto", sans-serif;
-      font-size: 0.8em;
-      letter-spacing: 4px;
-      margin-top: 0.25em;
-      margin-bottom: 0.75em;
-      text-align: center;
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-top: 0.5em; }
+      background: #0077C0; }
     .l-sponsors-wrapper .block a {
       float: left;
       max-width: 44%; }
@@ -677,7 +632,6 @@ body.cke_editable {
     .comment-wrapper h3 a {
       color: #303030; }
   .comment-wrapper .new {
-    background-color: #36521d;
     color: #FFF;
     padding: 0 1em; }
   .comment-wrapper .comment {
@@ -816,17 +770,17 @@ table.checkout-review .pane-data {
   border-top: 0;
   margin-bottom: 40px; }
 
-.button-link, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-sessions-proposed .view-footer a, .page-node-sessions-accepted .view-footer a {
+.button-link, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a {
   background-color: transparent;
   border: 2px solid #303030;
   color: #303030;
   display: inline-block;
   padding: 0.4em 1em; }
-  .button-link:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .page-node-sessions-proposed .view-footer a:hover, .page-node-sessions-accepted .view-footer a:hover, .button-link:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus, .page-node-sessions-proposed .view-footer a:focus, .page-node-sessions-accepted .view-footer a:focus {
+  .button-link:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .button-link:focus, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:focus {
     background-color: #303030;
     color: #FFF;
     text-decoration: none; }
-  .button-link.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .page-node-sessions-proposed .view-footer a.active, .page-node-sessions-accepted .view-footer a.active {
+  .button-link.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active {
     color: #FFF;
     background-color: #6a7076;
     border-color: #6a7076; }
@@ -1042,16 +996,6 @@ table.checkout-review .pane-data {
   margin: 2em 0;
   padding: 2em;
   text-align: center; }
-  .page-node-bofs .pane-cod-schedule-menu-pane a {
-    color: #356785;
-    margin: 0 0.1em;
-    padding: 0.15em 0.3em; }
-    .page-node-bofs .pane-cod-schedule-menu-pane a:hover {
-      color: #4d5770;
-      text-decoration: none; }
-    .page-node-bofs .pane-cod-schedule-menu-pane a.active {
-      background-color: #36521d;
-      color: #9A9A9A; }
   .page-node-bofs .pane-cod-schedule-menu-pane ul {
     font-weight: normal;
     margin: 0;
@@ -1072,7 +1016,6 @@ table.checkout-review .pane-data {
 .page-node-bofs .view-cod-bof-schedule-timeslots h3 {
   font-size: 2.4em;
   font-weight: normal;
-  color: #356785;
   text-align: center; }
 .page-node-bofs .view-cod-bof-schedule-timeslots .views-row {
   margin: 2em 0; }
@@ -1232,10 +1175,8 @@ table.checkout-review .pane-data {
 
 .page-node-schedule .title-region {
   text-align: center; }
-  .page-node-schedule .title-region .button-link, .page-node-schedule .title-region .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-schedule .title-region a, .page-node-schedule .title-region .page-node-sessions-proposed .view-footer a, .page-node-sessions-proposed .view-footer .page-node-schedule .title-region a, .page-node-schedule .title-region .page-node-sessions-accepted .view-footer a, .page-node-sessions-accepted .view-footer .page-node-schedule .title-region a {
+  .page-node-schedule .title-region .button-link, .page-node-schedule .title-region .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-schedule .title-region a {
     margin-top: 1em; }
-    .page-node-schedule .title-region .button-link:hover, .page-node-schedule .title-region .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a:hover, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-schedule .title-region a:hover, .page-node-schedule .title-region .page-node-sessions-proposed .view-footer a:hover, .page-node-sessions-proposed .view-footer .page-node-schedule .title-region a:hover, .page-node-schedule .title-region .page-node-sessions-accepted .view-footer a:hover, .page-node-sessions-accepted .view-footer .page-node-schedule .title-region a:hover, .page-node-schedule .title-region .button-link.active, .page-node-schedule .title-region .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a.active, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-schedule .title-region a.active, .page-node-schedule .title-region .page-node-sessions-proposed .view-footer a.active, .page-node-sessions-proposed .view-footer .page-node-schedule .title-region a.active, .page-node-schedule .title-region .page-node-sessions-accepted .view-footer a.active, .page-node-sessions-accepted .view-footer .page-node-schedule .title-region a.active {
-      color: #36521d; }
   .page-node-schedule .title-region .panel-pane {
     clear: both;
     padding: 0; }
@@ -1307,97 +1248,56 @@ table.checkout-review .pane-data {
   padding: 0; }
 .page-node-schedule .view-cod-schedule-content > .view-content .views-field-title {
   line-height: 1.25; }
-  .page-node-schedule .view-cod-schedule-content > .view-content .views-field-title a {
-    color: #356785; }
 .page-node-schedule .view-cod-schedule-content > .view-content .views-field-ops {
   margin: 1em 0 0 0; }
-  .page-node-schedule .view-cod-schedule-content > .view-content .views-field-ops a {
-    color: #4d5770; }
 
 .view-cod-session-sessions table {
   max-width: none;
   width: 100%; }
 
-.page-node-sessions-proposed .l-content .preface, .page-node-sessions-accepted .l-content .preface {
-  padding: 4.25em 0px 4em;
-  text-align: center; }
-  .page-node-sessions-proposed .l-content .preface .button-link, .page-node-sessions-proposed .l-content .preface .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-proposed .l-content .preface .view-footer a, .page-node-sessions-proposed .view-footer .l-content .preface a, .page-node-sessions-accepted .view-footer .page-node-sessions-proposed .l-content .preface a, .page-node-sessions-accepted .l-content .preface .button-link, .page-node-sessions-accepted .l-content .preface .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-proposed .view-footer .page-node-sessions-accepted .l-content .preface a, .page-node-sessions-accepted .l-content .preface .view-footer a, .page-node-sessions-accepted .view-footer .l-content .preface a {
-    margin-top: 1em; }
-  .page-node-sessions-proposed .l-content .preface .panel-pane, .page-node-sessions-accepted .l-content .preface .panel-pane {
-    clear: both;
-    padding: 0; }
-  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter ul, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter ul {
-    padding-left: 0; }
-  .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row {
-    float: left;
-    list-style-type: none;
-    list-style-image: none;
-    margin: 0 1% 1% 0;
-    width: 100%; }
-    .page-node-sessions-proposed .l-content .preface .view-display-id-track_session_filter li.views-row a, .page-node-sessions-accepted .l-content .preface .view-display-id-track_session_filter li.views-row a {
-      font-size: 1.25em;
-      line-height: 1;
-      text-align: center; }
-.page-node-sessions-proposed .page-title, .page-node-sessions-accepted .page-title {
-  display: none; }
-.page-node-sessions-proposed .views-exposed-form, .page-node-sessions-accepted .views-exposed-form {
-  max-width: 520px;
-  margin: auto;
-  text-align: center; }
-  .page-node-sessions-proposed .views-exposed-form select, .page-node-sessions-proposed .views-exposed-form input, .page-node-sessions-accepted .views-exposed-form select, .page-node-sessions-accepted .views-exposed-form input {
-    width: 100%; }
-  .page-node-sessions-proposed .views-exposed-form .views-exposed-widget, .page-node-sessions-accepted .views-exposed-form .views-exposed-widget {
-    width: 48%; }
-.page-node-sessions-proposed .view-display-id-track_session_summary, .page-node-sessions-accepted .view-display-id-track_session_summary {
-  padding-top: 4em; }
-  .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content {
-    margin: auto; }
-    .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row {
-      margin-bottom: 4.5em;
-      padding: 2em; }
-      .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row {
-        border: 2px solid #6a7076;
-        float: left;
-        margin: 0 0 1% 1%;
-        padding: 1em;
-        text-align: center;
-        width: 100%; }
-        .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3 {
-          color: #356785; }
-          .page-node-sessions-proposed .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3 a, .page-node-sessions-accepted .view-display-id-track_session_summary > .view-content > .views-row .view-id-cod_session_sessions .views-row h3 a {
-            color: #356785; }
-  .page-node-sessions-proposed .view-display-id-track_session_summary h2, .page-node-sessions-accepted .view-display-id-track_session_summary h2 {
-    color: #356785;
-    margin-top: 0.5em;
-    text-align: center; }
-    .page-node-sessions-proposed .view-display-id-track_session_summary h2 a, .page-node-sessions-accepted .view-display-id-track_session_summary h2 a {
-      color: #356785; }
-.page-node-sessions-proposed .view-footer, .page-node-sessions-accepted .view-footer {
-  clear: both;
-  text-align: center;
-  padding-top: 1em; }
+.view-display-id-track_session_filter li {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px; }
+.view-display-id-track_session_filter .views-field-session-track-link a {
+  display: inline-block;
+  border: solid 1px #CCC;
+  color: #0077C0;
+  font-size: 0.9em;
+  padding: 15px;
+  transition: background-color 0.2 ease-in-out;
+  white-space: nowrap; }
+.view-display-id-track_session_filter .business-community .views-field-session-track-link a {
+  color: #F95E56; }
+.view-display-id-track_session_filter .design-theme-ux .views-field-session-track-link a {
+  color: #9013FE; }
+.view-display-id-track_session_filter .devops-performance .views-field-session-track-link a {
+  color: #F5A623; }
 
-.view-display-id-panel_sessions_by_track {
-  margin: auto; }
-  .view-display-id-panel_sessions_by_track > .view-content {
-    margin-bottom: 4.5em;
-    padding: 2em;
-    *zoom: 1; }
-    .view-display-id-panel_sessions_by_track > .view-content:before, .view-display-id-panel_sessions_by_track > .view-content:after {
-      content: "";
-      display: table; }
-    .view-display-id-panel_sessions_by_track > .view-content:after {
-      clear: both; }
-    .view-display-id-panel_sessions_by_track > .view-content .views-row {
-      float: left;
-      margin: 1em 0 1% 1%;
-      padding: 1em;
-      text-align: center;
-      width: 100%; }
-      .view-display-id-panel_sessions_by_track > .view-content .views-row h3 {
-        color: #356785; }
-        .view-display-id-panel_sessions_by_track > .view-content .views-row h3 a {
-          color: #356785; }
+.view-display-id-track_session_summary h2 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em; }
+@media (min-width: 770px) {
+  .view-display-id-track_session_summary .views-field-view .view-content {
+    display: flex;
+    flex-wrap: wrap; }
+    .view-display-id-track_session_summary .views-field-view .view-content > div {
+      flex: 0 0 30%;
+      margin-right: 20px; } }
+
+.view-display-id-panel_sessions_by_track h2 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em; }
+@media (min-width: 770px) {
+  .view-display-id-panel_sessions_by_track .view-content {
+    display: flex;
+    flex-wrap: wrap; }
+    .view-display-id-panel_sessions_by_track .view-content > div {
+      flex: 0 0 30%;
+      margin-right: 20px; } }
 
 .page-node-sponsors .l-main-wrapper h2 {
   text-align: center;
@@ -1417,7 +1317,6 @@ table.checkout-review .pane-data {
     list-style-image: none;
     margin: 0 1% 1% 0; }
     .page-node-13 #tracks li a {
-      color: #356785;
       display: block;
       font-size: 1em;
       line-height: 1;
@@ -1430,12 +1329,10 @@ table.checkout-review .pane-data {
       -khtml-border-radius: 3.5em;
       border-radius: 3.5em; }
       .page-node-13 #tracks li a:hover, .page-node-13 #tracks li a.clicked {
-        color: #36521d;
         text-decoration: none; }
       .page-node-13 #tracks li a:before {
         content: "";
         display: block;
-        background-color: #356785;
         height: 5em;
         width: 5em;
         margin: 1em auto;
@@ -1461,7 +1358,6 @@ table.checkout-review .pane-data {
   .page-node-13 .track-content div:before {
     content: "";
     display: block;
-    background-color: #356785 !important;
     height: 5em;
     width: 5em;
     margin: -4.5em auto 0 auto;
@@ -1504,28 +1400,6 @@ table.checkout-review .pane-data {
     .page-node-training .l-content .view-content .views-row h3 {
       margin-top: 0; }
 
-.node-type-session .l-content h1, .node-type-schedule-item .l-content h1, .node-type-bof .l-content h1 {
-  margin: 0; }
-.node-type-session .l-content .content, .node-type-schedule-item .l-content .content, .node-type-bof .l-content .content {
-  float: none;
-  margin: auto;
-  width: 94%; }
-  .node-type-session .l-content .content .page-title, .node-type-schedule-item .l-content .content .page-title, .node-type-bof .l-content .content .page-title {
-    padding-left: 0; }
-.node-type-session .l-content .pane-node-field-speakers, .node-type-schedule-item .l-content .pane-node-field-speakers, .node-type-bof .l-content .pane-node-field-speakers {
-  color: #36521d; }
-.node-type-session .l-content .hydra .top-right-content .panel-pane, .node-type-session .l-content .hydra .bottom-right-content .panel-pane, .node-type-schedule-item .l-content .hydra .top-right-content .panel-pane, .node-type-schedule-item .l-content .hydra .bottom-right-content .panel-pane, .node-type-bof .l-content .hydra .top-right-content .panel-pane, .node-type-bof .l-content .hydra .bottom-right-content .panel-pane {
-  border: 2px solid #356785;
-  padding: 0.75em;
-  margin-bottom: 1em;
-  overflow: auto; }
-.node-type-session .l-content .hydra .top-right-content .pane-title, .node-type-session .l-content .hydra .bottom-right-content .pane-title, .node-type-schedule-item .l-content .hydra .top-right-content .pane-title, .node-type-schedule-item .l-content .hydra .bottom-right-content .pane-title, .node-type-bof .l-content .hydra .top-right-content .pane-title, .node-type-bof .l-content .hydra .bottom-right-content .pane-title {
-  background-color: #356785;
-  color: #9A9A9A;
-  font-size: 1.5em;
-  padding: 0.5em 0.75em;
-  margin: 0 0 0.75em 0; }
-
 .pane--front-cta .pane-title {
   margin-bottom: 25px;
   padding-left: 72px;
@@ -1567,7 +1441,7 @@ table.checkout-review .pane-data {
       color: #FFF;
       padding-bottom: 4px; }
 .view-cod-session-schedule .views-field-field-slot-datetime-1, .view-cod-session-schedule .views-field-field-evttime-date-1, .view-cod-bof-schedule .views-field-field-slot-datetime-1, .view-cod-bof-schedule .views-field-field-evttime-date-1, .view-cod-schedule .views-field-field-slot-datetime-1, .view-cod-schedule .views-field-field-evttime-date-1 {
-  background: #59afe1;
+  background: #0077C0;
   clear: both;
   color: #FFF;
   padding: 15px;
@@ -1604,6 +1478,113 @@ table.checkout-review .pane-data {
 .view-cod-session-schedule .views-field-field-session-track, .view-cod-bof-schedule .views-field-field-session-track, .view-cod-schedule .views-field-field-session-track {
   background: url(../images/track.png) transparent center left no-repeat; }
 
+.node-type-session .session__speakers,
+.node-type-session .pane-node-og-vocabulary,
+.node-type-session .pane-node-field-experience {
+  color: #00874b; }
+  .node-type-session .session__speakers .field__label,
+  .node-type-session .pane-node-og-vocabulary .field__label,
+  .node-type-session .pane-node-field-experience .field__label {
+    display: block;
+    margin-bottom: 1px;
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .node-type-session .session__speakers a,
+  .node-type-session .pane-node-og-vocabulary a,
+  .node-type-session .pane-node-field-experience a {
+    color: #00874b; }
+.node-type-session .flag-session-schedule a.flag {
+  color: #00874b; }
+  .node-type-session .flag-session-schedule a.flag:after {
+    position: relative;
+    top: 7px;
+    left: 3px;
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    background-image: url("../images/cascadia-icon-sprite.png");
+    background-position: left 0px;
+    background-repeat: no-repeat; }
+  .node-type-session .flag-session-schedule a.flag.unflag-action:after {
+    background-position: left -50px; }
+
+.session--teaser {
+  border: solid 1px #CCC;
+  padding: 15px;
+  margin-bottom: 20px; }
+  .session--teaser .session__track {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #888;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.8em;
+    line-height: 29px;
+    text-transform: uppercase; }
+  .session--teaser .session__title {
+    clear: both;
+    min-height: 78px;
+    margin-bottom: 0.5em;
+    font-size: 1.2em; }
+    .session--teaser .session__title a {
+      color: #0077C0; }
+  .session--teaser .session__title--code_develop a {
+    color: #0077C0; }
+  .session--teaser .session__title--devops_performance a {
+    color: #F5A623; }
+  .session--teaser .session__title--design_theme_ux a {
+    color: #9013FE; }
+  .session--teaser .session__title--business_community a {
+    color: #F95E56; }
+  .session--teaser .session__speakers {
+    margin-bottom: 0.5em;
+    font-size: 0.8em; }
+  .session--teaser .session__experience {
+    color: #CCC;
+    font-size: 0.8em; }
+    .session--teaser .session__experience:before {
+      position: relative;
+      top: 3px;
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 18px;
+      background-image: url("../images/cascadia-icon-sprite.png");
+      background-position: left -100px;
+      background-repeat: no-repeat; }
+  .session--teaser .session__experience--intermediate:before {
+    width: 42px; }
+  .session--teaser .session__experience--advanced:before {
+    width: 66px; }
+  .session--teaser .session__attending-flag {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 27px; }
+    .session--teaser .session__attending-flag a.flag {
+      overflow: hidden;
+      display: inline-block;
+      width: 30px;
+      height: 27px; }
+      .session--teaser .session__attending-flag a.flag:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url("../images/cascadia-icon-sprite.png");
+        background-position: left 0px;
+        background-repeat: no-repeat; }
+      .session--teaser .session__attending-flag a.flag.unflag-action:before {
+        background-position: left -50px; }
+
 .view-cod-sponsors .level {
   clear: both; }
 .view-cod-sponsors .sponsor {
@@ -1638,17 +1619,6 @@ table.checkout-review .pane-data {
       border-width: 3px;
       border-color: #000; }
 
-.tabs--secondary a {
-  border: 2px solid #c9ecff;
-  color: #356785; }
-  .tabs--secondary a:hover, .tabs--secondary a:focus {
-    background-color: #c9ecff;
-    color: #356785; }
-.tabs--secondary a.active {
-  color: #356785;
-  background-color: #c9ecff;
-  border-color: #c9ecff; }
-
 @media (min-width: 900px) {
   .arbutus .container-inner {
     max-width: 900px;
@@ -1673,6 +1643,30 @@ table.checkout-review .pane-data {
     float: right;
     margin-left: 0;
     margin-right: 0;
+    clear: none; } }
+
+.spruce .pane-node-title {
+  padding: 0; }
+  .spruce .pane-node-title h1 {
+    margin-top: 0; }
+@media (min-width: 900px) {
+  .spruce .container-inner {
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto; }
+  .spruce .top-right-content,
+  .spruce .bottom-right-content {
+    width: 23.72881%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right; }
+  .spruce .left-content {
+    width: 66.10169%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
     clear: none; } }
 
 .text-light {

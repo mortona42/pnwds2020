@@ -154,7 +154,7 @@ function cod_session_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => '',
-      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp svg',
+      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -351,7 +351,7 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-field_speakers'
+  // Exported field_instance: 'node-schedule_item-field_speakers'.
   $field_instances['node-schedule_item-field_speakers'] = array(
     'bundle' => 'schedule_item',
     'default_value' => NULL,
@@ -487,23 +487,7 @@ function cod_session_field_default_field_instances() {
   // Exported field_instance: 'node-session-body'.
   $field_instances['node-session-body'] = array(
     'bundle' => 'session',
-    'default_value' => array(
-      0 => array(
-        'summary' => '',
-        'value' => '<p>Please give us a detailed overview of your session and why attendees will be excited to hear about it. &nbsp;</p>
-
-<p>Ensure that you let us know:</p>
-
-<ul>
-	<li>What level of knowledge should attendees have before walking into your session</li>
-	<li>What will your session accomplish and what will attendees walk away having learned</li>
-</ul>
-
-<p>&nbsp;</p>
-',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -857,7 +841,7 @@ function cod_session_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_vocabulary',
     'label' => 'Session Track',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(
@@ -881,18 +865,15 @@ function cod_session_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Add tags to items that can be classified together (ie: trainings, keynotes, etc) to help organize separate lists');
-  t('An image to be used for highlighted sessions in the front page rotator.');
   t('Body');
   t('Conference');
   t('Default Session View');
   t('Description');
   t('Experience level');
   t('File attachments');
-  t('Image');
   t('Session Track');
   t('Slides');
   t('Speaker(s)');
-  t('Sponsor(s)');
   t('Status');
   t('Tags');
   t('Type the username of the speaker, and to add more speakers click "Add another speaker"');

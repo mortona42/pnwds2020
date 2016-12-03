@@ -60,18 +60,18 @@
   }
 }
 
-.tabs--secondary {
-  a {
-    border: 2px solid $lt-blue;
-    color: $dk-blue;
-    &:hover, &:focus {
-      background-color: $lt-blue;
-      color: $dk-blue;
-    }
-  }
-  a.active {
-    color: $dk-blue;
-    background-color: $lt-blue;
-    border-color: $lt-blue;
-  }
-}
+// .tabs--secondary {
+//   a {
+//     border: 2px solid $lt-blue;
+//     color: $dk-blue;
+//     &:hover, &:focus {
+//       background-color: $lt-blue;
+//       color: $dk-blue;
+//     }
+//   }
+//   a.active {
+//     color: $dk-blue;
+//     background-color: $lt-blue;
+//     border-color: $lt-blue;
+//   }
+// }

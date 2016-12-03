@@ -20,6 +20,9 @@
   width: calc(100% + 160px);
   margin-left: -80px; }
   /* line 21, ../sass/components/_pane--hero-2017.scss */
+  .admin-menu .pane--hero-2017__image {
+    margin-top: -125px; }
+  /* line 24, ../sass/components/_pane--hero-2017.scss */
   .pane--hero-2017__image img {
     display: block; }
   @media (min-width: 420px) {
@@ -39,7 +42,7 @@
     .pane--hero-2017__image {
       padding-top: 0%; } }
 
-/* line 38, ../sass/components/_pane--hero-2017.scss */
+/* line 41, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__content {
   position: absolute;
   top: 12%;
@@ -47,7 +50,7 @@
   z-index: 2;
   text-align: center; }
 
-/* line 46, ../sass/components/_pane--hero-2017.scss */
+/* line 49, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__title {
   color: #0f3b61;
   font-weight: 900;
@@ -56,7 +59,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase; }
 
-/* line 54, ../sass/components/_pane--hero-2017.scss */
+/* line 57, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__subtitle {
   color: #1963a3;
   font-weight: 900;
@@ -65,7 +68,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase; }
 
-/* line 62, ../sass/components/_pane--hero-2017.scss */
+/* line 65, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__location {
   color: #FFF;
   font-weight: 500;
@@ -73,17 +76,17 @@
   line-height: 1.5em;
   text-transform: uppercase; }
 
-/* line 69, ../sass/components/_pane--hero-2017.scss */
+/* line 72, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__date {
   color: #fa4d13;
   font-size: 33px;
   line-height: 1.1em;
   text-transform: uppercase; }
 
-/* line 76, ../sass/components/_pane--hero-2017.scss */
+/* line 79, ../sass/components/_pane--hero-2017.scss */
 .pane--hero-2017__button {
   margin: 20px 0; }
-  /* line 78, ../sass/components/_pane--hero-2017.scss */
+  /* line 81, ../sass/components/_pane--hero-2017.scss */
   .pane--hero-2017__button a {
     background-color: #fa4d13;
     border-radius: 40px;
@@ -91,7 +94,7 @@
     text-decoration: none;
     padding-right: 40px;
     padding-left: 40px; }
-    /* line 85, ../sass/components/_pane--hero-2017.scss */
+    /* line 88, ../sass/components/_pane--hero-2017.scss */
     .pane--hero-2017__button a:hover {
       background-color: #d53905;
       text-decoration: none; }

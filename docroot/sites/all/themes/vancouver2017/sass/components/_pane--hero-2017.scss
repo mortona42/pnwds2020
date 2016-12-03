@@ -18,6 +18,9 @@
   margin-top: -60px;
   width: calc(100% + 160px);
   margin-left: -80px;
+  .admin-menu & {
+    margin-top: -125px;
+  }
   img {
     display: block;
   }

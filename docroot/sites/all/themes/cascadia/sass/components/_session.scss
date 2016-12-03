@@ -1,0 +1,162 @@
+.node-type-session {
+
+  .session__speakers,
+  .pane-node-og-vocabulary,
+  .pane-node-field-experience {
+
+    color: $secondary-color;
+
+    .field__label {
+      display: block;
+      margin-bottom: 1px;
+      color: #000;
+      font-family: $alt-font-family;
+      font-size: 0.85em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $secondary-color;
+    }
+
+  }
+
+  .flag-session-schedule {
+    a.flag {
+      color: $secondary-color;
+      &:after {
+        position: relative;
+        top: 7px;
+        left: 3px;
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url('../images/cascadia-icon-sprite.png');
+        background-position: left 0px;
+        background-repeat: no-repeat;
+      }
+      &.unflag-action {
+        &:after {
+          background-position: left -50px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.session--teaser {
+
+  border: solid 1px #CCC;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .session__track {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #888;
+    font-family: $alt-font-family;
+    font-size: 0.8em;
+    line-height: 29px;
+    text-transform: uppercase;
+  }
+
+  .session__title {
+    clear: both;
+    min-height: 78px;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+
+    a {
+      color: $blue;
+    }
+
+  }
+
+  .session__title--code_develop a {
+    color: $blue;
+  }
+
+  .session__title--devops_performance a {
+    color: $yellow;
+  }
+
+  .session__title--design_theme_ux a {
+    color: $purple;
+  }
+
+  .session__title--business_community a {
+    color: $red;
+  }
+
+  .session__speakers {
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+  }
+
+  .session__experience {
+    color: #CCC;
+    font-size: 0.8em;
+
+    &:before {
+      position: relative;
+      top: 3px;
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 18px;
+      background-image: url('../images/cascadia-icon-sprite.png');
+      background-position: left -100px;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  .session__experience--beginner:before {
+  }
+
+  .session__experience--intermediate:before {
+    width: 42px;
+  }
+
+  .session__experience--advanced:before {
+    width: 66px;
+  }
+
+  .session__attending-flag {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 27px;
+    a.flag {
+      overflow: hidden;
+      display: inline-block;
+      width: 30px;
+      height: 27px;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url('../images/cascadia-icon-sprite.png');
+        background-position: left 0px;
+        background-repeat: no-repeat;
+      }
+      &.unflag-action {
+        &:before {
+          background-position: left -50px;
+        }
+      }
+    }
+  }
+
+}

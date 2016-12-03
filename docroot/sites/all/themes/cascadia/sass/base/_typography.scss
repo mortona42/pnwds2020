@@ -119,6 +119,9 @@ blockquote {
       &:before {
         content: "- ";
       }
+      p {
+        display: inline;
+      }
     }
   }
 

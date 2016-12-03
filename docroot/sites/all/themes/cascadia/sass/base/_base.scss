@@ -34,46 +34,46 @@ body {
 //   }
 // }
 
-.location-action {
-  display: none;
-}
+// .location-action {
+//   display: none;
+// }
 
-.l-content {
-  margin-bottom: 1em;
-}
+// .l-content {
+//   margin-bottom: 1em;
+// }
 
 // .panels-layout .page-title {
 //   @extend %constrained-width;
 // }
 
-.not-front .l-content {
-  background-color: transparent;
-}
+// .not-front .l-content {
+//   background-color: transparent;
+// }
 
-.l-epilogue-wrapper {
-  background-color: $lt-blue;
-  color: $dk-gray;
-  padding-bottom: 1em;
-  .block {
-    max-width: $large;
-    margin: auto;
-  }
-  .pane-title {
-    margin: 1em 0;
-  }
+// .l-epilogue-wrapper {
+//   background-color: $lt-blue;
+//   color: $dk-gray;
+//   padding-bottom: 1em;
+//   .block {
+//     max-width: $large;
+//     margin: auto;
+//   }
+//   .pane-title {
+//     margin: 1em 0;
+//   }
 
-}
+// }
 
-.l-errata-wrapper {
-  background-color: $white;
-  color: $dk-blue;
-  padding-bottom: 1em;
-  padding: 0 0.72em 2em 0.72em;
-  @include clearfix;
-  .l-region {
-    padding: 3em 0px;
-  }
-  .pane-title {
-    margin: 1em 0;
-  }
-}
+// .l-errata-wrapper {
+//   background-color: $white;
+//   color: $dk-blue;
+//   padding-bottom: 1em;
+//   padding: 0 0.72em 2em 0.72em;
+//   @include clearfix;
+//   .l-region {
+//     padding: 3em 0px;
+//   }
+//   .pane-title {
+//     margin: 1em 0;
+//   }
+// }

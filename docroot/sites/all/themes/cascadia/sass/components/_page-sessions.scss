@@ -1,132 +1,207 @@
-.page-node-sessions-proposed, .page-node-sessions-accepted {
-  .l-content .preface {
-    padding: 4.25em 0px 4em;
-    text-align: center;
-    .button-link {
-      margin-top: 1em;
-    }
-    .panel-pane {
-      clear: both;
-      padding: 0;
-    }
-    .view-display-id-track_session_filter {
-      //@extend %constrained-width;
-      ul {
-        padding-left: 0;
-      }
-      li.views-row {
-        float: left;
-        list-style-type: none;
-        list-style-image: none;
-        margin: 0 1% 1% 0;
-        width: 100%;
-        a {
-          font-size: 1.25em;
-          line-height: 1;
-          text-align: center;
-        }
-      }
-    }
+.view-display-id-track_session_filter {
+
+  li {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
   }
-  .page-title {
-    display: none;
+
+  .views-field-session-track-link a {
+    display: inline-block;
+    border: solid 1px #CCC;
+    color: $blue;
+    font-size: 0.9em;
+    padding: 15px;
+    transition: background-color $base-duration $base-timing;
+    white-space: nowrap;
   }
-  .views-exposed-form {
-    max-width: 520px;
-    margin: auto;
-    text-align: center;
-    select, input {
-      width: 100%;
-    }
-    .views-exposed-widget {
-      width: 48%;
-    }
+
+  .business-community .views-field-session-track-link a {
+    color: $red;
   }
-  .view-display-id-track_session_summary {
-    padding-top: 4em;
-    > .view-content {
-      margin: auto;
-      @extend %constrained-width;
-      > .views-row {
-        margin-bottom: 4.5em;
-        padding: 2em;
-        .view-id-cod_session_sessions {
-          .views-row {
-            border: 2px solid $gray;
-            float: left;
-            margin: 0 0 1% 1%;
-            padding: 1em;
-            text-align: center;
-            width: 100%;
-            h3 {
-              color: $dk-blue;
-              a {
-                color: $dk-blue;
-              }
-            }
-          }
-        }
-      }
-    }
-    h2 {
-      color: $dk-blue;
-      margin-top: 0.5em;
-      text-align: center;
-      a {
-        color: $dk-blue;
+
+  .design-theme-ux .views-field-session-track-link a {
+    color: $purple;
+  }
+
+  .devops-performance .views-field-session-track-link a {
+    color: $yellow;
+  }
+
+}
+
+.view-display-id-track_session_summary{
+
+  h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: $medium) {
+    .views-field-view .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        flex: 0 0 30%;
+        margin-right: 20px;
       }
     }
   }
-  .view-footer {
-    clear: both;
-    text-align: center;
-    padding-top: 1em;
-    a {
-      @extend .button-link;
-    }
-  }
+
 }
 
 .view-display-id-panel_sessions_by_track {
-  margin: auto;
-  @extend %constrained-width;
-  > .view-content {
-      margin-bottom: 4.5em;
-      padding: 2em;
-      @include clearfix;
-    .views-row {
-      float: left;
-      margin: 1em 0 1% 1%;
-      padding: 1em;
-      text-align: center;
-      width: 100%;
-      @include breakpoint($mid-small $medium) {
-        width: 49%;
-        &:nth-of-type(2n+1) {
-          clear: left;
-          margin-left: 0;
-        }
-      }
-      @include breakpoint($medium $large) {
-        width: 32%;
-        &:nth-of-type(3n+1) {
-          clear: left;
-          margin-left: 0;
-        }
-      }
-      @include breakpoint($large) {
-        width: 24%;
-        &:nth-of-type(4n+1) {
-          clear: left;
-          margin-left: 0;
-        }
-      }
-      h3 {
-        color: $dk-blue;
-        a {
-          color: $dk-blue;
-        }
+
+  h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: $medium) {
+    .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        flex: 0 0 30%;
+        margin-right: 20px;
       }
     }
   }
+
 }
+
+// .page-node-sessions-proposed, .page-node-sessions-accepted {
+//   .l-content .preface {
+//     padding: 4.25em 0px 4em;
+//     text-align: center;
+//     .button-link {
+//       margin-top: 1em;
+//     }
+//     .panel-pane {
+//       clear: both;
+//       padding: 0;
+//     }
+//     .view-display-id-track_session_filter {
+//       //@extend %constrained-width;
+//       ul {
+//         padding-left: 0;
+//       }
+//       li.views-row {
+//         float: left;
+//         list-style-type: none;
+//         list-style-image: none;
+//         margin: 0 1% 1% 0;
+//         width: 100%;
+//         a {
+//           font-size: 1.25em;
+//           line-height: 1;
+//           text-align: center;
+//         }
+//       }
+//     }
+//   }
+//   .page-title {
+//     display: none;
+//   }
+//   .views-exposed-form {
+//     max-width: 520px;
+//     margin: auto;
+//     text-align: center;
+//     select, input {
+//       width: 100%;
+//     }
+//     .views-exposed-widget {
+//       width: 48%;
+//     }
+//   }
+//   .view-display-id-track_session_summary {
+//     padding-top: 4em;
+//     > .view-content {
+//       margin: auto;
+//       @extend %constrained-width;
+//       > .views-row {
+//         margin-bottom: 4.5em;
+//         padding: 2em;
+//         .view-id-cod_session_sessions {
+//           .views-row {
+//             border: 2px solid $gray;
+//             float: left;
+//             margin: 0 0 1% 1%;
+//             padding: 1em;
+//             text-align: center;
+//             width: 100%;
+//             h3 {
+//               color: $dk-blue;
+//               a {
+//                 color: $dk-blue;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//     h2 {
+//       color: $dk-blue;
+//       margin-top: 0.5em;
+//       text-align: center;
+//       a {
+//         color: $dk-blue;
+//       }
+//     }
+//   }
+//   .view-footer {
+//     clear: both;
+//     text-align: center;
+//     padding-top: 1em;
+//     a {
+//       @extend .button-link;
+//     }
+//   }
+// }
+
+// .view-display-id-panel_sessions_by_track {
+//   margin: auto;
+//   @extend %constrained-width;
+//   > .view-content {
+//       margin-bottom: 4.5em;
+//       padding: 2em;
+//       @include clearfix;
+//     .views-row {
+//       float: left;
+//       margin: 1em 0 1% 1%;
+//       padding: 1em;
+//       text-align: center;
+//       width: 100%;
+//       @include breakpoint($mid-small $medium) {
+//         width: 49%;
+//         &:nth-of-type(2n+1) {
+//           clear: left;
+//           margin-left: 0;
+//         }
+//       }
+//       @include breakpoint($medium $large) {
+//         width: 32%;
+//         &:nth-of-type(3n+1) {
+//           clear: left;
+//           margin-left: 0;
+//         }
+//       }
+//       @include breakpoint($large) {
+//         width: 24%;
+//         &:nth-of-type(4n+1) {
+//           clear: left;
+//           margin-left: 0;
+//         }
+//       }
+//       h3 {
+//         color: $dk-blue;
+//         a {
+//           color: $dk-blue;
+//         }
+//       }
+//     }
+//   }
+// }

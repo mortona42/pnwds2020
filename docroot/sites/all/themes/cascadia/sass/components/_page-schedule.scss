@@ -4,7 +4,7 @@
     .button-link {
       margin-top: 1em;
       &:hover, &.active {
-        color: $dk-green;
+        //color: $dk-green;
       }
     }
     .panel-pane {
@@ -105,15 +105,15 @@
     }
     .views-field-title {
       line-height: 1.25;
-      a {
-        color: $dk-blue;
-      }
+      // a {
+      //   color: $dk-blue;
+      // }
     }
     .views-field-ops {
       margin: 1em 0 0 0;
-      a {
-        color: $gray-blue;
-      }
+      // a {
+      //   color: $gray-blue;
+      // }
     }
   }
 }

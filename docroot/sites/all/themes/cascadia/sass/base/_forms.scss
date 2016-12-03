@@ -87,7 +87,7 @@ textarea {
     background-position: 99% 13px;
     padding-right: 30px;
     &.throbbing {
-      background-position: 99% -16px;
+      background-position: 99% -7px;
     }
   }
 }
@@ -100,6 +100,41 @@ textarea {
 [type="radio"] {
   display: inline;
   margin-right: 5px;
+  margin-left: 5px;
+}
+
+.form-type-radio {
+  label {
+    display: inline-block;
+    background-image: url('../images/cascadia-icon-sprite.png');
+    background-position: left -620px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  input[type="radio"]:checked + label {
+    background-position: left -670px;
+  }
+}
+
+.form-type-checkbox {
+  label {
+    display: inline-block;
+    background-image: url('../images/cascadia-icon-sprite.png');
+    background-position: left -720px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  input[type="checkbox"]:checked + label {
+    background-position: left -770px;
+  }
 }
 
 [type="file"] {
@@ -117,11 +152,13 @@ select {
   background-repeat: no-repeat;
 }
 
-.description {
-  color: $lt-gray;
-  font-style: italic;
-  font-size: 0.75em;
-  margin: 0 0 1em;
+.form-item, .form-actions {
+  .description {
+    color: $lt-gray;
+    font-style: italic;
+    font-size: 0.75em;
+    margin: 0 0 1em;
+  }
 }
 
 .file-widget {
