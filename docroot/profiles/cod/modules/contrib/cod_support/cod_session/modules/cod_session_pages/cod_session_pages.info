@@ -2,8 +2,6 @@ name = COD Session Pages
 description = Manage Moderated Sessions, Session Items, and Voting
 core = 7.x
 package = COD Pages
-version = 7.x-2.0-beta3
-project = cod_support
 dependencies[] = cod_events_pages
 dependencies[] = cod_session
 dependencies[] = cod_session_management_pages
@@ -13,7 +11,6 @@ dependencies[] = panelizer
 dependencies[] = panels
 dependencies[] = panels_ipe
 dependencies[] = strongarm
-datestamp = 1467529142
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
@@ -23,8 +20,11 @@ features[panelizer_defaults][] = node:schedule_item:default:default
 features[panelizer_defaults][] = node:session:default:default
 features[variable][] = panelizer_defaults_node_schedule_item
 features[variable][] = panelizer_defaults_node_session
-features[variable][] = panelizer_node:schedule_item:default_selection
-features[variable][] = panelizer_node:schedule_item:page_manager_selection
-features[variable][] = panelizer_node:session:default_selection
-features[variable][] = panelizer_node:session:page_manager_selection
 install_option = cod
+
+; Information added by Drupal.org packaging script on 2016-07-03
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "cod_support"
+datestamp = "1467529142"
+
