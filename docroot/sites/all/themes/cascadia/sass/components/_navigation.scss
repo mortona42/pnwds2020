@@ -61,7 +61,6 @@
 
   // Level 2
   .menu > li > .menu {
-    // @TODO: impliment toggle
     display: none;
     background-color: $dk-primary-color;
     margin-top: 8px;
@@ -96,7 +95,6 @@
       > li {
         display: inline-block;
         float: left;
-        //position: relative;
 
         &.menu-item--parent {
           > a {
@@ -139,6 +137,7 @@
     // Level 2
     .menu > li > .menu {
       position: absolute;
+      z-index: 2;
       top: 64px;
       right: 0;
       left: 0;

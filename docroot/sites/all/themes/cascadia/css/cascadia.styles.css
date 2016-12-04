@@ -1123,6 +1123,7 @@ table.checkout-review .pane-data {
           margin-right: 30px; }
       .l-navigation .menu > li > .menu {
         position: absolute;
+        z-index: 2;
         top: 64px;
         right: 0;
         left: 0;
