@@ -12,7 +12,6 @@
 }
 
 .pane--hero-2017__image {
-  position: static;
   background-color: #6ebadc;
   padding-top: 90%;
   padding-bottom: 0;
@@ -40,7 +39,7 @@
 }
 
 .pane--hero-2017__content {
-  position: absolute;
+  position: absolute !important;
   top: 12%;
   width: 100%;
   z-index: 2;
