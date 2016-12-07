@@ -69,6 +69,15 @@ $one-wide-logo-width : 100%;  /* on narrow displays */
 $two-wide-logo-width :  49%;  /* on medium-width displays */
 $four-wide-logo-width : 24%;  /* on full monitors */
 
+.block--cod-sponsors {
+  overflow: hidden;
+  .block__title {
+    color: darken($dk-white, 10%);
+    font-size: 1.4em;
+    text-transform: uppercase;
+  }
+}
+
 /* This is the default setup, with widths for 'gold' sponsors. */
 .view-cod-sponsors {
   .views-row {
@@ -90,8 +99,19 @@ $four-wide-logo-width : 24%;  /* on full monitors */
   }
 }
 
+#block-cod-sponsors-gold,
+#block-cod-sponsors-cypress {
+  .block__title {
+    font-size: 2.2em;
+  }
+}
+
 /* override the widths for 'silver'. */
-#block-cod-sponsors-silver {
+#block-cod-sponsors-silver,
+#block-cod-sponsors-grouse {
+  .block__title {
+    font-size: 1.8em;
+  }
   .view-cod-sponsors {
     .views-row {
       width: $one-wide-logo-width * $silver-shrinkage;
@@ -106,7 +126,8 @@ $four-wide-logo-width : 24%;  /* on full monitors */
 }
 
 /* override the widths for 'bronze'. */
-#block-cod-sponsors-bronze {
+#block-cod-sponsors-bronze,
+#block-cod-sponsors-seymour {
   .view-cod-sponsors {
     .views-row {
       width: $one-wide-logo-width * $bronze-shrinkage;

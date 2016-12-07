@@ -515,19 +515,6 @@ body.cke_editable {
   margin: auto;
   width: 94%; }
 
-.block--cod-sponsors {
-  overflow: hidden; }
-  .block--cod-sponsors .block__title {
-    color: gainsboro;
-    font-size: 1.4em;
-    text-transform: uppercase; }
-
-#block-cod-sponsors-gold .block__title {
-  font-size: 2.2em; }
-
-#block-cod-sponsors-silver .block__title {
-  font-size: 1.8em; }
-
 .block--credit {
   font-size: 0.85em; }
 
@@ -596,18 +583,34 @@ body.cke_editable {
 /* on narrow displays */
 /* on medium-width displays */
 /* on full monitors */
+.block--cod-sponsors {
+  overflow: hidden; }
+  .block--cod-sponsors .block__title {
+    color: gainsboro;
+    font-size: 1.4em;
+    text-transform: uppercase; }
+
 /* This is the default setup, with widths for 'gold' sponsors. */
 .view-cod-sponsors .views-row {
   float: left;
   padding: 1em;
   width: 100%; }
 
+#block-cod-sponsors-gold .block__title,
+#block-cod-sponsors-cypress .block__title {
+  font-size: 2.2em; }
+
 /* override the widths for 'silver'. */
-#block-cod-sponsors-silver .view-cod-sponsors .views-row {
+#block-cod-sponsors-silver .block__title,
+#block-cod-sponsors-grouse .block__title {
+  font-size: 1.8em; }
+#block-cod-sponsors-silver .view-cod-sponsors .views-row,
+#block-cod-sponsors-grouse .view-cod-sponsors .views-row {
   width: 66.7%; }
 
 /* override the widths for 'bronze'. */
-#block-cod-sponsors-bronze .view-cod-sponsors .views-row {
+#block-cod-sponsors-bronze .view-cod-sponsors .views-row,
+#block-cod-sponsors-seymour .view-cod-sponsors .views-row {
   width: 44.4%; }
 
 .pane-cod-sponsors-sponsored .views-row {
