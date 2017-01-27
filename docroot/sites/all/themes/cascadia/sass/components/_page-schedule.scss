@@ -1,126 +1,233 @@
-.page-node-schedule {
-  .title-region {
-    text-align: center;
-    .button-link {
-      margin-top: 1em;
-      &:hover, &.active {
-        //color: $dk-green;
-      }
-    }
-    .panel-pane {
-      clear: both;
-      padding: 0;
-    }
-  }
-  .pane-cod-schedule-menu-pane {
-    margin: 1em 0;
-    padding: 1em 2em;
-    text-align: center;
-    a {
-      margin: 0 0.1em;
-    }
-    ul {
-      font-weight: normal;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      li {
-        display: inline;
-        list-style-image: none;
-        list-style-type: none;
-      }
-    }
-  }
-  .pane-cod-session-tracks-schedule-session-tracks {
-    //@extend %constrained-width;
-    ul {
-      padding-left: 0;
-    }
-    li {
-      float: left;
-      list-style-type: none;
-      list-style-image: none;
-      margin: 0 1% 1% 0;
-      width: 100%;
-      a {
-        font-size: 1.25em;
-        line-height: 1;
-        text-align: center;
-      }
-    }
-  }
-  .view-cod-schedule-content > .view-content {
+.schedule {
+
+  .schedule__timeslot {
+    display: flex;
+    margin-bottom: 20px;
+
     h3 {
-      background-color: transparent;
-      font-weight: normal;
+      width: 70px;
+      border: solid 1px #CCC;
+      border-right: none;
+      padding: 17px 15px 15px;
+      margin-bottom: 0;
+      color: #888;
+      font-family: $alt-font-family;
+      font-size: 0.8em;
+      font-weight: 300;
+      text-transform: uppercase;
       text-align: center;
-    }
-    > .timeslot {
-      margin-bottom: 2em;
-      overflow: auto;
-      position: relative;
-      padding: 2em;
-    }
-    .timeslot-content {
-      width: 100%;
-    }
-    .gutter-size {
-      width: 2%;
-    }
-    .schedule-item, .session {
-      background-color: white;
-      border: 1px solid $gray;
-      margin-bottom: 2%;
-      padding: 1em;
-      text-align: center;
-      width: 100%;
-      clear: both;
-      float: left;
-      position: relative;
-    }
-    .session {
-      clear: none;
-      float: none;
-      overflow: auto;
-      padding: 1em 1em 5em 1em;
-      width: 100%;
-      @include breakpoint($medium) {
-        width: 49%
+
+      .date-display-start {
+        font-weight: bold;
+        color: #000;
       }
-      @include breakpoint($large) {
-        width: 31%
+
+    }
+
+    .schedule__timeslot-sessions {
+      width: calc(100% - 70px);
+    }
+
+    .session--teaser {
+      border-bottom: none;
+      margin-bottom: 0;
+
+      &:last-child {
+        border-bottom: solid 1px #CCC;
       }
+
     }
-    .views-row.session {
-      background-size: cover;
-      background-position: right 40px bottom;
-    }
-    .views-field-name, .views-field-field-speakers, .views-field-ops {
-      background-image: none;
-      clear: both;
-      float: none;
-      height: auto;
-      line-height: 1.25;
-      padding: 0;
-    }
-    .views-field-title {
-      line-height: 1.25;
-      // a {
-      //   color: $dk-blue;
-      // }
-    }
-    .views-field-ops {
-      margin: 1em 0 0 0;
-      // a {
-      //   color: $gray-blue;
-      // }
-    }
+
   }
+
+  @media (min-width: $mid-large) {
+
+    .schedule__timeslot {
+      margin-bottom: 0;
+
+      &:last-child {
+        border-bottom: solid 1px #CCC;
+      }
+
+      h3 {
+        width: 70px;
+        border-bottom: none;
+        padding-top: 21px;
+      }
+
+      .schedule__timeslot-sessions {
+        display: flex;
+        width: calc(100% - 70px);
+
+        li {
+          width: 25%;
+        }
+
+      }
+
+      .session--teaser {
+        border: solid 1px #CCC;
+        border-right: none;
+        border-bottom: none !important;
+
+        &:last-child {
+          border-right: solid 1px #CCC;
+        }
+
+        .session__room {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  @media (min-width: $large) {
+
+    .schedule__timeslot {
+
+      h3 {
+        width: 170px;
+        text-align: left;
+      }
+
+      .schedule__timeslot-sessions {
+        width: calc(100% - 170px);
+
+      }
+
+    }
+
+  }
+
 }
 
-.view-cod-session-sessions {
-  table {
-    max-width: none;
-    width: 100%;
-  }
-}
+
+// .page-node-schedule {
+//   .title-region {
+//     text-align: center;
+//     .button-link {
+//       margin-top: 1em;
+//       &:hover, &.active {
+//         //color: $dk-green;
+//       }
+//     }
+//     .panel-pane {
+//       clear: both;
+//       padding: 0;
+//     }
+//   }
+//   .pane-cod-schedule-menu-pane {
+//     margin: 1em 0;
+//     padding: 1em 2em;
+//     text-align: center;
+//     a {
+//       margin: 0 0.1em;
+//     }
+//     ul {
+//       font-weight: normal;
+//       margin: 0;
+//       padding: 0;
+//       text-align: center;
+//       li {
+//         display: inline;
+//         list-style-image: none;
+//         list-style-type: none;
+//       }
+//     }
+//   }
+//   .pane-cod-session-tracks-schedule-session-tracks {
+//     //@extend %constrained-width;
+//     ul {
+//       padding-left: 0;
+//     }
+//     li {
+//       float: left;
+//       list-style-type: none;
+//       list-style-image: none;
+//       margin: 0 1% 1% 0;
+//       width: 100%;
+//       a {
+//         font-size: 1.25em;
+//         line-height: 1;
+//         text-align: center;
+//       }
+//     }
+//   }
+//   .view-cod-schedule-content > .view-content {
+//     h3 {
+//       background-color: transparent;
+//       font-weight: normal;
+//       text-align: center;
+//     }
+//     > .timeslot {
+//       margin-bottom: 2em;
+//       overflow: auto;
+//       position: relative;
+//       padding: 2em;
+//     }
+//     .timeslot-content {
+//       width: 100%;
+//     }
+//     .gutter-size {
+//       width: 2%;
+//     }
+//     .schedule-item, .session {
+//       background-color: white;
+//       border: 1px solid $gray;
+//       margin-bottom: 2%;
+//       padding: 1em;
+//       text-align: center;
+//       width: 100%;
+//       clear: both;
+//       float: left;
+//       position: relative;
+//     }
+//     .session {
+//       clear: none;
+//       float: none;
+//       overflow: auto;
+//       padding: 1em 1em 5em 1em;
+//       width: 100%;
+//       @include breakpoint($medium) {
+//         width: 49%
+//       }
+//       @include breakpoint($large) {
+//         width: 31%
+//       }
+//     }
+//     .views-row.session {
+//       background-size: cover;
+//       background-position: right 40px bottom;
+//     }
+//     .views-field-name, .views-field-field-speakers, .views-field-ops {
+//       background-image: none;
+//       clear: both;
+//       float: none;
+//       height: auto;
+//       line-height: 1.25;
+//       padding: 0;
+//     }
+//     .views-field-title {
+//       line-height: 1.25;
+//       // a {
+//       //   color: $dk-blue;
+//       // }
+//     }
+//     .views-field-ops {
+//       margin: 1em 0 0 0;
+//       // a {
+//       //   color: $gray-blue;
+//       // }
+//     }
+//   }
+// }
+
+// .view-cod-session-sessions {
+//   table {
+//     max-width: none;
+//     width: 100%;
+//   }
+// }

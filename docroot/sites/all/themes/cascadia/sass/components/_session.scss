@@ -59,6 +59,7 @@
     display: inline-block;
     float: left;
     max-width: calc(100% - 30px);
+    clear: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -72,9 +73,11 @@
 
   .session__title {
     clear: both;
-    min-height: 78px;
     margin-bottom: 0.5em;
     font-size: 1.2em;
+    @media (min-width: $medium) {
+      min-height: 78px;
+    }
 
     a {
       color: $blue;
@@ -101,6 +104,32 @@
   .session__speakers {
     margin-bottom: 0.5em;
     font-size: 0.8em;
+  }
+
+  .session__room {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
+    color: #CCC;
+    font-family: $alt-font-family;
+    font-size: 0.8em;
+    text-transform: uppercase;
+
+    .session__room-name {
+      font-weight: bold;
+      color: #000;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 14px;
+      background-image: url('../images/cascadia-icon-sprite.png');
+      background-position: left -820px;
+      background-repeat: no-repeat;
+    }
+
   }
 
   .session__experience {

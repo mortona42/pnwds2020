@@ -828,6 +828,7 @@ table.checkout-review .pane-data {
       margin-top: 29px; }
     .node-session-form .required-fields h3 {
       display: none; }
+    .node-session-form .group-schedule,
     .node-session-form .form-actions {
       clear: both; } }
 
@@ -1176,87 +1177,59 @@ table.checkout-review .pane-data {
   margin-left: 0;
   clear: none; }
 
-.page-node-schedule .title-region {
-  text-align: center; }
-  .page-node-schedule .title-region .button-link, .page-node-schedule .title-region .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment a, .page-node-bofs .view-cod-bof-schedule-timeslots .views-row .attachment .page-node-schedule .title-region a {
-    margin-top: 1em; }
-  .page-node-schedule .title-region .panel-pane {
-    clear: both;
-    padding: 0; }
-.page-node-schedule .pane-cod-schedule-menu-pane {
-  margin: 1em 0;
-  padding: 1em 2em;
-  text-align: center; }
-  .page-node-schedule .pane-cod-schedule-menu-pane a {
-    margin: 0 0.1em; }
-  .page-node-schedule .pane-cod-schedule-menu-pane ul {
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+.schedule .schedule__timeslot {
+  display: flex;
+  margin-bottom: 20px; }
+  .schedule .schedule__timeslot h3 {
+    width: 70px;
+    border: solid 1px #CCC;
+    border-right: none;
+    padding: 17px 15px 15px;
+    margin-bottom: 0;
+    color: #888;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.8em;
+    font-weight: 300;
+    text-transform: uppercase;
     text-align: center; }
-    .page-node-schedule .pane-cod-schedule-menu-pane ul li {
-      display: inline;
-      list-style-image: none;
-      list-style-type: none; }
-.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks ul {
-  padding-left: 0; }
-.page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li {
-  float: left;
-  list-style-type: none;
-  list-style-image: none;
-  margin: 0 1% 1% 0;
-  width: 100%; }
-  .page-node-schedule .pane-cod-session-tracks-schedule-session-tracks li a {
-    font-size: 1.25em;
-    line-height: 1;
-    text-align: center; }
-.page-node-schedule .view-cod-schedule-content > .view-content h3 {
-  background-color: transparent;
-  font-weight: normal;
-  text-align: center; }
-.page-node-schedule .view-cod-schedule-content > .view-content > .timeslot {
-  margin-bottom: 2em;
-  overflow: auto;
-  position: relative;
-  padding: 2em; }
-.page-node-schedule .view-cod-schedule-content > .view-content .timeslot-content {
-  width: 100%; }
-.page-node-schedule .view-cod-schedule-content > .view-content .gutter-size {
-  width: 2%; }
-.page-node-schedule .view-cod-schedule-content > .view-content .schedule-item, .page-node-schedule .view-cod-schedule-content > .view-content .session {
-  background-color: white;
-  border: 1px solid #6a7076;
-  margin-bottom: 2%;
-  padding: 1em;
-  text-align: center;
-  width: 100%;
-  clear: both;
-  float: left;
-  position: relative; }
-.page-node-schedule .view-cod-schedule-content > .view-content .session {
-  clear: none;
-  float: none;
-  overflow: auto;
-  padding: 1em 1em 5em 1em;
-  width: 100%; }
-.page-node-schedule .view-cod-schedule-content > .view-content .views-row.session {
-  background-size: cover;
-  background-position: right 40px bottom; }
-.page-node-schedule .view-cod-schedule-content > .view-content .views-field-name, .page-node-schedule .view-cod-schedule-content > .view-content .views-field-field-speakers, .page-node-schedule .view-cod-schedule-content > .view-content .views-field-ops {
-  background-image: none;
-  clear: both;
-  float: none;
-  height: auto;
-  line-height: 1.25;
-  padding: 0; }
-.page-node-schedule .view-cod-schedule-content > .view-content .views-field-title {
-  line-height: 1.25; }
-.page-node-schedule .view-cod-schedule-content > .view-content .views-field-ops {
-  margin: 1em 0 0 0; }
-
-.view-cod-session-sessions table {
-  max-width: none;
-  width: 100%; }
+    .schedule .schedule__timeslot h3 .date-display-start {
+      font-weight: bold;
+      color: #000; }
+  .schedule .schedule__timeslot .schedule__timeslot-sessions {
+    width: calc(100% - 70px); }
+  .schedule .schedule__timeslot .session--teaser {
+    border-bottom: none;
+    margin-bottom: 0; }
+    .schedule .schedule__timeslot .session--teaser:last-child {
+      border-bottom: solid 1px #CCC; }
+@media (min-width: 900px) {
+  .schedule .schedule__timeslot {
+    margin-bottom: 0; }
+    .schedule .schedule__timeslot:last-child {
+      border-bottom: solid 1px #CCC; }
+    .schedule .schedule__timeslot h3 {
+      width: 70px;
+      border-bottom: none;
+      padding-top: 21px; }
+    .schedule .schedule__timeslot .schedule__timeslot-sessions {
+      display: flex;
+      width: calc(100% - 70px); }
+      .schedule .schedule__timeslot .schedule__timeslot-sessions li {
+        width: 25%; }
+    .schedule .schedule__timeslot .session--teaser {
+      border: solid 1px #CCC;
+      border-right: none;
+      border-bottom: none !important; }
+      .schedule .schedule__timeslot .session--teaser:last-child {
+        border-right: solid 1px #CCC; }
+      .schedule .schedule__timeslot .session--teaser .session__room {
+        display: none; } }
+@media (min-width: 1280px) {
+  .schedule .schedule__timeslot h3 {
+    width: 170px;
+    text-align: left; }
+  .schedule .schedule__timeslot .schedule__timeslot-sessions {
+    width: calc(100% - 170px); } }
 
 .view-display-id-track_session_filter li {
   display: inline-block;
@@ -1523,6 +1496,7 @@ table.checkout-review .pane-data {
     display: inline-block;
     float: left;
     max-width: calc(100% - 30px);
+    clear: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1534,9 +1508,11 @@ table.checkout-review .pane-data {
     text-transform: uppercase; }
   .session--teaser .session__title {
     clear: both;
-    min-height: 78px;
     margin-bottom: 0.5em;
     font-size: 1.2em; }
+    @media (min-width: 770px) {
+      .session--teaser .session__title {
+        min-height: 78px; } }
     .session--teaser .session__title a {
       color: #0077C0; }
   .session--teaser .session__title--code_develop a {
@@ -1550,6 +1526,25 @@ table.checkout-review .pane-data {
   .session--teaser .session__speakers {
     margin-bottom: 0.5em;
     font-size: 0.8em; }
+  .session--teaser .session__room {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
+    color: #CCC;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase; }
+    .session--teaser .session__room .session__room-name {
+      font-weight: bold;
+      color: #000; }
+    .session--teaser .session__room:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 14px;
+      background-image: url("../images/cascadia-icon-sprite.png");
+      background-position: left -820px;
+      background-repeat: no-repeat; }
   .session--teaser .session__experience {
     color: #CCC;
     font-size: 0.8em; }
