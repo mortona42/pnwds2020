@@ -1,4 +1,45 @@
+.schedule-header {
+  display: none;
+
+  @media (min-width: $mid-large) {
+    display: flex;
+    float: right;
+    width: calc(100% - 70px);
+    border: solid 1px #CCC;
+    border-bottom: none;
+
+    li {
+      flex: 1;
+      width: 25%;
+      border-right: solid 1px #CCC;
+      padding: 15px;
+      color: #888;
+      font-family: $alt-font-family;
+      font-size: 0.8em;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      strong {
+        font-weight: bold;
+        color: #000;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+    }
+
+  }
+
+  @media (min-width: $large) {
+    width: calc(100% - 170px);
+  }
+
+}
+
 .schedule {
+  clear: both;
 
   .schedule__timeslot {
     display: flex;
@@ -60,6 +101,7 @@
         width: calc(100% - 70px);
 
         li {
+          flex: 1;
           width: 25%;
         }
 
@@ -102,6 +144,48 @@
 
   }
 
+}
+
+.pane-cod-schedule-menu-pane {
+  padding-top: 1em;
+
+  ul {
+    overflow: hidden;
+    border-bottom: solid 1px #CCC;
+    margin-bottom: 1em;
+    font-family: $alt-font-family;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: uppercase;
+
+    li {
+      float: left;
+      margin-right: 30px;
+      margin-bottom: -1px;
+      list-style-type: none !important;
+      list-style-image: none !important;
+    }
+
+    a {
+      display: block;
+      background-color: transparent;
+      border-bottom: 0px solid #CCC;
+      padding: 5px 0;
+      text-decoration: none;
+      transition: border $base-duration $base-timing;
+
+      &:hover, &:focus {
+        border-width: 2px;
+        background-color: transparent;
+      }
+
+      &.active {
+        background-color: transparent;
+        border-width: 3px;
+        border-color: #000;
+      }
+    }
+  }
 }
 
 

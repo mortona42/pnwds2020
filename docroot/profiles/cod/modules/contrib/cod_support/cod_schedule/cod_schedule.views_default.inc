@@ -483,7 +483,7 @@ function cod_schedule_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['row_class'] = 'session session--teaser';
+  $handler->display->display_options['style_options']['row_class'] = 'session session--teaser session--[machine_name]';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['class'] = 'schedule__timeslot-sessions';

@@ -1,4 +1,5 @@
-.view-display-id-track_session_filter {
+.view-display-id-track_session_filter,
+.view-display-id-schedule_session_tracks {
 
   li {
     display: inline-block;
@@ -7,25 +8,33 @@
     margin-bottom: 5px;
   }
 
-  .views-field-session-track-link a {
+  a {
     display: inline-block;
     border: solid 1px #CCC;
-    color: $blue;
+    color: $teal;
     font-size: 0.9em;
     padding: 15px;
     transition: background-color $base-duration $base-timing;
     white-space: nowrap;
   }
 
-  .business-community .views-field-session-track-link a {
+  .code-develop a,
+  .code--develop a {
+    color: $blue;
+  }
+
+  .business-community a,
+  .business--community a {
     color: $red;
   }
 
-  .design-theme-ux .views-field-session-track-link a {
+  .design-theme-ux a,
+  .design-theme--ux a {
     color: $purple;
   }
 
-  .devops-performance .views-field-session-track-link a {
+  .devops-performance a,
+  .devops--performance a {
     color: $yellow;
   }
 

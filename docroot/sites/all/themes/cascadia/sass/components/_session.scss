@@ -80,7 +80,7 @@
     }
 
     a {
-      color: $blue;
+      color: $teal;
     }
 
   }
@@ -188,4 +188,16 @@
     }
   }
 
+}
+
+// Session with no track. Used for lunch, coffer break, etc.
+.session-- {
+  .session__attending-flag,
+  .session__speakers,
+  .session__experience {
+    display: none;
+  }
+  .session__title {
+    min-height: 0;
+  }
 }

@@ -1177,78 +1177,156 @@ table.checkout-review .pane-data {
   margin-left: 0;
   clear: none; }
 
-.schedule .schedule__timeslot {
-  display: flex;
-  margin-bottom: 20px; }
-  .schedule .schedule__timeslot h3 {
-    width: 70px;
-    border: solid 1px #CCC;
-    border-right: none;
-    padding: 17px 15px 15px;
-    margin-bottom: 0;
-    color: #888;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 0.8em;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center; }
-    .schedule .schedule__timeslot h3 .date-display-start {
-      font-weight: bold;
-      color: #000; }
-  .schedule .schedule__timeslot .schedule__timeslot-sessions {
-    width: calc(100% - 70px); }
-  .schedule .schedule__timeslot .session--teaser {
-    border-bottom: none;
-    margin-bottom: 0; }
-    .schedule .schedule__timeslot .session--teaser:last-child {
-      border-bottom: solid 1px #CCC; }
-@media (min-width: 900px) {
+.schedule-header {
+  display: none; }
+  @media (min-width: 900px) {
+    .schedule-header {
+      display: flex;
+      float: right;
+      width: calc(100% - 70px);
+      border: solid 1px #CCC;
+      border-bottom: none; }
+      .schedule-header li {
+        flex: 1;
+        width: 25%;
+        border-right: solid 1px #CCC;
+        padding: 15px;
+        color: #888;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 0.8em;
+        font-weight: 300;
+        text-transform: uppercase; }
+        .schedule-header li strong {
+          font-weight: bold;
+          color: #000; }
+        .schedule-header li:last-child {
+          border-right: none; } }
+  @media (min-width: 1280px) {
+    .schedule-header {
+      width: calc(100% - 170px); } }
+
+.schedule {
+  clear: both; }
   .schedule .schedule__timeslot {
-    margin-bottom: 0; }
-    .schedule .schedule__timeslot:last-child {
-      border-bottom: solid 1px #CCC; }
+    display: flex;
+    margin-bottom: 20px; }
     .schedule .schedule__timeslot h3 {
       width: 70px;
-      border-bottom: none;
-      padding-top: 21px; }
-    .schedule .schedule__timeslot .schedule__timeslot-sessions {
-      display: flex;
-      width: calc(100% - 70px); }
-      .schedule .schedule__timeslot .schedule__timeslot-sessions li {
-        width: 25%; }
-    .schedule .schedule__timeslot .session--teaser {
       border: solid 1px #CCC;
       border-right: none;
-      border-bottom: none !important; }
+      padding: 17px 15px 15px;
+      margin-bottom: 0;
+      color: #888;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 0.8em;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: center; }
+      .schedule .schedule__timeslot h3 .date-display-start {
+        font-weight: bold;
+        color: #000; }
+    .schedule .schedule__timeslot .schedule__timeslot-sessions {
+      width: calc(100% - 70px); }
+    .schedule .schedule__timeslot .session--teaser {
+      border-bottom: none;
+      margin-bottom: 0; }
       .schedule .schedule__timeslot .session--teaser:last-child {
-        border-right: solid 1px #CCC; }
-      .schedule .schedule__timeslot .session--teaser .session__room {
-        display: none; } }
-@media (min-width: 1280px) {
-  .schedule .schedule__timeslot h3 {
-    width: 170px;
-    text-align: left; }
-  .schedule .schedule__timeslot .schedule__timeslot-sessions {
-    width: calc(100% - 170px); } }
+        border-bottom: solid 1px #CCC; }
+  @media (min-width: 900px) {
+    .schedule .schedule__timeslot {
+      margin-bottom: 0; }
+      .schedule .schedule__timeslot:last-child {
+        border-bottom: solid 1px #CCC; }
+      .schedule .schedule__timeslot h3 {
+        width: 70px;
+        border-bottom: none;
+        padding-top: 21px; }
+      .schedule .schedule__timeslot .schedule__timeslot-sessions {
+        display: flex;
+        width: calc(100% - 70px); }
+        .schedule .schedule__timeslot .schedule__timeslot-sessions li {
+          flex: 1;
+          width: 25%; }
+      .schedule .schedule__timeslot .session--teaser {
+        border: solid 1px #CCC;
+        border-right: none;
+        border-bottom: none !important; }
+        .schedule .schedule__timeslot .session--teaser:last-child {
+          border-right: solid 1px #CCC; }
+        .schedule .schedule__timeslot .session--teaser .session__room {
+          display: none; } }
+  @media (min-width: 1280px) {
+    .schedule .schedule__timeslot h3 {
+      width: 170px;
+      text-align: left; }
+    .schedule .schedule__timeslot .schedule__timeslot-sessions {
+      width: calc(100% - 170px); } }
 
-.view-display-id-track_session_filter li {
+.pane-cod-schedule-menu-pane {
+  padding-top: 1em; }
+  .pane-cod-schedule-menu-pane ul {
+    overflow: hidden;
+    border-bottom: solid 1px #CCC;
+    margin-bottom: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: uppercase; }
+    .pane-cod-schedule-menu-pane ul li {
+      float: left;
+      margin-right: 30px;
+      margin-bottom: -1px;
+      list-style-type: none !important;
+      list-style-image: none !important; }
+    .pane-cod-schedule-menu-pane ul a {
+      display: block;
+      background-color: transparent;
+      border-bottom: 0px solid #CCC;
+      padding: 5px 0;
+      text-decoration: none;
+      transition: border 0.2 ease-in-out; }
+      .pane-cod-schedule-menu-pane ul a:hover, .pane-cod-schedule-menu-pane ul a:focus {
+        border-width: 2px;
+        background-color: transparent; }
+      .pane-cod-schedule-menu-pane ul a.active {
+        background-color: transparent;
+        border-width: 3px;
+        border-color: #000; }
+
+.view-display-id-track_session_filter li,
+.view-display-id-schedule_session_tracks li {
   display: inline-block;
   float: left;
   margin-right: 20px;
   margin-bottom: 5px; }
-.view-display-id-track_session_filter .views-field-session-track-link a {
+.view-display-id-track_session_filter a,
+.view-display-id-schedule_session_tracks a {
   display: inline-block;
   border: solid 1px #CCC;
-  color: #0077C0;
+  color: #00BF90;
   font-size: 0.9em;
   padding: 15px;
   transition: background-color 0.2 ease-in-out;
   white-space: nowrap; }
-.view-display-id-track_session_filter .business-community .views-field-session-track-link a {
+.view-display-id-track_session_filter .code-develop a,
+.view-display-id-track_session_filter .code--develop a,
+.view-display-id-schedule_session_tracks .code-develop a,
+.view-display-id-schedule_session_tracks .code--develop a {
+  color: #0077C0; }
+.view-display-id-track_session_filter .business-community a,
+.view-display-id-track_session_filter .business--community a,
+.view-display-id-schedule_session_tracks .business-community a,
+.view-display-id-schedule_session_tracks .business--community a {
   color: #F95E56; }
-.view-display-id-track_session_filter .design-theme-ux .views-field-session-track-link a {
+.view-display-id-track_session_filter .design-theme-ux a,
+.view-display-id-track_session_filter .design-theme--ux a,
+.view-display-id-schedule_session_tracks .design-theme-ux a,
+.view-display-id-schedule_session_tracks .design-theme--ux a {
   color: #9013FE; }
-.view-display-id-track_session_filter .devops-performance .views-field-session-track-link a {
+.view-display-id-track_session_filter .devops-performance a,
+.view-display-id-track_session_filter .devops--performance a,
+.view-display-id-schedule_session_tracks .devops-performance a,
+.view-display-id-schedule_session_tracks .devops--performance a {
   color: #F5A623; }
 
 .view-display-id-track_session_summary h2 {
@@ -1514,7 +1592,7 @@ table.checkout-review .pane-data {
       .session--teaser .session__title {
         min-height: 78px; } }
     .session--teaser .session__title a {
-      color: #0077C0; }
+      color: #00BF90; }
   .session--teaser .session__title--code_develop a {
     color: #0077C0; }
   .session--teaser .session__title--devops_performance a {
@@ -1582,6 +1660,13 @@ table.checkout-review .pane-data {
         background-repeat: no-repeat; }
       .session--teaser .session__attending-flag a.flag.unflag-action:before {
         background-position: left -50px; }
+
+.session-- .session__attending-flag,
+.session-- .session__speakers,
+.session-- .session__experience {
+  display: none; }
+.session-- .session__title {
+  min-height: 0; }
 
 .view-cod-sponsors .level {
   clear: both; }
