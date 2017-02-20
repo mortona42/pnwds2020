@@ -627,6 +627,52 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-session-field_slack_link'.
+  $field_instances['node-session-field_slack_link'] = array(
+    'bundle' => 'session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_slack_link',
+    'label' => 'Slack link',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'node-session-field_slides'.
   $field_instances['node-session-field_slides'] = array(
     'bundle' => 'session',
@@ -872,6 +918,7 @@ function cod_session_field_default_field_instances() {
   t('Experience level');
   t('File attachments');
   t('Session Track');
+  t('Slack link');
   t('Slides');
   t('Speaker(s)');
   t('Status');

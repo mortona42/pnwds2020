@@ -640,6 +640,14 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_experience']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_experience']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_experience']['element_default_classes'] = FALSE;
+  /* Field: Content: Slack link */
+  $handler->display->display_options['fields']['field_slack_link']['id'] = 'field_slack_link';
+  $handler->display->display_options['fields']['field_slack_link']['table'] = 'field_data_field_slack_link';
+  $handler->display->display_options['fields']['field_slack_link']['field'] = 'field_slack_link';
+  $handler->display->display_options['fields']['field_slack_link']['label'] = '';
+  $handler->display->display_options['fields']['field_slack_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slack_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_slack_link']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Time: Date and time -  start date (field_evttime_date) */
   $handler->display->display_options['sorts']['field_evttime_date_value']['id'] = 'field_evttime_date_value';

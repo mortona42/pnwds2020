@@ -45,12 +45,31 @@
     }
   }
 
+  .session__slack-link {
+    a {
+      color: $secondary-color;
+      &:after {
+        position: relative;
+        top: 7px;
+        left: 3px;
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url('../images/cascadia-icon-sprite.png');
+        background-position: left -870px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
 }
 
 
 
 .session--teaser {
 
+  overflow: hidden;
   border: solid 1px #CCC;
   padding: 15px;
   margin-bottom: 20px;
@@ -83,6 +102,12 @@
       color: $teal;
     }
 
+  }
+
+  .session__title-- a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
   }
 
   .session__title--code_develop a {
@@ -133,6 +158,9 @@
   }
 
   .session__experience {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
     color: #CCC;
     font-size: 0.8em;
 
@@ -184,6 +212,28 @@
         &:before {
           background-position: left -50px;
         }
+      }
+    }
+  }
+
+  .session__slack-link {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 27px;
+    a {
+      overflow: hidden;
+      display: inline-block;
+      width: 30px;
+      height: 27px;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url('../images/cascadia-icon-sprite.png');
+        background-position: left -870px;
+        background-repeat: no-repeat;
       }
     }
   }

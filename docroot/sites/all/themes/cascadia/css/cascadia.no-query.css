@@ -107,6 +107,9 @@ input[type="submit"] {
   input[type="submit"] {
     margin-right: 10px; }
 
+.field-group-fieldset {
+  margin-bottom: 1em; }
+
 fieldset {
   background-color: transparent;
   border: 0 !important;
@@ -306,6 +309,14 @@ select {
   background-image: url("../images/cascadia-icon-sprite.png");
   background-position: right -450px;
   background-repeat: no-repeat; }
+
+select[multiple] {
+  background-image: none; }
+
+.filter-wrapper .form-item,
+.filter-wrapper .filter-help,
+.filter-wrapper .filter-guidelines {
+  padding: 0; }
 
 .form-item .description, .form-actions .description {
   color: #9A9A9A;
@@ -830,7 +841,9 @@ table.checkout-review .pane-data {
       display: none; }
     .node-session-form .group-schedule,
     .node-session-form .form-actions {
-      clear: both; } }
+      clear: both; }
+    .node-session-form .form-item-field-session-timeslot-und {
+      margin-top: 1em; } }
 
 @media (min-width: 900px) {
   .user-profile-form .form-item-name,
@@ -1565,8 +1578,22 @@ table.checkout-review .pane-data {
     background-repeat: no-repeat; }
   .node-type-session .flag-session-schedule a.flag.unflag-action:after {
     background-position: left -50px; }
+.node-type-session .session__slack-link a {
+  color: #00874b; }
+  .node-type-session .session__slack-link a:after {
+    position: relative;
+    top: 7px;
+    left: 3px;
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    background-image: url("../images/cascadia-icon-sprite.png");
+    background-position: left -870px;
+    background-repeat: no-repeat; }
 
 .session--teaser {
+  overflow: hidden;
   border: solid 1px #CCC;
   padding: 15px;
   margin-bottom: 20px; }
@@ -1593,6 +1620,10 @@ table.checkout-review .pane-data {
         min-height: 78px; } }
     .session--teaser .session__title a {
       color: #00BF90; }
+  .session--teaser .session__title-- a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none; }
   .session--teaser .session__title--code_develop a {
     color: #0077C0; }
   .session--teaser .session__title--devops_performance a {
@@ -1624,6 +1655,9 @@ table.checkout-review .pane-data {
       background-position: left -820px;
       background-repeat: no-repeat; }
   .session--teaser .session__experience {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 30px);
     color: #CCC;
     font-size: 0.8em; }
     .session--teaser .session__experience:before {
@@ -1660,6 +1694,24 @@ table.checkout-review .pane-data {
         background-repeat: no-repeat; }
       .session--teaser .session__attending-flag a.flag.unflag-action:before {
         background-position: left -50px; }
+  .session--teaser .session__slack-link {
+    display: inline-block;
+    float: right;
+    width: 30px;
+    height: 27px; }
+    .session--teaser .session__slack-link a {
+      overflow: hidden;
+      display: inline-block;
+      width: 30px;
+      height: 27px; }
+      .session--teaser .session__slack-link a:before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url("../images/cascadia-icon-sprite.png");
+        background-position: left -870px;
+        background-repeat: no-repeat; }
 
 .session-- .session__attending-flag,
 .session-- .session__speakers,
