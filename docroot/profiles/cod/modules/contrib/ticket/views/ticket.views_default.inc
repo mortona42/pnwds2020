@@ -563,6 +563,11 @@ function ticket_views_default_views() {
     $handler->display->display_options['fields']['redeem_link']['label'] = '';
     $handler->display->display_options['fields']['redeem_link']['element_label_colon'] = FALSE;
   }
+  /* Sort criterion: Ticket registration: Ticket Registration ID */
+  $handler->display->display_options['sorts']['trid']['id'] = 'trid';
+  $handler->display->display_options['sorts']['trid']['table'] = 'ticket_registration';
+  $handler->display->display_options['sorts']['trid']['field'] = 'trid';
+  $handler->display->display_options['sorts']['trid']['order'] = 'DESC';
   /* Contextual filter: Ticket registration: uid */
   $handler->display->display_options['arguments']['author_uid']['id'] = 'author_uid';
   $handler->display->display_options['arguments']['author_uid']['table'] = 'ticket_registration';

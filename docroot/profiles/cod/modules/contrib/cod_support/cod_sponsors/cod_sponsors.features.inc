@@ -44,7 +44,7 @@ function cod_sponsors_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => 280,
+          'width' => 220,
           'height' => '',
           'upscale' => 1,
         ),

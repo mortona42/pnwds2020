@@ -12,10 +12,7 @@ files[] = includes/views/handlers/commerce_coupon_usage_views_handler_field_remo
 files[] = includes/views/commerce_coupon_usage.views.inc
 files[] = includes/commerce_coupon_usage.controller.inc
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2015-12-16
 version = "7.x-2.0-rc2+11-dev"
-core = "7.x"
 project = "commerce_coupon"
-datestamp = "1467529546"
-
+datestamp = "1450306318"

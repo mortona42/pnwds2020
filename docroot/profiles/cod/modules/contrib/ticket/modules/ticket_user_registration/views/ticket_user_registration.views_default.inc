@@ -141,6 +141,11 @@ function ticket_user_registration_views_default_views() {
   $handler->display->display_options['fields']['cancel_registration']['id'] = 'cancel_registration';
   $handler->display->display_options['fields']['cancel_registration']['table'] = 'ticket_registration';
   $handler->display->display_options['fields']['cancel_registration']['field'] = 'cancel_registration';
+  /* Sort criterion: Ticket registration: Ticket Registration ID */
+  $handler->display->display_options['sorts']['trid']['id'] = 'trid';
+  $handler->display->display_options['sorts']['trid']['table'] = 'ticket_registration';
+  $handler->display->display_options['sorts']['trid']['field'] = 'trid';
+  $handler->display->display_options['sorts']['trid']['order'] = 'DESC';
   /* Contextual filter: Ticket registration: User_uid */
   $handler->display->display_options['arguments']['user_uid']['id'] = 'user_uid';
   $handler->display->display_options['arguments']['user_uid']['table'] = 'ticket_registration';

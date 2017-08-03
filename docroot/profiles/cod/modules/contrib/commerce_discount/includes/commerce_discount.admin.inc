@@ -45,7 +45,7 @@ class CommerceDiscountUIController extends EntityDefaultUIController {
   }
 
   /**
-   * Overridden EntityDefaultUIController::hook_menu().
+   * Overriden EntityDefaultUIController::hook_menu().
    *
    * Call our own page callback to show the "commerce_discount_overview"
    * view, as this view has exposed filters which will not work inside
@@ -127,7 +127,7 @@ function commerce_discount_overview_form() {
  * @param array $form_state
  *   Standard Drupal $form_state.
  * @param CommerceDiscount $commerce_discount
- *   Commerce discount object.
+ *   Comment me.
  * @param string $op
  *   Current operation.
  *
@@ -382,7 +382,7 @@ function commerce_discount_form_submit_delete(&$form, &$form_state) {
  * @param string $value
  *   The machine name, not prefixed with 'discount_'.
  *
- * @return object|bool
+ * @return entity|bool
  *   Whether or not the field machine name is taken.
  */
 function _commerce_discount_name_exists($value) {
@@ -424,7 +424,18 @@ function commerce_discount_form_pre_render($fields) {
 }
 
 /**
- * Implements hook_date_combo_process_alter().
+ * Implements function hook_date_combo_process_alter().
+ *
+ * @param $element
+ *   The date field.
+ * @param $form_state
+ *   A keyed array containing the current state of the form. In this
+ *   context, it is used to accumulate information about which button
+ *   was clicked when the form was submitted, as well as the sanitized
+ *   $_POST data.
+ *
+ * @return
+ *   The altered date field.
  */
 function commerce_discount_date_combo_process_alter(&$element, &$form_state, $context) {
   if ($element['#field_name'] == 'commerce_discount_date') {
@@ -449,8 +460,7 @@ function commerce_discount_date_combo_process_alter(&$element, &$form_state, $co
  */
 function commerce_discount_date_popup_process_alter(&$element, &$form_state, $context) {
   if ($element['#field']['field_name'] == 'commerce_discount_date') {
-    // Date-clear.
-    unset($element['#attributes']['class']);
+    unset($element['#attributes']['class']); // date-clear.
     array_shift($element['#wrapper_attributes']['class']);
     // Reset the titles and descriptions of the start and end date fields.
     $field_name = end($element['#parents']);

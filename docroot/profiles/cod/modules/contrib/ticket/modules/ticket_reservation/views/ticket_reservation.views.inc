@@ -16,7 +16,10 @@ function ticket_reservation_views_data_alter(&$data) {
       'handler' => 'ticket_reservation_views_handler_field_registration_link_cancel',
     ),
   );
-  $data['ticket_registration']['state']['field']['handler'] = 'ticket_reservation_handler_field_ticket_state';
+  // Only alter if it hasn't been altered yet.
+  if ($data['ticket_registration']['state']['field']['handler'] == 'ticket_state_handler_field_ticket_state') {
+    $data['ticket_registration']['state']['field']['handler'] = 'ticket_reservation_handler_field_ticket_state';
+  }
   return $data;
 
 }

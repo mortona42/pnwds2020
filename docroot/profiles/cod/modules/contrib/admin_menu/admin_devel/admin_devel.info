@@ -4,10 +4,7 @@ package = Administration
 core = 7.x
 scripts[] = admin_devel.js
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2015-03-20
 version = "7.x-3.0-rc5+3-dev"
-core = "7.x"
 project = "admin_menu"
-datestamp = "1467529576"
-
+datestamp = "1426875185"

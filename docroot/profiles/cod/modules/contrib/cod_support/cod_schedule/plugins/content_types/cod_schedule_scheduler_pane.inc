@@ -27,7 +27,7 @@ function cod_schedule_schedule_admin_page($conference, $day) {
 
   // Grab the days.
   //$days = cod_schedule_days($conference);
-  if (empty($day)) {
+  if (empty($day) || empty($conference->field_dates)) {
     return t('Your event must have a <a href="@edit">start and end date</a>. <a href="@edit">Edit</a> event.', array('@edit' => url('node/'.$conference->nid.'/edit', array('fragment' => 'edit-field-dates', 'query' => array('destination' => 'admin/conference/' . $conference->nid . '/schedule')))));
   }
 

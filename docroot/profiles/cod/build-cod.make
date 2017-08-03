@@ -1,6 +1,6 @@
 api = 2
 core = 7.x
-projects[drupal][version] = 7.44
+projects[drupal][version] = 7.56
 
 includes[] = drupal-org-core.make
 

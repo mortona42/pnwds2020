@@ -4,10 +4,7 @@ package = Rules
 core = 7.x
 dependencies[] = rules
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2015-01-15
 version = "7.x-1.0-alpha5+0-dev"
-core = "7.x"
 project = "inline_conditions"
-datestamp = "1467529505"
-
+datestamp = "1421306274"

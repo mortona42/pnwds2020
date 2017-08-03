@@ -28,16 +28,22 @@ function cod_schedule_sessions_admin_page($node) {
   $content = array();
   $content['type_selector'] = array(
     '#type' => 'select',
-    '#options' => array(
-      'session' => t('Session'),
-      'bof_session' => t('BoF Session'),
-      'schedule_item' => t('Schedule Item'),
-    ),
     '#attributes' => array(
       'id' => 'schedule-items-type-select',
     ),
-    '#default_value' => 'session',
   );
+  // TODO: In drupal8 we'll not do something bad like this
+  if (module_exists('cod_session')) {
+    $content['type_selector']['#options']['session'] = t('Session');
+    $content['type_selector']['#options']['schedule_item'] = t('Schedule Item');
+    $content['type_selector']['#default_value'] = 'session';
+  }
+  if (module_exists('cod_bof')) {
+    $content['type_selector']['#options']['bof_session'] = t('BoF Session');
+  }
+  if (module_exists('cod_training')) {
+    $content['type_selector']['#options']['training'] = t('Training');
+  }
 
   $content['add_new'] = array(
     '#type' => 'button',

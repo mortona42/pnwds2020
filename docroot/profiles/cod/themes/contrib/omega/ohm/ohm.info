@@ -81,10 +81,9 @@ settings[omega_demo_regions_list][sidebar_first] = sidebar_first
 settings[omega_demo_regions_list][sidebar_second] = sidebar_second
 settings[omega_demo_regions_list][footer] = footer
 
-
-; Information added by drush on 2016-07-03
-version = "7.x-4.3+2-dev"
+; Information added by Drupal.org packaging script on 2014-10-20
+version = "7.x-4.3"
 core = "7.x"
 project = "omega"
-datestamp = "1467529447"
+datestamp = "1413819533"
 

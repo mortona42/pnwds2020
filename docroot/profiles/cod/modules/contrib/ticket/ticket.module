@@ -134,6 +134,7 @@ function ticket_entity_info() {
       'menu wildcard' => '%ticket_registration',
     ),
     'entity cache' => module_exists('entitycache'),
+    'token type' => 'ticket_registration',
   );
 
   return $entities;

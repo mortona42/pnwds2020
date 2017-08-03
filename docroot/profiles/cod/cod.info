@@ -107,9 +107,9 @@ files[] = cod.profile
 ; System Requirements.
 php_memory_limit = 128M
 
-; Information added by Drupal.org packaging script on 2016-07-03
-version = "7.x-2.0-beta2"
+; Information added by Drupal.org packaging script on 2017-07-31
+version = "7.x-2.0-rc2"
 core = "7.x"
 project = "cod"
-datestamp = "1467529434"
+datestamp = "1501517089"
 

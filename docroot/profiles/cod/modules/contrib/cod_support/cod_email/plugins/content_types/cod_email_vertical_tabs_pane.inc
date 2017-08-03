@@ -3,7 +3,7 @@
  * This plugin array is more or less self documenting
  */
 $plugin = array(
-  'title' => t('Vertical Tabs'),
+  'title' => t('E-mail Vertical Tabs'),
   'single' => TRUE,
   'category' => array(t('Conference Organizing'), -9),
   'render callback' => 'cod_email_vertical_tabs_pane_render'

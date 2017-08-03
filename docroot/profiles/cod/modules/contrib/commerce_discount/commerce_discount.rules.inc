@@ -122,7 +122,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Order'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_order_compare_order_amount']['callbacks']['build'],
       ),
@@ -144,7 +144,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Order'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_order_has_owner']['callbacks']['build'],
       ),
@@ -159,22 +159,26 @@ function commerce_discount_rules_condition_info() {
           'description' => t('The order.'),
           'wrapped' => TRUE,
         ),
+        'operator' => array(
+          'type' => 'text',
+          'label' => t('Operator'),
+          'description' => t('The operator used with the SKUs below.'),
+          'default value' => 'all',
+          'options list' => array(
+            'any' => t('any products'),
+            'all' => t('all products'),
+            'exactly' => t('exclusively all products'),
+            'only' => t('exclusively any products'),
+          ),
+        ),
         'products' => array(
           'type' => 'text',
           'label' => t('Product SKU(s)'),
           'description' => t('Products SKU to look for on the order. Enter a comma-separated list of product SKU(s).'),
         ),
-        'operator' => array(
-          'type' => 'text',
-          'label' => t('Operator'),
-          'description' => t('The comparison type used with the SKUs above.'),
-          'default value' => 'any',
-          'options list' => '_commerce_discount_rules_product_match_options',
-          'optional' => TRUE,
-        ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Order'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_order_contains_products']['callbacks']['build'],
       ),
@@ -208,7 +212,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Order'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_order_has_specific_quantity_products']['callbacks']['build'],
       ),
@@ -232,7 +236,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Line Item'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_product_contains_products']['callbacks']['build'],
       ),
@@ -254,7 +258,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Line Item'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_product_has_type']['callbacks']['build'],
       ),
@@ -278,7 +282,7 @@ function commerce_discount_rules_condition_info() {
         ),
       ),
       'module' => 'commerce_discount',
-      'group' => t('Commerce Discount'),
+      'group' => t('Commerce Line Item'),
       'callbacks' => array(
         'execute' => $inline_conditions['commerce_product_has_specified_terms']['callbacks']['build'],
       ),
@@ -297,7 +301,7 @@ function commerce_discount_rules_condition_info() {
         'label' => t('Line item'),
       ),
     ),
-    'group' => t('Commerce Discount'),
+    'group' => t('Commerce Line Item'),
   );
 
   return $conditions;
@@ -426,13 +430,10 @@ function commerce_discount_rules_event_info() {
 /**
  * Rules callback: executes the "Check discount compatibility" condition.
  *
- * @param EntityDrupalWrapper $order_wrapper
+ * @param \EntityDrupalWrapper $order_wrapper
  *   The order the discount would be applied to.
  * @param string $discount_name
  *   The discount name whose compatibility needs to be checked.
- *
- * @return bool
- *   Returns TRUE if nothing has disqualified compatibility.
  */
 function commerce_discount_compatibility_check(EntityDrupalWrapper $order_wrapper, $discount_name) {
   // Ensure the discount we're loading still exists.
@@ -485,7 +486,7 @@ function commerce_discount_compatibility_check(EntityDrupalWrapper $order_wrappe
     return FALSE;
   }
 
-  // Get the selected discount value from the discount being evaluated.
+  // Get the selected discount value from the disocunt being evaluated.
   $selection = commerce_discount_get_compatibility_selection($discount);
 
   // If the discount is not compatible with selected discounts, ensure they
@@ -546,7 +547,7 @@ function commerce_order_compare_order_amount_options_default() {
 function commerce_order_compare_order_amount_build(EntityDrupalWrapper $wrapper, $operator, $total, $line_item_types) {
   $total_order = 0;
 
-  // Ensure the discount currency code is the same as the order.
+  // Ensure the discount currency code is the same than the order.
   if ($wrapper->commerce_order_total->currency_code->value() != $total['currency_code']) {
     return FALSE;
   }
@@ -559,7 +560,7 @@ function commerce_order_compare_order_amount_build(EntityDrupalWrapper $wrapper,
 
   // Get given total order amount.
   foreach ($wrapper->commerce_line_items as $line_item_wrapper) {
-    if (in_array($line_item_wrapper->getBundle(), $line_item_types, TRUE)) {
+    if (in_array($line_item_wrapper->getBundle(), $line_item_types)) {
       // Convert the line item's total to the order's currency for totalling.
       $component_total = commerce_price_component_total($line_item_wrapper->commerce_total->value());
 
@@ -620,13 +621,11 @@ function commerce_order_has_owner_build(EntityDrupalWrapper $wrapper, $account) 
  *   The wrapped entity given by the rule.
  * @param string $products
  *   A list of products SKU.
- * @param string $operator
- *   An optional operator for comparison. The default is 'any'.
  *
  * @return bool
  *   Returns True if condition is valid. False otherwise.
  */
-function commerce_order_contains_products_build(EntityDrupalWrapper $wrapper, $products, $operator = 'any') {
+function commerce_order_contains_products_build(EntityDrupalWrapper $wrapper, $operator, $products) {
   // Split by comma. Allow some grace for spaces.
   $products_sku = explode(', ', (string) $products);
   $order_skus = array();
@@ -846,9 +845,6 @@ function commerce_discount_fixed_amount(EntityDrupalWrapper $wrapper, $discount_
   $discount_price = $discount_wrapper->commerce_discount_offer->commerce_fixed_amount->value();
   $discount_price['amount'] = -$discount_price['amount'];
 
-  // Get the line item types to apply the discount to.
-  $line_item_types = variable_get('commerce_discount_line_item_types', array_diff(commerce_product_line_item_types(), array('product_discount')));
-
   switch ($wrapper->type()) {
     case 'commerce_order':
 
@@ -881,12 +877,6 @@ function commerce_discount_fixed_amount(EntityDrupalWrapper $wrapper, $discount_
       break;
 
     case 'commerce_line_item':
-      // Check if the line item is configured in the settings to apply the
-      // discount.
-      if (!in_array($wrapper->getBundle(), $line_item_types)) {
-        return;
-      }
-
       // Check whether this discount was already added as a price component.
       $unit_price = commerce_price_wrapper_value($wrapper, 'commerce_unit_price', TRUE);
       foreach ($unit_price['data']['components'] as $component) {
@@ -914,8 +904,6 @@ function commerce_discount_percentage(EntityDrupalWrapper $wrapper, $discount_na
   $rate = $discount_wrapper->commerce_discount_offer->commerce_percentage->value() / 100;
   // Get the line item types to apply the discount to.
   $line_item_types = variable_get('commerce_discount_line_item_types', array_diff(commerce_product_line_item_types(), array('product_discount')));
-  // Filter out 0 values in the variable.
-  $line_item_types = array_filter($line_item_types);
 
   switch ($wrapper->type()) {
     case 'commerce_order':
@@ -935,10 +923,7 @@ function commerce_discount_percentage(EntityDrupalWrapper $wrapper, $discount_na
       $calculated_discount = 0;
       // Loop the line items of the order and calculate the total discount.
       foreach ($wrapper->commerce_line_items as $line_item_wrapper) {
-        // Check if the line item is configured in the discount settings to
-        // apply the discount.
-        $line_item_type = $line_item_wrapper->getBundle();
-        if (in_array($line_item_type, $line_item_types, TRUE)) {
+        if (in_array($line_item_wrapper->type->value(), $line_item_types)) {
           $line_item_total = commerce_price_wrapper_value($line_item_wrapper, 'commerce_total', TRUE);
           $calculated_discount += $line_item_total['amount'] * $rate;
         }
@@ -962,10 +947,9 @@ function commerce_discount_percentage(EntityDrupalWrapper $wrapper, $discount_na
       break;
 
     case 'commerce_line_item':
-      // Check if the line item is configured in the discount settings to apply
-      // the discount.
-      $line_item_type = $wrapper->getBundle();
-      if (!in_array($line_item_type, $line_item_types, TRUE)) {
+      // Check if the line item is configured in the settings to apply the
+      // discount.
+      if (!in_array($wrapper->getBundle(), $line_item_types)) {
         return;
       }
 
@@ -1109,7 +1093,7 @@ function commerce_discount_percent_off_shipping_service($order, $discount_name) 
   // Get the discount component title for later usage.
   $discount_label = check_plain($discount_wrapper->component_title->value());
 
-  // Determine the discount multiplier based on submitted value.
+  // Determine the discount multiplifer based on submitted value.
   $discount_value = $discount_wrapper->commerce_discount_offer->commerce_percent_off_shipping->value();
   if ($discount_value > 1 && $discount_value <= 100) {
     $discount_multiplier = (100 - $discount_value) / 100;
@@ -1120,12 +1104,6 @@ function commerce_discount_percent_off_shipping_service($order, $discount_name) 
 
   // Determine whether to affect a singular service, or all services.
   if (isset($shipping_service_to_discount)) {
-    // Check if the order contains the shipping rate we want to apply a discount
-    // against. Not all shipping rates apply to all orders.
-    if (!isset($order->shipping_rates[$shipping_service_to_discount])) {
-      return;
-    }
-
     // Add singular shipping service to $conf global array.
     $order->shipping_rates[$shipping_service_to_discount]->data['shipping_service']['description'] .= ' <span class="shipping-discount-text">' . $discount_label . '</span>';
 
@@ -1137,7 +1115,7 @@ function commerce_discount_percent_off_shipping_service($order, $discount_name) 
 
     // The following applies the shipping discount to the line item.
     $shipping_line_item_wrapper->commerce_unit_price->amount = $discounted_shipping_value;
-    $shipping_service = commerce_shipping_service_load($shipping_service_to_discount);
+    $shipping_service = commerce_shipping_service_load($discount_name);
 
     // Updating the data component. Effectively updates line item price!
     $shipping_line_item_wrapper->commerce_unit_price->data = array();
@@ -1163,7 +1141,7 @@ function commerce_discount_percent_off_shipping_service($order, $discount_name) 
       // The following applies the shipping discount to the line item.
       $shipping_line_item_wrapper->commerce_unit_price->amount = $discounted_shipping_value;
 
-      $shipping_service = commerce_shipping_service_load($shipping_service_to_discount);
+      $shipping_service = commerce_shipping_service_load($discount_name);
 
       // Updating the data component. Effectively updates line item price!
       $shipping_line_item_wrapper->commerce_unit_price->data = array();
@@ -1360,25 +1338,25 @@ function commerce_discount_free_products(EntityDrupalWrapper $wrapper, $discount
  * @param array $data
  *   Optional. An associative array of parameters to include in the line item's
  *   data array along with the discount name.
- *
- * @return object
- *   The newly created discount line item.
  */
 function commerce_discount_add_line_item(EntityDrupalWrapper $order_wrapper, $discount_name, $discount_amount, $data = array()) {
   // Create a new line item.
-  $discount_line_item = commerce_line_item_new('commerce_discount', $order_wrapper->getIdentifier());
-  $discount_line_item->data = array('discount_name' => $discount_name) + $data;
-
-  // Setting the bundle to ensure the entity metadata stores it correctly.
-  $info = array('bundle' => 'commerce_discount');
-  $discount_line_item_wrapper = entity_metadata_wrapper('commerce_line_item', $discount_line_item, $info);
+  $values = array(
+    'type' => 'commerce_discount',
+    'order_id' => $order_wrapper->order_id->value(),
+    'quantity' => 1,
+    // Flag the line item.
+    'data' => array('discount_name' => $discount_name) + $data,
+  );
+  $discount_line_item = entity_create('commerce_line_item', $values);
+  $discount_line_item_wrapper = entity_metadata_wrapper('commerce_line_item', $discount_line_item);
 
   // Initialize the line item unit price.
   $discount_line_item_wrapper->commerce_unit_price->amount = 0;
   $discount_line_item_wrapper->commerce_unit_price->currency_code = $discount_amount['currency_code'];
 
-  // Reset the data array of the line item total field to only include a base
-  // price component and set the currency code from the order.
+  // Reset the data array of the line item total field to only include a
+  // base price component, set the currency code from the order.
   $base_price = array(
     'amount' => 0,
     'currency_code' => $discount_amount['currency_code'],
@@ -1389,12 +1367,9 @@ function commerce_discount_add_line_item(EntityDrupalWrapper $order_wrapper, $di
   // Add the discount price component.
   commerce_discount_add_price_component($discount_line_item_wrapper, $discount_name, $discount_amount);
 
-  // Save the incoming line item now so we get its ID and add it to the oder's
-  // line item reference field value.
-  commerce_line_item_save($discount_line_item);
-  $order_wrapper->commerce_line_items[] = $discount_line_item;
-
-  return $discount_line_item;
+  // Save the line item and add it to the order.
+  $discount_line_item_wrapper->save();
+  $order_wrapper->commerce_line_items[] = $discount_line_item_wrapper;
 }
 
 /**
@@ -1434,7 +1409,6 @@ function commerce_discount_add_price_component(EntityDrupalWrapper $line_item_wr
 
   // Set the new unit price.
   $line_item_wrapper->commerce_unit_price->amount = $updated_amount;
-
   // Add the discount amount as a price component.
   $unit_price = commerce_price_wrapper_value($line_item_wrapper, 'commerce_unit_price', TRUE);
   $type = empty($component_title) ? 'discount' : check_plain('discount|' . $discount_name);
@@ -1442,21 +1416,6 @@ function commerce_discount_add_price_component(EntityDrupalWrapper $line_item_wr
 
   // Update the line item total.
   _commerce_discount_update_commerce_total($line_item_wrapper);
-}
-
-/**
- * Rules options list callback for product match options.
- *
- * @return array
- *   Rules option list.
- */
-function _commerce_discount_rules_product_match_options() {
-  return array(
-    'any' => t('any products'),
-    'all' => t('all products'),
-    'exactly' => t('exclusively all products'),
-    'only' => t('exclusively any products'),
-  );
 }
 
 /**
@@ -1527,9 +1486,8 @@ function _commerce_discount_update_commerce_total($line_item_wrapper) {
 }
 
 /**
- * Updates the unit price of the discount line item matching the named discount.
+ * Updates the unit price of an existing discount line item.
  *
- * Will be updated only first discount line item.
  * Non-discount line items are ignored.
  *
  * @param EntityDrupalWrapper $order_wrapper
@@ -1539,28 +1497,25 @@ function _commerce_discount_update_commerce_total($line_item_wrapper) {
  * @param array $discount_price
  *   The discount amount price array (amount, currency_code).
  *
- * @return object|bool
- *   The modified line item or FALSE if not found.
+ * @return bool
+ *   TRUE if an existing line item was successfully modified, FALSE otherwise.
  */
 function commerce_discount_set_existing_line_item_price(EntityDrupalWrapper $order_wrapper, $discount_name, $discount_price) {
-  $modified_line_item = FALSE;
-
+  $modified_existing = FALSE;
   foreach ($order_wrapper->commerce_line_items as $line_item_wrapper) {
     if ($line_item_wrapper->getBundle() == 'commerce_discount') {
       // Add the discount component price if the line item was originally
       // added by discount module.
       $line_item = $line_item_wrapper->value();
-
       if (isset($line_item->data['discount_name']) && $line_item->data['discount_name'] == $discount_name) {
         commerce_discount_set_price_component($line_item_wrapper, $discount_name, $discount_price);
         $line_item_wrapper->save();
-        $modified_line_item = $line_item;
-        break;
+        $modified_existing = TRUE;
       }
     }
   }
 
-  return $modified_line_item;
+  return $modified_existing;
 }
 
 /**
@@ -1618,15 +1573,5 @@ function commerce_discount_date_condition($discount_name) {
   $wrapper = entity_metadata_wrapper('commerce_discount', $discount_name);
   $time = time();
 
-  $start_date = new DateTime();
-  $start_date->setTimestamp($wrapper->commerce_discount_date->value->value());
-  $start_date->setTime(0, 0, 0);
-  $start_date_timestamp = $start_date->getTimestamp();
-
-  $end_date = new DateTime();
-  $end_date->setTimestamp($wrapper->commerce_discount_date->value2->value());
-  $end_date->setTime(24, 0, 0);
-  $end_date_timestamp = $end_date->getTimestamp();
-
-  return $time >= $start_date_timestamp && $time <= $end_date_timestamp;
+  return $time >= $wrapper->commerce_discount_date->value->value() && $time <= $wrapper->commerce_discount_date->value2->value();
 }

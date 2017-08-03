@@ -121,6 +121,12 @@ function cod_commerce_install() {
   og_invalidate_cache();
   entity_property_info_cache_clear();
 
+  //Enable the commerce payment example module if no payment methods have been enabled.
+  if (empty(commerce_payment_methods())) {
+    module_enable(array('commerce_payment_example'));
+  }
+
+
   if (!empty($instances_to_update)) {
     // Reset the schema version, so our update hooks can be processed after installation.
     drupal_set_installed_schema_version('cod_commerce', '7001');

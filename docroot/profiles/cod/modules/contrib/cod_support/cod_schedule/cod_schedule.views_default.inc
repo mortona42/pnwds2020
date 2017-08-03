@@ -225,7 +225,7 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Nothing for this time.';
-  $handler->display->display_options['empty']['area']['format'] = 'wiki_filter';
+  $handler->display->display_options['empty']['area']['format'] = 'plain_text';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['id'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';
@@ -472,10 +472,8 @@ function cod_schedule_views_default_views() {
 
   /* Display: Session schedule pane */
   $handler = $view->new_display('panel_pane', 'Session schedule pane', 'cod_schedule_session_content_pane');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'schedule';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_evttime_date',
@@ -483,46 +481,12 @@ function cod_schedule_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['row_class'] = 'session session--teaser session--[machine_name]';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['class'] = 'schedule__timeslot-sessions';
-  $handler->display->display_options['style_options']['wrapper_class'] = 'schedule__timeslot';
+  $handler->display->display_options['style_options']['row_class'] = '[name_2] [type]';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_session_timeslot_target_id']['id'] = 'field_session_timeslot_target_id';
-  $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';
-  $handler->display->display_options['relationships']['field_session_timeslot_target_id']['field'] = 'field_session_timeslot_target_id';
-  $handler->display->display_options['relationships']['field_session_timeslot_target_id']['label'] = 'Timeslots';
-  $handler->display->display_options['relationships']['field_session_timeslot_target_id']['required'] = TRUE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['id'] = 'field_timeslot_room_target_id';
-  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['table'] = 'field_data_field_timeslot_room';
-  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['field'] = 'field_timeslot_room_target_id';
-  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['relationship'] = 'field_session_timeslot_target_id';
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['id'] = 'field_timeslot_time_target_id';
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['table'] = 'field_data_field_timeslot_time';
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['field'] = 'field_timeslot_time_target_id';
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['relationship'] = 'field_session_timeslot_target_id';
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['label'] = 'Time entity';
-  $handler->display->display_options['relationships']['field_timeslot_time_target_id']['required'] = TRUE;
-  /* Relationship: Flags: session_schedule */
-  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'Session attending flag';
-  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'session_schedule';
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['og_vocabulary_target_id']['id'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['relationships']['og_vocabulary_target_id']['table'] = 'field_data_og_vocabulary';
-  $handler->display->display_options['relationships']['og_vocabulary_target_id']['field'] = 'og_vocabulary_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Time: Date and time */
   $handler->display->display_options['fields']['field_evttime_date']['id'] = 'field_evttime_date';
@@ -540,51 +504,6 @@ function cod_schedule_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Room: Label */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'cod_event_room';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'field_timeslot_room_target_id';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['element_type'] = 'div';
-  $handler->display->display_options['fields']['name']['element_class'] = 'session__room';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
-  /* Field: Taxonomy term: Machine name */
-  $handler->display->display_options['fields']['machine_name']['id'] = 'machine_name';
-  $handler->display->display_options['fields']['machine_name']['table'] = 'views_entity_taxonomy_term';
-  $handler->display->display_options['fields']['machine_name']['field'] = 'machine_name';
-  $handler->display->display_options['fields']['machine_name']['relationship'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['fields']['machine_name']['label'] = '';
-  $handler->display->display_options['fields']['machine_name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['machine_name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['machine_name']['link_to_entity'] = 0;
-  /* Field: Flags: Flag link */
-  $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
-  $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
-  $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
-  $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel';
-  $handler->display->display_options['fields']['ops_1']['label'] = '';
-  $handler->display->display_options['fields']['ops_1']['element_type'] = 'div';
-  $handler->display->display_options['fields']['ops_1']['element_class'] = 'session__attending-flag';
-  $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['ops_1']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['ops_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['ops_1']['link_type'] = 'toggle';
-  /* Field: Content: Session Track */
-  $handler->display->display_options['fields']['og_vocabulary']['id'] = 'og_vocabulary';
-  $handler->display->display_options['fields']['og_vocabulary']['table'] = 'field_data_og_vocabulary';
-  $handler->display->display_options['fields']['og_vocabulary']['field'] = 'og_vocabulary';
-  $handler->display->display_options['fields']['og_vocabulary']['label'] = '';
-  $handler->display->display_options['fields']['og_vocabulary']['element_type'] = 'div';
-  $handler->display->display_options['fields']['og_vocabulary']['element_class'] = 'session__track';
-  $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['og_vocabulary']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['og_vocabulary']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
-    'link' => 0,
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -592,25 +511,31 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'div';
-  $handler->display->display_options['fields']['title']['element_class'] = 'session__title session__title--[machine_name]';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Room: Label */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'cod_event_room';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'field_timeslot_room_target_id';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Field: Content: Speaker(s) */
   $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
   $handler->display->display_options['fields']['field_speakers']['table'] = 'field_data_field_speakers';
   $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
   $handler->display->display_options['fields']['field_speakers']['label'] = '';
-  $handler->display->display_options['fields']['field_speakers']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_speakers']['element_class'] = 'session__speakers';
   $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_speakers']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_speakers']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_speakers']['settings'] = array(
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_speakers']['delta_offset'] = '0';
+  /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = '';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['ops']['link_type'] = 'toggle';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name_2']['id'] = 'name_2';
   $handler->display->display_options['fields']['name_2']['table'] = 'taxonomy_term_data';
@@ -629,25 +554,6 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['fields']['type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['type']['machine_name'] = TRUE;
-  /* Field: Content: Experience level */
-  $handler->display->display_options['fields']['field_experience']['id'] = 'field_experience';
-  $handler->display->display_options['fields']['field_experience']['table'] = 'field_data_field_experience';
-  $handler->display->display_options['fields']['field_experience']['field'] = 'field_experience';
-  $handler->display->display_options['fields']['field_experience']['label'] = '';
-  $handler->display->display_options['fields']['field_experience']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_experience']['alter']['text'] = '<div class="session__experience session__experience--[field_experience-value]">[field_experience] </div>';
-  $handler->display->display_options['fields']['field_experience']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_experience']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_experience']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_experience']['element_default_classes'] = FALSE;
-  /* Field: Content: Slack link */
-  $handler->display->display_options['fields']['field_slack_link']['id'] = 'field_slack_link';
-  $handler->display->display_options['fields']['field_slack_link']['table'] = 'field_data_field_slack_link';
-  $handler->display->display_options['fields']['field_slack_link']['field'] = 'field_slack_link';
-  $handler->display->display_options['fields']['field_slack_link']['label'] = '';
-  $handler->display->display_options['fields']['field_slack_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slack_link']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_slack_link']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Time: Date and time -  start date (field_evttime_date) */
   $handler->display->display_options['sorts']['field_evttime_date_value']['id'] = 'field_evttime_date_value';
@@ -690,45 +596,6 @@ function cod_schedule_views_default_views() {
   $handler->display->display_options['arguments']['field_evttime_date_value']['granularity'] = 'day';
   $handler->display->display_options['arguments']['field_evttime_date_value']['granularity_reset'] = 0;
   $handler->display->display_options['arguments']['field_evttime_date_value']['timezone'] = 'America/Los_Angeles';
-  /* Contextual filter: Taxonomy term: Machine name */
-  $handler->display->display_options['arguments']['machine_name']['id'] = 'machine_name';
-  $handler->display->display_options['arguments']['machine_name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['arguments']['machine_name']['field'] = 'machine_name';
-  $handler->display->display_options['arguments']['machine_name']['relationship'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['arguments']['machine_name']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['machine_name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['machine_name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['machine_name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['machine_name']['limit'] = '0';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Session Track (og_vocabulary) */
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['id'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['table'] = 'field_data_og_vocabulary';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['field'] = 'og_vocabulary_target_id';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['expose']['operator_id'] = 'og_vocabulary_target_id_op';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['expose']['label'] = 'Session Track';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['expose']['operator'] = 'og_vocabulary_target_id_op';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['expose']['identifier'] = 'track_id';
-  $handler->display->display_options['filters']['og_vocabulary_target_id']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    16 => 0,
-    11 => 0,
-    26 => 0,
-    31 => 0,
-    41 => 0,
-    36 => 0,
-    21 => 0,
-  );
   $handler->display->display_options['argument_input'] = array(
     'field_timeslot_allowed_types_value' => array(
       'type' => 'fixed',
@@ -843,6 +710,56 @@ function cod_schedule_views_default_views() {
       'skip_confirmation' => 1,
       'override_label' => 1,
       'label' => 'Remove Timeslot',
+    ),
+    'action::views_bulk_operations_delete_revision' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_script_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          '_all_' => '_all_',
+        ),
+      ),
+    ),
+    'action::views_bulk_operations_argument_selector_action' => array(
+      'selected' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'url' => '',
+      ),
+    ),
+    'action::system_send_email_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::panelizer_set_status_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
     ),
   );
   /* Field: Field collection item: Field collection item ID */

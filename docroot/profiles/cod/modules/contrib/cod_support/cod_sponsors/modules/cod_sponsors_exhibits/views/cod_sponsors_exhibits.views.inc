@@ -75,8 +75,11 @@ function cod_sponsors_exhibits_views_default_views_alter(&$views) {
     $handler->display->display_options['style_options']['columns']['field_sponsor_booth_number'] = 'field_sponsor_booth_number';
 
     // Set the fields
-    if (is_array($handler->display->display_options['fields'])) {
+    if (isset($handler->display->display_options['fields']) && is_array($handler->display->display_options['fields'])) {
       $handler->display->display_options['fields'] = array_merge($fields, $handler->display->display_options['fields']);
+    }
+    else if (!empty($fields)) {
+      $handler->display->display_options['fields'] = $fields;
     }
   }
 }

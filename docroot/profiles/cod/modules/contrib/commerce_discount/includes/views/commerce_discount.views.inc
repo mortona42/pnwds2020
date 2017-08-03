@@ -83,6 +83,11 @@ function commerce_discount_views_data_alter(&$data) {
     );
   }
 
+  // Custom Discount Offer Type handler
+  if (isset($data['commerce_discount_offer'])) {
+    $data['commerce_discount_offer']['type']['field']['handler'] = 'commerce_discount_handler_field_type';
+  }
+
   // Order table: discount usage relationship.
   if (isset($data['commerce_order'])) {
     $data['commerce_order']['discount_usage'] = array(

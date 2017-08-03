@@ -5,10 +5,7 @@ dependencies[] = ctools
 dependencies[] = update
 configure = admin/reports/updates/settings
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2015-05-19
 version = "7.x-1.0-beta4+2-dev"
-core = "7.x"
 project = "distro_update"
-datestamp = "1467529527"
-
+datestamp = "1432004501"

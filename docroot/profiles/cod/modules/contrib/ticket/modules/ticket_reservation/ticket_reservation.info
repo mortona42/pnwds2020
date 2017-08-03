@@ -18,10 +18,7 @@ files[] = views/ticket_reservation_views_handler_field_registration_link_redeem.
 files[] = views/ticket_reservation_views_handler_field_reservation_code.inc
 
 
-
-; Information added by drush on 2016-07-03
-version = "7.x-1.0-beta4+57-dev"
-core = "7.x"
+; Information added by drush on 2017-02-05
+version = "7.x-1.0-beta4+59-dev"
 project = "ticket"
-datestamp = "1467529474"
-
+datestamp = "1486311027"

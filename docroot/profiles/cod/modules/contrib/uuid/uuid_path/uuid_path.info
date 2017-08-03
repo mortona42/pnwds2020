@@ -5,10 +5,7 @@ package = UUID
 dependencies[] = uuid
 
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2013-07-07
 version = "7.x-1.0-alpha5+0-dev"
-core = "7.x"
 project = "uuid"
-datestamp = "1467529466"
-
+datestamp = "1373181948"

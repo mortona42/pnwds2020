@@ -4,10 +4,7 @@ core = 7.x
 
 dependencies[] = commerce_coupon
 dependencies[] = date_popup
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2015-12-16
 version = "7.x-2.0-rc2+11-dev"
-core = "7.x"
 project = "commerce_coupon"
-datestamp = "1467529546"
-
+datestamp = "1450306318"

@@ -15,6 +15,14 @@ function cod_session_evaluations_ctools_plugin_directory($module, $plugin) {
   }
 }
 
+function cod_session_evaluations_node_access($node, $op, $account) {
+  if (isset($node->type) && $node->type == 'session_evaluation' && $op == 'view') {
+    if (!user_access('administer content', $account)) {
+      return NODE_ACCESS_DENY;
+    }
+  }
+}
+
 /**
 * Implements hook_form_alter().
 */
@@ -47,15 +55,18 @@ function cod_session_evaluations_node_view($node, $view_mode, $langcode) {
   $account = $user;
   $bundle = $node->type;
 
+  $session_wrapper = entity_metadata_wrapper('node', $node);
+
   //lets check first that the session was accepted AND its the event has started
-  if (!isset($node->field_session_timeslot['und'][0]['entity'])) {
+  $timeslot = $session_wrapper->field_session_timeslot->value();
+  if (empty($timeslot[0])) {
     return;
   }
-  if ($timeslot = $node->field_session_timeslot['und'][0]['entity']) {
-    if (!empty($timeslot->field_timeslot_time[LANGUAGE_NONE][0]['target_id'])) {
-      $time_slot = entity_load_single('cod_event_time', $timeslot->field_timeslot_time[LANGUAGE_NONE][0]['target_id']);
-    }
+
+  if (!empty($timeslot[0]->field_timeslot_time[LANGUAGE_NONE][0]['target_id'])) {
+    $time_slot = entity_load_single('cod_event_time', $timeslot[0]->field_timeslot_time[LANGUAGE_NONE][0]['target_id']);
   }
+
   //how could you evaluate a presentation if it wasn't ever scheduled?
   if(empty($time_slot)) {
     return;
@@ -64,8 +75,10 @@ function cod_session_evaluations_node_view($node, $view_mode, $langcode) {
   //How could you evaluate a presentation if it never was accepted OR it hasn't occurred yet?
   //Need to first set the time based on the site (default timezone) THEN reset
   //it to the timezone of the conference.
-  if (isset($node->og_group_ref[LANGUAGE_NONE][0]['target_id']) && is_numeric($node->og_group_ref[LANGUAGE_NONE][0]['target_id'])) {
-    $conference = node_load($node->og_group_ref[LANGUAGE_NONE][0]['target_id']);
+  $conferences = $session_wrapper->og_group_ref->value();
+  // PHP 5.3 support.
+  $conference = array_shift($conferences);
+  if (isset($conference)) {
     $current_conferece_time = new DateTime(date('Y-m-d H:i:s'));
     $current_conferece_time->setTimezone(new DateTimeZone($conference->field_dates[LANGUAGE_NONE][0]['timezone']));
 
@@ -83,7 +96,7 @@ function cod_session_evaluations_node_view($node, $view_mode, $langcode) {
       return;
     }
   }
-  if(!($node->field_accepted[LANGUAGE_NONE][0]['value'])) {
+  if(!($session_wrapper->field_accepted->value())) {
     return;
   }
   // Hide the "Provide feedback on this session" links if the user has already

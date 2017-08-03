@@ -9,10 +9,7 @@ files[] = entitycache.comment.inc
 files[] = entitycache.taxonomy.inc
 files[] = entitycache.test
 
-
-; Information added by drush on 2016-07-03
+; Information added by drush on 2012-07-24
 version = "7.x-1.2+0-dev"
-core = "7.x"
 project = "entitycache"
-datestamp = "1467529517"
-
+datestamp = "1343161414"
