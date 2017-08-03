@@ -1,0 +1,93 @@
+.l-page-wrapper {
+  overflow: hidden;
+}
+
+.preface {
+  position: relative;
+}
+
+.tabs--primary {
+  position: relative;
+  z-index: 3;
+}
+
+.pane--hero-2017__image {
+  background-color: #6ebadc;
+  padding-top: 90%;
+  padding-bottom: 0;
+  margin-top: -60px;
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  .admin-menu & {
+    margin-top: -125px;
+  }
+  img {
+    display: block;
+  }
+  @media (min-width: $small) {
+    padding-top: 68%;
+  }
+  @media (min-width: $mid-small) {
+    padding-top: 30%;
+  }
+  @media (min-width: $medium) {
+    padding-top: 23%;
+  }
+  @media (min-width: $mid-large) {
+    padding-top: 0%;
+  }
+}
+
+.pane--hero-2017__content {
+  position: absolute !important;
+  top: 12%;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+.pane--hero-2017__title {
+  color: darken($primary-color, 15%);
+  font-weight: 900;
+  font-size: 69px;
+  line-height: 0.9em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pane--hero-2017__subtitle {
+  color: $primary-color;
+  font-weight: 900;
+  font-size: 78px;
+  line-height: 0.9em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pane--hero-2017__location {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+.pane--hero-2017__date {
+  color: #fa4d13;
+  font-size: 33px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
+.pane--hero-2017__button {
+  margin: 20px 0;
+  a {
+    background-color: #fa4d13;
+    border-radius: 40px;
+    color: #FFF;
+    text-decoration: none;
+    padding-right: 40px;
+    padding-left: 40px;
+    &:hover {
+      background-color: darken(#fa4d13, 10%);
+      text-decoration: none;
+    }
+  }
+}
