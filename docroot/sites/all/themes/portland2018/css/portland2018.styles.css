@@ -99,4 +99,35 @@
       background-color: #d53905;
       text-decoration: none; }
 
+/* line 95, ../sass/components/_pane--hero-2017.scss */
+.pane--hero-2018__image {
+  background-color: #DCEEF8;
+  padding-top: 90%;
+  padding-bottom: 0;
+  margin-top: -60px;
+  width: calc(100% + 160px);
+  margin-left: -80px; }
+  /* line 102, ../sass/components/_pane--hero-2017.scss */
+  .admin-menu .pane--hero-2018__image {
+    margin-top: -125px; }
+  /* line 105, ../sass/components/_pane--hero-2017.scss */
+  .pane--hero-2018__image img {
+    display: block; }
+  @media (min-width: 420px) {
+    /* line 95, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2018__image {
+      padding-top: 68%; } }
+  @media (min-width: 600px) {
+    /* line 95, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2018__image {
+      padding-top: 30%; } }
+  @media (min-width: 770px) {
+    /* line 95, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2018__image {
+      padding-top: 23%; } }
+  @media (min-width: 900px) {
+    /* line 95, ../sass/components/_pane--hero-2017.scss */
+    .pane--hero-2018__image {
+      padding-top: 0%; } }
+
 /*# sourceMappingURL=portland2018.styles.css.map */
