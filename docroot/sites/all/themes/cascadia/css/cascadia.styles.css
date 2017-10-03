@@ -950,7 +950,8 @@ table.checkout-review .pane-data {
     .node-session-form .field-name-body,
     .node-session-form .field-name-field-experience,
     .node-session-form #field-cod-events-filter,
-    .node-session-form #field-cod-session-og-vocabulary {
+    .node-session-form #field-cod-session-og-vocabulary,
+    .node-session-form .field-name-og-vocabulary {
       width: 61.86441%;
       float: left;
       margin-right: -100%;
