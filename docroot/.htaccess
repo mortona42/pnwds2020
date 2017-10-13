@@ -60,6 +60,16 @@ DirectoryIndex index.php index.html index.htm
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
+  
+  # Redirect 2014 and 2015 sites
+  RewriteCond %{HTTP_HOST} ^2014.pnwdrupalsummit.org
+  RewriteRule ^(.*)$ https://pnwdrupalsummit.org/2014/$1 [L,NC,QSA]
+
+  RewriteCond %{HTTP_HOST} ^2015.pnwdrupalsummit.org
+  RewriteRule ^(.*)$ https://pnwdrupalsummit.org/2015/$1 [L,NC,QSA]
+
+  # Force SSL
+  RewriteRule ^(.*)$ https://pnwdrupalsummit.org$1 [R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
