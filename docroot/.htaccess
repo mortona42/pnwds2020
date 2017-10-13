@@ -68,8 +68,11 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{HTTP_HOST} ^2015.pnwdrupalsummit.org
   RewriteRule ^(.*)$ https://pnwdrupalsummit.org/2015/$1 [L,NC,QSA]
 
+  # Force SSL
   RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
