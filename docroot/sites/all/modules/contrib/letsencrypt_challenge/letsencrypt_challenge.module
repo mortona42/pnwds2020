@@ -1,0 +1,95 @@
+<?php
+/**
+ * @file
+ * Main module file.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function letsencrypt_challenge_help($path, $args) {
+  switch ($path) {
+    // Main module help for the block module
+    case 'admin/config/system/letsencrypt_challenge':
+      return '<p>' . t('When a <strong>@uri</strong> URL is handled by this module, FILENAME will be looked at <strong>@path</strong>. If found, the content of that file will be output instead of the configured field below. This could potentially help with the use of letsecnrypt clients writing the challenge file to the previously mentioned directory.', array('@uri' => url('.well-known/acme-challenge/FILENAME', array('absolute' => TRUE)), '@path' => drupal_realpath('public://letsencrypt_challenge/FILENAME'))) . '</p>';
+      break;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function letsencrypt_challenge_menu() {
+  $items = array();
+
+  $items['admin/config/system/letsencrypt_challenge'] = array(
+    'title' => 'Let\'s Encrypt challenge',
+    'description' => 'Configure Let\'s Encrypt challenge',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('letsencrypt_challenge_settings'),
+    'access arguments' => array('administer letsencrypt challenge'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['.well-known/acme-challenge'] = array(
+    'title' => 'Let\'s Encrypt challenge',
+    'description' => 'Outputs configured certbot challenge',
+    'page callback' => 'letsencrypt_challenge_challenge',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function letsencrypt_challenge_permission() {
+  return array(
+    'administer letsencrypt challenge' =>  array(
+      'title' => t('Adminiter Let\'s Encrypt challenge'),
+      'description' => t('Manual configuration of a Let\'s Encrypt challenge response.'),
+    ),
+  );
+}
+
+/**
+ * FAPI Callback: Settings form.
+ */
+function letsencrypt_challenge_settings() {
+  drupal_add_js(drupal_get_path('module', 'letsencrypt_challenge') . '/letsencrypt_challenge.js');
+
+  $form['letsencrypt_challenge'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Challenge'),
+    '#description' => t('Enter the output challenge as required by the letsencrypt client. Please check that <a target="_blank" href="!uri">the challenge url</a> works properly.', array('!uri' => url('.well-known/acme-challenge'))),
+    '#default_value' => variable_get('letsencrypt_challenge', ''),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Page callback: Output the configured challenge.
+ */
+function letsencrypt_challenge_challenge($filename = '') {
+  // Let's make sure that this page is not cached.
+  drupal_page_is_cacheable(FALSE);
+
+  // If a file is found, that takes precedence.
+  if (!empty($filename)) {
+    $challenge_file = 'public://letsencrypt_challenge/' . $filename;
+    if (file_exists($challenge_file)) {
+      print file_get_contents($challenge_file);
+      drupal_exit();
+    }
+  }
+
+  $challenge = variable_get('letsencrypt_challenge', '');
+  if (empty($challenge)) {
+    print t("The URL is working, but the challenge is empty. Please configure.");
+  }
+  print $challenge;
+  drupal_exit();
+}
