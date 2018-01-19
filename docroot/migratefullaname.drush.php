@@ -5,7 +5,7 @@ $efq = new EntityFieldQuery();
 $efq
 // Conditions on the entity - its type and its bundle ("sub-type")
 ->entityCondition('entity_type', 'ticket_registration')
-->entityCondition('bundle', 46);
+->entityCondition('bundle', 51);
 // Conditions on the entity's fields
 // Execute, returning an array of arrays.
 $result = $efq->execute();
