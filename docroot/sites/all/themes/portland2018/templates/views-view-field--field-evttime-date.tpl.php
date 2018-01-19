@@ -32,5 +32,5 @@
   $time2 = new DateTime( $row->field_field_evttime_date['0']['raw']['value2'], $database_timezone);
   $time2->setTimezone($event_timezone);
 
-  print '<span class="date-display-single"><div class="date-display-range"><span class="date-display-start">'.$time1->format('h:i').'</span> to <span class="date-display-end">'.$time2->format('h:i').'</span></div></span>';
+  print '<span class="date-display-single"><div class="date-display-range"><span class="date-display-start">'.$time1->format('g:ia').'</span> to <span class="date-display-end">'.$time2->format('g:ia').'</span></div></span>';
 ?>
