@@ -1266,9 +1266,7 @@ table.checkout-review .pane-data {
         border-right: none;
         border-bottom: none !important; }
         .schedule .schedule__timeslot .session--teaser:last-child {
-          border-right: solid 1px #CCC; }
-        .schedule .schedule__timeslot .session--teaser .session__room {
-          display: none; } }
+          border-right: solid 1px #CCC; } }
   @media (min-width: 1280px) {
     .schedule .schedule__timeslot h3 {
       width: 170px;

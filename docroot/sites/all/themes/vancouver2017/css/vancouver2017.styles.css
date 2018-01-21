@@ -1,3 +1,8 @@
+@media (min-width: 900px) {
+  /* line 9, ../sass/components/_page-schedule.scss */
+  .schedule .schedule__timeslot .session--teaser .session__room {
+    display: none; } }
+
 /* line 1, ../sass/components/_pane--hero-2017.scss */
 .l-page-wrapper {
   overflow: hidden; }

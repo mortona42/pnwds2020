@@ -130,4 +130,17 @@
     .pane--hero-2018__image {
       padding-top: 0%; } }
 
+/* line 3, ../sass/components/_session.scss */
+.session--teaser .session__title--php_and_symfony a {
+  color: #0077C0; }
+/* line 7, ../sass/components/_session.scss */
+.session--teaser .session__title--tools_and_techniques a {
+  color: #F5A623; }
+/* line 11, ../sass/components/_session.scss */
+.session--teaser .session__title--being_human a {
+  color: #9013FE; }
+/* line 15, ../sass/components/_session.scss */
+.session--teaser .session__title--how_to a {
+  color: #F95E56; }
+
 /*# sourceMappingURL=portland2018.styles.css.map */

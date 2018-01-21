@@ -1,0 +1,18 @@
+.schedule {
+
+  @media (min-width: $mid-large) {
+
+    .schedule__timeslot {
+
+      .session--teaser {
+
+        .session__room {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+}
