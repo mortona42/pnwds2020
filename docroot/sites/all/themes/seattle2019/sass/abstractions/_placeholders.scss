@@ -1,0 +1,9 @@
+// %constrained-width {
+//   margin: 0 auto;
+//   @include breakpoint($medium) {
+//     width: 94%;
+//   }
+//   @include breakpoint($large) {
+//     max-width: $large;
+//   }
+// }

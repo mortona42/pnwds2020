@@ -1,0 +1,34 @@
+name = Seattle 2019
+description = PNWDS Seattle 2019 theme
+base theme = cascadia
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/seattle2019.normalize.css
+stylesheets[all][] = css/seattle2019.hacks.css
+stylesheets[all][] = css/seattle2019.styles.css
+stylesheets[all][] = css/seattle2019.no-query.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/seattle2019.behaviors.js
+
+; ========================================
+; Regions
+; ========================================
+regions[navigation] = Navigation
+regions[branding] = Branding
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[preface] = Preface
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[epilogue] = Epilogue
+regions[errata] = Errata
+regions[footer] = Footer
