@@ -35,7 +35,7 @@ projects[advanced_help][subdir] = "contrib"
 
 projects[apachesolr][type] = "module"
 projects[apachesolr][subdir] = "contrib"
-projects[apachesolr][version] = "1.8"
+projects[apachesolr][version] = "1.9"
 
 projects[apachesolr_og][type] = "module"
 projects[apachesolr_og][subdir] = "contrib"
@@ -54,7 +54,7 @@ projects[auto_nodetitle][version] = "1.0"
 
 projects[better_exposed_filters][type] = "module"
 projects[better_exposed_filters][subdir] = "contrib"
-projects[better_exposed_filters][version] = "3.4"
+projects[better_exposed_filters][version] = "3.5"
 
 projects[breakpoints][type] = "module"
 projects[breakpoints][subdir] = "contrib"
@@ -127,7 +127,7 @@ projects[commerce_currency][patch][] = https://drupal.org/files/issues/required_
 
 projects[commerce_features][type] = "module"
 projects[commerce_features][subdir] = "contrib"
-projects[commerce_features][version] = "1.2"
+projects[commerce_features][version] = "1.3"
 
 projects[commerce_stock][type] = "module"
 projects[commerce_stock][subdir] = "contrib"
@@ -175,7 +175,7 @@ projects[conditional_fields][download][revision] = "12ab0cb0e0660278b2a9e330aae2
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.12"
+projects[ctools][version] = "1.13"
 
 ; Allow contexts to load in information for existing contexts.
 ; See https://drupal.org/node/2484541#comment-9899043 for more info.
@@ -245,7 +245,7 @@ projects[entitycache][patch][] = "https://drupal.org/files/add-translation-infor
 
 projects[entityreference][type] = "module"
 projects[entityreference][subdir] = "contrib"
-projects[entityreference][version] = "1.4"
+projects[entityreference][version] = "1.5"
 
 ; Fix foreign keys feature revert issue
 ; https://drupal.org/node/1969018
@@ -276,7 +276,7 @@ projects[field_extrawidgets][version] = "1.1"
 
 projects[field_group][type] = "module"
 projects[field_group][subdir] = "contrib"
-projects[field_group][version] = "1.5"
+projects[field_group][version] = "1.6"
 
 projects[field_permissions][type] = "module"
 projects[field_permissions][subdir] = "contrib"
@@ -325,7 +325,7 @@ projects[interval][version] = "1.1"
 projects[interval][subdir] = "contrib"
 
 projects[i18n][type] = "module"
-projects[i18n][version] = "1.18"
+projects[i18n][version] = "1.22"
 projects[i18n][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.7"
@@ -342,7 +342,7 @@ projects[link][version] = "1.4"
 
 projects[media][type] = "module"
 projects[media][subdir] = "contrib"
-projects[media][version] = "2.9"
+projects[media][version] = "2.16"
 
 projects[media_oembed][type] = "module"
 projects[media_oembed][subdir] = "contrib"
@@ -543,7 +543,7 @@ projects[variable][subdir] = "contrib"
 
 projects[views][type] = "module"
 projects[views][subdir] = "contrib"
-projects[views][version] = "3.16"
+projects[views][version] = "3.18"
 
 ; Allow taxonomy term fields to be transformed when being passed as a value.
 projects[views][patch][] = "https://drupal.org/files/issues/2408937-views-taxonomy-name-case-change-2.patch"
@@ -593,25 +593,18 @@ projects[views_bulk_operations][version] = "3.4"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[votingapi][type] = "module"
-projects[votingapi][version] = "2.12"
+projects[votingapi][version] = "2.13"
 projects[votingapi][subdir] = "contrib"
 
 projects[webform][type] = "module"
-projects[webform][version] = "4.15"
+projects[webform][version] = "4.16"
 projects[webform][subdir] = "contrib"
 
 ; Contributed themes.
 projects[omega][type] = "theme"
 projects[omega][subdir] = "contrib"
-projects[omega][download][type] = "git"
-projects[omega][download][url] = "http://git.drupal.org/project/omega.git"
-; This hash of Omega Git is before the Susy 1 to 2 re-write.
-; See https://www.drupal.org/node/2398093 for more details.
-projects[omega][download][branch] = "7.x-4.x"
-projects[omega][download][revision] = "a4d56d4d4868ef"
+projects[omega][version] = "4.3"
 
-; This hash of Omega Git is before the Susy 1 to 2 re-write.
-; See https://www.drupal.org/node/2398093 for more details.
 ; Mega patch to bring omega upto snuff with COD.
 ; See https://drupal.org/node/2398093#comment-11496629 for more info.
 projects[omega][patch][1] = "https://drupal.org/files/issues/2398093-omega4-backports-3.patch"
@@ -716,7 +709,7 @@ libraries[iCalcreator][download][url] = "https://github.com/iCalcreator/iCalcrea
 
 libraries[dompdf][download][type] = "get"
 libraries[dompdf][type] = "libraries"
-libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf/releases/download/v0.7.0/dompdf_0-7-0.zip"
+libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf/releases/download/v0.8.2/dompdf_0-8-2.zip"
 
 ; Extract php-font-lib into dompdf library
 ; For more info: http://stackoverflow.com/questions/13431905/php-font-lib-must-either-be-installed-via-composer-or-copied-to-lib-php-font-lib

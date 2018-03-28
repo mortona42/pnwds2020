@@ -3,7 +3,7 @@ core = 7.x
 
 ; Download Drupal core and apply core patches if needed.
 projects[drupal][type] = "core"
-projects[drupal][version] = "7.56"
+projects[drupal][version] = "7.58"
 
 ; This patch allows install profiles to set a minimum memory limit.
 ; https://www.drupal.org/node/1772316#comment-6457618
