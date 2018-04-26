@@ -27,15 +27,15 @@ projects[admin_menu][download][revision] = "67abd3a2e42c28167551b5d0e753ca322bc5
 
 projects[adminimal_admin_menu][type] = "module"
 projects[adminimal_admin_menu][subdir] = "contrib"
-projects[adminimal_admin_menu][version] = "1.7"
+projects[adminimal_admin_menu][version] = "1.9"
 
 projects[advanced_help][type] = "module"
-projects[advanced_help][version] = "1.3"
+projects[advanced_help][version] = "1.4"
 projects[advanced_help][subdir] = "contrib"
 
 projects[apachesolr][type] = "module"
 projects[apachesolr][subdir] = "contrib"
-projects[apachesolr][version] = "1.9"
+projects[apachesolr][version] = "1.10"
 
 projects[apachesolr_og][type] = "module"
 projects[apachesolr_og][subdir] = "contrib"
@@ -58,7 +58,7 @@ projects[better_exposed_filters][version] = "3.5"
 
 projects[breakpoints][type] = "module"
 projects[breakpoints][subdir] = "contrib"
-projects[breakpoints][version] = "1.4"
+projects[breakpoints][version] = "1.6"
 
 projects[connector][type] = "module"
 projects[connector][subdir] = "contrib"
@@ -79,7 +79,7 @@ projects[cod_support][version] = "2.0"
 
 projects[commerce][type] = "module"
 projects[commerce][subdir] = "contrib"
-projects[commerce][version] = "1.13"
+projects[commerce][version] = "1.14"
 
 ; Make "Add to cart" button text a display format setting
 ; https://drupal.org/node/1147690
@@ -87,7 +87,7 @@ projects[commerce][patch][] = https://drupal.org/files/issues/commerce_cart-butt
 
 ; Possibility to show price difference/total price in attributes
 ; https://drupal.org/node/1226466
-projects[commerce][patch][] = https://drupal.org/files/issues/product_select_options_token_display_alternative-1226466-36.patch
+projects[commerce][patch][] = https://drupal.org/files/issues/product_select_options_token_display_alternative-1226466-45.patch
 
 ; Allow the default currency to be changed via a context.
 ; See https://drupal.org/node/2415237#comment-10746838 for more info.
@@ -175,7 +175,7 @@ projects[conditional_fields][download][revision] = "12ab0cb0e0660278b2a9e330aae2
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.13"
+projects[ctools][version] = "1.14"
 
 ; Allow contexts to load in information for existing contexts.
 ; See https://drupal.org/node/2484541#comment-9899043 for more info.
@@ -197,7 +197,7 @@ projects[date_ical][version] = "3.9"
 projects[date_ical][patch][] = "https://drupal.org/files/issues/date_ical_remove_makefile-3.patch"
 
 ; Keeping this to the latest version, since it should only be used for development.
-projects[devel][version] = "1.5"
+projects[devel][version] = "1.6"
 projects[devel][type] = "module"
 projects[devel][subdir] = "contrib"
 
@@ -300,10 +300,7 @@ projects[field_collection][patch][] = "https://drupal.org/files/issues/undefined
 
 projects[file_entity][type] = "module"
 projects[file_entity][subdir] = "contrib"
-projects[file_entity][download][type] = "git"
-projects[file_entity][download][url] = "http://git.drupal.org/project/file_entity.git"
-projects[file_entity][download][branch] = "7.x-2.x"
-projects[file_entity][download][revision] = "5effd7a"
+projects[file_entity][version] = "2.12"
 
 projects[flag][type] = "module"
 projects[flag][subdir] = "contrib"
@@ -311,10 +308,7 @@ projects[flag][version] = "3.9"
 
 projects[inline_conditions][type] = "module"
 projects[inline_conditions][subdir] = "contrib"
-projects[inline_conditions][download][type] = "git"
-projects[inline_conditions][download][url] = "http://git.drupal.org/project/inline_conditions.git"
-projects[inline_conditions][download][branch] = "7.x-1.x"
-projects[inline_conditions][download][revision] = "3dd9495e0a7b95f7e8a29141a8860b073cba2b6a"
+projects[inline_conditions][version] = "1.0-rc1"
 
 projects[inline_entity_form][type] = "module"
 projects[inline_entity_form][version] = "1.8"
@@ -342,7 +336,7 @@ projects[link][version] = "1.4"
 
 projects[media][type] = "module"
 projects[media][subdir] = "contrib"
-projects[media][version] = "2.16"
+projects[media][version] = "2.19"
 
 projects[media_oembed][type] = "module"
 projects[media_oembed][subdir] = "contrib"
@@ -351,10 +345,6 @@ projects[media_oembed][version] = "2.7"
 projects[module_filter][type] = "module"
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = "2.1"
-
-projects[mollom][type] = "module"
-projects[mollom][subdir] = "contrib"
-projects[mollom][version] = "2.15"
 
 projects[multiple_entity_form][type] = "module"
 projects[multiple_entity_form][version] = "1.3"
@@ -543,7 +533,7 @@ projects[variable][subdir] = "contrib"
 
 projects[views][type] = "module"
 projects[views][subdir] = "contrib"
-projects[views][version] = "3.18"
+projects[views][version] = "3.20"
 
 ; Allow taxonomy term fields to be transformed when being passed as a value.
 projects[views][patch][] = "https://drupal.org/files/issues/2408937-views-taxonomy-name-case-change-2.patch"
@@ -593,7 +583,7 @@ projects[views_bulk_operations][version] = "3.4"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[votingapi][type] = "module"
-projects[votingapi][version] = "2.13"
+projects[votingapi][version] = "2.14"
 projects[votingapi][subdir] = "contrib"
 
 projects[webform][type] = "module"

@@ -8,10 +8,13 @@ exclusive = TRUE
 ; Core modules.
 dependencies[] = block
 dependencies[] = comment
+dependencies[] = contextual
 dependencies[] = dblog
 dependencies[] = field
+dependencies[] = field_sql_storage
 dependencies[] = field_ui
 dependencies[] = file
+dependencies[] = filter
 dependencies[] = image
 dependencies[] = list
 dependencies[] = menu
@@ -20,7 +23,11 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = search
+dependencies[] = system
 dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
 ;dependencies[] = forum
 
 ; Contributed modules.
@@ -31,7 +38,6 @@ dependencies[] = adminimal_admin_menu
 dependencies[] = advanced_help
 dependencies[] = auto_nodetitle
 dependencies[] = content_access
-dependencies[] = contextual
 dependencies[] = ctools
 dependencies[] = ckeditor
 dependencies[] = dashboard
@@ -54,8 +60,6 @@ dependencies[] = field_group
 dependencies[] = field_permissions
 dependencies[] = field_select_ct
 dependencies[] = field_collection
-dependencies[] = field_sql_storage
-dependencies[] = filter
 dependencies[] = flag
 dependencies[] = inline_entity_form
 dependencies[] = jquery_update
@@ -74,11 +78,7 @@ dependencies[] = quicktabs_tabstyles
 dependencies[] = rules
 dependencies[] = rules_admin
 dependencies[] = strongarm
-dependencies[] = system
-dependencies[] = text
 dependencies[] = token
-dependencies[] = update
-dependencies[] = user
 dependencies[] = views
 dependencies[] = views_argument_substitutions
 dependencies[] = views_autorefresh
@@ -107,9 +107,8 @@ files[] = cod.profile
 ; System Requirements.
 php_memory_limit = 128M
 
-; Information added by Drupal.org packaging script on 2018-03-28
-version = "7.x-2.0-rc4"
+; Information added by Drupal.org packaging script on 2018-04-25
+version = "7.x-2.0"
 core = "7.x"
 project = "cod"
-datestamp = "1522273495"
-
+datestamp = "1524687512"
