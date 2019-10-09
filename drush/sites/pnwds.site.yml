@@ -1,0 +1,62 @@
+# Application 'pnwds', environment 'dev'.
+dev:
+  root: /var/www/html/pnwds.dev/docroot
+  ac-site: pnwds
+  ac-env: dev
+  ac-realm: prod
+  uri: pnwdsdev.prod.acquia-sites.com
+  dev.livedev:
+    parent: '@pnwds.dev'
+    root: /mnt/gfs/pnwds.dev/livedev/docroot
+  host: pnwdsdev.ssh.prod.acquia-sites.com
+  user: pnwds.dev
+  paths:
+    drush-script: drush
+
+
+# Application 'pnwds', environment 'prod'.
+prod:
+  root: /var/www/html/pnwds.prod/docroot
+  ac-site: pnwds
+  ac-env: prod
+  ac-realm: prod
+  uri: pnwds.prod.acquia-sites.com
+  prod.livedev:
+    parent: '@pnwds.prod'
+    root: /mnt/gfs/pnwds.prod/livedev/docroot
+  host: pnwds.ssh.prod.acquia-sites.com
+  user: pnwds.prod
+  paths:
+    drush-script: drush
+
+
+# Application 'pnwds', environment 'ra'.
+ra:
+  root: /var/www/html/pnwds.ra/docroot
+  ac-site: pnwds
+  ac-env: ra
+  ac-realm: prod
+  uri: pnwdsra.prod.acquia-sites.com
+  ra.livedev:
+    parent: '@pnwds.ra'
+    root: /mnt/gfs/pnwds.ra/livedev/docroot
+  host: pnwdsra.ssh.prod.acquia-sites.com
+  user: pnwds.ra
+  paths:
+    drush-script: drush
+
+
+# Application 'pnwds', environment 'test'.
+test:
+  root: /var/www/html/pnwds.test/docroot
+  ac-site: pnwds
+  ac-env: test
+  ac-realm: prod
+  uri: pnwdsstg.prod.acquia-sites.com
+  test.livedev:
+    parent: '@pnwds.test'
+    root: /mnt/gfs/pnwds.test/livedev/docroot
+  host: pnwdsstg.ssh.prod.acquia-sites.com
+  user: pnwds.test
+  paths:
+    drush-script: drush
