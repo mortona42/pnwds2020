@@ -1,0 +1,4 @@
+name: pnwds-d7
+recipe: drupal7
+config:
+  webroot: docroot
