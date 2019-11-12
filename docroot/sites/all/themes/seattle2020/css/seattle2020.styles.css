@@ -175,3 +175,11 @@
   color: #888; }
 
 /*# sourceMappingURL=seattle2019.styles.css.map */
+
+
+.form-type-checkbox {
+  background-color: lightblue;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 0 1rem;
+}
