@@ -1,0 +1,50 @@
+uuid: 21372a53-c6b6-4e21-8a82-4623c2e1eda8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.session_slot.ief_table
+    - field.field.time_slot.time_slot.field_session_slots
+    - field.field.time_slot.time_slot.field_time
+  module:
+    - ief_table_view_mode
+    - pnwds_custom
+    - time_field
+id: time_slot.time_slot.default
+targetEntityType: time_slot
+bundle: time_slot
+mode: default
+content:
+  field_session_slots:
+    weight: 3
+    settings:
+      form_mode: ief_table
+      override_labels: true
+      label_singular: 'Session slot'
+      label_plural: 'Session slots'
+      allow_new: true
+      match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex_table_view_mode
+    region: content
+  field_time:
+    weight: 2
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+    type: time_range_widget
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

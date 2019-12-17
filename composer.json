@@ -19,16 +19,22 @@
         "php": ">=7.0.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/commerce": "^2.16",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/ief_table_view_mode": "^2.1",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/time_field": "^1.13",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8.0"
+        "drupal/core-dev": "^8.8.0",
+        "drupal/devel_entity_updates": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -75,6 +81,21 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "Allow exposed-form-in-block for block displays": "https://www.drupal.org/files/issues/2019-09-30/2681947-33.patch"
+            },
+            "drupal/auto_entitylabel": {
+                "Provide a hook for contrib modules that want to implement automatic labels": "https://www.drupal.org/files/issues/2018-09-22/2829571-provide-a-hook-for-contrib.patch",
+                "[Plan] Support entities without bundles (User, etc.)": "https://www.drupal.org/files/issues/2019-10-01/auto_entitylabel-2945387-11-support-bundleless-entities.patch"
+            },
+            "drupal/devel_entity_updates": {
+                "Function drush_drupal_cache_clear_all is removed": "https://www.drupal.org/files/issues/2019-12-04/drush_drupal_cache_clear_all_drush10-3093421-9.patch"
+            },
+            "drupal/eva": {
+                "Config form broken on single bundle and bundleless entities": "https://www.drupal.org/files/issues/2019-12-15/eva-single-bundle-config-form-3101133-5.patch"
+            }
         }
     }
 }

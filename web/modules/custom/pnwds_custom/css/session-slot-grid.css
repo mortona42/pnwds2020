@@ -1,0 +1,9 @@
+.field--name-field-session-slots {
+  display: flex;
+}
+.field--name-field-session-slots .field__item {
+  flex-grow: 1;
+}
+.filtered-hidden {
+  opacity: .5;
+}

@@ -1,0 +1,28 @@
+uuid: 310ee9b4-6441-43a5-8199-67b75bd5aa2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session_slot.field_room
+    - node.type.session_slot
+  module:
+    - user
+id: node.session_slot.default
+targetEntityType: node
+bundle: session_slot
+mode: default
+content:
+  field_room:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

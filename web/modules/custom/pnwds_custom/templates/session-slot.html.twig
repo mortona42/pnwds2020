@@ -1,0 +1,21 @@
+{#
+/**
+ * @file session_slot.html.twig
+ * Default theme implementation to present Session slot data.
+ *
+ * This template is used when viewing Session slot pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_session_slot()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('session_slot') }}>
+  {{ edit_form }}
+  {{- content -}}
+</div>

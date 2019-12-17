@@ -1,0 +1,8 @@
+uuid: 1bcb91e4-a6a9-4ad1-9be1-9c4950a55df6
+langcode: en
+status: true
+dependencies: {  }
+name: Slots
+vid: slots
+description: 'Session slots'
+weight: 0

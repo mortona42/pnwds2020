@@ -1,0 +1,23 @@
+uuid: bb2b9fb0-4d65-4c6a-a551-50aba4525c0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_integer
+    - node.type.page
+id: node.page.field_integer
+field_name: field_integer
+entity_type: node
+bundle: page
+label: Integer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

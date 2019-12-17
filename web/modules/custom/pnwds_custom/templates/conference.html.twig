@@ -1,0 +1,22 @@
+{#
+/**
+ * @file conference.html.twig
+ * Default theme implementation to present Conference data.
+ *
+ * This template is used when viewing Conference pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_conference()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('conference') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

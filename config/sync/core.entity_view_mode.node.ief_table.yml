@@ -1,0 +1,10 @@
+uuid: 549d95a0-930c-4466-a224-f5799f942074
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: node
+cache: true

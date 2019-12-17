@@ -1,0 +1,90 @@
+add time slot entities:
+  title: 'Create new Time slot entities'
+
+administer time slot entities:
+  title: 'Administer Time slot entities'
+  description: 'Allow to access the administration form to configure Time slot entities.'
+  restrict access: true
+
+delete time slot entities:
+  title: 'Delete Time slot entities'
+
+edit time slot entities:
+  title: 'Edit Time slot entities'
+
+add session slot entities:
+  title: 'Create new Session slot entities'
+
+administer session slot entities:
+  title: 'Administer Session slot entities'
+  description: 'Allow to access the administration form to configure Session slot entities.'
+  restrict access: true
+
+delete session slot entities:
+  title: 'Delete Session slot entities'
+
+edit session slot entities:
+  title: 'Edit Session slot entities'
+
+add session entities:
+  title: 'Create new Session entities'
+
+administer session entities:
+  title: 'Administer Session entities'
+  description: 'Allow to access the administration form to configure Session entities.'
+  restrict access: true
+
+delete session entities:
+  title: 'Delete Session entities'
+
+edit session entities:
+  title: 'Edit Session entities'
+
+view published session entities:
+  title: 'View published Session entities'
+
+view unpublished session entities:
+  title: 'View unpublished Session entities'
+
+access pnwds_custom administration pages:
+  title: 'View PNWDS Custom administration pages'
+add schedule entities:
+  title: 'Create new Schedule entities'
+
+administer schedule entities:
+  title: 'Administer Schedule entities'
+  description: 'Allow to access the administration form to configure Schedule entities.'
+  restrict access: true
+
+delete schedule entities:
+  title: 'Delete Schedule entities'
+
+edit schedule entities:
+  title: 'Edit Schedule entities'
+
+view published schedule entities:
+  title: 'View published Schedule entities'
+
+view unpublished schedule entities:
+  title: 'View unpublished Schedule entities'
+
+add conference entities:
+  title: 'Create new Conference entities'
+
+administer conference entities:
+  title: 'Administer Conference entities'
+  description: 'Allow to access the administration form to configure Conference entities.'
+  restrict access: true
+
+delete conference entities:
+  title: 'Delete Conference entities'
+
+edit conference entities:
+  title: 'Edit Conference entities'
+
+view published conference entities:
+  title: 'View published Conference entities'
+
+view unpublished conference entities:
+  title: 'View unpublished Conference entities'
+

@@ -1,0 +1,10 @@
+uuid: ccb2e7ad-3e26-4755-96c9-a7186a27e8fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - pnwds_custom
+id: session_slot.ief_table
+label: 'IEF table'
+targetEntityType: session_slot
+cache: true

@@ -1,0 +1,26 @@
+uuid: 30c0de9d-9b4a-4831-82bf-fca4117dce24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.time_slot.field_session_slots
+  module:
+    - pnwds_custom
+id: time_slot.time_slot.field_session_slots
+field_name: field_session_slots
+entity_type: time_slot
+bundle: time_slot
+label: 'Session slots'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:session_slot'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: true
+field_type: entity_reference

@@ -1,0 +1,42 @@
+uuid: befd552b-5e08-4724-9f60-f14a59bd6c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.schedule.schedule.field_day
+    - field.field.schedule.schedule.field_time_slots
+  module:
+    - inline_entity_form
+    - pnwds_custom
+id: schedule.schedule.default
+targetEntityType: schedule
+bundle: schedule
+mode: default
+content:
+  field_day:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_time_slots:
+    weight: 2
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

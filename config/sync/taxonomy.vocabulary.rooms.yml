@@ -1,0 +1,8 @@
+uuid: e3272256-18b9-4ec8-9ac6-4185efd29bd4
+langcode: en
+status: true
+dependencies: {  }
+name: Rooms
+vid: rooms
+description: ''
+weight: 0

@@ -1,0 +1,33 @@
+uuid: 440d79fc-d780-4a3a-b0bb-eeb9542c4efa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.session_slot.session_slot.field_room
+    - field.field.session_slot.session_slot.field_session
+  module:
+    - pnwds_custom
+id: session_slot.session_slot.default
+targetEntityType: session_slot
+bundle: session_slot
+mode: default
+content:
+  field_room:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  name: true

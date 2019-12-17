@@ -1,0 +1,49 @@
+uuid: b8699db7-ee2f-4d8d-a41f-2cbd3442ea3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.session.session.field_description
+    - field.field.session.session.field_session_slot
+    - field.field.session.session.field_tags
+  module:
+    - pnwds_custom
+    - text
+    - user
+id: session.session.default
+targetEntityType: session
+bundle: session
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tags:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_session_slot: true

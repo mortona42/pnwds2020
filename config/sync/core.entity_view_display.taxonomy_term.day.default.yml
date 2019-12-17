@@ -1,0 +1,32 @@
+uuid: 5e1dcd7b-1ef0-4d6d-9c6b-2328c345029b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.day.field_date
+    - taxonomy.vocabulary.day
+  module:
+    - datetime
+    - text
+id: taxonomy_term.day.default
+targetEntityType: taxonomy_term
+bundle: day
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 3304f5d8-5a02-49e6-b63c-8b6ea553b6d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - pnwds_custom
+    - time_field
+id: time_slot.field_time
+field_name: field_time
+entity_type: time_slot
+type: time_range
+settings: {  }
+module: time_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

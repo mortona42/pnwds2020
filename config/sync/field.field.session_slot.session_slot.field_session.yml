@@ -1,0 +1,26 @@
+uuid: d2c477dc-02c7-4914-8547-c58728ccbd3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.session_slot.field_session
+  module:
+    - pnwds_custom
+id: session_slot.session_slot.field_session
+field_name: field_session
+entity_type: session_slot
+bundle: session_slot
+label: Session
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:session'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

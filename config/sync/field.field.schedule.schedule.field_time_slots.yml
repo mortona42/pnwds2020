@@ -1,0 +1,26 @@
+uuid: 3f206248-eb66-4b05-9f62-486afbe65252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.schedule.field_time_slots
+  module:
+    - pnwds_custom
+id: schedule.schedule.field_time_slots
+field_name: field_time_slots
+entity_type: schedule
+bundle: schedule
+label: 'Time slots'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:time_slot'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

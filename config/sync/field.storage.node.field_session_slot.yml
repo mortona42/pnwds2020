@@ -1,0 +1,20 @@
+uuid: 2537ab80-eef3-43e2-b8b7-7ba6f54029cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - pnwds_custom
+id: node.field_session_slot
+field_name: field_session_slot
+entity_type: node
+type: entity_reference
+settings:
+  target_type: session_slot
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

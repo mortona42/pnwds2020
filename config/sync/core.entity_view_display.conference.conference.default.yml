@@ -1,0 +1,30 @@
+uuid: f480e712-41a8-4c62-b9fe-962fd0ef52de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.conference.conference.field_schedule
+  module:
+    - pnwds_custom
+id: conference.conference.default
+targetEntityType: conference
+bundle: conference
+mode: default
+content:
+  field_schedule:
+    weight: -3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

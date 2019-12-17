@@ -1,0 +1,47 @@
+uuid: ab84e96b-28cf-447b-a2e4-19fbad6d2c66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.time_slot.time_slot.field_session_slots
+    - field.field.time_slot.time_slot.field_time
+  module:
+    - layout_builder
+    - pnwds_custom
+    - time_field
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: time_slot.time_slot.default
+targetEntityType: time_slot
+bundle: time_slot
+mode: default
+content:
+  field_session_slots:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_time:
+    weight: 1
+    label: hidden
+    settings:
+      time_format: 'h:i a'
+      timerange_format: 'start ~ end'
+    third_party_settings: {  }
+    type: time_range_formatter
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains schedule.page.inc.
+ *
+ * Page callback for Schedule entities.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\pnwds_custom\Form\TagsFilter;
+
+/**
+ * Prepares variables for Schedule templates.
+ *
+ * Default template: schedule.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the user information and any
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_schedule(array &$variables) {
+  $variables['filter'] = \Drupal::formBuilder()->getForm(TagsFilter::class);
+}

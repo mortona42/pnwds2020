@@ -1,0 +1,26 @@
+{#
+/**
+ * @file time_slot.html.twig
+ * Default theme implementation to present Time slot data.
+ *
+ * This template is used when viewing Time slot pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_time_slot()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('pnwds_custom/session_slot_grid') }}
+<div{{ attributes.addClass('time_slot') }}>
+  <h1>{{ content.name }}</h1>
+  {{ content.field_time }}
+
+  <div class="session-slot-grid">
+    {{ content.field_session_slots }}
+  </div>
+</div>

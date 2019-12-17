@@ -1,0 +1,5 @@
+name: 'PNWDS Custom'
+type: module
+description: 'Customizations for PNWDS site.'
+core: 8.x
+package: 'PNWDS'

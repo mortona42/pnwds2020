@@ -2,3 +2,4 @@ name: pnwds2020
 recipe: drupal8
 config:
   webroot: web
+  xdebug: true

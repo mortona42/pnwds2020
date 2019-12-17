@@ -1,0 +1,23 @@
+uuid: 108e91f4-a2b5-4af5-9116-994f6de5c1aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.time_slot
+  module:
+    - text
+id: node.time_slot.body
+field_name: body
+entity_type: node
+bundle: time_slot
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

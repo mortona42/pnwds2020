@@ -1,0 +1,13 @@
+{
+    "name": "pnwds_custom",
+    "type": "drupal-module",
+    "description": "Customizations for PNWDS site.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/pnwds_custom",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/pnwds_custom",
+        "source": "http://cgit.drupalcode.org/pnwds_custom",
+    }
+}

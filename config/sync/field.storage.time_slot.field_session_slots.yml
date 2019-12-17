@@ -1,0 +1,19 @@
+uuid: a85a1188-d2b4-4dc1-b13f-fd0c3fae662b
+langcode: en
+status: true
+dependencies:
+  module:
+    - pnwds_custom
+id: time_slot.field_session_slots
+field_name: field_session_slots
+entity_type: time_slot
+type: entity_reference
+settings:
+  target_type: session_slot
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

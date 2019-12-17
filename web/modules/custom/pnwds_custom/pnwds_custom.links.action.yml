@@ -1,0 +1,30 @@
+entity.time_slot.add_form:
+  route_name: entity.time_slot.add_form
+  title: 'Add Time slot'
+  appears_on:
+    - entity.time_slot.collection
+entity.session_slot.add_form:
+  route_name: entity.session_slot.add_form
+  title: 'Add Session slot'
+  appears_on:
+    - entity.session_slot.collection
+entity.session.add_form:
+  route_name: entity.session.add_form
+  title: 'Add Session'
+  appears_on:
+    - entity.session.collection
+entity.test_type.add_form:
+  route_name: entity.test_type.add_form
+  title: 'Add Test type'
+  appears_on:
+    - entity.test_type.collection
+entity.schedule.add_form:
+  route_name: entity.schedule.add_form
+  title: 'Add Schedule'
+  appears_on:
+    - entity.schedule.collection
+entity.conference.add_form:
+  route_name: entity.conference.add_form
+  title: 'Add Conference'
+  appears_on:
+    - entity.conference.collection

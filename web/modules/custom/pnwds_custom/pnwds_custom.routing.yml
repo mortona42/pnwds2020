@@ -1,0 +1,15 @@
+pnwds_custom.schedule_controller_schedule:
+  path: '/schedule'
+  defaults:
+    _controller: '\Drupal\pnwds_custom\Controller\ScheduleController::schedule'
+    _title: 'Schedule'
+  requirements:
+    _permission: 'access content'
+
+pnwds_custom.admin:
+  path: '/admin/conference'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'PNWDS Custom'
+  requirements:
+    _permission: 'access pnwds_custom administration pages'

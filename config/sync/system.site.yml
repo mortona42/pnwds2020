@@ -1,0 +1,14 @@
+uuid: da9d9887-3b12-496f-be12-c7a6d14ec575
+name: 'Pacific Northwest Drupal Summit 2020'
+mail: mail@andrewmorton.info
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

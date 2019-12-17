@@ -1,0 +1,44 @@
+uuid: 7abe2c16-d609-452d-8dd8-d814d01f2d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.day.field_date
+    - taxonomy.vocabulary.day
+  module:
+    - datetime
+    - path
+id: taxonomy_term.day.default
+targetEntityType: taxonomy_term
+bundle: day
+mode: default
+content:
+  field_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

@@ -1,0 +1,30 @@
+uuid: 7791a668-9f71-4742-836b-67bcc5417114
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.session.field_tags
+    - taxonomy.vocabulary.tags
+  module:
+    - pnwds_custom
+id: session.session.field_tags
+field_name: field_tags
+entity_type: session
+bundle: session
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

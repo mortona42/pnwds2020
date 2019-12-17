@@ -1,0 +1,36 @@
+uuid: 404fa929-cfbc-4a6d-b466-e0776da8fcdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.session_slot.ief_table
+    - field.field.session_slot.session_slot.field_room
+    - field.field.session_slot.session_slot.field_session
+  module:
+    - pnwds_custom
+id: session_slot.session_slot.ief_table
+targetEntityType: session_slot
+bundle: session_slot
+mode: ief_table
+content:
+  field_room:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_session:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
