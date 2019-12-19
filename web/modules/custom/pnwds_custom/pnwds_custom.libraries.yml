@@ -1,5 +1,10 @@
 session_slot_grid:
   version: 1.x
+  js:
+    js/schedule.js: {}
   css:
     layout:
       css/session-slot-grid.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery

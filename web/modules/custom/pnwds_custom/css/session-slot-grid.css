@@ -4,6 +4,10 @@
 .field--name-field-session-slots .field__item {
   flex-grow: 1;
 }
-.filtered-hidden {
+.schedule-tags--hidden {
   opacity: .5;
+}
+.schedule-tags--highlight {
+  box-shadow: 0 0 2em #0a6eb4;
+
 }
