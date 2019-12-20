@@ -9,8 +9,6 @@
     var $conference = $(this);
 
     $(window).off('hashchange.form-fragment').on('hashchange', function(event) {
-      // Don't set history.
-      event.preventDefault();
 
       updateCheckboxes(getHashTags());
       updateSessions(getHashTags());

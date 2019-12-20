@@ -38,6 +38,14 @@ function pnwds_custom_entity_type_alter(array &$entity_types) {
 
 function pnwds_custom_theme($existing, $type, $theme, $path) {
   return array(
+    'conference' => array(
+      'render element' => 'content',
+      'file' => 'conference.page.inc'
+    ),
+    'schedule' => array(
+      'render element' => 'content',
+      'file' => 'schedule.page.inc'
+    ),
     'time_slot' => array(
       'render element' => 'content',
       'file' => 'time_slot.page.inc'
@@ -45,14 +53,6 @@ function pnwds_custom_theme($existing, $type, $theme, $path) {
     'session_slot' => array(
       'render element' => 'content',
       'file' => 'session_slot.page.inc'
-    ),
-    'schedule' => array(
-      'render element' => 'content',
-      'file' => 'schedule.page.inc'
-    ),
-    'conference' => array(
-      'render element' => 'content',
-      'file' => 'conference.page.inc'
     ),
     'session' => array(
       'render element' => 'content',

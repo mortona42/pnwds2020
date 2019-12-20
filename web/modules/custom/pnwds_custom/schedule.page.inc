@@ -20,5 +20,4 @@ use Drupal\Core\Render\Element;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_schedule(array &$variables) {
-  $asdf = 'asdf';
 }
