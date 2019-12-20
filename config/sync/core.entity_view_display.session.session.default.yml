@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.session.session.field_description
-    - field.field.session.session.field_session_slot
+    - field.field.session.session.field_slides
     - field.field.session.session.field_tags
   module:
+    - file
     - pnwds_custom
     - text
     - user
@@ -21,6 +22,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_slides:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_tags:
     weight: 0
@@ -45,5 +54,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_session_slot: true
+hidden: {  }
