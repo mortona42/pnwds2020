@@ -8,6 +8,7 @@
  */
 
 use Drupal\Core\Render\Element;
+use Drupal\Core\Link;
 
 /**
  * Prepares variables for Session slot templates.
@@ -24,5 +25,5 @@ function template_preprocess_session_slot(array &$variables) {
 
   $edit_form = $session_slot->toUrl('edit-form');
   $edit_form->setOption('query', ['destination' => \Drupal::service('path.current')->getPath()]);
-  $variables['edit_form'] = \Drupal\Core\Link::fromTextAndUrl(t('edit'), $edit_form);
+  $variables['edit_form'] = Link::fromTextAndUrl(t('edit'), $edit_form);
 }

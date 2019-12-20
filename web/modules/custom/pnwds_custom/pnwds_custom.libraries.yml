@@ -1,10 +1,12 @@
-session_slot_grid:
-  version: 1.x
-  js:
-    js/schedule.js: {}
+session-slot-grid:
   css:
     layout:
       css/session-slot-grid.css: {}
+
+schedule-filter:
+  version: 1.x
+  js:
+    js/schedule-filter.js: {}
   dependencies:
     - core/jquery
     - core/drupal

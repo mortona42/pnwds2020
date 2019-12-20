@@ -1,8 +1,0 @@
-<div class="schedule-filters form-checkboxes">
-  {%  for session_tag, session_tag_label in session_tags %}
-    <div class="form-item">
-      <input id="session-tag--{{ session_tag }}" type="checkbox" tag="{{ session_tag }}">
-      <label for="session-tag--{{ session_tag }}">{{ session_tag_label }}</label>
-    </div>
-  {% endfor %}
-</div>

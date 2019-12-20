@@ -22,11 +22,7 @@
     </h2>
   {% endif %}
 
-  <div class="session--tags">
-    {% for tag in session_tags %}
-      <div>
-        <a class="session-tag" tag="{{ tag.label()|clean_class }}">{{ tag.label() }}</a>
-      </div>
-    {% endfor %}
-  </div>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
 </div>

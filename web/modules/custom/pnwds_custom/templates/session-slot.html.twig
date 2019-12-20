@@ -17,5 +17,7 @@
 #}
 <div{{ attributes.addClass('session_slot') }}>
   {{ edit_form }}
-  {{- content -}}
+  {% if content %}
+    {{- content -}}
+  {% endif %}
 </div>

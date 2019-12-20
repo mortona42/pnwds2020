@@ -1,7 +1,7 @@
-.field--name-field-session-slots {
+.session-slot-grid {
   display: flex;
 }
-.field--name-field-session-slots .field__item {
+.session-slot-grid > div {
   flex-grow: 1;
 }
 .schedule-tags--hidden {

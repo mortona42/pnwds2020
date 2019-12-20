@@ -71,14 +71,13 @@ function pnwds_custom_theme($existing, $type, $theme, $path) {
 }
 
 function template_preprocess_session_filter(&$variables) {
-  $variables['#attached']['library'] = 'pnwds_custom/session_slot_grid';
-
   $session_tags = $variables['session_filter']['#session_tags'];
+  $variables['session_filter']['#attached']['library'][] = 'pnwds_custom/schedule-filter';
   foreach ($session_tags as $session_tag_id => $session_tag_label) {
     $variables['session_filter'][] = [
       '#theme' => 'session_filter_checkbox',
       '#session_tag_id' => $session_tag_id,
-      '#session_tag_label' => $session_tag_label,
+      '#session_tag_label' => $session_tag_label
     ];
   }
 }

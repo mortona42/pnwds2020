@@ -16,5 +16,7 @@
  */
 #}
 <div{{ attributes.addClass('time_slot') }}>
-  {{- content -}}
+  {% if content %}
+    {{- content -}}
+  {% endif %}
 </div>

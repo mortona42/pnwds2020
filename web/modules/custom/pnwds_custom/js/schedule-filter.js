@@ -25,7 +25,6 @@
     function getChecked($sessionFilter) {
       var checked = [];
       $sessionFilter.find('input[type="checkbox"]:checked').each(function() {
-        console.log(this);
         checked.push($(this).attr('tag'));
       });
       return checked;
@@ -100,5 +99,13 @@
         }
       });
     }
+
+    $conference.find('.session-tag').each(function() {
+      $(this).on('click', function(event) {
+        event.preventDefault();
+        var clickedTag = $(event.target).attr('tag');
+        $sessionFilter.find('input[tag="' + clickedTag + '"]').trigger('click');
+      });
+    });
   };
 })(jQuery, Drupal);

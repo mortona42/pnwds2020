@@ -20,4 +20,6 @@ use Drupal\Core\Render\Element;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_time_slot(array &$variables) {
+  $variables['#attached']['library'][] = 'pnwds_custom/session-slot-grid';
+  $variables['content']['field_session_slots']['#attributes']['class'][] = 'session-slot-grid';
 }
