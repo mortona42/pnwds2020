@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_integer
     - node.type.page
   module:
     - path
@@ -32,13 +31,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_integer:
-    weight: 121
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
   path:
     type: path
     weight: 30
