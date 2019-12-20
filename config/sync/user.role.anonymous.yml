@@ -15,3 +15,6 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view commerce_product'
+  - 'view published conference entities'
+  - 'view published schedule entities'
+  - 'view published session entities'
