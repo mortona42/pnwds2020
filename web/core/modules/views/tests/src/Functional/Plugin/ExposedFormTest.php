@@ -198,12 +198,14 @@ class ExposedFormTest extends ViewTestBase {
 
   /**
    * Tests the exposed block functionality.
+   *
+   * @dataProvider providerTestExposedBlock
    */
-  public function testExposedBlock() {
+  public function testExposedBlock($display) {
     $this->drupalCreateContentType(['type' => 'page']);
     $view = Views::getView('test_exposed_block');
-    $view->setDisplay('page_1');
-    $block = $this->drupalPlaceBlock('views_exposed_filter_block:test_exposed_block-page_1');
+    $view->setDisplay($display);
+    $block = $this->drupalPlaceBlock('views_exposed_filter_block:test_exposed_block-' . $display);
 
     // Set label to display on the exposed filter form block.
     $block->getPlugin()->setConfigurationValue('label_display', TRUE);
@@ -251,6 +253,19 @@ class ExposedFormTest extends ViewTestBase {
       $this->assertCacheContext('url');
       $this->assertOptionSelected('edit-type', $argument);
     }
+  }
+
+  /**
+   * Data provider for testing different types of displays.
+   *
+   * @return array
+   *   Array of display names to test.
+   */
+  public function providerTestExposedBlock() {
+    return [
+      'page_display' => ['page_1'],
+      'block_display' => ['block_1'],
+    ];
   }
 
   /**
