@@ -8,7 +8,6 @@
  */
 
 use Drupal\Core\Render\Element;
-use Drupal\pnwds_custom\Form\TagsFilter;
 
 /**
  * Prepares variables for Schedule templates.
@@ -21,5 +20,5 @@ use Drupal\pnwds_custom\Form\TagsFilter;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_schedule(array &$variables) {
-  $variables['filter'] = \Drupal::formBuilder()->getForm(TagsFilter::class);
+  $asdf = 'asdf';
 }

@@ -7,4 +7,5 @@ session_slot_grid:
       css/session-slot-grid.css: {}
   dependencies:
     - core/jquery
-    - core/jquery
+    - core/drupal
+    - core/jquery.once

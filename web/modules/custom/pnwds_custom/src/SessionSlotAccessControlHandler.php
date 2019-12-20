@@ -24,6 +24,8 @@ class SessionSlotAccessControlHandler extends EntityAccessControlHandler {
 
       case 'view':
 
+        return AccessResult::allowedIfHasPermission($account, 'access content');
+
       case 'update':
 
         return AccessResult::allowedIfHasPermission($account, 'edit session slot entities');

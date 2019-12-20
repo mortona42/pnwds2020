@@ -24,12 +24,7 @@ class TimeSlotAccessControlHandler extends EntityAccessControlHandler {
 
       case 'view':
 
-//        if (!$entity->isPublished()) {
-//          return AccessResult::allowedIfHasPermission($account, 'view unpublished time slot entities');
-//        }
-//
-//
-//        return AccessResult::allowedIfHasPermission($account, 'view published time slot entities');
+        return AccessResult::allowedIfHasPermission($account, 'access content');
 
       case 'update':
 

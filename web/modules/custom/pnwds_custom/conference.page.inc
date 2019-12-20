@@ -20,11 +20,5 @@ use Drupal\Core\Render\Element;
  *   - attributes: HTML attributes for the containing element.
  */
 function template_preprocess_conference(array &$variables) {
-  // Fetch Conference Entity Object.
-  $conference = $variables['elements']['#conference'];
-
-  // Helpful $content variable for templates.
-  foreach (Element::children($variables['elements']) as $key) {
-    $variables['content'][$key] = $variables['elements'][$key];
-  }
+  $asdf = 'asdf';
 }

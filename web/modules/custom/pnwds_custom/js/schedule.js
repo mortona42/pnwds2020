@@ -1,14 +1,14 @@
 (function ($, Drupal) {
   Drupal.behaviors.schedule = {
     attach: function attach(context, settings) {
-      $('.schedule', context).once('schedule').each(Drupal.scheduleFilters);
+      $('.conference', context).once('conference').each(Drupal.scheduleFilters);
     }
   };
 
   Drupal.scheduleFilters = function() {
-    var $schedule = $(this);
+    var $conference = $(this);
 
-    $(window).on('hashchange', function(event) {
+    $(window).off('hashchange.form-fragment').on('hashchange', function(event) {
       // Don't set history.
       event.preventDefault();
 
@@ -17,44 +17,17 @@
     });
     $(window).trigger('hashchange');
 
-    var existingTags = {};
-    $(this).find('.session-tag').map(function() {
-      existingTags[$(this).attr('tag')] = $(this).text();
+    var $sessionFilter = $conference.find('.session-filter');
+    $sessionFilter.find('input[type="checkbox"]').each(function() {
+      $(this).on('click', function() {
+        updateHash($sessionFilter);
+      });
     });
 
-    var $sessionFilterForm = $('<form>', {'class': 'schedule-tags-filter'})
-      .append($('<div>', {'class': 'form-checkboxes'}));
-    $schedule.append($sessionFilterForm);
-
-    var $sessionFilterFormCheckboxes = $sessionFilterForm.find('.form-checkboxes');
-
-    for (const tag in existingTags) {
-      var $formItem = $('<div>', {'class': 'form-item'});
-      var $checkbox = $('<input>', {
-        'type': 'checkbox',
-        'id': 'session-tag-filter--' + tag,
-        'tag': tag,
-        'checked': getHashTags().includes(tag)
-      })
-      .on('click', function() {
-        updateHash($sessionFilterForm);
-      });
-      var $label = $('<label>', {
-        'for': 'session-tag-filter--' + tag,
-        'class': 'option',
-        'tag': tag,
-        'html': existingTags[tag]
-      });
-
-      $formItem.append($checkbox)
-        .append(' ')
-        .append($label);
-      $sessionFilterFormCheckboxes.append($formItem);
-    }
-
-    function getChecked($scheduleFilterForm) {
+    function getChecked($sessionFilter) {
       var checked = [];
-      $scheduleFilterForm.find('input[type="checkbox"]:checked').each(function() {
+      $sessionFilter.find('input[type="checkbox"]:checked').each(function() {
+        console.log(this);
         checked.push($(this).attr('tag'));
       });
       return checked;
@@ -73,8 +46,8 @@
       return hashTags;
     }
 
-    function updateHash($scheduleFilterForm) {
-      var checked = getChecked($scheduleFilterForm);
+    function updateHash($sessionFilter) {
+      var checked = getChecked($sessionFilter);
       var hash = '';
       if (checked.length >=1) {
         hash = '#tags=' + checked.join(',');
@@ -90,7 +63,7 @@
     }
 
     function updateCheckboxes(hashTags) {
-      $schedule.find('.schedule-tags-filter input[type="checkbox"]:checked').each(function() {
+      $conference.find('.session-filter input[type="checkbox"]').each(function() {
         $checkbox = $(this);
         $checkbox.prop('checked', hashTags.includes($checkbox.attr('tag')));
       });
@@ -99,7 +72,7 @@
     function updateSessions(hashTags) {
       hashTags = getHashTags();
 
-      $schedule.find('.session').each(function() {
+      $conference.find('.session').each(function() {
         var $session = $(this);
         var sessionTags = [];
         $session.find('.session-tag').each(function() {

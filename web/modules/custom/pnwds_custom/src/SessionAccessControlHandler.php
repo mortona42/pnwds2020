@@ -24,12 +24,7 @@ class SessionAccessControlHandler extends EntityAccessControlHandler {
 
       case 'view':
 
-        if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished session entities');
-        }
-
-
-        return AccessResult::allowedIfHasPermission($account, 'view published session entities');
+        return AccessResult::allowedIfHasPermission($account, 'access content');
 
       case 'update':
 

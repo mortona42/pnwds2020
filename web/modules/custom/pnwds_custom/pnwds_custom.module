@@ -50,9 +50,35 @@ function pnwds_custom_theme($existing, $type, $theme, $path) {
       'render element' => 'content',
       'file' => 'schedule.page.inc'
     ),
+    'conference' => array(
+      'render element' => 'content',
+      'file' => 'conference.page.inc'
+    ),
     'session' => array(
       'render element' => 'content',
       'file' => 'session.page.inc'
     ),
+    'session_filter' => [
+      'render element' => 'session_filter'
+    ],
+    'session_filter_checkbox' => [
+      'variables' => [
+        'session_tag_id' => null,
+        'session_tag_label' => null
+      ]
+    ]
   );
+}
+
+function template_preprocess_session_filter(&$variables) {
+  $variables['#attached']['library'] = 'pnwds_custom/session_slot_grid';
+
+  $session_tags = $variables['session_filter']['#session_tags'];
+  foreach ($session_tags as $session_tag_id => $session_tag_label) {
+    $variables['session_filter'][] = [
+      '#theme' => 'session_filter_checkbox',
+      '#session_tag_id' => $session_tag_id,
+      '#session_tag_label' => $session_tag_label,
+    ];
+  }
 }

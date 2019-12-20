@@ -15,12 +15,6 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('pnwds_custom/session_slot_grid') }}
 <div{{ attributes.addClass('time_slot') }}>
-  <h1>{{ content.name }}</h1>
-  {{ content.field_time }}
-
-  <div class="session-slot-grid">
-    {{ content.field_session_slots }}
-  </div>
+  {{- content -}}
 </div>

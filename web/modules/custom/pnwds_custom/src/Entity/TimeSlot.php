@@ -92,9 +92,6 @@ class TimeSlot extends ContentEntityBase implements TimeSlotInterface {
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
-    // Add the published field.
-//    $fields += static::publishedBaseFieldDefinitions($entity_type);
-
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Time slot name'))
       ->setDescription(t('Time slot name. IE "Registration" or "Session 1".'))
@@ -115,12 +112,6 @@ class TimeSlot extends ContentEntityBase implements TimeSlotInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
-
-//    $fields['status']->setDescription(t('A boolean indicating whether the Time slot is published.'))
-//      ->setDisplayOptions('form', [
-//        'type' => 'boolean_checkbox',
-//        'weight' => -3,
-//      ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
