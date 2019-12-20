@@ -80,3 +80,9 @@ session.admin.structure.settings:
   route_name: session.settings
   parent: pnwds_custom.admin
   weight: 100
+
+pnwds_custom.user_menu.session.add_form:
+  title: 'Add Session'
+  route_name: entity.session.add_form
+  menu_name: account
+  wieght: 1
