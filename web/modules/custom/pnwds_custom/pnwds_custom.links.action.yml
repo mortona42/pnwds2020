@@ -28,3 +28,10 @@ entity.conference.add_form:
   title: 'Add Conference'
   appears_on:
     - entity.conference.collection
+
+pnwds_custom.user.session.add_form:
+  route_name: entity.session.add_form
+  title: 'Add Session'
+  appears_on:
+    - view.user_sessions.page_1
+
