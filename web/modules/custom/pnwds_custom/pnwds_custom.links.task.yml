@@ -107,3 +107,8 @@ entity.conference.delete_form:
   base_route:  entity.conference.canonical
   title: Delete
   weight: 10
+
+pnwds_custom.schedule.task:
+  route_name: pnwds_custom.schedule_controller_schedule
+  base_route: pnwds_custom.schedule_controller_schedule
+  title: 'Schedule'
