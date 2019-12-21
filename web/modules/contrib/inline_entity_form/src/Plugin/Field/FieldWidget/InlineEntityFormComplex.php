@@ -206,15 +206,12 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
     $labels = $this->getEntityTypeLabels();
 
     // Build a parents array for this element's values in the form.
-    $parents = array_merge($element['#field_parents'], [
-      $items->getName(),
-      'form',
-    ]);
+    $parents = $this->iefIdParents($items->getName(), $element['#field_parents']);
 
     // Assign a unique identifier to each IEF widget.
     // Since $parents can get quite long, sha1() ensures that every id has
     // a consistent and relatively short length while maintaining uniqueness.
-    $this->setIefId(sha1(implode('-', $parents)));
+    $this->setIefId($this->iefIdFromParents($parents));
 
     // Get the langcode of the parent entity.
     $parent_langcode = $items->getEntity()->language()->getId();
@@ -307,7 +304,7 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
               $entity->bundle(),
               $parent_langcode,
               $key,
-              array_merge($parents, ['inline_entity_form', 'entities', $key, 'form']),
+              array_merge($parents, [$key, 'inline_entity_form', 'entities', $key, 'form']),
               $value['form'] == 'edit' ? $entity : $entity->createDuplicate()
             ),
           ];
@@ -324,7 +321,7 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
             '#attributes' => ['class' => ['ief-form', 'ief-form-row']],
             // Used by Field API and controller methods to find the relevant
             // values in $form_state.
-            '#parents' => array_merge($parents, ['entities', $key, 'form']),
+            '#parents' => array_merge($parents, [$key, 'entities', $key, 'form']),
             // Store the entity on the form, later modified in the controller.
             '#entity' => $entity,
             // Identifies the IEF widget to which the form belongs.
@@ -534,7 +531,7 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
             $this->determineBundle($form_state),
             $parent_langcode,
             NULL,
-            array_merge($parents, ['inline_entity_form'])
+            array_merge($parents, [count($entities)])
           )
         ];
         $element['form']['inline_entity_form']['#process'] = [
@@ -551,7 +548,7 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
           '#ief_id' => $this->getIefId(),
           // Used by Field API and controller methods to find the relevant
           // values in $form_state.
-          '#parents' => array_merge($parents),
+          '#parents' => array_merge($parents, [count($entities)]),
           '#entity_type' => $target_type,
           '#ief_labels' => $this->getEntityTypeLabels(),
           '#match_operator' => $this->getSetting('match_operator'),
@@ -596,8 +593,7 @@ class InlineEntityFormComplex extends InlineEntityFormBase implements ContainerF
     }
 
     $field_name = $this->fieldDefinition->getName();
-    $parents = array_merge($form['#parents'], [$field_name, 'form']);
-    $ief_id = sha1(implode('-', $parents));
+    $ief_id = $this->iefIdFromParents($this->iefIdParents($field_name, $form['#parents']));
     $this->setIefId($ief_id);
     $widget_state = &$form_state->get(['inline_entity_form', $ief_id]);
     foreach ($widget_state['entities'] as $key => $value) {

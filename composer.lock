@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf788712a776427ef6894d4aa8fcc8fa",
+    "content-hash": "71cb371659761711d8aed43e3a3b7e32",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2733,6 +2733,10 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Unable to keep nested IEF data separate with multivalue fields.": "https://www.drupal.org/files/issues/2018-05-30/multivalue-complex-and-simple-ief-fix-2653574-100.patch",
+                    "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

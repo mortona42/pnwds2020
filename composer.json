@@ -94,6 +94,10 @@
             },
             "drupal/eva": {
                 "Config form broken on single bundle and bundleless entities": "https://www.drupal.org/files/issues/2019-12-15/eva-single-bundle-config-form-3101133-5.patch"
+            },
+            "drupal/inline_entity_form": {
+                "Unable to keep nested IEF data separate with multivalue fields.": "https://www.drupal.org/files/issues/2018-05-30/multivalue-complex-and-simple-ief-fix-2653574-100.patch",
+                "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
             }
         }
     }
