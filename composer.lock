@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71cb371659761711d8aed43e3a3b7e32",
+    "content-hash": "cb67338e98cc4d00d249efb9b39fd1c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2115,6 +2115,65 @@
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
+        },
+        {
+            "name": "drupal/better_exposed_filters",
+            "version": "dev-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
+                "reference": "43bb77d103c39673f4dcc76dba2ac440afe9d97f"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-alpha1+6-dev",
+                    "datestamp": "1576857184",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Keran",
+                    "homepage": "https://www.drupal.org/u/mikeker"
+                },
+                {
+                    "name": "Martin Keereman",
+                    "homepage": "https://www.drupal.org/u/etroid"
+                },
+                {
+                    "name": "jkopel",
+                    "homepage": "https://www.drupal.org/user/66207"
+                },
+                {
+                    "name": "mikeker",
+                    "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Replaces the Views default single- or multi-select boxes with more advanced options.",
+            "homepage": "https://www.drupal.org/project/better_exposed_filters",
+            "support": {
+                "source": "https://git.drupalcode.org/project/better_exposed_filters",
+                "issues": "https://www.drupal.org/project/issues/better_exposed_filters"
+            },
+            "time": "2019-12-20T16:17:28+00:00"
         },
         {
             "name": "drupal/console",
@@ -7345,6 +7404,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Function drush_drupal_cache_clear_all is removed": "https://www.drupal.org/files/issues/2019-12-04/drush_drupal_cache_clear_all_drush10-3093421-9.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7399,6 +7461,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Config form broken on single bundle and bundleless entities": "https://www.drupal.org/files/issues/2019-12-15/eva-single-bundle-config-form-3101133-5.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9477,6 +9542,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/better_exposed_filters": 20,
         "drupal/inline_entity_form": 5
     },
     "prefer-stable": true,
