@@ -18,15 +18,6 @@ targetEntityType: time_slot
 bundle: time_slot
 mode: default
 content:
-  field_session_slots:
-    type: entity_reference_entity_view
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
   field_time:
     weight: 1
     label: hidden
@@ -44,4 +35,5 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_session_slots: true

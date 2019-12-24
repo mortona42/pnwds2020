@@ -3,31 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.schedule.schedule.field_day
+    - field.field.schedule.schedule.field_date
     - field.field.schedule.schedule.field_time_slots
   module:
+    - datetime
     - pnwds_custom
 id: schedule.schedule.default
 targetEntityType: schedule
 bundle: schedule
 mode: default
 content:
-  field_day:
-    weight: 1
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_time_slots:
+  field_date:
     weight: 2
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: datetime_default
     region: content
   name:
     label: hidden
@@ -37,4 +30,5 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_time_slots: true

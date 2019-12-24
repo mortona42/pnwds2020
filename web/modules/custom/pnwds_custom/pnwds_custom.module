@@ -66,9 +66,19 @@ function pnwds_custom_theme($existing, $type, $theme, $path) {
         'session_tag_id' => null,
         'session_tag_label' => null
       ]
+    ],
+    'views_view_unformatted__schedule' => [
+      'template' => 'views-view-unformatted--pnwds-custom',
+      'base hook' => 'views_view_unformatted'
     ]
   );
 }
+
+//function pnwds_custom_theme_suggstions_views_view_unformatted(&$variables) {
+//  $suggestions = [];
+//  $suggestions[] = 'views_view_unformatted__pnwds_custom';
+//  return $suggestions;
+//}
 
 function template_preprocess_session_filter(&$variables) {
   $session_tags = $variables['session_filter']['#session_tags'];
@@ -81,3 +91,10 @@ function template_preprocess_session_filter(&$variables) {
     ];
   }
 }
+
+//function pnwds_custom_preprocess_views_view_unformatted(&$variables) {
+//  $view = $variables['view'];
+//  if ($view->id() == 'schedule') {
+//    $variables['theme_hook_suggestions'][] = 'views_view_unformatted__pnwds_custom';
+//  }
+//}

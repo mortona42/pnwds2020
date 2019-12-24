@@ -16,7 +16,8 @@
  */
 #}
 <div{{ attributes.addClass('time_slot') }}>
-  {% if content %}
-    {{- content -}}
+  <h3>{{ content.name }}</h3>
+  {% if content.field_time %}
+    {{- content.field_time -}}
   {% endif %}
 </div>

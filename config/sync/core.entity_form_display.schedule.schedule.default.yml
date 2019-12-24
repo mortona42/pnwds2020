@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.schedule.schedule.field_day
+    - field.field.schedule.schedule.field_date
     - field.field.schedule.schedule.field_time_slots
   module:
+    - datetime
     - inline_entity_form
     - pnwds_custom
 id: schedule.schedule.default
@@ -13,23 +14,27 @@ targetEntityType: schedule
 bundle: schedule
 mode: default
 content:
-  field_day:
-    weight: 1
+  field_date:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: datetime_default
     region: content
   field_time_slots:
-    weight: 2
+    weight: 3
     settings:
       form_mode: default
       override_labels: true
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
+      label_singular: 'Time slot'
+      label_plural: 'Time slots'
+      collapsible: true
+      allow_new: true
+      match_operator: CONTAINS
       collapsed: false
+      allow_existing: false
+      allow_duplicate: false
     third_party_settings: {  }
-    type: inline_entity_form_simple
+    type: inline_entity_form_complex
     region: content
   name:
     type: string_textfield

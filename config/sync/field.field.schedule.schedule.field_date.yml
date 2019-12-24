@@ -1,0 +1,21 @@
+uuid: d343de5c-5840-4cee-b335-2b97df5c50b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.schedule.field_date
+  module:
+    - datetime
+    - pnwds_custom
+id: schedule.schedule.field_date
+field_name: field_date
+entity_type: schedule
+bundle: schedule
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

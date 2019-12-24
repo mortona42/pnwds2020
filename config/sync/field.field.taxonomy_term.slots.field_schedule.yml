@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_schedule
-    - taxonomy.vocabulary.schedule
     - taxonomy.vocabulary.slots
 id: taxonomy_term.slots.field_schedule
 field_name: field_schedule
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      schedule: schedule
+    target_bundles: {  }
     sort:
       field: name
       direction: asc

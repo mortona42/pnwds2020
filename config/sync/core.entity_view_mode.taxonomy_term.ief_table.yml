@@ -1,0 +1,10 @@
+uuid: 1fbd63cd-c7ab-4a5b-b39f-a20c8b224e2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: taxonomy_term
+cache: true

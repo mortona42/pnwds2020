@@ -31,7 +31,6 @@ function template_preprocess_session(array &$variables) {
   }
 
   $variables['url'] = $session->toUrl('canonical')->toString();
-  $variables['label'] = $session->label();
   $variables['page'] = !empty(\Drupal::requestStack()->getCurrentRequest()->attributes->get('session'));
 
 }

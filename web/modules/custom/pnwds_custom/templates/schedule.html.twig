@@ -16,7 +16,6 @@
  */
 #}
 <div{{ attributes.addClass('schedule') }}>
-  {% if content %}
-    {{- content -}}
-  {% endif %}
+  <h2>{{ content.name }}</h2>
+  {{ content.field_date }}
 </div>
