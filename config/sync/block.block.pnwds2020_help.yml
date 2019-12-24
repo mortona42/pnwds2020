@@ -1,0 +1,22 @@
+uuid: 73d34f8c-c5ae-4670-8a8d-a0c73d366a3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pnwds2020
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: pnwds2020_help
+theme: pnwds2020
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

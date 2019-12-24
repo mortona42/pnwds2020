@@ -39,6 +39,8 @@ module:
   pnwds_custom: 0
   quickedit: 0
   rdf: 0
+  register_display: 0
+  registration_link: 0
   search: 0
   settings_tray: 0
   shortcut: 0
@@ -59,6 +61,7 @@ theme:
   classy: 0
   bartik: 0
   seven: 0
+  pnwds2020: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

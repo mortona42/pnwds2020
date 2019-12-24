@@ -102,6 +102,9 @@
             },
             "drupal/verf": {
                 "fix options": "patches/verf-load_options-2998697-22.patch"
+            },
+            "drupal/better_exposed_filters": {
+                "Option to lay out checkboxes horizontally": "https://www.drupal.org/files/issues/2019-12-20/better_exposed_filters-horizontal_checkboxes-3102468-3.patch"
             }
         }
     }

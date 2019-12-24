@@ -91,6 +91,7 @@ function template_preprocess_bef_checkboxes(array &$variables) {
   $variables['children'] = Element::children($element);
   $variables['show_select_all_none'] = $element['#bef_select_all_none'] ?? FALSE;
   $variables['show_select_all_none_nested'] = $element['#bef_select_all_none_nested'] ?? FALSE;
+  $variables['display_inline'] = $element['#bef_display_inline'] ?? FALSE;
 
   // Set element name.
   $variables['attributes']['name'] = $element['#name'];

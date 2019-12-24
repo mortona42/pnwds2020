@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - system.menu.main
     - taxonomy.vocabulary.tags
   module:
     - better_exposed_filters
@@ -69,6 +70,7 @@ display:
                   is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
+                display_inline: 1
       pager:
         type: mini
         options:
@@ -380,7 +382,48 @@ display:
           admin_label: 'field_tags: Taxonomy term'
           required: false
           plugin_id: standard
-      arguments: {  }
+      arguments:
+        name:
+          id: name
+          table: schedule
+          field: name
+          relationship: reverse__schedule__field_time_slots
+          group_type: group
+          admin_label: ''
+          default_action: ignore
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: 'Schedule {{ arguments.name }}'
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: false
+          break_phrase: false
+          entity_type: schedule
+          entity_field: name
+          plugin_id: string
       display_extenders: {  }
       group_by: false
       hide_attachment_summary: false
@@ -405,6 +448,15 @@ display:
     display_options:
       display_extenders: {  }
       path: schedule
+      menu:
+        type: normal
+        title: Schedule
+        description: ''
+        expanded: true
+        parent: ''
+        weight: 1
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

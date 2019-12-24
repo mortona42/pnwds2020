@@ -1,0 +1,111 @@
+body {
+  font-family: 'sans';
+}
+
+h1 {
+  margin: 1rem 0 .5rem;
+}
+
+h2 a,
+h2 a:hover,
+h2 a:focus,
+h2 a:active,
+h2 a:visited {
+  color: #444;
+  text-decoration: none;
+}
+
+.layout-container {
+  max-width: 960px;
+  margin: auto;
+}
+
+#block-pnwds2020-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#block-pnwds2020-branding > a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: uppercase;
+}
+
+.navigation ul.menu {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+#block-pnwds2020-main-menu {
+  background-color: #1963a3;
+  padding: 1rem 0;
+}
+
+#block-pnwds2020-main-menu ul.menu li {
+  margin-right: 1rem;
+  font-size: .9rem;
+  margin: 0 1rem;
+}
+
+#block-pnwds2020-main-menu ul.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+#block-pnwds2020-account-menu ul.menu {
+  justify-content: flex-end;
+}
+
+#block-pnwds2020-account-menu ul.menu li {
+  margin-left: 1rem;
+  font-size: .8rem;
+}
+#block-pnwds2020-account-menu ul.menu li a,
+#block-pnwds2020-account-menu ul.menu li a:hover,
+#block-pnwds2020-account-menu ul.menu li a:active,
+#block-pnwds2020-account-menu ul.menu li a:focus,
+#block-pnwds2020-account-menu ul.menu li a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+
+#views-exposed-form-schedule-page {
+  display: flex;
+  align-items: end;
+}
+
+#views-exposed-form-schedule-page #edit-tid--wrapper legend {
+  display: none;
+}
+
+
+#search-block-form {
+  display: flex;
+  position: relative;
+}
+
+#block-pnwds2020-local-tasks {
+  overflow: auto;
+}
+#block-pnwds2020-local-tasks > ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+#block-pnwds2020-local-tasks > ul li a {
+  border: 1px solid #1963a3;
+  padding: .5rem;
+  text-decoration: none;
+  color: #00874b;
+  margin-right: .5rem;
+  display: block;
+}

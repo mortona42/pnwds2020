@@ -1,23 +1,23 @@
-uuid: d59300bb-8e56-4008-b03f-d4de199b807d
+uuid: a6b60dd0-2c5e-4de5-95fa-fb482bb55bdf
 langcode: en
 status: false
 dependencies:
   module:
     - search
   theme:
-    - bartik
+    - pnwds2020
 _core:
   default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
-id: bartik_search
-theme: bartik
-region: sidebar_first
-weight: -1
+id: pnwds2020_search
+theme: pnwds2020
+region: secondary_menu
+weight: -5
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
   label: Search
   provider: search
-  label_display: visible
+  label_display: '0'
   page_id: node_search
 visibility: {  }

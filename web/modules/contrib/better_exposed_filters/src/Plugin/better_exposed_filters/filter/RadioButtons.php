@@ -22,6 +22,7 @@ class RadioButtons extends FilterWidgetBase {
     return parent::defaultConfiguration() + [
       'select_all_none' => FALSE,
       'select_all_none_nested' => FALSE,
+      'display_inline' => FALSE,
     ];
   }
 
@@ -49,6 +50,14 @@ class RadioButtons extends FilterWidgetBase {
       '#default_value' => !empty($this->configuration['select_all_none_nested']),
       '#disabled' => !$filter->options['expose']['multiple'] || !$filter->options['hierarchy'],
       '#description' => $this->t('When a parent checkbox is checked, check all its children. If this option is disabled, edit the filter and check "Allow multiple selections" and edit the filter settings and check "Show hierarchy in dropdown".'
+      ),
+    ];
+
+    $form['display_inline'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Display inline'),
+      '#default_value' => !empty($this->configuration['display_inline']),
+      '#description' => $this->t('Display checkbox/radio options inline.'
       ),
     ];
 
@@ -88,6 +97,7 @@ class RadioButtons extends FilterWidgetBase {
         // Show all/none option.
         $form[$field_id]['#bef_select_all_none'] = $this->configuration['select_all_none'];
         $form[$field_id]['#bef_select_all_none_nested'] = $this->configuration['select_all_none_nested'];
+        $form[$field_id]['#bef_display_inline'] = $this->configuration['display_inline'];
 
         // Attach the JS (@see /js/bef_select_all_none.js)
         $form['#attached']['library'][] = 'better_exposed_filters/select_all_none';

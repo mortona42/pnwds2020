@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb67338e98cc4d00d249efb9b39fd1c3",
+    "content-hash": "031b20c8be7edf56ad7cb1ba8a43af7c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2139,6 +2139,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Option to lay out checkboxes horizontally": "https://www.drupal.org/files/issues/2019-12-20/better_exposed_filters-horizontal_checkboxes-3102468-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7404,9 +7407,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Function drush_drupal_cache_clear_all is removed": "https://www.drupal.org/files/issues/2019-12-04/drush_drupal_cache_clear_all_drush10-3093421-9.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7461,9 +7461,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Config form broken on single bundle and bundleless entities": "https://www.drupal.org/files/issues/2019-12-15/eva-single-bundle-config-form-3101133-5.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

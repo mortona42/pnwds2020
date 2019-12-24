@@ -1,0 +1,10 @@
+name: PNWDS2020
+description: Theme for PNWDS 2020.
+type: theme
+core: 8.x
+base theme: stable
+
+libraries:
+  - pnwds2020/styles
+
+logo: logo.png
