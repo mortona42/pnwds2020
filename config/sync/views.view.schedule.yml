@@ -397,9 +397,10 @@ display:
             title: All
           title_enable: true
           title: 'Schedule {{ arguments.name }}'
-          default_argument_type: fixed
+          default_argument_type: raw
           default_argument_options:
-            argument: ''
+            index: 1
+            use_alias: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -443,7 +444,7 @@ display:
   page:
     display_plugin: page
     id: page
-    display_title: Page
+    display_title: Full
     position: 1
     display_options:
       display_extenders: {  }
@@ -457,6 +458,7 @@ display:
         weight: 1
         context: '0'
         menu_name: main
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

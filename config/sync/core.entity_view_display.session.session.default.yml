@@ -10,7 +10,6 @@ dependencies:
     - file
     - pnwds_custom
     - text
-    - user
 id: session.session.default
 targetEntityType: session
 bundle: session
@@ -49,9 +48,10 @@ content:
     third_party_settings: {  }
   user_id:
     label: hidden
-    type: author
+    type: entity_reference_label
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
 hidden: {  }

@@ -6,22 +6,12 @@ dependencies:
     - field.field.schedule.schedule.field_date
     - field.field.schedule.schedule.field_time_slots
   module:
-    - datetime
     - pnwds_custom
 id: schedule.schedule.default
 targetEntityType: schedule
 bundle: schedule
 mode: default
 content:
-  field_date:
-    weight: 2
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   name:
     label: hidden
     type: string
@@ -31,4 +21,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_date: true
   field_time_slots: true

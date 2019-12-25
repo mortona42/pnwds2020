@@ -30,6 +30,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  menu_item_role_access: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -39,8 +40,6 @@ module:
   pnwds_custom: 0
   quickedit: 0
   rdf: 0
-  register_display: 0
-  registration_link: 0
   search: 0
   settings_tray: 0
   shortcut: 0

@@ -8,7 +8,6 @@
  */
 
 use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Render\Element;
 use Drupal\Core\Link;
 
 /**
@@ -25,8 +24,9 @@ function template_preprocess_session_slot(array &$variables) {
   $session_slot = $variables['content']['#session_slot'];
 
   $user = \Drupal::currentUser();
-  if (AccessResult::allowedIfHasPermission($user, 'edit session_slot entities'))
   $edit_form = $session_slot->toUrl('edit-form');
-  $edit_form->setOption('query', ['destination' => \Drupal::service('path.current')->getPath()]);
-  $variables['edit_form'] = Link::fromTextAndUrl(t('change session'), $edit_form);
+  if ($edit_form->access($user)) {
+    $edit_form->setOption('query', ['destination' => \Drupal::service('path.current')->getPath()]);
+    $variables['edit_form'] = Link::fromTextAndUrl(t('change session'), $edit_form);
+  }
 }

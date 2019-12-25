@@ -17,12 +17,15 @@
 #}
 <div{{ attributes.addClass('session') }}>
   {% if content.name and not page %}
+    {{ content.field_tags }}
     <h4{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ content.name }}</a>
     </h4>
+    {{ content.user_id }}
   {% endif %}
 
-  {% if content %}
+
+  {% if content and page %}
     {{- content -}}
   {% endif %}
 </div>

@@ -25,6 +25,7 @@ delete session slot entities:
 
 edit session slot entities:
   title: 'Edit Session slot entities'
+  restrict access: true
 
 add session entities:
   title: 'Create new Session entities'

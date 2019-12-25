@@ -16,6 +16,9 @@
  */
 #}
 <div{{ attributes.addClass('session_slot') }}>
-  {{ edit_form }}
-  {{ content }}
+  <div class="session_slot--meta">
+    {{ content.field_room }}
+    {{ edit_form }}
+  </div>
+  {{ content.field_session }}
 </div>

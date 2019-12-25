@@ -3,16 +3,42 @@ body {
 }
 
 h1 {
-  margin: 1rem 0 .5rem;
+  color: #111;
+  font-size: 2.5rem;
+  margin: 2rem 0 0;
+}
+h2 {
+  color: #222;
+  font-size: 2rem;
+  margin: 1.5rem 0 0;
+}
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 1rem 0 0;
+}
+h4 {
+  color: #444;
+  font-size: 1.25rem;
+  margin: .5rem 0 0;
 }
 
-h2 a,
-h2 a:hover,
-h2 a:focus,
-h2 a:active,
-h2 a:visited {
-  color: #444;
+.dialog-off-canvas-main-canvas a,
+.dialog-off-canvas-main-canvas a:hover,
+.dialog-off-canvas-main-canvas a:focus,
+.dialog-off-canvas-main-canvas a:active,
+.dialog-off-canvas-main-canvas a:visited {
+  color: #1963a3;
   text-decoration: none;
+}
+
+a.button {
+  border-radius: .8rem;
+  background-color: #1963a3;
+  color: white;
+  padding: .5rem;
+  display: inline-block;
+  margin: .5rem 0 .25rem;
 }
 
 .layout-container {
@@ -43,15 +69,21 @@ h2 a:visited {
   margin: 0;
 }
 
-#block-pnwds2020-main-menu {
+.region-primary-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1963a3;
-  padding: 1rem 0;
+  padding: 1rem;
+  border-radius: .2rem;
+}
+
+#block-pnwds2020-main-menu {
 }
 
 #block-pnwds2020-main-menu ul.menu li {
-  margin-right: 1rem;
   font-size: .9rem;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
 }
 
 #block-pnwds2020-main-menu ul.menu li a {
@@ -59,6 +91,13 @@ h2 a:visited {
   text-decoration: none;
 }
 
+li.button {
+  align-self: flex-end;
+}
+
+#block-pnwds2020-account-menu {
+  margin: 1rem 0 .5rem;
+}
 #block-pnwds2020-account-menu ul.menu {
   justify-content: flex-end;
 }
@@ -76,6 +115,23 @@ h2 a:visited {
   color: #444;
 }
 
+.conference-date {
+  text-align: right;
+}
+
+#block-conference li {
+  border-radius: .8rem;
+  padding: .5rem;
+  background-color: #11436e;
+  box-shadow: 0 .2rem .5rem #061828;
+}
+#block-conference li a,
+#block-conference li a:hover,
+#block-conference li a:active,
+#block-conference li a:focus,
+#block-conference li a:visited {
+  color: white;
+}
 
 #views-exposed-form-schedule-page {
   display: flex;
@@ -108,4 +164,40 @@ h2 a:visited {
   color: #00874b;
   margin-right: .5rem;
   display: block;
+}
+
+.time_slot {
+  display: flex;
+  align-items: baseline;
+  margin: 1rem 0 0;
+}
+
+.time_slot h3 {
+  margin-right: 1rem;
+}
+
+.session_slot {
+  margin: 1rem;
+}
+
+.session_slot--meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.session-slot-grid {
+  margin: 0 -.5rem;
+  align-items: stretch;
+}
+.session-slot-grid > div {
+  border-radius: .4rem .2rem;
+  box-shadow: .1rem .1rem .5rem #CCC;
+  margin: .5rem;
+  flex-basis: 0;
+}
+
+@media screen and (max-width:600px) {
+  .session-slot-grid {
+    flex-direction: column;
+  }
 }
