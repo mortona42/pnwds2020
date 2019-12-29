@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * @file
+ * Contains pnwds_custom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pnwds_custom_schedule_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pnwds_custom module.
+    case 'help.page.pnwds_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Customizations for PNWDS site.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Integration with Auto Entitylabel.
+ *
+ * Implements hook_entity_type_alter().
+ */
+function pnwds_custom_schedule_entity_type_alter(array &$entity_types) {
+  foreach ($entity_types as $entity_type) {
+    if ($entity_type->getProvider() == 'pnwds_custom') {
+      $entity_type->setLinkTemplate('auto-label', $entity_type->getLinkTemplate('collection') . '/settings/auto-label');
+    }
+  }
+}
+
+function pnwds_custom_schedule_theme($existing, $type, $theme, $path) {
+  return array(
+    'conference' => array(
+      'render element' => 'content',
+      'file' => 'conference.page.inc'
+    ),
+    'schedule' => array(
+      'render element' => 'content',
+      'file' => 'schedule.page.inc'
+    ),
+    'time_slot' => array(
+      'render element' => 'content',
+      'file' => 'time_slot.page.inc'
+    ),
+    'session_slot' => array(
+      'render element' => 'content',
+      'file' => 'session_slot.page.inc'
+    ),
+    'session' => array(
+      'render element' => 'content',
+      'file' => 'session.page.inc'
+    ),
+    'session_filter' => [
+      'render element' => 'session_filter'
+    ],
+    'session_filter_checkbox' => [
+      'variables' => [
+        'session_tag_id' => null,
+        'session_tag_label' => null
+      ]
+    ],
+    'views_view_unformatted__schedule' => [
+      'template' => 'views-view-unformatted--pnwds-custom',
+      'base hook' => 'views_view_unformatted'
+    ]
+  );
+}
+
+function template_preprocess_session_filter(&$variables) {
+  $session_tags = $variables['session_filter']['#session_tags'];
+  $variables['session_filter']['#attached']['library'][] = 'pnwds_custom/schedule-filter';
+  foreach ($session_tags as $session_tag_id => $session_tag_label) {
+    $variables['session_filter'][] = [
+      '#theme' => 'session_filter_checkbox',
+      '#session_tag_id' => $session_tag_id,
+      '#session_tag_label' => $session_tag_label
+    ];
+  }
+}
+

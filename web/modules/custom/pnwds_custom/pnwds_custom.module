@@ -23,78 +23,33 @@ function pnwds_custom_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+function pnwds_custom_menu_local_tasks_alter(&$data, $route_name) {
+  if(isset($data['tabs'][0]['entity.user.edit_form'])) {
+    ($data['tabs'][0]['entity.user.edit_form']['#link']['title'] = t('Account'));
+  }
+  if(isset($data['tabs'][0]['form_mode_manager.entities:form_mode_manager.user.profile.task_tab'])) {
+    ($data['tabs'][0]['form_mode_manager.entities:form_mode_manager.user.profile.task_tab']['#link']['title'] = t('Profile'));
+  }
+}
+
 /**
- * Integration with Auto Entitylabel.
- *
- * Implements hook_entity_type_alter().
+ * Use theme templates in views.
  */
-function pnwds_custom_entity_type_alter(array &$entity_types) {
-  foreach ($entity_types as $entity_type) {
-    if ($entity_type->getProvider() == 'pnwds_custom') {
-      $entity_type->setLinkTemplate('auto-label', $entity_type->getLinkTemplate('collection') . '/settings/auto-label');
-    }
-  }
+function pnwds_custom_theme_registry_alter(&$theme_registry) {
+  $theme_registry['views_view_unformatted']['path'] = '/' . drupal_get_path('theme', 'pnwds_2020') . '/templates';
+
+  $theme_registry['taxonomy_term__days'] = array_merge($theme_registry['taxonomy_term'], [
+    'path' => '/' . drupal_get_path('theme', 'pnwds_2020') . '/templates',
+    'template' => 'taxonomy-term--days'
+  ]);
+
+  $theme_registry['taxonomy_term__schedule'] = array_merge($theme_registry['taxonomy_term'], [
+    'path' => '/' . drupal_get_path('theme', 'pnwds_2020') . '/templates',
+    'template' => 'taxonomy-term--schedule'
+  ]);
+
+  $theme_registry['node__session__teaser'] = array_merge($theme_registry['node'], [
+    'path' => '/' . drupal_get_path('theme', 'pnwds_2020') . '/templates',
+    'template' => 'node--session--teaser'
+  ]);
 }
-
-function pnwds_custom_theme($existing, $type, $theme, $path) {
-  return array(
-    'conference' => array(
-      'render element' => 'content',
-      'file' => 'conference.page.inc'
-    ),
-    'schedule' => array(
-      'render element' => 'content',
-      'file' => 'schedule.page.inc'
-    ),
-    'time_slot' => array(
-      'render element' => 'content',
-      'file' => 'time_slot.page.inc'
-    ),
-    'session_slot' => array(
-      'render element' => 'content',
-      'file' => 'session_slot.page.inc'
-    ),
-    'session' => array(
-      'render element' => 'content',
-      'file' => 'session.page.inc'
-    ),
-    'session_filter' => [
-      'render element' => 'session_filter'
-    ],
-    'session_filter_checkbox' => [
-      'variables' => [
-        'session_tag_id' => null,
-        'session_tag_label' => null
-      ]
-    ],
-    'views_view_unformatted__schedule' => [
-      'template' => 'views-view-unformatted--pnwds-custom',
-      'base hook' => 'views_view_unformatted'
-    ]
-  );
-}
-
-//function pnwds_custom_theme_suggstions_views_view_unformatted(&$variables) {
-//  $suggestions = [];
-//  $suggestions[] = 'views_view_unformatted__pnwds_custom';
-//  return $suggestions;
-//}
-
-function template_preprocess_session_filter(&$variables) {
-  $session_tags = $variables['session_filter']['#session_tags'];
-  $variables['session_filter']['#attached']['library'][] = 'pnwds_custom/schedule-filter';
-  foreach ($session_tags as $session_tag_id => $session_tag_label) {
-    $variables['session_filter'][] = [
-      '#theme' => 'session_filter_checkbox',
-      '#session_tag_id' => $session_tag_id,
-      '#session_tag_label' => $session_tag_label
-    ];
-  }
-}
-
-//function pnwds_custom_preprocess_views_view_unformatted(&$variables) {
-//  $view = $variables['view'];
-//  if ($view->id() == 'schedule') {
-//    $variables['theme_hook_suggestions'][] = 'views_view_unformatted__pnwds_custom';
-//  }
-//}

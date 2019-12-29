@@ -1,0 +1,93 @@
+# Admin menu link
+pnwds_custom.admin:
+  title: 'Conference'
+  route_name: pnwds_custom.admin
+  parent: 'system.admin'
+  description: 'Administer and configure Conference.'
+  weight: -9
+
+# Conference menu items definition
+entity.conference.collection:
+  title: 'Conference list'
+  route_name: entity.conference.collection
+  description: 'List Conference entities'
+  parent: pnwds_custom.admin
+  weight: 100
+
+conference.admin.structure.settings:
+  title: 'Conference settings'
+  description: 'Configure Conference entities'
+  route_name: conference.settings
+  parent: pnwds_custom.admin
+  weight: 100
+
+# Schedule menu items definition
+entity.schedule.collection:
+  title: 'Schedule list'
+  route_name: entity.schedule.collection
+  description: 'List Schedule entities'
+  parent: pnwds_custom.admin
+  weight: 100
+
+schedule.admin.structure.settings:
+  title: 'Schedule settings'
+  description: 'Configure Schedule entities'
+  route_name: schedule.settings
+  parent: pnwds_custom.admin
+  weight: 100
+
+# Time slot menu items definition
+entity.time_slot.collection:
+  title: 'Time slot list'
+  route_name: entity.time_slot.collection
+  description: 'List Time slot entities'
+  parent: pnwds_custom.admin
+  weight: 100
+
+time_slot.admin.structure.settings:
+  title: 'Time slot settings'
+  description: 'Configure Time slot entities'
+  route_name: time_slot.settings
+  parent: pnwds_custom.admin
+  weight: 100
+
+# Session slot menu items definition
+entity.session_slot.collection:
+  title: 'Session slot list'
+  route_name: entity.session_slot.collection
+  description: 'List Session slot entities'
+  parent: pnwds_custom.admin
+  weight: 100
+
+session_slot.admin.structure.settings:
+  title: 'Session slot settings'
+  description: 'Configure Session slot entities'
+  route_name: session_slot.settings
+  parent: pnwds_custom.admin
+  weight: 100
+
+# Session menu items definition
+entity.session.collection:
+  title: 'Session list'
+  route_name: entity.session.collection
+  description: 'List Session entities'
+  parent: pnwds_custom.admin
+  weight: 100
+
+session.admin.structure.settings:
+  title: 'Session settings'
+  description: 'Configure Session entities'
+  route_name: session.settings
+  parent: pnwds_custom.admin
+  weight: 100
+
+pnwds_custom.user_menu.session.add_form:
+  title: 'Add Session'
+  route_name: entity.session.add_form
+  menu_name: account
+  wieght: 1
+
+pnwds_custom.submit_session:
+  weight: 10
+  menu_name: conference
+  class: Drupal\pnwds_custom\Plugin\Menu\SubmitSessionRegisterMenuLink
