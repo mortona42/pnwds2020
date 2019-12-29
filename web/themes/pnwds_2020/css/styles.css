@@ -118,6 +118,10 @@ main {
   position: relative;
 }
 
+input {
+  max-width: 100%;
+}
+
 #edit-body-0-format,
 #edit-field-bio-0-format {
   display: none;
