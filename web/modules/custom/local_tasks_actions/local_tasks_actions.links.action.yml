@@ -1,0 +1,13 @@
+local_tasks_actions.action_deriver:
+  deriver: 'Drupal\local_tasks_actions\Plugin\Derivative\LocalActionsDerivative'
+
+entity.local_action.add_form:
+  route_name: entity.local_action.add_form
+  title: 'Add Local action'
+  appears_on:
+    - entity.local_action.collection
+entity.local_task.add_form:
+  route_name: entity.local_task.add_form
+  title: 'Add Local task'
+  appears_on:
+    - entity.local_task.collection

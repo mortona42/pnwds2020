@@ -12,7 +12,8 @@
 {%
   set classes = [
     'form-radios',
-    is_nested ? 'bef-nested'
+    is_nested ? 'bef-nested',
+    display_inline ? 'form--inline'
   ]
 %}
 <div{{ attributes.addClass(classes) }}>

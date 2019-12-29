@@ -1,0 +1,22 @@
+local_tasks_actions.local_actions_config:
+  title: 'Local Actions Config'
+  route_name: local_tasks_actions.local_actions_config
+  description: 'Configure local actions'
+  parent: system.admin_config_system
+  weight: 99
+
+# Local task menu items definition
+entity.local_task.collection:
+  title: 'Local tasks'
+  route_name: entity.local_task.collection
+  description: 'Custom Local tasks'
+  parent: system.admin_structure
+  weight: 99
+
+# Local action menu items definition
+entity.local_action.collection:
+  title: 'Local actions'
+  route_name: entity.local_action.collection
+  description: 'Custom Local actions'
+  parent: system.admin_structure
+  weight: 99

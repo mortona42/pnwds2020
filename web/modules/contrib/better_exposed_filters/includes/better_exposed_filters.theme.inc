@@ -115,6 +115,7 @@ function template_preprocess_bef_radios(array &$variables) {
   $element = &$variables['element'];
 
   $variables['children'] = Element::children($element);
+  $variables['display_inline'] = $element['#bef_display_inline'] ?? FALSE;
 
   // Set element name.
   $variables['attributes']['name'] = $element['#name'];

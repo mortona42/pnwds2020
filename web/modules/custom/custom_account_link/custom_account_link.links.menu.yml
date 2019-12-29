@@ -1,0 +1,6 @@
+custom_account_link.settings:
+  title: 'Custom Account Link'
+  route_name: custom_account_link.settings
+  description: 'Custom Account Link settings.'
+  parent: user.admin_index
+  weight: 99

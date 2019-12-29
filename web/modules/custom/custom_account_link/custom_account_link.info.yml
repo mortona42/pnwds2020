@@ -1,0 +1,6 @@
+name: Custom Account Link
+description: Customize the My Account link.
+type: module
+core: 8.x
+
+configure: custom_account_link.settings

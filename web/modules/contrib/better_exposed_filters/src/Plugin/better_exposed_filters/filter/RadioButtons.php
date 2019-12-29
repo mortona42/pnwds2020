@@ -88,6 +88,9 @@ class RadioButtons extends FilterWidgetBase {
         $form[$field_id]['#bef_nested'] = TRUE;
       }
 
+      // Display inline.
+      $form[$field_id]['#bef_display_inline'] = $this->configuration['display_inline'];
+
       // Render as checkboxes if filter allows multiple selections.
       if (!empty($form[$field_id]['#multiple'])) {
         $form[$field_id]['#theme'] = 'bef_checkboxes';
@@ -97,7 +100,6 @@ class RadioButtons extends FilterWidgetBase {
         // Show all/none option.
         $form[$field_id]['#bef_select_all_none'] = $this->configuration['select_all_none'];
         $form[$field_id]['#bef_select_all_none_nested'] = $this->configuration['select_all_none_nested'];
-        $form[$field_id]['#bef_display_inline'] = $this->configuration['display_inline'];
 
         // Attach the JS (@see /js/bef_select_all_none.js)
         $form['#attached']['library'][] = 'better_exposed_filters/select_all_none';

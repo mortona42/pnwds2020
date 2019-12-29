@@ -1,0 +1,21 @@
+local_tasks_actions.local_action.*:
+  type: config_entity
+  label: 'Local action config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    route_name:
+      type: string
+      label: 'Route name'
+    appears_on:
+      type: string
+      label: 'Appears on'
+    weight:
+      type: integer
+      label: 'Weight'

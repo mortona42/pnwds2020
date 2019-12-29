@@ -23,6 +23,7 @@ select_all_none:
   dependencies:
     - core/drupal
     - core/jquery
+    - core/jquery.once
 sliders:
   version: 3.x
   js:
@@ -30,6 +31,7 @@ sliders:
   dependencies:
     - core/drupal
     - core/jquery
+    - core/jquery.once
     - core/jquery.ui.mouse
     - core/jquery.ui.touch-punch
     - core/jquery.ui.slider
@@ -39,7 +41,7 @@ datepickers:
     js/bef_datepickers.js: {}
   dependencies:
     - core/drupal
-    - core/jquer
+    - core/jquery
     - core/jquery.ui.mouse
     - core/jquery.ui.touch-punch
     - core/jquery.ui.datepicker

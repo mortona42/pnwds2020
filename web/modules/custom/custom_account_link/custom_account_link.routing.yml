@@ -1,0 +1,9 @@
+custom_account_link.settings:
+  path: '/admin/config/people/custom_account_link'
+  defaults:
+    _form: '\Drupal\custom_account_link\Form\CustomAccountLinkSettings'
+    _title: 'Custom Account Link Settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

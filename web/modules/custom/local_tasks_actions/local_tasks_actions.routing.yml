@@ -1,0 +1,9 @@
+local_tasks_actions.local_actions_config:
+  path: '/admin/config/local_tasks_actions/localactionsconfig'
+  defaults:
+    _form: '\Drupal\local_tasks_actions\Form\LocalActionsConfig'
+    _title: 'LocalActionsConfig'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

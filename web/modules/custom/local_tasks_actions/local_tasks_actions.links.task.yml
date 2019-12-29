@@ -1,0 +1,2 @@
+local_tasks_actions.task_deriver:
+  deriver: 'Drupal\local_tasks_actions\Plugin\Derivative\LocalTasksDerivative'

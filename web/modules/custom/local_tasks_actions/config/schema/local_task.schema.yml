@@ -1,0 +1,24 @@
+local_tasks_actions.local_task.*:
+  type: config_entity
+  label: 'Local task config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    route_name:
+      type: string
+      label: 'Route name'
+    base_route:
+      type: string
+      label: 'Base route'
+    parent_id:
+      type: string
+      label: 'Parent id'
+    weight:
+      type: integer
+      label: 'Weight'

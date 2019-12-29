@@ -1,0 +1,5 @@
+name: 'Local Tasks and Actions'
+type: module
+description: 'Create custom local tasks and actions'
+core: 8.x
+package: 'Custom'

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Set My Account menu link title.
+ */
+function custom_account_link_preprocess_menu__account(&$variables) {
+  if (empty($variables['items']['user.page'])) {
+    return;
+  }
+  $config = \Drupal::config('custom_account_link.settings');
+  $label_source = $config->get('label_source');
+  $label = '';
+
+  switch ($label_source) {
+    case 'text':
+      $label = t($config->get('label_text'));
+      break;
+    case 'username':
+      $label= \Drupal::currentUser()->getAccountName();
+      break;
+  }
+
+  $variables['items']['user.page']['title'] = $label;
+
+  // Clear menu cache when settings are changed.
+  $variables['#cache']['tags'][] = 'config:custom_account_link.settings';
+}

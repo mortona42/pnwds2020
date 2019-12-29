@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains local_tasks_actions.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function local_tasks_actions_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the local_tasks_actions module.
+    case 'help.page.local_tasks_actions':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create custom local tasks and actions') . '</p>';
+      return $output;
+
+    default:
+  }
+}

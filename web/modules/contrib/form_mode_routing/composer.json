@@ -1,0 +1,15 @@
+{
+  "name": "drupal/form_mode_routing",
+  "type": "drupal-module",
+  "description": "Provides functionality to give form modes a route (url) and access check.",
+  "homepage": "https://www.drupal.org/project/form_mode_routing",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "TaggartJ - XVTSolutions",
+      "email": "drupal@xvt.com.au"
+    }
+  ],
+  "require": {
+  }
+}

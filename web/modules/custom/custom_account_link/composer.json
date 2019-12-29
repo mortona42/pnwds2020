@@ -1,0 +1,19 @@
+{
+    "name": "drupal/custom_account_link",
+    "description": "Customize the 'My account' link.",
+    "type": "drupal-module",
+    "keywords": ["Drupal"],
+    "homepage": "http://drupal.org/project/custom_account_link",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Andrew Morton (mortona2k)",
+            "homepage": "https://www.drupal.org/u/mortona2k",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/custom_account_link",
+        "source": "http://cgit.drupalcode.org/custom_account_link"
+    }
+}

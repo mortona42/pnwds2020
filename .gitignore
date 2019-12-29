@@ -24,3 +24,8 @@
 /.env
 .editorconfig
 .gitattributes
+
+vendor/*/.git
+web/*/.git
+
+development.services.local.yml
