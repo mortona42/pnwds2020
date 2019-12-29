@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Rooms
 vid: rooms
-description: ''
+description: 'Conference rooms.'
 weight: 0

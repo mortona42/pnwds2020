@@ -1,0 +1,19 @@
+uuid: 2779f92b-3664-4850-95de-1934d3228727
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - time_field
+id: taxonomy_term.field_time
+field_name: field_time
+entity_type: taxonomy_term
+type: time_range
+settings: {  }
+module: time_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

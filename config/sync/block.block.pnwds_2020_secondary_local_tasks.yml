@@ -1,0 +1,22 @@
+uuid: e0d748c0-1c79-4ac7-bbe5-d2ce47b7b240
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pnwds_2020
+_core:
+  default_config_hash: QeZBeCilQfeET3GeW6ZtJkEiwROADTZktFgKWwPieD4
+id: pnwds_2020_secondary_local_tasks
+theme: pnwds_2020
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

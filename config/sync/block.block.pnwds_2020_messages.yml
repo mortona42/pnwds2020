@@ -1,0 +1,22 @@
+uuid: 7a5f2561-e35d-4d81-bb53-15533b6ff9a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pnwds_2020
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: pnwds_2020_messages
+theme: pnwds_2020
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

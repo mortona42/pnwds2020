@@ -1,0 +1,31 @@
+uuid: edd6d4a9-7526-4b99-80d7-03241cd5a20b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:994e95a7-e461-4b1d-88ee-63621b12db6b'
+  module:
+    - block_content
+    - system
+  theme:
+    - pnwds_2020
+id: registertosubmitasession
+theme: pnwds_2020
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:994e95a7-e461-4b1d-88ee-63621b12db6b'
+settings:
+  id: 'block_content:994e95a7-e461-4b1d-88ee-63621b12db6b'
+  label: 'Register to submit a session'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/register
+    negate: false
+    context_mapping: {  }

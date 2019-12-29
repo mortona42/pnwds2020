@@ -1,0 +1,57 @@
+uuid: 5364deb9-17e4-4c28-81b8-9fe07adff68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.schedule.field_day
+    - field.field.taxonomy_term.schedule.field_display_name
+    - field.field.taxonomy_term.schedule.field_time
+    - taxonomy.vocabulary.schedule
+  module:
+    - time_field
+id: taxonomy_term.schedule.default
+targetEntityType: taxonomy_term
+bundle: schedule
+mode: default
+content:
+  field_day:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_display_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_time:
+    weight: 3
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+    type: time_range_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

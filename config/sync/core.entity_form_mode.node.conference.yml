@@ -1,0 +1,10 @@
+uuid: 0945b132-dfca-4282-a7e1-dc4b6f19b1a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.conference
+label: Conference
+targetEntityType: node
+cache: true

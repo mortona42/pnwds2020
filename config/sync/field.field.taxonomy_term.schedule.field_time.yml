@@ -1,0 +1,21 @@
+uuid: c76a080d-3541-4932-8629-0066202540fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_time
+    - taxonomy.vocabulary.schedule
+  module:
+    - time_field
+id: taxonomy_term.schedule.field_time
+field_name: field_time
+entity_type: taxonomy_term
+bundle: schedule
+label: Time
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time_range

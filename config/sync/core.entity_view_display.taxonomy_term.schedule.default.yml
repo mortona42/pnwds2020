@@ -1,0 +1,36 @@
+uuid: d272c9b2-863b-45a1-9a5d-4eee5e067bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.schedule.field_day
+    - field.field.taxonomy_term.schedule.field_display_name
+    - field.field.taxonomy_term.schedule.field_time
+    - taxonomy.vocabulary.schedule
+  module:
+    - time_field
+id: taxonomy_term.schedule.default
+targetEntityType: taxonomy_term
+bundle: schedule
+mode: default
+content:
+  field_display_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_time:
+    weight: 1
+    label: hidden
+    settings:
+      time_format: 'h:i a'
+      timerange_format: 'start ~ end'
+    third_party_settings: {  }
+    type: time_range_formatter
+    region: content
+hidden:
+  description: true
+  field_day: true

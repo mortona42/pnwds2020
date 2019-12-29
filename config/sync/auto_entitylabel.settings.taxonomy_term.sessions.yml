@@ -1,0 +1,6 @@
+status: 1
+pattern: '[term:field_day:entity:tid] - [term:field_time:from] - [term:field_room:entity:name]'
+escape: false
+dependencies:
+  config:
+    - taxonomy.vocabulary.sessions

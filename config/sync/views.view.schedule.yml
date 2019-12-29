@@ -1,22 +1,24 @@
-uuid: d34b36a5-a7e1-41b1-8a5e-519f9b865f58
+uuid: 1b3f7abf-dba6-4581-876a-b2c00c140a7d
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
+    - node.type.session
     - system.menu.main
     - taxonomy.vocabulary.tags
   module:
     - better_exposed_filters
-    - datetime
-    - pnwds_custom
+    - node
     - taxonomy
+    - user
 id: schedule
 label: Schedule
 module: views
-description: ''
+description: 'List of sessions, grouped by schedule and day.'
 tag: ''
-base_table: session_slot
-base_field: id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -25,8 +27,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -60,7 +63,7 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
             filter:
-              tid:
+              field_tags_target_id:
                 plugin_id: bef
                 advanced:
                   sort_options: false
@@ -74,7 +77,7 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 10
+          items_per_page: 100
           offset: 0
           id: 0
           total_pages: null
@@ -94,7 +97,7 @@ display:
         options:
           grouping:
             -
-              field: rendered_entity_2
+              field: rendered_entity
               rendered: true
               rendered_strip: false
             -
@@ -102,19 +105,67 @@ display:
               rendered: true
               rendered_strip: false
           row_class: ''
-          default_row_class: false
-          uses_fields: true
+          default_row_class: true
       row:
-        type: 'entity:session_slot'
+        type: fields
         options:
-          relationship: none
-          view_mode: default
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        rendered_entity_1:
-          id: rendered_entity_1
-          table: time_slot
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        rendered_entity:
+          id: rendered_entity
+          table: taxonomy_term_data
           field: rendered_entity
-          relationship: reverse__time_slot__field_session_slots
+          relationship: field_day
           group_type: group
           admin_label: ''
           label: ''
@@ -159,11 +210,62 @@ display:
           empty_zero: false
           hide_alter_empty: true
           view_mode: default
-          entity_type: time_slot
+          entity_type: taxonomy_term
           plugin_id: rendered_entity
-        rendered_entity:
-          id: rendered_entity
-          table: session_slot
+        rendered_entity_1:
+          id: rendered_entity_1
+          table: taxonomy_term_data
+          field: rendered_entity
+          relationship: field_schedule
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: default
+          entity_type: taxonomy_term
+          plugin_id: rendered_entity
+        rendered_entity_2:
+          id: rendered_entity_2
+          table: node
           field: rendered_entity
           relationship: none
           group_type: group
@@ -209,66 +311,40 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: default
-          entity_type: session_slot
-          plugin_id: rendered_entity
-        rendered_entity_2:
-          id: rendered_entity_2
-          table: schedule
-          field: rendered_entity
-          relationship: reverse__schedule__field_time_slots
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view_mode: default
-          entity_type: schedule
+          view_mode: teaser
+          entity_type: node
           plugin_id: rendered_entity
       filters:
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: field_tags
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_tags_target_id:
+          id: field_tags_target_id
+          table: node__field_tags
+          field: field_tags_target_id
+          relationship: none
           group_type: group
           admin_label: ''
           operator: or
@@ -276,20 +352,20 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: tid_op
-            label: Term
+            operator_id: field_tags_target_id_op
+            label: Tags
             description: ''
             use_operator: false
-            operator: tid_op
+            operator: field_tags_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: tid
+            identifier: tags
             required: false
             remember: false
             multiple: true
             remember_roles:
-              anonymous: anonymous
               authenticated: authenticated
+              anonymous: '0'
               administrator: '0'
             reduce: false
           is_grouped: false
@@ -310,15 +386,13 @@ display:
           vid: tags
           hierarchy: false
           error_message: true
-          entity_type: taxonomy_term
-          entity_field: tid
           plugin_id: taxonomy_index_tid
       sorts:
-        field_time_from:
-          id: field_time_from
-          table: time_slot__field_time
-          field: field_time_from
-          relationship: reverse__time_slot__field_session_slots
+        field_day_target_id:
+          id: field_day_target_id
+          table: taxonomy_term__field_day
+          field: field_day_target_id
+          relationship: field_schedule
           group_type: group
           admin_label: ''
           order: ASC
@@ -326,125 +400,79 @@ display:
           expose:
             label: ''
           plugin_id: standard
-        field_date_value:
-          id: field_date_value
-          table: schedule__field_date
-          field: field_date_value
-          relationship: reverse__schedule__field_time_slots
+        field_time_from:
+          id: field_time_from
+          table: taxonomy_term__field_time
+          field: field_time_from
+          relationship: field_schedule
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: day
-          plugin_id: datetime
+          plugin_id: standard
+        field_room_target_id:
+          id: field_room_target_id
+          table: node__field_room
+          field: field_room_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       title: Schedule
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        reverse__time_slot__field_session_slots:
-          id: reverse__time_slot__field_session_slots
-          table: session_slot
-          field: reverse__time_slot__field_session_slots
+        field_schedule:
+          id: field_schedule
+          table: node__field_schedule
+          field: field_schedule
           relationship: none
           group_type: group
-          admin_label: field_session_slots
-          required: false
-          entity_type: session_slot
-          plugin_id: entity_reverse
-        reverse__schedule__field_time_slots:
-          id: reverse__schedule__field_time_slots
-          table: time_slot
-          field: reverse__schedule__field_time_slots
-          relationship: reverse__time_slot__field_session_slots
-          group_type: group
-          admin_label: field_time_slots
-          required: false
-          entity_type: time_slot
-          plugin_id: entity_reverse
-        field_session:
-          id: field_session
-          table: session_slot__field_session
-          field: field_session
-          relationship: none
-          group_type: group
-          admin_label: 'field_session: Session'
+          admin_label: Schedule
           required: false
           plugin_id: standard
-        field_tags:
-          id: field_tags
-          table: session__field_tags
-          field: field_tags
-          relationship: field_session
+        field_day:
+          id: field_day
+          table: taxonomy_term__field_day
+          field: field_day
+          relationship: field_schedule
           group_type: group
-          admin_label: 'field_tags: Taxonomy term'
+          admin_label: Day
           required: false
           plugin_id: standard
-      arguments:
-        name:
-          id: name
-          table: schedule
-          field: name
-          relationship: reverse__schedule__field_time_slots
-          group_type: group
-          admin_label: ''
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: 'Schedule {{ arguments.name }}'
-          default_argument_type: raw
-          default_argument_options:
-            index: 1
-            use_alias: false
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          glossary: false
-          limit: 0
-          case: none
-          path_case: none
-          transform_dash: false
-          break_phrase: false
-          entity_type: schedule
-          entity_field: name
-          plugin_id: string
+      arguments: {  }
       display_extenders: {  }
-      group_by: false
-      hide_attachment_summary: false
-      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:core.entity_view_display.schedule.schedule.default'
-        - 'config:core.entity_view_display.session_slot.session_slot.default'
-        - 'config:core.entity_view_display.session_slot.session_slot.ief_table'
-        - 'config:core.entity_view_display.time_slot.time_slot.default'
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.ief_table'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.taxonomy_term.schedule.default'
   page:
     display_plugin: page
     id: page
-    display_title: Full
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
@@ -452,22 +480,24 @@ display:
       menu:
         type: normal
         title: Schedule
-        description: ''
-        expanded: true
-        parent: ''
-        weight: 1
-        context: '0'
         menu_name: main
-      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - user
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
-        - 'config:core.entity_view_display.schedule.schedule.default'
-        - 'config:core.entity_view_display.session_slot.session_slot.default'
-        - 'config:core.entity_view_display.session_slot.session_slot.ief_table'
-        - 'config:core.entity_view_display.time_slot.time_slot.default'
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.ief_table'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.taxonomy_term.schedule.default'

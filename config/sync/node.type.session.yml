@@ -1,0 +1,17 @@
+uuid: 196ee561-f24f-406a-a607-90d67425f496
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Session
+type: session
+description: 'Conference session.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

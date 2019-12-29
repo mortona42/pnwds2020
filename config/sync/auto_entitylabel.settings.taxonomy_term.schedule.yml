@@ -1,0 +1,6 @@
+status: 1
+pattern: '[term:field_day:entity:name] - [term:field_display_name] ([term:field_time:from])'
+escape: false
+dependencies:
+  config:
+    - taxonomy.vocabulary.schedule

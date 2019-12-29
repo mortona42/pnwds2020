@@ -1,0 +1,11 @@
+uuid: 91d789cc-5377-48c1-bfe4-6eabc5a7956a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.schedule
+id: taxonomy_vocabulary_schedule
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301

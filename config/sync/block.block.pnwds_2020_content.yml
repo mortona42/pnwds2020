@@ -1,0 +1,22 @@
+uuid: c71d226f-7ea5-4316-b92c-7b7192cf5cfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pnwds_2020
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: pnwds_2020_content
+theme: pnwds_2020
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

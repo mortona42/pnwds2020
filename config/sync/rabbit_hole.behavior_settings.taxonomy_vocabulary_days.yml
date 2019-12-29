@@ -1,0 +1,11 @@
+uuid: 94069ff4-afa7-4a33-9b10-261c14bdb0d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.days
+id: taxonomy_vocabulary_days
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301

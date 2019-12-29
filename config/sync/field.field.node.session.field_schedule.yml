@@ -1,0 +1,29 @@
+uuid: c6fe025b-5577-4598-aa77-646f03e44bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schedule
+    - node.type.session
+    - taxonomy.vocabulary.schedule
+id: node.session.field_schedule
+field_name: field_schedule
+entity_type: node
+bundle: session
+label: Schedule
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      schedule: schedule
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

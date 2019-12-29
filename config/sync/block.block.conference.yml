@@ -1,4 +1,4 @@
-uuid: 419c3e2f-c17b-4ef9-92f9-a80bb41eda7a
+uuid: e3384ec9-8447-40de-ac70-e7c4608ebbc4
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - pnwds2020
+    - pnwds_2020
 id: conference
-theme: pnwds2020
+theme: pnwds_2020
 region: primary_menu
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:conference'
 settings:

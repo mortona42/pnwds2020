@@ -1,0 +1,29 @@
+uuid: f98850e4-0b1c-4072-a827-b45e5db119dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_day
+    - taxonomy.vocabulary.days
+    - taxonomy.vocabulary.schedule
+id: taxonomy_term.schedule.field_day
+field_name: field_day
+entity_type: taxonomy_term
+bundle: schedule
+label: Day
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      days: days
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

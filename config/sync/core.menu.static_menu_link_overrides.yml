@@ -5,5 +5,35 @@ definitions:
     parent: ''
     weight: 0
     expanded: false
+  user__page:
+    weight: -50
+    menu_name: account
+    parent: ''
+    enabled: true
+    expanded: false
+  pnwds_custom__user_menu__session__add_form:
+    weight: -49
+    menu_name: account
+    parent: ''
+    expanded: false
+    enabled: true
+  user__logout:
+    weight: -48
+    menu_name: account
+    parent: ''
+    expanded: false
+    enabled: true
+  pnwds_custom__submit_session:
+    enabled: false
+    menu_name: conference
+    parent: ''
+    expanded: false
+    weight: 10
+  pnwds_custom__account__sessions:
+    weight: -49
+    menu_name: account
+    parent: ''
+    enabled: true
+    expanded: false
 _core:
   default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

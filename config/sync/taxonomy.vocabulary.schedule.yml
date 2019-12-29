@@ -1,0 +1,8 @@
+uuid: 8344809a-4017-4bd7-bbdc-0bfbc63a8b80
+langcode: en
+status: true
+dependencies: {  }
+name: Schedule
+vid: schedule
+description: 'Conference schedule.'
+weight: 0
