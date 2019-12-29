@@ -1,0 +1,11 @@
+uuid: 9789e7c8-dd99-4353-b279-15574af4759b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: register_submit_session
+title: 'Register to submit a session'
+content:
+  value: "<p>You must register an account before submitting a session.</p>\r\n"
+  format: basic_html

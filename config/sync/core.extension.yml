@@ -50,6 +50,7 @@ module:
   rh_taxonomy: 0
   search: 0
   settings_tray: 0
+  simple_block: 0
   system: 0
   taxonomy: 0
   text: 0

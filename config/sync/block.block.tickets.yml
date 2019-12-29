@@ -1,11 +1,11 @@
-uuid: d2af311b-4e9a-4992-859d-0e697d7b6153
+uuid: 7be67b37-9460-431f-918c-2d3a46e71f77
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:6c7f5a60-a4af-427d-826f-51b12c0ce674'
+  config:
+    - simple_block.simple_block.tickets
   module:
-    - block_content
+    - simple_block
   theme:
     - pnwds_2020
 id: tickets
@@ -13,13 +13,10 @@ theme: pnwds_2020
 region: header
 weight: 0
 provider: null
-plugin: 'block_content:6c7f5a60-a4af-427d-826f-51b12c0ce674'
+plugin: 'simple_block:tickets'
 settings:
-  id: 'block_content:6c7f5a60-a4af-427d-826f-51b12c0ce674'
+  id: 'simple_block:tickets'
   label: Tickets
-  provider: block_content
+  provider: simple_block
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
 visibility: {  }

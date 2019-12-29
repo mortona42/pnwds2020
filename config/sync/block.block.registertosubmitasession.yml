@@ -1,11 +1,11 @@
-uuid: edd6d4a9-7526-4b99-80d7-03241cd5a20b
+uuid: 488673ad-0b92-4b4b-bac0-968ca09675a3
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:994e95a7-e461-4b1d-88ee-63621b12db6b'
+  config:
+    - simple_block.simple_block.register_submit_session
   module:
-    - block_content
+    - simple_block
     - system
   theme:
     - pnwds_2020
@@ -14,15 +14,12 @@ theme: pnwds_2020
 region: content
 weight: -6
 provider: null
-plugin: 'block_content:994e95a7-e461-4b1d-88ee-63621b12db6b'
+plugin: 'simple_block:register_submit_session'
 settings:
-  id: 'block_content:994e95a7-e461-4b1d-88ee-63621b12db6b'
+  id: 'simple_block:register_submit_session'
   label: 'Register to submit a session'
-  provider: block_content
+  provider: simple_block
   label_display: visible
-  status: true
-  info: ''
-  view_mode: full
 visibility:
   request_path:
     id: request_path

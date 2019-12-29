@@ -1,0 +1,11 @@
+uuid: e7925fb7-50fa-483d-8f87-969e94e3ec93
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: tickets
+title: Tickets
+content:
+  value: "<div>\r\n<div>March 28-29 2020</div>\r\n\r\n<div>Seattle, WA</div>\r\n</div>\r\n\r\n<div><a class=\"button\" href=\"https://opencollective.com/pnw-drupal-summit/events/pnw-drupal-summit-2020-20051ev\">Get tickets</a></div>\r\n"
+  format: full_html

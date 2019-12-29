@@ -35,6 +35,7 @@
         "drupal/menu_per_role": "^1.1",
         "drupal/override_node_options": "^2.4",
         "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/simple_block": "^1.0@beta",
         "drupal/time_field": "^1.13",
         "drupal/token": "^1.5",
         "drush/drush": "^9.7.1 | ^10.0.0",
