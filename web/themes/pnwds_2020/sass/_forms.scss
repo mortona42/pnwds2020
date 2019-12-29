@@ -1,0 +1,54 @@
+.form-item {
+  margin: 1rem 0;
+  position: relative;
+}
+
+#edit-body-0-format,
+#edit-field-bio-0-format {
+  display: none;
+}
+
+#edit-field-tags {
+  display: flex;
+}
+
+button.link-edit-summary {
+  border: none;
+  background: none;
+  color: $primary-green;
+  text-decoration: underline;
+}
+
+.field-edit-link {
+  display: none;
+}
+
+.field--name-title label,
+.field--name-body label, {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.form-checkboxes .form-item {
+  margin: 0;
+}
+
+input[type="submit"]#edit-submit {
+  border: none;
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  background-color: $primary-blue;
+  color: white;
+}
+
+input[type="submit"]#edit-reset {
+  border: none;
+  background-color: white;
+  color: $primary-blue;
+  text-decoration: underline;
+}
+
+
+.entity-meta.vertical-tabs__panes {
+  margin: 1rem;
+}
