@@ -249,17 +249,18 @@ input[type=submit]#edit-reset {
 }
 
 #block-tickets {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   text-align: right;
 }
 #block-tickets .button {
   margin: 0 0 0 1rem;
 }
-#block-tickets .field-item {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
 @media screen and (min-width: 440px) {
+  #block-tickets {
+    display: block;
+  }
   #block-tickets .field-item {
     flex-direction: column;
   }
