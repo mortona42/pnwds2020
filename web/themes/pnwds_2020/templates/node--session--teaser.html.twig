@@ -85,5 +85,5 @@
 
   {{ content|without('field_tags', 'field_room') }}
 
-  {{ author_name }}
+  {{ author_name|striptags }}
 </div>

@@ -7,5 +7,5 @@ dependencies:
 id: submit_session_registered
 title: 'Submit a session'
 content:
-  value: "<div><a class=\"button\" href=\"/user/register\">Submit a session</a></div>\r\n"
+  value: "<div><a class=\"button\" href=\"/node/add/session\">Submit a session</a></div>\r\n"
   format: full_html
