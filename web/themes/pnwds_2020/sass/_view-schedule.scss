@@ -8,6 +8,7 @@
 
   .form-checkboxes {
     display: flex;
+    flex-wrap: wrap;
 
     input.form-checkbox {
       position: absolute;
@@ -36,8 +37,9 @@
     }
 
     input.form-checkbox:checked ~ label.option {
-      background-color: $primary-green;
-      color: white;
+      //background-color: $light-green;
+      //color: white;
+      border-width: 2px;
 
       &:before {
         background-color: $primary-blue;
