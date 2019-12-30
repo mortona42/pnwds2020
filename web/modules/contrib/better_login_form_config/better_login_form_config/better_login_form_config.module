@@ -14,22 +14,19 @@ function better_login_form_config_form_alter(&$form, FormStateInterface $form_st
     $form['name']['#description'] = !empty($myConfig->get('username_description')) ? $myConfig->get('username_description') : '';
     $form['pass']['#title'] = !empty($myConfig->get('password_label')) ? $myConfig->get('password_label') : 'Password';
     $form['pass']['#description'] = !empty($myConfig->get('password_description')) ? $myConfig->get('password_description') : '';
-	 if($myConfig->get('form_title')){
-	 $request = \Drupal::request();
-		if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
-		  $route->setDefault('_title', $myConfig->get('form_title'));
-		}
-	 }
+    $form['#title'] = $myConfig->get('form_title');
 	 $form['actions']['submit']['#value'] = !empty($myConfig->get('login_button')) ? $myConfig->get('login_button') : 'Log in';
 	}
 	if ($form_id == 'user_login_form' || $form_id == 'user_register_form' || $form_id == 'user_pass') {
 		 $form['#attached']['library'][] = 'better_login_form_config/fancylogin_css';
 		 $form['#cache']['tags'][] = 'config:better_login_form_config.settings';
 	}
-	if($form_id == 'user_register_form' ){
+	if($form_id == 'user_pass' ){
+       $form['#title'] = $myConfig->get('forgot_form_title');
 	$form['name']['#title'] = !empty($myConfig->get('forgot_form_username')) ? $myConfig->get('forgot_form_username') : 'Username';
 	}
 	if($form_id == 'user_register_form' ){
+       $form['#title'] = $myConfig->get('register_form_title');
 		$form['account']['mail']['#description'] =!empty($myConfig->get('register_mail_desc')) ? $myConfig->get('register_mail_desc') : '';
 		$form['account']['mail']['#title']=!empty($myConfig->get('register_form_mail')) ? $myConfig->get('register_form_mail') : 'Email Address.';
 		$form['account']['name']['#description'] =!empty($myConfig->get('register_mail_desc')) ? $myConfig->get('register_mail_desc') : "";
@@ -107,4 +104,27 @@ function better_login_form_config_preprocess_page(&$variables) {
   $variables['#cache']['contexts'][] = 'route';
   $variables['page']['#cache']['contexts'][] = 'route';
   
+}
+
+/**
+ * Set tab titles.
+ *
+ * Implements hook_menu_local_tasks_alter().
+ */
+function better_login_form_config_menu_local_tasks_alter(&$data, $route_name) {
+  $myConfig = \Drupal::config('better_login_form_config.settings');
+  if (in_array($route_name, ['user.login', 'user.pass', 'user.register'])) {
+    $tabs = $data['tabs'][0];
+    foreach ($tabs as $route => $tab) {
+      if ($route == 'user.register') {
+        $data['tabs'][0][$route]['#link']['title'] = $myConfig->get('register_form_title');
+      }
+      if ($route == 'user.login') {
+        $data['tabs'][0][$route]['#link']['title'] = $myConfig->get('form_title');
+      }
+      if ($route == 'user.pass') {
+        $data['tabs'][0][$route]['#link']['title'] = $myConfig->get('forgot_form_title');
+      }
+    }
+  }
 }

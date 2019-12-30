@@ -4,13 +4,13 @@ username_description: ''
 password_label: Password
 password_description: ''
 login_button: 'Log in'
-forgot_form_title: 'Reset your password'
-register_form_title: 'Create new account'
+forgot_form_title: 'Forgot password'
+register_form_title: Register
 register_form_mail: 'Email address'
 register_mail_desc: ''
-register_form_name: 'Create new account'
+register_form_name: Username
 register_form_name_desc: ''
-register_form_button: 'Create new account'
+register_form_button: Register
 forgot_form_username_desc: ''
 forgot_form_username: 'Username or email address'
 forgot_form_button: Submit
@@ -22,4 +22,4 @@ create_account: 0
 forgot_password: 0
 back_to_home: 0
 _core:
-  default_config_hash: zJ-LDz0Ap5FWF8SNWdhor8jpRRfO7tKLfPAno4wjpwY
+  default_config_hash: veaPM7BBX2ddz3EiBW3XyuWLtsqgU9s-zN5oWOIca_A

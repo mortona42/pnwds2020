@@ -21,3 +21,7 @@ Remove default username description
 Source: https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-remove_default_username-3103649-5.patch
 
 
+Set tab and page titles
+Source: https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-titles-3103654-2.patch
+
+
