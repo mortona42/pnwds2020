@@ -1,0 +1,31 @@
+uuid: 2eea2ee6-d7c8-439e-ac98-decea76014aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.submit_session_registered
+  module:
+    - simple_block
+    - user
+  theme:
+    - pnwds_2020
+id: submitasession_registered
+theme: pnwds_2020
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'simple_block:submit_session_registered'
+settings:
+  id: 'simple_block:submit_session_registered'
+  label: 'Submit a session'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

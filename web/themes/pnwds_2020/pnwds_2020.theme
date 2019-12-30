@@ -1,6 +1,1 @@
 <?php
-
-
-function pnwds_2020_menu_local_tasks_alter(&$data, $route_name) {
-  $asdf = 'fdsa';
-}

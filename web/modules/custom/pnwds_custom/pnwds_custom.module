@@ -23,6 +23,9 @@ function pnwds_custom_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Rename user tabs.
+ */
 function pnwds_custom_menu_local_tasks_alter(&$data, $route_name) {
   if(isset($data['tabs'][0]['entity.user.edit_form'])) {
     ($data['tabs'][0]['entity.user.edit_form']['#link']['title'] = t('Account'));

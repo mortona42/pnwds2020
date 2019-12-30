@@ -6,6 +6,7 @@ dependencies:
     - views.view.session_author
   module:
     - node
+    - system
     - views
   theme:
     - pnwds_2020
@@ -31,3 +32,8 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/session/*/*'
+    negate: true
+    context_mapping: {  }

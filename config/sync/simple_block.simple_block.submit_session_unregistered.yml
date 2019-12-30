@@ -1,0 +1,11 @@
+uuid: 2b9ae35e-39aa-4172-8ac6-1d6c7919b430
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: submit_session_unregistered
+title: 'Submit a session'
+content:
+  value: '<div><a class="button" href="/user/register">Submit a session</a></div>'
+  format: full_html

@@ -233,18 +233,19 @@ input[type=submit]#edit-reset {
   color: #444;
 }
 
-#block-conference li a {
+.region-primary-menu a.button {
   border-radius: 0.8rem;
   padding: 0.5rem 1rem;
   background-color: #057642;
   box-shadow: inset 0 0 0.2rem #222;
+  margin: 0;
 }
 
-#block-conference li a,
-#block-conference li a:hover,
-#block-conference li a:active,
-#block-conference li a:focus,
-#block-conference li a:visited {
+.region-primary-menu a.button,
+.region-primary-menu a.button:hover,
+.region-primary-menu a.button:active,
+.region-primary-menu a.button:focus,
+.region-primary-menu a.button:visited {
   color: white;
 }
 

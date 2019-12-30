@@ -4,7 +4,6 @@ module:
   auto_entitylabel: 0
   automated_cron: 0
   better_exposed_filters: 0
-  better_login_form_config: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -28,7 +27,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  form_mode_routing: 0
+  form_mode_manager: 0
   help: 0
   history: 0
   ief_table_view_mode: 0

@@ -16,6 +16,7 @@ permissions:
   - 'create public profile'
   - 'search content'
   - 'use text format restricted_html'
+  - 'use user.default form mode'
   - 'view any profile'
   - 'view commerce_product'
   - 'view published conference entities'

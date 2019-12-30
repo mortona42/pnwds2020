@@ -64,7 +64,6 @@ class SessionsLink extends MenuLinkDefault {
    */
   public function getRouteName() {
     return 'view.user_sessions.page';
-//    return 'view.schedule.page';
   }
 
   /**
