@@ -4,7 +4,7 @@ username_description: ''
 password_label: Password
 password_description: ''
 login_button: 'Log in'
-forgot_form_title: 'Forgot password'
+forgot_form_title: 'Reset password'
 register_form_title: Register
 register_form_mail: 'Email address'
 register_mail_desc: ''
@@ -13,7 +13,7 @@ register_form_name_desc: ''
 register_form_button: Register
 forgot_form_username_desc: ''
 forgot_form_username: 'Username or email address'
-forgot_form_button: Submit
+forgot_form_button: 'Reset password'
 include_login: 1
 include_regi_template: 1
 include_forgot_template: 1
