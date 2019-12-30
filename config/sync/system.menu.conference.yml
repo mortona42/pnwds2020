@@ -1,8 +1,0 @@
-uuid: 2c6cafd2-0959-4197-9edd-ea1a6e092e63
-langcode: en
-status: true
-dependencies: {  }
-id: conference
-label: Conference
-description: 'Conference links'
-locked: false
