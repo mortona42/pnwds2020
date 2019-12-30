@@ -183,11 +183,10 @@ input[type=submit]#edit-reset {
 }
 
 #block-pnwds-2020-primary-local-tasks > ul li a {
-  background-color: #00874b;
-  border-radius: 0.4rem;
+  border-bottom: 0.1rem solid #00874b;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
-  color: white;
+  color: #222;
   margin-right: 0.5rem;
   display: block;
 }
