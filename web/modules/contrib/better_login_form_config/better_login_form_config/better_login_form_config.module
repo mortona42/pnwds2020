@@ -9,10 +9,9 @@ use Symfony\Component\HttpFoundation;
 function better_login_form_config_form_alter(&$form, FormStateInterface $form_state, $form_id){
 	global $base_url;
 	$myConfig = \Drupal::config('better_login_form_config.settings');
-	$site_name= \Drupal::config('system.site')->get('name');
 	if ($form_id == 'user_login_form') {
 	$form['name']['#title'] = !empty($myConfig->get('username_label')) ? $myConfig->get('username_label') : 'Username';
-    $form['name']['#description'] = !empty($myConfig->get('username_description')) ? $myConfig->get('username_description') : t('Enter your @s username.', array('@s' =>$site_name));
+    $form['name']['#description'] = !empty($myConfig->get('username_description')) ? $myConfig->get('username_description') : '';
     $form['pass']['#title'] = !empty($myConfig->get('password_label')) ? $myConfig->get('password_label') : 'Password';
     $form['pass']['#description'] = !empty($myConfig->get('password_description')) ? $myConfig->get('password_description') : '';
 	 if($myConfig->get('form_title')){

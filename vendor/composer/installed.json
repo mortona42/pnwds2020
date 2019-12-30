@@ -2341,8 +2341,10 @@
             },
             "patches_applied": {
                 "Configuration depends on fancy_login.settings": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-fancy_login_config-3089657-3.patch",
-                "Empty config fields cause errors after install": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-install_config-3103495-2.patch",
-                "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch"
+                "Empty config fields cause errors after install": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-install_config-3103495-5.patch",
+                "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch",
+                "Config form issues": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-config_form-3103647-2.patch",
+                "Remove default username description": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-remove_default_username-3103649-5.patch"
             }
         },
         "installation-source": "dist",

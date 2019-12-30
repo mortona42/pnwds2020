@@ -65,7 +65,7 @@ class FancyConfigForm extends ConfigFormBase {
 		'#size' => 60,
 		'#maxlength' => USERNAME_MAX_LENGTH,
 		'#attributes' => array('class' => array('password-description')),
-		'#default_value' => !empty($login_form_config->get('password_description')) ?? $login_form_config->get('password_description'),
+		'#default_value' => !empty($login_form_config->get('password_description')) ? $login_form_config->get('password_description') : '',
 		);
 		$form['login_form_setting']['login_button'] = array(
 		'#type' => 'textfield',
@@ -100,7 +100,7 @@ class FancyConfigForm extends ConfigFormBase {
 		'#attributes' => array('class' => array('forgot_form_username')),
 		'#required' => TRUE,
 		'#default_value' => !empty($login_form_config->get('forgot_form_username')) ? $login_form_config->get('forgot_form_username'): 'Username or email address. ',
-		);
+		);	
 		$form['forgot_form_setting']['forgot_form_username_desc'] = array(
 		'#type' => 'textfield',
 		'#title' => $this->t('User Name or Email  Description '),
@@ -108,11 +108,18 @@ class FancyConfigForm extends ConfigFormBase {
 		'#attributes' => array('class' => array('forgot_form_username_desc')),
 		'#default_value' => !empty($login_form_config->get('forgot_form_username_desc')) ? $login_form_config->get('forgot_form_username_desc'): '',
 		);
+               $form['forgot_form_setting']['forgot_form_button'] = array(
+               '#type' => 'textfield',
+               '#title' => $this->t('Forgot Form Button'),
+               '#size' => 60,
+               '#attributes' => array('class' => array('forgot_form_button')),
+               '#default_value' => !empty($login_form_config->get('forgot_form_button')) ? $login_form_config->get('forgot_form_button'): '',
+               );
 		$form['forgot_form_setting']['include_forgot_template'] = array(
 		'#type' => 'checkbox',
 		'#default_value' => !empty($login_form_config->get('include_forgot_template')) ? $login_form_config->get('include_forgot_template') : 0,
 		'#title' =>$this->t('Exclude Forgot Password Form Template'),
-		);
+		);  
 		$form['register_form_setting'] = [
 		'#type' => 'details',
 		'#title' => $this->t('Register Form'),
@@ -141,7 +148,7 @@ class FancyConfigForm extends ConfigFormBase {
 		'#maxlength' => 255,
 		'#attributes' => array('class' => array('register_mail_desc')),
 		'#default_value' => !empty($login_form_config->get('register_mail_desc')) ? $login_form_config->get('register_mail_desc'): '',
-		);
+		);	  
 		$form['register_form_setting']['register_form_name'] = array(
 		'#type' => 'textfield',
 		'#title' => $this->t('Register Name Label '),
@@ -190,9 +197,9 @@ class FancyConfigForm extends ConfigFormBase {
 		'#default_value' => !empty($login_form_config->get('login_page_link')) ? $login_form_config->get('login_page_link') : 0,
 		'#title' => $this->t('Login page link'),
 		);
-
+		
     return $form;
- }
+ } 
     /**
      * {@inheritdoc}
      */
@@ -214,6 +221,7 @@ class FancyConfigForm extends ConfigFormBase {
         $config->set('register_mail_desc', $form_state->getValue('register_mail_desc'));
         $config->set('register_form_name', $form_state->getValue('register_form_name'));
         $config->set('register_form_name_desc', $form_state->getValue('register_form_name_desc'));
+        $config->set('register_form_button', $form_state->getValue('register_form_button'));
         $config->set('forgot_form_username_desc', $form_state->getValue('forgot_form_username_desc'));
         $config->set('forgot_form_username', $form_state->getValue('forgot_form_username'));
         $config->set('forgot_form_button', $form_state->getValue('forgot_form_button'));
