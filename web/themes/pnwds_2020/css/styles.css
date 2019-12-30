@@ -394,6 +394,13 @@ input[type=submit]#edit-reset {
   flex-grow: 1;
 }
 
+.view-user-sessions table {
+  width: 100%;
+}
+.view-user-sessions table thead {
+  text-align: left;
+}
+
 .messages {
   border: 0.2rem solid #06864C;
   border-radius: 0.4rem;
