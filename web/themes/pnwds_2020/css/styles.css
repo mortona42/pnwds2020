@@ -196,6 +196,15 @@ input[type=submit]#edit-reset {
   list-style: none;
 }
 
+#block-sitebranding {
+  text-align: center;
+}
+@media screen and (min-width: 440px) {
+  #block-sitebranding {
+    text-align: left;
+  }
+}
+
 #block-mainnavigation ul.menu {
   text-transform: uppercase;
 }
