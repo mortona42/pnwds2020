@@ -19,16 +19,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_bio:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
 hidden:
   contact: true
+  field_bio: true
   language: true
   public_profiles: true
   test_profiles: true
