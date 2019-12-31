@@ -12,14 +12,14 @@ dependencies:
 id: registertosubmitasession
 theme: pnwds_2020
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: 'simple_block:register_submit_session'
 settings:
   id: 'simple_block:register_submit_session'
   label: 'Register to submit a session'
   provider: simple_block
-  label_display: visible
+  label_display: '0'
 visibility:
   request_path:
     id: request_path

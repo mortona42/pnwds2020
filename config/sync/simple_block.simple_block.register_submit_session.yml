@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: register_submit_session
 title: 'Register to submit a session'
 content:
-  value: "<p>You must register an account before submitting a session.</p>\r\n"
-  format: basic_html
+  value: "<p>You must register an account before submitting a session.</p>\r\n\r\n<p>To attend the conference <a class=\"button\" href=\"https://opencollective.com/pnw-drupal-summit/events/pnw-drupal-summit-2020-20051ev\">Get tickets</a></p>\r\n"
+  format: full_html
