@@ -1,21 +1,27 @@
-uuid: e257f2f9-e44d-4094-9086-e44eb8870ac0
+uuid: 2eec554b-9aed-497a-af72-30729e6bd707
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.session_author
     - field.field.user.user.field_bio
     - field.field.user.user.user_picture
     - image.style.medium
   module:
     - image
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
-id: user.user.default
+id: user.user.session_author
 targetEntityType: user
 bundle: user
-mode: default
+mode: session_author
 content:
   field_bio:
     weight: 1

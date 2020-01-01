@@ -1,0 +1,28 @@
+uuid: 6b69fbf2-ecce-4ec0-84cc-10a90abe8aae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_authors
+    - node.type.session
+id: node.session.field_additional_authors
+field_name: field_additional_authors
+entity_type: node
+bundle: session
+label: 'Additional authors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

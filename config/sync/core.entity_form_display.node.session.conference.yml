@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.node.conference
     - field.field.node.session.body
+    - field.field.node.session.field_additional_authors
     - field.field.node.session.field_room
     - field.field.node.session.field_schedule
     - field.field.node.session.field_slides
@@ -82,5 +83,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_additional_authors: true
   field_slides: true
   field_tags: true

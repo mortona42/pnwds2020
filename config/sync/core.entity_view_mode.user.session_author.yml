@@ -1,0 +1,10 @@
+uuid: 8655f949-9523-42b6-b191-3aca63bf8e8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.session_author
+label: 'Session author'
+targetEntityType: user
+cache: true

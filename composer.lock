@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "046dde79d3f4a20766496ba722474cb8",
+    "content-hash": "08eef768361c48163f1e506251504c74",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2283,8 +2283,11 @@
                 },
                 "patches_applied": {
                     "Configuration depends on fancy_login.settings": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-fancy_login_config-3089657-3.patch",
-                    "Empty config fields cause errors after install": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-install_config-3103495-2.patch",
-                    "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch"
+                    "Empty config fields cause errors after install": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-install_config-3103495-5.patch",
+                    "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch",
+                    "Config form issues": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-config_form-3103647-2.patch",
+                    "Remove default username description": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-remove_default_username-3103649-5.patch",
+                    "Set tab and page titles": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-titles-3103654-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3307,6 +3310,57 @@
             }
         },
         {
+            "name": "drupal/limited_field_widgets",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/limited_field_widgets.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/limited_field_widgets-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "f3b399a087510840fa56135b7e6af847893ad52c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1560936785",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "stomusic",
+                    "homepage": "https://www.drupal.org/user/3405436"
+                }
+            ],
+            "description": "Provide extra limit settings for unlimited field widgets.",
+            "homepage": "https://www.drupal.org/project/limited_field_widgets",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/limited_field_widgets",
+                "issues": "https://www.drupal.org/project/issues/limited_field_widgets"
+            }
+        },
+        {
             "name": "drupal/menu_per_role",
             "version": "1.1.0",
             "source": {
@@ -3489,6 +3543,65 @@
             }
         },
         {
+            "name": "drupal/show_title",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/show_title.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/show_title-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "65594e1ca9b81fd8e8947087f224d0e47a5db7b2"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1543096080",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Guietc",
+                    "homepage": "https://www.drupal.org/user/3461503"
+                },
+                {
+                    "name": "GuillaumeG",
+                    "homepage": "https://www.drupal.org/user/1301498"
+                },
+                {
+                    "name": "jorisInsign",
+                    "homepage": "https://www.drupal.org/user/3473057"
+                },
+                {
+                    "name": "sebrose_insign",
+                    "homepage": "https://www.drupal.org/user/3514932"
+                }
+            ],
+            "description": "Create Extrafield Title to replace default Node Title.",
+            "homepage": "https://www.drupal.org/project/show_title",
+            "support": {
+                "source": "https://git.drupalcode.org/project/show_title"
+            }
+        },
+        {
             "name": "drupal/simple_block",
             "version": "1.0.0-beta1",
             "source": {
@@ -3580,6 +3693,53 @@
             "homepage": "https://www.drupal.org/project/time_field",
             "support": {
                 "source": "https://git.drupalcode.org/project/time_field"
+            }
+        },
+        {
+            "name": "drupal/title_field_for_manage_display",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/title_field_for_manage_display.git",
+                "reference": "8.x-1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/title_field_for_manage_display-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "60a9489c4d76e313a3f8e8802f7c3b9301c2d282"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.9",
+                    "datestamp": "1556204881",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ccx105",
+                    "homepage": "https://www.drupal.org/user/3157639"
+                }
+            ],
+            "description": "Creates a title text field with title formatter for manage display.",
+            "homepage": "https://www.drupal.org/project/title_field_for_manage_display",
+            "support": {
+                "source": "https://git.drupalcode.org/project/title_field_for_manage_display"
             }
         },
         {
@@ -7282,6 +7442,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2019-08-06T17:53:53+00:00"
         },
         {
@@ -7327,6 +7488,7 @@
                 "escaper",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-escaper",
             "time": "2019-09-05T20:03:20+00:00"
         },
         {
@@ -7390,6 +7552,7 @@
                 "feed",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-feed",
             "time": "2019-03-05T20:08:49+00:00"
         },
         {
@@ -7436,10 +7599,71 @@
                 "stdlib",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2018-08-28T21:34:05+00:00"
         }
     ],
     "packages-dev": [
+        {
+            "name": "ajgl/breakpoint-twig-extension",
+            "version": "0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ajgarlag/AjglBreakpointTwigExtension.git",
+                "reference": "13ee39406dc3d959c5704b462a3dbc3cbf088f16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ajgarlag/AjglBreakpointTwigExtension/zipball/13ee39406dc3d959c5704b462a3dbc3cbf088f16",
+                "reference": "13ee39406dc3d959c5704b462a3dbc3cbf088f16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "twig/twig": "^1.14|^2.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^2.7|^3.2|^4.1",
+                "symfony/phpunit-bridge": "^3.4|^4.1",
+                "symfony/twig-bundle": "^2.7|^3.2|^4.1"
+            },
+            "suggest": {
+                "ext-xdebug": "The Xdebug extension is required for the breakpoint to work",
+                "symfony/framework-bundle": "The framework bundle to integrate the extension into Symfony",
+                "symfony/twig-bundle": "The twig bundle to integrate the extension into Symfony"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ajgl\\Twig\\Extension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio J. García Lagar",
+                    "email": "aj@garcialagar.es",
+                    "homepage": "http://aj.garcialagar.es",
+                    "role": "developer"
+                }
+            ],
+            "description": "Twig extension to set breakpoints",
+            "homepage": "https://github.com/ajgarlag/AjglBreakpointTwigExtension",
+            "keywords": [
+                "Xdebug",
+                "breakpoint",
+                "twig"
+            ],
+            "time": "2019-04-10T11:41:26+00:00"
+        },
         {
             "name": "behat/mink",
             "version": "dev-master",
@@ -8188,6 +8412,54 @@
             "homepage": "https://www.drupal.org/project/devel_entity_updates",
             "support": {
                 "source": "https://git.drupalcode.org/project/devel_entity_updates"
+            }
+        },
+        {
+            "name": "drupal/twig_xdebug",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_xdebug.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_xdebug-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "006f842aa8810a0e0d8e087cf73b400706f5c52b"
+            },
+            "require": {
+                "ajgl/breakpoint-twig-extension": "^0.3.4",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1556130181",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "charginghawk",
+                    "homepage": "https://www.drupal.org/user/2626341"
+                }
+            ],
+            "description": "Enables Xdebug breakpoints in Twig.",
+            "homepage": "https://www.drupal.org/project/twig_xdebug",
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_xdebug"
             }
         },
         {

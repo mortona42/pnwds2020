@@ -56,3 +56,37 @@ function pnwds_custom_theme_registry_alter(&$theme_registry) {
     'template' => 'node--session--teaser'
   ]);
 }
+
+/**
+ * Session node modifications.
+ */
+function pnwds_custom_preprocess_node(&$variables) {
+  if ($variables['node']->bundle() != 'session') {
+    return;
+  }
+
+  $node = $variables['node'];
+  // Combine author and additional authors fields.
+  $authors = array_merge($node->uid->referencedEntities(), $node->field_additional_authors->referencedEntities());
+
+  switch ($variables['view_mode']) {
+    // Add authors to bottom of session.
+    case 'full':
+      array_walk($authors, function(&$author, $key) {
+        $author_name = $author->label();
+        $author = array_merge(['#markup' => "<h2>$author_name</h2>"],
+           [\Drupal::entityTypeManager()->getViewBuilder('user')->view($author, 'session_author')]);
+      });
+      $variables['content']['authors'] = [
+        '#weight' => 100,
+        $authors
+      ];
+      break;
+    case 'teaser':
+      array_walk($authors, function(&$author, $key) {
+        $author = $author->label();
+      });
+      $variables['authors']['#markup'] = implode(', ', $authors);
+      break;
+  }
+}

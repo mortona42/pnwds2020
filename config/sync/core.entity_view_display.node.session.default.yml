@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_additional_authors
     - field.field.node.session.field_room
     - field.field.node.session.field_schedule
     - field.field.node.session.field_slides
@@ -12,7 +13,6 @@ dependencies:
   module:
     - file
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -27,45 +27,51 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   field_room:
-    weight: 104
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_schedule:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_slides:
-    weight: 105
-    label: above
+    weight: 5
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
   field_tags:
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
+  show_title:
+    weight: 100
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_additional_authors: true

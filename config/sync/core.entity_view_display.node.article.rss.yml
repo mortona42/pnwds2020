@@ -21,9 +21,21 @@ content:
   links:
     weight: 100
     region: content
+  show_title:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   body: true
   comment: true
   field_image: true
   field_tags: true
-  langcode: true
