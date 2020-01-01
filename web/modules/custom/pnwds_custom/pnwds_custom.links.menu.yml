@@ -3,3 +3,7 @@ pnwds_custom.account.sessions:
   weight: 1
   class: Drupal\pnwds_custom\Plugin\Menu\SessionsLink
   menu_name: account
+pnwds_custom.account.register:
+  weight: 10
+  class: Drupal\pnwds_custom\Plugin\Menu\RegisterLink
+  menu_name: account
