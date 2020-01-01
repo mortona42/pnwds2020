@@ -5,11 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.user.session_author
     - field.field.user.user.field_bio
+    - field.field.user.user.field_links
     - field.field.user.user.user_picture
     - image.style.medium
   module:
     - image
     - layout_builder
+    - link
     - text
     - user
 third_party_settings:
@@ -30,6 +32,18 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_links:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      url_only: false
+      url_plain: false
+      target: '0'
+    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0

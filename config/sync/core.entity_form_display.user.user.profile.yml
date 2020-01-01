@@ -5,10 +5,13 @@ dependencies:
   config:
     - core.entity_form_mode.user.profile
     - field.field.user.user.field_bio
+    - field.field.user.user.field_links
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - limited_field_widgets
+    - link
     - text
     - user
 _core:
@@ -26,6 +29,16 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_links:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      limited_field_widgets:
+        limit_values: '8'
   user_picture:
     type: image_image
     weight: 0

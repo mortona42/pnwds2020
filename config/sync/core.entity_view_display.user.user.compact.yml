@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_bio
+    - field.field.user.user.field_links
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -33,6 +34,7 @@ content:
     label: hidden
 hidden:
   field_bio: true
+  field_links: true
   member_for: true
   public_profiles: true
   test_profiles: true

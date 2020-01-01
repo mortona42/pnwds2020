@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
+    - field.field.user.user.field_links
     - field.field.user.user.user_picture
   module:
     - user
@@ -22,6 +23,7 @@ content:
 hidden:
   contact: true
   field_bio: true
+  field_links: true
   language: true
   public_profiles: true
   test_profiles: true
