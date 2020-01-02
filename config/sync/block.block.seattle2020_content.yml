@@ -1,4 +1,4 @@
-uuid: 69517a70-a90f-4eb9-b5ee-6d346f1334f8
+uuid: 78a7fe67-e47f-4beb-b274-38864eb846a3
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: seattle2020_content
 theme: seattle2020
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: system_main_block
 settings:

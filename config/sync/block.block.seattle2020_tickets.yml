@@ -1,4 +1,4 @@
-uuid: 401d99f2-447f-4c9d-8513-5c1d71869cba
+uuid: c937eec4-2940-4b8d-8b2a-8b6ff7ee2724
 langcode: en
 status: false
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: seattle2020_tickets
 theme: seattle2020
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: 'simple_block:tickets'
 settings:

@@ -1,4 +1,4 @@
-uuid: 0f3e7cbc-7004-4095-85af-4fa7f7d43fd0
+uuid: bcdae920-1506-403e-92b2-83a448f0bd59
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: seattle2020_mainnavigation
 theme: seattle2020
 region: primary_menu
-weight: -7
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

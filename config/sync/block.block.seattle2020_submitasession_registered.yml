@@ -1,4 +1,4 @@
-uuid: 8ebb89ce-a7d8-40f0-91f6-9b2b082b56c5
+uuid: 1e9f25a9-833c-4863-a762-dc704edb0d99
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
     - seattle2020
 id: seattle2020_submitasession_registered
 theme: seattle2020
-region: content
+region: primary_menu
 weight: 0
 provider: null
 plugin: 'simple_block:submit_session_registered'

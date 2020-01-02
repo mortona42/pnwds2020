@@ -1,4 +1,4 @@
-uuid: 759f0f86-b8b1-422f-8734-87ed80932c81
+uuid: 75b1b329-7193-4e23-8db0-948f3311f187
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ dependencies:
     - system
     - views
   theme:
-    - seattle2020
-id: seattle2020_views_block__session_author_block_1
-theme: seattle2020
+    - pnwds_2020
+id: views_block__session_author_block_1
+theme: pnwds_2020
 region: content
 weight: 0
 provider: null
