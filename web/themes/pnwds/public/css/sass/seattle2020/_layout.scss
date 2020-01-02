@@ -1,5 +1,5 @@
 [data-theme="seattle2020"] {
-  .layout-container {
+  #layout-container {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -18,7 +18,14 @@ body {
   background-color: var(--color-bg);
 }
 
-.layout-container {
+.region-header {
+  display: block;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0.5rem;
+}
+
+#layout-container {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -28,39 +35,39 @@ body {
   main {
     flex: 1;
   }
-}
 
-.navigation {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  background-color: var(--color-drupal-blue);
-  min-height: 3rem;
+  .navigation {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-drupal-blue);
+    min-height: 3rem;
 
-  .inner {
+    .inner {
+      @extend %content-container;
+      display: flex;
+      // flex-direction: column-reverse;
+      align-content: center;
+    }
+  }
+
+  .navigation {
+    .nav-list,
+    ul.menu {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+
+  footer > .inner,
+  .layout-content {
     @extend %content-container;
-    display: flex;
-    // flex-direction: column-reverse;
-    align-content: center;
   }
-}
 
-.navigation {
-  .nav-list,
-  ul.menu {
-    list-style: none;
-    display: flex;
-    padding-left: 0;
-    margin: 0;
+  footer {
+    background-color: var(--color-drupal-green);
   }
-}
-
-footer > .inner,
-.layout-content {
-  @extend %content-container;
-}
-
-footer {
-  background-color: var(--color-drupal-green);
 }

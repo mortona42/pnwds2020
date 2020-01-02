@@ -66,15 +66,15 @@ h6, body {
   --font-heading: "Roboto", sans-serif;
 }
 
-footer > .inner,
-.layout-content, .navigation .inner {
+#layout-container footer > .inner,
+#layout-container .layout-content, #layout-container .navigation .inner {
   max-width: 72em;
   margin: 0 auto;
   padding: 0.5em;
 }
 @media only screen and (min-width: 46.8em) {
-  footer > .inner,
-.layout-content, .navigation .inner {
+  #layout-container footer > .inner,
+#layout-container .layout-content, #layout-container .navigation .inner {
     padding: 1em;
   }
 }
@@ -154,16 +154,16 @@ h6, body {
   --font-heading: "Roboto", sans-serif;
 }
 
-footer > .inner,
-.layout-content, .navigation .inner {
+#layout-container footer > .inner,
+#layout-container .layout-content, #layout-container .navigation .inner {
   max-width: 72em;
   margin: 0 auto;
   padding: 0.5em;
 }
 
 @media only screen and (min-width: 46.8em) {
-  footer > .inner,
-.layout-content, .navigation .inner {
+  #layout-container footer > .inner,
+#layout-container .layout-content, #layout-container .navigation .inner {
     padding: 1em;
   }
 }
@@ -377,14 +377,14 @@ li.button {
   align-self: flex-end;
 }
 
-[data-theme=seattle2020] .layout-container {
+[data-theme=seattle2020] #layout-container {
   width: 100%;
   margin: 0 auto;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-[data-theme=seattle2020] .layout-container main {
+[data-theme=seattle2020] #layout-container main {
   flex: 1;
 }
 
@@ -394,18 +394,24 @@ body {
   background-color: var(--color-bg);
 }
 
-.layout-container {
+.region-header {
+  display: block;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0.5rem;
+}
+
+#layout-container {
   width: 100%;
   margin: 0 auto;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-.layout-container main {
+#layout-container main {
   flex: 1;
 }
-
-.navigation {
+#layout-container .navigation {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -413,20 +419,18 @@ body {
   background-color: var(--color-drupal-blue);
   min-height: 3rem;
 }
-.navigation .inner {
+#layout-container .navigation .inner {
   display: flex;
   align-content: center;
 }
-
-.navigation .nav-list,
-.navigation ul.menu {
+#layout-container .navigation .nav-list,
+#layout-container .navigation ul.menu {
   list-style: none;
   display: flex;
   padding-left: 0;
   margin: 0;
 }
-
-footer {
+#layout-container footer {
   background-color: var(--color-drupal-green);
 }
 
