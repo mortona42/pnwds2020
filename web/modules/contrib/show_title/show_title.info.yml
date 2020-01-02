@@ -1,0 +1,15 @@
+name: Show Title
+type: module
+description: Create Extrafield Title to replace default Node Title, or Taxonomy Name.
+package: Fields
+# core: 8.x
+dependencies:
+  - drupal:block
+  - drupal:node
+  - drupal:taxonomy
+
+# Information added by Drupal.org packaging script on 2018-11-24
+version: '8.x-1.5'
+core: '8.x'
+project: 'show_title'
+datestamp: 1543096106

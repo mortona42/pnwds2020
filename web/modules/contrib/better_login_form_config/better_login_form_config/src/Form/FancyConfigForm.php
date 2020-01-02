@@ -33,6 +33,15 @@ class FancyConfigForm extends ConfigFormBase {
 		'#required' => TRUE,
 		'#default_value' => !empty($login_form_config->get('form_title')) ? $login_form_config->get('form_title') : 'User account',
 		);
+    $form['login_form_setting']['form_tab'] = array(
+    '#type' => 'textfield',
+    '#title' => $this->t('Login Form Tab'),
+    '#size' => 60,
+    '#maxlength' => USERNAME_MAX_LENGTH,
+    '#attributes' => array('class' => array('form-tab')),
+    '#required' => TRUE,
+    '#default_value' => !empty($login_form_config->get('form_tab')) ? $login_form_config->get('form_tab') : 'User account',
+    );
 		$form['login_form_setting']['username_label'] = array(
 		'#type' => 'textfield',
 		'#title' => $this->t('Username Label'),
@@ -93,6 +102,14 @@ class FancyConfigForm extends ConfigFormBase {
 		'#required' => TRUE,
 		'#default_value' => !empty($login_form_config->get('forgot_form_title')) ? $login_form_config->get('forgot_form_title'): 'Forgot your password? ',
 		);
+    $form['forgot_form_setting']['forgot_form_tab'] = array(
+    '#type' => 'textfield',
+    '#title' => $this->t('Forgot Form Tab'),
+    '#size' => 60,
+    '#attributes' => array('class' => array('forgot_form_tab')),
+    '#required' => TRUE,
+    '#default_value' => !empty($login_form_config->get('forgot_form_tab')) ? $login_form_config->get('forgot_form_tab'): 'Forgot your password? ',
+    );
 		$form['forgot_form_setting']['forgot_form_username'] = array(
 		'#type' => 'textfield',
 		'#title' => $this->t('User Name or Email  Label '),
@@ -133,6 +150,14 @@ class FancyConfigForm extends ConfigFormBase {
 		'#attributes' => array('class' => array('register_form_title')),
 		'#default_value' => !empty($login_form_config->get('register_form_title')) ? $login_form_config->get('register_form_title'): 'Register',
 		);
+    $form['register_form_setting']['register_form_tab'] = array(
+    '#type' => 'textfield',
+    '#title' =>$this->t('Register Form Tab'),
+    '#size' => 60,
+    '#required' => TRUE,
+    '#attributes' => array('class' => array('register_form_tab')),
+    '#default_value' => !empty($login_form_config->get('register_form_tab')) ? $login_form_config->get('register_form_tab'): 'Register',
+    );
 		$form['register_form_setting']['register_form_mail'] = array(
 		'#type' => 'textfield',
 		'#title' => $this->t('Register Mail  Label '),
@@ -206,6 +231,7 @@ class FancyConfigForm extends ConfigFormBase {
     public function submitForm(array & $form, FormStateInterface $form_state) {
         $config = $this->config('better_login_form_config.settings');
         $config->set('form_title', $form_state->getValue('form_title'));
+        $config->set('form_tab', $form_state->getValue('form_tab'));
         $config->set('username_label', $form_state->getValue('username_label'));
         $config->set('username_description', $form_state->getValue('username_description'));
         $config->set('password_label', $form_state->getValue('password_label'));
@@ -216,7 +242,9 @@ class FancyConfigForm extends ConfigFormBase {
         $config->set('forgot_password', $form_state->getValue('forgot_password'));
         $config->set('back_to_home', $form_state->getValue('back_to_home'));
         $config->set('forgot_form_title', $form_state->getValue('forgot_form_title'));
+        $config->set('forgot_form_tab', $form_state->getValue('forgot_form_tab'));
         $config->set('register_form_title', $form_state->getValue('register_form_title'));
+        $config->set('register_form_tab', $form_state->getValue('register_form_tab'));
         $config->set('register_form_mail', $form_state->getValue('register_form_mail'));
         $config->set('register_mail_desc', $form_state->getValue('register_mail_desc'));
         $config->set('register_form_name', $form_state->getValue('register_form_name'));

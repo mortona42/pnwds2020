@@ -5,78 +5,17 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_bio
+    - field.field.user.user.field_links
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
     - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          1d9c68bf-0547-4fa7-b04a-7704ed035ebf:
-            uuid: 1d9c68bf-0547-4fa7-b04a-7704ed035ebf
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:user:user:user_picture'
-              formatter:
-                type: image
-                settings:
-                  image_style: thumbnail
-                  image_link: content
-                third_party_settings: {  }
-                label: hidden
-            additional: {  }
-            weight: 1
-          069019ae-9de6-462d-997d-dc4de349deec:
-            uuid: 069019ae-9de6-462d-997d-dc4de349deec
-            region: content
-            configuration:
-              id: 'field_block:user:user:name'
-              label: Name
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          b1f9aa68-ddef-45d2-9a08-e27a7744e6f9:
-            uuid: b1f9aa68-ddef-45d2-9a08-e27a7744e6f9
-            region: content
-            configuration:
-              id: 'field_block:user:user:field_bio'
-              label: Bio
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: basic_string
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 2
-        third_party_settings: {  }
+    enabled: false
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact
@@ -95,6 +34,7 @@ content:
     label: hidden
 hidden:
   field_bio: true
+  field_links: true
   member_for: true
   public_profiles: true
   test_profiles: true

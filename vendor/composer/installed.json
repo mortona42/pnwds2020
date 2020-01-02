@@ -2345,7 +2345,7 @@
                 "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch",
                 "Config form issues": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-config_form-3103647-2.patch",
                 "Remove default username description": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-remove_default_username-3103649-5.patch",
-                "Set tab and page titles": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-titles-3103654-2.patch"
+                "Set tab and page titles": "https://www.drupal.org/files/issues/2019-12-31/better_login_form_config-titles-3103654-4.patch"
             }
         },
         "installation-source": "dist",
@@ -3397,6 +3397,59 @@
         }
     },
     {
+        "name": "drupal/limited_field_widgets",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/limited_field_widgets.git",
+            "reference": "8.x-1.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/limited_field_widgets-8.x-1.2.zip",
+            "reference": "8.x-1.2",
+            "shasum": "f3b399a087510840fa56135b7e6af847893ad52c"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.2",
+                "datestamp": "1560936785",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "stomusic",
+                "homepage": "https://www.drupal.org/user/3405436"
+            }
+        ],
+        "description": "Provide extra limit settings for unlimited field widgets.",
+        "homepage": "https://www.drupal.org/project/limited_field_widgets",
+        "keywords": [
+            "Drupal"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/limited_field_widgets",
+            "issues": "https://www.drupal.org/project/issues/limited_field_widgets"
+        }
+    },
+    {
         "name": "drupal/menu_per_role",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -3585,6 +3638,67 @@
         }
     },
     {
+        "name": "drupal/show_title",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/show_title.git",
+            "reference": "8.x-1.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/show_title-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "65594e1ca9b81fd8e8947087f224d0e47a5db7b2"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.5",
+                "datestamp": "1543096080",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Guietc",
+                "homepage": "https://www.drupal.org/user/3461503"
+            },
+            {
+                "name": "GuillaumeG",
+                "homepage": "https://www.drupal.org/user/1301498"
+            },
+            {
+                "name": "jorisInsign",
+                "homepage": "https://www.drupal.org/user/3473057"
+            },
+            {
+                "name": "sebrose_insign",
+                "homepage": "https://www.drupal.org/user/3514932"
+            }
+        ],
+        "description": "Create Extrafield Title to replace default Node Title.",
+        "homepage": "https://www.drupal.org/project/show_title",
+        "support": {
+            "source": "https://git.drupalcode.org/project/show_title"
+        }
+    },
+    {
         "name": "drupal/simple_block",
         "version": "1.0.0-beta1",
         "version_normalized": "1.0.0.0-beta1",
@@ -3680,6 +3794,55 @@
         "homepage": "https://www.drupal.org/project/time_field",
         "support": {
             "source": "https://git.drupalcode.org/project/time_field"
+        }
+    },
+    {
+        "name": "drupal/title_field_for_manage_display",
+        "version": "1.9.0",
+        "version_normalized": "1.9.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/title_field_for_manage_display.git",
+            "reference": "8.x-1.9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/title_field_for_manage_display-8.x-1.9.zip",
+            "reference": "8.x-1.9",
+            "shasum": "60a9489c4d76e313a3f8e8802f7c3b9301c2d282"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.9",
+                "datestamp": "1556204881",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "ccx105",
+                "homepage": "https://www.drupal.org/user/3157639"
+            }
+        ],
+        "description": "Creates a title text field with title formatter for manage display.",
+        "homepage": "https://www.drupal.org/project/title_field_for_manage_display",
+        "support": {
+            "source": "https://git.drupalcode.org/project/title_field_for_manage_display"
         }
     },
     {
@@ -7508,7 +7671,8 @@
             "http",
             "psr",
             "psr-7"
-        ]
+        ],
+        "abandoned": "laminas/laminas-diactoros"
     },
     {
         "name": "zendframework/zend-escaper",
@@ -7555,7 +7719,8 @@
             "ZendFramework",
             "escaper",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-escaper"
     },
     {
         "name": "zendframework/zend-feed",
@@ -7620,7 +7785,8 @@
             "ZendFramework",
             "feed",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-feed"
     },
     {
         "name": "zendframework/zend-stdlib",
@@ -7668,6 +7834,7 @@
             "ZendFramework",
             "stdlib",
             "zf"
-        ]
+        ],
+        "abandoned": "laminas/laminas-stdlib"
     }
 ]

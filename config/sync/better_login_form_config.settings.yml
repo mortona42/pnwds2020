@@ -5,10 +5,10 @@ password_label: Password
 password_description: ''
 login_button: 'Log in'
 forgot_form_title: 'Reset password'
-register_form_title: Register
+register_form_title: 'Register to submit a session'
 register_form_mail: 'Email address'
 register_mail_desc: ''
-register_form_name: Username
+register_form_name: 'Register to submit a session'
 register_form_name_desc: ''
 register_form_button: Register
 forgot_form_username_desc: ''
@@ -23,3 +23,6 @@ forgot_password: 0
 back_to_home: 0
 _core:
   default_config_hash: veaPM7BBX2ddz3EiBW3XyuWLtsqgU9s-zN5oWOIca_A
+forgot_form_tab: 'Reset password'
+register_form_tab: Register
+form_tab: 'Log in'

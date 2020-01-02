@@ -1,0 +1,5 @@
+pnwds_custom.schedule.day:
+  base_route: view.schedule.page
+  route_name: view.schedule.page
+  deriver: 'Drupal\pnwds_custom\Plugin\Derivative\ScheduleLocalTasks'
+  weight: 0

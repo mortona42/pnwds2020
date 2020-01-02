@@ -22,6 +22,6 @@ Source: https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-
 
 
 Set tab and page titles
-Source: https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-titles-3103654-2.patch
+Source: https://www.drupal.org/files/issues/2019-12-31/better_login_form_config-titles-3103654-4.patch
 
 
