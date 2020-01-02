@@ -10,4 +10,4 @@ libraries:
   - seattle2020/styles
 
 libraries-override:
-  pnwds_2020/styles: false
+#  pnwds_2020/styles: false
