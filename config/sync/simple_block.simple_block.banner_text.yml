@@ -1,0 +1,11 @@
+uuid: 021a4e12-efff-4635-b06d-8962daeda77f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: banner_text
+title: 'Banner Text'
+content:
+  value: "<div class=\"banner text\">\r\n<div class=\"inner\">\r\n<div class=\"text-top\">\r\n<h1><a href=\"/\"><img alt=\"Front Page\" class=\"logo\" src=\"/themes/seattle2020/images/logo.png\" /></a> <span>2020</span></h1>\r\n</div>\r\n\r\n<div class=\"text-bottom\">\r\n<h2>March 28-29. Seattle WA</h2>\r\n\r\n<h3>10th Pacific Northwest Drupal Summit.</h3>\r\n\r\n<p>Share. Showcases. Subtext</p>\r\n</div>\r\n</div>\r\n</div>\r\n"
+  format: full_html

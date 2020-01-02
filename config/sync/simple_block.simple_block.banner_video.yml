@@ -1,0 +1,11 @@
+uuid: c0d03918-1ff0-4085-a952-a0cc371a6735
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: banner_video
+title: 'Banner Video'
+content:
+  value: "<div class=\"banner video\">\r\n<div class=\"video\"><img alt=\"\" class=\"videosubstitute\" id=\"videosubstitute\" src=\"/themes/seattle2020/images/seattle-background.jpg\" />\r\n<video autoplay=\"\" class=\"bgvid\" id=\"bgvid\" muted=\"\" playsinline=\"\" poster=\"/themes/seattle2020/images/AdobeStock_153596091_Preview.jpeg\" preload=\"preload\"><source src=\"themes/seattle2020/images/AdobeStock_145407701_Video_HD_Preview.webm\" type=\"video/webm\" /> <source src=\"/themes/seattle2020/images/AdobeStock_145407701_Video_HD_Preview.mp4\" type=\"video/mp4\" /></video>\r\n</div>\r\n\r\n<div class=\"text-top\">\r\n<h1><a href=\"/\"><img alt=\"Front Page\" class=\"logo\" src=\"/themes/seattle2020/images/logo.png\" /></a> <span>2020</span></h1>\r\n</div>\r\n\r\n<div class=\"text-bottom fade-in\">\r\n<h2>March 28-29. Seattle WA</h2>\r\n\r\n<h3>10th Pacific Northwest Drupal Summit.</h3>\r\n\r\n<p>Share. Showcases. Subtext</p>\r\n</div>\r\n</div>\r\n"
+  format: full_html
