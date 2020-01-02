@@ -1,0 +1,80 @@
+.session {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  &__date {
+    color: var(--color-border);
+    font-size: 1.75rem;
+    line-height: 1rem;
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+  }
+
+  &__meta {
+    // border-top: 4px solid map-get($drupal-colors, "blue");
+    border-top: 2px solid var(--color-border);
+    padding-top: 1rem;
+    width: 100%;
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      padding: 0 0.5em;
+    }
+  }
+
+  &__time {
+    font-weight: 700;
+    color: var(--color-highlight);
+  }
+
+  &__topics {
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    // color: map-get($drupal-colors, "green2");
+    // color: var(--color-attention);
+  }
+
+  &__body {
+    background-color: var(--color-bg);
+    padding: 0.5em;
+  }
+
+  @media only screen and (min-width: $bp-med) {
+    &__meta {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      > div {
+        flex: 1 1 32%;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      > div {
+        flex: 1 1 33%;
+      }
+
+      .session__speakers {
+        order: -1;
+        flex: 0 1 33%;
+      }
+    }
+  }
+}

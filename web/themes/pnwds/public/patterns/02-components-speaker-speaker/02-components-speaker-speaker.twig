@@ -1,0 +1,13 @@
+<div class="speaker">
+  <img src="{{ photo }}"/>
+  <p class="speaker__name">
+    {{ speaker }}</p>
+  <p class="speaker__title">
+    {{ jobTitle }}</p>
+  <p class="speaker__company">
+    {{ company }}</p>
+  <div class="bio">{{ bio }}</div>
+  {% if social %}
+    {% include "@components/social/social-links.twig" %}
+  {% endif %}
+</div>

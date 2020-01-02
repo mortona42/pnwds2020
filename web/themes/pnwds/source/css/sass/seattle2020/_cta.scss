@@ -1,0 +1,14 @@
+.cta {
+  padding: $space;
+  background-color: var(--color-attention-bg);
+  color: var(--color-attention-text);
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__title {
+    color: var(--color-attention);
+  }
+}

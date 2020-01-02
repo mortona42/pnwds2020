@@ -1,0 +1,38 @@
+body {
+  @extend %body-text;
+  color: var(--color-text);
+}
+
+h1 {
+  @extend %heading-text;
+  color: var(--color-drupal-green2);
+  line-height: 1.2;
+}
+
+h3 {
+  @extend %heading-text;
+  color: var(--color-primary-green);
+  line-height: 1.2;
+}
+
+h2,
+h4 {
+  @extend %subheading-text;
+  line-height: 1.2;
+}
+
+h5,
+h6 {
+  @extend %body-text;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.dialog-off-canvas-main-canvas a,
+.dialog-off-canvas-main-canvas a:hover,
+.dialog-off-canvas-main-canvas a:focus,
+.dialog-off-canvas-main-canvas a:active,
+.dialog-off-canvas-main-canvas a:visited {
+  color: map-get($pnwds-colors, "primary-blue");
+  text-decoration: none;
+}

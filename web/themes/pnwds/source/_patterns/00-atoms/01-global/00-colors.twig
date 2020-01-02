@@ -1,0 +1,36 @@
+<h2>Drupal.org Colors</h2>
+<ul class="sg-colors color-bricks">
+  {% for color in drupal %}
+    {% if color.var %}
+      {% set thePalette = 'var(' ~ color.var ~ ')' %}
+        {% else %}
+      {% set thePalette = color.value %}
+    {% endif %}
+    {% include "@atoms/01-global/_color-swatch.twig" with {
+      color_swatch: {
+        colorName: color.name,
+        palette: thePalette
+      },
+      classes: color.name|trim('$c-')
+    } %}
+  {% endfor %}
+</ul>
+
+
+<h2>PNWDS Colors</h2>
+<ul class="sg-colors color-bricks">
+  {% for color in pnwds %}
+    {% if color.var %}
+      {% set thePalette = 'var(' ~ color.var ~ ')' %}
+        {% else %}
+      {% set thePalette = color.value %}
+    {% endif %}
+    {% include "@atoms/01-global/_color-swatch.twig" with {
+      color_swatch: {
+        colorName: color.name,
+        palette: thePalette
+      },
+      classes: color.name|trim('$c-')
+    } %}
+  {% endfor %}
+</ul>

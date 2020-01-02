@@ -1,0 +1,13 @@
+<h2>Speakers</h2>
+<ul>
+  {% for session in sessions %}
+  <li>
+    {% include "@components/speaker/speaker.twig" with {
+      'speaker': session.speaker,
+      'company': session.company,
+      'jobTitle': session.jobTitle,
+      'photo': session.photo
+    } %}
+    </li>
+  {% endfor %}
+</ul>

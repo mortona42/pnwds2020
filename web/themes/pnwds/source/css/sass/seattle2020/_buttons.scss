@@ -1,0 +1,19 @@
+a.button {
+  border-radius: .8rem;
+  background-color: #1963a3;
+  color: white;
+  padding: .5rem 1rem;
+  display: inline-block;
+  margin: .5rem 0 .25rem;
+}
+
+a.button:hover,
+a.button:focus,
+a.button:active,
+a.button:visited {
+  color: white;
+}
+
+li.button {
+  align-self: flex-end;
+}

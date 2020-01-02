@@ -1,0 +1,195 @@
+.field-container,
+.form-item {
+  margin: 1rem 0;
+  position: relative;
+
+  label {
+    @extend %subheading-text;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+input:not([type="submit"]),
+textarea,
+keygen,
+select,
+button,
+textarea {
+  @extend %body-text;
+  padding: 1rem 1.2rem;
+  margin: 0.5em 0;
+  font-size: 1rem;
+}
+
+input:not([type="submit"]):focus {
+}
+
+#edit-body-0-format,
+#edit-field-bio-0-format {
+  display: none;
+}
+
+#edit-field-tags {
+  display: flex;
+}
+
+button.link-edit-summary {
+  border: none;
+  background: none;
+  color: map-get($map: $pnwds-colors, $key: "primary-green");
+  text-decoration: underline;
+}
+
+.field-edit-link {
+  display: none;
+}
+
+.field--name-title label,
+.field--name-body label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-checkboxes .form-item {
+  margin: 0.25rem 0;
+  width: max-content;
+}
+
+input[type="submit"]#edit-submit {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: map-get($pnwds-colors, "primary-blue");
+  color: white;
+}
+
+input[type="submit"]#edit-reset {
+  border: none;
+  background-color: white;
+  color: map-get($map: $pnwds-colors, $key: "primary-blue");
+  text-decoration: underline;
+}
+
+.entity-meta.vertical-tabs__panes {
+  margin: 1rem;
+}
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+form ol,
+form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0 1px 0;
+}
+
+input,
+textarea {
+  width: auto;
+  max-width: 90%;
+  border: 1px solid;
+  // padding: $pad-half 0.65rem;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea {
+  -webkit-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  // padding: $pad-half;
+  // background: $gray-dark;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+//Form Field Container
+.field-container {
+  margin-bottom: $space;
+}
+
+.inline-form {
+  fieldset,
+  .inline-container {
+    position: relative;
+  }
+
+  input[type="submit"],
+  button,
+  .btn {
+    // font-size: $font-size-small-2;
+    padding: 0.65rem 1.3rem;
+    // background: $gray-dark;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: auto;
+
+    &:hover,
+    &:focus {
+      background: var(--color-bg);
+      color: white;
+    }
+  }
+}
+
+/* Validation */
+.has-error {
+  border-color: var(--color-error);
+}
+.is-valid {
+  border-color: var(--color-valid);
+}
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+
+/* Search Form */
+.search-field {
+  padding-right: 3em;
+}
+.inline-form .search-submit {
+  background: none;
+  padding: 0.78em 1em;
+  border: 0;
+  border-left: 1px solid gray;
+  color: gray;
+}

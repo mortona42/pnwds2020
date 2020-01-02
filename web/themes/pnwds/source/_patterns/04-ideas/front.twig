@@ -1,0 +1,53 @@
+<div class="layout-container" data-theme="seattle2020">
+
+  <header role="banner">
+    <div class="navigation">
+      <div class="inner">
+        {% include "@molecules/05-navigation/00-primary-nav.twig" %}
+        {{ page.secondary_menu }}
+      </div>
+    </div>
+    {% include "@components/banner/hero-video.twig" %}
+  </header>
+
+  <main role="main">
+
+    {{ page.highlighted }}
+
+    {{ page.help }}
+    <a id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
+
+    <div class="layout-content">
+
+
+
+      {{ page.content }}
+    </div>
+    {# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+     <div class="inner">
+     {% include "@molecules/05-navigation/01-footer-nav.twig" %}
+      {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>
+{# /.layout-container #}

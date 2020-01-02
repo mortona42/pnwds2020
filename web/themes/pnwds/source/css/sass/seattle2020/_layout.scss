@@ -1,0 +1,81 @@
+[data-theme="seattle2020"] {
+  .layout-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    main {
+      flex: 1;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.layout-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+}
+
+.region-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 1rem 0.5rem;
+}
+
+#block-sitebranding {
+  margin-right: 1rem;
+}
+
+.region-header > div {
+  flex-grow: 1;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-drupal-blue);
+  min-height: 3rem;
+
+  .inner {
+    @extend %content-container;
+    display: flex;
+    // flex-direction: column-reverse;
+    align-content: center;
+  }
+}
+
+.navigation {
+  .nav-list,
+  ul.menu {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+footer > .inner,
+.layout-content {
+  @extend %content-container;
+}
+
+footer {
+  background-color: var(--color-drupal-green);
+}

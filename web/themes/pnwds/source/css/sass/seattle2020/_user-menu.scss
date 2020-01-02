@@ -1,0 +1,22 @@
+#block-useraccountmenu {
+  margin: 1rem .5rem .5rem;
+}
+
+#block-useraccountmenu ul.menu {
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+#block-useraccountmenu ul.menu li {
+  margin-left: 1rem;
+  font-size: .8rem;
+}
+
+#block-useraccountmenu ul.menu li a,
+#block-useraccountmenu ul.menu li a:hover,
+#block-useraccountmenu ul.menu li a:active,
+#block-useraccountmenu ul.menu li a:focus,
+#block-useraccountmenu ul.menu li a:visited {
+  text-decoration: none;
+  color: #444;
+}
