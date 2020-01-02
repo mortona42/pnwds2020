@@ -8,3 +8,6 @@ logo: logo.png
 
 libraries:
   - seattle2020/styles
+
+libraries-override:
+  pnwds_2020/styles: false
