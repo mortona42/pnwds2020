@@ -1,0 +1,39 @@
+uuid: 801b0ed4-1a9c-4ff8-830d-4a4c9a43bacc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_author
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - seattle2020
+id: seattle2020_views_block__session_author_block_1
+theme: seattle2020
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:session_author-block_1'
+settings:
+  id: 'views_block:session_author-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      session: session
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/session/*/*'
+    negate: true
+    context_mapping: {  }

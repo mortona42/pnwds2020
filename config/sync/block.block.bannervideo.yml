@@ -1,0 +1,22 @@
+uuid: 45a34600-8042-4c84-88f3-f9b8c85bb3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.banner_video
+  module:
+    - simple_block
+  theme:
+    - seattle2020
+id: bannervideo
+theme: seattle2020
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:banner_video'
+settings:
+  id: 'simple_block:banner_video'
+  label: 'Banner Video'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

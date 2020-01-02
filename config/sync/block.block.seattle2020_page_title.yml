@@ -1,0 +1,20 @@
+uuid: da9efadc-4033-49c7-9645-38d86bc382d8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seattle2020
+_core:
+  default_config_hash: ZSpc3IoSaLd0PkB02nxjVPBMztIdsTdHek9SiGaqZ_c
+id: seattle2020_page_title
+theme: seattle2020
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

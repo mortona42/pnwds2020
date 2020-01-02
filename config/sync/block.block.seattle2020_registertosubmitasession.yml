@@ -1,0 +1,28 @@
+uuid: 6f297918-209b-402f-bf03-4276eca2ecba
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.register_submit_session
+  module:
+    - simple_block
+    - system
+  theme:
+    - seattle2020
+id: seattle2020_registertosubmitasession
+theme: seattle2020
+region: content
+weight: -7
+provider: null
+plugin: 'simple_block:register_submit_session'
+settings:
+  id: 'simple_block:register_submit_session'
+  label: 'Register to submit a session'
+  provider: simple_block
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/register
+    negate: false
+    context_mapping: {  }
