@@ -30,21 +30,6 @@ body {
   }
 }
 
-.region-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  margin: 1rem 0.5rem;
-}
-
-#block-sitebranding {
-  margin-right: 1rem;
-}
-
-.region-header > div {
-  flex-grow: 1;
-}
-
 .navigation {
   position: fixed;
   z-index: 100;
