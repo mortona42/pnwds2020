@@ -43,7 +43,7 @@
  * @see html.html.twig
  */
 #}
-<div id="layout-container" class="layout-container-2" data-theme="seattle2020">
+<div id="layout-container" class="layout-container-2">
 
   <header role="banner">
     <div class="navigation">
@@ -86,7 +86,9 @@
 
   {% if page.footer %}
     <footer role="contentinfo">
+       <div class="inner">
       {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 

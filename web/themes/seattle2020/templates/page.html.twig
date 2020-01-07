@@ -43,31 +43,34 @@
  * @see html.html.twig
  */
 #}
-<div id="layout-container" class="layout-container-2"  data-theme="seattle2020">
+<div id="layout-container" class="layout-container-2">
 
   <header role="banner">
     <div class="navigation">
       <div class="inner">
-      {{ page.primary_menu }}
-      {{ page.secondary_menu }}
+        {{ page.primary_menu }}
+        {{ page.secondary_menu }}
       </div>
     </div>
 
-        {{ page.header }}
+    {{ page.header }}
   </header>
 
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-  {{ page.breadcrumb }}
+    <div class="system">
+      {{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+      {{ page.highlighted }}
 
-  {{ page.help }}
-
+      {{ page.help }}
+    </div>
+    {# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
+    </div>
+    {# /.layout-content #}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -85,8 +88,11 @@
 
   {% if page.footer %}
     <footer role="contentinfo">
+        <div class="inner">
       {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 
-</div>{# /.layout-container #}
+</div>
+{# /.layout-container #}
