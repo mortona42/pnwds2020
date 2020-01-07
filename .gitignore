@@ -29,3 +29,4 @@ vendor/*/.git
 web/*/.git
 
 development.services.local.yml
+/*.sql.gz
