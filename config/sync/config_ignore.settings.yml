@@ -1,4 +1,4 @@
 ignored_config_entities:
-  - 'views.view.schedule:page.display_options.menu.enabled'
+  - 'views.view.schedule:display.page.display_options.menu.enabled'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
