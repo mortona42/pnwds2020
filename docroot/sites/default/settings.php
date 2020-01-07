@@ -237,7 +237,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -266,7 +266,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'ptVVYDYLFZQMqZolpw1-iG4JR2e7k3gh3Fx54sZdsK0v7MYNOe9W0WszNusa07Rma90xJItexw';
 
 /**
  * Deployment identifier.

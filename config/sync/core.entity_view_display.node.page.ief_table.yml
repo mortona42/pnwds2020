@@ -48,12 +48,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden: {  }
