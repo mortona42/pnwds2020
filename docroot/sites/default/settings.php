@@ -237,7 +237,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-$settings['vcs'] = '../config/sync';
+$settings['sync'] = '../config/sync';
 
 /**
  * Settings:
