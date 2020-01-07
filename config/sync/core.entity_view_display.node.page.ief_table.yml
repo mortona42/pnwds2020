@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.ief_table
     - field.field.node.page.body
+    - field.field.node.page.field_files
     - node.type.page
   module:
     - layout_builder
@@ -48,4 +49,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_files: true
