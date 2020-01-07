@@ -3,15 +3,14 @@
   {% for color in drupal %}
     {% if color.var %}
       {% set thePalette = 'var(' ~ color.var ~ ')' %}
-        {% else %}
+    {% else %}
       {% set thePalette = color.value %}
     {% endif %}
     {% include "@atoms/01-global/_color-swatch.twig" with {
       color_swatch: {
         colorName: color.name,
         palette: thePalette
-      },
-      classes: color.name|trim('$c-')
+      }
     } %}
   {% endfor %}
 </ul>
@@ -22,15 +21,70 @@
   {% for color in pnwds %}
     {% if color.var %}
       {% set thePalette = 'var(' ~ color.var ~ ')' %}
-        {% else %}
+    {% else %}
       {% set thePalette = color.value %}
     {% endif %}
     {% include "@atoms/01-global/_color-swatch.twig" with {
       color_swatch: {
         colorName: color.name,
         palette: thePalette
-      },
-      classes: color.name|trim('$c-')
+      }
     } %}
   {% endfor %}
+</ul>
+
+<h2>Color Paring</h2>
+<ul class="sg-colors color-bricks">
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-attention-bg',
+        text: '--color-attention-text',
+        accent: '--color-attention-accent',
+        usage: 'Content need users attention or action'
+      }
+    } %}
+
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-attention-text',
+        text: '--color-attention-bg',
+        accent: '--color-drupal-green2',
+        usage: 'Attention block with logo in it'
+      }
+    } %}
+
+
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-information-bg',
+        text: '--color-information',
+        accent: '--color-highlight',
+        usage: 'General information box'
+      }
+    } %}
+
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-warning',
+        text: '--color-text',
+        usage: 'Warning'
+      }
+    } %}
+
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-bg',
+        text: '--color-valid',
+        usage: 'Valid text'
+      }
+    } %}
+
+  {% include "@atoms/01-global/_color-paring.twig" with {
+      color_swatch: {
+        bg: '--color-bg',
+        text: '--color-error',
+        usage: 'Error message'
+      }
+    } %}
+
 </ul>

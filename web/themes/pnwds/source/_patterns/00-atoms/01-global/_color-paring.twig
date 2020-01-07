@@ -1,0 +1,9 @@
+<li class="sg-color-paring" style="background-color: var({{  color_swatch.bg }})">
+    <p style="font-weight: 600; color: var({{  color_swatch.text }})">{{ color_swatch.usage }}
+    </p>
+    <p style="color: var({{  color_swatch.text }})">{{ color_swatch.usage }}
+    </p>
+    {% if color_swatch.accent %}
+      <span class="icon" style="font-size: .9rem; color: var({{  color_swatch.accent }})">Accent: &#9658;</span>
+    {% endif %}
+</li>

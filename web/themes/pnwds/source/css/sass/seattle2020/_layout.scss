@@ -1,4 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 [data-theme="seattle2020"] {
+  body {
+    color: var(--color-text);
+    background-color: var(--color-white, #fffffe);
+  }
+
   #layout-container {
     width: 100%;
     margin: 0 auto;
@@ -6,68 +16,55 @@
     min-height: 100vh;
     flex-direction: column;
 
+    .navigation {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      width: 100%;
+      background-color: var(--color-grayish-green, #e8eae3);
+      min-height: 4.6rem;
+
+      .inner {
+        @extend %content-container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    .region-header {
+      display: block;
+      border-top: 0.5rem solid var(--color-grayish-green, #e8eae3);
+      flex: none;
+      margin: 0;
+      // padding-top: 4.6rem;
+    }
+
     main {
       flex: 1;
     }
-  }
-}
 
-body {
-  margin: 0;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
-
-.region-header {
-  display: block;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 1rem 0.5rem;
-}
-
-#layout-container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-
-  main {
-    flex: 1;
-  }
-
-  .navigation {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    width: 100%;
-    background-color: var(--color-drupal-blue);
-    min-height: 3rem;
-
-    .inner {
+    footer > .inner,
+    .layout-content {
       @extend %content-container;
-      display: flex;
-      // flex-direction: column-reverse;
-      align-content: center;
     }
-  }
 
-  .navigation {
-    .nav-list,
-    ul.menu {
-      list-style: none;
-      display: flex;
-      padding-left: 0;
-      margin: 0;
+    footer {
+      padding-top: $space * 2;
+      margin-top: $space * 2;
+      background-color: var(--color-grayish-green, #e8eae3);
+      font-size: 0.9rem;
     }
-  }
 
-  footer > .inner,
-  .layout-content {
-    @extend %content-container;
-  }
-
-  footer {
-    background-color: var(--color-drupal-green);
+    // @media only screen and (min-width: $bp-med) {
+    //   .navigation {
+    //     .inner {
+    //       display: flex;
+    //       justify-content: flex-end;
+    //       align-items: center;
+    //     }
+    //   }
+    // }
   }
 }

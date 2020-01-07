@@ -1,0 +1,11 @@
+<h2>Sponsors</h2>
+<ul class="speakers">
+  {% for sponsor in sponsors %}
+  <li>
+    {% include "@components/sponsor/sponsor.twig" with {
+      'companyName': sponsor.companyName,
+      'logo': sponsor.logo
+    } %}
+    </li>
+  {% endfor %}
+</ul>

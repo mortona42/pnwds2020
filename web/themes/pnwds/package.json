@@ -12,10 +12,12 @@
     "install": "patternlab install --config ./patternlab-config.json",
     "serve": "patternlab serve --config ./patternlab-config.json",
     "export": "patternlab export --config ./patternlab-config.json",
-    "build-css": "node ./node_modules/sass/sass.js --trace --color source/css:source/css",
-    "watch-css": "node ./node_modules/sass/sass.js --watch source/css:source/css",
+    "build-css": "sass --trace --color source/css:source/css",
+    "watch-css": "sass --watch source/css:source/css",
     "start": "npm run watch-css & npm run serve",
-    "data": "node scripts/fake-sessions.js",
+    "data": "node scripts/fake-sessions.js & node scripts/fake-sponsors.js",
+    "convert-sass": "node scripts/convertsass.js",
+    "sass-export": "sass-export source/css/sass/**/*.scss -o source/_data/exported-sass-array.json -a",
     "version": "patternlab --version"
   },
   "keywords": [],
@@ -30,7 +32,8 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "gulp": "^4.0.2",
-    "sass": "^1.24.0"
+    "sass": "^1.24.0",
+    "sass-export": "^1.0.6",
+    "sass-maps-to-json": "^1.1.1"
   }
 }

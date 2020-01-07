@@ -1,0 +1,58 @@
+<div id="layout-container" class="layout-container2">
+  <header role="banner">
+    <div class="navigation">
+      <div class="inner">
+        {% include "@molecules/05-navigation/_region-primary-menu.twig" %}
+        {% include "@molecules/05-navigation/_region-secondary-menu.twig" %}
+         {{ page.primary_menu }}
+         {{ page.secondary_menu }}
+      </div>
+    </div>
+
+    <div class="region region-header">
+    {% block banner %}
+      {% include "@components/banner/hero-image.twig" %}
+    {% endblock %}
+        {{ page.banner }}
+    </div>
+  </header>
+
+  <main role="main">
+    {{ page.highlighted }}
+    {{ page.help }}
+    <a id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    </div>
+    {# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+
+  <footer role="contentinfo">
+    <div class="inner">
+      {% block footer %}
+        {% include "@molecules/05-navigation/_region-footer-menu.twig" %}
+        {{ page.footer }}
+      {% endblock %}
+    </div>
+  </footer>
+
+</div>
+{# /.layout-container #}

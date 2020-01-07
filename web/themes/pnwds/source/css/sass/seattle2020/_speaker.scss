@@ -1,4 +1,16 @@
 .speaker {
+  padding: 0.5rem;
+  display: flex;
+
+  > .col:last-child {
+    width: 75%;
+    padding-left: $space;
+  }
+
+  &__name {
+    margin-top: 0;
+  }
+
   &__title {
     font-size: 0.9em;
     font-weight: 600;
@@ -8,5 +20,46 @@
   &__company {
     font-size: 0.9em;
     margin-top: 0;
+  }
+}
+
+ul.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $space;
+  }
+}
+
+.session__speakers {
+  .speaker {
+    display: block;
+
+    > .col:last-child {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    &__name {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $bp-med) {
+  ul.speakers {
+    li {
+      margin-bottom: $space * 2;
+      width: 32%;
+      max-width: 100%;
+    }
   }
 }

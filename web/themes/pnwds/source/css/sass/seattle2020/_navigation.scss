@@ -1,0 +1,70 @@
+.region-primary-menu {
+  align-items: center;
+  background-color: transparent !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0.75rem;
+}
+
+nav[id$="mainnavigation"],
+nav[id$="useraccountmenu"] {
+  text-transform: uppercase;
+
+  .nav-list,
+  ul.menu {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  ul.menu li {
+    font-size: 0.9rem;
+    margin: 0 1rem 0 0;
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.region-primary-menu,
+nav[id$="mainnavigation"] {
+  text-transform: uppercase;
+
+  ul.menu li {
+    a {
+      color: var(--color-primary-blue);
+    }
+  }
+}
+
+.region-secondary-menu,
+nav[id$="useraccountmenu"] {
+  ul.menu li {
+    a {
+      color: var(--color-drupal-blue);
+    }
+  }
+}
+
+.region-footer {
+  .nav-list,
+  ul.menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  ul.menu li {
+    a {
+      color: var(--color-drupal-blue);
+      text-decoration: none;
+      display: block;
+    }
+  }
+}

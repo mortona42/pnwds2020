@@ -24,6 +24,11 @@ $secondary-colors: (
   "violet": #49027d,
   "vivid-blue": #0897ef,
   "electric-blue": #0063b2,
+  "seattle-blue": #0e457b,
+  "seattle-gray": #e2e1dd,
+  "seattle-yellow": #d4920f,
+  "seattle-orange": #b43a1a,
+  "coffee": #b38867,
   "moderate-green": #639938,
   "dark-green": #006e33,
   "yellow": #ffcf43,
@@ -42,13 +47,14 @@ $color-usages: (
   "valid": map-get($pnwds-colors, "primary-green"),
   "warning": map-get($secondary-colors, "yellow"),
   "information": map-get($drupal-colors, "blue2"),
-  "attention": map-get($drupal-colors, "green"),
+  "information-bg": map-get($secondary-colors, "grayish-green"),
+  "attention-accent": map-get($drupal-colors, "green"),
   "attention-text": map-get($secondary-colors, "mint"),
   "attention-bg": map-get($secondary-colors, "sailer-blue"),
   "text": map-get($secondary-colors, "black"),
-  "highlight": map-get($secondary-colors, "orange"),
-  "bg": map-get($secondary-colors, "white"),
-  "border": map-get($secondary-colors, "electric-blue"),
+  "highlight": map-get($secondary-colors, "seattle-orange"),
+  "bg": map-get($secondary-colors, "seattle-gray"),
+  "border": map-get($secondary-colors, "gray"),
   "dim": map-get($secondary-colors, "dim")
 );
 
@@ -67,7 +73,9 @@ $color-usages: (
   }
 }
 
-// Typography
+/**
+ * @sass-export-section="Typography"
+ */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 // https://css-tricks.com/snippets/css/system-font-stack/
@@ -136,11 +144,8 @@ $bp-xxl: 89em;
 $bp-xxxl: 93em;
 
 %content-container {
+  width: 100%;
   max-width: $max-width;
   margin: 0 auto;
-  padding: $space/2;
-
-  @media only screen and (min-width: $bp-med) {
-    padding: $space;
-  }
+  padding: 0;
 }

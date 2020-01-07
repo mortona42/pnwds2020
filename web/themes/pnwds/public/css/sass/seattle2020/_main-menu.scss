@@ -1,29 +1,36 @@
-#block-mainnavigation ul.menu {
+nav[id$="mainnavigation"],
+nav[id$="useraccountmenu"] {
   text-transform: uppercase;
-}
-
-#block-mainnavigation ul.menu li {
-  font-size: 0.9rem;
-  margin: 0 1rem 0 0;
-}
-
-#block-mainnavigation ul.menu li a {
-  color: white;
-  text-decoration: none;
-}
-
-header {
-  ul.menu {
-    text-transform: uppercase;
-  }
 
   ul.menu li {
     font-size: 0.9rem;
     margin: 0 1rem 0 0;
-  }
 
-  ul.menu li a {
-    color: white;
-    text-decoration: none;
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.region-primary-menu,
+nav[id$="mainnavigation"] {
+  text-transform: uppercase;
+
+  ul.menu li {
+    a {
+      color: var(--color-primary-blue);
+    }
+  }
+}
+
+.region-secondary-menu,
+nav[id$="useraccountmenu"] {
+  ul.menu li {
+    a {
+      color: var(--color-drupal-blue);
+    }
   }
 }

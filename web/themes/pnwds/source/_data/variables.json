@@ -1,0 +1,30 @@
+{
+  "context": {
+    "colors": {
+      "Other": {
+        "swatches": [
+          {
+            "name": "@use\"sass",
+            "hex": "meta\""
+          },
+          {
+            "name": "\"blue\"",
+            "hex": "#0678be"
+          },
+          {
+            "name": "\"blue2\"",
+            "hex": "#064771"
+          },
+          {
+            "name": "\"green\"",
+            "hex": "#7cbc48"
+          },
+          {
+            "name": "\"green2\"",
+            "hex": "#367d02"
+          }
+        ]
+      }
+    }
+  }
+}

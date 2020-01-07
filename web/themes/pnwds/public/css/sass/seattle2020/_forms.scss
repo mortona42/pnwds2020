@@ -1,93 +1,34 @@
-.field-container,
-.form-item {
-  margin: 1rem 0;
-  position: relative;
-
-  label {
-    @extend %subheading-text;
-    text-transform: uppercase;
-    display: block;
-  }
-}
-
-input:not([type="submit"]),
-textarea,
-keygen,
-select,
-button,
-textarea {
-  @extend %body-text;
-  padding: 1rem 1.2rem;
-  margin: 0.5em 0;
-  font-size: 1rem;
-}
-
-input:not([type="submit"]):focus {
-}
-
-#edit-body-0-format,
-#edit-field-bio-0-format {
-  display: none;
-}
-
-#edit-field-tags {
-  display: flex;
-}
-
-button.link-edit-summary {
-  border: none;
-  background: none;
-  color: map-get($map: $pnwds-colors, $key: "primary-green");
-  text-decoration: underline;
-}
-
-.field-edit-link {
-  display: none;
-}
-
-.field--name-title label,
-.field--name-body label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-checkboxes .form-item {
-  margin: 0.25rem 0;
-  width: max-content;
-}
-
-input[type="submit"]#edit-submit {
-  border: none;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: map-get($pnwds-colors, "primary-blue");
-  color: white;
-}
-
-input[type="submit"]#edit-reset {
-  border: none;
-  background-color: white;
-  color: map-get($map: $pnwds-colors, $key: "primary-blue");
-  text-decoration: underline;
-}
-
-.entity-meta.vertical-tabs__panes {
-  margin: 1rem;
-}
-
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
+// [data-theme="seattle2020"] {
 form ol,
 form ul {
   list-style: none;
   margin-left: 0;
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
+form:not(#views-exposed-form-schedule-page) {
+  .fieldgroup,
+  fieldset {
+    // font-family: sans-serif;
+    border: 2px solid var(--color-border);
+    background: var(--color-information-bg);
+    border-radius: 5px;
+    padding: 1rem;
+
+    legend {
+      @extend %subheading-text;
+      text-transform: uppercase;
+      background: var(--color-border);
+      color: white;
+      padding: 5px 10px;
+      // font-size: 32px;
+      border-radius: 5px;
+      box-shadow: 0 0 0 5px var(--color-information-bg);
+      margin-left: 1.25rem;
+    }
+  }
 }
 
 button,
@@ -102,25 +43,24 @@ textarea {
 input,
 textarea {
   width: auto;
-  max-width: 90%;
-  border: 1px solid;
+  max-width: 98%;
+  border: 1px solid var(--color-border);
   // padding: $pad-half 0.65rem;
 }
 
-input[type="text"],
-input[type="search"],
-input[type="url"],
-input[type="number"],
-textarea {
-  -webkit-appearance: none;
+input[type="submit"],
+#edit-submit,
+#edit-preview {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary-blue);
+  color: white;
 }
 
-button,
-input[type="submit"] {
-  // padding: $pad-half;
-  // background: $gray-dark;
-  border: 1px solid var(--color-border);
-  cursor: pointer;
+input[type="file"] + input[type="submit"] {
+  height: inherit;
+  margin: 0;
 }
 
 input[type="checkbox"],
@@ -193,3 +133,48 @@ input[type="search"]::-webkit-search-decoration {
   border-left: 1px solid gray;
   color: gray;
 }
+
+.field-container,
+.form-item {
+  margin: 1rem 0;
+  position: relative;
+
+  > label {
+    @extend %subheading-text;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0;
+
+    + input {
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
+  &.js-form-type-checkbox {
+    padding-right: 1rem;
+
+    > label {
+      @extend %subheading-text;
+      text-transform: none;
+      display: inline-block;
+    }
+  }
+}
+
+input:not([type="submit"]),
+textarea,
+keygen,
+select,
+button,
+textarea {
+  @extend %body-text;
+  padding: 1rem 1.2rem;
+  margin: 0.5em 0;
+  font-size: 1rem;
+}
+// }
