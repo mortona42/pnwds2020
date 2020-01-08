@@ -40,7 +40,8 @@ h6 {
 }
 
 p {
-  &.intro {
+  &.intro,
+  &.big {
     font-size: 1.25rem;
   }
 
