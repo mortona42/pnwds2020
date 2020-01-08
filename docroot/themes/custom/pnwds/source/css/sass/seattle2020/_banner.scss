@@ -32,6 +32,19 @@
       word-wrap: break-word;
     }
   }
+
+  .button {
+    background-color: var(--color-attention-accent2);
+    margin: 0 auto;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-attention-accent);
+      color: var(--color-attention-bg);
+    }
+  }
 }
 
 .banner.image,
@@ -63,7 +76,7 @@
       object-fit: cover;
       width: 100%;
       // Depends on the photo is used.
-      top: -90px;
+      // top: -90px;
     }
   }
 
@@ -169,18 +182,18 @@
     margin: 0;
   }
 
-  .button {
-    background-color: var(--color-attention-accent2);
-    margin: 0 auto;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: all 0.4s ease;
+  // .button {
+  //   background-color: var(--color-attention-accent2);
+  //   margin: 0 auto;
+  //   font-weight: 500;
+  //   text-transform: uppercase;
+  //   transition: all 0.4s ease;
 
-    &:hover {
-      background-color: var(--color-attention-accent);
-      color: var(--color-attention-bg);
-    }
-  }
+  //   &:hover {
+  //     background-color: var(--color-attention-accent);
+  //     color: var(--color-attention-bg);
+  //   }
+  // }
 
   .text-top {
     text-align: center;
