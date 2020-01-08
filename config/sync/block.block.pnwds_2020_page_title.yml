@@ -9,7 +9,7 @@ _core:
 id: pnwds_2020_page_title
 theme: pnwds_2020
 region: content
-weight: -6
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

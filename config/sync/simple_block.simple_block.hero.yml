@@ -1,0 +1,11 @@
+uuid: 1aa0015b-3e42-485e-bf64-b042c35b4716
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: hero
+title: Hero
+content:
+  value: "<div class=\"hero\">\r\n  <img src=\"/themes/custom/pnwds_2020/seattle-background.jpg\">\r\n</div>"
+  format: full_html

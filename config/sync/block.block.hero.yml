@@ -1,28 +1,28 @@
-uuid: 488673ad-0b92-4b4b-bac0-968ca09675a3
+uuid: 204bea85-98a2-4a56-b9bd-83895a93f305
 langcode: en
 status: true
 dependencies:
   config:
-    - simple_block.simple_block.register_submit_session
+    - simple_block.simple_block.hero
   module:
     - simple_block
     - system
   theme:
     - pnwds_2020
-id: registertosubmitasession
+id: hero
 theme: pnwds_2020
-region: content
+region: highlighted
 weight: -7
 provider: null
-plugin: 'simple_block:register_submit_session'
+plugin: 'simple_block:hero'
 settings:
-  id: 'simple_block:register_submit_session'
-  label: 'Register to submit a session'
+  id: 'simple_block:hero'
+  label: Hero
   provider: simple_block
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /user/register
+    pages: '<front>'
     negate: false
     context_mapping: {  }
