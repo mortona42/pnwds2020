@@ -1,0 +1,28 @@
+uuid: 7b56d1d3-74c6-4765-a9a2-d6b3bf90c9b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.banner_text_buttons
+  module:
+    - simple_block
+    - system
+  theme:
+    - seattle2020
+id: bannertextversionwithbuttons
+theme: seattle2020
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:banner_text_buttons'
+settings:
+  id: 'simple_block:banner_text_buttons'
+  label: 'Banner Text version with buttons'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

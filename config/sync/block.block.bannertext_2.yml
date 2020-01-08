@@ -1,0 +1,28 @@
+uuid: 8b0d8fb0-ad0e-4ab3-97f1-7027a43944fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.banner_text
+  module:
+    - simple_block
+    - system
+  theme:
+    - seattle2020
+id: bannertext_2
+theme: seattle2020
+region: content
+weight: 0
+provider: null
+plugin: 'simple_block:banner_text'
+settings:
+  id: 'simple_block:banner_text'
+  label: 'Banner Text'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/6
+    negate: false
+    context_mapping: {  }

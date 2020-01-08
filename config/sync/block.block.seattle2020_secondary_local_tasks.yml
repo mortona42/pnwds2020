@@ -1,0 +1,22 @@
+uuid: 38dc0c72-ebef-4360-99da-5d0f9a240d60
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seattle2020
+_core:
+  default_config_hash: QeZBeCilQfeET3GeW6ZtJkEiwROADTZktFgKWwPieD4
+id: seattle2020_secondary_local_tasks
+theme: seattle2020
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

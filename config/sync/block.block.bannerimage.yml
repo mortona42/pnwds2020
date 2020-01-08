@@ -1,0 +1,28 @@
+uuid: 99e76d12-0439-46e7-9caa-87ffd94b4b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.banner_image
+  module:
+    - simple_block
+    - system
+  theme:
+    - seattle2020
+id: bannerimage
+theme: seattle2020
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:banner_image'
+settings:
+  id: 'simple_block:banner_image'
+  label: 'Banner Image'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

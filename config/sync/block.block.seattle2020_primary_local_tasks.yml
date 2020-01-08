@@ -1,0 +1,22 @@
+uuid: 71ce256f-0288-4b4f-b3fa-549d22dbee0e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seattle2020
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: seattle2020_primary_local_tasks
+theme: seattle2020
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

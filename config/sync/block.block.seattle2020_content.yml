@@ -1,0 +1,22 @@
+uuid: 31367fee-295f-4311-8a1b-6a41636c7e6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seattle2020
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: seattle2020_content
+theme: seattle2020
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

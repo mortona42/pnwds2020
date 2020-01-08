@@ -1,0 +1,31 @@
+uuid: 93524538-8a47-4063-9455-70f5b6dc0ab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.submit_session_registered
+  module:
+    - simple_block
+    - user
+  theme:
+    - seattle2020
+id: seattle2020_submitasession_registered
+theme: seattle2020
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'simple_block:submit_session_registered'
+settings:
+  id: 'simple_block:submit_session_registered'
+  label: 'Submit a session'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

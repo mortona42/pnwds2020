@@ -1,0 +1,25 @@
+uuid: 8840c723-d7eb-424f-a0eb-5644bf7ebf59
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - seattle2020
+id: seattle2020_mainnavigation
+theme: seattle2020
+region: primary_menu
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 975d7ce4-dd0f-4849-82b0-eb1df528eae3
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.tickets
+  module:
+    - simple_block
+  theme:
+    - seattle2020
+id: seattle2020_tickets
+theme: seattle2020
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:tickets'
+settings:
+  id: 'simple_block:tickets'
+  label: Tickets
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

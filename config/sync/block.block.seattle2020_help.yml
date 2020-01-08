@@ -1,0 +1,22 @@
+uuid: 0aeedbab-8c17-4bb7-8cea-1bd1f7a63f7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - seattle2020
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
+id: seattle2020_help
+theme: seattle2020
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
