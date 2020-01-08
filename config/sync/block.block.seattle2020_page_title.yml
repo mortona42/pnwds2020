@@ -1,4 +1,4 @@
-uuid: 5ea72e2f-f75a-4b5a-924e-73474ee2eeb2
+uuid: e9d11aac-bf20-45ec-a44b-cbdb4368b851
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: seattle2020_page_title
 theme: seattle2020
 region: content
-weight: -6
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

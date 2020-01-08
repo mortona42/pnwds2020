@@ -8,7 +8,7 @@ forgot_form_title: 'Reset password'
 register_form_title: 'Register to submit a session'
 register_form_mail: 'Email address'
 register_mail_desc: ''
-register_form_name: Username
+register_form_name: 'Register to submit a session'
 register_form_name_desc: ''
 register_form_button: Register
 forgot_form_username_desc: ''

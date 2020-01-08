@@ -1,4 +1,4 @@
-uuid: 38dc0c72-ebef-4360-99da-5d0f9a240d60
+uuid: 76f3bfbf-f1a3-41ad-8cb5-65fd77878f27
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: seattle2020_secondary_local_tasks
 theme: seattle2020
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

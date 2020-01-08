@@ -1,0 +1,11 @@
+uuid: a752cfbb-0e8d-4e88-9a26-8d4bc49edadd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: copyright
+title: Copyright
+content:
+  value: "<p>Footer text</p>\r\n"
+  format: basic_html

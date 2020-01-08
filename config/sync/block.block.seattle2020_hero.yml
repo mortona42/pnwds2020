@@ -1,28 +1,28 @@
-uuid: 8b0d8fb0-ad0e-4ab3-97f1-7027a43944fb
+uuid: f66e5486-cacb-4fd1-a4b3-8802ee5f0a33
 langcode: en
 status: true
 dependencies:
   config:
-    - simple_block.simple_block.banner_text
+    - simple_block.simple_block.hero
   module:
     - simple_block
     - system
   theme:
     - seattle2020
-id: bannertext_2
+id: seattle2020_hero
 theme: seattle2020
-region: content
-weight: 0
+region: highlighted
+weight: -7
 provider: null
-plugin: 'simple_block:banner_text'
+plugin: 'simple_block:hero'
 settings:
-  id: 'simple_block:banner_text'
-  label: 'Banner Text'
+  id: 'simple_block:hero'
+  label: Hero
   provider: simple_block
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /node/6
+    pages: '<front>'
     negate: false
     context_mapping: {  }
