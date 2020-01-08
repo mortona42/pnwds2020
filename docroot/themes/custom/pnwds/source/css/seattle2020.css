@@ -72,7 +72,7 @@ h6, body {
   --font-heading: "Roboto", sans-serif;
 }
 
-[data-theme=seattle2020] #layout-container footer > .inner,
+.system > .region, [data-theme=seattle2020] #layout-container footer > .inner,
 [data-theme=seattle2020] #layout-container .layout-content, [data-theme=seattle2020] #layout-container .navigation .inner {
   width: 100%;
   max-width: 72em;
@@ -324,7 +324,7 @@ h6 {
   text-decoration: none;
 }
 
-p.intro, p.big {
+p.intro, p.larger {
   font-size: 1.25rem;
 }
 p.center {

@@ -76,3 +76,9 @@ div[id$="primary-local-tasks"] {
     }
   }
 }
+
+.system {
+  > .region {
+    @extend %content-container;
+  }
+}
