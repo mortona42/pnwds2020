@@ -1,0 +1,22 @@
+#block-tickets {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+
+  .button {
+    margin: 0 0 0 1rem;
+  }
+
+  @media screen and (min-width: 440px) {
+    display: block;
+
+    .field-item {
+      flex-direction: column;
+    }
+
+    .button {
+      margin-top: .5rem;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+// @use '../generic/variables';
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* Completely remove from the flow and screen readers. */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Floats */
+.right {
+  float: right;
+  padding: 0 0 $pad $pad;
+}
+
+.right-search {
+  float: right;
+  padding: 0 0 $pad 0;
+}
+
+.left {
+  float: left;
+  padding: 0 $pad $pad 0;
+}
+
+/* Text-Align */
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+/* Display Classes */
+.hide-small {
+  @media all and (max-width: $bp-med) {
+    display: none;
+  }
+}
+
+.hide-med {
+  @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+    display: none;
+  }
+}
+
+.hide-large {
+  @media all and (min-width: $bp-large) {
+    display: none;
+  }
+}
+
+//States
+.valid {
+  color: var(--color-valid);
+}
+
+.error {
+  color: var(--color--error);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.information {
+  color: var(--color-information);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

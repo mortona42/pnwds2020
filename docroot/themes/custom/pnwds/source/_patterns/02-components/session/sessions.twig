@@ -1,0 +1,15 @@
+<h1>Sessions</h1>
+  {% for session in sessions %}
+    {% include "@components/session/_session.twig" with {
+      'date': session.date|date('d') ~ '.' ~ session.date|date('l'),
+      'time': session.date|date("g:i a"),
+      'room': session.room,
+      'topics': session.topics,
+      'title': session.title,
+      'description': session.description,
+      'speaker': session.speaker,
+      'company': session.company,
+      'jobTitle': session.jobTitle,
+      'photo': session.photo
+    } %}
+  {% endfor %}

@@ -1,0 +1,9 @@
+div[id$="page-title"],
+article,
+.session.full {
+  padding: 8px;
+
+  @media only screen and (min-width: $bp-med) {
+    padding: 0 $space;
+  }
+}

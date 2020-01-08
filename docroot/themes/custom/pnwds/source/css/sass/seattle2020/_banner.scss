@@ -1,0 +1,262 @@
+.banner {
+  .text-top {
+    z-index: 500;
+
+    h1 {
+      display: block;
+      width: auto;
+      color: var(--color-white, white);
+
+      img {
+        display: inline-block;
+        filter: drop-shadow(0 1px 3px rgba(#101820, 0.5));
+      }
+
+      span {
+        display: inline-block;
+        position: relative;
+        margin-left: 3px;
+        bottom: 1vh;
+        text-shadow: 0 2px 2px rgba(#101820, 0.5);
+      }
+    }
+  }
+
+  .text-bottom {
+    padding-top: $space;
+    max-width: 100%;
+
+    h2,
+    h3 {
+      display: block;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.banner.image,
+.banner.video {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  .bg,
+  .video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    position: relative;
+  }
+
+  .bg {
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      // Depends on the photo is used.
+      top: -90px;
+    }
+  }
+
+  .video {
+    .bgvid {
+      display: none;
+    }
+
+    .videosubstitute {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-top {
+    text-align: center;
+    position: relative;
+
+    &.fade-in {
+      animation-delay: 2s;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  .text-bottom {
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-attention-bg);
+    color: var(--color-attention-text);
+    padding-bottom: $space;
+
+    &.fade-in {
+      animation-delay: 1s;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    h3 {
+      color: var(--color-attention-accent);
+    }
+  }
+
+  @media only screen and (min-width: $bp-med) {
+    .video {
+      .bgvid {
+        display: block;
+        width: 100%;
+      }
+
+      .videosubstitute {
+        display: none;
+      }
+    }
+
+    .text-top {
+      position: absolute;
+      top: -1vh;
+      left: 50%;
+      transform: translate(-50%, -0.35em);
+
+      h1 {
+        font-size: 72px;
+      }
+    }
+
+    .text-bottom {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      h2 {
+        color: white;
+      }
+
+      h3 {
+        color: var(--color-attention-accent);
+      }
+
+      &.fade-in {
+        animation-delay: 0.7s;
+      }
+    }
+  }
+}
+
+.banner.text {
+  .row1 {
+    background-color: var(--color-attention-text);
+  }
+
+  .row2 {
+    background-color: var(--color-attention-bg);
+  }
+
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  .button {
+    background-color: var(--color-attention-accent2);
+    margin: 0 auto;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-attention-accent);
+      color: var(--color-attention-bg);
+    }
+  }
+
+  .text-top {
+    text-align: center;
+    position: relative;
+    top: -1vh;
+
+    img {
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 48px;
+      top: -1vh;
+    }
+  }
+
+  .skyline {
+    align-self: flex-end;
+
+    img {
+      position: relative;
+      bottom: -1vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .text-bottom {
+    flex: 1;
+    text-align: center;
+    padding: 1em auto;
+    max-width: 100%;
+    padding-bottom: $space;
+
+    background-color: var(--color-attention-bg);
+    color: var(--color-attention-text);
+
+    &.fade-in {
+      animation-delay: 0.7s;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    h3 {
+      color: var(--color-attention-accent);
+    }
+  }
+
+  @media only screen and (min-width: $bp-med) {
+    .row2 {
+      .inner {
+        .text-bottom {
+          margin-left: auto;
+          max-width: 50%;
+        }
+      }
+    }
+
+    .inner {
+      max-width: $max-width;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > div {
+        flex: 1 1 50%;
+      }
+    }
+
+    .text-top {
+      h1 {
+        font-size: 72px;
+      }
+    }
+  }
+}

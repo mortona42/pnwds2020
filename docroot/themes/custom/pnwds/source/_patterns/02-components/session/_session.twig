@@ -1,0 +1,28 @@
+<div class="session">
+  <div class="session__date">{{ date }}</div>
+  <div class="session__meta">
+    <div class="session__time">{{ time }}</div>
+    <div class="session__room">Room
+      {{ room }}</div>
+    <div class="session__topics">
+      <ul>
+        {% for topic in topics %}
+          <li> {{topic}} </li>
+          {% endfor %}
+        </ul>
+      </div><!--// topics -->
+    </div><!-- // meta -->
+    <h2 class="session__title">
+      {{ title }}</h2>
+    <div class="session__body">
+      <div class="session__description">
+        {{ description }}
+      </div>
+      <div class="session__speakers">
+        {% include "@components/speaker/speaker.twig" with {
+          'speaker': speaker,
+          'photo': photo
+        } only %}
+      </div>
+    </div>
+  </div>

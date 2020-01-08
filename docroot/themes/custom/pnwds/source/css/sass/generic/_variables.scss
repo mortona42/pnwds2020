@@ -1,0 +1,152 @@
+@use "sass:meta";
+// Colors
+$drupal-colors: (
+  "blue": #0678be,
+  "blue2": #064771,
+  "green": #7cbc48,
+  "green2": #367d02
+);
+
+$pnwds-colors: (
+  light-green: #83bba3,
+  primary-green: #06864c,
+  dark-green: #057642,
+  darkest-green: #03593a,
+  primary-blue: #2c60a2,
+  dark-blue: #005297
+);
+
+// Would like to use some bright colors for the site
+$secondary-colors: (
+  "orange": #be4c06,
+  "pink": #bc487c,
+  "red": #c10016,
+  "violet": #49027d,
+  "vivid-blue": #0897ef,
+  "electric-blue": #0063b2,
+  "seattle-blue": #0e457b,
+  "seattle-gray": #e2e1dd,
+  "seattle-yellow": #d4920f,
+  "seattle-orange": #b43a1a,
+  "coffee": #b38867,
+  "moderate-green": #639938,
+  "dark-green": #006e33,
+  "yellow": #ffcf43,
+  "sailer-blue": #041e42,
+  "mint": #afeadc,
+  "black": #101820,
+  "white": #fffffe,
+  "gray": #5f5f60,
+  "grayish-green": #e8eae3,
+  "dim": rgba(0, 0, 0, 0.8)
+);
+
+// States, color usages
+$color-usages: (
+  "error": map-get($secondary-colors, "red"),
+  "valid": map-get($pnwds-colors, "primary-green"),
+  "warning": map-get($secondary-colors, "yellow"),
+  "information": map-get($drupal-colors, "blue2"),
+  "information-bg": map-get($secondary-colors, "grayish-green"),
+  "attention-accent": map-get($drupal-colors, "green"),
+  "attention-accent2": map-get($secondary-colors, "seattle-orange"),
+  "attention-text": map-get($secondary-colors, "mint"),
+  "attention-bg": map-get($secondary-colors, "sailer-blue"),
+  "text": map-get($secondary-colors, "black"),
+  "highlight": map-get($secondary-colors, "seattle-orange"),
+  "bg": map-get($secondary-colors, "seattle-gray"),
+  "border": map-get($secondary-colors, "gray"),
+  "dim": map-get($secondary-colors, "dim")
+);
+
+// Custom properties
+:root {
+  @each $name, $hex in $pnwds-colors {
+    --color-#{$name}: #{$hex};
+  }
+
+  @each $name, $hex in $drupal-colors {
+    --color-drupal-#{$name}: #{$hex};
+  }
+
+  @each $name, $val in $color-usages {
+    --color-#{$name}: #{meta.inspect(#{$val})};
+  }
+}
+
+/**
+ * @sass-export-section="Typography"
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+// https://css-tricks.com/snippets/css/system-font-stack/
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+    local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+$ff-heading: "Roboto", sans-serif;
+$ff-normal: "Roboto", sans-serif;
+$ff-system: "system", sans-serif;
+
+%heading-text {
+  font-family: $ff-heading;
+  font-weight: 700;
+  font-style: normal;
+  line-height: var(--base-line-height);
+}
+
+%subheading-text {
+  font-family: $ff-heading;
+  font-weight: 500;
+  font-style: normal;
+  line-height: var(--base-line-height);
+}
+
+%body-text {
+  font-family: $ff-normal;
+  font-weight: 400;
+  font-style: normal;
+  // font-size: var(--base-text-size);
+  line-height: var(--base-line-height);
+  // font-size: var(--base-text-size);
+  letter-spacing: 0.03em;
+}
+
+$base-text-size: calc(0.65em + 1vmin);
+
+:root {
+  // body font size
+  --base-text-size: #{meta.inspect($base-text-size)};
+  --base-line-height: 1.6;
+  --font-heading: #{meta.inspect($ff-heading)};
+}
+
+// Layout
+$max-width: 72em;
+
+// Spacing
+$space: 1em;
+$pad: 1em;
+
+// reakpoints
+$bp-small: 24em;
+$bp-small-2: 29.75em;
+$bp-small-3: 39.8em;
+$bp-med: 46.8em;
+$bp-med-2: 48em;
+$bp-large: 50em;
+$bp-large-2: 66em;
+$bp-xl: 73em;
+$bp-xxl: 89em;
+$bp-xxxl: 93em;
+
+%content-container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0;
+}

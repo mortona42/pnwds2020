@@ -1,0 +1,79 @@
+{
+  "drupal": [
+    {
+      "name": "blue",
+      "var": "--color-drupal-blue",
+      "hex": "#0678be",
+      "hsl": "hsl(202.8, 93.9%, 38.4%)",
+      "rgb": "rgb(6,120,190)"
+    },
+    {
+      "name": "blue2",
+      "var": "--color-drupal-blue2",
+      "hex": "#064771",
+      "hsl": "hsl(203.6, 89.9%, 23.3%)",
+      "rgb": "rgb(6,71,113)"
+    },
+    {
+      "name": "green",
+      "var": "--color-drupal-green",
+      "hex": "#7cbc48",
+      "hsl": "hsl(93.1, 46.4%, 51%)",
+      "rgb": "rgb(124,188,72)"
+    },
+    {
+      "name": "green2",
+      "var": "--color-drupal-green2",
+      "hex": "#367d02",
+      "hsl": "hsl(94.6, 96.9%, 24.9%)",
+      "rgb": "rgb(54,125,2)"
+    }
+  ],
+  "pnwds": [
+    {
+      "name": "light-green",
+      "var": "--color-light-green",
+      "hex": "#83bba3",
+      "hsl": "hsl(154.3, 29.2%, 62.4%)",
+      "rgb": "rgb(131,187,163)"
+    },
+    {
+      "name": "primary-green",
+      "var": "--color-primary-green",
+      "hex": "#06864c",
+      "hsl": "hsl(152.8, 91.4%, 27.5%)",
+      "rgb": "rgb(6,134,76)"
+    },
+    {
+      "name": "dark-green",
+      "var": "--color-dark-green",
+      "hex": "#057642",
+      "hsl": "",
+      "rgb": ""
+    },
+    {
+      "name": "darkest-green",
+      "var": "--color-darkest-green",
+      "hex": "#03593a",
+      "hsl": "hsl(158.4, 93.5%, 18%)",
+      "rgb": "rgb(3,89,58)"
+    },
+    {
+      "name": "primary-blue",
+      "var": "--color-primary-blue",
+      "hex": "#2c60a2",
+      "hsl": "hsl(213.6, 57.3%, 40.4%)",
+      "rgb": "rgb(44,96,162)"
+    },
+    {
+      "name": "dark-blue",
+      "var": "--color-dark-blue",
+      "hex": "#005297",
+      "hsl": "hsl(207.4, 100%, 29.6%)",
+      "rgb": "rgb(0,82,151)"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$</code> in <code>.//components/_patterns/00-base/00-colors/_color-vars.scss</code>"
+  }
+}

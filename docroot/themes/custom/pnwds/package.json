@@ -1,0 +1,39 @@
+{
+  "name": "pnwds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "patternlab build --config ./patternlab-config.json",
+    "build:uikit": "cross-env-shell PL_CONFIG_PATH='${INIT_CWD}/.patternlabrc.js' npm run build --prefix node_modules/@pattern-lab/uikit-workshop -- --patternlabrc '$PL_CONFIG_PATH'",
+    "dev": "node ./node_modules/@pattern-lab/uikit-workshop/build-tools.js",
+    "help": "patternlab --help",
+    "install": "patternlab install --config ./patternlab-config.json",
+    "serve": "patternlab serve --config ./patternlab-config.json",
+    "export": "patternlab export --config ./patternlab-config.json",
+    "build-css": "sass --style=compressed --trace --color source/css:source/css",
+    "watch-css": "sass --watch source/css:source/css",
+    "start": "npm run watch-css & npm run serve",
+    "data": "node scripts/fake-sessions.js & node scripts/fake-sponsors.js",
+    "convert-sass": "node scripts/convertsass.js",
+    "sass-export": "sass-export source/css/sass/**/*.scss -o source/_data/exported-sass-array.json -a",
+    "version": "patternlab --version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pattern-lab/cli": "^5.4.0",
+    "@pattern-lab/core": "^5.4.0",
+    "@pattern-lab/engine-twig-php": "^5.5.0",
+    "@pattern-lab/starterkit-twig-demo": "^5.0.0",
+    "@pattern-lab/uikit-workshop": "^5.5.0"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "sass": "^1.24.0",
+    "sass-export": "^1.0.6",
+    "sass-maps-to-json": "^1.1.1"
+  }
+}
