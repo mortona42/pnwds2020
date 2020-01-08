@@ -644,20 +644,13 @@ nav[id$=useraccountmenu] ul.menu li a {
   display: block;
 }
 
-.region-primary-menu a.button {
-  border-radius: 0.8rem;
-  padding: 0.5rem 1rem;
-  background-color: #057642;
-  box-shadow: inset 0 0 0.2rem #222;
-  margin: 0;
+.fieldset-wrapper #edit-field-tags {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
-
-.region-primary-menu a.button,
-.region-primary-menu a.button:hover,
-.region-primary-menu a.button:active,
-.region-primary-menu a.button:focus,
-.region-primary-menu a.button:visited {
-  color: white;
+.fieldset-wrapper #edit-field-tags > div {
+  flex: 1 1 25%;
 }
 
 .messages {
