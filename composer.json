@@ -27,7 +27,6 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
-        "drupal/dynamic_menu_item": "^1.0@alpha",
         "drupal/elf": "^1.2",
         "drupal/form_mode_manager": "2.x-dev",
         "drupal/form_mode_routing": "^1.3",
@@ -38,7 +37,6 @@
         "drupal/menu_per_role": "^1.1",
         "drupal/override_node_options": "^2.4",
         "drupal/rabbit_hole": "^1.0@beta",
-        "drupal/show_title": "^1.5",
         "drupal/simple_block": "^1.0@beta",
         "drupal/time_field": "^1.13",
         "drupal/title_field_for_manage_display": "^1.9",
@@ -114,10 +112,6 @@
                 "Unable to keep nested IEF data separate with multivalue fields.": "https://www.drupal.org/files/issues/2018-05-30/multivalue-complex-and-simple-ief-fix-2653574-100.patch",
                 "Can't add more than two items with simple inline entity form widget under some circumstances": "https://www.drupal.org/files/issues/2019-11-04/3088901-3-cant-add-more-than-two-items.patch"
             },
-            "drupal/better_exposed_filters": {
-                "Option to lay out checkboxes horizontally": "https://www.drupal.org/files/issues/2019-12-27/better_exposed_filters-horizontal_checkboxes-3102468-5.patch",
-                "Select all js requires jquery once": "https://www.drupal.org/files/issues/2019-12-29/better_exposed_filters-require_once-3103598-2.patch"
-            },
             "drupal/form_mode_routing": {
                 "Admin route option": "https://www.drupal.org/files/issues/2019-12-25/form_mode_routing-admin_theme-3103065-5.patch"
             },
@@ -126,9 +120,6 @@
             },
             "drupal/menu_per_role": {
                 "Option to disable admin bypass": "https://www.drupal.org/files/issues/2019-12-26/menu_per_role-admin_bypass_option-1.patch"
-            },
-            "drupal/profile": {
-                "Provide a way to activate/deactivate a profile": "https://www.drupal.org/files/issues/2019-08-26/patch_3077077.patch"
             },
             "drupal/better_login_form_config": {
                 "Configuration depends on fancy_login.settings": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-fancy_login_config-3089657-3.patch",

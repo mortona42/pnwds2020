@@ -2,19 +2,25 @@
 
 namespace Dotenv\Result;
 
+/**
+ * @template T
+ * @template E
+ */
 abstract class Result
 {
     /**
      * Get the success option value.
      *
-     * @return \PhpOption\Option
+     * @return \PhpOption\Option<T>
      */
     abstract public function success();
 
     /**
      * Get the success value, if possible.
      *
-     * @return mixed
+     * @throws \RuntimeException
+     *
+     * @return T
      */
     public function getSuccess()
     {
@@ -24,23 +30,27 @@ abstract class Result
     /**
      * Map over the success value.
      *
-     * @param callable $f
+     * @template S
      *
-     * @return \Dotenv\Result\Result
+     * @param callable(T): S $f
+     *
+     * @return \Dotenv\Result\Result<S,E>
      */
     abstract public function mapSuccess(callable $f);
 
     /**
      * Get the error option value.
      *
-     * @return \PhpOption\Option
+     * @return \PhpOption\Option<E>
      */
     abstract public function error();
 
     /**
      * Get the error value, if possible.
      *
-     * @return mixed
+     * @throws \RuntimeException
+     *
+     * @return E
      */
     public function getError()
     {
@@ -50,9 +60,11 @@ abstract class Result
     /**
      * Map over the error value.
      *
-     * @param callable $f
+     * @template F
      *
-     * @return \Dotenv\Result\Result
+     * @param callable(E): F $f
+     *
+     * @return \Dotenv\Result\Result<T,F>
      */
     abstract public function mapError(callable $f);
 }

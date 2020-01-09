@@ -703,8 +703,10 @@ class BetterExposedFilters extends InputRequired {
       $form['#attached']['library'][] = 'better_exposed_filters/auto_submit';
 
       if (!empty($bef_options['general']['autosubmit_exclude_textfield'])) {
+        $supported_types = ['entity_autocomplete', 'textfield'];
         foreach ($form as &$element) {
-          if (isset($element['#type']) && $element['#type'] == 'textfield') {
+          $element_type = $element['#type'] ?? NULL;
+          if (in_array($element_type, $supported_types)) {
             $element['#attributes'] = ['data-bef-auto-submit-exclude' => ''];
           }
         }
