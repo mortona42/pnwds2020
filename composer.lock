@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08eef768361c48163f1e506251504c74",
+    "content-hash": "c863be9bf467d6cf7d0f446b305a06c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2287,7 +2287,7 @@
                     "Use cache tags so config changes take immediate effect.": "https://www.drupal.org/files/issues/2019-12-28/better_login_form_config-cache_tags-3103501-2.patch",
                     "Config form issues": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-config_form-3103647-2.patch",
                     "Remove default username description": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-remove_default_username-3103649-5.patch",
-                    "Set tab and page titles": "https://www.drupal.org/files/issues/2019-12-29/better_login_form_config-titles-3103654-2.patch"
+                    "Set tab and page titles": "https://www.drupal.org/files/issues/2019-12-31/better_login_form_config-titles-3103654-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3181,6 +3181,70 @@
             "homepage": "https://www.drupal.org/project/form_mode_routing",
             "support": {
                 "source": "https://git.drupalcode.org/project/form_mode_routing"
+            }
+        },
+        {
+            "name": "drupal/honeypot",
+            "version": "1.30.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/honeypot.git",
+                "reference": "8.x-1.30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.30.zip",
+                "reference": "8.x-1.30",
+                "shasum": "1d7983e8e07feee4f13e4b05c9a10db15ae2097e"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.30",
+                    "datestamp": "1576274288",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.drupal.org/user/213194",
+                    "email": "geerlingguy@mac.com"
+                },
+                {
+                    "name": "geerlingguy",
+                    "homepage": "https://www.drupal.org/user/389011"
+                },
+                {
+                    "name": "vijaycs85",
+                    "homepage": "https://www.drupal.org/user/93488"
+                }
+            ],
+            "description": "Mitigates spam form submissions using the honeypot method.",
+            "homepage": "https://www.drupal.org/project/honeypot",
+            "keywords": [
+                "deterrent",
+                "form",
+                "honeypot",
+                "honeytrap",
+                "php",
+                "spam"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/honeypot"
             }
         },
         {
