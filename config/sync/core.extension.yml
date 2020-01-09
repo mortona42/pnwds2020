@@ -41,6 +41,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  mailsystem: 0
   menu_per_role: 0
   menu_ui: 0
   node: 0
@@ -53,8 +54,10 @@ module:
   quickedit: 0
   rabbit_hole: 0
   rdf: 0
+  recaptcha: 0
   rh_taxonomy: 0
   search: 0
+  sendgrid_integration: 0
   settings_tray: 0
   simple_block: 0
   system: 0

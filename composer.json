@@ -39,6 +39,8 @@
         "drupal/menu_per_role": "^1.1",
         "drupal/override_node_options": "^2.4",
         "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/recaptcha": "^2.4",
+        "drupal/sendgrid_integration": "^1.2",
         "drupal/simple_block": "^1.0@beta",
         "drupal/time_field": "^1.13",
         "drupal/title_field_for_manage_display": "^1.9",
