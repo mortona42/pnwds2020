@@ -1,0 +1,12 @@
+apikey: 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
+test_defaults:
+  to: mortona42@gmail.com
+  subject: 'Test Email from SendGrid Module'
+  body:
+    value: 'Test Message for SendGrid.'
+    format: plain_text
+  from_name: Me
+  to_name: Andrew
+  reply_to: no-reply@pnwdrupalsummit.org
+_core:
+  default_config_hash: g4qz7cPnloXFwtnLYfIKI2VS0gf_UFOz_I2uQiiulC8
