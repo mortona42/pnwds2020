@@ -5,17 +5,22 @@ namespace Dotenv\Result;
 use PhpOption\None;
 use PhpOption\Some;
 
+/**
+ * @template T
+ * @template E
+ * @extends \Dotenv\Result\Result<T,E>
+ */
 class Success extends Result
 {
     /**
-     * @var mixed
+     * @var T
      */
     private $value;
 
     /**
      * Internal constructor for a success value.
      *
-     * @param mixed $value
+     * @param T $value
      *
      * @return void
      */
@@ -25,11 +30,13 @@ class Success extends Result
     }
 
     /**
-     * Create a new success value.
+     * Create a new error value.
      *
-     * @param mixed $value
+     * @template S
      *
-     * @return \Dotenv\Result\Result
+     * @param S $value
+     *
+     * @return \Dotenv\Result\Result<S,E>
      */
     public static function create($value)
     {
@@ -39,7 +46,7 @@ class Success extends Result
     /**
      * Get the success option value.
      *
-     * @return \PhpOption\Option
+     * @return \PhpOption\Option<T>
      */
     public function success()
     {
@@ -49,9 +56,11 @@ class Success extends Result
     /**
      * Map over the success value.
      *
-     * @param callable $f
+     * @template S
      *
-     * @return \Dotenv\Result\Result
+     * @param callable(T): S $f
+     *
+     * @return \Dotenv\Result\Result<S,E>
      */
     public function mapSuccess(callable $f)
     {
@@ -61,7 +70,7 @@ class Success extends Result
     /**
      * Get the error option value.
      *
-     * @return \PhpOption\Option
+     * @return \PhpOption\Option<E>
      */
     public function error()
     {
@@ -71,9 +80,11 @@ class Success extends Result
     /**
      * Map over the error value.
      *
-     * @param callable $f
+     * @template F
      *
-     * @return \Dotenv\Result\Result
+     * @param callable(E): F $f
+     *
+     * @return \Dotenv\Result\Result<T,F>
      */
     public function mapError(callable $f)
     {

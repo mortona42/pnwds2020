@@ -54,6 +54,22 @@ function _convert_csv_to_array($args) {
 }
 
 /**
+ * Log a message.
+ *
+ * @param $message
+ * @param string $type
+ *   A constant from \Drush\Log\LogLevel.
+ *
+ * @param array $error
+ *
+ * @deprecated
+ *   Use this->logger()->warning('message') (for example) from an Annotated command method.
+ */
+function drush_log($message, $type = LogLevel::INFO, $error = []) {
+    Drush::logger()->log($type, $message, $error);
+}
+
+/**
  * Get the available global options. Used by list/help commands. All other users
  * should pull options from $application.
  *

@@ -7,5 +7,5 @@ dependencies:
 id: copyright
 title: Copyright
 content:
-  value: "<p>Footer text</p>\r\n"
+  value: "<p>©2020&nbsp;Pacific Northwest Drupal Summit. Drupal is a registered trademark of Dries Buytaert.</p>\r\n"
   format: basic_html
