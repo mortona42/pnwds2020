@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: copyright
 title: Copyright
 content:
-  value: "<p>©2020&nbsp;Pacific Northwest Drupal Summit. Drupal is a registered trademark of Dries Buytaert.</p>\r\n"
-  format: basic_html
+  value: "<p><em>Copyright © 2020 Pacific Northwest Drupal Summit, All rights reserved.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</em><a href=\"https://www.facebook.com/PacificNWDrupalSummit\" class=\"icon facebook\">Facebook</a>&nbsp;&nbsp; |&nbsp; &nbsp;<a class=\"icon twitter\" href=\"https://twitter.com/drupalsummit\">Twitter</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a href=\"https://groups.drupal.org/pacific-nw-drupal-summits\" class=\"icon drupal\">Drupal</a></p>\r\n"
+  format: full_html
