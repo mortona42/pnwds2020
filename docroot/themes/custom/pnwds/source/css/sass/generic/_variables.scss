@@ -135,6 +135,7 @@ $base-text-size: calc(0.65em + 1vmin);
   --base-text-size: #{meta.inspect($base-text-size)};
   --base-line-height: 1.6;
   --font-heading: #{meta.inspect($ff-heading)};
+  --iconSize: 1.5em;
 }
 
 /**

@@ -1,0 +1,15 @@
+%flat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.flat-list,
+ul.flat-list {
+  @extend %flat-list;
+  display: flex;
+
+  li {
+    margin: 0 0.5rem;
+  }
+}

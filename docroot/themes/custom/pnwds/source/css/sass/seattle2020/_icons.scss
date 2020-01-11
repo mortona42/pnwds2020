@@ -1,0 +1,29 @@
+a.icon {
+  display: block;
+  color: transparent;
+  width: var(--iconSize);
+  height: var(--iconSize);
+  background-position: center;
+  background-size: contain;
+  filter: invert(0.5);
+
+  &.facebook {
+    background-image: url("../images/icons/facebook.svg");
+  }
+
+  &.twitter {
+    background-image: url("../images/icons/twitter.svg");
+  }
+
+  &.linkedin {
+    background-image: url("../images/icons/linkedin.svg");
+  }
+
+  &.youtube {
+    background-image: url("../images/icons/youtube.svg");
+  }
+
+  &.drupal {
+    background-image: url("../images/icons/drupal.svg");
+  }
+}

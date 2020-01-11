@@ -80,6 +80,7 @@ h6, body {
   --base-text-size: calc(0.65em + 1vmin);
   --base-line-height: 1.6;
   --font-heading: "Roboto", sans-serif;
+  --iconSize: 1.5em;
 }
 
 /**
