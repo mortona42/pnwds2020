@@ -1,11 +1,18 @@
 a.icon {
-  display: block;
+  display: inline-block;
   color: transparent;
   width: var(--iconSize);
   height: var(--iconSize);
   background-position: center;
   background-size: contain;
   filter: invert(0.5);
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: transparent;
+  }
 
   &.facebook {
     background-image: url("../images/icons/facebook.svg");

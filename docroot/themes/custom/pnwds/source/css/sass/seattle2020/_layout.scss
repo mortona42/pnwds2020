@@ -22,8 +22,8 @@ body {
 
     .navigation {
       position: sticky;
-      // Higher than toolbar-bar
-      z-index: 503;
+      // Lower than toolbar-bar
+      z-index: 500;
       top: 0;
       width: 100%;
       background-image: linear-gradient(

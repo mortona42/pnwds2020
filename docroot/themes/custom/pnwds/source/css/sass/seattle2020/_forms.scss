@@ -52,7 +52,7 @@ input[type="submit"],
 #edit-submit,
 #edit-preview {
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   padding: 0.5rem 1rem;
   background-color: var(--color-primary-blue);
   color: white;
@@ -126,6 +126,7 @@ input[type="search"]::-webkit-search-decoration {
 .search-field {
   padding-right: 3em;
 }
+
 .inline-form .search-submit {
   background: none;
   padding: 0.78em 1em;
