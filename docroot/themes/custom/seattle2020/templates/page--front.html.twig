@@ -58,13 +58,15 @@
 
 
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="system">
+      {{ page.breadcrumb }}
 
-  {{ page.breadcrumb }}
+      {{ page.highlighted }}
 
-  {{ page.highlighted }}
-
-  {{ page.help }}
+      {{ page.help }}
+    </div>
+    {# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>
 
     <div class="layout-content">
       {{ page.content }}
