@@ -1,7 +1,5 @@
 .banner {
   .text-top {
-    z-index: 500;
-
     h1 {
       display: block;
       width: auto;
@@ -55,6 +53,7 @@
   position: relative;
   max-width: $max-width;
   margin: 0 auto;
+  padding-top: 1rem;
 
   h1,
   h2 {
@@ -139,9 +138,9 @@
 
     .text-top {
       position: absolute;
-      top: -1vh;
+      top: 0;
       left: 50%;
-      transform: translate(-50%, -0.35em);
+      transform: translate(-50%, 0);
 
       h1 {
         font-size: 72px;
@@ -169,6 +168,8 @@
 }
 
 .banner.text {
+  padding-top: 1rem;
+
   .row1 {
     background-color: var(--color-attention-text);
   }
@@ -182,23 +183,10 @@
     margin: 0;
   }
 
-  // .button {
-  //   background-color: var(--color-attention-accent2);
-  //   margin: 0 auto;
-  //   font-weight: 500;
-  //   text-transform: uppercase;
-  //   transition: all 0.4s ease;
-
-  //   &:hover {
-  //     background-color: var(--color-attention-accent);
-  //     color: var(--color-attention-bg);
-  //   }
-  // }
-
   .text-top {
     text-align: center;
     position: relative;
-    top: -1vh;
+    // top: -1vh;
 
     img {
       display: inline-block;
@@ -206,7 +194,8 @@
 
     h1 {
       font-size: 48px;
-      top: -1vh;
+      top: -0.75rem;
+      position: relative;
     }
   }
 

@@ -16,13 +16,25 @@ body {
     min-height: 100vh;
     flex-direction: column;
 
+    > header {
+      background-color: var(--color-grayish-green, #e8eae3);
+    }
+
     .navigation {
       position: sticky;
-      z-index: 100;
+      // Higher than toolbar-bar
+      z-index: 503;
       top: 0;
       width: 100%;
-      background-color: var(--color-grayish-green, #e8eae3);
-      min-height: 4.6rem;
+      background-image: linear-gradient(
+        to top,
+        rgba(#e8eae3, 0) 5%,
+        rgba(#e8eae3, 0.4) 8%,
+        rgba(#e8eae3, 0.9) 12%,
+        #e8eae3
+      );
+
+      min-height: 4rem;
 
       .inner {
         @extend %content-container;
@@ -34,11 +46,7 @@ body {
     }
 
     .region-header {
-      display: block;
-      border-top: 0.5rem solid var(--color-grayish-green, #e8eae3);
-      flex: none;
       margin: 0;
-      // padding-top: 4.6rem;
     }
 
     main {
@@ -56,15 +64,5 @@ body {
       background-color: var(--color-grayish-green, #e8eae3);
       font-size: 0.9rem;
     }
-
-    // @media only screen and (min-width: $bp-med) {
-    //   .navigation {
-    //     .inner {
-    //       display: flex;
-    //       justify-content: flex-end;
-    //       align-items: center;
-    //     }
-    //   }
-    // }
   }
 }
