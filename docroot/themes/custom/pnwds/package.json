@@ -16,9 +16,7 @@
     "watch-css": "sass --watch source/css:source/css",
     "start": "npm run watch-css & npm run serve",
     "data": "node scripts/fake-sessions.js & node scripts/fake-sponsors.js",
-    "convert-sass": "node scripts/convertsass.js",
-    "sass-export": "sass-export source/css/sass/**/*.scss -o source/_data/exported-sass-array.json -a",
-    "images": "imagemin --plugin.pngquant.quality={0.1,0.2} source/images/* --out-dir=source/images-build",
+    "sass-export": "sass-export source/css/sass/generic/_variables.scss -o source/_data/exported-sass-array.json",
     "version": "patternlab --version"
   },
   "keywords": [],
@@ -33,7 +31,6 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "imagemin-cli": "^5.1.0",
     "sass": "^1.24.0",
     "sass-export": "^1.0.6"
   }

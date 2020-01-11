@@ -1,362 +1,352 @@
-[
-  {
-    "name": "$drupal-colors",
-    "value": "( \"blue\": #0678be, \"blue2\": #064771, \"green\": #7cbc48, \"green2\": #367d02 )",
-    "mapValue": [
-      {
-        "name": "blue",
-        "value": "#0678be",
-        "compiledValue": ""
-      },
-      {
-        "name": "blue2",
-        "value": "#064771",
-        "compiledValue": ""
-      },
-      {
-        "name": "green",
-        "value": "#7cbc48",
-        "compiledValue": ""
-      },
-      {
-        "name": "green2",
-        "value": "#367d02",
-        "compiledValue": ""
-      }
-    ],
-    "compiledValue": ""
-  },
-  {
-    "name": "$pnwds-colors",
-    "value": "( light-green: #83bba3, primary-green: #06864c, dark-green: #057642, darkest-green: #03593a, primary-blue: #2c60a2, dark-blue: #005297 )",
-    "mapValue": [
-      {
-        "name": "light-green",
-        "value": "#83bba3",
-        "compiledValue": ""
-      },
-      {
-        "name": "primary-green",
-        "value": "#06864c",
-        "compiledValue": ""
-      },
-      {
-        "name": "dark-green",
-        "value": "#057642",
-        "compiledValue": ""
-      },
-      {
-        "name": "darkest-green",
-        "value": "#03593a",
-        "compiledValue": ""
-      },
-      {
-        "name": "primary-blue",
-        "value": "#2c60a2",
-        "compiledValue": ""
-      },
-      {
-        "name": "dark-blue",
-        "value": "#005297",
-        "compiledValue": ""
-      }
-    ],
-    "compiledValue": ""
-  },
-  {
-    "name": "$secondary-colors",
-    "value": "( \"orange\": #be4c06, \"pink\": #bc487c, \"red\": #c10016, \"violet\": #49027d, \"vivid-blue\": #0897ef, \"electric-blue\": #0063b2, \"seattle-blue\": #0e457b, \"seattle-gray\": #e2e1dd, \"seattle-yellow\": #d4920f, \"seattle-orange\": #b43a1a, \"coffee\": #b38867, \"moderate-green\": #639938, \"dark-green\": #006e33, \"yellow\": #ffcf43, \"sailer-blue\": #041e42, \"mint\": #afeadc, \"black\": #101820, \"white\": #fffffe, \"gray\": #5f5f60, \"grayish-green\": #e8eae3, \"dim\": rgba(0, 0, 0, 0.8) )",
-    "mapValue": [
-      {
-        "name": "orange",
-        "value": "#be4c06",
-        "compiledValue": ""
-      },
-      {
-        "name": "pink",
-        "value": "#bc487c",
-        "compiledValue": ""
-      },
-      {
-        "name": "red",
-        "value": "#c10016",
-        "compiledValue": ""
-      },
-      {
-        "name": "violet",
-        "value": "#49027d",
-        "compiledValue": ""
-      },
-      {
-        "name": "vivid-blue",
-        "value": "#0897ef",
-        "compiledValue": ""
-      },
-      {
-        "name": "electric-blue",
-        "value": "#0063b2",
-        "compiledValue": ""
-      },
-      {
-        "name": "seattle-blue",
-        "value": "#0e457b",
-        "compiledValue": ""
-      },
-      {
-        "name": "seattle-gray",
-        "value": "#e2e1dd",
-        "compiledValue": ""
-      },
-      {
-        "name": "seattle-yellow",
-        "value": "#d4920f",
-        "compiledValue": ""
-      },
-      {
-        "name": "seattle-orange",
-        "value": "#b43a1a",
-        "compiledValue": ""
-      },
-      {
-        "name": "coffee",
-        "value": "#b38867",
-        "compiledValue": ""
-      },
-      {
-        "name": "moderate-green",
-        "value": "#639938",
-        "compiledValue": ""
-      },
-      {
-        "name": "dark-green",
-        "value": "#006e33",
-        "compiledValue": ""
-      },
-      {
-        "name": "yellow",
-        "value": "#ffcf43",
-        "compiledValue": ""
-      },
-      {
-        "name": "sailer-blue",
-        "value": "#041e42",
-        "compiledValue": ""
-      },
-      {
-        "name": "mint",
-        "value": "#afeadc",
-        "compiledValue": ""
-      },
-      {
-        "name": "black",
-        "value": "#101820",
-        "compiledValue": ""
-      },
-      {
-        "name": "white",
-        "value": "#fffffe",
-        "compiledValue": ""
-      },
-      {
-        "name": "gray",
-        "value": "#5f5f60",
-        "compiledValue": ""
-      },
-      {
-        "name": "grayish-green",
-        "value": "#e8eae3",
-        "compiledValue": ""
-      },
-      {
-        "name": "dim",
-        "value": "rgba(0, 0, 0, 0.8)",
-        "compiledValue": ""
-      }
-    ],
-    "compiledValue": ""
-  },
-  {
-    "name": "$color-usages",
-    "value": "( \"error\": map-get($secondary-colors, \"red\"), \"valid\": map-get($pnwds-colors, \"primary-green\"), \"warning\": map-get($secondary-colors, \"yellow\"), \"information\": map-get($drupal-colors, \"blue2\"), \"information-bg\": map-get($secondary-colors, \"grayish-green\"), \"attention\": map-get($drupal-colors, \"green\"), \"attention-text\": map-get($secondary-colors, \"mint\"), \"attention-bg\": map-get($secondary-colors, \"sailer-blue\"), \"text\": map-get($secondary-colors, \"black\"), \"highlight\": map-get($secondary-colors, \"seattle-orange\"), \"bg\": map-get($secondary-colors, \"seattle-gray\"), \"border\": map-get($secondary-colors, \"gray\"), \"dim\": map-get($secondary-colors, \"dim\") )",
-    "mapValue": [
-      {
-        "name": "error",
-        "value": "map-get($secondary-colors, \"red\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "valid",
-        "value": "map-get($pnwds-colors, \"primary-green\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "warning",
-        "value": "map-get($secondary-colors, \"yellow\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "information",
-        "value": "map-get($drupal-colors, \"blue2\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "information-bg",
-        "value": "map-get($secondary-colors, \"grayish-green\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "attention",
-        "value": "map-get($drupal-colors, \"green\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "attention-text",
-        "value": "map-get($secondary-colors, \"mint\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "attention-bg",
-        "value": "map-get($secondary-colors, \"sailer-blue\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "text",
-        "value": "map-get($secondary-colors, \"black\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "highlight",
-        "value": "map-get($secondary-colors, \"seattle-orange\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "bg",
-        "value": "map-get($secondary-colors, \"seattle-gray\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "border",
-        "value": "map-get($secondary-colors, \"gray\")",
-        "compiledValue": ""
-      },
-      {
-        "name": "dim",
-        "value": "map-get($secondary-colors, \"dim\")",
-        "compiledValue": ""
-      }
-    ],
-    "compiledValue": ""
-  },
-  {
-    "name": "$ff-heading",
-    "value": "\"Roboto\", sans-serif",
-    "compiledValue": ""
-  },
-  {
-    "name": "$ff-normal",
-    "value": "\"Roboto\", sans-serif",
-    "compiledValue": ""
-  },
-  {
-    "name": "$ff-system",
-    "value": "\"system\", sans-serif",
-    "compiledValue": ""
-  },
-  {
-    "name": "$base-text-size",
-    "value": "calc(0.65em + 1vmin)",
-    "compiledValue": ""
-  },
-  {
-    "name": "$max-width",
-    "value": "72em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$space",
-    "value": "1em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$pad",
-    "value": "1em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-small",
-    "value": "24em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-small-2",
-    "value": "29.75em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-small-3",
-    "value": "39.8em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-med",
-    "value": "46.8em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-med-2",
-    "value": "48em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-large",
-    "value": "50em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-large-2",
-    "value": "66em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-xl",
-    "value": "73em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-xxl",
-    "value": "89em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bp-xxxl",
-    "value": "93em",
-    "compiledValue": ""
-  },
-  {
-    "name": "$bg",
-    "value": "var(--color-attention-bg), $color: var(--color-attention-text), $hoverBg: var(--color-attention-bg), $hoverColor: var(--color-attention) ) { background-color: $bg",
-    "mapValue": [
-      {
-        "name": "color",
-        "value": "var(--color-attention-text)",
-        "compiledValue": ""
-      },
-      {
-        "name": "hoverBg",
-        "value": "var(--color-attention-bg)",
-        "compiledValue": ""
-      },
-      {
-        "name": "hoverColor",
-        "value": "var(--color-attention)",
-        "compiledValue": ""
-      },
-      {
-        "name": "background-color",
-        "value": "$bg",
-        "compiledValue": ""
-      }
-    ],
-    "compiledValue": ""
-  }
-]
+{
+  "variables": [
+    {
+      "name": "$secondary-colors",
+      "value": "( \"orange\": #be4c06, \"pink\": #bc487c, \"red\": #c10016, \"violet\": #49027d, \"vivid-blue\": #0897ef, \"electric-blue\": #0063b2, \"seattle-blue\": #0e457b, \"seattle-gray\": #e2e1dd, \"seattle-yellow\": #d4920f, \"seattle-orange\": #b43a1a, \"coffee\": #b38867, \"moderate-green\": #639938, \"dark-green\": #006e33, \"yellow\": #ffcf43, \"sailer-blue\": #041e42, \"mint\": #afeadc, \"black\": #101820, \"white\": #fffffe, \"gray\": #5f5f60, \"grayish-green\": #e8eae3, \"dim\": rgba(0, 0, 0, 0.8) )",
+      "mapValue": [
+        {
+          "name": "orange",
+          "value": "#be4c06",
+          "compiledValue": ""
+        },
+        {
+          "name": "pink",
+          "value": "#bc487c",
+          "compiledValue": ""
+        },
+        {
+          "name": "red",
+          "value": "#c10016",
+          "compiledValue": ""
+        },
+        {
+          "name": "violet",
+          "value": "#49027d",
+          "compiledValue": ""
+        },
+        {
+          "name": "vivid-blue",
+          "value": "#0897ef",
+          "compiledValue": ""
+        },
+        {
+          "name": "electric-blue",
+          "value": "#0063b2",
+          "compiledValue": ""
+        },
+        {
+          "name": "seattle-blue",
+          "value": "#0e457b",
+          "compiledValue": ""
+        },
+        {
+          "name": "seattle-gray",
+          "value": "#e2e1dd",
+          "compiledValue": ""
+        },
+        {
+          "name": "seattle-yellow",
+          "value": "#d4920f",
+          "compiledValue": ""
+        },
+        {
+          "name": "seattle-orange",
+          "value": "#b43a1a",
+          "compiledValue": ""
+        },
+        {
+          "name": "coffee",
+          "value": "#b38867",
+          "compiledValue": ""
+        },
+        {
+          "name": "moderate-green",
+          "value": "#639938",
+          "compiledValue": ""
+        },
+        {
+          "name": "dark-green",
+          "value": "#006e33",
+          "compiledValue": ""
+        },
+        {
+          "name": "yellow",
+          "value": "#ffcf43",
+          "compiledValue": ""
+        },
+        {
+          "name": "sailer-blue",
+          "value": "#041e42",
+          "compiledValue": ""
+        },
+        {
+          "name": "mint",
+          "value": "#afeadc",
+          "compiledValue": ""
+        },
+        {
+          "name": "black",
+          "value": "#101820",
+          "compiledValue": ""
+        },
+        {
+          "name": "white",
+          "value": "#fffffe",
+          "compiledValue": ""
+        },
+        {
+          "name": "gray",
+          "value": "#5f5f60",
+          "compiledValue": ""
+        },
+        {
+          "name": "grayish-green",
+          "value": "#e8eae3",
+          "compiledValue": ""
+        },
+        {
+          "name": "dim",
+          "value": "rgba(0, 0, 0, 0.8)",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": ""
+    },
+    {
+      "name": "$base-text-size",
+      "value": "calc(0.65em + 1vmin)",
+      "compiledValue": ""
+    }
+  ],
+  "drupal-colors": [
+    {
+      "name": "$drupal-colors",
+      "value": "( \"blue\": #0678be, \"blue2\": #064771, \"green\": #7cbc48, \"green2\": #367d02 )",
+      "mapValue": [
+        {
+          "name": "blue",
+          "value": "#0678be",
+          "compiledValue": ""
+        },
+        {
+          "name": "blue2",
+          "value": "#064771",
+          "compiledValue": ""
+        },
+        {
+          "name": "green",
+          "value": "#7cbc48",
+          "compiledValue": ""
+        },
+        {
+          "name": "green2",
+          "value": "#367d02",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": ""
+    }
+  ],
+  "pnwds-colors": [
+    {
+      "name": "$pnwds-colors",
+      "value": "( light-green: #83bba3, primary-green: #06864c, dark-green: #057642, darkest-green: #03593a, primary-blue: #2c60a2, dark-blue: #005297 )",
+      "mapValue": [
+        {
+          "name": "light-green",
+          "value": "#83bba3",
+          "compiledValue": ""
+        },
+        {
+          "name": "primary-green",
+          "value": "#06864c",
+          "compiledValue": ""
+        },
+        {
+          "name": "dark-green",
+          "value": "#057642",
+          "compiledValue": ""
+        },
+        {
+          "name": "darkest-green",
+          "value": "#03593a",
+          "compiledValue": ""
+        },
+        {
+          "name": "primary-blue",
+          "value": "#2c60a2",
+          "compiledValue": ""
+        },
+        {
+          "name": "dark-blue",
+          "value": "#005297",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": ""
+    }
+  ],
+  "color-usages": [
+    {
+      "name": "$color-usages",
+      "value": "( \"error\": map-get($secondary-colors, \"red\"), \"valid\": map-get($pnwds-colors, \"primary-green\"), \"warning\": map-get($secondary-colors, \"yellow\"), \"information\": map-get($drupal-colors, \"blue2\"), \"information-bg\": map-get($secondary-colors, \"grayish-green\"), \"attention-accent\": map-get($drupal-colors, \"green\"), \"attention-accent2\": map-get($secondary-colors, \"seattle-orange\"), \"attention-text\": map-get($secondary-colors, \"mint\"), \"attention-bg\": map-get($secondary-colors, \"sailer-blue\"), \"text\": map-get($secondary-colors, \"black\"), \"highlight\": map-get($secondary-colors, \"seattle-orange\"), \"bg\": map-get($secondary-colors, \"seattle-gray\"), \"border\": map-get($secondary-colors, \"gray\"), \"dim\": map-get($secondary-colors, \"dim\") )",
+      "mapValue": [
+        {
+          "name": "error",
+          "value": "map-get($secondary-colors, \"red\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "valid",
+          "value": "map-get($pnwds-colors, \"primary-green\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "warning",
+          "value": "map-get($secondary-colors, \"yellow\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "information",
+          "value": "map-get($drupal-colors, \"blue2\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "information-bg",
+          "value": "map-get($secondary-colors, \"grayish-green\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "attention-accent",
+          "value": "map-get($drupal-colors, \"green\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "attention-accent2",
+          "value": "map-get($secondary-colors, \"seattle-orange\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "attention-text",
+          "value": "map-get($secondary-colors, \"mint\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "attention-bg",
+          "value": "map-get($secondary-colors, \"sailer-blue\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "text",
+          "value": "map-get($secondary-colors, \"black\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "highlight",
+          "value": "map-get($secondary-colors, \"seattle-orange\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "bg",
+          "value": "map-get($secondary-colors, \"seattle-gray\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "border",
+          "value": "map-get($secondary-colors, \"gray\")",
+          "compiledValue": ""
+        },
+        {
+          "name": "dim",
+          "value": "map-get($secondary-colors, \"dim\")",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": ""
+    }
+  ],
+  "typography": [
+    {
+      "name": "$ff-heading",
+      "value": "\"Roboto\", sans-serif",
+      "compiledValue": ""
+    },
+    {
+      "name": "$ff-normal",
+      "value": "\"Roboto\", sans-serif",
+      "compiledValue": ""
+    },
+    {
+      "name": "$ff-system",
+      "value": "\"system\", sans-serif",
+      "compiledValue": ""
+    }
+  ],
+  "spacing": [
+    {
+      "name": "$max-width",
+      "value": "72em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$space",
+      "value": "1em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$pad",
+      "value": "1em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-small",
+      "value": "24em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-small-2",
+      "value": "29.75em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-small-3",
+      "value": "39.8em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-med",
+      "value": "46.8em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-med-2",
+      "value": "48em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-large",
+      "value": "50em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-large-2",
+      "value": "66em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-xl",
+      "value": "73em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-xxl",
+      "value": "89em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$bp-xxxl",
+      "value": "93em",
+      "compiledValue": ""
+    }
+  ]
+}

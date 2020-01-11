@@ -870,7 +870,9 @@ img {
   min-height: 100px;
   position: relative;
 }
+.banner.image .bg picture,
 .banner.image .bg img,
+.banner.video .bg picture,
 .banner.video .bg img {
   display: block;
   object-fit: cover;

@@ -1,12 +1,18 @@
 @use "sass:meta";
-// Colors
+/**
+ * @sass-export-section="drupal-colors"
+ */
 $drupal-colors: (
   "blue": #0678be,
   "blue2": #064771,
   "green": #7cbc48,
   "green2": #367d02
 );
+//@end-sass-export-section
 
+/**
+ * @sass-export-section="pnwds-colors"
+ */
 $pnwds-colors: (
   light-green: #83bba3,
   primary-green: #06864c,
@@ -15,6 +21,7 @@ $pnwds-colors: (
   primary-blue: #2c60a2,
   dark-blue: #005297
 );
+//@end-sass-export-section
 
 // Would like to use some bright colors for the site
 $secondary-colors: (
@@ -41,7 +48,9 @@ $secondary-colors: (
   "dim": rgba(0, 0, 0, 0.8)
 );
 
-// States, color usages
+/**
+ * @sass-export-section="color-usages"
+ */
 $color-usages: (
   "error": map-get($secondary-colors, "red"),
   "valid": map-get($pnwds-colors, "primary-green"),
@@ -59,7 +68,7 @@ $color-usages: (
   "dim": map-get($secondary-colors, "dim")
 );
 
-// Custom properties
+//@end-sass-export-section
 :root {
   @each $name, $hex in $pnwds-colors {
     --color-#{$name}: #{$hex};
@@ -74,9 +83,6 @@ $color-usages: (
   }
 }
 
-/**
- * @sass-export-section="Typography"
- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 // https://css-tricks.com/snippets/css/system-font-stack/
@@ -88,9 +94,15 @@ $color-usages: (
     local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
+/**
+ * @sass-export-section="typography"
+ */
+
 $ff-heading: "Roboto", sans-serif;
 $ff-normal: "Roboto", sans-serif;
 $ff-system: "system", sans-serif;
+
+//@end-sass-export-section
 
 %heading-text {
   font-family: $ff-heading;
@@ -125,14 +137,14 @@ $base-text-size: calc(0.65em + 1vmin);
   --font-heading: #{meta.inspect($ff-heading)};
 }
 
-// Layout
+/**
+ * @sass-export-section="spacing"
+ */
 $max-width: 72em;
 
-// Spacing
 $space: 1em;
 $pad: 1em;
 
-// reakpoints
 $bp-small: 24em;
 $bp-small-2: 29.75em;
 $bp-small-3: 39.8em;
@@ -143,6 +155,8 @@ $bp-large-2: 66em;
 $bp-xl: 73em;
 $bp-xxl: 89em;
 $bp-xxxl: 93em;
+
+//@end-sass-export-section
 
 %content-container {
   width: 100%;
