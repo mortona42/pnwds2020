@@ -9,27 +9,27 @@ article,
 }
 
 article {
-  &.node--unpublished {
-    border-bottom: 1px solid var(--color-border);
-    &::after {
-      background-color: var(--color-warning);
-      border-radius: 0.8rem;
-      bottom: 0;
-      color: var(--color-gray);
-      content: "unpublished";
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 400;
-      left: 0;
-      line-height: 1.5rem;
-      margin-top: $space;
-      padding: 0 0.5em;
-      // position: absolute;
-      // top: 1.5rem;
-      text-transform: uppercase;
-      width: auto;
-    }
-  }
+  // &.node--unpublished {
+  //   border-bottom: 1px solid var(--color-border);
+  //   &::after {
+  //     background-color: var(--color-warning);
+  //     border-radius: 0.8rem;
+  //     bottom: 0;
+  //     color: var(--color-gray);
+  //     content: "unpublished";
+  //     display: inline-block;
+  //     font-size: 0.7rem;
+  //     font-weight: 400;
+  //     left: 0;
+  //     line-height: 1.5rem;
+  //     margin-top: $space;
+  //     padding: 0 0.5em;
+  //     // position: absolute;
+  //     // top: 1.5rem;
+  //     text-transform: uppercase;
+  //     width: auto;
+  //   }
+  // }
 
   .field__label {
     text-transform: uppercase;
