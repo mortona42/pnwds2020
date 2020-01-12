@@ -1,10 +1,11 @@
 <div class="session">
   <div class="session__date">{{ date }}</div>
   <div class="session__meta">
-    <div class="session__time">{{ time }}</div>
-    <div class="session__room">Room
-      {{ room }}</div>
-    <div class="session__topics">
+    <div class="session__time icon">
+{{ time }}</div>
+    <div class="session__room icon">
+Room{{ room }}</div>
+    <div class="session__topics icon">
       <ul>
         {% for topic in topics %}
           <li> {{topic}} </li>
@@ -18,11 +19,17 @@
       <div class="session__description">
         {{ description }}
       </div>
+
+      {% block speakers %}
+      <h3 class="region__title">Speakers</h3>
       <div class="session__speakers">
         {% include "@components/speaker/speaker.twig" with {
           'speaker': speaker,
-          'photo': photo
+          'photo': photo,
+          'bio': bio,
+          'link': link
         } only %}
       </div>
+      {% endblock %}
     </div>
   </div>

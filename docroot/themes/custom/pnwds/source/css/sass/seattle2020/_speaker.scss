@@ -39,27 +39,26 @@ ul.speakers {
   }
 }
 
-.session__speakers {
-  .speaker {
-    display: block;
+article.profile,
+.speaker {
+  display: flex;
+  flex-wrap: wrap;
 
-    > .col:last-child {
-      width: 100%;
-      padding-left: 0;
+  @media only screen and (min-width: $bp-med) {
+    > .col:first-child {
+      flex: 0 1 25%;
     }
 
-    &__name {
-      margin-top: 0.5rem;
+    > .col:last-child {
+      flex: 0 1 70%;
     }
   }
 }
 
-@media only screen and (min-width: $bp-med) {
-  ul.speakers {
-    li {
-      margin-bottom: $space * 2;
-      width: 32%;
-      max-width: 100%;
-    }
+.field-item.field--user-picture {
+  padding-right: $space;
+  img {
+    width: 100%;
+    height: auto;
   }
 }

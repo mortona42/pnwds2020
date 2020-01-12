@@ -3,4 +3,9 @@
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
+
+  div[role="alert"],
+  .alert {
+    color: var(--color-error);
+  }
 }

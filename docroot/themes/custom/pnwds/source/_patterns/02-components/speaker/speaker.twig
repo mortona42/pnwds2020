@@ -9,7 +9,10 @@
       {{ jobTitle }}</p>
     <p class="speaker__company">
       {{ company }}</p>
-    <div class="bio">{{ bio }}</div>
+    <div class="bio">
+    {{ bio }}
+    <p><a href="{{ link }}" />{{ link }}</a></p>
+    </div>
     {% if social %}
       {% include "@components/social/social-links.twig" %}
     {% endif %}

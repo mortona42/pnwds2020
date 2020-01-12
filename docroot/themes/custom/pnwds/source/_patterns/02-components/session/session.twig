@@ -1,5 +1,5 @@
-<h1>Sessions</h1>
-  {% for session in sessions %}
+<h1 class="page_title session__title">Et porro sit est laudantium porro quaerat.</h1>
+
     {% include "@components/session/_session.twig" with {
       'date': session.date|date('d') ~ '.' ~ session.date|date('l'),
       'time': session.date|date("g:i a"),
@@ -14,4 +14,3 @@
       'bio': session.bio,
       'link': session.link
     } %}
-  {% endfor %}

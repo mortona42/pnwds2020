@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+.inline-list,
 ol.flat-list,
 ul.flat-list {
   @extend %flat-list;

@@ -49,6 +49,7 @@ function generateSessions() {
     let company = faker.company.companyName();
     let photo = faker.image.avatar();
     let bio = faker.lorem.paragraphs();
+    let link = faker.internet.url();
 
 
     sessions.push({
@@ -63,6 +64,7 @@ function generateSessions() {
       company: company,
       photo: photo,
       bio: bio,
+      link: link
     });
   }
 

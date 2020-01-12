@@ -1,18 +1,12 @@
+span.icon,
 a.icon {
   display: inline-block;
-  color: transparent;
   width: var(--iconSize);
   height: var(--iconSize);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   filter: invert(0.5);
-
-  &:hover,
-  &:active,
-  &:visited,
-  &:focus {
-    color: transparent;
-  }
 
   &.facebook {
     background-image: url("../images/icons/facebook.svg");
@@ -32,5 +26,32 @@ a.icon {
 
   &.drupal {
     background-image: url("../images/icons/drupal.svg");
+  }
+
+  &.user {
+    background-image: url("../images/icons/user.svg");
+  }
+
+  &.tag {
+    background-image: url("../images/icons/tag.svg");
+  }
+
+  &.clock {
+    background-image: url("../images/icons/clock.svg");
+  }
+
+  &.map-marker {
+    background-image: url("../images/icons/map-marker.svg");
+  }
+}
+
+a.icon {
+  color: transparent !important;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: transparent;
   }
 }

@@ -9,9 +9,11 @@
 @import "sass/base/tables";
 
 // @import "sass/seattle2020/colors";
+@import "sass/seattle2020/icons";
 @import "sass/seattle2020/text";
 @import "sass/seattle2020/forms";
 @import "sass/seattle2020/buttons";
+@import "sass/seattle2020/lists";
 @import "sass/seattle2020/layout";
 // @import "sass/seattle2020/tasks";
 // @import "sass/seattle2020/actions";
@@ -25,15 +27,13 @@
 // @import "sass/seattle2020/view-speakers";
 // @import "sass/seattle2020/user-sessions";
 @import "sass/seattle2020/messages";
-@import "sass/seattle2020/sessions";
 @import "sass/seattle2020/speaker";
 @import "sass/seattle2020/media";
 @import "sass/seattle2020/cta";
 @import "sass/seattle2020/banner";
 @import "sass/seattle2020/system";
 @import "sass/seattle2020/node";
-@import "sass/seattle2020/icons";
-@import "sass/seattle2020/lists";
+@import "sass/seattle2020/sessions";
 //
 
 * {
