@@ -1,0 +1,11 @@
+uuid: 2905cf9b-3f26-4cd4-9cf3-7f417a5156c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: welcome
+title: welcome
+content:
+  value: "<p>Thank you for submitting a session. You will also want to update your profile, which will show on your session page.</p>\r\n"
+  format: basic_html
