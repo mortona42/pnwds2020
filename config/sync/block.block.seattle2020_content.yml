@@ -11,7 +11,7 @@ _core:
 id: seattle2020_content
 theme: seattle2020
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

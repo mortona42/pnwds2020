@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: welcome
 title: welcome
 content:
-  value: "<p>Thank you for submitting a session. You will also want to update your profile, which will show on your session page.</p>\r\n"
-  format: basic_html
+  value: "<p>Thank you for submitting a session. You will also want to update your profile, which will show on your session page. </p>\r\n"
+  format: full_html

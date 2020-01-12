@@ -10,7 +10,7 @@ field_name: field_additional_authors
 entity_type: node
 bundle: session
 label: 'Additional authors'
-description: ''
+description: 'Please use the <b>username</b> from this site. '
 required: false
 translatable: false
 default_value: {  }

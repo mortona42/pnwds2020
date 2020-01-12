@@ -7,5 +7,5 @@ dependencies:
 id: copyright
 title: Copyright
 content:
-  value: "<p><em>Copyright © 2020 Pacific Northwest Drupal Summit, All rights reserved.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</em><a href=\"https://www.facebook.com/PacificNWDrupalSummit\" class=\"icon facebook\">Facebook</a>&nbsp;&nbsp; |&nbsp; &nbsp;<a class=\"icon twitter\" href=\"https://twitter.com/drupalsummit\">Twitter</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a href=\"https://groups.drupal.org/pacific-nw-drupal-summits\" class=\"icon drupal\">Drupal</a></p>\r\n"
+  value: "<p><em>Copyright © 2020 Pacific Northwest Drupal Summit, All rights reserved.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</em><a class=\"icon facebook\" href=\"https://www.facebook.com/PacificNWDrupalSummit\">Facebook</a>&nbsp;&nbsp; |&nbsp; &nbsp;<a class=\"icon twitter\" href=\"https://twitter.com/drupalsummit\">Twitter</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a class=\"icon drupal\" href=\"https://groups.drupal.org/pacific-nw-drupal-summits\">Drupal</a></p>\r\n\r\n"
   format: full_html
