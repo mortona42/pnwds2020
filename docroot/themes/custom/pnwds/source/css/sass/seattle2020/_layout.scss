@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  display: block;
 }
 
 [data-theme="seattle2020"] {
   body {
     color: var(--color-text);
     background-color: var(--color-white, #fffffe);
+    max-width: 100%;
   }
 
   #layout-container {
@@ -63,6 +65,20 @@ body {
       margin-top: $space * 2;
       background-color: var(--color-grayish-green, #e8eae3);
       font-size: 0.9rem;
+    }
+
+    .region-footer {
+      margin: 0 $space;
+    }
+  }
+
+  #block-copyright {
+    em {
+      display: block;
+
+      @media only screen and (min-width: $bp-med) {
+        display: inline-block;
+      }
     }
   }
 }

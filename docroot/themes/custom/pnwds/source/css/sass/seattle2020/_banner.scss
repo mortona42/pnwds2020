@@ -118,6 +118,10 @@
 
     h2 {
       color: white;
+
+      span {
+        display: block;
+      }
     }
 
     h3 {
@@ -155,6 +159,14 @@
 
       h2 {
         color: white;
+
+        span {
+          display: inline;
+
+          &:first-child {
+            padding-right: $space;
+          }
+        }
       }
 
       h3 {
@@ -212,12 +224,12 @@
   }
 
   .text-bottom {
-    flex: 1;
+    flex: auto;
     text-align: center;
-    padding: 1em auto;
-    max-width: 100%;
     padding-bottom: $space;
-
+    padding-left: 2px;
+    padding-right: 2px;
+    max-width: 100%;
     background-color: var(--color-attention-bg);
     color: var(--color-attention-text);
 
@@ -227,6 +239,10 @@
 
     h2 {
       color: white;
+
+      span {
+        display: block;
+      }
     }
 
     h3 {
@@ -235,15 +251,6 @@
   }
 
   @media only screen and (min-width: $bp-med) {
-    .row2 {
-      .inner {
-        .text-bottom {
-          margin-left: auto;
-          max-width: 50%;
-        }
-      }
-    }
-
     .inner {
       max-width: $max-width;
       margin: 0 auto;
@@ -256,9 +263,37 @@
       }
     }
 
+    .row2 {
+      .inner {
+        .text-bottom {
+          flex: 0 1 70%;
+          margin-left: auto;
+
+          span {
+            display: inline;
+          }
+
+          span:first-child {
+            padding-right: $space/2;
+          }
+        }
+      }
+    }
+
     .text-top {
       h1 {
         font-size: 72px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .row2 {
+      .inner {
+        .text-bottom {
+          flex: 0 1 50%;
+          margin-left: auto;
+        }
       }
     }
   }

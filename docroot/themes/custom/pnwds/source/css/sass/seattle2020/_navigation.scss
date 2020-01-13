@@ -32,6 +32,14 @@ nav[id$="useraccountmenu"] {
   }
 }
 
+nav[id$="mainnavigation"] {
+  ul.menu {
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .region-primary-menu,
 nav[id$="mainnavigation"] {
   text-transform: uppercase;
