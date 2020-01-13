@@ -1,6 +1,6 @@
-uuid: 88f1a618-b139-4a3e-ae0d-a6d7f4f67c47
+uuid: 0de8463b-9576-4b3d-bd0d-a915ca59eeda
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - simple_block.simple_block.welcome
