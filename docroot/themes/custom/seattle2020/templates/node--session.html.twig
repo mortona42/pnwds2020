@@ -84,35 +84,39 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div class="session__date">{{ content.field_schedule }}</div>
   <div class="session__meta">
-    <div class="session__time icon">{{ content.field_schedule }}</div>
-    <div class="session__room icon">
-        {{ content.field_room }}
-        </div>
-    <div class="session__topics icon">
-      {{ content.field_tags }}
-      </div><!--// topics -->
-    </div><!-- // meta -->
+    {% if node.field_schedule.value %}
+      <div class="session__time icon">{{ content.field_schedule }}</div>
+    {% endif %}
 
-      {{ title_prefix }}
-        {% if content.name and not page %}
+    {% if node.field_room.value %}
+      <div class="session__room icon">{{ content.field_room }}</div>
+    {% endif %}
+
+    {% if node.field_tags.value %}
+      <div class="session__topics icon">{{ content.field_tags }}</div>
+    {% endif %}
+    <!--// topics -->
+  </div>
+  <!-- // meta -->
+
+  {{ title_prefix }}
+  {% if content.name and not page %}
   {# if label and not page #}
     <h2{{ title_attributes.addClass('session__title') }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      <a href="{{ url }}" rel="bookmark">{{ content.name }}</a>
     </h2>
   {% endif %}
   {{ title_suffix }}
 
-    <div class="session__body">
-      <div class="session__description">
-         {{ content|without('field_tags', 'field_room', 'authors') }}
-      </div>
-
-      {% if content.authors %}
-      <div class="session__speakers">
-       {{ content.authors }}
-      </div>
-      {%  endif %}
+  <div class="session__body">
+    <div class="session__description">
+        {{ content|without('field_tags', 'field_room', 'authors') }}
     </div>
-  </article>
+
+    {% if content.authors %}
+      <div class="session__speakers">{{ content.authors }}</div>
+    {%  endif %}
+  </div>
+
+</article>
