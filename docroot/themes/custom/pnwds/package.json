@@ -13,7 +13,7 @@
     "serve": "patternlab serve --config ./patternlab-config.json",
     "export": "patternlab export --config ./patternlab-config.json",
     "build-css": "sass --style=compressed --trace --color source/css:source/css",
-    "watch-css": "sass --watch source/css:source/css",
+    "watch-css": "sass --style=compressed --watch source/css:source/css",
     "start": "npm run watch-css & npm run serve",
     "data": "node scripts/fake-sessions.js & node scripts/fake-sponsors.js",
     "sass-export": "sass-export source/css/sass/generic/_variables.scss -o source/_data/exported-sass-array.json",

@@ -1,0 +1,122 @@
+.banner.video {
+  width: 100%;
+  min-height: 60vh;
+  display: block;
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: 1rem;
+
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  .video {
+    display: block;
+    width: 100%;
+
+    .bgvid {
+      display: none;
+    }
+
+    .videosubstitute {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-top {
+    text-align: center;
+    position: relative;
+
+    &.fade-in {
+      animation-delay: 2s;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  .text-bottom {
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-attention-bg);
+    color: var(--color-attention-text);
+    padding-bottom: $space;
+
+    &.fade-in {
+      animation-delay: 1.3s;
+    }
+
+    h2 {
+      color: white;
+
+      span {
+        display: block;
+      }
+    }
+
+    h3 {
+      color: var(--color-attention-accent);
+    }
+  }
+
+  @media only screen and (min-width: $bp-med) {
+    .video {
+      .bgvid {
+        display: block;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .videosubstitute {
+        display: none;
+      }
+    }
+
+    .text-top {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 1.5rem);
+
+      h1 {
+        font-size: 72px;
+      }
+    }
+
+    .text-bottom {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      h2 {
+        color: white;
+
+        span {
+          display: inline;
+
+          &:first-child {
+            padding-right: $space;
+          }
+        }
+      }
+
+      h3 {
+        color: var(--color-attention-accent);
+      }
+
+      &.fade-in {
+        animation-delay: 0.3s;
+      }
+    }
+  }
+}
