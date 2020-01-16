@@ -7,5 +7,5 @@ dependencies:
 id: welcome
 title: welcome
 content:
-  value: "<p>Use the button below to submit your session for review. You'll be notified whether your session is selected. You will also want to update your profile, which will show on your session page.</p>\r\n"
+  value: "<p><span\_class=\"larger\">Welcome! </span>\_Use the button below to submit your session for review. You'll be notified whether your session is selected. You will also want to update your profile, which will show on your session page.</p>\r\n"
   format: full_html

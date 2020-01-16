@@ -1,0 +1,32 @@
+uuid: d7d8db82-5b9f-4197-a5e3-a6d9999758df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.welcome_buttons
+  module:
+    - system
+    - views
+  theme:
+    - seattle2020
+id: views_block__welcome_buttons_block_1
+theme: seattle2020
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:welcome_buttons-block_1'
+settings:
+  id: 'views_block:welcome_buttons-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping:
+    uid: '@user.current_user_context:current_user'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n!/user/*/*"
+    negate: false
+    context_mapping: {  }

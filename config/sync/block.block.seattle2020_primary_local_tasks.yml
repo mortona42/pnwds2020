@@ -9,7 +9,7 @@ _core:
 id: seattle2020_primary_local_tasks
 theme: seattle2020
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

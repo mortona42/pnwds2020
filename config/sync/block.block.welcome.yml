@@ -13,18 +13,18 @@ dependencies:
 id: welcome
 theme: seattle2020
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: 'simple_block:welcome'
 settings:
   id: 'simple_block:welcome'
-  label: welcome
+  label: 'Welcome Text'
   provider: simple_block
   label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*'
+    pages: "/user/*\r\n!/user/*/*"
     negate: false
     context_mapping: {  }
   user_role:
