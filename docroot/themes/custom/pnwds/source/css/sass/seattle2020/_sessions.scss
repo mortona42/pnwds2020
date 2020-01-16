@@ -73,6 +73,23 @@
     font-weight: 400;
   }
 
+  &__speakers {
+    .speaker__name,
+    h2 {
+      color: map-get($pnwds-colors, "dark-blue") !important;
+      font-size: 1.8rem !important;
+      margin-bottom: 0;
+    }
+
+    .speaker,
+    article {
+      // background-color: var(--color-information-bg);
+      background-color: #f5f5f5;
+      margin-bottom: $space;
+      padding: $space/2;
+    }
+  }
+
   &__speakers .speaker,
   &__speakers article {
     // background-color: var(--color-information-bg);
