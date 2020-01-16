@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_links
+    - field.field.user.user.field_name
     - field.field.user.user.user_picture
   module:
     - user
@@ -20,10 +21,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  google_analytics:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   contact: true
   field_bio: true
   field_links: true
+  field_name: true
   language: true
   public_profiles: true
   test_profiles: true
