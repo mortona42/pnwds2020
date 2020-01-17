@@ -92,9 +92,9 @@ settings:
   show_component_required_marker: false
   labels:
     title: Title
-    given: Given
+    given: First
     middle: 'Middle name(s)'
-    family: Family
+    family: Last
     generational: Generational
     credentials: Credentials
   title_display:
