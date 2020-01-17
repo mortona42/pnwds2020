@@ -18,40 +18,40 @@ div[id$="primary-local-tasks"] {
   }
 }
 
-// .contextual .trigger {
-//   width: 26px !important;
-//   height: 26px !important;
-//   text-indent: -9999px;
-//   background-image: url(../../images/core/icons/bebebe/pencil.svg);
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   background-size: 16px 16px;
-
-//   position: relative;
-//   right: 6px;
-//   float: right;
-//   overflow: hidden;
-//   margin: 0;
-//   padding: 0 2px;
-//   cursor: pointer;
-//   border: 1px solid #ccc;
-//   border-radius: 13px;
-//   background-color: #fff;
-//   background-attachment: scroll;
-// }
 [data-theme="seattle2020"] {
-  .field--widget-entity-reference-autocomplete.form-wrapper {
-    border: 2px solid var(--color-border);
+  div[id$="add-more-wrapper"] {
+    border: 1px solid var(--color-border);
     background: var(--color-information-bg);
-    border-radius: 5px;
+    // border-radius: 5px;
     padding: 5px;
-  }
 
-  #field-additional-authors-add-more-wrapper {
+    margin-bottom: $space;
+
     > .form-item {
       margin: 0;
     }
+
+    button.tabledrag-toggle-weight {
+      font-size: 0.8em;
+    }
+
+    > div > .description {
+      margin-bottom: $space;
+    }
   }
+
+  // .field--widget-entity-reference-autocomplete.form-wrapper {
+  //   border: 2px solid var(--color-border);
+  //   background: var(--color-information-bg);
+  //   border-radius: 5px;
+  //   padding: 5px;
+  // }
+
+  // #field-additional-authors-add-more-wrapper {
+  //   > .form-item {
+  //     margin: 0;
+  //   }
+  // }
 
   table.field-multiple-table.responsive-enabled {
     border: none;
@@ -73,6 +73,12 @@ div[id$="primary-local-tasks"] {
 
     input {
       max-width: 98% !important;
+    }
+  }
+
+  .form-item {
+    &.js-form-type-textarea {
+      margin-bottom: 0;
     }
   }
 }
