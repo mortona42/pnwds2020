@@ -7,5 +7,5 @@ dependencies:
 id: welcome
 title: welcome
 content:
-  value: "<p><span\_class=\"larger\">Welcome! </span>\_Use the button below to submit your session for review. You'll be notified whether your session is selected. You will also want to update your profile, which will show on your session page.</p>\r\n"
+  value: "<p><span class=\"larger\">Welcome! &nbsp;Use the button below to submit your session for review. Session submittal ends at 11:59 PST on February 16th. After that, you'll be notified whether your session is selected. Please also fill out your profile using the Profile tab&nbsp;so the session committee knows more about you when we are selecting sessions.&nbsp;&nbsp;</span></p>\r\n"
   format: full_html

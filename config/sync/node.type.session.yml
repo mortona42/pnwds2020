@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Session
 type: session
-description: 'Conference session.'
+description: 'Fill out the information below to submit your session proposal. Each session block is 60 minutes. Session content should run for about 45 minutes with the remaining 15 minutes for Q&A and movement to the next session. Questions? See our <a href="/submit-a-session">session submission info</a> page, or contact us at info@pnwdrupalsummit.org.'
 help: ''
 new_revision: false
 preview_mode: 1

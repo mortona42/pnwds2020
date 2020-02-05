@@ -1,0 +1,11 @@
+uuid: 7569c696-e3d6-4176-87de-15fe4cf04205
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: session_add_form_info_text
+title: 'Session Submission Instructions'
+content:
+  value: "<p>Fill out the information below to submit your session proposal. Your session content should run for about 45 minutes, including time for&nbsp;Q&amp;A. Then there is a 15-minute break for movement to the next session.<br />\r\n<br />\r\nQuestions? See our&nbsp;<a href=\"https://pnwdrupalsummit.org/submit-a-session\" target=\"_blank\">session submission info</a>&nbsp;page, or contact us at info@pnwdrupalsummit.org.</p>\r\n"
+  format: full_html

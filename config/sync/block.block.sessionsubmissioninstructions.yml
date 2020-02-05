@@ -1,0 +1,28 @@
+uuid: 79ec7349-7be0-4803-bdfc-30d54c25739e
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.session_add_form_info_text
+  module:
+    - simple_block
+    - system
+  theme:
+    - seattle2020
+id: sessionsubmissioninstructions
+theme: seattle2020
+region: content
+weight: -9
+provider: null
+plugin: 'simple_block:session_add_form_info_text'
+settings:
+  id: 'simple_block:session_add_form_info_text'
+  label: 'Session Submission Instructions'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/add/session
+    negate: false
+    context_mapping: {  }
