@@ -1,0 +1,36 @@
+uuid: 9de2a603-5039-43c0-b45b-1027f924a156
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_logo
+    - field.field.node.sponsor.field_sponsor_level
+    - field.field.node.sponsor.field_website
+    - node.type.sponsor
+  module:
+    - text
+    - user
+id: node.sponsor.teaser
+targetEntityType: node
+bundle: sponsor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_logo: true
+  field_sponsor_level: true
+  field_website: true

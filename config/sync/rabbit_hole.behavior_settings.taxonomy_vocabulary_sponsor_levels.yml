@@ -1,0 +1,11 @@
+uuid: cabc816c-e7e5-43ee-83e4-09389abdca1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sponsor_levels
+id: taxonomy_vocabulary_sponsor_levels
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
